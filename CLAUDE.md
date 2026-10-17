@@ -76,7 +76,8 @@ Színt csak tokenből; 12 px alatt nincs szöveg; érintési célpont ≥ 44 px;
 
 ## 7. Nyitott
 
-- [ ] További HSK 1 leckék (6–15), majd HSK 2–3.
+- [ ] További HSK 1 leckék (6–15), majd HSK 2–3. (Kész: előkészítő + 1–5.)
+- [ ] A 3. és 4. lecke olvasás-összesítője telefonon (390 px) kissé vízszintesen görgethető — javítandó.
 - [ ] Modulok: Pinyin-tábla, Mérőszavak, Mondat-Mester, Dátum/idő/pénz, dolgozatok, HSK-próbavizsga.
 - [ ] A NihonCore `sw.js`-ében a cache-törlést a saját előtagra kell szűkíteni (különben a HanziFlow offline-tárát is törli).
 - [ ] Firestore-szabály a `users/{uid}/apps/{app}` helyre (a user Firebase-konzolján).

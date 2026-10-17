@@ -14,7 +14,7 @@
    ==================================================== */
 
 const CACHE_PREFIX  = 'hanziflow-';
-const CACHE_VERSION = CACHE_PREFIX + 'v1-2026-10-17-vaz';
+const CACHE_VERSION = CACHE_PREFIX + 'v2-2026-10-17-leckek-1-5';
 const APP_SHELL_CACHE = CACHE_VERSION + '-shell';
 const RUNTIME_CACHE   = CACHE_VERSION + '-runtime';
 

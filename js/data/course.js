@@ -233,14 +233,14 @@ const HANZIFLOW_COURSE = [
   ],
   culture: [
     { title: 'Mandarin, putonghua, „kínai"', text: 'Amit „kínai nyelvként" tanulunk, az a <b>mandarin</b>, Kína hivatalos köznyelve: Kínában {普通话|pǔ·tōng·huà} („közös nyelv"), Tajvanon {国语|guó·yǔ}, Szingapúrban {华语|huá·yǔ} a neve. Kínában sok más nyelvváltozatot is beszélnek (a kantonit vagy a sanghajit például a mandarin beszélője nem érti), de az iskola, a tévé és a hivatal nyelve mindenhol a mandarin.' },
-    { title: 'Egyszerűsített és hagyományos írás', text: 'Az 1950-es években Kínában sok írásjegyet leegyszerűsítettek: a „ló" hagyományosan 馬, egyszerűsítve 马. A HanziFlow az <b>egyszerűsített</b> írást tanítja, mert ezt használják Kínában és a HSK-vizsgán. A hagyományos írás Tajvanon és Hongkongban él tovább.' }
+    { title: 'Egyszerűsített és hagyományos írás', text: 'Az 1950-es években Kínában sok írásjegyet leegyszerűsítettek: a „ló" hagyományosan {馬|mǎ}, egyszerűsítve {马|mǎ}. A HanziFlow az <b>egyszerűsített</b> írást tanítja, mert ezt használják Kínában és a HSK-vizsgán. A hagyományos írás Tajvanon és Hongkongban él tovább.' }
   ],
   quiz: [
     { q: 'Melyik három részből áll egy kínai szótag?', a: 'kezdőhang, véghang és tónus', wrong: ['magánhangzó, mássalhangzó, hangsúly', 'írásjegy, pinyin és jelentés', 'gyök, toldalék és tónus'], why: 'Például {妈|mā}: <i>m</i> (kezdőhang) + <i>a</i> (véghang) + 1. tónus.', point: 1 },
     { q: 'Mi a pinyin?', a: 'a kínai kiejtés hivatalos latin betűs átírása', wrong: ['a kínai írásjegyek egyszerűsített formája', 'egy kínai nyelvjárás', 'a tónusok neve'], why: 'A pinyin a szótárakban, a tankönyvekben és a telefonos gépelésben is ott van.', point: 1 },
     { q: 'Mi a különbség a pinyin b és p között?', a: 'a p után erős levegőfújás jön, a b után nem', wrong: ['a b zöngés, a p zöngétlen, mint a magyarban', 'a p hosszabb, mint a b', 'nincs különbség, csak az írás más'], why: 'A kínai b olyan, mint a magyar p; a kínai p ehhez képest még egy fuvallatot kap.', point: 2 },
     { q: 'Melyik hanghoz hasonlít leginkább a pinyin q?', a: 'egy levegős „cs"-hez', wrong: ['a magyar k-hoz', 'a magyar kv-hez', 'a magyar g-hez'], why: '{七|qī} „hét": a nyelv hegye lent van, és erős levegő jön ki.', point: 2 },
-    { q: 'Hogyan ejtsd a pinyin x hangot?', a: 'a „sz" és az „s" közötti lágy sziszegésként', wrong: ['„ksz"-ként, mint a magyarban', 'mint a magyar „zs"-t', 'mint a német „ch"-t'], why: '{谢谢|xiè·xie}: lágy, a nyelv hegye az alsó fogaknál.', point: 2 },
+    { q: 'Hogyan ejtsd a pinyin x hangot?', a: 'a „sz" és az „s" közötti lágy sziszegésként', wrong: ['„ksz"-ként, ahogy a magyar szavakban', 'zöngésen, mint a magyar „zs" hangot', 'hátul, a torokban, mint a német „ch"-t'], why: '{谢谢|xiè·xie}: lágy, a nyelv hegye az alsó fogaknál.', point: 2 },
     { q: 'Melyik hangpár között NEM a levegőfújás a különbség?', a: 's – sh', wrong: ['d – t', 'z – c', 'g – k'], why: 'Az <i>s</i> és az <i>sh</i> a nyelv helyzetében különbözik (az <i>sh</i>-nál a nyelv hegye hátrahajlik).', point: 2 },
     { q: 'Hogyan hangzik a pinyin ian (pl. {天|tiān})?', a: '„jen"', wrong: ['„ján"', '„ion"', '„ien" két szótagban'], why: 'Az <i>i</i> és az <i>n</i> között az <i>a</i> „e"-vé zárul.', point: 3 },
     { q: 'Mit jelöl a j, q, x után írt u (pl. qu, xue)?', a: 'valójában ü-t', wrong: ['valódi u-t', 'hosszú ú-t', 'semleges tónust'], why: 'A <i>j, q, x</i> után sosem állhat <i>u</i>, ezért az ü pontjait elhagyják: <i>qu</i> = „csü".', point: 3 },
@@ -248,9 +248,9 @@ const HANZIFLOW_COURSE = [
     { q: 'Melyik a 3. tónus jele?', a: 'ǎ', wrong: ['ā', 'á', 'à'], why: 'A 3. tónus jele egy kis „pipa" (ˇ): {马|mǎ} „ló".', point: 4 },
     { q: '{马|mǎ} — mit jelent?', a: 'ló', wrong: ['anya', 'kender', 'szidni'], why: '{妈|mā} anya · {麻|má} kender · {马|mǎ} ló · {骂|mà} szidni.', point: 4 },
     { q: 'Melyik magánhangzó kapja a tónusjelet a hǎo szótagban?', a: 'az a', wrong: ['az o', 'a h', 'mindkét magánhangzó'], why: 'Ha van <i>a</i> a szótagban, mindig az kapja a jelet.', point: 4 },
-    { q: 'Mit jelent, ha egy szótagon nincs tónusjel (pl. {妈妈|mā·ma} második fele)?', a: 'semleges tónusú: röviden, hangsúly nélkül ejted', wrong: ['1. tónusú', 'tetszőleges tónussal ejthető', 'nem kell kiejteni'], why: 'A semleges tónus rövid és gyenge: <i>mā-ma</i>.', point: 5 },
+    { q: 'Mit jelent, ha egy szótagon nincs tónusjel (pl. {妈妈|mā·ma} második fele)?', a: 'semleges tónusú: röviden, hangsúly nélkül ejted', wrong: ['1. tónusú: magasan és hosszan ejted', 'bármelyik tónussal ejtheted, ahogy tetszik', 'néma: írásban áll, de nem ejted ki'], why: 'A semleges tónus rövid és gyenge: <i>mā-ma</i>.', point: 5 },
     { q: 'Melyik írásmódot tanítja a HanziFlow?', a: 'az egyszerűsítettet, ahogy Kínában írnak', wrong: ['a hagyományosat, ahogy Tajvanon írnak', 'mindkettőt egyszerre', 'csak a pinyint, írásjegyek nélkül'], why: 'Kínában és a HSK-vizsgán az egyszerűsített írás az alap.' },
-    { q: 'Hogyan ejtsd az e véghangot (pl. {喝|hē})?', a: 'mint egy széthúzott szájjal ejtett „ö"-t', wrong: ['mint a magyar „e"-t', 'mint a magyar „é"-t', 'mint a magyar „i"-t'], why: 'Az önálló <i>e</i> hátul képzett, ajakkerekítés nélküli hang.', point: 3 },
+    { q: 'Hogyan ejtsd az e véghangot (pl. {喝|hē})?', a: 'mint egy széthúzott szájjal ejtett „ö"-t', wrong: ['pontosan úgy, mint a magyar „e"-t', 'zártan, mint a magyar hosszú „é"-t', 'röviden, mint a magyar „i"-t'], why: 'Az önálló <i>e</i> hátul képzett, ajakkerekítés nélküli hang.', point: 3 },
     { q: 'Melyik szóban van semleges tónusú szótag?', a: '{学生|xué·sheng}', wrong: ['{中国|Zhōng·guó}', '{老师|lǎo·shī}', '{北京|Běi·jīng}'], why: 'A {学生|xué·sheng} második szótagján nincs ékezet: röviden, hangsúly nélkül ejted.', point: 5 }
   ]
 },
@@ -417,17 +417,17 @@ const HANZIFLOW_COURSE = [
   quiz: [
     { q: 'Mit mondasz, ha köszönsz egy kínai diáktársadnak?', a: '{你好|nǐ hǎo}！', wrong: ['{对不起|duì·bu·qǐ}！', '{没关系|méi guān·xi}。', '{你们|nǐ·men}'], why: 'A {你好|nǐ hǎo} a mindennapi köszönés: „szia".', point: 1 },
     { q: 'Hogyan köszönsz udvariasan egy idős professzornak?', a: '{您好|nín hǎo}！', wrong: ['{你们好|nǐ·men hǎo}！', '{没关系|méi guān·xi}！', '{我好|wǒ hǎo}！'], why: 'A {您|nín} az udvarias „ön": {您好|nín hǎo}.', point: 2 },
-    { q: 'Egy egész osztályt köszöntesz. Mit mondasz?', a: '{你们好|nǐ·men hǎo}！', wrong: ['{您好|nín hǎo}！', '{你好|nǐ hǎo}们！', '{对不起|duì·bu·qǐ}！'], why: 'A {你们|nǐ·men} „ti": több embert köszöntesz vele.', point: 3 },
-    { q: 'Mit jelent a {们|men} a {我们|wǒ·men} szóban?', a: 'többes számot: „én" → „mi"', wrong: ['udvariasságot', 'kérdést', 'múlt időt'], why: 'A {们|men} a névmás többes száma: {我|wǒ} → {我们|wǒ·men}.', point: 3 },
+    { q: 'Egy egész osztályt köszöntesz. Mit mondasz?', a: '{你们好|nǐ·men hǎo}！', wrong: ['{您好|nín hǎo}！', '{你好们|nǐ hǎo men}！', '{对不起|duì·bu·qǐ}！'], why: 'A {你们|nǐ·men} „ti": több embert köszöntesz vele.', point: 3 },
+    { q: 'Mit jelent a {们|men} a {我们|wǒ·men} szóban?', a: 'többes számot: „én" → „mi"', wrong: ['udvariasságot: „én" → „ön"', 'kérdést: „én?" → „ki?"', 'múlt időt: „vagyok" → „voltam"'], why: 'A {们|men} a névmás többes száma: {我|wǒ} → {我们|wǒ·men}.', point: 3 },
     { q: 'Valaki azt mondja: {对不起|duì·bu·qǐ}！ Mit válaszolsz?', a: '{没关系|méi guān·xi}。', wrong: ['{你好|nǐ hǎo}。', '{您好|nín hǎo}。', '{你们|nǐ·men}。'], why: 'A bocsánatkérésre a válasz: {没关系|méi guān·xi} „semmi baj".', point: 4 },
     { q: 'Mit jelent: {对不起|duì·bu·qǐ}?', a: 'Elnézést! Bocsánat!', wrong: ['Köszönöm!', 'Semmi baj.', 'Viszontlátásra!'], why: 'A {对不起|duì·bu·qǐ} bocsánatkérés.', point: 4 },
     { q: 'Hogyan hangzik ténylegesen a {你好|nǐ hǎo}?', a: 'ní hǎo (az első szótag emelkedő)', wrong: ['nǐ hǎo, mindkettő mély', 'nì hào, mindkettő eső', 'nī hāo, mindkettő magas'], why: 'Két 3. tónus egymás után: az első 2. tónusúvá válik.', point: 5 },
     { q: 'Melyik szóban érvényes a „3 + 3 → 2 + 3" szabály?', a: '{很好|hěn hǎo}', wrong: ['{你们|nǐ·men}', '{老师|lǎo·shī}', '{您好|nín hǎo}'], why: 'A {很|hěn} és a {好|hǎo} is 3. tónusú, ezért „hén hǎo".', point: 5 },
     { q: 'Változik-e a pinyin írása a „3 + 3" szabály miatt?', a: 'nem, csak a kiejtés változik', wrong: ['igen, az első szótagra 2. tónusjel kerül', 'igen, mindkét jel eltűnik', 'csak a tankönyvekben'], why: 'A pinyin <i>nǐ hǎo</i> marad; a „ní" csak a kiejtésben van.', point: 5 },
     { q: 'Melyik NEM helyes köszönés?', a: '{您们好|nín·men hǎo}！', wrong: ['{你好|nǐ hǎo}！', '{您好|nín hǎo}！', '{老师好|lǎo·shī hǎo}！'], why: 'A {您|nín}-nek nincs többes száma.', point: 2 },
-    { q: 'Mit jelent: {老师好|lǎo·shī hǎo}！', a: 'Jó napot, tanár úr / tanárnő!', wrong: ['A tanár jó.', 'Szia, tanár!', 'Elnézést, tanárnő!'], why: 'Megszólítás + {好|hǎo}: a megszólítottnak szóló köszönés.', point: 1 },
+    { q: 'Mit jelent: {老师好|lǎo·shī hǎo}！', a: 'Jó napot, tanár úr / tanárnő!', wrong: ['A tanár nagyon jó ember.', 'Szia, ő itt a tanárunk!', 'Elnézést, tanárnő, késtem!'], why: 'Megszólítás + {好|hǎo}: a megszólítottnak szóló köszönés.', point: 1 },
     { q: 'A {你好|nǐ hǎo} szó szerint…', a: '„te jó"', wrong: ['„jó reggelt"', '„hogy vagy?"', '„én jól"'], why: '{你|nǐ} „te" + {好|hǎo} „jó".', point: 1 },
-    { q: 'Napszakhoz kötött-e a {你好|nǐ hǎo}?', a: 'nem, reggel, délben és este is használható', wrong: ['igen, csak reggel', 'igen, csak délután', 'csak telefonon használják'], why: 'A {你好|nǐ hǎo} egész nap jó.', point: 1 },
+    { q: 'Napszakhoz kötött-e a {你好|nǐ hǎo}?', a: 'nem, reggel, délben és este is használható', wrong: ['igen, csak reggel, tizenegy óráig', 'igen, csak délután és este mondják', 'csak telefonon és levélben használják'], why: 'A {你好|nǐ hǎo} egész nap jó.', point: 1 },
     { q: 'Melyik mondja: „mi"?', a: '{我们|wǒ·men}', wrong: ['{你们|nǐ·men}', '{您|nín}', '{我|wǒ}'], why: '{我|wǒ} „én" + {们|men} = {我们|wǒ·men} „mi".', point: 3 },
     { q: 'Melyik szótag semleges tónusú a {没关系|méi guān·xi} szóban?', a: 'az utolsó (xi)', wrong: ['az első (méi)', 'a középső (guān)', 'egyik sem'], why: '<i>méi guānxi</i>: a <i>xi</i>-n nincs ékezet, röviden ejted.', point: 4 },
     { q: 'A {对不起|duì·bu·qǐ}-ra válaszként mit NEM mondasz?', a: '{不客气|bú kè·qi}', wrong: ['{没关系|méi guān·xi}', 'semmit, csak bólintasz', '{没关系|méi guān·xi}，{没关系|méi guān·xi}'], why: 'A {不客气|bú kè·qi} „szívesen", a köszönetre válasz (2. lecke).', point: 4 }
@@ -577,7 +577,7 @@ const HANZIFLOW_COURSE = [
     { q: 'Valaki megköszön neked valamit. Mit felelsz?', a: '{不客气|bú kè·qi}。', wrong: ['{对不起|duì·bu·qǐ}。', '{谢谢|xiè·xie}。', '{你好|nǐ hǎo}。'], why: 'A köszönetre a válasz {不客气|bú kè·qi} „szívesen".', point: 2 },
     { q: 'Mit jelent szó szerint a {不客气|bú kè·qi}?', a: '„ne udvariaskodj"', wrong: ['„nem kérek"', '„jó vendég"', '„nincs baj"'], why: 'A {客气|kè·qi} „udvariaskodó, kimért", a {不|bù} tagad.', point: 2 },
     { q: 'Hogyan ejted a {不|bù}-t a {不是|bú shì} kifejezésben?', a: 'bú (emelkedő)', wrong: ['bù (eső)', 'bǔ (mély)', 'bū (magas)'], why: 'A {是|shì} 4. tónusú, előtte a {不|bù} 2. tónusú lesz.', point: 3 },
-    { q: 'Melyik kifejezésben marad bù a 不?', a: '{不好|bù hǎo}', wrong: ['{不是|bú shì}', '{不客气|bú kè·qi}', '{不对|bú duì}'], why: 'A {好|hǎo} 3. tónusú: előtte a {不|bù} nem változik.', point: 3 },
+    { q: 'Melyik kifejezésben marad bù a {不|bù}?', a: '{不好|bù hǎo}', wrong: ['{不是|bú shì}', '{不客气|bú kè·qi}', '{不对|bú duì}'], why: 'A {好|hǎo} 3. tónusú: előtte a {不|bù} nem változik.', point: 3 },
     { q: 'Mi a {不|bù} tónusváltásának szabálya?', a: '4. tónus előtt 2. tónusú lesz', wrong: ['3. tónus előtt 2. tónusú lesz', 'mindig semleges', 'mondat végén 1. tónusú lesz'], why: 'bù + 4. tónus → bú.', point: 3 },
     { q: 'Mit jelent: {再见|zài·jiàn}?', a: 'Viszlát!', wrong: ['Köszönöm!', 'Szia!', 'Szívesen!'], why: 'A {再|zài} „újra", a {见|jiàn} „látni": viszontlátásra.', point: 4 },
     { q: 'Hogyan mondod: „Holnap találkozunk!"?', a: '{明天见|míng·tiān jiàn}！', wrong: ['{再见明天|zài·jiàn míng·tiān}！', '{明天再|míng·tiān zài}！', '{见明天|jiàn míng·tiān}！'], why: 'Időpont + {见|jiàn}: {明天见|míng·tiān jiàn}.', point: 4 },
@@ -585,10 +585,635 @@ const HANZIFLOW_COURSE = [
     { q: 'Melyik szó áll két egyforma szótagból, semleges második szótaggal?', a: '{爸爸|bà·ba}', wrong: ['{再见|zài·jiàn}', '{老师|lǎo·shī}', '{不是|bú shì}'], why: '{爸爸|bà·ba} „apa": <i>bà-ba</i>.', point: 5 },
     { q: 'Hogyan köszönöd meg udvariasan egy tanárnak?', a: '{谢谢您|xiè·xie nín}！', wrong: ['{谢谢你们|xiè·xie nǐ·men}！', '{您谢谢|nín xiè·xie}！', '{不客气您|bú kè·qi nín}！'], why: 'A köszönet után a megszólított: {谢谢您|xiè·xie nín}.', point: 1 },
     { q: 'Mit mondasz, ha elköszönsz a tanártól?', a: '{老师|lǎo·shī}，{再见|zài·jiàn}！', wrong: ['{老师|lǎo·shī}，{不客气|bú kè·qi}！', '{老师|lǎo·shī}，{对不起|duì·bu·qǐ}！', '{老师|lǎo·shī}，{没关系|méi guān·xi}！'], why: 'Búcsúzáskor: {再见|zài·jiàn}.', point: 4 },
-    { q: 'Mit jelent: {不谢|bú xiè}?', a: 'Nincs mit (megköszönni).', wrong: ['Nem köszönöm.', 'Ne haragudj.', 'Nem látom.'], why: 'Rövid válasz a köszönetre, mint a {不客气|bú kè·qi}.', point: 2 },
-    { q: 'Miért ejted bú-nak a 不-t a {不客气|bú kè·qi}-ben?', a: 'mert a {客|kè} 4. tónusú', wrong: ['mert a mondat elején áll', 'mert semleges tónusú', 'mert udvarias kifejezés'], why: 'A {客|kè} 4. tónusú, előtte a {不|bù} → bú.', point: 3 },
+    { q: 'Mit jelent: {不谢|bú xiè}?', a: 'Nincs mit (megköszönni).', wrong: ['Nem, köszönöm, nem kérek.', 'Ne haragudj, elnézést kérek.', 'Nem látom, hol van.'], why: 'Rövid válasz a köszönetre, mint a {不客气|bú kè·qi}.', point: 2 },
+    { q: 'Miért ejted bú-nak a {不|bù}-t a {不客气|bú kè·qi}-ben?', a: 'mert a {客|kè} 4. tónusú', wrong: ['mert a mondat elején áll', 'mert semleges tónusú', 'mert udvarias kifejezés'], why: 'A {客|kè} 4. tónusú, előtte a {不|bù} → bú.', point: 3 },
     { q: 'A {谢谢|xiè·xie} után mit mondasz, ha a köszönet több embernek szól?', a: '{你们|nǐ·men}', wrong: ['{您|nín}', '{您们|nín·men}', '{我们|wǒ·men}'], why: '{谢谢你们|xiè·xie nǐ·men} „köszönöm nektek".', point: 1 },
-    { q: 'Mit jelent a {见|jiàn} a {再见|zài·jiàn}-ben?', a: 'látni, találkozni', wrong: ['újra', 'jó', 'holnap'], why: 'A {再|zài} „újra", a {见|jiàn} „látni".', point: 4 }
+    { q: 'Mit jelent a {见|jiàn} a {再见|zài·jiàn}-ben?', a: 'látni, találkozni', wrong: ['újra, még egyszer', 'jó, rendben van', 'holnap, másnap'], why: 'A {再|zài} „újra", a {见|jiàn} „látni".', point: 4 }
+  ]
+},
+
+/* ════════════════════════════════════════════════════
+   3. LECKE — 叫, 什么, 是, 吗 (bemutatkozás)
+   ════════════════════════════════════════════════════ */
+{
+  id: 'l3', no: 3, kicker: 'HSK 1 · 3. lecke',
+  title: 'Hogy hívnak? — bemutatkozás',
+  lead: 'Megkérdezed valakinek a nevét, megmondod a sajátodat, és elmondod, honnan jöttél. Közben három alapszerkezet: a 什么 kérdőszó, a 是 „lenni" és a 吗-s kérdés.',
+  cando: [
+    'Megkérdezed valakinek a nevét (你叫什么名字？), és bemutatkozol (我叫…).',
+    'Elmondod, ki vagy (我是学生), és tagadod (我不是老师).',
+    'Eldöntendő kérdést teszel fel a 吗 szócskával.',
+    'Megmondod a nemzetiséged: 中国人, 美国人, 匈牙利人.'
+  ],
+  intro: [
+    'Ebben a leckében már egész mondatokat mondasz. Jó hír: a kínai mondat alapszórendje ugyanaz, mint a „Péter almát eszik" típusú magyar mondaté: <b>alany – ige – tárgy</b>. Ragozás nincs: a {是|shì} „lenni" ugyanaz minden személyben, nincs „vagyok, vagy, van" külön alak.',
+    'A kérdésekhez sem kell szórendet cserélni. Ha kérdőszó kell, az oda kerül, ahol a válasz állna; ha eldöntendő a kérdés, a mondat végére egy {吗|ma} kerül, és kész.'
+  ],
+  dialogue: {
+    title: 'Az első óra',
+    scene: 'Zhang tanárnő az első órán sorra kérdezi a diákokat. Anna Budapestről jött, Wang Ming pekingi diák, aki besegít az órákon.',
+    lines: [
+      { who: 'Zhang tanárnő', zh: '{你好|nǐ hǎo}！{你|nǐ}{叫|jiào}{什么|shén·me}{名字|míng·zi}？', hu: 'Szia! Hogy hívnak?' },
+      { who: 'Anna', zh: '{我|wǒ}{叫|jiào}{安娜|Ān·nà}。', hu: 'Annának hívnak.' },
+      { who: 'Zhang tanárnő', zh: '{你|nǐ}{是|shì}{美国人|Měi·guó·rén}{吗|ma}？', hu: 'Amerikai vagy?' },
+      { who: 'Anna', zh: '{不是|bú shì}，{我|wǒ}{是|shì}{匈牙利人|Xiōng·yá·lì·rén}。', hu: 'Nem, magyar vagyok.', note: 'A {匈牙利|Xiōngyálì} „Magyarország" nem HSK-szó, de neked az egyik legfontosabb.' },
+      { who: 'Zhang tanárnő', zh: '{他|tā}{叫|jiào}{王明|Wáng Míng}，{他|tā}{是|shì}{中国人|Zhōng·guó·rén}。', hu: 'Őt Wang Mingnek hívják, ő kínai.' },
+      { who: 'Anna', zh: '{王明|Wáng Míng}，{你|nǐ}{是|shì}{老师|lǎo·shī}{吗|ma}？', hu: 'Wang Ming, te tanár vagy?' },
+      { who: 'Wang Ming', zh: '{不是|bú shì}，{我|wǒ}{是|shì}{学生|xué·sheng}。', hu: 'Nem, diák vagyok.' }
+    ],
+    notes: [
+      'A {你叫什么名字|nǐ jiào shénme míngzi} szó szerint „te hívsz milyen nevet": a {叫|jiào} „hívni, nevezni", a {什么|shénme} „mi, milyen", a {名字|míngzi} „név".',
+      'Kínai neveknél a <b>családnév áll elöl</b>: {王明|Wáng Míng} családneve {王|Wáng}, utóneve {明|Míng} — mint a magyarban, és nem úgy, mint az angolban.',
+      'A {不是|bú shì} „nem az" egymagában is lehet válasz egy {吗|ma}-s kérdésre. A {不|bù} itt <i>bú</i>, mert a {是|shì} 4. tónusú.'
+    ]
+  },
+  points: [
+    {
+      title: '{叫|jiào}', sub: 'valakit valahogy hívnak',
+      pattern: 'A + {叫|jiào} + név',
+      body: 'A {叫|jiào} „hívni, nevezni" ige után a név áll: {我叫安娜|wǒ jiào Ānnà} „Annának hívnak", {他叫王明|tā jiào Wáng Míng} „őt Wang Mingnek hívják". A magyarral szemben itt nincs „-nak/-nek" rag, és nem kell visszaható szerkezet („engem hívnak"): egyszerűen „én hívódom X".',
+      more: [
+        'A kérdés: {你叫什么名字|nǐ jiào shénme míngzi}？ „Hogy hívnak?" Rövidebben is lehet: {你叫什么|nǐ jiào shénme}？ A válaszban elég a név: {安娜|Ānnà}.',
+        'Udvariasabb, főleg idősebbektől: {您贵姓|nín guìxìng}？ „Mi a (tisztelt) családneve?" Ezt a következő szinten tanulod; a {叫|jiào} mindenkinél jó.'
+      ],
+      examples: [
+        { zh: '{我|wǒ}{叫|jiào}{安娜|Ān·nà}。', hu: 'Annának hívnak.' },
+        { zh: '{你|nǐ}{叫|jiào}{什么|shén·me}{名字|míng·zi}？', hu: 'Hogy hívnak?' },
+        { zh: '{她|tā}{叫|jiào}{刘|Liú}{芳|Fāng}。', hu: 'Őt Liu Fangnak hívják.' }
+      ]
+    },
+    {
+      title: '{什么|shénme}', sub: '„mi?", „milyen?" — a kérdőszó a válasz helyén áll',
+      pattern: '{你|nǐ}{叫|jiào}{什么|shén·me}？ → {我|wǒ}{叫|jiào}{安娜|Ān·nà}。',
+      body: 'A kínai kérdőszó <b>pontosan oda kerül, ahová a válasz</b>: a kérdés és a válasz szórendje azonos. {你叫什么|nǐ jiào shénme}？ — {我叫安娜|wǒ jiào Ānnà}. A {什么|shénme} a mondat közepén vagy végén áll, nem kell az elejére hozni.',
+      more: [
+        'A {什么|shénme} főnév előtt „milyen, miféle" jelentésű: {什么名字|shénme míngzi} „milyen név", {什么书|shénme shū} „milyen könyv".',
+        'A kérdőszavas kérdés végére <b>nem</b> kerül {吗|ma}: a {什么|shénme} egymagában kérdővé teszi a mondatot.'
+      ],
+      examples: [
+        { zh: '{你|nǐ}{叫|jiào}{什么|shén·me}？', hu: 'Hogy hívnak? (Mi a neved?)' },
+        { zh: '{他|tā}{叫|jiào}{什么|shén·me}{名字|míng·zi}？', hu: 'Őt hogy hívják?' },
+        { zh: '{你|nǐ}{学|xué}{什么|shén·me}？', hu: 'Mit tanulsz?' }
+      ],
+      mistakes: [
+        { bad: '{什么|shén·me}{名字|míng·zi}{你|nǐ}{叫|jiào}？', good: '{你|nǐ}{叫|jiào}{什么|shén·me}{名字|míng·zi}？', why: 'A kérdőszó a helyén marad: oda, ahol a válaszban a név állna.' },
+        { bad: '{你|nǐ}{叫|jiào}{什么|shén·me}{名字|míng·zi}{吗|ma}？', good: '{你|nǐ}{叫|jiào}{什么|shén·me}{名字|míng·zi}？', why: 'Kérdőszó mellett nincs {吗|ma}.' }
+      ]
+    },
+    {
+      title: '{是|shì}', sub: 'A az B — azonosítás két főnév között',
+      pattern: 'A + {是|shì} + B · A + {不是|bú shì} + B',
+      body: 'A {是|shì} két főnevet köt össze: „A az B", „A = B". {我是学生|wǒ shì xuésheng} „diák vagyok", {她是老师|tā shì lǎoshī} „ő tanár". Az ige minden személyben ugyanaz: {我是|wǒ shì}, {你是|nǐ shì}, {他是|tā shì}. Tagadva {不是|bú shì}: {我不是老师|wǒ bú shì lǎoshī} „nem vagyok tanár".',
+      more: [
+        'A magyarban harmadik személyben a „van" elmarad („Ő tanár."), a kínaiban a {是|shì} ott is kell: {他是老师|tā shì lǎoshī}, nem *{他老师|tā lǎoshī}.',
+        'Fontos: a {是|shì} főnévvel áll, <b>melléknévvel nem</b>. „Jó vagyok" nem *{我是好|wǒ shì hǎo}, hanem {我很好|wǒ hěn hǎo} — ezt a 6. leckében tanulod.'
+      ],
+      examples: [
+        { zh: '{我|wǒ}{是|shì}{学生|xué·sheng}。', hu: 'Diák vagyok.' },
+        { zh: '{她|tā}{是|shì}{老师|lǎo·shī}。', hu: 'Ő tanár.' },
+        { zh: '{我|wǒ}{不是|bú shì}{美国人|Měi·guó·rén}。', hu: 'Nem vagyok amerikai.' },
+        { zh: '{王明|Wáng Míng}{是|shì}{中国人|Zhōng·guó·rén}。', hu: 'Wang Ming kínai.' }
+      ],
+      mistakes: [
+        { bad: '{他|tā}{老师|lǎo·shī}。', good: '{他|tā}{是|shì}{老师|lǎo·shī}。', why: 'Két főnév között a {是|shì} nem maradhat el.' },
+        { bad: '{我|wǒ}{没|méi}{是|shì}{老师|lǎo·shī}。', good: '{我|wǒ}{不是|bú shì}{老师|lǎo·shī}。', why: 'A {是|shì} tagadása mindig {不|bù}: {不是|bú shì}.' }
+      ]
+    },
+    {
+      title: '{吗|ma}', sub: 'eldöntendő kérdés: állítás + {吗|ma}？',
+      pattern: 'állítás + {吗|ma}？ → {是|shì}。/ {不是|bú shì}。',
+      body: 'Ha egy állító mondat végére {吗|ma}-t teszel, igen-nem kérdés lesz belőle: {你是学生|nǐ shì xuésheng} „diák vagy" → {你是学生吗|nǐ shì xuésheng ma}？ „Diák vagy?" A szórend nem változik, a hanghordozás sem kell, hogy emelkedjen: a {吗|ma} maga a kérdőjel.',
+      more: [
+        'A kínaiban nincs külön „igen" és „nem" szó, mint a magyarban. A válaszban a kérdés igéjét ismétled meg: {你是学生吗|nǐ shì xuésheng ma}？ — {是|shì}（{我是学生|wǒ shì xuésheng}）„igen" / {不是|bú shì} „nem".',
+        'A {吗|ma} semleges tónusú, röviden ejted.'
+      ],
+      examples: [
+        { zh: '{你|nǐ}{是|shì}{学生|xué·sheng}{吗|ma}？', hu: 'Diák vagy?' },
+        { zh: '{是|shì}，{我|wǒ}{是|shì}{学生|xué·sheng}。', hu: 'Igen, diák vagyok.' },
+        { zh: '{她|tā}{是|shì}{中国人|Zhōng·guó·rén}{吗|ma}？', hu: 'Ő kínai?' },
+        { zh: '{不是|bú shì}，{她|tā}{是|shì}{美国人|Měi·guó·rén}。', hu: 'Nem, ő amerikai.' }
+      ],
+      tip: 'Kezdőként a legbiztosabb: vedd a választ, és tegyél a végére {吗|ma}-t. Így sosem rontod el a szórendet.'
+    },
+    {
+      title: '{中国人|Zhōngguórén}', sub: 'ország + {人|rén} = nemzetiség',
+      pattern: 'ország + {人|rén}',
+      body: 'A {人|rén} jelentése „ember". Az ország neve után téve megadja, ki honnan való: {中国|Zhōngguó} „Kína" → {中国人|Zhōngguórén} „kínai (ember)", {美国|Měiguó} „Amerika" → {美国人|Měiguórén} „amerikai", {匈牙利|Xiōngyálì} „Magyarország" → {匈牙利人|Xiōngyálìrén} „magyar".',
+      more: [
+        'Az ország nevében gyakran ott a {国|guó} „ország" írásjegy: {中国|Zhōngguó} szó szerint „Középső ország", {美国|Měiguó} „Szép ország" (az „Amerika" második szótagjának hangzásából).',
+        'A nyelv neve más szerkezet: {汉语|Hànyǔ} vagy {中文|Zhōngwén} „kínai nyelv", {英语|Yīngyǔ} „angol" — ezeket a következő leckében tanulod.'
+      ],
+      tables: [
+        { caption: 'Országok és nemzetiségek',
+          head: ['Ország', 'Nemzetiség'],
+          rows: [
+            ['{中国|Zhōng·guó} Kína', '{中国人|Zhōng·guó·rén} kínai'],
+            ['{美国|Měi·guó} Amerika (USA)', '{美国人|Měi·guó·rén} amerikai'],
+            ['{匈牙利|Xiōng·yá·lì} Magyarország', '{匈牙利人|Xiōng·yá·lì·rén} magyar'],
+            ['{英国|Yīng·guó} Nagy-Britannia', '{英国人|Yīng·guó·rén} brit'],
+            ['{德国|Dé·guó} Németország', '{德国人|Dé·guó·rén} német']
+          ] }
+      ],
+      examples: [
+        { zh: '{我|wǒ}{是|shì}{匈牙利人|Xiōng·yá·lì·rén}。', hu: 'Magyar vagyok.' },
+        { zh: '{你|nǐ}{是|shì}{中国人|Zhōng·guó·rén}{吗|ma}？', hu: 'Kínai vagy?' }
+      ]
+    }
+  ],
+  phrases: [
+    { zh: '{你|nǐ}{叫|jiào}{什么|shén·me}{名字|míng·zi}？', hu: 'Hogy hívnak?' },
+    { zh: '{我|wǒ}{叫|jiào}…', hu: '…-nak/-nek hívnak.' },
+    { zh: '{我|wǒ}{是|shì}{匈牙利人|Xiōng·yá·lì·rén}。', hu: 'Magyar vagyok.' },
+    { zh: '{你|nǐ}{是|shì}{学生|xué·sheng}{吗|ma}？', hu: 'Diák vagy?' },
+    { zh: '{不是|bú shì}。', hu: 'Nem (az).' }
+  ],
+  words: [
+    { title: 'Szavak',
+      items: [
+        { zh: '{叫|jiào}', pinyin: 'jiào', hu: 'hívni, nevezni' },
+        { zh: '{什么|shén·me}', pinyin: 'shénme', hu: 'mi, milyen' },
+        { zh: '{名字|míng·zi}', pinyin: 'míngzi', hu: 'név' },
+        { zh: '{我|wǒ}', pinyin: 'wǒ', hu: 'én' },
+        { zh: '{是|shì}', pinyin: 'shì', hu: 'van, -nak lenni' },
+        { zh: '{吗|ma}', pinyin: 'ma', hu: 'kérdőszócska' },
+        { zh: '{老师|lǎo·shī}', pinyin: 'lǎoshī', hu: 'tanár' },
+        { zh: '{学生|xué·sheng}', pinyin: 'xuésheng', hu: 'diák' },
+        { zh: '{人|rén}', pinyin: 'rén', hu: 'ember' }
+      ] },
+    { title: 'Országok',
+      items: [
+        { zh: '{中国|Zhōng·guó}', pinyin: 'Zhōngguó', hu: 'Kína' },
+        { zh: '{美国|Měi·guó}', pinyin: 'Měiguó', hu: 'Amerika' },
+        { zh: '{匈牙利|Xiōng·yá·lì}', pinyin: 'Xiōngyálì', hu: 'Magyarország' }
+      ] }
+  ],
+  culture: [
+    { title: 'Kínai nevek', text: 'A kínai név általában két vagy három szótag: elöl az egy szótagú <b>családnév</b> ({王|Wáng}, {李|Lǐ}, {张|Zhāng} a leggyakoribbak), utána az egy-két szótagú utónév. A családnevek száma meglepően kicsi: a három leggyakoribb nevet több száz millió ember viseli. Az utónevet a szülők jelentése alapján választják: {明|míng} „fényes", {月|yuè} „hold".' },
+    { title: 'Magyar név kínaiul', text: 'A külföldi neveket hangzás szerint írják át: {安娜|Ānnà} „Anna", {彼得|Bǐdé} „Péter". Sok kínait tanuló választ magának kínai nevet is, kínai családnévvel: ezt egy tanár vagy kínai barát segítségével érdemes megtenni, mert a hangzás mellett az írásjegyek jelentése is számít.' }
+  ],
+  reading: {
+    title: '{新|xīn}{同学|tóng·xué}', titleHu: 'Az új diák',
+    text: [
+      { zh: '{你们好|nǐ·men hǎo}！', hu: 'Sziasztok!' },
+      { zh: '{我|wǒ}{叫|jiào}{安娜|Ān·nà}，{我|wǒ}{是|shì}{学生|xué·sheng}。', hu: 'Annának hívnak, diák vagyok.' },
+      { zh: '{我|wǒ}{不是|bú shì}{美国人|Měi·guó·rén}，{我|wǒ}{是|shì}{匈牙利人|Xiōng·yá·lì·rén}。', hu: 'Nem vagyok amerikai, magyar vagyok.' },
+      { zh: '{我|wǒ}{的|de}{老师|lǎo·shī}{叫|jiào}{张|Zhāng}{红|Hóng}，{她|tā}{是|shì}{中国人|Zhōng·guó·rén}。', hu: 'A tanárnőmet Zhang Hongnak hívják, ő kínai.', par: true },
+      { zh: '{王明|Wáng Míng}{也|yě}{是|shì}{中国人|Zhōng·guó·rén}，{他|tā}{是|shì}{学生|xué·sheng}，{不是|bú shì}{老师|lǎo·shī}。', hu: 'Wang Ming is kínai, ő diák, nem tanár.' }
+    ],
+    words: [
+      { zh: '{新|xīn}', hu: 'új' },
+      { zh: '{也|yě}', hu: 'is' },
+      { zh: '{的|de}', hu: '(birtokos szócska, 4. lecke)' }
+    ],
+    questions: [
+      { q: 'Kinek a bemutatkozása ez a szöveg?', a: 'Annáé', wrong: ['Zhang tanárnőé', 'Wang Mingé', 'egy amerikai diáké'], why: '{我叫安娜|wǒ jiào Ānnà}: „Annának hívnak."' },
+      { q: 'Honnan jött Anna?', a: 'Magyarországról', wrong: ['Amerikából', 'Kínából', 'nem derül ki'], why: '{我是匈牙利人|wǒ shì Xiōngyálìrén}.' },
+      { q: 'Ki Zhang Hong?', a: 'Anna kínai tanárnője', wrong: ['Anna osztálytársa', 'egy amerikai diák', 'Wang Ming anyja'], why: '{我的老师叫张红|wǒ de lǎoshī jiào Zhāng Hóng}, {她是中国人|tā shì Zhōngguórén}.' },
+      { q: 'Mit tudunk meg Wang Mingről?', a: 'Kínai, és diák, nem tanár.', wrong: ['Amerikai tanár.', 'Magyar diák.', 'Ő Anna tanára.'], why: '{他是学生|tā shì xuésheng}，{不是老师|bú shì lǎoshī}.' }
+    ]
+  },
+  quiz: [
+    { q: 'Hogyan kérdezed meg valakinek a nevét?', a: '{你|nǐ}{叫|jiào}{什么|shén·me}{名字|míng·zi}？', wrong: ['{你|nǐ}{是|shì}{什么|shén·me}？', '{你|nǐ}{叫|jiào}{吗|ma}？', '{什么|shén·me}{你|nǐ}{名字|míng·zi}？'], why: 'A {叫|jiào} után a kérdőszó és a „név": {你叫什么名字|nǐ jiào shénme míngzi}？', point: 1 },
+    { q: 'Mit jelent: {我叫安娜|wǒ jiào Ānnà}。', a: 'Annának hívnak.', wrong: ['Anna a tanárom.', 'Anna vagy?', 'Hívd Annát!'], why: 'A {叫|jiào} „valahogy hívnak".', point: 1 },
+    { q: 'Hová kerül a {什么|shénme} a kérdésben?', a: 'oda, ahol a válaszban a keresett szó állna', wrong: ['mindig a mondat legelejére, mint angolul', 'mindig a mondat végére, a kérdőjel elé', 'mindig közvetlenül az ige elé'], why: 'Kérdés és válasz szórendje azonos: {你叫什么|nǐ jiào shénme}？ — {我叫安娜|wǒ jiào Ānnà}.', point: 2 },
+    { q: 'Melyik mondat helyes?', a: '{你|nǐ}{叫|jiào}{什么|shén·me}？', wrong: ['{你|nǐ}{叫|jiào}{什么|shén·me}{吗|ma}？', '{什么|shén·me}{你|nǐ}{叫|jiào}？', '{叫|jiào}{你|nǐ}{什么|shén·me}？'], why: 'Kérdőszó mellett nincs {吗|ma}, és a kérdőszó a helyén marad.', point: 2 },
+    { q: '„Diák vagyok." — Melyik a helyes?', a: '{我|wǒ}{是|shì}{学生|xué·sheng}。', wrong: ['{我|wǒ}{学生|xué·sheng}。', '{是|shì}{我|wǒ}{学生|xué·sheng}。', '{我|wǒ}{叫|jiào}{学生|xué·sheng}。'], why: 'Két főnév között a {是|shì} áll: A {是|shì} B.', point: 3 },
+    { q: 'Hogyan tagadod: {我是老师|wǒ shì lǎoshī}?', a: '{我|wǒ}{不是|bú shì}{老师|lǎo·shī}。', wrong: ['{我|wǒ}{是|shì}{不|bù}{老师|lǎo·shī}。', '{我|wǒ}{没|méi}{是|shì}{老师|lǎo·shī}。', '{不|bù}{我|wǒ}{是|shì}{老师|lǎo·shī}。'], why: 'A tagadó {不|bù} közvetlenül az ige elé kerül: {不是|bú shì}.', point: 3 },
+    { q: 'Hogyan ejted a {不是|bú shì} első szótagját?', a: 'bú (emelkedő)', wrong: ['bù (eső)', 'bǔ (mély)', 'bū (magas)'], why: 'A {是|shì} 4. tónusú, előtte a {不|bù} 2. tónusú.', point: 3 },
+    { q: '„Ő tanár." — miért kell a {是|shì} a kínaiban?', a: 'mert két főnév között a {是|shì} harmadik személyben sem maradhat el', wrong: ['mert a {是|shì} itt udvarias, tisztelettudó forma', 'mert a {是|shì} itt múlt időt jelez', 'nem kell: a {是|shì} ilyenkor elhagyható'], why: '{他是老师|tā shì lǎoshī}: a magyar „van" elmarad, a kínai {是|shì} nem.', point: 3 },
+    { q: 'Hogyan lesz kérdés a {你是学生|nǐ shì xuésheng} mondatból?', a: '{你|nǐ}{是|shì}{学生|xué·sheng}{吗|ma}？', wrong: ['{是|shì}{你|nǐ}{学生|xué·sheng}？', '{吗|ma}{你|nǐ}{是|shì}{学生|xué·sheng}？', '{你|nǐ}{吗|ma}{是|shì}{学生|xué·sheng}？'], why: 'Állítás + {吗|ma}: a szórend nem változik.', point: 4 },
+    { q: '{你是中国人吗|nǐ shì Zhōngguórén ma}？ — Hogyan felelsz „igen"-nel?', a: '{是|shì}。', wrong: ['{吗|ma}。', '{好|hǎo}。', '{叫|jiào}。'], why: 'Az „igen" a kérdés igéje: {是|shì}.', point: 4 },
+    { q: 'Mit jelent: {她是美国人吗|tā shì Měiguórén ma}？', a: 'Ő amerikai?', wrong: ['Ő amerikai.', 'Ő nem amerikai.', 'Hol van Amerika?'], why: 'A mondat végi {吗|ma} kérdéssé teszi.', point: 4 },
+    { q: 'Hogyan mondod: „magyar (ember)"?', a: '{匈牙利人|Xiōng·yá·lì·rén}', wrong: ['{人|rén}{匈牙利|Xiōng·yá·lì}', '{匈牙利|Xiōng·yá·lì}{国|guó}', '{匈牙利|Xiōng·yá·lì}{是|shì}'], why: 'Ország + {人|rén}.', point: 5 },
+    { q: 'Mit jelent a {中国|Zhōngguó}?', a: 'Kína', wrong: ['kínai ember', 'kínai nyelv', 'Amerika'], why: '{中国|Zhōngguó} „Kína", {中国人|Zhōngguórén} „kínai ember".', point: 5 },
+    { q: '{王明|Wáng Míng} — melyik a családnév?', a: '{王|Wáng}', wrong: ['{明|Míng}', 'mindkettő', 'egyik sem'], why: 'A kínai névben a családnév áll elöl.' },
+    { q: 'Melyik a „diák"?', a: '{学生|xué·sheng}', wrong: ['{老师|lǎo·shī}', '{名字|míng·zi}', '{什么|shén·me}'], why: '{学生|xuésheng} „diák", {老师|lǎoshī} „tanár".', point: 3 },
+    { q: '{你是老师吗|nǐ shì lǎoshī ma}？ — „Nem, diák vagyok."', a: '{不是|bú shì}，{我|wǒ}{是|shì}{学生|xué·sheng}。', wrong: ['{不|bù}，{我|wǒ}{学生|xué·sheng}。', '{没有|méi·yǒu}，{我|wǒ}{是|shì}{学生|xué·sheng}。', '{是|shì}，{我|wǒ}{不是|bú shì}{学生|xué·sheng}。'], why: 'A nemleges válasz {不是|bú shì}, utána a helyesbítés.', point: 4 },
+    { q: 'Mit jelent a {名字|míngzi}?', a: 'név', wrong: ['hívni', 'mi, milyen', 'ember'], why: '{名字|míngzi} „név".', point: 1 },
+    { q: 'Melyik mondat hibás?', a: '{我|wǒ}{是|shì}{好|hǎo}。', wrong: ['{我|wǒ}{是|shì}{老师|lǎo·shī}。', '{他|tā}{是|shì}{学生|xué·sheng}。', '{她|tā}{是|shì}{中国人|Zhōng·guó·rén}。'], why: 'A {是|shì} főnévvel áll, melléknévvel nem; „jól vagyok" = {我很好|wǒ hěn hǎo}.', point: 3 }
+  ]
+},
+
+/* ════════════════════════════════════════════════════
+   4. LECKE — 谁, 哪, 的, 呢
+   ════════════════════════════════════════════════════ */
+{
+  id: 'l4', no: 4, kicker: 'HSK 1 · 4. lecke',
+  title: 'Ki ő? — emberek körülöttem',
+  lead: 'Megkérdezed, ki valaki és honnan jött, elmondod, ki a tanárod, a barátod, az osztálytársad. Három új szócska: 谁 „ki", 哪 „melyik", és a birtokos 的; plusz a visszakérdező 呢.',
+  cando: [
+    'Megkérdezed, ki valaki (她是谁？), és honnan jött (你是哪国人？).',
+    'Birtokot és viszonyt fejezel ki a 的 szócskával (我的老师).',
+    'Visszakérdezel a 呢 szócskával (你呢？).',
+    'Tudod, hogy a 他 és a 她 egyformán hangzik.'
+  ],
+  intro: [
+    'Az előző leckében magadról beszéltél. Most másokról: ki az, akit látsz, honnan jött, milyen viszonyban vagytok. Ehhez két új kérdőszó kell — {谁|shéi} „ki" és {哪|nǎ} „melyik" —, és ezek is ugyanúgy a válasz helyén állnak, mint a {什么|shénme}.',
+    'A {的|de} szócska a magyar birtokos szerkezetet adja vissza („a tanárom", „Anna barátja"), csak fordított logikával: a birtokos áll elöl, a {的|de} után jön, ami az övé.'
+  ],
+  dialogue: {
+    title: 'Az iskola kapujában',
+    scene: 'Anna és David, egy amerikai osztálytárs, az iskola kapujában várnak. Két ember közeledik feléjük.',
+    lines: [
+      { who: 'David', zh: '{安娜|Ān·nà}，{她|tā}{是|shì}{谁|shéi}？', hu: 'Anna, ő ki?' },
+      { who: 'Anna', zh: '{她|tā}{是|shì}{张|Zhāng}{老师|lǎo·shī}，{我|wǒ}{的|de}{汉语|Hàn·yǔ}{老师|lǎo·shī}。', hu: 'Ő Zhang tanárnő, a kínaitanárom.' },
+      { who: 'David', zh: '{她|tā}{是|shì}{哪|nǎ}{国|guó}{人|rén}？', hu: 'Milyen nemzetiségű? (Melyik ország embere?)' },
+      { who: 'Anna', zh: '{她|tā}{是|shì}{中国人|Zhōng·guó·rén}。', hu: 'Kínai.' },
+      { who: 'David', zh: '{他|tā}{呢|ne}？', hu: 'És ő?' },
+      { who: 'Anna', zh: '{他|tā}{是|shì}{我|wǒ}{的|de}{朋友|péng·you}，{叫|jiào}{王明|Wáng Míng}。', hu: 'Ő a barátom, Wang Mingnek hívják.' },
+      { who: 'Wang Ming', zh: '{你好|nǐ hǎo}！{你|nǐ}{是|shì}{安娜|Ān·nà}{的|de}{同学|tóng·xué}{吗|ma}？', hu: 'Szia! Te Anna osztálytársa vagy?', note: 'Wang Ming odaér, és Davidhez fordul.' },
+      { who: 'David', zh: '{是|shì}，{我|wǒ}{是|shì}{美国人|Měi·guó·rén}。{你|nǐ}{呢|ne}？', hu: 'Igen, amerikai vagyok. És te?' },
+      { who: 'Wang Ming', zh: '{我|wǒ}{是|shì}{北京|Běi·jīng}{人|rén}。', hu: 'Pekingi vagyok.' }
+    ],
+    notes: [
+      'A {哪国人|nǎ guó rén} „melyik ország embere" a „milyen nemzetiségű vagy" szokásos kérdése. A beszélt nyelvben a {哪|nǎ}-t gyakran <i>něi</i>-nek ejtik.',
+      'A {你呢|nǐ ne}？ „és te?" a legrövidebb visszakérdezés: az előző kérdést kérdezi vissza, így nem kell megismételni.',
+      'Városnévvel is működik az „ország + {人|rén}" minta: {北京人|Běijīngrén} „pekingi", {上海人|Shànghǎirén} „sanghaji".'
+    ]
+  },
+  points: [
+    {
+      title: '{谁|shéi}', sub: '„ki?" — a válasz helyén',
+      pattern: '{她|tā}{是|shì}{谁|shéi}？ → {她|tā}{是|shì}{张|Zhāng}{老师|lǎo·shī}。',
+      body: 'A {谁|shéi} „ki" kérdőszó, és mint minden kínai kérdőszó, ott áll, ahol a válaszban a személy: {她是谁|tā shì shéi}？ „Ő ki?" — {她是张老师|tā shì Zhāng lǎoshī}. Ha az alanyt kérdezed, a mondat elejére kerül: {谁是老师|shéi shì lǎoshī}？ „Ki a tanár?"',
+      more: [
+        'Kétféle kiejtése van: <i>shéi</i> (a köznyelvben ez a gyakoribb) és <i>shuí</i> (választékosabb). Mindkettő helyes.',
+        'Itt sincs {吗|ma}: {她是谁吗|tā shì shéi ma}？ hibás.'
+      ],
+      examples: [
+        { zh: '{她|tā}{是|shì}{谁|shéi}？', hu: 'Ő ki?' },
+        { zh: '{谁|shéi}{是|shì}{你|nǐ}{的|de}{老师|lǎo·shī}？', hu: 'Ki a tanárod?' },
+        { zh: '{他|tā}{是|shì}{谁|shéi}？{他|tā}{是|shì}{我|wǒ}{的|de}{同学|tóng·xué}。', hu: 'Ő ki? Az osztálytársam.' }
+      ],
+      mistakes: [
+        { bad: '{她|tā}{是|shì}{谁|shéi}{吗|ma}？', good: '{她|tā}{是|shì}{谁|shéi}？', why: 'Kérdőszóval nincs {吗|ma}.' }
+      ]
+    },
+    {
+      title: '{哪|nǎ}', sub: '„melyik?" — {哪|nǎ}{国|guó}{人|rén}？',
+      pattern: '{你|nǐ}{是|shì}{哪|nǎ}{国|guó}{人|rén}？',
+      body: 'A {哪|nǎ} „melyik" egy főnév előtt áll, és több lehetőség közül kérdez rá egyre: {哪国人|nǎ guó rén} „melyik ország embere" = „milyen nemzetiségű". Válasz: {我是匈牙利人|wǒ shì Xiōngyálìrén}.',
+      more: [
+        'Figyelj a tónusra: a {哪|nǎ} 3. tónusú, és összetéveszthető a {那|nà} „az, amaz" szóval (4. tónus), amely nem kérdőszó. Írásban a {哪|nǎ} bal oldalán ott a „száj" ({口|kǒu}) jel: kérdő szavaknál gyakori.',
+        'A {国|guó} itt „ország" jelentésű, és csak összetételben áll: {哪国|nǎ guó}, {中国|Zhōngguó}, {美国|Měiguó}.'
+      ],
+      examples: [
+        { zh: '{你|nǐ}{是|shì}{哪|nǎ}{国|guó}{人|rén}？', hu: 'Milyen nemzetiségű vagy?' },
+        { zh: '{我|wǒ}{是|shì}{匈牙利人|Xiōng·yá·lì·rén}。', hu: 'Magyar vagyok.' },
+        { zh: '{你|nǐ}{的|de}{老师|lǎo·shī}{是|shì}{哪|nǎ}{国|guó}{人|rén}？', hu: 'Milyen nemzetiségű a tanárod?' }
+      ],
+      mistakes: [
+        { bad: '{你|nǐ}{是|shì}{什么|shén·me}{国|guó}{人|rén}？', good: '{你|nǐ}{是|shì}{哪|nǎ}{国|guó}{人|rén}？', why: 'Választásra (melyik ország) a {哪|nǎ} kérdez, nem a {什么|shénme}.' }
+      ]
+    },
+    {
+      title: '{的|de}', sub: 'birtok és viszony: {我|wǒ}{的|de}{老师|lǎo·shī}',
+      pattern: 'birtokos + {的|de} + birtok',
+      body: 'A {的|de} összeköti a birtokost és a birtokot: {我的老师|wǒ de lǎoshī} „az én tanárom", {安娜的朋友|Ānnà de péngyou} „Anna barátja". A sorrend mindig ugyanaz: <b>kié</b> → {的|de} → <b>mi</b>. A magyar „Anna barátja" helyett szó szerint „Anna-féle barát".',
+      more: [
+        'Közeli emberi viszonyoknál és intézményeknél a {的|de} gyakran elmarad, ha névmás a birtokos: {我妈妈|wǒ māma} „anyám", {我朋友|wǒ péngyou} „a barátom", {我们学校|wǒmen xuéxiào} „az iskolánk". Tárgyaknál viszont kell: {我的书|wǒ de shū} „a könyvem".',
+        'A {的|de} semleges tónusú, és ugyanez a szócska a jelzős szerkezetekben is előjön majd („a piros könyv").'
+      ],
+      tables: [
+        { caption: 'Mikor marad el a {的|de}?',
+          head: ['Szerkezet', 'Példa', 'Megjegyzés'],
+          rows: [
+            ['névmás + {的|de} + tárgy', '{我的书|wǒ de shū} a könyvem', 'tárgynál kell'],
+            ['névmás + családtag', '{我妈妈|wǒ mā·ma} anyám', 'a {的|de} elmaradhat'],
+            ['névmás + közeli viszony', '{我朋友|wǒ péng·you} a barátom', 'mindkettő jó'],
+            ['név + {的|de} + bármi', '{安娜的老师|Ān·nà de lǎo·shī} Anna tanára', 'névnél kell']
+          ] }
+      ],
+      examples: [
+        { zh: '{她|tā}{是|shì}{我|wǒ}{的|de}{汉语|Hàn·yǔ}{老师|lǎo·shī}。', hu: 'Ő a kínaitanárom.' },
+        { zh: '{王明|Wáng Míng}{是|shì}{安娜|Ān·nà}{的|de}{朋友|péng·you}。', hu: 'Wang Ming Anna barátja.' },
+        { zh: '{这|zhè}{是|shì}{我|wǒ}{妈妈|mā·ma}。', hu: 'Ő az anyukám.' }
+      ],
+      mistakes: [
+        { bad: '{老师|lǎo·shī}{的|de}{我|wǒ}', good: '{我|wǒ}{的|de}{老师|lǎo·shī}', why: 'A birtokos áll elöl: „én-féle tanár".' }
+      ]
+    },
+    {
+      title: '{呢|ne}', sub: '„és te?" — visszakérdezés',
+      pattern: 'A …。 B {呢|ne}？',
+      body: 'A {呢|ne} egy főnév vagy névmás után rövid visszakérdezést ad: {我是学生，你呢|wǒ shì xuésheng, nǐ ne}？ „Én diák vagyok, és te?" Az előző mondat tartalmát kérdezi vissza egy másik személyről, így nem kell megismételni.',
+      more: [
+        'A {呢|ne} a beszélgetés elején is állhat, ha a helyzetből világos a kérdés: {王明呢|Wáng Míng ne}？ „És Wang Ming? (Ő hol van?)" — ezt a jelentést a 9. leckében veszed.',
+        'A {呢|ne} és a {吗|ma} nem cserélhető fel: a {吗|ma} igen-nem kérdést csinál egy teljes mondatból, a {呢|ne} egy szó után visszakérdez.'
+      ],
+      examples: [
+        { zh: '{我|wǒ}{是|shì}{匈牙利人|Xiōng·yá·lì·rén}，{你|nǐ}{呢|ne}？', hu: 'Én magyar vagyok, és te?' },
+        { zh: '{我|wǒ}{叫|jiào}{安娜|Ān·nà}，{他|tā}{呢|ne}？', hu: 'Engem Annának hívnak, és őt?' },
+        { zh: '{我|wǒ}{很|hěn}{好|hǎo}，{你|nǐ}{呢|ne}？', hu: 'Jól vagyok, és te?' }
+      ],
+      mistakes: [
+        { bad: '{我|wǒ}{是|shì}{学生|xué·sheng}，{你|nǐ}{吗|ma}？', good: '{我|wǒ}{是|shì}{学生|xué·sheng}，{你|nǐ}{呢|ne}？', why: 'Egy szó utáni visszakérdezés {呢|ne}, nem {吗|ma}.' }
+      ]
+    },
+    {
+      title: '{他|tā} · {她|tā}', sub: 'ő (férfi) és ő (nő) — ugyanaz a hang',
+      pattern: '{他|tā} = {她|tā} = tā',
+      body: 'A kínaiban, mint a magyarban, a harmadik személyű névmás kiejtése nem különbözteti meg a nemeket: {他|tā} és {她|tā} egyaránt <i>tā</i>. Írásban viszont van különbség: a {他|tā} bal oldalán az „ember" ({亻|rén}), a {她|tā} bal oldalán a „nő" ({女|nǚ}) jel áll.',
+      more: [
+        'Beszédben tehát ugyanúgy hangzik, mint a magyar „ő": a hallgató a helyzetből tudja, kiről van szó. Többes számban: {他们|tāmen} „ők" (vegyes vagy férfi csoport), {她们|tāmen} „ők (csak nők)".'
+      ],
+      examples: [
+        { zh: '{他|tā}{是|shì}{我|wǒ}{的|de}{同学|tóng·xué}。', hu: 'Ő (férfi) az osztálytársam.' },
+        { zh: '{她|tā}{是|shì}{我|wǒ}{的|de}{朋友|péng·you}。', hu: 'Ő (nő) a barátnőm.' }
+      ]
+    }
+  ],
+  phrases: [
+    { zh: '{她|tā}{是|shì}{谁|shéi}？', hu: 'Ő ki?' },
+    { zh: '{你|nǐ}{是|shì}{哪|nǎ}{国|guó}{人|rén}？', hu: 'Milyen nemzetiségű vagy?' },
+    { zh: '{你|nǐ}{呢|ne}？', hu: 'És te?' },
+    { zh: '{他|tā}{是|shì}{我|wǒ}{的|de}{朋友|péng·you}。', hu: 'Ő a barátom.' }
+  ],
+  words: [
+    { title: 'Szavak',
+      items: [
+        { zh: '{她|tā}', pinyin: 'tā', hu: 'ő (nő)' },
+        { zh: '{他|tā}', pinyin: 'tā', hu: 'ő (férfi)' },
+        { zh: '{谁|shéi}', pinyin: 'shéi', hu: 'ki' },
+        { zh: '{的|de}', pinyin: 'de', hu: 'birtokos szócska' },
+        { zh: '{汉语|Hàn·yǔ}', pinyin: 'Hànyǔ', hu: 'kínai nyelv' },
+        { zh: '{哪|nǎ}', pinyin: 'nǎ', hu: 'melyik' },
+        { zh: '{国|guó}', pinyin: 'guó', hu: 'ország' },
+        { zh: '{呢|ne}', pinyin: 'ne', hu: 'és…? (visszakérdező)' },
+        { zh: '{同学|tóng·xué}', pinyin: 'tóngxué', hu: 'osztálytárs, évfolyamtárs' },
+        { zh: '{朋友|péng·you}', pinyin: 'péngyou', hu: 'barát' }
+      ] },
+    { title: 'Ráadás',
+      items: [
+        { zh: '{北京|Běi·jīng}', pinyin: 'Běijīng', hu: 'Peking' },
+        { zh: '{也|yě}', pinyin: 'yě', hu: 'is' },
+        { zh: '{这|zhè}', pinyin: 'zhè', hu: 'ez' }
+      ] }
+  ],
+  culture: [
+    { title: 'Tanár és diák', text: 'Kínában a tanárt nagy tisztelet övezi. A diákok a tanárt a családnevével és a {老师|lǎoshī} szóval szólítják: {张老师|Zhāng lǎoshī} „Zhang tanár(nő)" — a keresztnév vagy a puszta „tanár úr" szokatlan volna. A {老师|lǎoshī} megszólítást egyébként nem csak iskolában használják: tisztelettel szólítanak így bárkit, akitől tanulni lehet.' },
+    { title: 'A {汉语|Hànyǔ} szó', text: 'A {汉语|Hànyǔ} szó szerint „a han nép nyelve". A {汉|Hàn} Kína legnagyobb népcsoportjának neve (egy ősi dinasztiáról), és ebből lett a {汉字|hànzì} „kínai írásjegy" szó is — és innen kapta a nevét ez az app.' }
+  ],
+  reading: {
+    title: '{我|wǒ}{的|de}{朋友|péng·you}', titleHu: 'A barátaim',
+    text: [
+      { zh: '{我|wǒ}{叫|jiào}{大卫|Dà·wèi}，{我|wǒ}{是|shì}{美国人|Měi·guó·rén}。', hu: 'Davidnek hívnak, amerikai vagyok.' },
+      { zh: '{安娜|Ān·nà}{是|shì}{我|wǒ}{的|de}{同学|tóng·xué}，{她|tā}{不是|bú shì}{美国人|Měi·guó·rén}，{她|tā}{是|shì}{匈牙利人|Xiōng·yá·lì·rén}。', hu: 'Anna az osztálytársam, ő nem amerikai, hanem magyar.' },
+      { zh: '{王明|Wáng Míng}{是|shì}{安娜|Ān·nà}{的|de}{朋友|péng·you}，{也|yě}{是|shì}{我|wǒ}{的|de}{朋友|péng·you}。', hu: 'Wang Ming Anna barátja, és az én barátom is.', par: true },
+      { zh: '{他|tā}{是|shì}{北京|Běi·jīng}{人|rén}。', hu: 'Ő pekingi.' },
+      { zh: '{我们|wǒ·men}{的|de}{汉语|Hàn·yǔ}{老师|lǎo·shī}{是|shì}{张|Zhāng}{老师|lǎo·shī}。', hu: 'A kínaitanárunk Zhang tanárnő.', par: true }
+    ],
+    words: [ { zh: '{大卫|Dà·wèi}', hu: 'David' }, { zh: '{也|yě}', hu: 'is' } ],
+    questions: [
+      { q: 'Milyen nemzetiségű David?', a: 'amerikai', wrong: ['magyar', 'kínai', 'nem derül ki'], why: '{我是美国人|wǒ shì Měiguórén}.' },
+      { q: 'Ki Anna Davidnek?', a: 'az osztálytársa', wrong: ['a tanára', 'a húga', 'egy ismeretlen'], why: '{安娜是我的同学|Ānnà shì wǒ de tóngxué}.' },
+      { q: 'Kinek a barátja Wang Ming?', a: 'Annáé és Davidé is', wrong: ['csak Annáé', 'csak Davidé', 'Zhang tanárnőé'], why: '{是安娜的朋友|shì Ānnà de péngyou}，{也是我的朋友|yě shì wǒ de péngyou}.' },
+      { q: 'Ki a kínaitanáruk?', a: 'Zhang tanárnő', wrong: ['Wang Ming', 'Anna', 'egy amerikai tanár'], why: '{我们的汉语老师是张老师|wǒmen de Hànyǔ lǎoshī shì Zhāng lǎoshī}.' }
+    ]
+  },
+  quiz: [
+    { q: 'Hogyan kérdezed: „Ő ki?"', a: '{她|tā}{是|shì}{谁|shéi}？', wrong: ['{她|tā}{是|shì}{谁|shéi}{吗|ma}？', '{谁|shéi}{她|tā}{是|shì}？', '{她|tā}{是|shì}{什么|shén·me}？'], why: 'A {谁|shéi} a válasz helyén áll, {吗|ma} nélkül.', point: 1 },
+    { q: 'Mit jelent: {谁是你的老师|shéi shì nǐ de lǎoshī}？', a: 'Ki a tanárod?', wrong: ['A tanárod ki?', 'Kinek vagy a tanára?', 'Tanár vagy?'], why: 'Az alany helyén álló {谁|shéi}: „ki a tanárod".', point: 1 },
+    { q: 'Hogyan kérdezed meg valakinek a nemzetiségét?', a: '{你|nǐ}{是|shì}{哪|nǎ}{国|guó}{人|rén}？', wrong: ['{你|nǐ}{是|shì}{什么|shén·me}{国|guó}{人|rén}？', '{你|nǐ}{是|shì}{谁|shéi}{国|guó}？', '{哪|nǎ}{你|nǐ}{是|shì}{国|guó}{人|rén}？'], why: 'Melyik ország: {哪国人|nǎ guó rén}.', point: 2 },
+    { q: 'Melyik tónusú a {哪|nǎ} „melyik"?', a: '3.', wrong: ['4.', '1.', 'semleges'], why: '{哪|nǎ} 3. tónus; a 4. tónusú {那|nà} „az" nem kérdőszó.', point: 2 },
+    { q: '„a tanárom" — melyik a helyes?', a: '{我|wǒ}{的|de}{老师|lǎo·shī}', wrong: ['{老师|lǎo·shī}{的|de}{我|wǒ}', '{的|de}{我|wǒ}{老师|lǎo·shī}', '{我|wǒ}{老师|lǎo·shī}{的|de}'], why: 'Birtokos + {的|de} + birtok.', point: 3 },
+    { q: '„Anna barátja" kínaiul:', a: '{安娜|Ān·nà}{的|de}{朋友|péng·you}', wrong: ['{朋友|péng·you}{的|de}{安娜|Ān·nà}', '{安娜|Ān·nà}{朋友|péng·you}{的|de}', '{的|de}{安娜|Ān·nà}{朋友|péng·you}'], why: 'Név után a {的|de} kell: {安娜的朋友|Ānnà de péngyou}.', point: 3 },
+    { q: 'Melyik esetben maradhat el a {的|de}?', a: '{我|wǒ}{妈妈|mā·ma} (családtag)', wrong: ['{我|wǒ}{的|de}{书|shū} (tárgy)', '{安娜|Ān·nà}{的|de}{老师|lǎo·shī} (név)', 'soha nem maradhat el'], why: 'Névmás + közeli családtag: a {的|de} elmaradhat.', point: 3 },
+    { q: '{我是学生|wǒ shì xuésheng}，{你呢|nǐ ne}？ — mit kérdez a {你呢|nǐ ne}?', a: '„És te? (Te is diák vagy?)"', wrong: ['„Hol vagy most éppen?"', '„Ki vagy te egyáltalán?"', '„Hogy hívnak téged?"'], why: 'A {呢|ne} az előző mondatot kérdezi vissza.', point: 4 },
+    { q: 'Melyik a helyes visszakérdezés?', a: '{我|wǒ}{是|shì}{中国人|Zhōng·guó·rén}，{你|nǐ}{呢|ne}？', wrong: ['{我|wǒ}{是|shì}{中国人|Zhōng·guó·rén}，{你|nǐ}{吗|ma}？', '{我|wǒ}{是|shì}{中国人|Zhōng·guó·rén}，{呢|ne}{你|nǐ}？', '{我|wǒ}{是|shì}{中国人|Zhōng·guó·rén}，{你|nǐ}{谁|shéi}？'], why: 'Egy szó utáni visszakérdezés: {你呢|nǐ ne}？', point: 4 },
+    { q: 'Hogyan hangzik a {她|tā} „ő (nő)"?', a: 'ugyanúgy, mint a {他|tā}: tā', wrong: ['4. tónussal: tà', 'zöngésen: dā', 'a „nő" szóval együtt: nǚ tā'], why: 'Csak az írásjegy más, a kiejtés azonos.', point: 5 },
+    { q: 'Mi a különbség a {他|tā} és a {她|tā} között?', a: 'csak az írásban: a {她|tā}-ban a „nő" jel áll', wrong: ['a {她|tā} 4. tónussal hangzik', 'a {她|tā} udvariasabb, idősebbeknek jár', 'a {他|tā} többes szám, a {她|tā} egyes'], why: 'A {她|tā} bal oldalán {女|nǚ} „nő" áll.', point: 5 },
+    { q: 'Mit jelent: {她是我的汉语老师|tā shì wǒ de Hànyǔ lǎoshī}。', a: 'Ő a kínaitanárom.', wrong: ['Ő kínai tanár.', 'Én vagyok a kínaitanára.', 'Ő tanul kínaiul.'], why: '{我的|wǒ de} „az én", {汉语老师|Hànyǔ lǎoshī} „kínaitanár".', point: 3 },
+    { q: 'Mit jelent a {同学|tóngxué}?', a: 'osztálytárs, évfolyamtárs', wrong: ['barát, ismerős', 'tanár, oktató', 'diák (bárki, aki tanul)'], why: '{同|tóng} „ugyanaz" + {学|xué} „tanulni": aki veled tanul.' },
+    { q: 'Mit jelent a {朋友|péngyou}?', a: 'barát', wrong: ['osztálytárs', 'család', 'ismeretlen'], why: '{朋友|péngyou} „barát" — a második szótag semleges.' },
+    { q: '{你是北京人吗|nǐ shì Běijīngrén ma}？ — mit kérdeznek?', a: 'Pekingi vagy?', wrong: ['Pekingben laksz most?', 'Szereted Pekinget?', 'Hol van Peking?'], why: 'Város + {人|rén}: aki onnan való.', point: 2 },
+    { q: 'Melyik mondat hibás?', a: '{她|tā}{是|shì}{谁|shéi}{吗|ma}？', wrong: ['{她|tā}{是|shì}{谁|shéi}？', '{她|tā}{是|shì}{老师|lǎo·shī}{吗|ma}？', '{她|tā}{是|shì}{哪|nǎ}{国|guó}{人|rén}？'], why: 'Kérdőszó ({谁|shéi}) mellé nem kell {吗|ma}.', point: 1 },
+    { q: 'Mit jelent a {汉语|Hànyǔ}?', a: 'kínai nyelv', wrong: ['kínai ember', 'kínai írásjegy', 'Kína'], why: '{汉语|Hànyǔ} a kínai (mandarin) nyelv neve.' },
+    { q: 'David: {我是美国人|wǒ shì Měiguórén}。{你呢|nǐ ne}？ — Wang Ming válasza:', a: '{我|wǒ}{是|shì}{中国人|Zhōng·guó·rén}。', wrong: ['{我|wǒ}{是|shì}{美国人|Měi·guó·rén}{吗|ma}？', '{我|wǒ}{叫|jiào}{中国|Zhōng·guó}。', '{你|nǐ}{是|shì}{谁|shéi}？'], why: 'A {你呢|nǐ ne}？ a nemzetiséget kérdezi vissza.', point: 4 }
+  ]
+},
+
+/* ════════════════════════════════════════════════════
+   5. LECKE — 几, számok, 了, 多大, 有
+   ════════════════════════════════════════════════════ */
+{
+  id: 'l5', no: 5, kicker: 'HSK 1 · 5. lecke',
+  title: 'Család és életkor',
+  lead: 'Elmondod, hányan vagytok otthon, kinek van gyereke, ki hány éves. Ehhez megtanulod a számokat százig, a 几 és a 多大 kérdést, a 有 „van valamije" igét, és a változást jelző 了-t.',
+  cando: [
+    'Elmondod, hányan vagytok a családban (我家有四口人).',
+    'Kimondod a számokat 0-tól 99-ig.',
+    'Megkérdezed, ki hány éves (几岁？ 多大？), és válaszolsz (二十岁了).',
+    'Tudod, hogy a 有 tagadása 没有, nem 不有.'
+  ],
+  intro: [
+    'A kínai számok csodálatosan szabályosak: ha tudsz tízig számolni, százig is tudsz. A „huszonhárom" egyszerűen „két-tíz-három" ({二十三|èrshísān}). Nincs „-teen", nincs „huszon-" és „harminc-" külön szó.',
+    'A családról és az életkorról Kínában teljesen természetes kérdezni, már az első beszélgetésben is. Ehhez két kérdés kell: a {几|jǐ} „hány" (kis számokra) és a {多大|duō dà} „mennyi idős".'
+  ],
+  dialogue: {
+    title: 'Zhang tanárnő fényképe',
+    scene: 'Óra után Zhang tanárnő asztalán egy családi fénykép áll. Anna rákérdez.',
+    lines: [
+      { who: 'Anna', zh: '{张|Zhāng}{老师|lǎo·shī}，{您|nín}{家|jiā}{有|yǒu}{几|jǐ}{口|kǒu}{人|rén}？', hu: 'Zhang tanárnő, önök hányan vannak a családban?' },
+      { who: 'Zhang tanárnő', zh: '{我|wǒ}{家|jiā}{有|yǒu}{三|sān}{口|kǒu}{人|rén}。', hu: 'Hárman vagyunk.' },
+      { who: 'Anna', zh: '{她|tā}{是|shì}{您|nín}{的|de}{女儿|nǚ\'ér}{吗|ma}？', hu: 'Ő az ön lánya?' },
+      { who: 'Zhang tanárnő', zh: '{是|shì}，{她|tā}{今年|jīn·nián}{二十|èr·shí}{岁|suì}{了|le}。', hu: 'Igen, idén már húszéves.' },
+      { who: 'Anna', zh: '{她|tā}{也|yě}{是|shì}{老师|lǎo·shī}{吗|ma}？', hu: 'Ő is tanár?' },
+      { who: 'Zhang tanárnő', zh: '{不是|bú shì}，{她|tā}{是|shì}{大学生|dà·xué·shēng}。{你|nǐ}{多|duō}{大|dà}{了|le}？', hu: 'Nem, egyetemista. Te hány éves vagy?' },
+      { who: 'Anna', zh: '{我|wǒ}{十九|shí·jiǔ}{岁|suì}。', hu: 'Tizenkilenc vagyok.' }
+    ],
+    notes: [
+      'Családtagok számolásához a {口|kǒu} („száj") mérőszó jár: {三口人|sān kǒu rén} „három fő". Régen azt számolták, hány szájat kell etetni.',
+      'A {她今年二十岁了|tā jīnnián èrshí suì le} mondatban nincs {是|shì}: az életkor közvetlenül az alany után állhat.',
+      'A {大学生|dàxuéshēng} „egyetemista" szó szerint „nagy-iskola-diák".'
+    ]
+  },
+  points: [
+    {
+      title: '{一|yī}{二|èr}{三|sān}…{九十九|jiǔshíjiǔ}', sub: 'számok 0-tól 99-ig',
+      pattern: 'tízes + {十|shí} + egyes:  {二十三|èr·shí·sān} = 2 × 10 + 3',
+      body: 'Tízig meg kell tanulni a számokat; onnan minden szám ezekből rakódik össze. 11–19: {十|shí} + egyes ({十一|shíyī} 11, {十九|shíjiǔ} 19). A kerek tízesek: egyes + {十|shí} ({二十|èrshí} 20, {五十|wǔshí} 50). A többi: tízes + {十|shí} + egyes ({二十三|èrshísān} 23, {九十九|jiǔshíjiǔ} 99).',
+      more: [
+        'A nulla {零|líng}. Telefonszámban és szobaszámban számjegyenként olvasnak, és az {一|yī}-t gyakran <i>yāo</i>-nak ejtik, hogy ne keverjék a {七|qī}-vel.',
+        'A számok tónusára figyelj: {一|yī} 1., {二|èr} 4., {三|sān} 1., {四|sì} 4., {五|wǔ} 3., {六|liù} 4., {七|qī} 1., {八|bā} 1., {九|jiǔ} 3., {十|shí} 2. tónusú. A {十|shí} az összetételek közepén gyakran gyengébben hangzik.'
+      ],
+      tables: [
+        { caption: 'Számok',
+          rows: [
+            ['{一|yī} 1', '{二|èr} 2', '{三|sān} 3', '{四|sì} 4'],
+            ['{五|wǔ} 5', '{六|liù} 6', '{七|qī} 7', '{八|bā} 8'],
+            ['{九|jiǔ} 9', '{十|shí} 10', '{十一|shí·yī} 11', '{十五|shí·wǔ} 15'],
+            ['{二十|èr·shí} 20', '{二十一|èr·shí·yī} 21', '{三十|sān·shí} 30', '{四十八|sì·shí·bā} 48'],
+            ['{六十|liù·shí} 60', '{七十七|qī·shí·qī} 77', '{九十|jiǔ·shí} 90', '{九十九|jiǔ·shí·jiǔ} 99']
+          ] }
+      ],
+      notes: [
+        'Ujjal is mutatják a számokat, egy kézzel 1-től 10-ig — a hat, a hét, a nyolc, a kilenc és a tíz jele egészen más, mint nálunk. Piacon hasznos tudni!',
+        'A {四|sì} „négy" hangzása emlékeztet a {死|sǐ} „halál" szóra, ezért sokan babonásan kerülik (emeletszámban, telefonszámban). A {八|bā} „nyolc" viszont szerencseszám.'
+      ],
+      examples: [
+        { zh: '{十一|shí·yī}', hu: '11' },
+        { zh: '{二十|èr·shí}', hu: '20' },
+        { zh: '{三十五|sān·shí·wǔ}', hu: '35' },
+        { zh: '{九十九|jiǔ·shí·jiǔ}', hu: '99' }
+      ],
+      mistakes: [
+        { bad: '{十二|shí·èr} = 20', good: '{二十|èr·shí} = 20 · {十二|shí·èr} = 12', why: 'A sorrend számít: a {十|shí} előtti szám szorzó, az utána álló hozzáadandó.' }
+      ]
+    },
+    {
+      title: '{几|jǐ}', sub: '„hány?" — kis számokra, mérőszóval',
+      pattern: '{几|jǐ} + mérőszó + főnév',
+      body: 'A {几|jǐ} „hány" akkor kérdez, ha a válasz várhatóan kicsi szám (nagyjából tíz alatt). Utána mérőszó áll: {几口人|jǐ kǒu rén} „hány fő", {几岁|jǐ suì} „hány éves". A válaszban a {几|jǐ} helyére a szám kerül: {三口人|sān kǒu rén}.',
+      more: [
+        'A kínaiban a számnév és a főnév közé szinte mindig <b>mérőszó</b> kell (mint a magyar „három <i>szem</i> alma", „két <i>fő</i>"). A {口|kǒu} családtagokra, a {岁|suì} életkorra; a leggyakoribb általános mérőszót, a {个|gè}-t a 8. leckében tanulod.',
+        'Nagy számokra (pl. egy egyetem hallgatóinak száma) a {多少|duōshao} „mennyi" kérdez — ez is a 8. leckében jön.'
+      ],
+      examples: [
+        { zh: '{你|nǐ}{家|jiā}{有|yǒu}{几|jǐ}{口|kǒu}{人|rén}？', hu: 'Hányan vagytok a családban?' },
+        { zh: '{我|wǒ}{家|jiā}{有|yǒu}{四|sì}{口|kǒu}{人|rén}。', hu: 'Négyen vagyunk.' },
+        { zh: '{你|nǐ}{女儿|nǚ\'ér}{几|jǐ}{岁|suì}{了|le}？', hu: 'Hány éves a lányod?' }
+      ],
+      mistakes: [
+        { bad: '{你|nǐ}{家|jiā}{有|yǒu}{几|jǐ}{人|rén}？', good: '{你|nǐ}{家|jiā}{有|yǒu}{几|jǐ}{口|kǒu}{人|rén}？', why: 'A {几|jǐ} után mérőszó kell: {几口人|jǐ kǒu rén}.' }
+      ]
+    },
+    {
+      title: '{有|yǒu}', sub: 'van valamije · tagadva: {没有|méi·yǒu}',
+      pattern: 'A + {有|yǒu} + B · A + {没有|méi·yǒu} + B',
+      body: 'A {有|yǒu} „van valamije, rendelkezik valamivel": {我有一个女儿|wǒ yǒu yí ge nǚ\'ér} „van egy lányom", {我家有三口人|wǒ jiā yǒu sān kǒu rén} „a családomban hárman vagyunk" (szó szerint: „az otthonomnak három fője van"). A magyar „nekem van" helyett a kínai egyszerűen „én bírok".',
+      more: [
+        '🔴 A {有|yǒu} tagadása <b>mindig {没有|méiyǒu}</b>, sosem *{不有|bù yǒu}: {我没有女儿|wǒ méiyǒu nǚ\'ér} „nincs lányom". Ez az egyetlen ige, amelyet sosem tagadsz {不|bù}-val.',
+        'Kérdés {吗|ma}-val: {你有女儿吗|nǐ yǒu nǚ\'ér ma}？ — {有|yǒu} „van" / {没有|méiyǒu} „nincs".'
+      ],
+      examples: [
+        { zh: '{我|wǒ}{家|jiā}{有|yǒu}{三|sān}{口|kǒu}{人|rén}。', hu: 'Hárman vagyunk otthon.' },
+        { zh: '{您|nín}{有|yǒu}{女儿|nǚ\'ér}{吗|ma}？', hu: 'Van lánya?' },
+        { zh: '{我|wǒ}{没有|méi·yǒu}{女儿|nǚ\'ér}。', hu: 'Nincs lányom.' }
+      ],
+      mistakes: [
+        { bad: '{我|wǒ}{不|bù}{有|yǒu}{女儿|nǚ\'ér}。', good: '{我|wǒ}{没有|méi·yǒu}{女儿|nǚ\'ér}。', why: 'A {有|yǒu}-t a {没|méi} tagadja.' }
+      ]
+    },
+    {
+      title: '{了|le}', sub: 'változás: „már … lett"',
+      pattern: 'mondat + {了|le}（változás, új helyzet）',
+      body: 'A mondat végi {了|le} azt jelzi, hogy <b>új helyzet állt elő</b>, valami megváltozott: {她二十岁了|tā èrshí suì le} „már húszéves (lett)". A mondat {了|le} nélkül is helyes ({她二十岁|tā èrshí suì} „húszéves"), de a {了|le} hozzáteszi, hogy ez most új, eddig nem így volt.',
+      more: [
+        'Életkornál nagyon gyakori, mert az életkor évről évre változik: {你多大了|nǐ duō dà le}？ „Hány éves (lettél) most?" Hasonlóan: {我是大学生了|wǒ shì dàxuéshēng le} „már egyetemista vagyok".',
+        'A {了|le}-nak van egy másik, igéhez kötött szerepe is (befejezett cselekvés, 14. lecke). Most csak a mondat végi „változás" jelentést jegyezd meg.'
+      ],
+      examples: [
+        { zh: '{她|tā}{今年|jīn·nián}{二十|èr·shí}{岁|suì}{了|le}。', hu: 'Idén már húszéves.' },
+        { zh: '{我|wǒ}{是|shì}{大学生|dà·xué·shēng}{了|le}。', hu: 'Már egyetemista vagyok.' },
+        { zh: '{你|nǐ}{儿子|ér·zi}{几|jǐ}{岁|suì}{了|le}？', hu: 'Hány éves (most) a fiad?' }
+      ],
+      tip: 'A {了|le} semleges tónusú; a mondat végén röviden, könnyedén mondd.'
+    },
+    {
+      title: '{多大|duō dà}', sub: '„mennyi idős?" — életkor kérdezése',
+      pattern: '{你|nǐ}{多|duō}{大|dà}{了|le}？ · {你|nǐ}{几|jǐ}{岁|suì}{了|le}？',
+      body: 'A {多大|duō dà} szó szerint „mennyire nagy", és felnőttek, fiatalok életkorát kérdezi: {你多大了|nǐ duō dà le}？ „Hány éves vagy?" Gyereknél (kb. tíz év alatt) a {几岁|jǐ suì} a természetes: {你几岁了|nǐ jǐ suì le}？ A válasz mindig szám + {岁|suì}: {我十九岁|wǒ shíjiǔ suì}.',
+      more: [
+        'Idősebbeknél udvariatlan a {多大|duō dà}: náluk a {您多大年纪了|nín duō dà niánjì le}？ „Mennyi idős ön?" a tisztelettudó kérdés (a {年纪|niánjì} „életkor" választékos szó).',
+        'A {多|duō} melléknév előtt „mennyire?" jelentésű kérdőszó: {多大|duō dà} „milyen idős/nagy", {多高|duō gāo} „milyen magas".'
+      ],
+      tables: [
+        { caption: 'Kinek melyik kérdés?',
+          head: ['Kinek', 'Kérdés', 'Válasz'],
+          rows: [
+            ['gyerek', '{你|nǐ}{几|jǐ}{岁|suì}{了|le}？', '{我|wǒ}{六|liù}{岁|suì}。'],
+            ['fiatal, felnőtt', '{你|nǐ}{多|duō}{大|dà}{了|le}？', '{我|wǒ}{二十|èr·shí}{岁|suì}。'],
+            ['idősebb', '{您|nín}{多|duō}{大|dà}{年纪|nián·jì}{了|le}？', '{我|wǒ}{七十|qī·shí}{岁|suì}{了|le}。']
+          ] }
+      ],
+      examples: [
+        { zh: '{你|nǐ}{多|duō}{大|dà}{了|le}？', hu: 'Hány éves vagy?' },
+        { zh: '{我|wǒ}{十九|shí·jiǔ}{岁|suì}。', hu: 'Tizenkilenc vagyok.' },
+        { zh: '{小朋友|xiǎo·péng·you}，{你|nǐ}{几|jǐ}{岁|suì}{了|le}？', hu: 'Kicsikém, hány éves vagy?' }
+      ],
+      mistakes: [
+        { bad: '{我|wǒ}{是|shì}{十九|shí·jiǔ}{岁|suì}。', good: '{我|wǒ}{十九|shí·jiǔ}{岁|suì}。', why: 'Az életkor elé általában nem kell {是|shì} (nem hiba, de szokatlan).' }
+      ]
+    }
+  ],
+  phrases: [
+    { zh: '{你|nǐ}{家|jiā}{有|yǒu}{几|jǐ}{口|kǒu}{人|rén}？', hu: 'Hányan vagytok otthon?' },
+    { zh: '{我|wǒ}{家|jiā}{有|yǒu}{四|sì}{口|kǒu}{人|rén}。', hu: 'Négyen vagyunk.' },
+    { zh: '{你|nǐ}{多|duō}{大|dà}{了|le}？', hu: 'Hány éves vagy?' },
+    { zh: '{我|wǒ}{二十|èr·shí}{岁|suì}。', hu: 'Húszéves vagyok.' },
+    { zh: '{我|wǒ}{没有|méi·yǒu}…', hu: 'Nincs …-om/-em.' }
+  ],
+  words: [
+    { title: 'Szavak',
+      items: [
+        { zh: '{家|jiā}', pinyin: 'jiā', hu: 'otthon, család' },
+        { zh: '{有|yǒu}', pinyin: 'yǒu', hu: 'van (valamije)' },
+        { zh: '{口|kǒu}', pinyin: 'kǒu', hu: 'fő (családtagok mérőszava)' },
+        { zh: '{女儿|nǚ\'ér}', pinyin: 'nǚ\'ér', hu: 'lánya valakinek' },
+        { zh: '{几|jǐ}', pinyin: 'jǐ', hu: 'hány' },
+        { zh: '{岁|suì}', pinyin: 'suì', hu: 'év (életkor)' },
+        { zh: '{了|le}', pinyin: 'le', hu: 'változást jelző szócska' },
+        { zh: '{今年|jīn·nián}', pinyin: 'jīnnián', hu: 'idén' },
+        { zh: '{多|duō}', pinyin: 'duō', hu: 'mennyire? / sok' },
+        { zh: '{大|dà}', pinyin: 'dà', hu: 'nagy; idős' }
+      ] },
+    { title: 'Számok',
+      items: [
+        { zh: '{一|yī}', pinyin: 'yī', hu: '1' }, { zh: '{二|èr}', pinyin: 'èr', hu: '2' }, { zh: '{三|sān}', pinyin: 'sān', hu: '3' },
+        { zh: '{四|sì}', pinyin: 'sì', hu: '4' }, { zh: '{五|wǔ}', pinyin: 'wǔ', hu: '5' }, { zh: '{六|liù}', pinyin: 'liù', hu: '6' },
+        { zh: '{七|qī}', pinyin: 'qī', hu: '7' }, { zh: '{八|bā}', pinyin: 'bā', hu: '8' }, { zh: '{九|jiǔ}', pinyin: 'jiǔ', hu: '9' },
+        { zh: '{十|shí}', pinyin: 'shí', hu: '10' }
+      ] },
+    { title: 'Ráadás',
+      items: [
+        { zh: '{没有|méi·yǒu}', pinyin: 'méiyǒu', hu: 'nincs' },
+        { zh: '{儿子|ér·zi}', pinyin: 'érzi', hu: 'fia valakinek' },
+        { zh: '{大学生|dà·xué·shēng}', pinyin: 'dàxuéshēng', hu: 'egyetemista' }
+      ] }
+  ],
+  culture: [
+    { title: 'Szabad kérdezni az életkort?', text: 'Kínában az életkorról kérdezni nem tolakodó: a válaszból derül ki, hogyan szólítsd a másikat, ki az idősebb, kinek jár nagyobb tisztelet. Idősebbet a {您多大年纪了|nín duō dà niánjì le}？ formával kérdezz. Nőktől a fiatalabb nemzedék körében ma már Kínában is kevésbé illik életkort kérdezni.' },
+    { title: 'Milyen állat vagy?', text: 'Sokan nem a számot kérdezik, hanem a kínai állatövi jegyet: {你属什么|nǐ shǔ shénme}？ „Milyen állat (jegyében születtél)?" A tizenkét állat (patkány, bivaly, tigris, nyúl, sárkány, kígyó, ló, kecske, majom, kakas, kutya, disznó) tizenkét évente ismétlődik, így a válaszból — és a külsőből — az életkor is kitalálható.' }
+  ],
+  reading: {
+    title: '{王|Wáng}{老师|lǎo·shī}{的|de}{家|jiā}', titleHu: 'Wang tanár úr családja',
+    text: [
+      { zh: '{王|Wáng}{老师|lǎo·shī}{是|shì}{我|wǒ}{的|de}{汉语|Hàn·yǔ}{老师|lǎo·shī}。', hu: 'Wang tanár úr a kínaitanárom.' },
+      { zh: '{他|tā}{家|jiā}{有|yǒu}{四|sì}{口|kǒu}{人|rén}。', hu: 'A családjukban négyen vannak.' },
+      { zh: '{他|tā}{有|yǒu}{一个|yí ge}{女儿|nǚ\'ér}，{一个|yí ge}{儿子|ér·zi}。', hu: 'Van egy lánya és egy fia.', par: true },
+      { zh: '{他|tā}{女儿|nǚ\'ér}{今年|jīn·nián}{二十二|èr·shí·èr}{岁|suì}{了|le}，{是|shì}{大学生|dà·xué·shēng}。', hu: 'A lánya idén már huszonkét éves, egyetemista.' },
+      { zh: '{他|tā}{儿子|ér·zi}{八|bā}{岁|suì}，{是|shì}{小学生|xiǎo·xué·shēng}。', hu: 'A fia nyolcéves, általános iskolás.' },
+      { zh: '{王|Wáng}{老师|lǎo·shī}{没有|méi·yǒu}{哥哥|gē·ge}。', hu: 'Wang tanár úrnak nincs bátyja.', par: true }
+    ],
+    words: [ { zh: '{一个|yí ge}', hu: 'egy (darab)' }, { zh: '{小学生|xiǎo·xué·shēng}', hu: 'általános iskolás' }, { zh: '{哥哥|gē·ge}', hu: 'báty' } ],
+    questions: [
+      { q: 'Hányan vannak Wang tanár úr családjában?', a: 'négyen', wrong: ['hárman', 'ketten', 'öten'], why: '{他家有四口人|tā jiā yǒu sì kǒu rén}.' },
+      { q: 'Hány gyereke van Wang tanár úrnak?', a: 'kettő: egy lánya és egy fia', wrong: ['egy lánya', 'egy fia', 'nincs gyereke'], why: '{他有一个女儿，一个儿子|tā yǒu yí ge nǚ\'ér, yí ge érzi}.' },
+      { q: 'Hány éves a lánya?', a: '22', wrong: ['12', '20', '8'], why: '{二十二岁|èrshí\'èr suì} = 22.' },
+      { q: 'Mit tudunk a fiáról?', a: 'nyolcéves, általános iskolás', wrong: ['egyetemista', 'huszonkét éves', 'tanár'], why: '{他儿子八岁|tā érzi bā suì}，{是小学生|shì xiǎoxuéshēng}.' }
+    ]
+  },
+  quiz: [
+    { q: 'Mennyi a {二十三|èrshísān}?', a: '23', wrong: ['32', '13', '203'], why: '{二|èr} × {十|shí} + {三|sān} = 23.', point: 1 },
+    { q: 'Hogyan mondod: 15?', a: '{十五|shí·wǔ}', wrong: ['{五十|wǔ·shí}', '{一五|yī wǔ}', '{十|shí}{一|yī}{五|wǔ}'], why: '11–19: {十|shí} + egyes; az {五十|wǔshí} az 50.', point: 1 },
+    { q: 'Mennyi a {九十九|jiǔshíjiǔ}?', a: '99', wrong: ['19', '90', '909'], why: '9 × 10 + 9.', point: 1 },
+    { q: 'Melyik a 40?', a: '{四十|sì·shí}', wrong: ['{十四|shí·sì}', '{四四|sì sì}', '{四十四|sì·shí·sì}'], why: 'Kerek tízes: egyes + {十|shí}; a {十四|shísì} a 14.', point: 1 },
+    { q: 'Hogyan kérdezed: „Hányan vagytok a családban?"', a: '{你|nǐ}{家|jiā}{有|yǒu}{几|jǐ}{口|kǒu}{人|rén}？', wrong: ['{你|nǐ}{家|jiā}{有|yǒu}{几|jǐ}{人|rén}？', '{你|nǐ}{家|jiā}{是|shì}{几|jǐ}{口|kǒu}？', '{几|jǐ}{你|nǐ}{家|jiā}{人|rén}？'], why: '{几|jǐ} + mérőszó ({口|kǒu}) + {人|rén}.', point: 2 },
+    { q: 'Mikor használod a {几|jǐ} kérdőszót?', a: 'ha kis számot (kb. tíz alattit) vársz válaszul', wrong: ['bármilyen, akár nagy számra is', 'csak az életkor kérdezésére', 'csak árak és pénz kérdezésére'], why: 'Nagy számra a {多少|duōshao} kérdez.', point: 2 },
+    { q: 'Melyik mérőszóval számolod a családtagokat?', a: '{口|kǒu}', wrong: ['{岁|suì}', '{国|guó}', '{家|jiā}'], why: '{三口人|sān kǒu rén} „három fő".', point: 2 },
+    { q: '„Nincs lányom." — melyik a helyes?', a: '{我|wǒ}{没有|méi·yǒu}{女儿|nǚ\'ér}。', wrong: ['{我|wǒ}{不|bù}{有|yǒu}{女儿|nǚ\'ér}。', '{我|wǒ}{不是|bú shì}{女儿|nǚ\'ér}。', '{我|wǒ}{有|yǒu}{不|bù}{女儿|nǚ\'ér}。'], why: 'A {有|yǒu} tagadása mindig {没有|méiyǒu}.', point: 3 },
+    { q: 'Mit jelent: {您有女儿吗|nín yǒu nǚ\'ér ma}？', a: 'Van lánya?', wrong: ['Ő az ön lánya?', 'Hány lánya van?', 'Hol a lánya?'], why: '{有|yǒu} „van valamije" + {吗|ma}.', point: 3 },
+    { q: 'Mit tesz hozzá a mondat végi {了|le} a {她二十岁了|tā èrshí suì le} mondathoz?', a: 'hogy ez új helyzet: „már húszéves lett"', wrong: ['múlt időt: „húszéves volt"', 'tagadást: „nem húszéves"', 'kérdést: „húszéves?"'], why: 'A mondat végi {了|le} változást, új helyzetet jelez.', point: 4 },
+    { q: 'Melyik mondatban jelez változást a {了|le}?', a: '{我|wǒ}{是|shì}{大学生|dà·xué·shēng}{了|le}。', wrong: ['{我|wǒ}{是|shì}{大学生|dà·xué·shēng}。', '{我|wǒ}{了|le}{是|shì}{大学生|dà·xué·shēng}。', '{了|le}{我|wǒ}{是|shì}{大学生|dà·xué·shēng}。'], why: '„Már egyetemista vagyok" — a {了|le} a mondat végén áll.', point: 4 },
+    { q: 'Hogyan kérdezed meg egy egyetemista korát?', a: '{你|nǐ}{多|duō}{大|dà}{了|le}？', wrong: ['{你|nǐ}{几|jǐ}{口|kǒu}{了|le}？', '{你|nǐ}{大|dà}{吗|ma}？', '{您|nín}{多|duō}{大|dà}{年纪|nián·jì}{了|le}？'], why: 'Fiatal, felnőtt: {多大|duō dà}; idősnek {多大年纪|duō dà niánjì}.', point: 5 },
+    { q: 'Egy hatéves gyereket kérdezel. Mit mondasz?', a: '{你|nǐ}{几|jǐ}{岁|suì}{了|le}？', wrong: ['{您|nín}{多|duō}{大|dà}{年纪|nián·jì}{了|le}？', '{你|nǐ}{家|jiā}{有|yǒu}{几|jǐ}{口|kǒu}{人|rén}？', '{你|nǐ}{是|shì}{几|jǐ}？'], why: 'Gyereknél a {几岁|jǐ suì} a természetes.', point: 5 },
+    { q: 'Melyik az udvarias kérdés egy idős emberhez?', a: '{您|nín}{多|duō}{大|dà}{年纪|nián·jì}{了|le}？', wrong: ['{你|nǐ}{几|jǐ}{岁|suì}{了|le}？', '{你|nǐ}{多|duō}{大|dà}？', '{您|nín}{几|jǐ}{岁|suì}？'], why: 'Idősebbeknek a {年纪|niánjì} „életkor" szóval kérdezünk.', point: 5 },
+    { q: 'Mit jelent a {今年|jīnnián}?', a: 'idén', wrong: ['tavaly', 'jövőre', 'ma'], why: '{今|jīn} „most, ez a" + {年|nián} „év".' },
+    { q: 'Mit jelent: {我家有三口人|wǒ jiā yǒu sān kǒu rén}。', a: 'Hárman vagyunk otthon (a családban).', wrong: ['Három házunk van.', 'Három ember jött hozzánk.', 'Három éve lakunk itt.'], why: '{家|jiā} „család, otthon", {三口人|sān kǒu rén} „három fő".', point: 3 },
+    { q: 'Milyen tónusú a {十|shí} „tíz"?', a: '2.', wrong: ['1.', '3.', '4.'], why: '{十|shí} emelkedő, 2. tónusú.', point: 1 },
+    { q: 'Melyik számot kerülik sokan babonából?', a: 'a {四|sì} „négy"-et', wrong: ['a {八|bā} „nyolc"-at', 'a {六|liù} „hat"-ot', 'a {九|jiǔ} „kilenc"-et'], why: 'A {四|sì} hangzása a „halál" ({死|sǐ}) szóra emlékeztet.' },
+    { q: 'Mit jelent a {女儿|nǚ\'ér}?', a: 'lánya valakinek', wrong: ['nő', 'anya', 'húg'], why: '{女|nǚ} „nő" + {儿|ér} „gyermek".' }
   ]
 }
 
