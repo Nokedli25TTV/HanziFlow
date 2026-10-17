@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8" />
+  <script>(function(){try{if(localStorage.getItem("hanziflow_theme")==="ink")document.documentElement.classList.add("theme-ink");}catch(e){}})();</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <!-- A lecke lépésenként halad: a felső fejléc helyén a lépés-sáv áll (kirajzolás előtt, hogy ne villanjon) -->
+  <script>if(!/[?&]review=1/.test(location.search))document.documentElement.classList.add("lesson-steps");</script>
+  <meta name="theme-color" content="#F6F1E8" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="HanziFlow" />
+  <title>Lecke — HanziFlow</title>
+  <link rel="icon" type="image/svg+xml" href="../img/icon.svg" />
+  <link rel="apple-touch-icon" href="../img/icon-192.png" />
+  <link rel="manifest" href="../manifest.webmanifest" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&family=Outfit:wght@700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/animejs@3.2.2/lib/anime.min.js"></script>
+</head>
+<body>
+
+  <div class="bg-decoration"></div>
+
+  <header class="header" id="header">
+    <div class="header-inner">
+      <a href="../index.html" class="logo" aria-label="HanziFlow kezdőlap">
+        <span class="logo-mark" lang="zh-CN" aria-hidden="true">汉</span>
+        <span class="logo-text">Hanzi<span class="logo-accent">Flow</span></span>
+      </a>
+      <nav class="nav module-page-nav"></nav>
+      <div class="auth-buttons">
+        <a href="login.html" class="btn btn-ghost">Bejelentkezés</a>
+        <a href="../index.html#path" class="btn-home" title="Tanulási út" aria-label="Vissza a tanulási útra">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- LÉPÉS-SÁV (fent): kilépés · haladás-csík · tartalom (app.js: initLessonPage → lépések) -->
+  <div class="ls-top" id="lsTop">
+    <a class="ls-x" href="../index.html#path" title="Kilépés a leckéből" aria-label="Kilépés a leckéből">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+    </a>
+    <div class="ls-prog">
+      <div class="ls-track" id="lsTrack" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-label="Haladás a leckében"><div class="ls-fill" id="lsFill"></div></div>
+      <div class="ls-where"><span class="ls-count" id="lsCount"></span><span class="ls-name" id="lsName"></span></div>
+    </div>
+    <button class="ls-toc-btn" id="lsTocBtn" type="button" aria-expanded="false" aria-controls="lsSheet" aria-label="A lecke lapjai">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6h11M9 12h11M9 18h11"/><path d="M4 6h.01M4 12h.01M4 18h.01"/></svg>
+      <span>Tartalom</span>
+    </button>
+  </div>
+  <div class="ls-scrim" id="lsScrim"></div>
+  <aside class="ls-sheet" id="lsSheet" aria-label="A lecke lapjai">
+    <ol class="ls-list" id="lsList"></ol>
+    <div class="ls-sheet-foot" id="lsSheetFoot">
+      <button class="ls-theme" id="lsTheme" type="button">Világos / sötét téma</button>
+    </div>
+  </aside>
+
+  <!-- ALSÓ SÁV: menü-gomb (előhozza a fül-sávot) · Vissza · Következő -->
+  <div class="ls-bar" id="lsBar">
+    <button class="ls-nav-btn" id="lsNavBtn" type="button" aria-expanded="false" aria-label="Menü: Kezdőlap, Modulok, Statisztika, Fiók">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="2"/><rect x="14" y="3" width="7" height="7" rx="2"/><rect x="3" y="14" width="7" height="7" rx="2"/><rect x="14" y="14" width="7" height="7" rx="2"/></svg>
+    </button>
+    <button class="btn btn-outline ls-back" id="lsBack" type="button">Vissza</button>
+    <button class="btn btn-primary ls-next" id="lsNext" type="button">Következő</button>
+  </div>
+
+  <!-- A lecke szövege a js/data/course.js-ből jön (app.js: initLessonPage), a ?id= paraméter szerint. -->
+  <main class="module-main lesson-main" id="lessonMain">
+
+    <div class="helpers-bar" id="helpersBar">
+      <span class="hb-label">Segítők</span>
+      <div class="helpers-toggle">
+        <button class="ht-btn active" data-helper="pinyin" type="button"><span class="ht-dot"></span>Pinyin</button>
+        <button class="ht-btn active" data-helper="hu" type="button"><span class="ht-dot"></span>Magyar</button>
+        <button class="ht-btn" data-helper="audio" type="button"><span class="ht-dot"></span>🔊 Hang</button>
+      </div>
+    </div>
+
+    <section class="module-hero glass-panel-heavy lesson-hero" id="lessonHero">
+      <div class="module-hero-icon"><span id="lessonNo"></span></div>
+      <div class="module-hero-meta">
+        <div class="module-meta-row">
+          <span class="badge-level" id="lessonKicker"></span>
+          <span class="badge-group">Magyarázat</span>
+        </div>
+        <h1 class="module-page-title" id="lessonTitle"></h1>
+        <p class="module-page-desc" id="lessonLead"></p>
+        <ul class="lp-cando" id="lessonCando" aria-label="A lecke végére"></ul>
+      </div>
+    </section>
+
+    <article class="lesson-content" id="lessonContent"></article>
+
+    <!-- Ellenőrző kör: a közös kör-keret -->
+    <section class="conj-runtime hidden" id="lessonRuntime">
+      <div class="pr-stats">
+        <div class="pr-stat"><span class="pr-stat-label">Pont</span><span class="pr-stat-value" id="lqScore">0</span></div>
+        <div class="pr-stat"><span class="pr-stat-label">Sorozat</span><span class="pr-stat-value" id="lqStreak">0 🔥</span></div>
+        <button class="round-exit" id="lqExit" type="button" title="Kilépés a körből" aria-label="Kilépés a körből">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          <span>Kilépés</span>
+        </button>
+      </div>
+      <div class="round-progress">
+        <span class="round-progress-text" id="lqCount">Kérdés 1 / —</span>
+        <div class="round-progress-bar"><div class="round-progress-fill" id="lqFill" style="width: 0%"></div></div>
+      </div>
+      <div class="conj-card glass-panel-heavy" id="lqCard"></div>
+      <div class="conj-feedback hidden" id="lqFeedback"></div>
+      <div class="conj-summary hidden" id="lqSummary"></div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p class="footer-note">HanziFlow · saját magyarázatok a HSK szintjeinek sorrendjében</p>
+    </div>
+  </footer>
+
+  <script src="../js/data/core.js"></script>
+  <script src="../js/data/course.js"></script>
+  <script src="../js/auth.js"></script>
+  <script src="../js/sync.js"></script>
+  <script src="../js/app.js"></script>
+</body>
+</html>

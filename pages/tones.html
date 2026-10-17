@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8" />
+  <script>(function(){try{if(localStorage.getItem("hanziflow_theme")==="ink")document.documentElement.classList.add("theme-ink");}catch(e){}})();</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#F6F1E8" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="HanziFlow" />
+  <title>Tónus-tréner — HanziFlow</title>
+  <link rel="icon" type="image/svg+xml" href="../img/icon.svg" />
+  <link rel="apple-touch-icon" href="../img/icon-192.png" />
+  <link rel="manifest" href="../manifest.webmanifest" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&family=Outfit:wght@700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/animejs@3.2.2/lib/anime.min.js"></script>
+</head>
+<body>
+
+  <div class="bg-decoration"></div>
+
+  <header class="header" id="header">
+    <div class="header-inner">
+      <a href="../index.html" class="logo" aria-label="HanziFlow kezdőlap">
+        <span class="logo-mark" lang="zh-CN" aria-hidden="true">汉</span>
+        <span class="logo-text">Hanzi<span class="logo-accent">Flow</span></span>
+      </a>
+      <nav class="nav module-page-nav"></nav>
+      <div class="auth-buttons">
+        <a href="login.html" class="btn btn-ghost">Bejelentkezés</a>
+        <a href="../index.html" class="btn-home" title="Kezdőlap" aria-label="Kezdőlap">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="module-main" id="tonesMain">
+
+    <div class="helpers-bar" id="helpersBar">
+      <span class="hb-label">Segítők</span>
+      <div class="helpers-toggle">
+        <button class="ht-btn active" data-helper="hu" type="button"><span class="ht-dot"></span>Magyar</button>
+      </div>
+    </div>
+
+    <section class="module-hero glass-panel-heavy">
+      <div class="module-hero-icon" lang="zh-CN">声</div>
+      <div class="module-hero-meta">
+        <div class="module-meta-row">
+          <span class="badge-level">Kiejtés</span>
+          <span class="badge-group">Hallás és jelölés</span>
+        </div>
+        <h1 class="module-page-title">Tónus-tréner</h1>
+        <p class="module-page-desc">A kínaiban a hang dallama is jelentést hordoz: mā „anya", mǎ „ló". Itt hallás után és az ékezetekből tanulod felismerni a négy tónust.</p>
+        <div class="conj-stats-bar" id="tonesStatsBar"></div>
+      </div>
+    </section>
+
+    <section class="conj-lobby glass-panel-heavy" id="tonesLobby"></section>
+
+    <section class="tone-chart glass-panel" id="tonesChart"></section>
+
+    <section class="conj-runtime hidden" id="tonesRuntime">
+      <div class="pr-stats">
+        <div class="pr-stat"><span class="pr-stat-label">Pont</span><span class="pr-stat-value" id="tonesScore">0</span></div>
+        <div class="pr-stat"><span class="pr-stat-label">Sorozat</span><span class="pr-stat-value" id="tonesStreak">0 🔥</span></div>
+        <button class="round-exit" id="tonesExit" type="button" title="Kilépés a körből" aria-label="Kilépés a körből">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          <span>Kilépés</span>
+        </button>
+      </div>
+      <div class="round-progress">
+        <span class="round-progress-text" id="tonesCardCount">Kártya 1 / —</span>
+        <div class="round-progress-bar"><div class="round-progress-fill" id="tonesProgressFill" style="width: 0%"></div></div>
+      </div>
+      <div class="conj-card glass-panel-heavy" id="tonesCard"></div>
+      <div class="conj-feedback hidden" id="tonesFeedback"></div>
+      <div class="conj-summary hidden" id="tonesSummary"></div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner"><p class="footer-note">HanziFlow · Tónus-tréner</p></div>
+  </footer>
+
+  <script src="../js/data/core.js"></script>
+  <script src="../js/data/tones.js"></script>
+  <script src="../js/auth.js"></script>
+  <script src="../js/sync.js"></script>
+  <script src="../js/app.js"></script>
+</body>
+</html>

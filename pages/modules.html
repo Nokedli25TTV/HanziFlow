@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8" />
+  <script>(function(){try{if(localStorage.getItem("hanziflow_theme")==="ink")document.documentElement.classList.add("theme-ink");}catch(e){}})();</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#F6F1E8" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="HanziFlow" />
+  <title>Modulok — HanziFlow</title>
+  <link rel="icon" type="image/svg+xml" href="../img/icon.svg" />
+  <link rel="apple-touch-icon" href="../img/icon-192.png" />
+  <link rel="manifest" href="../manifest.webmanifest" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&family=Outfit:wght@700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/animejs@3.2.2/lib/anime.min.js"></script>
+</head>
+<body>
+
+  <div class="bg-decoration"></div>
+
+  <header class="header" id="header">
+    <div class="header-inner">
+      <a href="../index.html" class="logo" aria-label="HanziFlow kezdőlap">
+        <span class="logo-mark" lang="zh-CN" aria-hidden="true">汉</span>
+        <span class="logo-text">Hanzi<span class="logo-accent">Flow</span></span>
+      </a>
+      <nav class="nav" aria-label="Fő navigáció">
+        <a href="../index.html#path" class="nav-link">Tanulási út</a>
+        <a href="modules.html" class="nav-link active" aria-current="page">Modulok</a>
+        <a href="stats.html" class="nav-link">Statisztika</a>
+      </nav>
+      <div class="auth-buttons">
+        <a href="login.html" class="btn btn-ghost">Bejelentkezés</a>
+        <a href="../index.html" class="btn-home" title="Kezdőlap" aria-label="Kezdőlap">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="modules-main" id="modulesMain">
+    <section class="modules-section">
+      <div class="section-header">
+        <span class="section-tag" lang="zh-CN" aria-hidden="true">练</span>
+        <h1 class="section-title">Szabad gyakorlás</h1>
+        <p class="section-desc">A modulok a tanulási úttól függetlenül is megnyithatók. A tanulási út lépései ugyanezeket a modulokat indítják, előre beállított körrel.</p>
+      </div>
+
+      <div class="modules-grid">
+        <a class="module-card glass-card module-available" href="tones.html">
+          <div class="module-icon icon-seal" lang="zh-CN">声</div>
+          <span class="module-phase">Kiejtés</span>
+          <h2 class="module-title">Tónus-tréner</h2>
+          <p class="module-desc">A négy tónus hallás után és az ékezetekből, majd kétszótagú szavak dallama.</p>
+        </a>
+
+        <a class="module-card glass-card module-available" href="lesson.html?review=1">
+          <div class="module-icon icon-brand" lang="zh-CN">复</div>
+          <span class="module-phase">Ismétlés</span>
+          <h2 class="module-title">Napi ismétlés</h2>
+          <p class="module-desc">Az elvégzett leckék kérdései térnek vissza, egyre ritkábban: amit tudsz, azt később kérdezi újra.</p>
+        </a>
+
+        <div class="module-card glass-card module-locked" aria-disabled="true">
+          <div class="module-icon icon-locked" lang="zh-CN">拼</div>
+          <span class="module-phase">Kiejtés</span>
+          <h2 class="module-title">Pinyin-tábla</h2>
+          <p class="module-desc">Kezdő- és véghangok táblája, hallás utáni felismerés, a nehéz párok (zh–z, q–x, ü).</p>
+          <span class="module-soon">Hamarosan</span>
+        </div>
+
+        <div class="module-card glass-card module-locked" aria-disabled="true">
+          <div class="module-icon icon-locked" lang="zh-CN">个</div>
+          <span class="module-phase">Nyelvtan</span>
+          <h2 class="module-title">Mérőszavak</h2>
+          <p class="module-desc">个, 本, 杯, 口…: melyik tárgyhoz melyik mérőszó illik.</p>
+          <span class="module-soon">Hamarosan</span>
+        </div>
+
+        <div class="module-card glass-card module-locked" aria-disabled="true">
+          <div class="module-icon icon-locked" lang="zh-CN">句</div>
+          <span class="module-phase">Nyelvtan</span>
+          <h2 class="module-title">Mondat-Mester</h2>
+          <p class="module-desc">Szórend és szócskák: rakd sorba a szavakat, töltsd ki a hiányzó 吗, 呢, 的, 了 helyét.</p>
+          <span class="module-soon">Hamarosan</span>
+        </div>
+
+        <div class="module-card glass-card module-locked" aria-disabled="true">
+          <div class="module-icon icon-locked" lang="zh-CN">时</div>
+          <span class="module-phase">Számok</span>
+          <h2 class="module-title">Dátum, idő, pénz</h2>
+          <p class="module-desc">Számok, napok, hónapok, órák és a 块 / 毛 / 分 pénzegységek.</p>
+          <span class="module-soon">Hamarosan</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner"><p class="footer-note">HanziFlow · Szabad gyakorlás</p></div>
+  </footer>
+
+  <script src="../js/auth.js"></script>
+  <script src="../js/sync.js"></script>
+  <script src="../js/app.js"></script>
+</body>
+</html>

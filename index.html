@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8" />
+  <script>(function(){try{if(localStorage.getItem("hanziflow_theme")==="ink")document.documentElement.classList.add("theme-ink");}catch(e){}})();</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <!-- Tartalomjegyzék-sáv (asztali): a tartalom eltolása még az első kirajzolás előtt -->
+  <script>(function(){try{if(window.matchMedia("(min-width: 1100px)").matches){var s=JSON.parse(localStorage.getItem("hanziflow_toc_v1")||"{}");if(s.open!==false)document.documentElement.classList.add("toc-docked");}}catch(e){}})();</script>
+  <meta name="theme-color" content="#F6F1E8" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="HanziFlow" />
+  <meta name="description" content="Kínai nyelvtanuló app magyarul: kiejtés és tónusok, leckék a HSK szintjei szerint, gyakorlás és időzített ismétlés." />
+  <title>HanziFlow — Kínai nyelv lépésről lépésre</title>
+  <link rel="icon" type="image/svg+xml" href="img/icon.svg" />
+  <link rel="apple-touch-icon" href="img/icon-192.png" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- Betűk: Figtree (felület), Outfit (logó), Noto Sans SC (kínai szöveg) -->
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&family=Outfit:wght@700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/animejs@3.2.2/lib/anime.min.js"></script>
+</head>
+<body>
+
+  <div class="bg-decoration"></div>
+
+  <!-- Fejléc. Telefonon a navigáció az alsó fül-sávban van (app.js: initAppTabbar). -->
+  <header class="header" id="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo" aria-label="HanziFlow kezdőlap">
+        <span class="logo-mark" lang="zh-CN" aria-hidden="true">汉</span>
+        <span class="logo-text">Hanzi<span class="logo-accent">Flow</span></span>
+      </a>
+      <nav class="nav" aria-label="Fő navigáció">
+        <a href="#path" class="nav-link">Tanulási út</a>
+        <a href="pages/modules.html" class="nav-link">Modulok</a>
+        <a href="pages/stats.html" class="nav-link">Statisztika</a>
+      </nav>
+      <div class="auth-buttons">
+        <a href="pages/login.html" class="btn btn-ghost">Bejelentkezés</a>
+        <a href="pages/register.html" class="btn btn-primary">Regisztráció</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- A tanulási út tartalomjegyzéke: asztalon oldalsáv, kisebb kijelzőn kihúzható fiók (app.js: renderToc) -->
+  <button class="ptoc-toggle" id="ptocToggle" type="button" aria-controls="pathToc" aria-expanded="false" aria-label="A tanulási út tartalomjegyzéke">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6h11M9 12h11M9 18h11"/><path d="M4 6h.01M4 12h.01M4 18h.01"/></svg>
+    <span class="ptoc-toggle-text">Tartalom</span>
+  </button>
+  <div class="ptoc-scrim" id="ptocScrim"></div>
+  <aside class="ptoc" id="pathToc" aria-label="A tanulási út tartalomjegyzéke">
+    <div class="ptoc-head">
+      <div class="ptoc-head-text">
+        <h2 class="ptoc-title">Tartalom</h2>
+        <span class="ptoc-progress" id="ptocProgress"></span>
+      </div>
+      <button class="ptoc-all" id="ptocAll" type="button" aria-pressed="false">Mindet kinyit</button>
+      <button class="ptoc-close" id="ptocClose" type="button" aria-label="Tartalomjegyzék becsukása">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m14 6-6 6 6 6"/><path d="M19 5v14"/></svg>
+      </button>
+    </div>
+    <nav class="ptoc-body" id="ptocBody" aria-label="Fejezetek és lépések"></nav>
+  </aside>
+
+  <main class="home" id="homeMain">
+
+    <!-- Első alkalommal szintválasztó, utána „Folytatás" kártya (app.js: renderHomeTop) -->
+    <section class="home-top" id="homeTop" aria-live="polite"></section>
+
+    <!-- TANULÁSI ÚT — a lépések a js/data/core.js HANZIFLOW_PATH-ból jönnek -->
+    <section class="path-section" id="path" aria-labelledby="pathTitle">
+      <div class="section-header">
+        <span class="section-tag" lang="zh-CN" aria-hidden="true">路</span>
+        <h2 class="section-title" id="pathTitle">Tanulási út</h2>
+        <p class="section-desc">Fejezetről fejezetre: a kiejtéstől a HSK 1 leckéiig. Koppints egy lépésre: bármelyiket megnyithatod.</p>
+      </div>
+      <p class="path-level" id="pathLevel"></p>
+      <div class="path-tools"><button class="path-fold-all" id="pathFoldAll" type="button">Minden fejezet kinyitása</button></div>
+      <ol class="path-list" id="pathList"></ol>
+    </section>
+
+    <!-- SZABAD GYAKORLÁS — a modulok külön oldalon: pages/modules.html -->
+    <section class="path-section home-free" aria-label="Szabad gyakorlás">
+      <a class="path-step-link" href="pages/modules.html">
+        <span class="path-glyph" lang="zh-CN">练</span>
+        <span class="path-step-body">
+          <span class="path-step-title">Szabad gyakorlás</span>
+          <span class="path-step-desc">Minden modul külön is megnyitható: te választod a módot és a kártyaszámot.</span>
+        </span>
+        <span class="path-step-end">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg>
+        </span>
+      </a>
+    </section>
+
+    <!-- Fiók: csak kijelentkezve látszik -->
+    <section class="cta-section" id="homeAccount">
+      <div class="cta-inner glass-panel">
+        <h2>A haladásod most ezen az eszközön van</h2>
+        <p>Fiókkal a tanulási út, a statisztika és az ismétlések minden eszközödön ott folytatódnak, ahol abbahagytad.</p>
+        <div class="cta-actions">
+          <a href="pages/register.html" class="btn btn-primary">Fiók létrehozása</a>
+          <a href="pages/login.html" class="btn btn-outline">Bejelentkezés</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <span class="logo-mark" lang="zh-CN" aria-hidden="true">汉</span>
+        <span class="logo-text">Hanzi<span class="logo-accent">Flow</span></span>
+      </div>
+      <p class="footer-note">Kínai nyelv magyarul · HSK 1-től · © 2026 HanziFlow</p>
+    </div>
+  </footer>
+
+  <script src="js/data/core.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/sync.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

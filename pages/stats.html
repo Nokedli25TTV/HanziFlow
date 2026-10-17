@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8" />
+  <script>(function(){try{if(localStorage.getItem("hanziflow_theme")==="ink")document.documentElement.classList.add("theme-ink");}catch(e){}})();</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#F6F1E8" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="HanziFlow" />
+  <title>Statisztika — HanziFlow</title>
+  <link rel="icon" type="image/svg+xml" href="../img/icon.svg" />
+  <link rel="apple-touch-icon" href="../img/icon-192.png" />
+  <link rel="manifest" href="../manifest.webmanifest" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&family=Outfit:wght@700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/animejs@3.2.2/lib/anime.min.js"></script>
+</head>
+<body>
+
+  <div class="bg-decoration"></div>
+
+  <header class="header" id="header">
+    <div class="header-inner">
+      <a href="../index.html" class="logo" aria-label="HanziFlow kezdőlap">
+        <span class="logo-mark" lang="zh-CN" aria-hidden="true">汉</span>
+        <span class="logo-text">Hanzi<span class="logo-accent">Flow</span></span>
+      </a>
+      <nav class="nav" aria-label="Fő navigáció">
+        <a href="../index.html#path" class="nav-link">Tanulási út</a>
+        <a href="modules.html" class="nav-link">Modulok</a>
+        <a href="stats.html" class="nav-link active" aria-current="page">Statisztika</a>
+      </nav>
+      <div class="auth-buttons">
+        <a href="login.html" class="btn btn-ghost">Bejelentkezés</a>
+        <a href="../index.html" class="btn-home" title="Kezdőlap" aria-label="Kezdőlap">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="module-main stats-main" id="statsMain">
+    <header class="page-head">
+      <h1 class="module-page-title">Statisztika</h1>
+      <p class="page-head-sub">Sorozat, aktivitás és a modulok eredményei egy helyen.</p>
+    </header>
+    <nav class="stats-tabs" id="statsTabs"></nav>
+    <section class="stats-content" id="statsContent"></section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner"><p class="footer-note">HanziFlow · Statisztika</p></div>
+  </footer>
+
+  <script src="../js/data/core.js"></script>
+  <script src="../js/auth.js"></script>
+  <script src="../js/sync.js"></script>
+  <script src="../js/app.js"></script>
+</body>
+</html>

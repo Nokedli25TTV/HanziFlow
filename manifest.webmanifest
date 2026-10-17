@@ -1,0 +1,20 @@
+{
+  "name": "HanziFlow — Kínai nyelv lépésről lépésre",
+  "short_name": "HanziFlow",
+  "description": "Kínai nyelvtanuló app magyarul: kiejtés és tónusok, HSK-leckék, gyakorlás és időzített ismétlés.",
+  "lang": "hu",
+  "dir": "ltr",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#F6F1E8",
+  "background_color": "#F6F1E8",
+  "categories": ["education"],
+  "icons": [
+    { "src": "img/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "img/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "img/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable" },
+    { "src": "img/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
