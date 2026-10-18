@@ -458,7 +458,40 @@ const HANZIFLOW_PATH = [
     module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l39&round=listen' },
   { id: 'l39-read', glyph: '读', title: 'Olvasás: Egy mozgalmas nap',
     desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
-    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l39&round=read' }
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l39&round=read' },
+
+  // ── HSK 3 · 10. lecke ──
+  { id: 'l40-lesson', glyph: '除', title: 'Magyarázat: 除了…以外 (都 / 还), 其他 · 别的 · 另外, 不但…而且…, 还是…吧',
+    desc: 'Lakásbérlés: ezen kívül minden jó, nemcsak csendes, hanem közel is van.',
+    module: 'lesson', href: 'pages/lesson.html?id=l40' },
+  { id: 'l40-listen', glyph: '听', title: 'Hallás: lakásnézés',
+    desc: 'A lecke mondatai hang után: mit jelent, amit hallasz?',
+    module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l40&round=listen' },
+  { id: 'l40-read', glyph: '读', title: 'Olvasás: Az új otthonom',
+    desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l40&round=read' },
+
+  // ── HSK 3 · 11. lecke ──
+  { id: 'l41-lesson', glyph: '累', title: 'Magyarázat: mn. + 得 + mondat, 死了 / 坏了, 一…就…, 刚…就…, ige + 了 + 就',
+    desc: 'Egy hosszú hét: olyan fáradt, hogy…; amint…, máris…; alig…, máris….',
+    module: 'lesson', href: 'pages/lesson.html?id=l41' },
+  { id: 'l41-listen', glyph: '听', title: 'Hallás: péntek este',
+    desc: 'A lecke mondatai hang után: mit jelent, amit hallasz?',
+    module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l41&round=listen' },
+  { id: 'l41-read', glyph: '读', title: 'Olvasás: Végre hétvége',
+    desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l41&round=read' },
+
+  // ── HSK 3 · 12. lecke ──
+  { id: 'l42-lesson', glyph: '如', title: 'Magyarázat: 如果…就…, 要是…的话, 那, 为了 / 因为, 对…感兴趣',
+    desc: 'Ha szombaton esik…: feltétel, reakció, cél és érdeklődés.',
+    module: 'lesson', href: 'pages/lesson.html?id=l42' },
+  { id: 'l42-listen', glyph: '听', title: 'Hallás: kirándulási terv',
+    desc: 'A lecke mondatai hang után: mit jelent, amit hallasz?',
+    module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l42&round=listen' },
+  { id: 'l42-read', glyph: '读', title: 'Olvasás: A hétvégi terv',
+    desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l42&round=read' }
 ];
 
 const HANZIFLOW_PATH_UNITS = [
@@ -541,5 +574,11 @@ const HANZIFLOW_PATH_UNITS = [
   { id: 'u-l38', kicker: 'HSK 3 · 8. lecke', title: 'Kapcsold ki a légkondit!', sub: '把 + tárgy + ige + 了 / 完, 把…放在…, 把…交给…, 别把 / 没把',
     steps: ['l38-lesson', 'l38-listen', 'l38-read'] },
   { id: 'u-l39', kicker: 'HSK 3 · 9. lecke', title: 'Vidd át a tárgyalóba!', sub: '把…搬到…, 把…打印出来, 把…换成…, 帮我把…',
-    steps: ['l39-lesson', 'l39-listen', 'l39-read'] }
+    steps: ['l39-lesson', 'l39-listen', 'l39-read'] },
+  { id: 'u-l40', kicker: 'HSK 3 · 10. lecke', title: 'Ezen kívül minden jó', sub: '除了…以外 都 / 还, 其他, 另外, 不但…而且…, 还是…吧',
+    steps: ['l40-lesson', 'l40-listen', 'l40-read'] },
+  { id: 'u-l41', kicker: 'HSK 3 · 11. lecke', title: 'Olyan fáradt vagyok, hogy…', sub: '累得不想说话, 忙死了, 一到…就…, 刚…就…, 下了班就…',
+    steps: ['l41-lesson', 'l41-listen', 'l41-read'] },
+  { id: 'u-l42', kicker: 'HSK 3 · 12. lecke', title: 'Ha szombaton esik…', sub: '如果…就…, 要是…的话, 那…, 为了, 对…感兴趣',
+    steps: ['l42-lesson', 'l42-listen', 'l42-read'] }
 ];
