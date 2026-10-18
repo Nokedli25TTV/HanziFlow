@@ -53,7 +53,7 @@ window.HanziFlowPinyin = (function () {
   ('a,ai,an,ang,ao,ba,bai,ban,bang,bao,bei,ben,beng,bi,bian,biao,bie,bin,bing,bo,bu,' +
    'ca,cai,can,cang,cao,ce,cen,ceng,cha,chai,chan,chang,chao,che,chen,cheng,chi,chong,chou,chu,' +
    'chua,chuai,chuan,chuang,chui,chun,chuo,ci,cong,cou,cu,cuan,cui,cun,cuo,' +
-   'da,dai,dan,dang,dao,de,den,deng,di,dian,diao,die,ding,diu,dong,dou,du,duan,dui,dun,duo,' +
+   'da,dai,dan,dang,dao,de,dei,den,deng,di,dian,diao,die,ding,diu,dong,dou,du,duan,dui,dun,duo,' +
    'e,ei,en,eng,er,fa,fan,fang,fei,fen,feng,fo,fou,fu,' +
    'ga,gai,gan,gang,gao,ge,gei,gen,geng,gong,gou,gu,gua,guai,guan,guang,gui,gun,guo,' +
    'ha,hai,han,hang,hao,he,hei,hen,heng,hong,hou,hu,hua,huai,huan,huang,hui,hun,huo,' +
