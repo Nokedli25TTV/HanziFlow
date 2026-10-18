@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8" />
+  <script>(function(){try{if(localStorage.getItem("hanziflow_theme")==="ink")document.documentElement.classList.add("theme-ink");}catch(e){}})();</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#F6F1E8" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="HanziFlow" />
+  <title>Mondat-Mester — HanziFlow</title>
+  <link rel="icon" type="image/svg+xml" href="../img/icon.svg" />
+  <link rel="apple-touch-icon" href="../img/icon-192.png" />
+  <link rel="manifest" href="../manifest.webmanifest" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&family=Outfit:wght@700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/animejs@3.2.2/lib/anime.min.js"></script>
+</head>
+<body>
+
+  <div class="bg-decoration"></div>
+
+  <header class="header" id="header">
+    <div class="header-inner">
+      <a href="../index.html" class="logo" aria-label="HanziFlow kezdőlap">
+        <span class="logo-mark" lang="zh-CN" aria-hidden="true">汉</span>
+        <span class="logo-text">Hanzi<span class="logo-accent">Flow</span></span>
+      </a>
+      <nav class="nav module-page-nav"></nav>
+      <div class="auth-buttons">
+        <a href="login.html" class="btn btn-ghost">Bejelentkezés</a>
+        <a href="../index.html" class="btn-home" title="Kezdőlap" aria-label="Kezdőlap">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="module-main" id="sentenceMain">
+
+    <section class="module-hero glass-panel-heavy">
+      <div class="module-hero-icon" lang="zh-CN">句</div>
+      <div class="module-hero-meta">
+        <div class="module-meta-row">
+          <span class="badge-level">Nyelvtan</span>
+          <span class="badge-group">HSK 1–3</span>
+        </div>
+        <h1 class="module-page-title">Mondat-Mester</h1>
+        <p class="module-page-desc">A kínai mondatban a szórend dönt: a „holnap", az „otthon" és a „barátommal" mind az ige elé kerül. Itt átnézheted a szabályokat, aztán sorba rakod a szavakat, és kitöltöd a hiányzó szócskákat (<span lang="zh-CN">吗, 呢, 的, 了, 得</span>…).</p>
+        <div class="conj-stats-bar" id="smStatsBar"></div>
+      </div>
+    </section>
+
+    <section class="conj-lobby glass-panel-heavy" id="smLobby"></section>
+
+    <section class="tone-chart sm-rules glass-panel" id="smRules"></section>
+
+    <section class="conj-runtime hidden" id="smRuntime">
+      <div class="pr-stats">
+        <div class="pr-stat"><span class="pr-stat-label">Pont</span><span class="pr-stat-value" id="smScore">0</span></div>
+        <div class="pr-stat"><span class="pr-stat-label">Sorozat</span><span class="pr-stat-value" id="smStreak">0 🔥</span></div>
+        <button class="round-exit" id="smExit" type="button" title="Kilépés a körből" aria-label="Kilépés a körből">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          <span>Kilépés</span>
+        </button>
+      </div>
+      <div class="round-progress">
+        <span class="round-progress-text" id="smCardCount">Kártya 1 / —</span>
+        <div class="round-progress-bar"><div class="round-progress-fill" id="smProgressFill" style="width: 0%"></div></div>
+      </div>
+      <div class="conj-card glass-panel-heavy" id="smCard"></div>
+      <div class="conj-feedback hidden" id="smFeedback"></div>
+      <div class="conj-summary hidden" id="smSummary"></div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner"><p class="footer-note">HanziFlow · Mondat-Mester</p></div>
+  </footer>
+
+  <script src="../js/data/core.js"></script>
+  <script src="../js/data/sentence.js"></script>
+  <script src="../js/auth.js"></script>
+  <script src="../js/sync.js"></script>
+  <script src="../js/app.js"></script>
+</body>
+</html>

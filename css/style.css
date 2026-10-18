@@ -1689,7 +1689,7 @@ html.lesson-steps.ls-round .hf-tabbar { display: none; }
 
 /* ═══ 8c. MÉRŐSZAVAK (pages/measure.html) ══════════════ */
 #measureMain rt { font-size: max(0.5em, 12px); }
-.mw-pyi { font-weight: 700; color: var(--brand-deep); }
+.zh-pyi { font-weight: 700; color: var(--brand-deep); }   /* sorközi pinyin (HanziFlowZh.prose) — a Mondat-Mester is használja */
 .mw-level-row { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 
 /* tábla */
@@ -1736,6 +1736,47 @@ html.lesson-steps.ls-round .hf-tabbar { display: none; }
 .mw-fb-zh { font-size: var(--fs-lg); line-height: 1.9; }
 .mw-fb-short { font-weight: 700; color: var(--ink-soft); }
 .mw-missed-item .mw-fb-zh { font-size: var(--fs-md); }
+
+/* ═══ 8d. MONDAT-MESTER (pages/sentence.html) ══════════ */
+#sentenceMain rt { font-size: max(0.5em, 12px); }
+
+/* szabályok */
+.sm-formula { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; margin-bottom: 10px; }
+@media (min-width: 600px) { .sm-formula { grid-template-columns: repeat(6, minmax(0, 1fr)); } }
+.sm-formula-item { display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 8px 4px; border-radius: var(--radius-sm); background: var(--surface-2); border: 1px solid var(--surface-2-edge); border-top: 3px solid var(--seal); text-align: center; }
+.sm-formula-q { font-size: var(--fs-xs); font-weight: 800; color: var(--seal-ink); }
+.sm-formula-zh { font-size: var(--fs-lg); line-height: 1.6; }
+.sm-formula-play { min-height: var(--touch); margin-bottom: 16px; font-size: var(--fs-sm); }
+.sm-formula-play.is-playing { box-shadow: 0 0 0 3px rgb(var(--brand-rgb) / 0.15); }
+.sm-rule-list { display: grid; grid-template-columns: 1fr; gap: 10px; }
+@media (min-width: 720px) { .sm-rule-list { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.sm-rule { display: flex; flex-direction: column; gap: 8px; min-width: 0; padding: 14px; border-radius: var(--radius-md); background: var(--surface-2); border: 1px solid var(--surface-2-edge); }
+.sm-rule-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 8px; }
+.sm-rule-title { margin: 0; font-size: var(--fs-base); font-weight: 800; line-height: 1.4; color: var(--brand-deep); }
+.sm-rule-title [lang="zh-CN"] { font-size: 1.1em; }
+.sm-rule-text { margin: 0; font-size: var(--fs-sm); line-height: 1.6; }
+.sm-rule-text [lang="zh-CN"] { font-size: 1.1em; }
+
+/* sorba rakás */
+.sm-hu { margin-top: 4px; font-size: var(--fs-xl); font-weight: 800; line-height: 1.35; }
+.sm-answer { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 6px; min-height: 76px; padding: 10px; border-radius: var(--radius-md); border: 2px dashed var(--line-strong); background: var(--surface-2); }
+.sm-answer-hint { align-self: center; margin: 0 auto; font-size: var(--fs-sm); color: var(--ink-faint); }
+.sm-punct { font-size: var(--fs-xl); line-height: 1; padding-bottom: 10px; color: var(--ink-soft); }
+.sm-bank { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
+.sm-tile, .sm-tile-slot { display: inline-flex; align-items: flex-end; justify-content: center; min-width: var(--touch); min-height: 56px; padding: 4px 12px 8px; border-radius: var(--radius-md); font-size: var(--fs-xl); line-height: 1.5; }
+.sm-tile { border: 1.5px solid var(--line-strong); background: var(--surface); color: var(--ink); box-shadow: 0 3px 0 rgb(var(--tint-rgb) / 0.10); cursor: pointer; transition: transform 110ms ease-out, border-color var(--t-fast), background var(--t-fast); }
+.sm-tile:hover:not(:disabled) { border-color: var(--brand); }
+.sm-tile:not(:disabled):active { transform: translateY(2px); box-shadow: none; }
+.sm-tile.is-placed { border-color: var(--brand); background: var(--brand-soft); }
+.sm-tile:disabled { cursor: default; }
+.sm-tile.is-ok { border-color: var(--ok); background: var(--ok-soft); }
+.sm-tile.is-bad { border-color: var(--err); background: var(--err-soft); }
+.sm-tile-slot { border: 1.5px dashed var(--line); color: transparent; }
+.sm-tile-slot rt { color: transparent; }
+.sm-actions { display: grid; grid-template-columns: 1fr 2fr; gap: 8px; }
+.sm-actions .btn { min-height: 52px; }
+.sm-actions .btn:disabled { opacity: 0.45; cursor: default; box-shadow: none; transform: none; }
+.sm-also { display: inline-block; margin-top: 4px; font-size: var(--fs-sm); color: var(--ink-soft); }
 
 /* ═══ 9. APRÓSÁGOK: értesítő, ünneplés, mozgás ═════════ */
 .hf-toast {

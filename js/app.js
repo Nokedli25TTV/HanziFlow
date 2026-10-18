@@ -2772,11 +2772,13 @@ function initStatsPage() {
     lesson: 'Leckék',
     tones: 'Tónus-tréner',
     pinyin: 'Pinyin-tábla',
-    measure: 'Mérőszavak'
+    measure: 'Mérőszavak',
+    sentence: 'Mondat-Mester'
   };
   const MODE_LABELS = {
     hear: 'Hallás után', see: 'Jelölés', pairs: 'Szópárok', match: 'Párosító',
     write: 'Beírás', dictate: 'Diktálás', pick: 'Párosítás', sentence: 'Mondatban', count: 'Számolás',
+    build: 'Sorba rakás', fill: 'Szócskák',
     check: 'Ellenőrzés', listen: 'Hallás utáni kör', read: 'Olvasás', review: 'Ismétlés', retry: 'Hibák újra', quick: 'Gyors kérdések',
   };
   // Az Áttekintés műszerfal: benne az aktivitás (heatmap, sorozat) és a „mit gyakorolj" is.
@@ -3043,14 +3045,16 @@ function initStatsPage() {
 
   /* ── V4 P3 — radar + analytics helperek ────────── */
   // Radar tengely-sorrend (V5 bővítve: + Mintázatok)
-  const RADAR_ORDER = ['lesson', 'tones', 'pinyin', 'measure'];
-  const RADAR_LABELS = { lesson: 'Leckék', tones: 'Tónusok', pinyin: 'Pinyin', measure: 'Mérőszavak' };
+  const RADAR_ORDER = ['lesson', 'tones', 'pinyin', 'measure', 'sentence'];
+  const RADAR_LABELS = { lesson: 'Leckék', tones: 'Tónusok', pinyin: 'Pinyin', measure: 'Mérőszavak', sentence: 'Mondatok' };
   // Profil-alapú al-bontás (a modulok saját localStorage profiljaiból)
   const PROFILE_CONFIG = {
     tones: { key: 'hanziflow_tones_profile_v1', stats: [
       { field: 'toneStats', title: 'Tónusonként' } ] },
     measure: { key: 'hanziflow_measure_profile_v1', stats: [
-      { field: 'mwStats', title: 'Mérőszavanként' } ] }
+      { field: 'mwStats', title: 'Mérőszavanként' } ] },
+    sentence: { key: 'hanziflow_sentence_profile_v1', stats: [
+      { field: 'ruleStats', title: 'Szabályonként' } ] }
   };
 
   // a címkékben álló írásjegyek lang="zh-CN" alá kerülnek (különben japán változat jelenhet meg)
@@ -3706,7 +3710,7 @@ function initStatsPage() {
   }
 
   /* ── D) Blind Spot Detector ────────────────────── */
-  const MODULE_URL = { tones: 'tones.html', pinyin: 'pinyin.html', measure: 'measure.html', lesson: '../index.html#path' };
+  const MODULE_URL = { tones: 'tones.html', pinyin: 'pinyin.html', measure: 'measure.html', sentence: 'sentence.html', lesson: '../index.html#path' };
 
   // Stratégiai diagnózisok a statokból, severity-szerint rendezve
   function detectBlindSpots() {
@@ -4903,6 +4907,45 @@ function initPinyinPage() {
 
 
 /* ====================================================
+   9c3a. KÍNAI SZÖVEG A MODULOKBAN (HanziFlowZh)
+   ----------------------------------------------------
+   A {汉字|hàn·zì} jelölést alakítja HTML-lé, a lecke-oldal szabályai szerint:
+     rich(s)     ruby: a pinyin az írásjegyek fölött (kártyák, példák)
+     prose(s)    folyó szöveg: a pinyin a szó után, színezve (szabályok, magyarázatok)
+     reading(s)  felolvasáshoz: csak az írásjegyek
+   A jelöletlen írásjegyek is lang="zh-CN" alá kerülnek. A Mérőszavak és a Mondat-Mester használja.
+   ==================================================== */
+const HanziFlowZh = (function () {
+  const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+  // {汉字|hàn·zì} jelölés, mint a leckékben: ha a pinyin tagjai annyian vannak, ahány írásjegy, írásjegyenként áll fölötte
+  const RB = /\{([^|{}]+)\|([^|{}]+)\}/g;
+  const rubyWord = (zh, py) => {
+    const chars = Array.from(zh), parts = py.trim().split(/[\s·]+/);
+    const inner = (chars.length > 1 && parts.length === chars.length)
+      ? chars.map((c, i) => '<ruby>' + esc(c) + '<rt>' + esc(parts[i]) + '</rt></ruby>').join('')
+      : '<ruby>' + esc(zh) + '<rt>' + esc(py.replace(/·/g, '')) + '</rt></ruby>';
+    return '<span lang="zh-CN">' + inner + '</span>';
+  };
+  const wrapZh = t => esc(t).replace(/[\u3400-\u9fff]+/g, m => '<span lang="zh-CN">' + m + '</span>');
+  // A folyó szövegben (szabály, magyarázat) a pinyin a szó után áll, nem fölötte: így nem szakadnak szét a sorok.
+  const inlineWord = (zh, py) => '<span lang="zh-CN">' + esc(zh) + '</span> <span class="zh-pyi">' + esc(py.replace(/·/g, '')) + '</span>';
+  // jelölt szöveg → HTML: a jelölésből ruby (vagy sorközi pinyin), a jelöletlen írásjegyek lang="zh-CN" alá
+  function markup(s, word) {
+    s = String(s);
+    let out = '', last = 0;
+    s.replace(RB, (m, zh, py, at) => { out += wrapZh(s.slice(last, at)) + word(zh, py); last = at + m.length; return m; });
+    return out + wrapZh(s.slice(last));
+  }
+  const rich = s => markup(s, rubyWord);
+  const prose = s => markup(s, inlineWord);
+  const reading = s => String(s).replace(RB, '$1').replace(/[\s　＿…]/g, '');   // felolvasásra: az írásjegyek
+  const tok = (zh, py) => '{' + zh + '|' + py + '}';
+
+  return { esc: esc, RB: RB, rubyWord: rubyWord, inlineWord: inlineWord, rich: rich, prose: prose, reading: reading, tok: tok };
+})();
+
+
+/* ====================================================
    9c3. MÉRŐSZAVAK (pages/measure.html)
    ----------------------------------------------------
    Adatok: js/data/measure.js (HANZIFLOW_MEASURES, _MW_GROUPS, _MW_SENTENCES, _MW_RULES).
@@ -4921,33 +4964,9 @@ function initMeasurePage() {
   const SENT   = (typeof HANZIFLOW_MW_SENTENCES !== 'undefined') ? HANZIFLOW_MW_SENTENCES : [];
   const RULES  = (typeof HANZIFLOW_MW_RULES !== 'undefined') ? HANZIFLOW_MW_RULES : [];
   const AUTO_ADVANCE_MS = 1100;
-  const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+  const { esc, rubyWord, inlineWord, rich, prose, reading, tok } = HanziFlowZh;
   const shuffle = arr => { const a = arr.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); const t = a[i]; a[i] = a[j]; a[j] = t; } return a; };
   const PLAY = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 5.5a9 9 0 0 1 0 13"/></svg>';
-
-  // {汉字|hàn·zì} jelölés, mint a leckékben: ha a pinyin tagjai annyian vannak, ahány írásjegy, írásjegyenként áll fölötte
-  const RB = /\{([^|{}]+)\|([^|{}]+)\}/g;
-  const rubyWord = (zh, py) => {
-    const chars = Array.from(zh), parts = py.trim().split(/[\s·]+/);
-    const inner = (chars.length > 1 && parts.length === chars.length)
-      ? chars.map((c, i) => '<ruby>' + esc(c) + '<rt>' + esc(parts[i]) + '</rt></ruby>').join('')
-      : '<ruby>' + esc(zh) + '<rt>' + esc(py.replace(/·/g, '')) + '</rt></ruby>';
-    return '<span lang="zh-CN">' + inner + '</span>';
-  };
-  const wrapZh = t => esc(t).replace(/[\u3400-\u9fff]+/g, m => '<span lang="zh-CN">' + m + '</span>');
-  // A folyó szövegben (szabály, magyarázat) a pinyin a szó után áll, nem fölötte: így nem szakadnak szét a sorok.
-  const inlineWord = (zh, py) => '<span lang="zh-CN">' + esc(zh) + '</span> <span class="mw-pyi">' + esc(py.replace(/·/g, '')) + '</span>';
-  // jelölt szöveg → HTML: a jelölésből ruby (vagy sorközi pinyin), a jelöletlen írásjegyek lang="zh-CN" alá
-  function markup(s, word) {
-    s = String(s);
-    let out = '', last = 0;
-    s.replace(RB, (m, zh, py, at) => { out += wrapZh(s.slice(last, at)) + word(zh, py); last = at + m.length; return m; });
-    return out + wrapZh(s.slice(last));
-  }
-  const rich = s => markup(s, rubyWord);
-  const prose = s => markup(s, inlineWord);
-  const reading = s => String(s).replace(RB, '$1').replace(/[\s　＿…]/g, '');   // felolvasásra: az írásjegyek
-  const tok = (zh, py) => '{' + zh + '|' + py + '}';
 
   /* ── A) Adatok ─────────────────────────────────── */
   const LEVELS = [
@@ -5469,6 +5488,528 @@ function initMeasurePage() {
   renderRules();
 
   window._measure = { rich, prose, MW, SENTENCES, NOUN_MWS, poolFor, distractors, pickCard, sentenceCard, countCard, buildQueue, settings, run, startRound };
+}
+
+
+/* ====================================================
+   9c4. MONDAT-MESTER (pages/sentence.html)
+   ----------------------------------------------------
+   Adatok: js/data/sentence.js (HANZIFLOW_SM_RULES, _FORMULA, _PARTICLES, _BUILD, _FILL).
+     · Szabályok: szintenként, példákkal (koppintásra megszólalnak), fölöttük a szórend-képlet.
+     · Sorba rakás ('build'): a magyar mondat alapján a kártyákat a helyes sorrendbe kell rakni.
+       Ha egy mondatnak több jó sorrendje van (明天我… / 我明天…), mindegyik elfogadott.
+     · Szócskák ('fill'): a mondatból hiányzó 吗 / 呢 / 吧 / 的 / 了 / 过 / 着 / 得 / 地.
+       A rossz válaszok közé nem kerül olyan szócska, amellyel a mondat szintén helyes lenne.
+   ==================================================== */
+function initSentencePage() {
+  const PROFILE_KEY  = 'hanziflow_sentence_profile_v1';
+  const SETTINGS_KEY = 'hanziflow_sentence_settings_v1';
+  const RULES   = (typeof HANZIFLOW_SM_RULES !== 'undefined') ? HANZIFLOW_SM_RULES : [];
+  const FORMULA = (typeof HANZIFLOW_SM_FORMULA !== 'undefined') ? HANZIFLOW_SM_FORMULA : [];
+  const PARTS   = (typeof HANZIFLOW_SM_PARTICLES !== 'undefined') ? HANZIFLOW_SM_PARTICLES : [];
+  const BUILD   = (typeof HANZIFLOW_SM_BUILD !== 'undefined') ? HANZIFLOW_SM_BUILD : [];
+  const FILL    = (typeof HANZIFLOW_SM_FILL !== 'undefined') ? HANZIFLOW_SM_FILL : [];
+  const AUTO_ADVANCE_MS = 1300;
+  const { esc, inlineWord, rich, prose, reading, tok } = HanziFlowZh;
+  const shuffle = arr => { const a = arr.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); const t = a[i]; a[i] = a[j]; a[j] = t; } return a; };
+  const PLAY = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 5.5a9 9 0 0 1 0 13"/></svg>';
+
+  /* ── A) Adatok ─────────────────────────────────── */
+  const LEVELS = [
+    { id: 'hsk1', name: 'HSK 1',   max: 1 },
+    { id: 'hsk2', name: 'HSK 1–2', max: 2 },
+    { id: 'all',  name: 'HSK 1–3', max: 3 }
+  ];
+  const RULE = {};
+  RULES.forEach(r => { RULE[r.id] = r; });
+  const PART = {};
+  PARTS.forEach(p => { PART[p.zh] = p; });
+  const BUILDS = BUILD.filter(b => RULE[b[3]]).map((b, i) => ({
+    id: 'b' + i, hu: b[0], tiles: b[1], punct: b[2], rule: RULE[b[3]], level: b[4], alts: b[5] || []
+  }));
+  const FILLS = FILL.filter(f => PART[f[1]] && RULE[f[4]]).map((f, i) => ({
+    id: 'f' + i, zh: f[0], p: PART[f[1]], hu: f[2], also: f[3] || [], rule: RULE[f[4]], level: f[5]
+  }));
+
+  /* ── B) Beállítások + profil ───────────────────── */
+  function loadJson(key) {
+    try { return JSON.parse(localStorage.getItem(key) || 'null'); } catch (e) { return null; }
+  }
+  const saved = loadJson(SETTINGS_KEY) || {};
+  const settings = {
+    mode: ['build', 'fill'].indexOf(saved.mode) >= 0 ? saved.mode : 'build',
+    level: LEVELS.some(l => l.id === saved.level) ? saved.level : 'hsk1',
+    cardCount: [10, 20, 40].indexOf(saved.cardCount) >= 0 ? saved.cardCount : 10
+  };
+  if (window.HanziFlowPath) HanziFlowPath.apply('sentence', settings);
+  function saveSettings() {
+    try { localStorage.setItem(SETTINGS_KEY, JSON.stringify(settings)); } catch (e) {}
+  }
+  function loadProfile() {
+    const p = loadJson(PROFILE_KEY);
+    return (p && p.ruleStats) ? p : { ruleStats: {}, totalAttempts: 0, totalCorrect: 0, bestStreak: 0 };
+  }
+  function saveProfile(p) {
+    try { localStorage.setItem(PROFILE_KEY, JSON.stringify(p)); } catch (e) {}
+    if (window.HanziFlowSync && HanziFlowSync.schedulePush) HanziFlowSync.schedulePush();
+  }
+  const levelMax = () => (LEVELS.find(l => l.id === settings.level) || LEVELS[0]).max;
+
+  /* ── C) Kártyák ────────────────────────────────── */
+  const poolFor = (mode, max) => (mode === 'fill' ? FILLS : BUILDS).filter(x => x.level <= max);
+
+  // Sorba rakás: a kártyák, a jó sorrendek (szövegként és sorszámokkal), a megkevert pakli
+  function buildCard(b) {
+    const tiles = b.tiles.map((zh, k) => ({ k: k, zh: zh, text: reading(zh) }));
+    const orders = [tiles.map(t => t.k)].concat(b.alts.map(a => a.split(' ').map(Number)));
+    const answers = orders.map(o => o.map(k => tiles[k].text).join(''));
+    let bank = shuffle(tiles), tries = 0;
+    while (tries++ < 30 && answers.indexOf(bank.map(t => t.text).join('')) >= 0) bank = shuffle(tiles);
+    return { kind: 'build', b: b, rule: b.rule, tiles: tiles, orders: orders, answers: answers, bank: bank, placed: [] };
+  }
+  // Szócskák: előbb a „rokonok" (的 – 得 – 地, 了 – 过 – 着, 吗 – 呢 – 吧), aztán a többi
+  function particleDistractors(f) {
+    const block = {};
+    block[f.p.zh] = true;
+    f.also.forEach(x => { block[x] = true; });
+    const lv = Math.max(levelMax(), f.level);
+    const pool = PARTS.filter(p => !block[p.zh] && p.level <= lv);
+    const fam = shuffle(pool.filter(p => p.family === f.p.family));
+    const out = fam.slice(0, 2).concat(shuffle(pool.filter(p => p.family !== f.p.family)), fam.slice(2)).slice(0, 3);
+    PARTS.forEach(p => { if (out.length < 3 && !block[p.zh] && out.indexOf(p) < 0) out.push(p); });
+    return out;
+  }
+  function fillCard(f) {
+    const options = shuffle([f.p].concat(particleDistractors(f)));
+    return { kind: 'fill', f: f, rule: f.rule, options: options, right: options.indexOf(f.p) };
+  }
+
+  function weightOf(p, rule) {
+    const st = p.ruleStats[rule.key];
+    if (!st || !st.attempts) return 2;
+    return st.correct / st.attempts >= 0.8 ? 1 : 3;
+  }
+  function buildQueue(count) {
+    const p = loadProfile();
+    const pool = poolFor(settings.mode, levelMax());
+    if (!pool.length) return [];
+    const keyed = pool.map(it => ({ it: it, key: Math.pow(Math.random(), 1 / weightOf(p, it.rule)) }));
+    keyed.sort((a, b) => b.key - a.key);
+    let queue = keyed.map(k => k.it);
+    while (queue.length < count) queue = queue.concat(shuffle(pool));
+    queue = queue.slice(0, count);
+    for (let i = 1; i < queue.length; i++) {               // ugyanaz a mondat ne jöjjön kétszer egymás után
+      if (queue[i] !== queue[i - 1]) continue;
+      for (let k = i + 1; k < queue.length; k++) {
+        if (queue[k] !== queue[i - 1]) { const t = queue[i]; queue[i] = queue[k]; queue[k] = t; break; }
+      }
+    }
+    return queue;
+  }
+
+  /* ── D) Fejléc, szabályok ──────────────────────── */
+  function renderStatsBar() {
+    const el = document.getElementById('smStatsBar');
+    if (!el) return;
+    const p = loadProfile();
+    const acc = p.totalAttempts ? Math.round((p.totalCorrect / p.totalAttempts) * 100) : 0;
+    el.innerHTML = `
+      <div class="conj-stat-chip"><span class="csc-num">${BUILDS.length + FILLS.length}</span><span class="csc-label">mondat</span></div>
+      <div class="conj-stat-chip"><span class="csc-num">${p.totalAttempts}</span><span class="csc-label">válasz</span></div>
+      <div class="conj-stat-chip"><span class="csc-num">${acc}%</span><span class="csc-label">pontosság</span></div>`;
+  }
+
+  let tab = 1;
+  function renderRules() {
+    const el = document.getElementById('smRules');
+    if (!el) return;
+    const p = loadProfile();
+    const formulaSay = FORMULA.map(f => reading(f[1])).join('');
+    const tabs = [1, 2, 3].map(l => `<button class="py-tab${l === tab ? ' active' : ''}" type="button" data-tab="${l}" aria-pressed="${l === tab}">HSK ${l}</button>`).join('');
+    const cards = RULES.filter(r => r.level === tab).map(r => {
+      const st = p.ruleStats[r.key];
+      const pct = st && st.attempts ? Math.round(st.correct / st.attempts * 100) : null;
+      return `
+        <article class="sm-rule">
+          <div class="sm-rule-top">
+            <h3 class="sm-rule-title">${prose(r.title)}</h3>
+            ${pct !== null ? `<span class="mw-card-pct">${pct}%</span>` : ''}
+          </div>
+          <p class="sm-rule-text">${prose(r.text)}</p>
+          <div class="mw-ex">
+            ${r.ex.map(e => `
+              <button class="mw-ex-btn" type="button" data-say="${esc(reading(e[0]))}">
+                <span class="mw-ex-zh">${rich(e[0])}</span>
+                <span class="mw-ex-hu">${esc(e[1])}</span>
+              </button>`).join('')}
+          </div>
+        </article>`;
+    }).join('');
+    el.innerHTML = `
+      <div class="tone-chart-head">
+        <h2 class="tone-chart-h">A kínai szórend</h2>
+        <p class="tone-chart-sub">A kínai mondat szerkezete kötött: a körülmények (mikor, hol, kivel) az ige elé kerülnek, a mondat végére csak a tárgy és a szócskák. Ha elakadsz, kérdezd végig ezt a sort:</p>
+      </div>
+      <div class="sm-formula">
+        ${FORMULA.map(f => `<div class="sm-formula-item"><span class="sm-formula-q">${esc(f[0])}</span><span class="sm-formula-zh">${rich(f[1])}</span></div>`).join('')}
+      </div>
+      <button class="btn btn-outline sm-formula-play" type="button" data-say="${esc(formulaSay)}">${PLAY} Holnap otthon a barátommal filmet nézek.</button>
+      <div class="py-tabs sm-tabs" role="group" aria-label="Szintek">${tabs}</div>
+      <div class="sm-rule-list">${cards}</div>`;
+    el.querySelectorAll('[data-tab]').forEach(btn => btn.addEventListener('click', () => { tab = parseInt(btn.dataset.tab, 10); renderRules(); }));
+    el.querySelectorAll('[data-say]').forEach(btn => btn.addEventListener('click', () => {
+      btn.classList.add('is-playing');
+      setTimeout(() => btn.classList.remove('is-playing'), 1400);
+      if (window.HanziFlowAudio) HanziFlowAudio.play(btn.dataset.say, { speed: 0.8 });
+    }));
+  }
+
+  /* ── E) Lobbi ──────────────────────────────────── */
+  function renderLobby() {
+    const el = document.getElementById('smLobby');
+    const modes = [
+      { id: 'build', name: 'Sorba rakás', sub: 'rakd a szavakat a helyes sorrendbe' },
+      { id: 'fill',  name: 'Szócskák',    sub: '吗, 呢, 的, 了, 得…: melyik hiányzik?' }
+    ].map(m => `
+      <button class="cj-mode-btn ${settings.mode === m.id ? 'active' : ''}" data-mode="${m.id}" type="button">
+        <span class="cj-m-name">${m.name}</span>
+        <span class="cj-m-sub">${prose(m.sub)}</span>
+      </button>`).join('');
+    const levels = LEVELS.map(l => `
+      <button class="cj-mode-btn ${settings.level === l.id ? 'active' : ''}" data-level="${l.id}" type="button">
+        <span class="cj-m-name">${l.name}</span>
+        <span class="cj-m-sub">${RULES.filter(r => r.level <= l.max).length} szabály</span>
+      </button>`).join('');
+    const presets = [10, 20, 40].map(n => `
+      <button class="ml-count-btn ${settings.cardCount === n ? 'active' : ''}" data-count="${n}" type="button">${n}</button>`).join('');
+
+    el.innerHTML = `
+      <div class="lobby-header">
+        <div class="lobby-eyebrow">Mondat-Mester</div>
+        <h2 class="lobby-title">Mit gyakorolnál?</h2>
+      </div>
+      <div class="lobby-section">
+        <div class="lobby-section-label">Mód</div>
+        <div class="cj-mode-row py-mode-row">${modes}</div>
+      </div>
+      <div class="lobby-section">
+        <div class="lobby-section-label">Szint</div>
+        <div class="cj-mode-row mw-level-row">${levels}</div>
+      </div>
+      <div class="lobby-section">
+        <div class="lobby-section-label">Kártyák száma</div>
+        <div class="ml-count-row"><div class="ml-count-presets">${presets}</div></div>
+      </div>
+      <button class="btn btn-primary ml-start" id="smStart" type="button">Indítás</button>`;
+
+    const pick = (sel, apply) => el.querySelectorAll(sel).forEach(btn => btn.addEventListener('click', () => {
+      apply(btn);
+      el.querySelectorAll(sel).forEach(b => b.classList.toggle('active', b === btn));
+      saveSettings(); updateStartBtn();
+    }));
+    pick('[data-mode]',  b => { settings.mode = b.dataset.mode; });
+    pick('[data-level]', b => { settings.level = b.dataset.level; });
+    pick('[data-count]', b => { settings.cardCount = parseInt(b.dataset.count, 10); });
+    document.getElementById('smStart').addEventListener('click', startRound);
+    updateStartBtn();
+  }
+  function updateStartBtn() {
+    const btn = document.getElementById('smStart');
+    if (btn) btn.textContent = 'Indítás — ' + settings.cardCount + ' kártya';
+  }
+
+  /* ── F) Kör ────────────────────────────────────── */
+  const run = {
+    inLobby: true, cards: [], cardIdx: 0,
+    score: 0, streak: 0, bestStreak: 0, results: [], missed: [],
+    submitted: false, roundStartTs: 0, advanceTimer: null
+  };
+
+  function startRound() {
+    const queue = buildQueue(settings.cardCount);
+    if (!queue.length) return;
+    run.cards = queue.map(it => ({ item: it }));
+    run.cardIdx = 0; run.score = 0; run.streak = 0; run.bestStreak = 0; run.results = []; run.missed = [];
+    run.roundStartTs = Date.now();
+    run.inLobby = false;
+    HanziFlowRound.begin(function () {
+      return { module: 'sentence', mode: settings.mode, results: run.results, score: run.score, startTs: run.roundStartTs };
+    });
+    document.querySelector('.module-hero')?.classList.add('hidden');
+    ['smLobby', 'smRules'].forEach(id => document.getElementById(id).classList.add('hidden'));
+    document.getElementById('smRuntime').classList.remove('hidden');
+    const sEl = document.getElementById('smSummary');
+    sEl.classList.add('hidden'); sEl.innerHTML = '';
+    renderCard();
+  }
+
+  function updateHeader() {
+    const total = run.cards.length;
+    document.getElementById('smScore').textContent = run.score;
+    document.getElementById('smStreak').textContent = `${run.streak} 🔥`;
+    document.getElementById('smCardCount').textContent = `Kártya ${Math.min(run.cardIdx + 1, total)} / ${total}`;
+    document.getElementById('smProgressFill').style.width = `${total ? (run.cardIdx / total) * 100 : 0}%`;
+  }
+
+  function play(text, speed) {
+    if (!window.HanziFlowAudio) return;
+    try { HanziFlowAudio.play(text, { speed: speed }); } catch (e) {}
+  }
+  // a helyes mondat jelölése és magyarul
+  function answerOf(card) {
+    if (card.kind === 'build') return { zh: card.tiles.map(t => t.zh).join('') + card.b.punct, hu: card.b.hu };
+    return { zh: card.f.zh.replace('＿', tok(card.f.p.zh, card.f.p.py)), hu: card.f.hu };
+  }
+
+  function renderCard() {
+    run.submitted = false;
+    updateHeader();
+    const fb = document.getElementById('smFeedback');
+    fb.classList.add('hidden'); fb.innerHTML = '';
+    const card = run.cards[run.cardIdx];
+    if (!card.kind) Object.assign(card, settings.mode === 'fill' ? fillCard(card.item) : buildCard(card.item));
+    const el = document.getElementById('smCard');
+    if (card.kind === 'build') {
+      card.placed = [];
+      el.innerHTML = `
+        <div class="cj-prompt">
+          <div class="cj-prompt-eyebrow"><span class="cj-pe-group">Sorba rakás</span><span class="cj-pe-dot">·</span>HSK ${card.b.level}</div>
+          <div class="kana-task">Rakd sorba a szavakat!</div>
+          <div class="sm-hu">${esc(card.b.hu)}</div>
+        </div>
+        <div class="sm-answer" id="smAnswer" aria-live="polite"></div>
+        <div class="sm-bank" id="smBank"></div>
+        <div class="sm-actions">
+          <button class="btn btn-outline sm-undo" id="smUndo" type="button">Vissza</button>
+          <button class="btn btn-primary sm-check" id="smCheck" type="button" disabled>Ellenőrzés</button>
+        </div>
+        <button class="dont-know-btn" type="button">Nem tudom</button>`;
+      drawBuild(card);
+      document.getElementById('smUndo').addEventListener('click', () => {
+        if (run.submitted || !card.placed.length) return;
+        card.placed.pop(); drawBuild(card);
+      });
+      document.getElementById('smCheck').addEventListener('click', () => checkBuild(card));
+      el.querySelector('.dont-know-btn').addEventListener('click', () => {
+        if (run.submitted) return;
+        card.placed = card.orders[0].map(k => card.tiles[k]);
+        drawBuild(card);
+        lockBuild(card, null);
+        finalize(card, false, { dontKnow: true });
+      });
+    } else {
+      const i = card.f.zh.indexOf('＿');
+      el.innerHTML = `
+        <div class="cj-prompt">
+          <div class="cj-prompt-eyebrow"><span class="cj-pe-group">Szócskák</span><span class="cj-pe-dot">·</span>HSK ${card.f.level}</div>
+          <div class="kana-task">Melyik szócska hiányzik?</div>
+          <div class="mw-sentence">${rich(card.f.zh.slice(0, i))}<span class="mw-blank" aria-label="hiányzó szócska">?</span>${rich(card.f.zh.slice(i + 1))}</div>
+          <div class="mw-hu">${esc(card.f.hu)}</div>
+        </div>
+        <div class="cj-options mw-options">
+          ${card.options.map((o, k) => `<button class="cj-option" type="button" data-idx="${k}"><span class="mw-opt-zh" lang="zh-CN">${esc(o.zh)}</span><span class="mw-opt-py">${esc(o.py)}</span></button>`).join('')}
+        </div>
+        <button class="dont-know-btn" type="button">Nem tudom</button>`;
+      const buttons = el.querySelectorAll('.cj-option');
+      const lock = () => el.querySelectorAll('.cj-option, .dont-know-btn').forEach(b => { b.disabled = true; });
+      buttons.forEach(btn => btn.addEventListener('click', () => {
+        if (run.submitted) return;
+        const idx = parseInt(btn.dataset.idx, 10);
+        const ok = idx === card.right;
+        lock();
+        btn.classList.add(ok ? 'correct' : 'wrong');
+        if (!ok) buttons[card.right].classList.add('reveal-correct');
+        fillBlank(card, ok);
+        finalize(card, ok, { idx: idx });
+      }));
+      el.querySelector('.dont-know-btn').addEventListener('click', () => {
+        if (run.submitted) return;
+        lock();
+        buttons[card.right].classList.add('reveal-correct');
+        fillBlank(card, false);
+        finalize(card, false, { dontKnow: true });
+      });
+    }
+  }
+
+  function fillBlank(card, ok) {
+    const b = document.querySelector('#smCard .mw-blank');
+    if (!b) return;
+    const span = document.createElement('span');
+    span.className = 'mw-fill' + (ok ? ' is-ok' : '');
+    span.innerHTML = rich(tok(card.f.p.zh, card.f.p.py));       // saját adatból, nem a felhasználótól
+    b.replaceWith(span);
+  }
+
+  // a lerakott kártyák fent, a még szabadok lent; koppintásra mennek oda-vissza
+  function drawBuild(card) {
+    const ans = document.getElementById('smAnswer');
+    const bank = document.getElementById('smBank');
+    if (!ans || !bank) return;
+    const used = card.placed.map(t => t.k);
+    ans.innerHTML = (card.placed.length
+      ? card.placed.map((t, i) => `<button class="sm-tile is-placed" type="button" data-pos="${i}">${rich(t.zh)}</button>`).join('')
+      : '<span class="sm-answer-hint">Koppints a szavakra a helyes sorrendben.</span>') +
+      (card.placed.length ? `<span class="sm-punct" lang="zh-CN">${esc(card.b.punct)}</span>` : '');
+    bank.innerHTML = card.bank.map(t => used.indexOf(t.k) >= 0
+      ? `<span class="sm-tile-slot" aria-hidden="true">${rich(t.zh)}</span>`
+      : `<button class="sm-tile" type="button" data-k="${t.k}">${rich(t.zh)}</button>`).join('');
+    ans.querySelectorAll('[data-pos]').forEach(btn => btn.addEventListener('click', () => {
+      if (run.submitted) return;
+      card.placed.splice(parseInt(btn.dataset.pos, 10), 1); drawBuild(card);
+    }));
+    bank.querySelectorAll('[data-k]').forEach(btn => btn.addEventListener('click', () => {
+      if (run.submitted) return;
+      card.placed.push(card.tiles[parseInt(btn.dataset.k, 10)]); drawBuild(card);
+    }));
+    const done = card.placed.length === card.tiles.length;
+    const check = document.getElementById('smCheck');
+    if (check) check.disabled = !done || run.submitted;
+    const undo = document.getElementById('smUndo');
+    if (undo) undo.disabled = !card.placed.length || run.submitted;
+  }
+
+  // a lerakott sor összevetése a hozzá legközelebbi jó sorrenddel: helyén lévő kártya zöld, a többi piros
+  function lockBuild(card, ok) {
+    const text = card.placed.map(t => t.text);
+    let best = card.orders[0], bestHit = -1;
+    card.orders.forEach(o => {
+      const hit = o.filter((k, i) => card.tiles[k].text === text[i]).length;
+      if (hit > bestHit) { bestHit = hit; best = o; }
+    });
+    document.querySelectorAll('#smAnswer .sm-tile').forEach((btn, i) => {
+      btn.disabled = true;
+      if (ok !== null) btn.classList.add(card.tiles[best[i]].text === text[i] ? 'is-ok' : 'is-bad');
+    });
+    document.querySelectorAll('#smCard .sm-actions .btn, #smCard .dont-know-btn').forEach(b => { b.disabled = true; });
+    run.submitted = true;
+  }
+  function checkBuild(card) {
+    if (run.submitted || card.placed.length !== card.tiles.length) return;
+    const text = card.placed.map(t => t.text).join('');
+    const ok = card.answers.indexOf(text) >= 0;
+    lockBuild(card, ok);
+    finalize(card, ok, { mine: card.placed.map(t => t.zh).join('') + card.b.punct });
+  }
+
+  function finalize(card, ok, info) {
+    run.submitted = true;
+    if (ok) { run.score += 10; run.streak++; run.bestStreak = Math.max(run.bestStreak, run.streak); }
+    else    { run.streak = 0; }
+    const code = ok ? null : info.dontKnow ? 'dont_know' : card.kind === 'build' ? 'wrong_order' : 'wrong_particle';
+    run.results.push({ item: card.kind === 'build' ? card.b.id : card.f.id, rule: card.rule.key, correct: ok, errorCode: code });
+    const ans = answerOf(card);
+    if (!ok) run.missed.push(ans);
+    document.getElementById('smScore').textContent = run.score;
+    document.getElementById('smStreak').textContent = `${run.streak} 🔥`;
+    play(reading(ans.zh), 0.85);
+    if (ok) { run.advanceTimer = setTimeout(advance, AUTO_ADVANCE_MS); return; }
+    renderFeedback(card, info, ans);
+  }
+
+  function renderFeedback(card, info, ans) {
+    const fb = document.getElementById('smFeedback');
+    const isLast = run.cardIdx + 1 >= run.cards.length;
+    let mine = '';
+    if (card.kind === 'build' && info.mine) mine = `<span class="mw-fb-zh">${rich(info.mine)}</span>`;
+    if (card.kind === 'fill' && info.idx != null) {
+      const o = card.options[info.idx];
+      mine = `<strong class="mw-fb-mw">${inlineWord(o.zh, o.py)}</strong> <span class="mw-fb-short">${prose(o.short)}</span>`;
+    }
+    const others = card.kind === 'build' && card.orders.length > 1
+      ? `<br><span class="sm-also">Így is jó: ${card.orders.slice(1).map(o => `<span class="mw-fb-zh">${rich(o.map(k => card.tiles[k].zh).join('') + card.b.punct)}</span>`).join(' · ')}</span>`
+      : '';
+    fb.className = 'conj-feedback ' + (info.dontKnow ? 'pr-fb-dontknow' : 'pr-fb-wrong');
+    fb.innerHTML = `
+      <div class="pr-fb-header">
+        <span class="pr-fb-mark">${info.dontKnow ? '💡' : '🤔'}</span>
+        <span class="pr-fb-title">${info.dontKnow ? 'Ez a helyes' : 'Nézzük meg együtt'}</span>
+      </div>
+      <div class="pr-fb-explain">
+        <div class="pfe-row pfe-correct"><span class="pfe-label">Helyes</span><span class="pfe-text"><span class="mw-fb-zh">${rich(ans.zh)}</span><br>${esc(ans.hu)}${others}</span></div>
+        ${mine ? `<div class="pfe-row pfe-wrong"><span class="pfe-label">${card.kind === 'build' ? 'A te sorrended' : 'A te válaszod'}</span><span class="pfe-text">${mine}</span></div>` : ''}
+        <div class="pfe-row pfe-rule"><span class="pfe-label">Szabály</span><span class="pfe-text"><strong>${prose(card.rule.title)}</strong><br>${prose(card.rule.text)}</span></div>
+      </div>
+      <div class="tone-fb-actions"><button class="btn btn-outline" id="smAgain" type="button">${PLAY} Meghallgatom</button></div>
+      <button class="btn btn-primary cj-next" id="smNext" type="button">${isLast ? 'Eredmények' : 'Következő'}</button>`;
+    document.getElementById('smAgain').addEventListener('click', () => play(reading(ans.zh), 0.7));
+    document.getElementById('smNext').addEventListener('click', advance);
+  }
+
+  function advance() {
+    if (run.advanceTimer) { clearTimeout(run.advanceTimer); run.advanceTimer = null; }
+    run.cardIdx++;
+    if (run.cardIdx >= run.cards.length) showSummary();
+    else renderCard();
+    HanziFlowRound.scrollToRound();
+  }
+
+  /* ── G) Összesítő ──────────────────────────────── */
+  function showSummary() {
+    HanziFlowStats.recordSession({
+      module: 'sentence', mode: settings.mode,
+      results: run.results, score: run.score, startTs: run.roundStartTs
+    });
+    const p = loadProfile();
+    const per = {};
+    run.results.forEach(r => {
+      const st = p.ruleStats[r.rule] = p.ruleStats[r.rule] || { attempts: 0, correct: 0 };
+      st.attempts++; if (r.correct) st.correct++;
+      const x = per[r.rule] = per[r.rule] || [0, 0]; x[1]++; if (r.correct) x[0]++;
+      p.totalAttempts++; if (r.correct) p.totalCorrect++;
+    });
+    p.bestStreak = Math.max(p.bestStreak || 0, run.bestStreak);
+    saveProfile(p);
+
+    const total = run.results.length;
+    const correct = run.results.filter(r => r.correct).length;
+    const pct = total ? Math.round((correct / total) * 100) : 0;
+    const weak = Object.keys(per).filter(k => per[k][1] >= 2 && per[k][0] / per[k][1] < 0.6);
+    document.getElementById('smCard').innerHTML = '';
+    const fb = document.getElementById('smFeedback');
+    fb.classList.add('hidden'); fb.innerHTML = '';
+    document.getElementById('smProgressFill').style.width = '100%';
+    const sEl = document.getElementById('smSummary');
+    sEl.classList.remove('hidden');
+    sEl.innerHTML = `
+      <div class="summary-icon">${pct === 100 ? '🏆' : pct >= 75 ? '⚡' : pct >= 50 ? '🎯' : '🌱'}</div>
+      <h3>Kör vége: ${pct}%</h3>
+      <div class="summary-score">${correct} / ${total}</div>
+      ${weak.length ? `<p class="lq-summary-note">Ezeket a szabályokat érdemes átnézni: ${weak.map(k => `<strong>${prose(k)}</strong>`).join(', ')}.</p>` : ''}
+      ${run.missed.length ? `<div class="py-missed">${run.missed.slice(0, 12).map(a => `<span class="py-missed-item mw-missed-item"><span class="mw-fb-zh">${rich(a.zh)}</span> ${esc(a.hu)}</span>`).join('')}</div>` : ''}
+      <div class="kana-summary-actions">
+        <button class="btn btn-primary" id="smRoundAgain" type="button">Még egy kör</button>
+        <button class="btn btn-outline" id="smBack" type="button">Vissza a szabályokhoz</button>
+      </div>`;
+    document.getElementById('smRoundAgain').addEventListener('click', startRound);
+    document.getElementById('smBack').addEventListener('click', backToLobby);
+    if (pct === 100 && window.HanziFlowMotion && HanziFlowMotion.celebrate) {
+      try { HanziFlowMotion.celebrate({ title: 'Hibátlan kör!', sub: `${total} / ${total}` }); } catch (e) {}
+    }
+  }
+
+  function backToLobby() {
+    if (run.advanceTimer) { clearTimeout(run.advanceTimer); run.advanceTimer = null; }
+    if (window.HanziFlowAudio) HanziFlowAudio.stop();
+    run.inLobby = true; run.cards = [];
+    document.querySelector('.module-hero')?.classList.remove('hidden');   // → a kör-őr elmenti a részeredményt
+    document.getElementById('smRuntime').classList.add('hidden');
+    ['smLobby', 'smRules'].forEach(id => document.getElementById(id).classList.remove('hidden'));
+    renderStatsBar(); renderRules(); updateStartBtn();
+  }
+
+  /* ── H) Init ───────────────────────────────────── */
+  document.getElementById('smExit').addEventListener('click', () => {
+    if (run.inLobby) return;
+    if (!confirm('Biztosan kilépsz a körből?')) return;
+    backToLobby();
+  });
+
+  renderStatsBar();
+  renderLobby();
+  renderRules();
+
+  window._sentence = { BUILDS, FILLS, poolFor, buildCard, fillCard, particleDistractors, buildQueue, settings, run, startRound, checkBuild };
 }
 
 /* ====================================================
@@ -6659,6 +7200,8 @@ function initCurrentPage() {
     initPinyinPage();
   } else if (document.getElementById('measureMain')) {
     initMeasurePage();
+  } else if (document.getElementById('sentenceMain')) {
+    initSentencePage();
   } else if (document.getElementById('lessonMain')) {
     initLessonPage();
   } else if (document.querySelector('.auth-card')) {

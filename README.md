@@ -8,6 +8,7 @@ Kínai (mandarin) nyelvtanuló webapp magyarul, kezdőknek.
 - **Tónus-tréner**: a négy tónus hallás után, az ékezetekből és kétszótagú szavakban.
 - **Pinyin-tábla**: minden szótag a négy tónussal, és a szavak pinyinjének beírása ellenőrzéssel.
 - **Mérőszavak**: 个, 本, 张, 条… csoportonként, gyakorlás szókapcsolatban, mondatban és számolásban.
+- **Mondat-Mester**: a kínai szórend szabályai, a szavak sorba rakása és a szócskák (吗, 呢, 的, 了, 得…) kitöltése.
 - **Időzített ismétlés** a leckék kérdéseiből, **napi cél** és **sorozat**, **statisztika** aktivitás-naptárral.
 - Bejelentkezés nélkül is teljes (minden a böngészőben marad); fiókkal szinkronizál. Telepíthető (PWA).
 

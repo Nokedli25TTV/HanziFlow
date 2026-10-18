@@ -35,7 +35,9 @@ window.HanziFlowSync = (function () {
     'hanziflow_tones_settings_v1',
     'hanziflow_pinyin_settings_v1', // Pinyin-tábla: mód, szint, tónus, kártyák száma
     'hanziflow_measure_profile_v1', // Mérőszavak: mérőszavankénti eredmény
-    'hanziflow_measure_settings_v1'
+    'hanziflow_measure_settings_v1',
+    'hanziflow_sentence_profile_v1', // Mondat-Mester: szabályonkénti eredmény
+    'hanziflow_sentence_settings_v1'
   ];
   const PREFIX_KEYS = [];
 
