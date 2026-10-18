@@ -260,7 +260,40 @@ const HANZIFLOW_PATH = [
     module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l21&round=listen' },
   { id: 'l21-read', glyph: '读', title: 'Olvasás: Miért nem jött David?',
     desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
-    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l21&round=read' }
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l21&round=read' },
+
+  // ── HSK 2 · 7. lecke ──
+  { id: 'l22-lesson', glyph: '离', title: 'Magyarázat: 离, 从…到, 要 + időtartam, 还 (még mindig), 吧 (sejtés)',
+    desc: 'Távolság és közlekedés: milyen messze, honnan hová, mennyi idő.',
+    module: 'lesson', href: 'pages/lesson.html?id=l22' },
+  { id: 'l22-listen', glyph: '听', title: 'Hallás: reggeli út',
+    desc: 'A lecke mondatai hang után: mit jelent, amit hallasz?',
+    module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l22&round=listen' },
+  { id: 'l22-read', glyph: '读', title: 'Olvasás: Wang Ming reggele',
+    desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l22&round=read' },
+
+  // ── HSK 2 · 8. lecke ──
+  { id: 'l23-lesson', glyph: '让', title: 'Magyarázat: 让, igekettőzés, 再 / 又, 告诉, 先…再…',
+    desc: 'Tanács és program: hadd gondolkodjak, nézz körül, előbb ez, aztán az.',
+    module: 'lesson', href: 'pages/lesson.html?id=l23' },
+  { id: 'l23-listen', glyph: '听', title: 'Hallás: programterv',
+    desc: 'A lecke mondatai hang után: mit jelent, amit hallasz?',
+    module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l23&round=listen' },
+  { id: 'l23-read', glyph: '读', title: 'Olvasás: Anya Pekingbe jön',
+    desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l23&round=read' },
+
+  // ── HSK 2 · 9. lecke ──
+  { id: 'l24-lesson', glyph: '完', title: 'Magyarázat: eredménykiegészítők: 完, 懂, 见, 到, 好, 错, 对 · 第',
+    desc: 'A cselekvés eredménye: megcsináltam, megértettem, megtaláltam — vagy nem.',
+    module: 'lesson', href: 'pages/lesson.html?id=l24' },
+  { id: 'l24-listen', glyph: '听', title: 'Hallás: a könyvtárban',
+    desc: 'A lecke mondatai hang után: mit jelent, amit hallasz?',
+    module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l24&round=listen' },
+  { id: 'l24-read', glyph: '读', title: 'Olvasás: Az első dolgozat',
+    desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l24&round=read' }
 ];
 
 const HANZIFLOW_PATH_UNITS = [
@@ -307,5 +340,11 @@ const HANZIFLOW_PATH_UNITS = [
   { id: 'u-l20', kicker: 'HSK 2 · 5. lecke', title: 'Kicsit olcsóbban?', sub: '还, 就, 百 / 千 / 零, 有点儿 / 一点儿, ruhák mérőszavai',
     steps: ['l20-lesson', 'l20-listen', 'l20-read'] },
   { id: 'u-l21', kicker: 'HSK 2 · 6. lecke', title: 'Hogyhogy nem jöttél?', sub: '怎么 + 没, 因为…所以…, mondatvégi 了, 不…了, 可以',
-    steps: ['l21-lesson', 'l21-listen', 'l21-read'] }
+    steps: ['l21-lesson', 'l21-listen', 'l21-read'] },
+  { id: 'u-l22', kicker: 'HSK 2 · 7. lecke', title: 'Messze laksz?', sub: '离, 从…到…, 要 + időtartam, 还 = még mindig, …吧？',
+    steps: ['l22-lesson', 'l22-listen', 'l22-read'] },
+  { id: 'u-l23', kicker: 'HSK 2 · 8. lecke', title: 'Hadd gondolkodjak', sub: '让, 看看 / 休息休息, 再 és 又, 告诉, 先…再…',
+    steps: ['l23-lesson', 'l23-listen', 'l23-read'] },
+  { id: 'u-l24', kicker: 'HSK 2 · 9. lecke', title: 'Megértetted?', sub: '做完, 听懂, 看见, 找到, 写错, 没 + ige + kieg., 第 + szám',
+    steps: ['l24-lesson', 'l24-listen', 'l24-read'] }
 ];

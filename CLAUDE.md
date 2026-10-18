@@ -34,7 +34,7 @@ mellette **gyakorló modulok**, **időzített ismétlés** és **statisztika**.
 
 ```
 index.html            kezdőlap: szintválasztó / „Folytatás", napi cél, ismétlés, a tanulási út térképe
-pages/lesson.html     lecke (?id=l0…l21 · l16-tól HSK 2 · &round=listen | read · ?review=1 = napi ismétlés)
+pages/lesson.html     lecke (?id=l0…l24 · l16-tól HSK 2 · &round=listen | read · ?review=1 = napi ismétlés)
 pages/tones.html      Tónus-tréner (hallás után · jelölés · szópárok)
 pages/modules.html    a modulok kártyái („Szabad gyakorlás")
 pages/stats.html      statisztika · login.html · register.html
@@ -77,7 +77,7 @@ Színt csak tokenből; 12 px alatt nincs szöveg; érintési célpont ≥ 44 px;
 ## 7. Nyitott
 
 - [x] HSK 1: előkészítő + mind a 15 lecke (párbeszéd, 5 nyelvtani pont, olvasmány, 16–19 kérdés leckénként).
-- [ ] HSK 2 leckék (l16–l30, a HSK 2 témáinak sorrendjében, saját szöveggel; kész: 1–6. = l16–l21), majd HSK 3.
+- [ ] HSK 2 leckék (l16–l30, a HSK 2 témáinak sorrendjében, saját szöveggel; kész: 1–9. = l16–l24), majd HSK 3.
 - [ ] Modulok: Pinyin-tábla, Mérőszavak, Mondat-Mester, Dátum/idő/pénz, dolgozatok, HSK 1 próbavizsga.
 - Élő oldal: https://nokedli25ttv.github.io/HanziFlow/ (GitHub Pages, main ág, 2026-10-18 óta).
 - [ ] A NihonCore `sw.js`-ében a cache-törlést a saját előtagra kell szűkíteni (különben a HanziFlow offline-tárát is törli).
