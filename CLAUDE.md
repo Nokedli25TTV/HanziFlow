@@ -6,7 +6,7 @@
 ## 1. Mi a projekt
 
 **HanziFlow** — magyar nyelvű kínai (mandarin) nyelvtanuló webapp kezdőknek. A kezdőlapon vezetett
-**tanulási út** áll (előkészítő fejezet: pinyin és tónusok, utána a HSK 1 és a HSK 2 szint témái leckénként),
+**tanulási út** áll (előkészítő fejezet: pinyin és tónusok, utána a HSK 1–3 szint témái leckénként),
 mellette **gyakorló modulok**, **időzített ismétlés** és **statisztika**.
 
 - **Alap:** a NihonCore (japán testvér-app) váza — kör-keret, lobbi, tanulási út, lecke-oldal, ismétlés-ütemező,
@@ -16,7 +16,7 @@ mellette **gyakorló modulok**, **időzített ismétlés** és **statisztika**.
 - **Fiók:** ugyanaz a Firebase-projekt, mint a NihonCore-é (egy belépés mindkettőhöz). A HanziFlow a
   `users/{uid}/apps/hanziflow` dokumentumba ír — a Firestore-szabályokban ezt a helyet engedélyezni kell.
 - **A user nyelve magyar: válaszolj magyarul**, a felület magyar.
-- **Írás:** egyszerűsített (简体). **Cél:** HSK 1–2 kész, következik a HSK 3.
+- **Írás:** egyszerűsített (简体). **Cél:** HSK 1–2 kész, a HSK 3 készül.
 
 ## 2. Munkaszabályok (user-döntések)
 
@@ -34,7 +34,7 @@ mellette **gyakorló modulok**, **időzített ismétlés** és **statisztika**.
 
 ```
 index.html            kezdőlap: szintválasztó / „Folytatás", napi cél, ismétlés, a tanulási út térképe
-pages/lesson.html     lecke (?id=l0…l30 · l1–l15 HSK 1, l16–l30 HSK 2 · &round=listen | read · ?review=1 = napi ismétlés)
+pages/lesson.html     lecke (?id=l0…l33 · l1–l15 HSK 1, l16–l30 HSK 2, l31-től HSK 3 · &round=listen | read · ?review=1 = napi ismétlés)
 pages/tones.html      Tónus-tréner (hallás után · jelölés · szópárok)
 pages/modules.html    a modulok kártyái („Szabad gyakorlás")
 pages/stats.html      statisztika · login.html · register.html
@@ -78,7 +78,7 @@ Színt csak tokenből; 12 px alatt nincs szöveg; érintési célpont ≥ 44 px;
 
 - [x] HSK 1: előkészítő + mind a 15 lecke (párbeszéd, 5 nyelvtani pont, olvasmány, 16–19 kérdés leckénként).
 - [x] HSK 2: mind a 15 lecke (l16–l30; kicker és jelvény a HSK 2-n belüli sorszámot mutatja, a kereszthivatkozások „HSK 2 N. lecke" alakúak).
-- [ ] HSK 3 leckék (l31-től).
+- [ ] HSK 3 leckék (l31–l50, 20 lecke; kész: 1–3. = l31–l33).
 - [ ] Modulok: Pinyin-tábla, Mérőszavak, Mondat-Mester, Dátum/idő/pénz, dolgozatok, HSK 1–2 próbavizsga.
 - Élő oldal: https://nokedli25ttv.github.io/HanziFlow/ (GitHub Pages, main ág, 2026-10-18 óta).
 - [ ] A NihonCore `sw.js`-ében a cache-törlést a saját előtagra kell szűkíteni (különben a HanziFlow offline-tárát is törli).

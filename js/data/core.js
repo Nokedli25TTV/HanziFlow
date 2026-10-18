@@ -359,7 +359,40 @@ const HANZIFLOW_PATH = [
     module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l30&round=listen' },
   { id: 'l30-read', glyph: '读', title: 'Olvasás: Viszlát, Peking!',
     desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
-    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l30&round=read' }
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l30&round=read' },
+
+  // ── HSK 3 · 1. lecke ──
+  { id: 'l31-lesson', glyph: '算', title: 'Magyarázat: 打算, 还是 / 或者, 一边…一边…, 先…然后…, …以前 / …以后',
+    desc: 'Tervek az új félévre: választás, egyidejűség, sorrend, mielőtt és miután.',
+    module: 'lesson', href: 'pages/lesson.html?id=l31' },
+  { id: 'l31-listen', glyph: '听', title: 'Hallás: tervek a menzán',
+    desc: 'A lecke mondatai hang után: mit jelent, amit hallasz?',
+    module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l31&round=listen' },
+  { id: 'l31-read', glyph: '读', title: 'Olvasás: Terveim az új félévre',
+    desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l31&round=read' },
+
+  // ── HSK 3 · 2. lecke ──
+  { id: 'l32-lesson', glyph: '搬', title: 'Magyarázat: összetett irányjelölők, a hely és a tárgy helye, 刚 / 刚才',
+    desc: 'Költözés: felhoz, kiszalad, berak a szekrénybe, hazaugrik.',
+    module: 'lesson', href: 'pages/lesson.html?id=l32' },
+  { id: 'l32-listen', glyph: '听', title: 'Hallás: költözés',
+    desc: 'A lecke mondatai hang után: mit jelent, amit hallasz?',
+    module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l32&round=listen' },
+  { id: 'l32-read', glyph: '读', title: 'Olvasás: Wang Ming költözik',
+    desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l32&round=read' },
+
+  // ── HSK 3 · 3. lecke ──
+  { id: 'l33-lesson', glyph: '越', title: 'Magyarázat: 越来越, 越…越…, 又…又…, 一点儿也不, 极了 · 得很',
+    desc: 'Változás és fokozás: egyre melegebb, minél többet, annál jobban.',
+    module: 'lesson', href: 'pages/lesson.html?id=l33' },
+  { id: 'l33-listen', glyph: '听', title: 'Hallás: tavasz a parkban',
+    desc: 'A lecke mondatai hang után: mit jelent, amit hallasz?',
+    module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l33&round=listen' },
+  { id: 'l33-read', glyph: '读', title: 'Olvasás: Én és a kínai',
+    desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l33&round=read' }
 ];
 
 const HANZIFLOW_PATH_UNITS = [
@@ -424,5 +457,11 @@ const HANZIFLOW_PATH_UNITS = [
   { id: 'u-l29', kicker: 'HSK 2 · 14. lecke', title: 'Voltál már a Nagy Falon?', sub: '吃过, 没去过, 去过两次, 过 vagy 了, 还没…呢',
     steps: ['l29-lesson', 'l29-listen', 'l29-read'] },
   { id: 'u-l30', kicker: 'HSK 2 · 15. lecke', title: 'Boldog új évet!', sub: '快要…了, 就要…了, 都…了, 祝你…, 送, 节',
-    steps: ['l30-lesson', 'l30-listen', 'l30-read'] }
+    steps: ['l30-lesson', 'l30-listen', 'l30-read'] },
+  { id: 'u-l31', kicker: 'HSK 3 · 1. lecke', title: 'Új félév, új tervek', sub: '打算, 还是 / 或者, 一边…一边…, 先…然后…, 以前 / 以后',
+    steps: ['l31-lesson', 'l31-listen', 'l31-read'] },
+  { id: 'u-l32', kicker: 'HSK 3 · 2. lecke', title: 'Hozd fel, vidd vissza!', sub: '上来 / 下去, 搬上来, 走进教室来, 买回来, 刚 / 刚才',
+    steps: ['l32-lesson', 'l32-listen', 'l32-read'] },
+  { id: 'u-l33', kicker: 'HSK 3 · 3. lecke', title: 'Egyre szebb', sub: '越来越, 越…越…, 又…又…, 一点儿也不 / 一…也没, 极了',
+    steps: ['l33-lesson', 'l33-listen', 'l33-read'] }
 ];
