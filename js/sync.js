@@ -37,7 +37,9 @@ window.HanziFlowSync = (function () {
     'hanziflow_measure_profile_v1', // Mérőszavak: mérőszavankénti eredmény
     'hanziflow_measure_settings_v1',
     'hanziflow_sentence_profile_v1', // Mondat-Mester: szabályonkénti eredmény
-    'hanziflow_sentence_settings_v1'
+    'hanziflow_sentence_settings_v1',
+    'hanziflow_numbers_profile_v1',  // Dátum, idő, pénz: témánkénti eredmény
+    'hanziflow_numbers_settings_v1'
   ];
   const PREFIX_KEYS = [];
 

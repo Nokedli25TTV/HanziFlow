@@ -2773,12 +2773,13 @@ function initStatsPage() {
     tones: 'Tónus-tréner',
     pinyin: 'Pinyin-tábla',
     measure: 'Mérőszavak',
-    sentence: 'Mondat-Mester'
+    sentence: 'Mondat-Mester',
+    numbers: 'Dátum, idő, pénz'
   };
   const MODE_LABELS = {
     hear: 'Hallás után', see: 'Jelölés', pairs: 'Szópárok', match: 'Párosító',
     write: 'Beírás', dictate: 'Diktálás', pick: 'Párosítás', sentence: 'Mondatban', count: 'Számolás',
-    build: 'Sorba rakás', fill: 'Szócskák',
+    build: 'Sorba rakás', fill: 'Szócskák', say: 'Kimondás',
     check: 'Ellenőrzés', listen: 'Hallás utáni kör', read: 'Olvasás', review: 'Ismétlés', retry: 'Hibák újra', quick: 'Gyors kérdések',
   };
   // Az Áttekintés műszerfal: benne az aktivitás (heatmap, sorozat) és a „mit gyakorolj" is.
@@ -2813,7 +2814,10 @@ function initStatsPage() {
     empty: 'Üres válasz', dont_know: 'Nem tudtam', typo: 'Elgépelés', timeout: 'Lejárt az idő',
     partial_match: 'Részben jó', far: 'Messze járt', near: 'Közel járt', close: 'Majdnem jó',
     wrong_tone: 'Rossz tónus', tone_pair: 'Tónus-pár',
-    wrong_mw: 'Rossz mérőszó', mw_missing: 'Hiányzó mérőszó', mw_er: '二 a 两 helyett'
+    wrong_mw: 'Rossz mérőszó', mw_missing: 'Hiányzó mérőszó', mw_er: '二 a 两 helyett',
+    value: 'Más érték', num_zero: 'Hiányzó 零', num_digits: 'Számjegyenként olvasva', num_form: '一十 a 十 helyett',
+    liang_er: '二 a 两 helyett', month_liang: '两月 a 二月 helyett', week_liang: '星期两', sunday: '星期七',
+    year_digits: 'Évszám mennyiségként', ban: 'A 半 helye („fél négy")', period: 'Napszak', unit: '块 / 毛 csere', ke: '刻', cha: '差'
   };
   function errorLabel(code) {
     const key = String(code || '');
@@ -3045,8 +3049,8 @@ function initStatsPage() {
 
   /* ── V4 P3 — radar + analytics helperek ────────── */
   // Radar tengely-sorrend (V5 bővítve: + Mintázatok)
-  const RADAR_ORDER = ['lesson', 'tones', 'pinyin', 'measure', 'sentence'];
-  const RADAR_LABELS = { lesson: 'Leckék', tones: 'Tónusok', pinyin: 'Pinyin', measure: 'Mérőszavak', sentence: 'Mondatok' };
+  const RADAR_ORDER = ['lesson', 'tones', 'pinyin', 'measure', 'sentence', 'numbers'];
+  const RADAR_LABELS = { lesson: 'Leckék', tones: 'Tónusok', pinyin: 'Pinyin', measure: 'Mérőszavak', sentence: 'Mondatok', numbers: 'Számok' };
   // Profil-alapú al-bontás (a modulok saját localStorage profiljaiból)
   const PROFILE_CONFIG = {
     tones: { key: 'hanziflow_tones_profile_v1', stats: [
@@ -3054,7 +3058,9 @@ function initStatsPage() {
     measure: { key: 'hanziflow_measure_profile_v1', stats: [
       { field: 'mwStats', title: 'Mérőszavanként' } ] },
     sentence: { key: 'hanziflow_sentence_profile_v1', stats: [
-      { field: 'ruleStats', title: 'Szabályonként' } ] }
+      { field: 'ruleStats', title: 'Szabályonként' } ] },
+    numbers: { key: 'hanziflow_numbers_profile_v1', stats: [
+      { field: 'topicStats', title: 'Témánként' } ] }
   };
 
   // a címkékben álló írásjegyek lang="zh-CN" alá kerülnek (különben japán változat jelenhet meg)
@@ -3710,7 +3716,7 @@ function initStatsPage() {
   }
 
   /* ── D) Blind Spot Detector ────────────────────── */
-  const MODULE_URL = { tones: 'tones.html', pinyin: 'pinyin.html', measure: 'measure.html', sentence: 'sentence.html', lesson: '../index.html#path' };
+  const MODULE_URL = { tones: 'tones.html', pinyin: 'pinyin.html', measure: 'measure.html', sentence: 'sentence.html', numbers: 'numbers.html', lesson: '../index.html#path' };
 
   // Stratégiai diagnózisok a statokból, severity-szerint rendezve
   function detectBlindSpots() {
@@ -6012,6 +6018,729 @@ function initSentencePage() {
   window._sentence = { BUILDS, FILLS, poolFor, buildCard, fillCard, particleDistractors, buildQueue, settings, run, startRound, checkBuild };
 }
 
+
+/* ====================================================
+   9c5. DÁTUM, IDŐ, PÉNZ (pages/numbers.html)
+   ----------------------------------------------------
+   Adatok: js/data/numbers.js (HANZIFLOW_NM: számjegyek, napszakok, magyar nevek, szabályok).
+   A kínai alakot a NUM generátor állítja elő szótagonként ([írásjegy, pinyin]):
+     num(n)          szám: 零 a kimaradó helyiértéknél, 两千 / 两万, 一 tónusa a 百 / 千 / 万 előtt
+     dateParts(…)    év számjegyenként + 年, hónap + 月, nap + 号, 星期 + szám / 天
+     timeParts(…)    napszak + óra 点 + perc 分 / 半 / 刻, vagy 差 … 分 … 点
+     moneyParts(…)   块 / 毛 / 分 (írásban 元 / 角), 两块, 零 a kimaradó 毛 helyén
+   Módok: 'read' (kínaiul látod → melyik érték?), 'say' (az értéket látod → melyik a jó kínai alak?),
+          'hear' (hallod → melyik érték?). A rossz válaszok tipikus hibákból állnak (二 a 两 helyett,
+          hiányzó 零, „fél négy" csapda, napszak, sorrend), mindegyikhez saját magyarázat tartozik.
+   ==================================================== */
+function initNumbersPage() {
+  const PROFILE_KEY  = 'hanziflow_numbers_profile_v1';
+  const SETTINGS_KEY = 'hanziflow_numbers_settings_v1';
+  const NM = (typeof HANZIFLOW_NM !== 'undefined') ? HANZIFLOW_NM : null;
+  if (!NM) return;
+  const AUTO_ADVANCE_MS = 1300;
+  const { esc, rich, prose, reading } = HanziFlowZh;
+  const shuffle = arr => { const a = arr.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); const t = a[i]; a[i] = a[j]; a[j] = t; } return a; };
+  const rnd = n => Math.floor(Math.random() * n);
+  const pick = arr => arr[rnd(arr.length)];
+  const PLAY = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 5.5a9 9 0 0 1 0 13"/></svg>';
+  const PLAY_BIG = PLAY.replace('width="20" height="20"', 'width="34" height="34"');
+
+  /* ── A) A generátor ────────────────────────────── */
+  const DIG = NM.digits;
+  const U = { shi: ['十', 'shí'], bai: ['百', 'bǎi'], qian: ['千', 'qiān'], wan: ['万', 'wàn'] };
+  const DIAN = ['点', 'diǎn'], FEN = ['分', 'fēn'], BAN = ['半', 'bàn'], KE = ['刻', 'kè'], CHA = ['差', 'chà'];
+  const NIAN = ['年', 'nián'], YUE = ['月', 'yuè'], HAO = ['号', 'hào'], XQ = [['星', 'xīng'], ['期', 'qī']];
+  const KUAI = ['块', 'kuài'], MAO = ['毛', 'máo'], YUAN = ['元', 'yuán'], JIAO = ['角', 'jiǎo'], QIAN = ['钱', 'qián'];
+  const LIANG = ['两', 'liǎng'];
+  const FOURTH = 'àèìòùǜ';
+  // szótagok → {汉字|pīn yīn} jelölés, szavanként (二〇二六年 · 十月 · 十八号 · 星期天), hogy a szó ne törjön ketté;
+  // az írásjel pinyin nélkül marad
+  const WORD_END = '年月号点分块毛元角钱刻半';
+  function toMarkup(parts) {
+    let out = '', zh = '', py = [];
+    const flush = () => { if (zh) out += '{' + zh + '|' + py.join(' ') + '}'; zh = ''; py = []; };
+    parts.forEach(p => {
+      if (!p[1]) { flush(); out += p[0]; return; }
+      zh += p[0]; py.push(p[1]);
+      if (WORD_END.indexOf(p[0]) >= 0) flush();
+    });
+    flush();
+    return out;
+  }
+  const zhOf = parts => parts.map(p => p[0]).join('');
+  // 一 közvetlenül egység előtt: 4. tónus előtt yí, máskor yì
+  const yiBefore = unit => ['一', Array.from(unit[1]).some(c => FOURTH.indexOf(c) >= 0) ? 'yí' : 'yì'];
+
+  function dig(d, unit) {
+    if (d === 2 && (unit === 'qian' || unit === 'wan')) return LIANG;
+    if (d === 1 && unit !== 'shi') return yiBefore(U[unit]);
+    return DIG[d];
+  }
+  // 1–9999; lead: a szám eleje (ott 十二, nem 一十二)
+  function small(n, lead) {
+    const out = [];
+    const ds = [Math.floor(n / 1000), Math.floor(n / 100) % 10, Math.floor(n / 10) % 10];
+    const us = ['qian', 'bai', 'shi'];
+    let started = false, zero = false;
+    for (let i = 0; i < 3; i++) {
+      const d = ds[i];
+      if (!d) { if (started) zero = true; continue; }
+      if (zero) { out.push(DIG[0]); zero = false; }
+      if (us[i] === 'shi' && d === 1 && !started && lead) out.push(U.shi);
+      else out.push(dig(d, us[i]), U[us[i]]);
+      started = true;
+    }
+    const u = n % 10;
+    if (u) { if (zero) out.push(DIG[0]); out.push(DIG[u]); }
+    return out;
+  }
+  function num(n) {
+    if (n === 0) return [DIG[0]];
+    if (n < 10000) return small(n, true);
+    const hi = Math.floor(n / 10000), lo = n % 10000;
+    let out = hi < 3 ? [dig(hi, 'wan')] : small(hi, true);
+    out = out.concat([U.wan]);
+    if (lo) { if (lo < 1000) out.push(DIG[0]); out = out.concat(small(lo, false)); }
+    return out;
+  }
+  const digits = n => Array.from(String(n)).map(c => c === '0' ? ['〇', 'líng'] : DIG[+c]);
+  // egység előtti darabszám: 2 → 两, 1 → yí / yì
+  const count = (n, unit) => n === 2 ? [LIANG] : n === 1 ? [yiBefore(unit)] : num(n);
+
+  const periodOf = h => NM.periods.find(p => h >= p[0] && h <= p[1]);
+  const hourParts = h => { const h12 = h % 12 || 12; return h12 === 2 ? [LIANG] : num(h12); };
+  const minuteParts = m => (m < 10 ? [DIG[0], DIG[m]] : num(m)).concat([FEN]);
+  function timeParts(h, m, variant) {
+    if (variant === 'cha' && m >= 50) {
+      const h2 = (h + 1) % 24;
+      return periodOf(h2)[2].concat([CHA], count(60 - m, FEN), [FEN], hourParts(h2), [DIAN]);
+    }
+    const out = periodOf(h)[2].concat(hourParts(h), [DIAN]);
+    if (m === 0) return out;
+    if (m === 30) return out.concat([BAN]);
+    if (variant === 'ke' && m === 15) return out.concat([yiBefore(KE), KE]);
+    if (variant === 'ke' && m === 45) return out.concat([DIG[3], KE]);
+    return out.concat(minuteParts(m));
+  }
+  const weekdayOf = (y, mo, d) => new Date(y || 2026, mo - 1, d).getDay();
+  const weekdayParts = wd => XQ.concat([wd === 0 ? ['天', 'tiān'] : DIG[wd]]);
+  // a 0 (év, hónap, nap) és a null (a hét napja) kimarad
+  function dateParts(y, mo, d, wd) {
+    let out = [];
+    if (y) out = out.concat(digits(y), [NIAN]);
+    if (mo) out = out.concat(num(mo), [YUE]);
+    if (d) out = out.concat(num(d), [HAO]);
+    if (wd != null) out = out.concat(out.length ? [['，', '']] : [], weekdayParts(wd));
+    return out;
+  }
+  // c: fillér (100 = 1 jüan); variant: '' · 'short' (三块五) · 'written' (元 / 角) · 'qian' (十块钱)
+  function moneyParts(c, variant) {
+    const y = Math.floor(c / 100), j = Math.floor(c / 10) % 10, f = c % 10;
+    const big = variant === 'written' ? YUAN : KUAI, mid = variant === 'written' ? JIAO : MAO;
+    if (!c) return [DIG[0], big];
+    let out = [];
+    if (y) out = out.concat(count(y, big), [big]);
+    if (j) out = out.concat(count(j, mid), (variant === 'short' && y && !f) ? [] : [mid]);
+    if (f) out = out.concat(y && !j ? [DIG[0]] : [], count(f, FEN), [FEN]);
+    if (variant === 'qian' && y && !j && !f) out = out.concat([QIAN]);
+    return out;
+  }
+
+  const pad = n => (n < 10 ? '0' : '') + n;
+  const numLabel = n => n >= 10000 ? String(n).replace(/\B(?=(\d{3})+(?!\d))/g, ' ') : String(n);
+  const timeLabel = (h, m) => ((h + 24) % 24) + ':' + pad((m + 60) % 60);
+  const moneyLabel = c => { const y = Math.floor(c / 100), r = c % 100; return (r ? y + ',' + pad(r) : String(y)) + ' jüan'; };
+  function dateLabel(y, mo, d, wd) {
+    let s = '';
+    if (y) s += y + '.';
+    if (mo) s += (s ? ' ' : '') + NM.months[mo - 1];
+    if (d) s += (s ? ' ' : '') + d + '.';
+    if (wd != null) s += (s ? ', ' : '') + NM.days[wd];
+    return s;
+  }
+  const swapLiang = (parts, to) => parts.map(p => p[0] === '两' ? to : p);
+
+  /* ── B) Feladványok témánként ──────────────────── */
+  // mindegyik: { topic, label, canon (helyes alak), show (a kártyán látható alak), say: [{parts, code}], read: [{label, code}] }
+  function numVariants(n) {
+    const s = String(n), out = [];
+    for (let i = 0; i + 1 < s.length; i++) if (s[i] !== s[i + 1]) out.push(s.slice(0, i) + s[i + 1] + s[i] + s.slice(i + 2));
+    for (let i = 1; i <= s.length; i++) out.push(s.slice(0, i) + '0' + s.slice(i));
+    for (let i = 1; i < s.length; i++) if (s[i] === '0') out.push(s.slice(0, i) + s.slice(i + 1));
+    out.push(String(n + 1), String(n + 10));
+    const seen = {};
+    return out.map(Number).filter(v => v > 0 && v !== n && v < 100000000 && !seen[v] && (seen[v] = true));
+  }
+  function randNum() {
+    const r = Math.random();
+    if (r < 0.1)  return 1 + rnd(10);
+    if (r < 0.4)  return 11 + rnd(89);
+    if (r < 0.55) return (1 + rnd(9)) * 100 + rnd(10);
+    if (r < 0.8)  return 100 + rnd(900);
+    if (r < 0.95) return (1 + rnd(9)) * 1000 + pick([0, rnd(10), rnd(10) * 10, rnd(100), rnd(1000)]);
+    return (1 + rnd(9)) * 10000 + pick([0, rnd(10000), rnd(10) * 1000]);
+  }
+  function numItem() {
+    const n = randNum();
+    const canon = num(n);
+    const say = [];
+    if (zhOf(canon).indexOf('零') >= 0) say.push({ parts: canon.filter(p => p[0] !== '零'), code: 'num_zero' });
+    if (n >= 10) say.push({ parts: digits(n).map(p => p[0] === '〇' ? DIG[0] : p), code: 'num_digits' });
+    if (n >= 10 && n < 20) say.push({ parts: [DIG[1]].concat(canon), code: 'num_form' });
+    const vs = numVariants(n);
+    vs.forEach(v => say.push({ parts: num(v), code: 'value' }));
+    return { topic: 'num', label: numLabel(n), canon: canon, show: canon, say: say,
+             read: vs.map(v => ({ label: numLabel(v), code: 'value' })) };
+  }
+
+  function timeItem() {
+    const h = 6 + rnd(18);
+    const m = pick([0, 0, 5, 10, 15, 20, 30, 30, 40, 45, 50, 55, rnd(60)]);
+    const variant = (m === 15 || m === 45) ? pick(['', 'ke']) : m >= 50 ? pick(['', '', 'cha']) : '';
+    const canon = timeParts(h, m, '');
+    const say = [], read = [];
+    if ((h % 12 || 12) === 2) say.push({ parts: swapLiang(canon, DIG[2]), code: 'liang_er' });
+    if (m === 30) {
+      say.push({ parts: timeParts((h + 1) % 24, 30, ''), code: 'ban' });       // 15:30 → „fél négy" → 四点半 (hibás)
+      read.push({ label: timeLabel(h - 1, 30), code: 'ban' });                // 三点半 → „fél három" → 2:30 (hibás)
+    }
+    const h2 = h + 12 <= 23 ? h + 12 : h - 12;
+    say.push({ parts: timeParts(h2, m, ''), code: 'period' });
+    read.push({ label: timeLabel(h2, m), code: 'period' });
+    if (m && m !== 30) say.push({ parts: periodOf(h)[2].concat(minuteParts(m), hourParts(h), [DIAN]), code: 'wrong_order' });
+    if (variant === 'ke') read.push({ label: timeLabel(h, m === 15 ? 10 : 30), code: 'ke' }, { label: timeLabel(h, m === 15 ? 1 : 3), code: 'ke' });
+    if (variant === 'cha') read.push({ label: timeLabel(h + 1, 60 - m), code: 'cha' });
+    [5, 10, -5, -10, 20].forEach(dm => {
+      const m2 = (m + dm + 60) % 60;
+      if (m2 === m) return;
+      say.push({ parts: timeParts(h, m2, ''), code: 'value' });
+      read.push({ label: timeLabel(h, m2), code: 'value' });
+    });
+    read.push({ label: timeLabel(h + 1, m), code: 'value' }, { label: timeLabel(h - 1, m), code: 'value' });
+    return { topic: 'time', label: timeLabel(h, m), canon: canon, show: timeParts(h, m, variant), say: say, read: read };
+  }
+
+  function dateItem() {
+    const y = Math.random() < 0.5 ? 1990 + rnd(46) : 0;
+    const mo = 1 + rnd(12);
+    const dmax = new Date(y || 2026, mo, 0).getDate();
+    const d = 1 + rnd(dmax);
+    const wd = Math.random() < 0.6 ? weekdayOf(y, mo, d) : null;
+    const canon = dateParts(y, mo, d, wd);
+    const say = [], read = [];
+    const yearP = y ? digits(y).concat([NIAN]) : [];
+    const wdP = wd != null ? [['，', '']].concat(weekdayParts(wd)) : [];
+    say.push({ parts: yearP.concat(num(d), [HAO], num(mo), [YUE], wdP), code: 'wrong_order' });
+    if (y) say.push({ parts: num(y).concat([NIAN], num(mo), [YUE], num(d), [HAO], wdP), code: 'year_digits' });
+    if (mo === 2) say.push({ parts: yearP.concat([LIANG, YUE], num(d), [HAO], wdP), code: 'month_liang' });
+    if (wd === 2) say.push({ parts: dateParts(y, mo, d, null).concat([['，', '']], XQ, [LIANG]), code: 'week_liang' });
+    if (wd === 0) say.push({ parts: dateParts(y, mo, d, null).concat([['，', '']], XQ, [DIG[7]]), code: 'sunday' });
+    if (d <= 12 && d !== mo) read.push({ label: dateLabel(y, d, mo, wd), code: 'wrong_order' });
+    const alt = [];
+    [1, -1].forEach(k => { const mo2 = (mo + k + 11) % 12 + 1; alt.push([y, mo2, Math.min(d, new Date(y || 2026, mo2, 0).getDate()), wd]); });
+    [1, -1, 10, -10].forEach(k => { const d2 = d + k; if (d2 >= 1 && d2 <= dmax) alt.push([y, mo, d2, wd]); });
+    if (wd != null) [1, 3].forEach(k => alt.push([y, mo, d, (wd + k) % 7]));
+    if (y) alt.push([y + pick([1, -1, 10]), mo, d, wd]);
+    alt.forEach(a => {
+      say.push({ parts: dateParts(a[0], a[1], a[2], a[3]), code: 'value' });
+      read.push({ label: dateLabel(a[0], a[1], a[2], a[3]), code: 'value' });
+    });
+    return { topic: 'date', label: dateLabel(y, mo, d, wd), canon: canon, show: canon, say: say, read: read };
+  }
+
+  function randCents() {
+    const r = Math.random();
+    if (r < 0.3)  return (1 + rnd(200)) * 100;
+    if (r < 0.65) return (1 + rnd(99)) * 100 + (1 + rnd(9)) * 10;
+    if (r < 0.75) return (1 + rnd(20)) * 100 + 1 + rnd(9);
+    if (r < 0.9)  return (1 + rnd(50)) * 100 + 11 + rnd(89);
+    return 10 + rnd(90);
+  }
+  function moneyItem() {
+    const c = randCents();
+    const y = Math.floor(c / 100), j = Math.floor(c / 10) % 10, f = c % 10;
+    const variant = (y && j && !f) ? pick(['', 'short']) : (y && !j && !f) ? pick(['', 'qian']) : pick(['', '', 'written']);
+    const canon = moneyParts(c, '');
+    const say = [], read = [];
+    if (zhOf(canon).indexOf('两') >= 0) say.push({ parts: swapLiang(canon, DIG[2]), code: 'liang_er' });
+    if (y && !j && f) { say.push({ parts: canon.filter(p => p[0] !== '零'), code: 'num_zero' }); read.push({ label: moneyLabel(y * 100 + f * 10), code: 'num_zero' }); }
+    if (variant === 'short') read.push({ label: moneyLabel(y * 100 + j), code: 'num_zero' });       // 三块五 ≠ 3,05
+    const shifted = y && y < 10 && j ? y * 10 + j : (!y && j ? j * 100 + f * 10 : 0);
+    if (shifted && shifted !== c) { say.push({ parts: moneyParts(shifted, ''), code: 'unit' }); read.push({ label: moneyLabel(shifted), code: 'unit' }); }
+    const vs = [];
+    numVariants(y || j).forEach(v => { if (y && v < 10000) vs.push(v * 100 + j * 10 + f); else if (!y && v < 10) vs.push(v * 10 + f); });
+    vs.push(c + 10, c + 100, c > 100 ? c - 100 : c + 200);
+    vs.filter(v => v > 0 && v !== c).forEach(v => {
+      say.push({ parts: moneyParts(v, ''), code: 'value' });
+      read.push({ label: moneyLabel(v), code: 'value' });
+    });
+    return { topic: 'money', label: moneyLabel(c), canon: canon, show: moneyParts(c, variant), say: say, read: read };
+  }
+  const ITEM = { num: numItem, date: dateItem, time: timeItem, money: moneyItem };
+  const TOPICS = [
+    { id: 'num', name: 'Számok', key: 'Számok' }, { id: 'date', name: 'Dátum', key: 'Dátum' },
+    { id: 'time', name: 'Idő', key: 'Idő' }, { id: 'money', name: 'Pénz', key: 'Pénz' }, { id: 'mix', name: 'Vegyes' }
+  ];
+  const TOPIC = {};
+  TOPICS.forEach(t => { TOPIC[t.id] = t; });
+
+  // Mi a hiba? (a rossz válasz kódja szerint; a téma szerinti változat elsőbbséget kap)
+  const WHY = {
+    value: 'Ez egy másik érték: nézd meg még egyszer a számokat.',
+    num_zero: 'Ha egy helyiérték kimarad, {零|líng} jelzi: {一百零五|yì bǎi líng wǔ} = 105. {零|líng} nélkül a {一百五|yì bǎi wǔ} 150-et jelent.',
+    num_zero_money: 'Ha a {毛|máo} helye üres, {零|líng} kell: {一块零五分|yí kuài líng wǔ fēn} = 1,05. A {三块五|sān kuài wǔ} viszont 3,50, mert a végéről a {毛|máo} maradt el.',
+    num_digits: 'Mennyiségnél a helyiérték is kell ({十|shí}, {百|bǎi}, {千|qiān}). Számjegyenként csak az évszámot és a telefonszámot olvassuk.',
+    num_form: '10 és 19 között a {十|shí} elé nem kerül {一|yī}: {十五|shí wǔ}.',
+    liang_er: 'Óra és pénz előtt a kettő {两|liǎng}: {两点|liǎng diǎn}, {两块|liǎng kuài}, {两毛|liǎng máo}. A {十二|shí èr} és a {二十|èr shí} viszont {二|èr}-vel áll.',
+    month_liang: 'A hónap neve szám + {月|yuè}: {二月|èr yuè} = február. A {两个月|liǎng ge yuè} két hónapot jelent (időtartam).',
+    week_liang: 'A hét napja {星期|xīng qī} + szám, itt {二|èr} áll: {星期二|xīng qī èr} = kedd.',
+    sunday: 'Vasárnap {星期天|xīng qī tiān} vagy {星期日|xīng qī rì} — {星期七|xīng qī qī} nincs.',
+    year_digits: 'Az évszámot számjegyenként mondjuk: {二〇二六年|èr líng èr liù nián}, nem mennyiségként.',
+    wrong_order_date: 'A dátum sorrendje: év → hónap → nap → a hét napja.',
+    wrong_order_time: 'Előbb az óra ({点|diǎn}), aztán a perc ({分|fēn}): {八点十分|bā diǎn shí fēn}.',
+    ban: 'A {半|bàn} a kimondott órához ad hozzá fél órát: {三点半|sān diǎn bàn} = 3:30, vagyis magyarul „fél négy".',
+    period: 'Figyeld a napszakot: {早上|zǎo shang} reggel, {上午|shàng wǔ} délelőtt, {中午|zhōng wǔ} délben, {下午|xià wǔ} délután, {晚上|wǎn shang} este.',
+    unit: '1 {块|kuài} = 10 {毛|máo} = 100 {分|fēn}: a {三块五|sān kuài wǔ} 3,50, a {三毛五|sān máo wǔ} 0,35.',
+    ke: '{一刻|yí kè} = negyed óra (15 perc), {三刻|sān kè} = háromnegyed (45 perc).',
+    cha: 'A {差|chà} azt jelenti: hiányzik. {差五分九点|chà wǔ fēn jiǔ diǎn} = 5 perc hiányzik a 9-hez, azaz 8:55.'
+  };
+  const whyOf = (code, topic) => WHY[code + '_' + topic] || WHY[code] || WHY.value;
+  const TASK = { num: 'Mennyi ez?', date: 'Melyik nap ez?', time: 'Hány óra?', money: 'Mennyibe kerül?' };
+
+  /* ── C) Beállítások + profil ───────────────────── */
+  function loadJson(key) {
+    try { return JSON.parse(localStorage.getItem(key) || 'null'); } catch (e) { return null; }
+  }
+  const saved = loadJson(SETTINGS_KEY) || {};
+  const settings = {
+    mode: ['read', 'say', 'hear'].indexOf(saved.mode) >= 0 ? saved.mode : 'read',
+    topic: TOPIC[saved.topic] ? saved.topic : 'num',
+    cardCount: [10, 20, 40].indexOf(saved.cardCount) >= 0 ? saved.cardCount : 10
+  };
+  if (window.HanziFlowPath) HanziFlowPath.apply('numbers', settings);
+  function saveSettings() {
+    try { localStorage.setItem(SETTINGS_KEY, JSON.stringify(settings)); } catch (e) {}
+  }
+  function loadProfile() {
+    const p = loadJson(PROFILE_KEY);
+    return (p && p.topicStats) ? p : { topicStats: {}, totalAttempts: 0, totalCorrect: 0, bestStreak: 0 };
+  }
+  function saveProfile(p) {
+    try { localStorage.setItem(PROFILE_KEY, JSON.stringify(p)); } catch (e) {}
+    if (window.HanziFlowSync && HanziFlowSync.schedulePush) HanziFlowSync.schedulePush();
+  }
+
+  /* ── D) Kártyák ────────────────────────────────── */
+  // a „Vegyes" témánál a gyengébb téma gyakrabban jön
+  function topicQueue(count) {
+    if (settings.topic !== 'mix') return Array.from({ length: count }, () => settings.topic);
+    const p = loadProfile();
+    const ids = ['num', 'date', 'time', 'money'];
+    const w = ids.map(id => { const st = p.topicStats[TOPIC[id].key]; return !st || !st.attempts ? 2 : st.correct / st.attempts >= 0.8 ? 1 : 3; });
+    const sum = w.reduce((a, b) => a + b, 0);
+    return Array.from({ length: count }, () => { let r = Math.random() * sum; for (let i = 0; i < ids.length; i++) { r -= w[i]; if (r < 0) return ids[i]; } return ids[0]; });
+  }
+  // három rossz válasz: legfeljebb kettő „formahiba", a többi más érték; egyezés nélkül
+  function choose(list, keyOf, taken) {
+    const seen = {};
+    taken.forEach(k => { seen[k] = true; });
+    const forms = [], values = [];
+    shuffle(list).forEach(o => { const k = keyOf(o); if (seen[k]) return; seen[k] = true; (o.code === 'value' ? values : forms).push(o); });
+    const out = forms.slice(0, 2).concat(values).slice(0, 3);
+    forms.slice(2).forEach(o => { if (out.length < 3) out.push(o); });
+    return out;
+  }
+  function makeCard(topic) {
+    const it = ITEM[topic]();
+    if (settings.mode === 'say') {
+      const wrong = choose(it.say, o => zhOf(o.parts), [zhOf(it.canon)]);
+      const options = shuffle([{ parts: it.canon, ok: true }].concat(wrong));
+      return { topic: topic, it: it, options: options, right: options.findIndex(o => o.ok) };
+    }
+    const wrong = choose(it.read, o => o.label, [it.label]);
+    const options = shuffle([{ label: it.label, ok: true }].concat(wrong));
+    return { topic: topic, it: it, options: options, right: options.findIndex(o => o.ok) };
+  }
+
+  /* ── E) Fejléc, tudnivalók, „Próbáld ki" ───────── */
+  function renderStatsBar() {
+    const el = document.getElementById('nmStatsBar');
+    if (!el) return;
+    const p = loadProfile();
+    const acc = p.totalAttempts ? Math.round((p.totalCorrect / p.totalAttempts) * 100) : 0;
+    el.innerHTML = `
+      <div class="conj-stat-chip"><span class="csc-num">4</span><span class="csc-label">téma</span></div>
+      <div class="conj-stat-chip"><span class="csc-num">${p.totalAttempts}</span><span class="csc-label">válasz</span></div>
+      <div class="conj-stat-chip"><span class="csc-num">${acc}%</span><span class="csc-label">pontosság</span></div>`;
+  }
+
+  function exampleOf(e) {
+    if (e[0] === 'n') return { zh: toMarkup(num(e[1])), hu: numLabel(e[1]) };
+    if (e[0] === 't') return { zh: toMarkup(timeParts(e[1], e[2], e[3] || '')), hu: timeLabel(e[1], e[2]) };
+    if (e[0] === 'd') { const wd = e[4] ? weekdayOf(e[1], e[2], e[3]) : null; return { zh: toMarkup(dateParts(e[1], e[2], e[3], wd)), hu: dateLabel(e[1], e[2], e[3], wd) }; }
+    if (e[0] === 'm') return { zh: toMarkup(moneyParts(e[1], e[2] || '')), hu: moneyLabel(e[1]) };
+    return { zh: e[1], hu: e[2] };
+  }
+  const sayBtn = (zh, cls) => `<button class="${cls || 'mw-ex-btn'}" type="button" data-say="${esc(reading(zh))}">`;
+
+  let tab = 'num';
+  function renderRef() {
+    const el = document.getElementById('nmRef');
+    if (!el) return;
+    const p = loadProfile();
+    const t = NM.tabs.find(x => x.id === tab) || NM.tabs[0];
+    const st = p.topicStats[TOPIC[t.id].key];
+    const pct = st && st.attempts ? Math.round(st.correct / st.attempts * 100) : null;
+    const tabs = NM.tabs.map(x => `<button class="py-tab${x.id === t.id ? ' active' : ''}" type="button" data-tab="${x.id}" aria-pressed="${x.id === t.id}">${esc(x.title)}</button>`).join('');
+    const input = {
+      num:   '<input class="nm-try-input" id="nmTry" type="number" inputmode="numeric" min="0" max="99999999" step="1" value="2026">',
+      date:  '<input class="nm-try-input" id="nmTry" type="date" value="2026-10-18">',
+      time:  '<input class="nm-try-input" id="nmTry" type="time" value="15:30">',
+      money: '<input class="nm-try-input" id="nmTry" type="text" inputmode="decimal" maxlength="8" value="12,50">'
+    }[t.id];
+    el.innerHTML = `
+      <div class="tone-chart-head">
+        <h2 class="tone-chart-h">Tudnivalók</h2>
+        <p class="tone-chart-sub">Számok, dátum, időpont és ár — a szabályok példákkal. Koppints egy példára, és meghallgatod.</p>
+      </div>
+      <div class="py-tabs" role="group" aria-label="Témák">${tabs}</div>
+      ${pct !== null ? `<p class="mw-group-sub">Eddig ebben a témában: <strong>${pct}%</strong></p>` : ''}
+      <div class="nm-try">
+        <label class="nm-try-label" for="nmTry">Próbáld ki: ${esc(t.try)}</label>
+        <div class="nm-try-row">${input}</div>
+        <div class="nm-try-out" id="nmTryOut" aria-live="polite"></div>
+      </div>
+      <div class="sm-rule-list">
+        ${(NM.rules[t.id] || []).map(r => `
+          <article class="sm-rule">
+            <h3 class="sm-rule-title">${prose(r[0])}</h3>
+            <p class="sm-rule-text">${prose(r[1])}</p>
+            <div class="mw-ex">
+              ${r[2].map(exampleOf).map(e => `${sayBtn(e.zh)}<span class="mw-ex-zh">${rich(e.zh)}</span><span class="mw-ex-hu">${esc(e.hu)}</span></button>`).join('')}
+            </div>
+          </article>`).join('')}
+      </div>`;
+    el.querySelectorAll('[data-tab]').forEach(btn => btn.addEventListener('click', () => { tab = btn.dataset.tab; renderRef(); }));
+    bindSay(el);
+    const inp = document.getElementById('nmTry');
+    inp.addEventListener('input', renderTry);
+    renderTry();
+  }
+  function bindSay(root) {
+    root.querySelectorAll('[data-say]').forEach(btn => btn.addEventListener('click', () => {
+      btn.classList.add('is-playing');
+      setTimeout(() => btn.classList.remove('is-playing'), 1400);
+      if (window.HanziFlowAudio) HanziFlowAudio.play(btn.dataset.say, { speed: 0.8 });
+    }));
+  }
+  // a beírt értéket csak számmá alakítva használjuk; a kimenet a generátorból jön
+  function renderTry() {
+    const inp = document.getElementById('nmTry'), out = document.getElementById('nmTryOut');
+    if (!inp || !out) return;
+    const v = String(inp.value || '').trim();
+    let parts = null, label = '';
+    if (tab === 'num') {
+      const n = parseInt(v, 10);
+      if (/^\d{1,8}$/.test(v) && n >= 0) { parts = num(n); label = numLabel(n); }
+    } else if (tab === 'date') {
+      const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(v);
+      if (m) { const y = +m[1], mo = +m[2], d = +m[3], wd = weekdayOf(y, mo, d); parts = dateParts(y, mo, d, wd); label = dateLabel(y, mo, d, wd); }
+    } else if (tab === 'time') {
+      const m = /^(\d{1,2}):(\d{2})/.exec(v);
+      if (m && +m[1] < 24 && +m[2] < 60) { parts = timeParts(+m[1], +m[2], ''); label = timeLabel(+m[1], +m[2]); }
+    } else {
+      const m = /^(\d{1,4})(?:[.,](\d{1,2}))?$/.exec(v);
+      if (m) { const c = (+m[1]) * 100 + (m[2] ? +(m[2] + '0').slice(0, 2) : 0); parts = moneyParts(c, ''); label = moneyLabel(c); }
+    }
+    if (!parts) { out.innerHTML = '<span class="nm-try-empty">Ezt még nem tudom kiolvasni — nézd meg, jól írtad-e.</span>'; return; }
+    const zh = toMarkup(parts);
+    out.innerHTML = `${sayBtn(zh, 'nm-try-say')}${PLAY}<span class="mw-fb-zh">${rich(zh)}</span></button><span class="nm-try-label2">${esc(label)}</span>`;
+    bindSay(out);
+  }
+
+  /* ── F) Lobbi ──────────────────────────────────── */
+  function renderLobby() {
+    const el = document.getElementById('nmLobby');
+    const modes = [
+      { id: 'read', name: 'Olvasás',     sub: 'kínaiul látod: melyik érték?' },
+      { id: 'say',  name: 'Kimondás',    sub: 'az értéket látod: hogy mondod?' },
+      { id: 'hear', name: 'Hallás után', sub: 'hallod: melyik érték?' }
+    ].map(m => `
+      <button class="cj-mode-btn ${settings.mode === m.id ? 'active' : ''}" data-mode="${m.id}" type="button">
+        <span class="cj-m-name">${m.name}</span>
+        <span class="cj-m-sub">${m.sub}</span>
+      </button>`).join('');
+    const topics = TOPICS.map(t => `
+      <button class="cj-mode-btn ${settings.topic === t.id ? 'active' : ''}" data-topic="${t.id}" type="button">
+        <span class="cj-m-name">${t.name}</span>
+      </button>`).join('');
+    const presets = [10, 20, 40].map(n => `
+      <button class="ml-count-btn ${settings.cardCount === n ? 'active' : ''}" data-count="${n}" type="button">${n}</button>`).join('');
+    el.innerHTML = `
+      <div class="lobby-header">
+        <div class="lobby-eyebrow">Dátum, idő, pénz</div>
+        <h2 class="lobby-title">Mit gyakorolnál?</h2>
+      </div>
+      <div class="lobby-section">
+        <div class="lobby-section-label">Mód</div>
+        <div class="cj-mode-row tones-mode-row">${modes}</div>
+      </div>
+      <div class="lobby-section">
+        <div class="lobby-section-label">Téma</div>
+        <div class="cj-mode-row nm-topic-row">${topics}</div>
+      </div>
+      <div class="lobby-section">
+        <div class="lobby-section-label">Kártyák száma</div>
+        <div class="ml-count-row"><div class="ml-count-presets">${presets}</div></div>
+      </div>
+      <button class="btn btn-primary ml-start" id="nmStart" type="button">Indítás</button>`;
+    const sel = (q, apply) => el.querySelectorAll(q).forEach(btn => btn.addEventListener('click', () => {
+      apply(btn);
+      el.querySelectorAll(q).forEach(b => b.classList.toggle('active', b === btn));
+      saveSettings(); updateStartBtn();
+    }));
+    sel('[data-mode]',  b => { settings.mode = b.dataset.mode; });
+    sel('[data-topic]', b => { settings.topic = b.dataset.topic; });
+    sel('[data-count]', b => { settings.cardCount = parseInt(b.dataset.count, 10); });
+    document.getElementById('nmStart').addEventListener('click', startRound);
+    updateStartBtn();
+  }
+  function updateStartBtn() {
+    const btn = document.getElementById('nmStart');
+    if (btn) btn.textContent = 'Indítás — ' + settings.cardCount + ' kártya';
+  }
+
+  /* ── G) Kör ────────────────────────────────────── */
+  const run = {
+    inLobby: true, cards: [], cardIdx: 0,
+    score: 0, streak: 0, bestStreak: 0, results: [], missed: [],
+    submitted: false, roundStartTs: 0, advanceTimer: null
+  };
+
+  function startRound() {
+    run.cards = topicQueue(settings.cardCount).map(t => ({ topic: t }));
+    run.cardIdx = 0; run.score = 0; run.streak = 0; run.bestStreak = 0; run.results = []; run.missed = [];
+    run.roundStartTs = Date.now();
+    run.inLobby = false;
+    HanziFlowRound.begin(function () {
+      return { module: 'numbers', mode: settings.mode, results: run.results, score: run.score, startTs: run.roundStartTs };
+    });
+    document.querySelector('.module-hero')?.classList.add('hidden');
+    ['nmLobby', 'nmRef'].forEach(id => document.getElementById(id).classList.add('hidden'));
+    document.getElementById('nmRuntime').classList.remove('hidden');
+    const sEl = document.getElementById('nmSummary');
+    sEl.classList.add('hidden'); sEl.innerHTML = '';
+    renderCard();
+  }
+
+  function updateHeader() {
+    const total = run.cards.length;
+    document.getElementById('nmScore').textContent = run.score;
+    document.getElementById('nmStreak').textContent = `${run.streak} 🔥`;
+    document.getElementById('nmCardCount').textContent = `Kártya ${Math.min(run.cardIdx + 1, total)} / ${total}`;
+    document.getElementById('nmProgressFill').style.width = `${total ? (run.cardIdx / total) * 100 : 0}%`;
+  }
+
+  function play(text, speed, btn) {
+    if (!window.HanziFlowAudio) return audioFailed();
+    if (btn) { btn.classList.add('is-playing'); setTimeout(() => btn.classList.remove('is-playing'), 1600); }
+    try { HanziFlowAudio.play(text, { speed: speed, onError: audioFailed }); } catch (e) { audioFailed(); }
+  }
+  function audioFailed() {
+    if (settings.mode !== 'hear') return;                 // olvasásnál és kimondásnál a hang csak ráadás
+    const el = document.getElementById('nmNoAudio');
+    if (el) el.classList.remove('hidden');
+  }
+
+  function renderCard() {
+    run.submitted = false;
+    updateHeader();
+    const fb = document.getElementById('nmFeedback');
+    fb.classList.add('hidden'); fb.innerHTML = '';
+    const card = run.cards[run.cardIdx];
+    if (!card.it) Object.assign(card, makeCard(card.topic));
+    const it = card.it, mode = settings.mode;
+    const showZh = toMarkup(it.show);
+    const group = TOPIC[card.topic].name;
+    let prompt = '', options = [];
+    if (mode === 'say') {
+      prompt = `
+        <div class="cj-prompt-eyebrow"><span class="cj-pe-group">Kimondás</span><span class="cj-pe-dot">·</span>${esc(group)}</div>
+        <div class="kana-task">Hogy mondod kínaiul?</div>
+        <div class="mw-count-hu">${esc(it.label)}</div>`;
+      options = card.options.map(o => `<span class="mw-opt-phrase">${rich(toMarkup(o.parts))}</span>`);
+    } else if (mode === 'hear') {
+      prompt = `
+        <div class="cj-prompt-eyebrow"><span class="cj-pe-group">Hallás után</span><span class="cj-pe-dot">·</span>${esc(group)}</div>
+        <div class="kana-task">${TASK[card.topic]}</div>
+        <div class="lq-listen">
+          <button class="lq-listen-btn" id="nmPlay" type="button" aria-label="Lejátszás">${PLAY_BIG}</button>
+          <button class="btn btn-ghost lq-listen-slow" id="nmSlow" type="button">Lassabban</button>
+        </div>
+        <div class="nm-zh nm-reveal hidden" id="nmReveal">${rich(showZh)}</div>
+        <p class="tone-noaudio hidden" id="nmNoAudio">A hang most nem szól. Ezt a kártyát a „Nem tudom" gombbal átugorhatod, vagy válts az Olvasás módra.</p>`;
+      options = card.options.map(o => `<span class="nm-opt">${esc(o.label)}</span>`);
+    } else {
+      prompt = `
+        <div class="cj-prompt-eyebrow"><span class="cj-pe-group">Olvasás</span><span class="cj-pe-dot">·</span>${esc(group)}</div>
+        <div class="kana-task">${TASK[card.topic]}</div>
+        <div class="nm-zh">${rich(showZh)}</div>`;
+      options = card.options.map(o => `<span class="nm-opt">${esc(o.label)}</span>`);
+    }
+    document.getElementById('nmCard').innerHTML = `
+      <div class="cj-prompt">${prompt}</div>
+      <div class="cj-options mw-options${mode === 'say' ? ' mw-options-count' : ''}">
+        ${options.map((o, i) => `<button class="cj-option" type="button" data-idx="${i}">${o}</button>`).join('')}
+      </div>
+      <button class="dont-know-btn" type="button">Nem tudom</button>`;
+    const say = reading(showZh);
+    const playBtn = document.getElementById('nmPlay');
+    if (playBtn) {
+      playBtn.addEventListener('click', () => play(say, 0.85, playBtn));
+      document.getElementById('nmSlow').addEventListener('click', () => play(say, 0.6, playBtn));
+      play(say, 0.85, playBtn);
+    }
+    const buttons = document.querySelectorAll('#nmCard .cj-option');
+    const lock = () => document.querySelectorAll('#nmCard .cj-option, #nmCard .dont-know-btn').forEach(b => { b.disabled = true; });
+    buttons.forEach(btn => btn.addEventListener('click', () => {
+      if (run.submitted) return;
+      const idx = parseInt(btn.dataset.idx, 10);
+      const ok = idx === card.right;
+      lock();
+      btn.classList.add(ok ? 'correct' : 'wrong');
+      if (!ok) buttons[card.right].classList.add('reveal-correct');
+      finalize(card, ok, { idx: idx });
+    }));
+    document.querySelector('#nmCard .dont-know-btn').addEventListener('click', () => {
+      if (run.submitted) return;
+      lock();
+      buttons[card.right].classList.add('reveal-correct');
+      finalize(card, false, { dontKnow: true });
+    });
+  }
+
+  function finalize(card, ok, info) {
+    run.submitted = true;
+    if (ok) { run.score += 10; run.streak++; run.bestStreak = Math.max(run.bestStreak, run.streak); }
+    else    { run.streak = 0; }
+    const chosen = info.idx != null ? card.options[info.idx] : null;
+    const code = ok ? null : info.dontKnow ? 'dont_know' : (chosen.code || 'value');
+    run.results.push({ item: card.topic + ':' + card.it.label, topic: TOPIC[card.topic].key, correct: ok, errorCode: code });
+    const zh = toMarkup(settings.mode === 'say' ? card.it.canon : card.it.show);
+    if (!ok) run.missed.push({ zh: zh, hu: card.it.label });
+    document.getElementById('nmScore').textContent = run.score;
+    document.getElementById('nmStreak').textContent = `${run.streak} 🔥`;
+    const rev = document.getElementById('nmReveal');
+    if (rev) rev.classList.remove('hidden');
+    if (settings.mode !== 'hear') play(reading(zh), 0.85);
+    if (ok) { run.advanceTimer = setTimeout(advance, AUTO_ADVANCE_MS); return; }
+    renderFeedback(card, info, chosen, zh);
+  }
+
+  function renderFeedback(card, info, chosen, zh) {
+    const fb = document.getElementById('nmFeedback');
+    const isLast = run.cardIdx + 1 >= run.cards.length;
+    const mine = chosen ? (chosen.parts ? `<span class="mw-fb-zh">${rich(toMarkup(chosen.parts))}</span>` : esc(chosen.label)) : '';
+    const specific = chosen && chosen.code && chosen.code !== 'value';
+    const why = chosen ? prose(whyOf(chosen.code, card.topic)) : '';
+    // konkrét hibánál a „Miért?" elég; más értéknél és „Nem tudom"-nál a téma fő szabálya jön emlékeztetőnek
+    const main = (NM.rules[card.topic] || [])[0];
+    const tips = !specific && main ? `<strong>${prose(main[0])}</strong><br>${prose(main[1])}` : '';
+    fb.className = 'conj-feedback ' + (info.dontKnow ? 'pr-fb-dontknow' : 'pr-fb-wrong');
+    fb.innerHTML = `
+      <div class="pr-fb-header">
+        <span class="pr-fb-mark">${info.dontKnow ? '💡' : '🤔'}</span>
+        <span class="pr-fb-title">${info.dontKnow ? 'Ez a helyes' : 'Nézzük meg együtt'}</span>
+      </div>
+      <div class="pr-fb-explain">
+        <div class="pfe-row pfe-correct"><span class="pfe-label">Helyes</span><span class="pfe-text"><span class="mw-fb-zh">${rich(zh)}</span><br>${esc(card.it.label)}</span></div>
+        ${mine ? `<div class="pfe-row pfe-wrong"><span class="pfe-label">A te válaszod</span><span class="pfe-text">${mine}</span></div>` : ''}
+        ${why ? `<div class="pfe-row pfe-context"><span class="pfe-label">Miért?</span><span class="pfe-text">${why}</span></div>` : ''}
+        ${tips ? `<div class="pfe-row pfe-rule"><span class="pfe-label">Emlékeztető</span><span class="pfe-text">${tips}</span></div>` : ''}
+      </div>
+      <div class="tone-fb-actions"><button class="btn btn-outline" id="nmAgain" type="button">${PLAY} Meghallgatom</button></div>
+      <button class="btn btn-primary cj-next" id="nmNext" type="button">${isLast ? 'Eredmények' : 'Következő'}</button>`;
+    document.getElementById('nmAgain').addEventListener('click', () => play(reading(zh), 0.7));
+    document.getElementById('nmNext').addEventListener('click', advance);
+  }
+
+  function advance() {
+    if (run.advanceTimer) { clearTimeout(run.advanceTimer); run.advanceTimer = null; }
+    run.cardIdx++;
+    if (run.cardIdx >= run.cards.length) showSummary();
+    else renderCard();
+    HanziFlowRound.scrollToRound();
+  }
+
+  /* ── H) Összesítő ──────────────────────────────── */
+  function showSummary() {
+    HanziFlowStats.recordSession({
+      module: 'numbers', mode: settings.mode,
+      results: run.results, score: run.score, startTs: run.roundStartTs
+    });
+    const p = loadProfile();
+    const per = {};
+    run.results.forEach(r => {
+      const st = p.topicStats[r.topic] = p.topicStats[r.topic] || { attempts: 0, correct: 0 };
+      st.attempts++; if (r.correct) st.correct++;
+      const x = per[r.topic] = per[r.topic] || [0, 0]; x[1]++; if (r.correct) x[0]++;
+      p.totalAttempts++; if (r.correct) p.totalCorrect++;
+    });
+    p.bestStreak = Math.max(p.bestStreak || 0, run.bestStreak);
+    saveProfile(p);
+
+    const total = run.results.length;
+    const correct = run.results.filter(r => r.correct).length;
+    const pct = total ? Math.round((correct / total) * 100) : 0;
+    const weak = Object.keys(per).filter(k => per[k][1] >= 2 && per[k][0] / per[k][1] < 0.6);
+    document.getElementById('nmCard').innerHTML = '';
+    const fb = document.getElementById('nmFeedback');
+    fb.classList.add('hidden'); fb.innerHTML = '';
+    document.getElementById('nmProgressFill').style.width = '100%';
+    const sEl = document.getElementById('nmSummary');
+    sEl.classList.remove('hidden');
+    sEl.innerHTML = `
+      <div class="summary-icon">${pct === 100 ? '🏆' : pct >= 75 ? '⚡' : pct >= 50 ? '🎯' : '🌱'}</div>
+      <h3>Kör vége: ${pct}%</h3>
+      <div class="summary-score">${correct} / ${total}</div>
+      ${weak.length && settings.topic === 'mix' ? `<p class="lq-summary-note">Ezt a témát érdemes átnézni: ${weak.map(k => `<strong>${esc(k)}</strong>`).join(', ')}.</p>` : ''}
+      ${run.missed.length ? `<div class="py-missed">${run.missed.slice(0, 12).map(a => `<span class="py-missed-item mw-missed-item"><span class="mw-fb-zh">${rich(a.zh)}</span> ${esc(a.hu)}</span>`).join('')}</div>` : ''}
+      <div class="kana-summary-actions">
+        <button class="btn btn-primary" id="nmRoundAgain" type="button">Még egy kör</button>
+        <button class="btn btn-outline" id="nmBack" type="button">Vissza a tudnivalókhoz</button>
+      </div>`;
+    document.getElementById('nmRoundAgain').addEventListener('click', startRound);
+    document.getElementById('nmBack').addEventListener('click', backToLobby);
+    if (pct === 100 && window.HanziFlowMotion && HanziFlowMotion.celebrate) {
+      try { HanziFlowMotion.celebrate({ title: 'Hibátlan kör!', sub: `${total} / ${total}` }); } catch (e) {}
+    }
+  }
+
+  function backToLobby() {
+    if (run.advanceTimer) { clearTimeout(run.advanceTimer); run.advanceTimer = null; }
+    if (window.HanziFlowAudio) HanziFlowAudio.stop();
+    run.inLobby = true; run.cards = [];
+    document.querySelector('.module-hero')?.classList.remove('hidden');   // → a kör-őr elmenti a részeredményt
+    document.getElementById('nmRuntime').classList.add('hidden');
+    ['nmLobby', 'nmRef'].forEach(id => document.getElementById(id).classList.remove('hidden'));
+    renderStatsBar(); renderRef(); updateStartBtn();
+  }
+
+  /* ── I) Init ───────────────────────────────────── */
+  document.getElementById('nmExit').addEventListener('click', () => {
+    if (run.inLobby) return;
+    if (!confirm('Biztosan kilépsz a körből?')) return;
+    backToLobby();
+  });
+
+  renderStatsBar();
+  renderLobby();
+  renderRef();
+
+  window._numbers = { num, digits, timeParts, dateParts, moneyParts, toMarkup, zhOf, numLabel, timeLabel, dateLabel, moneyLabel,
+                      ITEM, makeCard, settings, run, startRound };
+}
+
 /* ====================================================
    9d. LESSON PAGE — a tanulási út magyarázó oldala (lesson.html)
    ----------------------------------------------------
@@ -7202,6 +7931,8 @@ function initCurrentPage() {
     initMeasurePage();
   } else if (document.getElementById('sentenceMain')) {
     initSentencePage();
+  } else if (document.getElementById('numbersMain')) {
+    initNumbersPage();
   } else if (document.getElementById('lessonMain')) {
     initLessonPage();
   } else if (document.querySelector('.auth-card')) {
