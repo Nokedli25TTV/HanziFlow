@@ -2775,7 +2775,8 @@ function initStatsPage() {
     measure: 'Mérőszavak',
     sentence: 'Mondat-Mester',
     numbers: 'Dátum, idő, pénz',
-    exam: 'Próbavizsga'
+    exam: 'Próbavizsga',
+    tests: 'Dolgozatok'
   };
   const MODE_LABELS = {
     hear: 'Hallás után', see: 'Jelölés', pairs: 'Szópárok', match: 'Párosító',
@@ -3050,8 +3051,8 @@ function initStatsPage() {
 
   /* ── V4 P3 — radar + analytics helperek ────────── */
   // Radar tengely-sorrend (V5 bővítve: + Mintázatok)
-  const RADAR_ORDER = ['lesson', 'tones', 'pinyin', 'measure', 'sentence', 'numbers', 'exam'];
-  const RADAR_LABELS = { lesson: 'Leckék', tones: 'Tónusok', pinyin: 'Pinyin', measure: 'Mérőszavak', sentence: 'Mondatok', numbers: 'Számok', exam: 'Vizsga' };
+  const RADAR_ORDER = ['lesson', 'tones', 'pinyin', 'measure', 'sentence', 'numbers', 'exam', 'tests'];
+  const RADAR_LABELS = { lesson: 'Leckék', tones: 'Tónusok', pinyin: 'Pinyin', measure: 'Mérőszavak', sentence: 'Mondatok', numbers: 'Számok', exam: 'Vizsga', tests: 'Dolgozat' };
   // Profil-alapú al-bontás (a modulok saját localStorage profiljaiból)
   const PROFILE_CONFIG = {
     tones: { key: 'hanziflow_tones_profile_v1', stats: [
@@ -3063,7 +3064,9 @@ function initStatsPage() {
     numbers: { key: 'hanziflow_numbers_profile_v1', stats: [
       { field: 'topicStats', title: 'Témánként' } ] },
     exam: { key: 'hanziflow_exam_profile_v1', stats: [
-      { field: 'sectionStats', title: 'Részenként' } ] }
+      { field: 'sectionStats', title: 'Részenként' } ] },
+    tests: { key: 'hanziflow_tests_profile_v1', stats: [
+      { field: 'partStats', title: 'Részenként' } ] }
   };
 
   // a címkékben álló írásjegyek lang="zh-CN" alá kerülnek (különben japán változat jelenhet meg)
@@ -3719,7 +3722,7 @@ function initStatsPage() {
   }
 
   /* ── D) Blind Spot Detector ────────────────────── */
-  const MODULE_URL = { tones: 'tones.html', pinyin: 'pinyin.html', measure: 'measure.html', sentence: 'sentence.html', numbers: 'numbers.html', exam: 'exam.html', lesson: '../index.html#path' };
+  const MODULE_URL = { tones: 'tones.html', pinyin: 'pinyin.html', measure: 'measure.html', sentence: 'sentence.html', numbers: 'numbers.html', exam: 'exam.html', tests: 'tests.html', lesson: '../index.html#path' };
 
   // Stratégiai diagnózisok a statokból, severity-szerint rendezve
   function detectBlindSpots() {
@@ -7265,6 +7268,453 @@ function initExamPage() {
   window._exam = { LEVELS, ITEMS, pickSection, makeQuestion, isCorrect, settings, run, startExam, finishExam, go };
 }
 
+
+/* ====================================================
+   9c7. DOLGOZATOK (pages/tests.html)
+   ----------------------------------------------------
+   Témazárók öt-öt leckéből és szintenként egy szintzáró (js/data/tests.js). A kérdések a leckék
+   saját anyagából jönnek: Szavak (szólisták, mindkét irányban), Mondatok (példamondatok fordítása),
+   Nyelvtan (a leckék ellenőrző kérdései, magyarázattal) és Olvasás (egy-egy lecke olvasmánya).
+   Menet közben nincs visszajelzés; a végén iskolai jegy (1–5) és átnézés. A rossz nyelvtani
+   válaszok bekerülnek a napi ismétlésbe (HanziFlowSRS, 'lesson:<id>:<sorszám>').
+   ==================================================== */
+function initTestsPage() {
+  const PROFILE_KEY  = 'hanziflow_tests_profile_v1';
+  const SETTINGS_KEY = 'hanziflow_tests_settings_v1';
+  const TESTS  = (typeof HANZIFLOW_TESTS !== 'undefined') ? HANZIFLOW_TESTS : [];
+  const PARTS  = (typeof HANZIFLOW_TEST_PARTS !== 'undefined') ? HANZIFLOW_TEST_PARTS : [];
+  const GRADES = (typeof HANZIFLOW_TEST_GRADES !== 'undefined') ? HANZIFLOW_TEST_GRADES : [[0, 1, 'elégtelen']];
+  const MINUTES = (typeof HANZIFLOW_TEST_MINUTES !== 'undefined') ? HANZIFLOW_TEST_MINUTES : { normal: 20, final: 30 };
+  const COURSE = (typeof HANZIFLOW_COURSE !== 'undefined') ? HANZIFLOW_COURSE : [];
+  if (!TESTS.length || !COURSE.length) return;
+  const { esc, rich, prose, reading } = HanziFlowZh;
+  const shuffle = arr => { const a = arr.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); const t = a[i]; a[i] = a[j]; a[j] = t; } return a; };
+  const LETTERS = 'ABCD';
+  const BYNO = {};
+  COURSE.forEach(l => { BYNO[parseInt(l.id.slice(1), 10)] = l; });
+  const BYID = {};
+  TESTS.forEach(t => { BYID[t.id] = t; });
+  const norm = s => String(s).toLowerCase().replace(/\{([^|{}]+)\|[^|{}]+\}/g, '$1').replace(/[\s.,;:!?„"'()–—-]/g, '');
+  const TASK = {
+    w2h: 'Mit jelent ez a szó?', h2w: 'Hogy mondod kínaiul?', sent: 'Mit jelent ez a mondat?',
+    gram: 'Válaszd ki a helyeset!', read: 'Olvasd el a szöveget, és válaszolj a kérdésre!'
+  };
+  const gradeOf = pct => { const g = GRADES.find(x => pct >= x[0]) || GRADES[GRADES.length - 1]; return { n: g[1], name: g[2] }; };
+  const lessonRange = t => t.lessons[0] + '–' + t.lessons[t.lessons.length - 1] + '. lecke';
+
+  /* ── A) Beállítások + profil ───────────────────── */
+  function loadJson(key) {
+    try { return JSON.parse(localStorage.getItem(key) || 'null'); } catch (e) { return null; }
+  }
+  const saved = loadJson(SETTINGS_KEY) || {};
+  const settings = {
+    level: [1, 2, 3].indexOf(saved.level) >= 0 ? saved.level : 1,
+    timer: saved.timer !== false,
+    pinyin: Object.assign({ 1: true, 2: true, 3: false }, saved.pinyin || {})
+  };
+  if (window.HanziFlowPath) HanziFlowPath.apply('tests', settings);
+  function saveSettings() {
+    try { localStorage.setItem(SETTINGS_KEY, JSON.stringify(settings)); } catch (e) {}
+  }
+  function loadProfile() {
+    const p = loadJson(PROFILE_KEY);
+    return (p && p.tests) ? p : { tests: {}, partStats: {}, recent: {}, totalAttempts: 0, totalCorrect: 0 };
+  }
+  function saveProfile(p) {
+    try { localStorage.setItem(PROFILE_KEY, JSON.stringify(p)); } catch (e) {}
+    if (window.HanziFlowSync && HanziFlowSync.schedulePush) HanziFlowSync.schedulePush();
+  }
+
+  /* ── B) A dolgozat összeállítása a leckékből ───── */
+  function unitPools(test) {
+    const words = [], sents = [], gram = [], reads = [];
+    const seenW = {}, seenS = {};
+    test.lessons.map(n => BYNO[n]).filter(Boolean).forEach(l => {
+      (l.words || []).forEach(g => (g.items || []).forEach(w => {
+        const z = reading(w.zh || '');
+        if (!z || !w.hu || seenW[z]) return;
+        seenW[z] = true;
+        words.push({ key: 'w:' + z, zh: w.zh, py: w.pinyin || '', hu: w.hu, lesson: l });
+      }));
+      (l.points || []).forEach(p => (p.examples || []).forEach(e => {
+        if (!e || !e.zh || !e.hu) return;
+        const z = reading(e.zh);
+        if (z.length < 3 || seenS[z] || /[＿…+]/.test(e.zh) || e.hu.length > 110) return;
+        seenS[z] = true;
+        sents.push({ key: 's:' + z, zh: e.zh, hu: e.hu, lesson: l });
+      }));
+      (l.quiz || []).forEach((q, qi) => {
+        if (q && q.a && q.wrong && q.wrong.length >= 3) gram.push({ key: 'lesson:' + l.id + ':' + qi, q: q, lesson: l });
+      });
+      if (l.reading && l.reading.text && l.reading.questions && l.reading.questions.length >= 3) reads.push(l);
+    });
+    return { words: words, sents: sents, gram: gram, reads: reads };
+  }
+  // a korábbi kitöltés kérdései a sor végére kerülnek
+  function freshFirst(list, recent, keyOf) {
+    const s = shuffle(list);
+    return s.filter(x => recent.indexOf(keyOf(x)) < 0).concat(s.filter(x => recent.indexOf(keyOf(x)) >= 0));
+  }
+  function pickOthers(list, n, bad) {
+    const out = [];
+    shuffle(list).forEach(x => { if (out.length < n && !bad(x, out)) out.push(x); });
+    return out;
+  }
+  function choice(part, kind, body, right, wrongs, extra) {
+    const opts = shuffle([{ html: right, ok: true }].concat(wrongs.map(h => ({ html: h }))));
+    return Object.assign({ part: part, kind: kind, body: body, options: opts, right: opts.findIndex(o => o.ok), answer: null }, extra);
+  }
+  function buildTest(test) {
+    const pools = unitPools(test);
+    const recent = (loadProfile().recent || {})[test.id] || [];
+    const size = p => (test.final ? p.final : p.normal);
+    const qs = [];
+    PARTS.forEach(part => {
+      const n = size(part);
+      if (part.id === 'words') {
+        freshFirst(pools.words, recent, w => w.key).slice(0, n).forEach((w, i) => {
+          const others = pickOthers(pools.words, 3, (x, out) => x === w || norm(x.hu) === norm(w.hu) || reading(x.zh) === reading(w.zh)
+            || out.some(o => norm(o.hu) === norm(x.hu) || reading(o.zh) === reading(x.zh)));
+          if (others.length < 3) return;
+          if (i % 2 === 0) qs.push(choice(part, 'w2h', w, esc(w.hu), others.map(o => esc(o.hu)), { key: w.key, src: w }));
+          else qs.push(choice(part, 'h2w', w, rich(w.zh), others.map(o => rich(o.zh)), { key: w.key, src: w }));
+        });
+      } else if (part.id === 'sent') {
+        freshFirst(pools.sents, recent, s => s.key).slice(0, n).forEach(s => {
+          const others = pickOthers(pools.sents, 3, (x, out) => x === s || norm(x.hu) === norm(s.hu) || out.some(o => norm(o.hu) === norm(x.hu)));
+          if (others.length < 3) return;
+          qs.push(choice(part, 'sent', s, esc(s.hu), others.map(o => esc(o.hu)), { key: s.key, src: s }));
+        });
+      } else if (part.id === 'gram') {
+        freshFirst(pools.gram, recent, g => g.key).slice(0, n).forEach(g => {
+          qs.push(choice(part, 'gram', g, rich(g.q.a), g.q.wrong.slice(0, 3).map(w => rich(w)), { key: g.key, src: g, srs: g.key }));
+        });
+      } else if (part.id === 'read') {
+        const perText = 3;
+        const texts = freshFirst(pools.reads, recent, l => 'r:' + l.id).slice(0, Math.ceil(n / perText));
+        texts.forEach(l => {
+          shuffle(l.reading.questions).slice(0, perText).forEach(rq => {
+            qs.push(choice(part, 'read', { lesson: l, rq: rq }, rich(rq.a), rq.wrong.slice(0, 3).map(w => rich(w)), { key: 'r:' + l.id, src: { lesson: l, rq: rq } }));
+          });
+        });
+      }
+    });
+    return qs;
+  }
+  const isAnswered = q => q.answer !== null;
+  const isCorrect = q => q.answer === q.right;
+
+  /* ── C) Fejléc, lobbi ──────────────────────────── */
+  function renderStatsBar() {
+    const el = document.getElementById('tsStatsBar');
+    if (!el) return;
+    const p = loadProfile();
+    const done = TESTS.filter(t => p.tests[t.id]);
+    const avg = done.length ? (done.reduce((a, t) => a + p.tests[t.id].grade, 0) / done.length).toFixed(1).replace('.', ',') : '—';
+    el.innerHTML = `
+      <div class="conj-stat-chip"><span class="csc-num">${TESTS.length}</span><span class="csc-label">dolgozat</span></div>
+      <div class="conj-stat-chip"><span class="csc-num">${done.length}</span><span class="csc-label">megírva</span></div>
+      <div class="conj-stat-chip"><span class="csc-num">${avg}</span><span class="csc-label">jegyek átlaga</span></div>`;
+  }
+
+  function renderLobby() {
+    const el = document.getElementById('tsLobby');
+    const p = loadProfile();
+    const lv = settings.level;
+    const tabs = [1, 2, 3].map(l => `<button class="py-tab${l === lv ? ' active' : ''}" type="button" data-level="${l}" aria-pressed="${l === lv}">HSK ${l}</button>`).join('');
+    const toggle = (key, on, labels) => [true, false].map(v => `
+      <button class="cj-mode-btn ${on === v ? 'active' : ''}" data-${key}="${v ? 1 : 0}" type="button"><span class="cj-m-name">${labels[v ? 0 : 1]}</span></button>`).join('');
+    const cards = TESTS.filter(t => t.level === lv).map(t => {
+      const r = p.tests[t.id];
+      const n = PARTS.reduce((a, part) => a + (t.final ? part.final : part.normal), 0);
+      return `
+        <article class="ts-card${t.final ? ' is-final' : ''}">
+          <div class="ts-card-top">
+            <div class="ts-card-titles">
+              <h3 class="ts-card-title">${esc(t.title)}</h3>
+              <span class="ts-card-sub">${esc(lessonRange(t))} · ${n} kérdés · ${t.final ? MINUTES.final : MINUTES.normal} perc</span>
+            </div>
+            ${r ? `<span class="ts-grade g${r.grade}" title="Legjobb jegy">${r.grade}</span>` : '<span class="ts-grade is-empty" title="Még nincs jegy">–</span>'}
+          </div>
+          <p class="ts-card-topics">${esc(t.topics)}</p>
+          ${r ? `<p class="ts-card-meta">Legjobb: ${r.best}% · ${r.attempts}× megírva</p>` : ''}
+          <button class="btn btn-primary ts-start" type="button" data-test="${t.id}">${r ? 'Újra megírom' : 'Megírom'}</button>
+        </article>`;
+    }).join('');
+    el.innerHTML = `
+      <div class="lobby-header">
+        <div class="lobby-eyebrow">Dolgozatok</div>
+        <h2 class="lobby-title">Melyiket írod meg?</h2>
+      </div>
+      <div class="py-tabs" role="group" aria-label="Szintek">${tabs}</div>
+      <div class="ts-options">
+        <div class="lobby-section">
+          <div class="lobby-section-label">Időmérő</div>
+          <div class="cj-mode-row py-mode-row">${toggle('timer', settings.timer, ['Időre', 'Idő nélkül'])}</div>
+        </div>
+        <div class="lobby-section">
+          <div class="lobby-section-label">Pinyin</div>
+          <div class="cj-mode-row py-mode-row">${toggle('pinyin', settings.pinyin[lv], ['Látszik', 'Rejtve'])}</div>
+        </div>
+      </div>
+      <div class="ts-list">${cards}</div>`;
+    el.querySelectorAll('[data-level]').forEach(b => b.addEventListener('click', () => { settings.level = parseInt(b.dataset.level, 10); saveSettings(); renderLobby(); }));
+    el.querySelectorAll('[data-timer]').forEach(b => b.addEventListener('click', () => { settings.timer = b.dataset.timer === '1'; saveSettings(); renderLobby(); }));
+    el.querySelectorAll('[data-pinyin]').forEach(b => b.addEventListener('click', () => { settings.pinyin[lv] = b.dataset.pinyin === '1'; saveSettings(); renderLobby(); }));
+    el.querySelectorAll('[data-test]').forEach(b => b.addEventListener('click', () => startTest(b.dataset.test)));
+  }
+
+  function renderInfo() {
+    const el = document.getElementById('tsInfo');
+    if (!el) return;
+    el.innerHTML = `
+      <div class="tone-chart-head">
+        <h2 class="tone-chart-h">Hogyan működik?</h2>
+        <p class="tone-chart-sub">A dolgozat azt kéri számon, amit a leckékben tanultál.</p>
+      </div>
+      <dl class="py-tip-list">
+        <div class="py-tip"><dt>Négy rész</dt><dd>Szavak (jelentés mindkét irányban), Mondatok (a példamondatok jelentése), Nyelvtan (a leckék ellenőrző kérdései) és Olvasás (egy lecke olvasmánya).</dd></div>
+        <div class="py-tip"><dt>Menet közben</dt><dd>Nincs visszajelzés. Előre-hátra léphetsz, és a beadásig bármelyik választ megváltoztathatod.</dd></div>
+        <div class="py-tip"><dt>Jegy</dt><dd>${GRADES.slice(0, -1).map(g => `${g[0]}%-tól ${g[1]} (${g[2]})`).join(', ')}; alatta 1 (elégtelen).</dd></div>
+        <div class="py-tip"><dt>Utána</dt><dd>Minden kérdést átnézhetsz magyarázattal. A rossz nyelvtani válaszok bekerülnek a napi ismétlésbe, újraíráskor pedig lehetőleg új kérdéseket kapsz.</dd></div>
+      </dl>`;
+  }
+
+  /* ── D) A dolgozat menete ──────────────────────── */
+  const run = { inLobby: true, test: null, qs: [], idx: 0, startTs: 0, deadline: 0, timerId: null, finished: false, timedOut: false };
+
+  function startTest(id) {
+    const test = BYID[id];
+    if (!test) return;
+    const qs = buildTest(test);
+    if (!qs.length) return;
+    Object.assign(run, { test: test, qs: qs, idx: 0, finished: false, timedOut: false, inLobby: false, startTs: Date.now() });
+    run.deadline = settings.timer ? run.startTs + (test.final ? MINUTES.final : MINUTES.normal) * 60000 : 0;
+    HanziFlowRound.begin(function () {
+      return { module: 'tests', mode: 'hsk' + test.level, results: graded(true), score: 0, startTs: run.startTs };
+    });
+    document.querySelector('.module-hero')?.classList.add('hidden');
+    ['tsLobby', 'tsInfo'].forEach(i => document.getElementById(i).classList.add('hidden'));
+    const rt = document.getElementById('tsRuntime');
+    rt.classList.remove('hidden');
+    rt.classList.toggle('ex-nopy', !settings.pinyin[test.level]);
+    const res = document.getElementById('tsResult');
+    res.classList.add('hidden'); res.innerHTML = '';
+    document.getElementById('tsExam').classList.remove('hidden');
+    if (run.timerId) clearInterval(run.timerId);
+    run.timerId = setInterval(tick, 1000);
+    tick();
+    renderQuestion();
+  }
+
+  const mmss = ms => { const s = Math.max(0, Math.round(ms / 1000)); return Math.floor(s / 60) + ':' + String(s % 60).padStart(2, '0'); };
+  function tick() {
+    const el = document.getElementById('tsTime');
+    if (!el || run.finished) return;
+    if (run.deadline) {
+      const left = run.deadline - Date.now();
+      el.textContent = mmss(left);
+      el.classList.toggle('is-low', left < 60000);
+      if (left <= 0) { run.timedOut = true; finishTest(); }
+    } else {
+      el.textContent = mmss(Date.now() - run.startTs);
+    }
+  }
+
+  function readingHtml(l) {
+    const r = l.reading;
+    return `<div class="ex-text">${r.title ? `<p class="ts-read-title">${rich(r.title)}</p>` : ''}${r.text.map(t => `<p class="ex-line">${rich(t.zh)}</p>`).join('')}</div>`;
+  }
+  function bodyHtml(q) {
+    const b = q.body;
+    if (q.kind === 'w2h') return `<div class="ts-word">${rich(b.zh)}</div>`;
+    if (q.kind === 'h2w') return `<div class="mw-count-hu">${esc(b.hu)}</div>`;
+    if (q.kind === 'sent') return `<div class="ex-q ex-q-big">${rich(b.zh)}</div>`;
+    if (q.kind === 'gram') return `<div class="ts-gq">${rich(b.q.q)}</div>${b.q.zh ? `<div class="ex-q">${rich(b.q.zh)}</div>` : ''}`;
+    return readingHtml(b.lesson) + `<div class="ts-gq">${rich(b.rq.q)}</div>`;
+  }
+
+  function renderQuestion() {
+    const q = run.qs[run.idx], total = run.qs.length;
+    const inPart = run.qs.filter(x => x.part === q.part);
+    document.getElementById('tsPart').textContent = q.part.name;
+    document.getElementById('tsCount').textContent = `Kérdés ${run.idx + 1} / ${total}`;
+    document.getElementById('tsProgressFill').style.width = `${(run.qs.filter(isAnswered).length / total) * 100}%`;
+    const last = run.idx === total - 1;
+    document.getElementById('tsCard').innerHTML = `
+      <div class="cj-prompt">
+        <div class="cj-prompt-eyebrow"><span class="cj-pe-group">${esc(q.part.name)}</span><span class="cj-pe-dot">·</span>${inPart.indexOf(q) + 1} / ${inPart.length}</div>
+        <div class="kana-task">${TASK[q.kind]}</div>
+        ${bodyHtml(q)}
+      </div>
+      <div class="cj-options ex-options">
+        ${q.options.map((o, i) => `<button class="cj-option ex-option${q.answer === i ? ' is-selected' : ''}" type="button" data-idx="${i}" aria-pressed="${q.answer === i}"><span class="ex-letter">${LETTERS[i]}</span><span class="ex-opt-body">${o.html}</span></button>`).join('')}
+      </div>
+      <div class="ex-nav">
+        <button class="btn btn-outline" id="tsPrev" type="button"${run.idx === 0 ? ' disabled' : ''}>← Előző</button>
+        <button class="btn btn-primary" id="tsNext" type="button">${last ? 'Beadom' : isAnswered(q) ? 'Következő →' : 'Kihagyom →'}</button>
+      </div>`;
+    document.querySelectorAll('#tsCard .ex-option').forEach(btn => btn.addEventListener('click', () => {
+      q.answer = parseInt(btn.dataset.idx, 10);
+      document.querySelectorAll('#tsCard .ex-option').forEach(b => { const on = b === btn; b.classList.toggle('is-selected', on); b.setAttribute('aria-pressed', on); });
+      const nb = document.getElementById('tsNext');
+      if (nb && !last) nb.textContent = 'Következő →';
+      document.getElementById('tsProgressFill').style.width = `${(run.qs.filter(isAnswered).length / total) * 100}%`;
+    }));
+    document.getElementById('tsPrev').addEventListener('click', () => go(-1));
+    document.getElementById('tsNext').addEventListener('click', () => { if (last) submitTest(); else go(1); });
+  }
+  function go(step) {
+    run.idx = Math.max(0, Math.min(run.qs.length - 1, run.idx + step));
+    renderQuestion();
+    HanziFlowRound.scrollToRound();
+  }
+  function submitTest() {
+    const open = run.qs.filter(q => !isAnswered(q)).length;
+    if (open && !confirm(`${open} kérdésre még nem válaszoltál. Biztosan beadod?`)) return;
+    finishTest();
+  }
+
+  /* ── E) Jegy, átnézés ──────────────────────────── */
+  function graded(partial) {
+    return run.qs.filter(q => !partial || isAnswered(q)).map(q => ({
+      item: q.key, part: q.part.id, correct: isCorrect(q),
+      errorCode: isCorrect(q) ? null : !isAnswered(q) ? (run.timedOut ? 'timeout' : 'empty') : 'wrong'
+    }));
+  }
+  // a nyelvtani kérdések a leckék ismétlés-ütemezőjébe: rossz → azonnal esedékes; jó → csak ha már esedékes volt
+  function feedSrs() {
+    if (!window.HanziFlowSRS) return 0;
+    let wrong = 0;
+    run.qs.filter(q => q.srs).forEach(q => {
+      const ok = isCorrect(q);
+      const st = HanziFlowSRS.getItemState(q.srs);
+      if (!ok) { HanziFlowSRS.recordReview(q.srs, 0); wrong++; }
+      else if (st && (st.nextDueTs || 0) <= Date.now()) HanziFlowSRS.recordReview(q.srs, 1);
+    });
+    return wrong;
+  }
+
+  function finishTest() {
+    if (run.finished) return;
+    run.finished = true;
+    if (run.timerId) { clearInterval(run.timerId); run.timerId = null; }
+    const t = run.test;
+    const total = run.qs.length;
+    const correct = run.qs.filter(isCorrect).length;
+    const pct = total ? Math.round(correct / total * 100) : 0;
+    const grade = gradeOf(pct);
+    HanziFlowStats.recordSession({ module: 'tests', mode: 'hsk' + t.level, results: graded(false), score: pct, startTs: run.startTs });
+    const srsWrong = feedSrs();
+    const p = loadProfile();
+    const prev = p.tests[t.id];
+    p.tests[t.id] = {
+      best: Math.max(prev ? prev.best : 0, pct), grade: Math.max(prev ? prev.grade : 1, grade.n),
+      last: pct, lastGrade: grade.n, attempts: (prev ? prev.attempts : 0) + 1, lastTs: Date.now()
+    };
+    const parts = PARTS.map(part => {
+      const qs = run.qs.filter(q => q.part === part);
+      const c = qs.filter(isCorrect).length;
+      const st = p.partStats[part.name] = p.partStats[part.name] || { attempts: 0, correct: 0 };
+      st.attempts += qs.length; st.correct += c;
+      return { part: part, n: qs.length, c: c };
+    }).filter(x => x.n);
+    p.totalAttempts += total; p.totalCorrect += correct;
+    p.recent = p.recent || {};
+    p.recent[t.id] = run.qs.map(q => q.key);
+    saveProfile(p);
+
+    document.getElementById('tsExam').classList.add('hidden');
+    const el = document.getElementById('tsResult');
+    el.classList.remove('hidden');
+    el.innerHTML = `
+      <div class="ex-result glass-panel-heavy">
+        <h3 class="ex-result-title">${esc(t.title)} · HSK ${t.level}</h3>
+        <span class="ts-card-sub">${esc(lessonRange(t))}</span>
+        <div class="ts-bigrade g${grade.n}"><span class="ts-bigrade-n">${grade.n}</span><span class="ts-bigrade-name">${esc(grade.name)}</span></div>
+        <div class="ex-verdict ${grade.n >= 2 ? 'is-pass' : 'is-fail'}">${correct} / ${total} jó válasz · ${pct}%</div>
+        ${run.timedOut ? '<p class="ex-note">Lejárt az idő: a megválaszolatlan kérdések nem kaptak pontot.</p>' : ''}
+        <div class="ex-secs">
+          ${parts.map(x => `
+            <div class="ex-sec">
+              <div class="ex-sec-top"><span class="ex-sec-name">${esc(x.part.name)}</span><span class="ex-sec-score">${x.c} / ${x.n}</span></div>
+              <div class="round-progress-bar"><div class="round-progress-fill" style="width: ${Math.round(x.c / x.n * 100)}%"></div></div>
+            </div>`).join('')}
+        </div>
+        ${srsWrong ? `<p class="ex-note">${srsWrong} nyelvtani kérdés bekerült a napi ismétlésbe.</p>` : ''}
+        <p class="ex-note">Idő: ${mmss(Date.now() - run.startTs)}</p>
+        <div class="kana-summary-actions">
+          <button class="btn btn-primary" id="tsReviewBtn" type="button">Válaszok átnézése</button>
+          <button class="btn btn-outline" id="tsAgain" type="button">Újra, új kérdésekkel</button>
+          <button class="btn btn-ghost" id="tsBack" type="button">Vissza</button>
+        </div>
+      </div>
+      <div class="ex-review hidden" id="tsReview"></div>`;
+    document.getElementById('tsReviewBtn').addEventListener('click', () => {
+      const r = document.getElementById('tsReview');
+      r.innerHTML = reviewHtml(); r.classList.remove('hidden');
+      r.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+    document.getElementById('tsAgain').addEventListener('click', () => startTest(t.id));
+    document.getElementById('tsBack').addEventListener('click', backToLobby);
+    HanziFlowRound.scrollToRound();
+    if (grade.n === 5 && pct === 100 && window.HanziFlowMotion && HanziFlowMotion.celebrate) {
+      try { HanziFlowMotion.celebrate({ title: 'Hibátlan dolgozat!', sub: `${total} / ${total}` }); } catch (e) {}
+    }
+  }
+
+  const answerHtml = (q, i) => (i === null || i === undefined) ? '<span class="ex-none">nincs válasz</span>'
+    : `<span class="ex-letter ex-letter-sm">${LETTERS[i]}</span> ${q.options[i].html}`;
+  function explainHtml(q) {
+    const b = q.body;
+    if (q.kind === 'w2h' || q.kind === 'h2w') return `<p class="ex-hu"><span lang="zh-CN">${esc(reading(b.zh))}</span> ${esc(b.py)} — ${esc(b.hu)}</p>`;
+    if (q.kind === 'sent') return `<p class="ex-hu">${esc(b.hu)}</p>`;
+    const why = q.kind === 'gram' ? b.q.why : b.rq.why;
+    return why ? `<p class="ex-hu">${prose(why)}</p>` : '';
+  }
+  function reviewHtml() {
+    return `<h3 class="ex-review-h">A válaszaid</h3>` + run.qs.map((q, n) => {
+      const ok = isCorrect(q), answered = isAnswered(q);
+      const l = q.src && q.src.lesson;                     // melyik leckéből jött a kérdés
+      const lessonNote = l ? `<span class="ex-dim">Forrás: ${esc(l.kicker || '')} · ${prose(l.title)}</span>` : '';
+      const task = q.kind === 'read' ? `<p class="ex-line">${rich(q.body.rq.q)}</p>` : bodyHtml(q).replace(/ex-q-big/g, '');
+      return `
+        <details class="ex-ritem ${ok ? 'is-ok' : 'is-bad'}"${ok ? '' : ' open'}>
+          <summary><span class="ex-rmark">${ok ? '✓' : answered ? '✗' : '–'}</span><span class="ex-rnum">${n + 1}.</span><span class="ex-rsec">${esc(q.part.name)}</span><span class="ex-rtask">${esc(TASK[q.kind])}</span></summary>
+          <div class="ex-rbody">
+            <div class="ts-rtask">${task}</div>
+            <div class="pfe-row pfe-correct"><span class="pfe-label">Helyes</span><span class="pfe-text">${answerHtml(q, q.right)}</span></div>
+            ${ok ? '' : `<div class="pfe-row pfe-wrong"><span class="pfe-label">A te válaszod</span><span class="pfe-text">${answerHtml(q, q.answer)}</span></div>`}
+            ${explainHtml(q)}
+            ${lessonNote}
+          </div>
+        </details>`;
+    }).join('');
+  }
+
+  function backToLobby() {
+    if (run.timerId) { clearInterval(run.timerId); run.timerId = null; }
+    run.inLobby = true; run.finished = true; run.qs = [];
+    document.querySelector('.module-hero')?.classList.remove('hidden');   // → a kör-őr elmenti a részeredményt
+    document.getElementById('tsRuntime').classList.add('hidden');
+    ['tsLobby', 'tsInfo'].forEach(i => document.getElementById(i).classList.remove('hidden'));
+    renderStatsBar(); renderLobby();
+  }
+
+  /* ── F) Init ───────────────────────────────────── */
+  document.getElementById('tsExit').addEventListener('click', () => {
+    if (run.inLobby) return;
+    if (!run.finished && !confirm('Biztosan kilépsz a dolgozatból? Az eddigi válaszaid nem kapnak jegyet.')) return;
+    backToLobby();
+  });
+
+  renderStatsBar();
+  renderLobby();
+  renderInfo();
+
+  window._tests = { TESTS, unitPools, buildTest, gradeOf, settings, run, startTest, finishTest, go };
+}
+
 /* ====================================================
    9d. LESSON PAGE — a tanulási út magyarázó oldala (lesson.html)
    ----------------------------------------------------
@@ -8459,6 +8909,8 @@ function initCurrentPage() {
     initNumbersPage();
   } else if (document.getElementById('examMain')) {
     initExamPage();
+  } else if (document.getElementById('testsMain')) {
+    initTestsPage();
   } else if (document.getElementById('lessonMain')) {
     initLessonPage();
   } else if (document.querySelector('.auth-card')) {

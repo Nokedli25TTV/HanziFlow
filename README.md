@@ -11,6 +11,7 @@ Kínai (mandarin) nyelvtanuló webapp magyarul, kezdőknek.
 - **Mondat-Mester**: a kínai szórend szabályai, a szavak sorba rakása és a szócskák (吗, 呢, 的, 了, 得…) kitöltése.
 - **Dátum, idő, pénz**: számok, dátumok, időpontok és árak olvasása, kimondása és hallás utáni felismerése, minden körben új feladatokkal.
 - **HSK próbavizsga**: HSK 1, 2 és 3 szintű próbavizsga időre (hallás, olvasás, írás), pontszámmal és a válaszok átnézésével.
+- **Dolgozatok**: témazáró öt-öt lecke után és szintzáró, iskolai jeggyel; a hibák bekerülnek a napi ismétlésbe.
 - **Időzített ismétlés** a leckék kérdéseiből, **napi cél** és **sorozat**, **statisztika** aktivitás-naptárral.
 - Bejelentkezés nélkül is teljes (minden a böngészőben marad); fiókkal szinkronizál. Telepíthető (PWA).
 

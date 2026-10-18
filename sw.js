@@ -14,7 +14,7 @@
    ==================================================== */
 
 const CACHE_PREFIX  = 'hanziflow-';
-const CACHE_VERSION = CACHE_PREFIX + 'v24-2026-10-18-probavizsga-bank';
+const CACHE_VERSION = CACHE_PREFIX + 'v25-2026-10-18-dolgozatok';
 const APP_SHELL_CACHE = CACHE_VERSION + '-shell';
 const RUNTIME_CACHE   = CACHE_VERSION + '-runtime';
 
@@ -29,6 +29,7 @@ const APP_SHELL = [
   './pages/sentence.html',
   './pages/numbers.html',
   './pages/exam.html',
+  './pages/tests.html',
   './pages/modules.html',
   './pages/stats.html',
   './pages/login.html',
@@ -46,6 +47,7 @@ const APP_SHELL = [
   './js/data/sentence.js',
   './js/data/numbers.js',
   './js/data/exam.js',
+  './js/data/tests.js',
   './img/icon.svg',
   './img/icon-192.png',
   './img/icon-512.png'

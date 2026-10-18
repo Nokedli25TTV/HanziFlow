@@ -46,6 +46,7 @@ pages/measure.html    Mérőszavak (tábla csoportonként · párosítás · mon
 pages/sentence.html   Mondat-Mester (szórend-szabályok szintenként · sorba rakás · szócskák)
 pages/numbers.html    Dátum, idő, pénz (tudnivalók + „Próbáld ki" · olvasás · kimondás · hallás után)
 pages/exam.html       HSK 1–3 próbavizsga (hallás · olvasás · HSK 3-ban írás; időre, a végén pontszám és átnézés)
+pages/tests.html      Dolgozatok: 10 témazáró (öt-öt lecke) + 3 szintzáró, jegy 1–5, átnézés
 pages/modules.html    a modulok kártyái („Szabad gyakorlás")
 pages/stats.html      statisztika · login.html · register.html
 css/style.css         a teljes stíluslap (tokenek → váz → kezdőlap → kör-keret → statisztika → lecke → tónusok)
@@ -60,11 +61,12 @@ js/data/measure.js    a Mérőszavak adatai (29 mérőszó, főnevek, mondatok, 
 js/data/sentence.js   a Mondat-Mester adatai (21 szabály, 41 sorba rakós és 28 szócskás mondat; séma a fájl elején)
 js/data/numbers.js    a Dátum, idő, pénz alapelemei és szabályai; a kínai alakot az app.js generátora állítja elő
 js/data/exam.js       a próbavizsga részei szintenként és a saját feladatbank (182 feladat, 8 típus; séma a fájl elején)
+js/data/tests.js      a dolgozatok listája, részei és a jegyhatárok; a kérdések a course.js leckéiből jönnek
 sw.js · manifest.webmanifest · img/ (ikonok)
 ```
 
 Oldal-felismerő (`initCurrentPage`, az `app.js` végén) a `<main>` azonosítója szerint: `statsMain`,
-`tonesMain`, `pinyinMain`, `measureMain`, `sentenceMain`, `numbersMain`, `examMain`, `lessonMain`, `.auth-card`, `homeMain`.
+`tonesMain`, `pinyinMain`, `measureMain`, `sentenceMain`, `numbersMain`, `examMain`, `testsMain`, `lessonMain`, `.auth-card`, `homeMain`.
 A modulok a `{汉字|pinyin}` jelölést a közös `HanziFlowZh` segéddel jelenítik meg (`rich`: ruby, `prose`: a pinyin
 a szó után, folyó szövegben; `reading`: felolvasáshoz).
 
@@ -80,7 +82,7 @@ a szó után, folyó szövegben; `reading`: felolvasáshoz).
 ## 5. Tárolás (localStorage, minden kulcs `hanziflow_` előtagú)
 
 Szinkronizált: `sessions_v1` (munkamenet-napló), `srs_v1` (ismétlés), `path_v1` (út), `goal_v1` (napi cél),
-`tones_profile_v1`, `tones_settings_v1`, `pinyin_settings_v1`, `measure_profile_v1`, `measure_settings_v1`, `sentence_profile_v1`, `sentence_settings_v1`, `numbers_profile_v1`, `numbers_settings_v1`, `exam_profile_v1`, `exam_settings_v1`. Eszköz-helyi: `theme`, `helpers_*`, `audio_on`, `toc_v1`, `lesson_pos_v1` stb.
+`tones_profile_v1`, `tones_settings_v1`, `pinyin_settings_v1`, `measure_profile_v1`, `measure_settings_v1`, `sentence_profile_v1`, `sentence_settings_v1`, `numbers_profile_v1`, `numbers_settings_v1`, `exam_profile_v1`, `exam_settings_v1`, `tests_profile_v1`, `tests_settings_v1`. Eszköz-helyi: `theme`, `helpers_*`, `audio_on`, `toc_v1`, `lesson_pos_v1` stb.
 Új szinkronizálandó kulcs → a `sync.js` `EXACT_KEYS` listájára.
 
 ## 6. Design (style.css `:root`)
@@ -107,7 +109,9 @@ Színt csak tokenből; 12 px alatt nincs szöveg; érintési célpont ≥ 44 px;
 - [x] HSK 1–3 próbavizsga (pages/exam.html): részenként 100 pont, 60% az átmenő; a hallás kétszer hallgatható,
   hang nélkül a szöveg megmutatható; HSK 3-ban a pinyin alapból rejtve. Szintenként 26–28 feladat jut egy
   10 kérdéses részre; az előző vizsga kérdései (profil: recent) hátrébb kerülnek. Bővítés: új feladat a HANZIFLOW_EXAM_ITEMS-be.
-- [ ] Dolgozatok (leckénkénti témazárók).
+- [x] Dolgozatok (pages/tests.html): Szavak · Mondatok · Nyelvtan (a leckék quiz-kérdései) · Olvasás; a rossz nyelvtani
+  válasz a HanziFlowSRS-be kerül (`lesson:<id>:<sorszám>`), újraíráskor az előző kérdések hátrébb kerülnek.
+- [ ] A dolgozatok és a próbavizsga lépésként a tanulási útba (HANZIFLOW_PATH) — ha a user kéri.
 - Élő oldal: https://nokedli25ttv.github.io/HanziFlow/ (GitHub Pages, main ág, 2026-10-18 óta).
 - [ ] A NihonCore `sw.js`-ében a cache-törlést a saját előtagra kell szűkíteni (különben a HanziFlow offline-tárát is törli).
 - [ ] Firestore-szabály a `users/{uid}/apps/{app}` helyre (a user Firebase-konzolján).

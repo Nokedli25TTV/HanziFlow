@@ -1868,6 +1868,46 @@ html.lesson-steps.ls-round .hf-tabbar { display: none; }
 .ex-dim { font-size: var(--fs-sm); color: var(--ink-faint); }
 .ex-rplay { align-self: flex-start; min-height: var(--touch); font-size: var(--fs-sm); }
 
+/* ═══ 8g. DOLGOZATOK (pages/tests.html) ════════════════ */
+#testsMain rt { font-size: max(0.5em, 12px); }
+.ts-options { display: grid; grid-template-columns: 1fr; gap: 4px; margin: 4px 0 10px; }
+@media (min-width: 600px) { .ts-options { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; } }
+.ts-list { display: grid; grid-template-columns: 1fr; gap: 10px; }
+@media (min-width: 720px) { .ts-list { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.ts-card { display: flex; flex-direction: column; gap: 8px; padding: 14px; border-radius: var(--radius-md); background: var(--surface-2); border: 1px solid var(--surface-2-edge); }
+.ts-card.is-final { border-color: var(--seal); border-top-width: 3px; }
+.ts-card-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; }
+.ts-card-titles { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.ts-card-title { margin: 0; font-size: var(--fs-lg); font-weight: 800; }
+.ts-card-sub { font-size: var(--fs-xs); font-weight: 700; color: var(--ink-faint); }
+.ts-card-topics { margin: 0; font-size: var(--fs-sm); line-height: 1.55; color: var(--ink-soft); }
+.ts-card-meta { margin: 0; font-size: var(--fs-xs); font-weight: 700; color: var(--ink-soft); }
+.ts-start { align-self: flex-start; min-height: var(--touch); }
+
+/* jegy */
+.ts-grade { flex: none; display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 12px; border: 2px solid currentColor; font-size: var(--fs-xl); font-weight: 800; }
+.ts-grade.is-empty { color: var(--ink-faint); border-style: dashed; }
+.g5 { color: var(--ok-deep); }
+.g4 { color: var(--brand-deep); }
+.g3 { color: var(--amber-ink); }
+.g2 { color: var(--amber-ink); }
+.g1 { color: var(--err); }
+.ts-bigrade { display: flex; flex-direction: column; align-items: center; gap: 2px; }
+.ts-bigrade-n { display: inline-flex; align-items: center; justify-content: center; width: 84px; height: 84px; border-radius: 22px; border: 3px solid currentColor; font-size: var(--fs-4xl); font-weight: 800; line-height: 1; }
+.ts-bigrade-name { font-size: var(--fs-md); font-weight: 800; }
+
+/* kérdés */
+.ts-word { margin-top: 6px; font-size: clamp(2.2rem, 11vw, 3rem); line-height: 1.6; }
+.ts-word rt { font-size: 0.36em; }
+.ts-gq { margin-top: 10px; font-size: var(--fs-lg); font-weight: 700; line-height: 1.7; }
+.ts-read-title { margin: 0 0 4px; font-weight: 800; }
+.ts-rtask { font-size: var(--fs-md); }
+.ts-rtask .ex-text { font-size: var(--fs-md); }
+.ts-rtask .ts-word { margin-top: 0; font-size: var(--fs-2xl); }
+.ts-rtask .mw-count-hu { font-size: var(--fs-lg); }
+.ts-options .cj-mode-row { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+#testsMain .ex-text { font-size: var(--fs-md); line-height: 2.3; }
+
 /* ═══ 9. APRÓSÁGOK: értesítő, ünneplés, mozgás ═════════ */
 .hf-toast {
   position: fixed; bottom: calc(20px + var(--tabbar-space)); left: 50%; z-index: 9500;

@@ -41,7 +41,9 @@ window.HanziFlowSync = (function () {
     'hanziflow_numbers_profile_v1',  // Dátum, idő, pénz: témánkénti eredmény
     'hanziflow_numbers_settings_v1',
     'hanziflow_exam_profile_v1',     // Próbavizsga: legjobb pontszám, részenkénti eredmény
-    'hanziflow_exam_settings_v1'
+    'hanziflow_exam_settings_v1',
+    'hanziflow_tests_profile_v1',    // Dolgozatok: jegyek, részenkénti eredmény
+    'hanziflow_tests_settings_v1'
   ];
   const PREFIX_KEYS = [];
 
