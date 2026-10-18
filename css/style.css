@@ -1316,7 +1316,7 @@ html.theme-ink .hm-c.hm-l4 { background: var(--brand); }
 .lp-sec-sub { font-size: var(--fs-sm); font-weight: 600; color: var(--ink-soft); }
 .lp-scene { color: var(--ink-soft); }
 .lp-intro .lp-body + .lp-body, .lp-culture-item .lp-body + .lp-body { margin-top: 10px; }
-.lesson-main [lang="zh-CN"] { word-break: keep-all; }
+.lesson-main [lang="zh-CN"] { word-break: normal; line-break: strict; overflow-wrap: anywhere; }
 .lesson-main ruby { white-space: nowrap; }
 
 /* példák: hanzi (pinyinnel) · pinyin-sor · magyar */

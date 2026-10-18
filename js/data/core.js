@@ -84,7 +84,40 @@ const HANZIFLOW_PATH = [
     module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l5&round=listen' },
   { id: 'l5-read', glyph: '读', title: 'Olvasás: Wang tanárnő családja',
     desc: 'Rövid szöveg, utána négy kérdés a tartalmáról.',
-    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l5&round=read' }
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l5&round=read' },
+
+  // ── 6. lecke ──
+  { id: 'l6-lesson', glyph: '会', title: 'Magyarázat: 会, 很 + melléknév, 怎么',
+    desc: 'Mit tudsz megcsinálni, milyen valami, és hogyan kell csinálni valamit.',
+    module: 'lesson', href: 'pages/lesson.html?id=l6' },
+  { id: 'l6-listen', glyph: '听', title: 'Hallás: tudok kínaiul',
+    desc: 'A 6. lecke mondatai hang után.',
+    module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l6&round=listen' },
+  { id: 'l6-read', glyph: '读', title: 'Olvasás: Tudok kínaiul',
+    desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l6&round=read' },
+
+  // ── 7. lecke ──
+  { id: 'l7-lesson', glyph: '号', title: 'Magyarázat: dátum, a hét napjai, 去 + hely',
+    desc: 'Hányadika van, milyen nap, és hová mész valamit csinálni.',
+    module: 'lesson', href: 'pages/lesson.html?id=l7' },
+  { id: 'l7-listen', glyph: '听', title: 'Hallás: dátumok és tervek',
+    desc: 'A 7. lecke mondatai hang után.',
+    module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l7&round=listen' },
+  { id: 'l7-read', glyph: '读', title: 'Olvasás: Az én vasárnapom',
+    desc: 'Rövid szöveg, utána négy kérdés a tartalmáról.',
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l7&round=read' },
+
+  // ── 8. lecke ──
+  { id: 'l8-lesson', glyph: '钱', title: 'Magyarázat: 想, mérőszavak, 多少钱',
+    desc: 'Mit szeretnél, mennyibe kerül, hogyan számolsz mérőszóval.',
+    module: 'lesson', href: 'pages/lesson.html?id=l8' },
+  { id: 'l8-listen', glyph: '听', title: 'Hallás: vásárlás',
+    desc: 'A 8. lecke mondatai hang után.',
+    module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l8&round=listen' },
+  { id: 'l8-read', glyph: '读', title: 'Olvasás: A boltban',
+    desc: 'Rövid szöveg, utána négy kérdés a tartalmáról.',
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l8&round=read' }
 ];
 
 const HANZIFLOW_PATH_UNITS = [
@@ -99,5 +132,11 @@ const HANZIFLOW_PATH_UNITS = [
   { id: 'u-l4', kicker: 'HSK 1 · 4. lecke', title: 'Ki ő?', sub: '谁, 哪, 的, 呢; tanár, osztálytárs, barát',
     steps: ['l4-lesson', 'l4-listen', 'l4-read'] },
   { id: 'u-l5', kicker: 'HSK 1 · 5. lecke', title: 'Család és életkor', sub: '几, 有, számok százig, 了, 多大',
-    steps: ['l5-lesson', 'l5-listen', 'l5-read'] }
+    steps: ['l5-lesson', 'l5-listen', 'l5-read'] },
+  { id: 'u-l6', kicker: 'HSK 1 · 6. lecke', title: 'Mit tudsz?', sub: '会, 很 + melléknév, 怎么, 一点儿',
+    steps: ['l6-lesson', 'l6-listen', 'l6-read'] },
+  { id: 'u-l7', kicker: 'HSK 1 · 7. lecke', title: 'Hányadika van ma?', sub: 'Dátum, a hét napjai, 去 + hely + cselekvés',
+    steps: ['l7-lesson', 'l7-listen', 'l7-read'] },
+  { id: 'u-l8', kicker: 'HSK 1 · 8. lecke', title: 'Mit kérsz?', sub: '想, mérőszavak, 多少钱, 这 / 那',
+    steps: ['l8-lesson', 'l8-listen', 'l8-read'] }
 ];
