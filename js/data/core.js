@@ -557,7 +557,29 @@ const HANZIFLOW_PATH = [
     module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l48&round=listen' },
   { id: 'l48-read', glyph: '读', title: 'Olvasás: Az első gombócaim',
     desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
-    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l48&round=read' }
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l48&round=read' },
+
+  // ── HSK 3 · 19. lecke ──
+  { id: 'l49-lesson', glyph: '原', title: 'Magyarázat: 好像, 听说 / 据说, 本来, 只好, 原来',
+    desc: 'Változott a terv: úgy tűnik, azt mondják, eredetileg, kénytelen, kiderült.',
+    module: 'lesson', href: 'pages/lesson.html?id=l49' },
+  { id: 'l49-listen', glyph: '听', title: 'Hallás: szélvihar',
+    desc: 'A lecke mondatai hang után: mit jelent, amit hallasz?',
+    module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l49&round=listen' },
+  { id: 'l49-read', glyph: '读', title: 'Olvasás: Változott a terv',
+    desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l49&round=read' },
+
+  // ── HSK 3 · 20. lecke ──
+  { id: 'l50-lesson', glyph: '友', title: 'Magyarázat: 自己, 互相, 舍不得, 一天比一天, 希望',
+    desc: 'Két év után: egyedül is megy, segítünk egymásnak, nehéz megválni, remélem….',
+    module: 'lesson', href: 'pages/lesson.html?id=l50' },
+  { id: 'l50-listen', glyph: '听', title: 'Hallás: búcsúvacsora',
+    desc: 'A lecke mondatai hang után: mit jelent, amit hallasz?',
+    module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l50&round=listen' },
+  { id: 'l50-read', glyph: '读', title: 'Olvasás: Két év Pekingben',
+    desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l50&round=read' }
 ];
 
 const HANZIFLOW_PATH_UNITS = [
@@ -658,5 +680,9 @@ const HANZIFLOW_PATH_UNITS = [
   { id: 'u-l47', kicker: 'HSK 3 · 17. lecke', title: 'Egy cikk a teáról', sub: '对…来说, 关于, 对身体好, 向他学习, 跟老板聊聊',
     steps: ['l47-lesson', 'l47-listen', 'l47-read'] },
   { id: 'u-l48', kicker: 'HSK 3 · 18. lecke', title: 'Lassan, gondosan', sub: '慢慢地, 干干净净, 总是 / 一般, 终于 / 最后, 再 / 又 / 还',
-    steps: ['l48-lesson', 'l48-listen', 'l48-read'] }
+    steps: ['l48-lesson', 'l48-listen', 'l48-read'] },
+  { id: 'u-l49', kicker: 'HSK 3 · 19. lecke', title: 'Változott a terv', sub: '好像, 据说, 本来…可是…, 只好, 原来 (kiderült / régen)',
+    steps: ['l49-lesson', 'l49-listen', 'l49-read'] },
+  { id: 'u-l50', kicker: 'HSK 3 · 20. lecke', title: 'Igyunk a barátságra!', sub: '自己, 互相, 舍不得, 一天比一天, 希望',
+    steps: ['l50-lesson', 'l50-listen', 'l50-read'] }
 ];
