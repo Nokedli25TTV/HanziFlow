@@ -34,7 +34,7 @@ mellette **gyakorló modulok**, **időzített ismétlés** és **statisztika**.
 
 ```
 index.html            kezdőlap: szintválasztó / „Folytatás", napi cél, ismétlés, a tanulási út térképe
-pages/lesson.html     lecke (?id=l0…l8 · &round=listen | read · ?review=1 = napi ismétlés)
+pages/lesson.html     lecke (?id=l0…l11 · &round=listen | read · ?review=1 = napi ismétlés)
 pages/tones.html      Tónus-tréner (hallás után · jelölés · szópárok)
 pages/modules.html    a modulok kártyái („Szabad gyakorlás")
 pages/stats.html      statisztika · login.html · register.html
@@ -76,7 +76,7 @@ Színt csak tokenből; 12 px alatt nincs szöveg; érintési célpont ≥ 44 px;
 
 ## 7. Nyitott
 
-- [ ] További HSK 1 leckék (6–15), majd HSK 2–3. (Kész: előkészítő + 1–8.)
+- [ ] További HSK 1 leckék (6–15), majd HSK 2–3. (Kész: előkészítő + 1–11.)
 - [ ] Modulok: Pinyin-tábla, Mérőszavak, Mondat-Mester, Dátum/idő/pénz, dolgozatok, HSK-próbavizsga.
 - [ ] A NihonCore `sw.js`-ében a cache-törlést a saját előtagra kell szűkíteni (különben a HanziFlow offline-tárát is törli).
 - [ ] Firestore-szabály a `users/{uid}/apps/{app}` helyre (a user Firebase-konzolján).

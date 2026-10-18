@@ -1873,6 +1873,623 @@ const HANZIFLOW_COURSE = [
     { q: 'Mit jelent: {两杯茶|liǎng bēi chá}？', a: 'két csésze tea', wrong: ['két teáskanna', 'második tea', 'tizenkét tea'], why: '{两|liǎng} „kettő" + {杯|bēi} „csésze" + {茶|chá}.', point: 2 },
     { q: 'Melyik mondat hibás?', a: '{我|wǒ}{想|xiǎng}{买|mǎi}{三|sān}{杯子|bēi·zi}。', wrong: ['{我|wǒ}{想|xiǎng}{买|mǎi}{三|sān}{个|ge}{杯子|bēi·zi}。', '{我|wǒ}{想|xiǎng}{喝|hē}{一|yì}{杯|bēi}{茶|chá}。', '{他|tā}{有|yǒu}{两|liǎng}{本|běn}{书|shū}。'], why: 'Hiányzik a mérőszó: {三个杯子|sān ge bēizi}.', point: 2 }
   ]
+},
+
+/* ════════════════════════════════════════════════════
+   9. LECKE — 在 (lenni valahol, valahol csinálni), 哪儿
+   ════════════════════════════════════════════════════ */
+{
+  id: 'l9', no: 9, kicker: 'HSK 1 · 9. lecke',
+  title: 'Hol van? — hely és munkahely',
+  lead: 'Megkérdezed és megmondod, hol van valaki vagy valami, és hol csinál valaki valamit — például hol dolgozik. Mindkettőhöz ugyanaz a szó kell: a 在.',
+  cando: [
+    'Megmondod, hol van valaki vagy valami (小猫在椅子下面).',
+    'Megkérdezed: hol? (在哪儿？), és rámutatsz: itt, ott (这儿, 那儿).',
+    'Elmondod, hol csinál valaki valamit (他在医院工作).',
+    'A 呢-vel megkérdezed, hol van valaki (你爸爸呢？).'
+  ],
+  intro: [
+    'A magyar a helyet ragokkal fejezi ki („a kórház<i>ban</i>", „a szék <i>alatt</i>"). A kínai egyetlen szóval, a {在|zài}-val, és egy helyhatározó szóval a főnév <b>után</b>: {椅子下面|yǐzi xiàmiàn} „a szék alatt" (szó szerint „szék alsó oldala").',
+    'A {在|zài} kétféleképpen áll: önálló igeként „valahol van" ({他在家|tā zài jiā} „otthon van"), és egy másik ige előtt, mint a helyszín bevezetője ({他在家工作|tā zài jiā gōngzuò} „otthon dolgozik"). A sorrend fontos: a hely <b>a cselekvés előtt</b> áll.'
+  ],
+  dialogue: {
+    title: 'Hol a cica?',
+    scene: 'Anna Wang Mingéknél van. Keresi a házi cicát, akiről Wang Ming annyit mesélt.',
+    lines: [
+      { who: 'Anna', zh: '{王明|Wáng Míng}，{你|nǐ}{家|jiā}{的|de}{小猫|xiǎo māo}{呢|ne}？', hu: 'Wang Ming, és hol a cicátok?' },
+      { who: 'Wang Ming', zh: '{在|zài}{那儿|nàr}，{在|zài}{椅子|yǐ·zi}{下面|xià·miàn}。', hu: 'Ott van, a szék alatt.' },
+      { who: 'Anna', zh: '{你|nǐ}{爸爸|bà·ba}{在|zài}{家|jiā}{吗|ma}？', hu: 'Apukád itthon van?' },
+      { who: 'Wang Ming', zh: '{不|bú}{在|zài}。{他|tā}{在|zài}{医院|yī·yuàn}{工作|gōng·zuò}，{他|tā}{是|shì}{医生|yī·shēng}。', hu: 'Nincs itthon. A kórházban dolgozik, orvos.' },
+      { who: 'Anna', zh: '{你|nǐ}{妈妈|mā·ma}{呢|ne}？{她|tā}{在|zài}{哪儿|nǎr}{工作|gōng·zuò}？', hu: 'És anyukád? Ő hol dolgozik?' },
+      { who: 'Wang Ming', zh: '{她|tā}{在|zài}{一个|yí ge}{中学|zhōng·xué}{工作|gōng·zuò}，{她|tā}{是|shì}{老师|lǎo·shī}。', hu: 'Egy középiskolában dolgozik, tanárnő.' },
+      { who: 'Anna', zh: '{你|nǐ}{有|yǒu}{哥哥|gē·ge}{吗|ma}？{他|tā}{在|zài}{北京|Běi·jīng}{吗|ma}？', hu: 'Van bátyád? Ő Pekingben van?' },
+      { who: 'Wang Ming', zh: '{有|yǒu}，{他|tā}{在|zài}{上海|Shàng·hǎi}{工作|gōng·zuò}。', hu: 'Van, Sanghajban dolgozik.' }
+    ],
+    notes: [
+      'A {小猫|xiǎo māo} szó szerint „kis macska": a {小|xiǎo} „kicsi" a kicsinyítés legegyszerűbb módja, kedveskedő is.',
+      'A {不在|bú zài} „nincs ott, nincs itthon": a {在|zài} 4. tónusú, ezért a {不|bù} <i>bú</i>.',
+      'A {哪儿|nǎr} „hol, hová" r-esített szó (6. lecke): a {儿|ér} nem külön szótag. Dél-Kínában {哪里|nǎli}-t mondanak helyette.'
+    ]
+  },
+  points: [
+    {
+      title: '{在|zài} + hely', sub: 'valaki / valami valahol van',
+      pattern: 'A + {在|zài} + hely · A + {不在|bú zài} + hely',
+      body: 'Önálló igeként a {在|zài} azt mondja meg, <b>hol van</b> valaki vagy valami: {他在家|tā zài jiā} „otthon van", {小猫在椅子下面|xiǎo māo zài yǐzi xiàmiàn} „a cica a szék alatt van". A helyet nem rag, hanem a {在|zài} utáni helyhatározó jelöli. Tagadva {不在|bú zài}.',
+      more: [
+        'A {在|zài} az alanyt helyezi el: a dolog, amiről beszélsz, <b>ismert</b> (a cica, apukád), csak a helye a kérdés. Ha azt mondod el, <i>mi</i> van egy helyen, arra a {有|yǒu} kell (10. lecke).',
+        'Telefonban, ajtóban gyakori kérdés: {王老师在吗|Wáng lǎoshī zài ma}？ „Wang tanár úr itt van / elérhető?"'
+      ],
+      examples: [
+        { zh: '{我|wǒ}{在|zài}{家|jiā}。', hu: 'Otthon vagyok.' },
+        { zh: '{小猫|xiǎo māo}{在|zài}{椅子|yǐ·zi}{下面|xià·miàn}。', hu: 'A cica a szék alatt van.' },
+        { zh: '{我|wǒ}{爸爸|bà·ba}{不|bú}{在|zài}{北京|Běi·jīng}。', hu: 'Apukám nincs Pekingben.' },
+        { zh: '{张|Zhāng}{老师|lǎo·shī}{在|zài}{吗|ma}？', hu: 'Zhang tanárnő itt van?' }
+      ],
+      mistakes: [
+        { bad: '{我|wǒ}{是|shì}{在|zài}{家|jiā}。', good: '{我|wǒ}{在|zài}{家|jiā}。', why: 'A {在|zài} maga az ige: nem kell mellé {是|shì}.' },
+        { bad: '{我|wǒ}{没|méi}{在|zài}{北京|Běi·jīng}。', good: '{我|wǒ}{不|bú}{在|zài}{北京|Běi·jīng}。', why: 'Jelen helyzetre a {不在|bú zài} a természetes tagadás.' }
+      ]
+    },
+    {
+      title: '{哪儿|nǎr} · {这儿|zhèr} · {那儿|nàr}', sub: 'hol? — itt — ott',
+      pattern: '… {在|zài}{哪儿|nǎr}？ → … {在|zài}{这儿|zhèr} / {那儿|nàr}。',
+      body: 'A {哪儿|nǎr} „hol, hová" kérdőszó, és mint minden kérdőszó, a válasz helyén áll: {你在哪儿|nǐ zài nǎr}？ „Hol vagy?" — {我在学校|wǒ zài xuéxiào} „Az iskolában vagyok." Párjai: {这儿|zhèr} „itt (közel)" és {那儿|nàr} „ott (távol)".',
+      more: [
+        'Figyelj a tónusokra: {哪儿|nǎr} „hol?" 3. tónus, {那儿|nàr} „ott" 4. tónus, {这儿|zhèr} „itt" 4. tónus. Ugyanaz a tónus-különbség, mint a {哪|nǎ} „melyik" és a {那|nà} „az" között.',
+        'R nélküli megfelelőik (Dél-Kínában és írásban gyakoribbak): {哪里|nǎli}, {这里|zhèli}, {那里|nàli}.'
+      ],
+      tables: [
+        { caption: 'Hol? Itt, ott',
+          head: ['', 'Pekingi (r-esített)', 'Déli / írott'],
+          rows: [
+            ['hol?', '{哪儿|nǎr}', '{哪里|nǎ·li}'],
+            ['itt', '{这儿|zhèr}', '{这里|zhè·li}'],
+            ['ott', '{那儿|nàr}', '{那里|nà·li}']
+          ] }
+      ],
+      examples: [
+        { zh: '{你|nǐ}{在|zài}{哪儿|nǎr}？', hu: 'Hol vagy?' },
+        { zh: '{我|wǒ}{的|de}{书|shū}{在|zài}{这儿|zhèr}。', hu: 'Itt a könyvem.' },
+        { zh: '{你|nǐ}{去|qù}{哪儿|nǎr}？', hu: 'Hová mész?' }
+      ],
+      mistakes: [
+        { bad: '{哪儿|nǎr}{你|nǐ}{在|zài}？', good: '{你|nǐ}{在|zài}{哪儿|nǎr}？', why: 'A kérdőszó a helyén marad: a {在|zài} után.' }
+      ]
+    },
+    {
+      title: '{在|zài} + hely + ige', sub: 'hol csinál valaki valamit',
+      pattern: 'A + {在|zài} + hely + ige (+ tárgy)',
+      body: 'Ha azt mondod el, <b>hol történik</b> egy cselekvés, a {在|zài} + hely a fő ige <b>elé</b> kerül: {他在医院工作|tā zài yīyuàn gōngzuò} „a kórházban dolgozik", {我在家看书|wǒ zài jiā kàn shū} „otthon olvasok". A sorrend kötött: előbb a hely, aztán a cselekvés.',
+      more: [
+        'Kérdés: {你在哪儿工作|nǐ zài nǎr gōngzuò}？ „Hol dolgozol?", {你在哪儿学汉语|nǐ zài nǎr xué Hànyǔ}？ „Hol tanulsz kínaiul?"',
+        'Ilyenkor a {在|zài} olyan, mint egy elöljárószó („-ban/-ben"); a tagadás a {在|zài} elé kerül: {他不在医院工作|tā bú zài yīyuàn gōngzuò} „nem a kórházban dolgozik".'
+      ],
+      examples: [
+        { zh: '{他|tā}{在|zài}{医院|yī·yuàn}{工作|gōng·zuò}。', hu: 'A kórházban dolgozik.' },
+        { zh: '{你|nǐ}{在|zài}{哪儿|nǎr}{工作|gōng·zuò}？', hu: 'Hol dolgozol?' },
+        { zh: '{我|wǒ}{在|zài}{学校|xué·xiào}{学|xué}{汉语|Hàn·yǔ}。', hu: 'Az iskolában tanulok kínaiul.' },
+        { zh: '{我|wǒ}{儿子|ér·zi}{在|zài}{北京|Běi·jīng}{工作|gōng·zuò}。', hu: 'A fiam Pekingben dolgozik.' }
+      ],
+      mistakes: [
+        { bad: '{他|tā}{工作|gōng·zuò}{在|zài}{医院|yī·yuàn}。', good: '{他|tā}{在|zài}{医院|yī·yuàn}{工作|gōng·zuò}。', why: 'A helyhatározó az ige elé kerül, nem utána (mint az angolban).' }
+      ],
+      tip: 'Magyarul úgy jegyezd meg: „ő a-kórházban dolgozik" — a hely előbb jön, mint a cselekvés.'
+    },
+    {
+      title: '{下面|xiàmiàn} · {上面|shàngmiàn} · {里面|lǐmiàn}', sub: 'helyhatározó szavak: a főnév után',
+      pattern: 'főnév + {下面|xià·miàn} / {上面|shàng·miàn} / {里面|lǐ·miàn}',
+      body: 'A „-ban, -on, alatt" jelentést a kínai egy <b>a főnév után álló</b> helyszóval fejezi ki: {椅子下面|yǐzi xiàmiàn} „a szék alatt", {桌子上面|zhuōzi shàngmiàn} „az asztalon", {家里面|jiā lǐmiàn} „a házban". A magyarral egyezik a sorrend: előbb a tárgy, aztán a viszony („a szék <i>alatt</i>").',
+      more: [
+        'A rövid alakok is gyakoriak: {桌子上|zhuōzi shàng} „az asztalon", {家里|jiā li} „otthon, a házban" (a {里|lǐ} itt semleges tónusú).',
+        'Országnév és városnév után nem kell helyszó: {在中国|zài Zhōngguó}, {在北京|zài Běijīng}. Tárgy után viszont igen: {在桌子上|zài zhuōzi shàng}, nem *{在桌子|zài zhuōzi}.'
+      ],
+      tables: [
+        { caption: 'Helyszavak',
+          head: ['Helyszó', 'Jelentés', 'Példa'],
+          rows: [
+            ['{上面|shàng·miàn} / {上|shàng}', 'rajta, fölötte', '{桌子上|zhuō·zi shàng} az asztalon'],
+            ['{下面|xià·miàn}', 'alatta', '{椅子下面|yǐ·zi xià·miàn} a szék alatt'],
+            ['{里面|lǐ·miàn} / {里|li}', 'benne', '{家里|jiā li} otthon, a házban'],
+            ['{前面|qián·miàn}', 'előtte', '{学校前面|xué·xiào qián·miàn} az iskola előtt'],
+            ['{后面|hòu·miàn}', 'mögötte', '{商店后面|shāng·diàn hòu·miàn} a bolt mögött']
+          ] }
+      ],
+      examples: [
+        { zh: '{小猫|xiǎo māo}{在|zài}{椅子|yǐ·zi}{下面|xià·miàn}。', hu: 'A cica a szék alatt van.' },
+        { zh: '{我|wǒ}{的|de}{书|shū}{在|zài}{桌子|zhuō·zi}{上|shàng}。', hu: 'A könyvem az asztalon van.' }
+      ],
+      mistakes: [
+        { bad: '{在|zài}{下面|xià·miàn}{椅子|yǐ·zi}', good: '{在|zài}{椅子|yǐ·zi}{下面|xià·miàn}', why: 'A helyszó a főnév után áll.' }
+      ]
+    },
+    {
+      title: '{呢|ne}', sub: '„hol van…?" — {小猫|xiǎo māo}{呢|ne}？',
+      pattern: 'főnév + {呢|ne}？（beszélgetés elején）',
+      body: 'Ha egy főnév után egymagában, a beszélgetés elején áll a {呢|ne}, azt kérdezi: <b>hol van?</b> {小猫呢|xiǎo māo ne}？ „Hol a cica?", {你的书呢|nǐ de shū ne}？ „Hol a könyved?" Ez a kérdés természetesebb és rövidebb, mint a {…在哪儿|… zài nǎr}？',
+      more: [
+        'A 4. leckében a {呢|ne} visszakérdezett („és te?"). A két jelentés a helyzetből válik szét: ha előtte már mondtál valamit ({我很好，你呢|wǒ hěn hǎo, nǐ ne}？), visszakérdez; ha a beszélgetés elején jön, a hollétre kérdez.'
+      ],
+      examples: [
+        { zh: '{小猫|xiǎo māo}{呢|ne}？', hu: 'Hol a cica?' },
+        { zh: '{你|nǐ}{爸爸|bà·ba}{呢|ne}？', hu: 'Hol van apukád?' },
+        { zh: '{我|wǒ}{的|de}{杯子|bēi·zi}{呢|ne}？', hu: 'Hol a bögrém?' }
+      ]
+    }
+  ],
+  phrases: [
+    { zh: '{你|nǐ}{在|zài}{哪儿|nǎr}？', hu: 'Hol vagy?' },
+    { zh: '{你|nǐ}{在|zài}{哪儿|nǎr}{工作|gōng·zuò}？', hu: 'Hol dolgozol?' },
+    { zh: '{在|zài}{这儿|zhèr}。', hu: 'Itt (van).' },
+    { zh: '{他|tā}{不|bú}{在|zài}。', hu: 'Nincs itt.' }
+  ],
+  words: [
+    { title: 'Szavak',
+      items: [
+        { zh: '{小|xiǎo}', pinyin: 'xiǎo', hu: 'kicsi' },
+        { zh: '{猫|māo}', pinyin: 'māo', hu: 'macska' },
+        { zh: '{在|zài}', pinyin: 'zài', hu: 'van valahol; -ban/-ben' },
+        { zh: '{那儿|nàr}', pinyin: 'nàr', hu: 'ott' },
+        { zh: '{狗|gǒu}', pinyin: 'gǒu', hu: 'kutya' },
+        { zh: '{椅子|yǐ·zi}', pinyin: 'yǐzi', hu: 'szék' },
+        { zh: '{下面|xià·miàn}', pinyin: 'xiàmiàn', hu: 'alatt, lent' },
+        { zh: '{哪儿|nǎr}', pinyin: 'nǎr', hu: 'hol, hová' },
+        { zh: '{工作|gōng·zuò}', pinyin: 'gōngzuò', hu: 'dolgozni; munka' },
+        { zh: '{儿子|ér·zi}', pinyin: 'érzi', hu: 'fia valakinek' },
+        { zh: '{医院|yī·yuàn}', pinyin: 'yīyuàn', hu: 'kórház' },
+        { zh: '{医生|yī·shēng}', pinyin: 'yīshēng', hu: 'orvos' },
+        { zh: '{爸爸|bà·ba}', pinyin: 'bàba', hu: 'apa' }
+      ] },
+    { title: 'Ráadás',
+      items: [
+        { zh: '{这儿|zhèr}', pinyin: 'zhèr', hu: 'itt' },
+        { zh: '{桌子|zhuō·zi}', pinyin: 'zhuōzi', hu: 'asztal' },
+        { zh: '{上海|Shàng·hǎi}', pinyin: 'Shànghǎi', hu: 'Sanghaj' },
+        { zh: '{中学|zhōng·xué}', pinyin: 'zhōngxué', hu: 'középiskola' },
+        { zh: '{哥哥|gē·ge}', pinyin: 'gēge', hu: 'báty' }
+      ] }
+  ],
+  culture: [
+    { title: 'A háziállatok', text: 'A városi Kínában a macska és a kiskutya ma ugyanolyan kedvelt, mint nálunk. A kutya a kínai állatöv egyik jegye is. A {狗|gǒu} „kutya" szó viszont sértésekben is gyakori, ezért emberre mondva kerüld.' },
+    { title: 'Ahol a család dolgozik', text: 'Kínában sokan a szülőföldjüktől messze dolgoznak: vidékről a nagyvárosokba, északról a déli gyárvárosokba. A családtagok gyakran csak a nagy ünnepeken látják egymást, a nagyszülők nevelik az unokákat. Ezért kerül a beszélgetésben hamar elő a kérdés: {你家人在哪儿|nǐ jiārén zài nǎr}？ „Hol él a családod?"' }
+  ],
+  reading: {
+    title: '{我|wǒ}{的|de}{家|jiā}', titleHu: 'Az én családom',
+    text: [
+      { zh: '{我|wǒ}{叫|jiào}{王明|Wáng Míng}，{我|wǒ}{家|jiā}{在|zài}{北京|Běi·jīng}。', hu: 'Wang Mingnek hívnak, a családom Pekingben él.' },
+      { zh: '{我|wǒ}{爸爸|bà·ba}{是|shì}{医生|yī·shēng}，{他|tā}{在|zài}{医院|yī·yuàn}{工作|gōng·zuò}。', hu: 'Apukám orvos, kórházban dolgozik.' },
+      { zh: '{我|wǒ}{妈妈|mā·ma}{是|shì}{老师|lǎo·shī}，{她|tā}{在|zài}{中学|zhōng·xué}{工作|gōng·zuò}。', hu: 'Anyukám tanár, középiskolában dolgozik.' },
+      { zh: '{我|wǒ}{哥哥|gē·ge}{不|bú}{在|zài}{北京|Běi·jīng}，{他|tā}{在|zài}{上海|Shàng·hǎi}{工作|gōng·zuò}。', hu: 'A bátyám nincs Pekingben, Sanghajban dolgozik.', par: true },
+      { zh: '{我|wǒ}{家|jiā}{有|yǒu}{一|yì}{只|zhī}{小猫|xiǎo māo}，{它|tā}{很|hěn}{小|xiǎo}。', hu: 'Van egy kiscicánk, nagyon kicsi.', par: true },
+      { zh: '{它|tā}{喜欢|xǐ·huan}{在|zài}{椅子|yǐ·zi}{下面|xià·miàn}{睡觉|shuì·jiào}。', hu: 'Szeret a szék alatt aludni.' }
+    ],
+    words: [ { zh: '{只|zhī}', hu: 'állatok mérőszava' }, { zh: '{它|tā}', hu: 'ő (állat, tárgy)' }, { zh: '{喜欢|xǐ·huan}', hu: 'szeret' }, { zh: '{睡觉|shuì·jiào}', hu: 'aludni' } ],
+    questions: [
+      { q: 'Hol dolgozik Wang Ming apja?', a: 'kórházban', wrong: ['középiskolában', 'Sanghajban', 'otthon'], why: '{他在医院工作|tā zài yīyuàn gōngzuò}.' },
+      { q: 'Mi Wang Ming anyjának a foglalkozása?', a: 'tanár', wrong: ['orvos', 'diák', 'nem derül ki'], why: '{我妈妈是老师|wǒ māma shì lǎoshī}.' },
+      { q: 'Hol dolgozik a báty?', a: 'Sanghajban', wrong: ['Pekingben', 'kórházban', 'otthon'], why: '{他在上海工作|tā zài Shànghǎi gōngzuò}.' },
+      { q: 'Hol szeret aludni a cica?', a: 'a szék alatt', wrong: ['az asztalon', 'a kórházban', 'a báty szobájában'], why: '{它喜欢在椅子下面睡觉|tā xǐhuan zài yǐzi xiàmiàn shuìjiào}.' }
+    ]
+  },
+  quiz: [
+    { q: '„Otthon vagyok."', a: '{我|wǒ}{在|zài}{家|jiā}。', wrong: ['{我|wǒ}{是|shì}{家|jiā}。', '{我|wǒ}{是|shì}{在|zài}{家|jiā}。', '{我|wǒ}{家|jiā}{在|zài}。'], why: 'A {在|zài} maga az ige: „valahol van".', point: 1 },
+    { q: 'Hogyan tagadod: {他在家|tā zài jiā}?', a: '{他|tā}{不|bú}{在|zài}{家|jiā}。', wrong: ['{他|tā}{在|zài}{不|bù}{家|jiā}。', '{他|tā}{不是|bú shì}{家|jiā}。', '{不|bù}{他|tā}{在|zài}{家|jiā}。'], why: '{不|bù} a {在|zài} elé; a {在|zài} 4. tónusú, ezért <i>bú</i>.', point: 1 },
+    { q: 'Mit jelent: {张老师在吗|Zhāng lǎoshī zài ma}？', a: 'Zhang tanárnő itt van (elérhető)?', wrong: ['Zhang tanárnő tanár?', 'Hol tanít Zhang tanárnő?', 'Zhang tanárnő otthon dolgozik?'], why: '{在|zài} + {吗|ma}: „itt van?"', point: 1 },
+    { q: 'Hogyan kérdezed: „Hol vagy?"', a: '{你|nǐ}{在|zài}{哪儿|nǎr}？', wrong: ['{哪儿|nǎr}{你|nǐ}{在|zài}？', '{你|nǐ}{在|zài}{哪儿|nǎr}{吗|ma}？', '{你|nǐ}{是|shì}{哪儿|nǎr}？'], why: 'A kérdőszó a {在|zài} után, {吗|ma} nélkül.', point: 2 },
+    { q: 'Melyik jelenti: „ott"?', a: '{那儿|nàr}', wrong: ['{哪儿|nǎr}', '{这儿|zhèr}', '{在|zài}'], why: '{那儿|nàr} 4. tónus „ott"; {哪儿|nǎr} 3. tónus „hol?".', point: 2 },
+    { q: '„A kórházban dolgozik." — melyik a helyes?', a: '{他|tā}{在|zài}{医院|yī·yuàn}{工作|gōng·zuò}。', wrong: ['{他|tā}{工作|gōng·zuò}{在|zài}{医院|yī·yuàn}。', '{他|tā}{医院|yī·yuàn}{在|zài}{工作|gōng·zuò}。', '{在|zài}{他|tā}{医院|yī·yuàn}{工作|gōng·zuò}。'], why: '{在|zài} + hely az ige elé kerül.', point: 3 },
+    { q: 'Hogyan kérdezed: „Hol dolgozol?"', a: '{你|nǐ}{在|zài}{哪儿|nǎr}{工作|gōng·zuò}？', wrong: ['{你|nǐ}{工作|gōng·zuò}{在|zài}{哪儿|nǎr}？', '{你|nǐ}{哪儿|nǎr}{工作|gōng·zuò}{在|zài}？', '{哪儿|nǎr}{你|nǐ}{工作|gōng·zuò}？'], why: '{在哪儿|zài nǎr} az ige előtt.', point: 3 },
+    { q: 'Mit jelent: {我在学校学汉语|wǒ zài xuéxiào xué Hànyǔ}。', a: 'Az iskolában tanulok kínaiul.', wrong: ['Iskolába megyek kínait tanulni.', 'Kínai iskolába járok.', 'A kínai iskolában tanítok.'], why: '{在学校|zài xuéxiào} „az iskolában" + {学汉语|xué Hànyǔ}.', point: 3 },
+    { q: '„a szék alatt"', a: '{椅子|yǐ·zi}{下面|xià·miàn}', wrong: ['{下面|xià·miàn}{椅子|yǐ·zi}', '{椅子|yǐ·zi}{上面|shàng·miàn}', '{在|zài}{下面|xià·miàn}'], why: 'A helyszó a főnév után áll.', point: 4 },
+    { q: 'Mit jelent: {书在桌子上|shū zài zhuōzi shàng}。', a: 'A könyv az asztalon van.', wrong: ['A könyv az asztal alatt van.', 'Az asztalon van egy könyv?', 'Az asztal a könyvön van.'], why: '{桌子上|zhuōzi shàng} „az asztalon".', point: 4 },
+    { q: 'Mit kérdez a beszélgetés elején: {小猫呢|xiǎo māo ne}？', a: 'Hol a cica?', wrong: ['És a cica?', 'Kicsi a cica?', 'Van cicád?'], why: 'Beszélgetés elején a {呢|ne} a hollétre kérdez.', point: 5 },
+    { q: 'Mit jelent a {医生|yīshēng}?', a: 'orvos', wrong: ['kórház', 'beteg', 'tanár'], why: '{医生|yīshēng} „orvos", {医院|yīyuàn} „kórház".' },
+    { q: 'Mit jelent a {工作|gōngzuò}?', a: 'dolgozni; munka', wrong: ['iskola', 'tanulni', 'pihenni'], why: 'Igeként és főnévként is használható.', point: 3 },
+    { q: 'Melyik mondat hibás?', a: '{我|wǒ}{是|shì}{在|zài}{北京|Běi·jīng}。', wrong: ['{我|wǒ}{在|zài}{北京|Běi·jīng}。', '{我|wǒ}{在|zài}{北京|Běi·jīng}{工作|gōng·zuò}。', '{我|wǒ}{不|bú}{在|zài}{北京|Běi·jīng}。'], why: 'A {在|zài} mellé nem kell {是|shì}.', point: 1 },
+    { q: 'Mi a {哪儿|nǎr} r nélküli (déli, írott) párja?', a: '{哪里|nǎ·li}', wrong: ['{那里|nà·li}', '{这里|zhè·li}', '{哪|nǎ}'], why: '{哪儿|nǎr} = {哪里|nǎli} „hol?"', point: 2 },
+    { q: 'Melyik a helyes: „Kínában dolgozik"?', a: '{他|tā}{在|zài}{中国|Zhōng·guó}{工作|gōng·zuò}。', wrong: ['{他|tā}{在|zài}{中国|Zhōng·guó}{里|li}{工作|gōng·zuò}。', '{他|tā}{工作|gōng·zuò}{中国|Zhōng·guó}。', '{他|tā}{在|zài}{工作|gōng·zuò}{中国|Zhōng·guó}。'], why: 'Országnév után nem kell helyszó; a hely az ige előtt.', point: 4 }
+  ]
+},
+
+/* ════════════════════════════════════════════════════
+   10. LECKE — hely + 有, 和, 能, 请
+   ════════════════════════════════════════════════════ */
+{
+  id: 'l10', no: 10, kicker: 'HSK 1 · 10. lecke',
+  title: 'Szabad ide ülnöm? — mi van hol, és szabad-e',
+  lead: 'Elmondod, mi található egy helyen (桌子上有一个电脑), felsorolsz (和), udvariasan kérsz (请), és megkérdezed, szabad-e valamit (我能坐这儿吗？).',
+  cando: [
+    'Elmondod, mi van valahol: hely + 有 + dolog.',
+    'Főneveket kapcsolsz össze a 和 szóval.',
+    'Engedélyt kérsz és adsz a 能 segédigével.',
+    'Udvariasan kínálsz és kérsz: 请坐, 请喝茶.'
+  ],
+  intro: [
+    'Az előző leckében a {在|zài}-val egy <b>ismert</b> dolgot helyeztél el („a cica a szék alatt van"). Most a fordított irányt tanulod: egy helyről mondod meg, <b>mi van ott</b>. Ehhez a {有|yǒu} kell, és a mondat a hellyel kezdődik: {桌子上有一个电脑|zhuōzi shàng yǒu yí ge diànnǎo} „az asztalon van egy számítógép".',
+    'A {能|néng} a második „tud" szó: azt jelenti, hogy valami <b>lehetséges vagy szabad</b>. A {请|qǐng} pedig a „kérem, tessék" — a kínai udvariasság alapszava.'
+  ],
+  dialogue: {
+    title: 'A könyvtárban',
+    scene: 'Anna a könyvtárban helyet keres. Egy asztalnál egy idősebb úr ül.',
+    lines: [
+      { who: 'Anna', zh: '{先生|xiān·sheng}，{我|wǒ}{能|néng}{坐|zuò}{这儿|zhèr}{吗|ma}？', hu: 'Uram, ideülhetek?' },
+      { who: 'Idős úr', zh: '{能|néng}，{请|qǐng}{坐|zuò}。', hu: 'Igen, tessék, üljön le.' },
+      { who: 'Anna', zh: '{谢谢|xiè·xie}。{桌子|zhuō·zi}{上|shàng}{的|de}{电脑|diàn·nǎo}{是|shì}{您|nín}{的|de}{吗|ma}？', hu: 'Köszönöm. Az asztalon lévő számítógép az öné?' },
+      { who: 'Idős úr', zh: '{不是|bú shì}，{这儿|zhèr}{有|yǒu}{很|hěn}{多|duō}{电脑|diàn·nǎo}，{都|dōu}{是|shì}{图书馆|tú·shū·guǎn}{的|de}。', hu: 'Nem, itt sok számítógép van, mind a könyvtáré.' },
+      { who: 'Anna', zh: '{这儿|zhèr}{有|yǒu}{汉语|Hàn·yǔ}{书|shū}{吗|ma}？', hu: 'Vannak itt kínai könyvek?' },
+      { who: 'Idős úr', zh: '{有|yǒu}。{在|zài}{前面|qián·miàn}，{电脑|diàn·nǎo}{和|hé}{桌子|zhuō·zi}{后面|hòu·miàn}。', hu: 'Vannak. Elöl, a számítógépek és az asztalok mögött.' },
+      { who: 'Anna', zh: '{太|tài}{好|hǎo}{了|le}！{谢谢|xiè·xie}{您|nín}！', hu: 'Nagyszerű! Köszönöm!' }
+    ],
+    notes: [
+      'A {先生|xiānsheng} „úr" udvarias megszólítás ismeretlen férfinak; nőnek a {女士|nǚshì} „hölgy" a megfelelője.',
+      'A {能|néng}-es kérdésre a rövid válasz a segédige: {能|néng} „lehet, szabad" / {不能|bù néng} „nem lehet".',
+      'A {太好了|tài hǎo le} „nagyszerű, de jó!" — a {太|tài}…{了|le} szerkezetet a 12. leckében tanulod.'
+    ]
+  },
+  points: [
+    {
+      title: 'hely + {有|yǒu}', sub: 'valahol van valami',
+      pattern: 'hely + {有|yǒu} + (szám + mérőszó) + dolog · hely + {没有|méi·yǒu} + dolog',
+      body: 'Ha azt mondod meg, mi található egy helyen, a mondat <b>a hellyel kezdődik</b>, utána {有|yǒu}, végül a dolog: {桌子上有一个电脑|zhuōzi shàng yǒu yí ge diànnǎo} „az asztalon van egy számítógép", {这儿有很多书|zhèr yǒu hěn duō shū} „itt sok könyv van". Tagadva {没有|méiyǒu}: {这儿没有汉语书|zhèr méiyǒu Hànyǔ shū} „itt nincs kínai könyv".',
+      more: [
+        'Ez ugyanaz a {有|yǒu}, mint az 5. leckében („van valamije"); itt a „birtokos" egy hely. A magyar „van … -n/-ban" fordítás nagyon természetes.',
+        'Kérdés: {这儿有汉语书吗|zhèr yǒu Hànyǔ shū ma}？ „Van itt kínai könyv?", vagy kérdőszóval: {桌子上有什么|zhuōzi shàng yǒu shénme}？ „Mi van az asztalon?"'
+      ],
+      tables: [
+        { caption: '{在|zài} vagy {有|yǒu}?',
+          head: ['', 'A dolog ismert, a hely kérdéses', 'A hely ismert, a dolog kérdéses'],
+          rows: [
+            ['szerkezet', 'dolog + {在|zài} + hely', 'hely + {有|yǒu} + dolog'],
+            ['példa', '{电脑|diàn·nǎo}{在|zài}{桌子|zhuō·zi}{上|shàng}。', '{桌子|zhuō·zi}{上|shàng}{有|yǒu}{电脑|diàn·nǎo}。'],
+            ['jelentés', 'A számítógép az asztalon van.', 'Az asztalon van egy számítógép.']
+          ] }
+      ],
+      examples: [
+        { zh: '{桌子|zhuō·zi}{上|shàng}{有|yǒu}{一个|yí ge}{电脑|diàn·nǎo}。', hu: 'Az asztalon van egy számítógép.' },
+        { zh: '{杯子|bēi·zi}{里|li}{有|yǒu}{茶|chá}。', hu: 'A bögrében tea van.' },
+        { zh: '{这儿|zhèr}{没有|méi·yǒu}{汉语|Hàn·yǔ}{书|shū}。', hu: 'Itt nincs kínai könyv.' },
+        { zh: '{学校|xué·xiào}{前面|qián·miàn}{有|yǒu}{一个|yí ge}{商店|shāng·diàn}。', hu: 'Az iskola előtt van egy bolt.' }
+      ],
+      mistakes: [
+        { bad: '{一个|yí ge}{电脑|diàn·nǎo}{在|zài}{桌子|zhuō·zi}{上|shàng}。', good: '{桌子|zhuō·zi}{上|shàng}{有|yǒu}{一个|yí ge}{电脑|diàn·nǎo}。', why: 'Ha a dolog új (egy számítógép), a {有|yǒu}-os szerkezet a természetes.' },
+        { bad: '{桌子|zhuō·zi}{上|shàng}{不|bù}{有|yǒu}{书|shū}。', good: '{桌子|zhuō·zi}{上|shàng}{没有|méi·yǒu}{书|shū}。', why: 'A {有|yǒu} tagadása mindig {没有|méiyǒu}.' }
+      ]
+    },
+    {
+      title: '{和|hé}', sub: '„és" — főnevek között',
+      pattern: 'A + {和|hé} + B',
+      body: 'A {和|hé} „és, valamint" főneveket és névmásokat kapcsol össze: {电脑和桌子|diànnǎo hé zhuōzi} „számítógépek és asztalok", {我和我朋友|wǒ hé wǒ péngyou} „én és a barátom". Több elemnél csak az utolsó elé kerül: {爸爸、妈妈和我|bàba, māma hé wǒ}.',
+      more: [
+        '🔴 A {和|hé} <b>nem köt össze mondatokat és igéket</b>, mint a magyar „és". „Olvasok és írok" nem *{我看书和写字|wǒ kàn shū hé xiě zì}; ilyenkor egyszerűen egymás mellé teszed: {我看书，写字|wǒ kàn shū, xiě zì}, vagy később tanult kötőszót használsz.',
+        'Jelentése „-val/-vel" is lehet: {我和朋友去商店|wǒ hé péngyou qù shāngdiàn} „a barátommal megyek a boltba".'
+      ],
+      examples: [
+        { zh: '{我|wǒ}{和|hé}{王明|Wáng Míng}{是|shì}{朋友|péng·you}。', hu: 'Wang Ming és én barátok vagyunk.' },
+        { zh: '{桌子|zhuō·zi}{上|shàng}{有|yǒu}{书|shū}{和|hé}{杯子|bēi·zi}。', hu: 'Az asztalon könyvek és bögrék vannak.' },
+        { zh: '{我|wǒ}{家|jiā}{有|yǒu}{爸爸|bà·ba}、{妈妈|mā·ma}{和|hé}{我|wǒ}。', hu: 'A családom: apa, anya és én.' }
+      ],
+      mistakes: [
+        { bad: '{我|wǒ}{喝|hē}{茶|chá}{和|hé}{看|kàn}{书|shū}。', good: '{我|wǒ}{喝|hē}{茶|chá}，{看|kàn}{书|shū}。', why: 'A {和|hé} nem köt össze igéket.' }
+      ]
+    },
+    {
+      title: '{能|néng}', sub: 'lehet, szabad — lehetőség és engedély',
+      pattern: 'A + {能|néng} + ige ？ · {能|néng}。/ {不能|bù néng}。',
+      body: 'A {能|néng} azt fejezi ki, hogy valami <b>lehetséges</b> vagy <b>szabad</b>: {我能坐这儿吗|wǒ néng zuò zhèr ma}？ „Ideülhetek?", {明天我不能去|míngtiān wǒ bù néng qù} „holnap nem tudok menni (mert nem lehetséges)". Tagadva {不能|bù néng}.',
+      more: [
+        'A {会|huì} (6. lecke) a <b>megtanult</b> tudást jelöli, a {能|néng} a <b>körülmények adta</b> lehetőséget vagy az engedélyt. {我会开车|wǒ huì kāi chē} „tudok vezetni (megtanultam)", de {今天我不能开车|jīntiān wǒ bù néng kāi chē} „ma nem vezethetek (pl. mert ittam)".',
+        'Engedélykérésre a {可以|kěyǐ} is jó, és udvariasabb: {我可以坐这儿吗|wǒ kěyǐ zuò zhèr ma}？'
+      ],
+      tables: [
+        { caption: '{会|huì} vagy {能|néng}?',
+          head: ['', '{会|huì}', '{能|néng}'],
+          rows: [
+            ['jelentés', 'megtanult tudás', 'lehetőség, engedély'],
+            ['példa', '{我|wǒ}{会|huì}{说|shuō}{汉语|Hàn·yǔ}。', '{我|wǒ}{能|néng}{坐|zuò}{这儿|zhèr}{吗|ma}？'],
+            ['magyarul', 'Tudok kínaiul.', 'Ideülhetek?']
+          ] }
+      ],
+      examples: [
+        { zh: '{我|wǒ}{能|néng}{坐|zuò}{这儿|zhèr}{吗|ma}？', hu: 'Ideülhetek?' },
+        { zh: '{能|néng}，{请|qǐng}{坐|zuò}。', hu: 'Igen, tessék, ülj le.' },
+        { zh: '{明天|míng·tiān}{我|wǒ}{不|bù}{能|néng}{去|qù}{学校|xué·xiào}。', hu: 'Holnap nem tudok iskolába menni.' }
+      ],
+      mistakes: [
+        { bad: '{我|wǒ}{能|néng}{说|shuō}{汉语|Hàn·yǔ}。（megtanultam）', good: '{我|wǒ}{会|huì}{说|shuō}{汉语|Hàn·yǔ}。', why: 'Megtanult nyelvtudásra a {会|huì} a természetes.' }
+      ]
+    },
+    {
+      title: '{请|qǐng}', sub: 'kérem, tessék — udvarias kérés és kínálás',
+      pattern: '{请|qǐng} + ige (+ tárgy)',
+      body: 'A {请|qǐng} egy ige elé téve udvarias kérést vagy kínálást fejez ki: {请坐|qǐng zuò} „foglaljon helyet", {请喝茶|qǐng hē chá} „tessék, igyon teát", {请进|qǐng jìn} „tessék, jöjjön be". Ugyanez a szó van a {请问|qǐngwèn} „szabad kérdeznem" fordulatban.',
+      more: [
+        'A {请|qǐng} jelentése „meghívni" is: {我请你喝茶|wǒ qǐng nǐ hē chá} „meghívlak egy teára (én fizetek)". Ezt étteremben gyakran hallod.',
+        'A {请|qǐng} a mondat elején áll, a {吗|ma} helyett nem kérdez: felszólít, csak kedvesen.'
+      ],
+      examples: [
+        { zh: '{请|qǐng}{坐|zuò}！', hu: 'Foglaljon helyet!' },
+        { zh: '{请|qǐng}{喝|hē}{茶|chá}。', hu: 'Tessék, igyon teát.' },
+        { zh: '{请问|qǐng·wèn}，{这儿|zhèr}{有|yǒu}{汉语|Hàn·yǔ}{书|shū}{吗|ma}？', hu: 'Elnézést, van itt kínai könyv?' }
+      ]
+    },
+    {
+      title: '{前面|qiánmiàn} · {后面|hòumiàn} · {里|lǐ}', sub: 'további helyszavak',
+      pattern: 'főnév + {前面|qián·miàn} / {后面|hòu·miàn} / {里|li} / {上|shàng}',
+      body: 'A 9. lecke helyszavai bővülnek: {前面|qiánmiàn} „előtte, elöl", {后面|hòumiàn} „mögötte, hátul", {里|lǐ} „benne", {上|shàng} „rajta". Mindig a főnév <b>után</b> állnak: {学校前面|xuéxiào qiánmiàn} „az iskola előtt", {杯子里|bēizi li} „a bögrében".',
+      more: [
+        'Önállóan is megállnak: {在前面|zài qiánmiàn} „elöl van", {后面有一个商店|hòumiàn yǒu yí ge shāngdiàn} „hátul van egy bolt".'
+      ],
+      examples: [
+        { zh: '{医院|yī·yuàn}{在|zài}{学校|xué·xiào}{后面|hòu·miàn}。', hu: 'A kórház az iskola mögött van.' },
+        { zh: '{汉语|Hàn·yǔ}{书|shū}{在|zài}{前面|qián·miàn}。', hu: 'A kínai könyvek elöl vannak.' }
+      ]
+    }
+  ],
+  phrases: [
+    { zh: '{我|wǒ}{能|néng}{坐|zuò}{这儿|zhèr}{吗|ma}？', hu: 'Ideülhetek?' },
+    { zh: '{请|qǐng}{坐|zuò}。', hu: 'Foglaljon helyet.' },
+    { zh: '{请|qǐng}{喝|hē}{茶|chá}。', hu: 'Tessék, egy kis tea.' },
+    { zh: '{这儿|zhèr}{有|yǒu}……{吗|ma}？', hu: 'Van itt …?' },
+    { zh: '{太|tài}{好|hǎo}{了|le}！', hu: 'Nagyszerű!' }
+  ],
+  words: [
+    { title: 'Szavak',
+      items: [
+        { zh: '{桌子|zhuō·zi}', pinyin: 'zhuōzi', hu: 'asztal' },
+        { zh: '{上|shàng}', pinyin: 'shàng', hu: 'rajta, fent' },
+        { zh: '{电脑|diàn·nǎo}', pinyin: 'diànnǎo', hu: 'számítógép' },
+        { zh: '{和|hé}', pinyin: 'hé', hu: 'és' },
+        { zh: '{本|běn}', pinyin: 'běn', hu: 'könyvek mérőszava' },
+        { zh: '{里|lǐ}', pinyin: 'lǐ', hu: 'benne' },
+        { zh: '{前面|qián·miàn}', pinyin: 'qiánmiàn', hu: 'előtte, elöl' },
+        { zh: '{后面|hòu·miàn}', pinyin: 'hòumiàn', hu: 'mögötte, hátul' },
+        { zh: '{这儿|zhèr}', pinyin: 'zhèr', hu: 'itt' },
+        { zh: '{没有|méi·yǒu}', pinyin: 'méiyǒu', hu: 'nincs' },
+        { zh: '{能|néng}', pinyin: 'néng', hu: 'lehet, szabad; képes' },
+        { zh: '{坐|zuò}', pinyin: 'zuò', hu: 'ülni' },
+        { zh: '{请|qǐng}', pinyin: 'qǐng', hu: 'kérem; meghívni' }
+      ] },
+    { title: 'Ráadás',
+      items: [
+        { zh: '{图书馆|tú·shū·guǎn}', pinyin: 'túshūguǎn', hu: 'könyvtár' },
+        { zh: '{先生|xiān·sheng}', pinyin: 'xiānsheng', hu: 'úr' },
+        { zh: '{都|dōu}', pinyin: 'dōu', hu: 'mind, mindnyájan' },
+        { zh: '{请问|qǐng·wèn}', pinyin: 'qǐngwèn', hu: 'szabad kérdeznem' }
+      ] }
+  ],
+  culture: [
+    { title: 'Vendégségben', text: 'Kínai otthonban a vendéget azonnal hellyel ({请坐|qǐng zuò}) és teával ({请喝茶|qǐng hē chá}) kínálják. Sok helyen cipőt is vesznek: figyeld, mit csinálnak a házigazdák. Ha valamit felajánlanak, udvarias egyszer-kétszer szerényen elhárítani, mielőtt elfogadod — a házigazda úgyis ragaszkodni fog hozzá.' },
+    { title: 'Ki fizet?', text: 'Kínában a közös étkezés után ritkán osztják el a számlát. A {我请你|wǒ qǐng nǐ} „én hívlak meg" gyakran kedves vitát indít arról, ki fizessen. A legközelebbi alkalommal illik viszonozni.' }
+  ],
+  reading: {
+    title: '{我|wǒ}{的|de}{房间|fáng·jiān}', titleHu: 'A szobám',
+    text: [
+      { zh: '{这|zhè}{是|shì}{我|wǒ}{的|de}{房间|fáng·jiān}。', hu: 'Ez a szobám.' },
+      { zh: '{房间|fáng·jiān}{里|li}{有|yǒu}{一|yì}{张|zhāng}{桌子|zhuō·zi}{和|hé}{两|liǎng}{把|bǎ}{椅子|yǐ·zi}。', hu: 'A szobában van egy asztal és két szék.' },
+      { zh: '{桌子|zhuō·zi}{上|shàng}{有|yǒu}{一个|yí ge}{电脑|diàn·nǎo}{和|hé}{三|sān}{本|běn}{汉语|Hàn·yǔ}{书|shū}。', hu: 'Az asztalon van egy számítógép és három kínai könyv.', par: true },
+      { zh: '{桌子|zhuō·zi}{下面|xià·miàn}{有|yǒu}{我|wǒ}{的|de}{小猫|xiǎo māo}。', hu: 'Az asztal alatt van a cicám.' },
+      { zh: '{我|wǒ}{的|de}{朋友|péng·you}{能|néng}{在|zài}{这儿|zhèr}{看|kàn}{书|shū}，{但是|dàn·shì}{不|bù}{能|néng}{喝|hē}{茶|chá}。', hu: 'A barátaim olvashatnak itt, de teát nem ihatnak.', par: true }
+    ],
+    words: [ { zh: '{房间|fáng·jiān}', hu: 'szoba' }, { zh: '{张|zhāng}', hu: 'lapos tárgyak mérőszava (asztal)' }, { zh: '{把|bǎ}', hu: 'fogós tárgyak mérőszava (szék)' }, { zh: '{但是|dàn·shì}', hu: 'de' } ],
+    questions: [
+      { q: 'Mi van a szobában?', a: 'egy asztal és két szék', wrong: ['két asztal és egy szék', 'csak egy számítógép', 'egy ágy és egy asztal'], why: '{一张桌子和两把椅子|yì zhāng zhuōzi hé liǎng bǎ yǐzi}.' },
+      { q: 'Hány kínai könyv van az asztalon?', a: 'három', wrong: ['kettő', 'egy', 'egy sem'], why: '{三本汉语书|sān běn Hànyǔ shū}.' },
+      { q: 'Hol van a cica?', a: 'az asztal alatt', wrong: ['az asztalon', 'a széken', 'a könyvtárban'], why: '{桌子下面有我的小猫|zhuōzi xiàmiàn yǒu wǒ de xiǎo māo}.' },
+      { q: 'Mit nem szabad a barátoknak a szobában?', a: 'teát inni', wrong: ['olvasni', 'leülni', 'számítógépezni'], why: '{不能喝茶|bù néng hē chá}.' }
+    ]
+  },
+  quiz: [
+    { q: '„Az asztalon van egy számítógép."', a: '{桌子|zhuō·zi}{上|shàng}{有|yǒu}{一个|yí ge}{电脑|diàn·nǎo}。', wrong: ['{一个|yí ge}{电脑|diàn·nǎo}{有|yǒu}{桌子|zhuō·zi}{上|shàng}。', '{有|yǒu}{电脑|diàn·nǎo}{桌子|zhuō·zi}{上|shàng}。', '{桌子|zhuō·zi}{有|yǒu}{上|shàng}{电脑|diàn·nǎo}。'], why: 'Hely + {有|yǒu} + dolog.', point: 1 },
+    { q: 'Hogyan tagadod: {这儿有汉语书|zhèr yǒu Hànyǔ shū}?', a: '{这儿|zhèr}{没有|méi·yǒu}{汉语|Hàn·yǔ}{书|shū}。', wrong: ['{这儿|zhèr}{不|bù}{有|yǒu}{汉语|Hàn·yǔ}{书|shū}。', '{这儿|zhèr}{有|yǒu}{不|bù}{汉语|Hàn·yǔ}{书|shū}。', '{这儿|zhèr}{不是|bú shì}{汉语|Hàn·yǔ}{书|shū}。'], why: 'A {有|yǒu} tagadása {没有|méiyǒu}.', point: 1 },
+    { q: 'Mi a különbség: {电脑在桌子上|diànnǎo zài zhuōzi shàng} / {桌子上有电脑|zhuōzi shàng yǒu diànnǎo}?', a: '{在|zài}: hol van az ismert gép · {有|yǒu}: mi van az asztalon', wrong: ['az első múlt idejű, a második jelen idejű mondat', 'az első kérdés, a második egy egyszerű állítás', 'semmi, teljesen azonos a jelentésük minden helyzetben'], why: '{在|zài}: ismert dolog helye; {有|yǒu}: mi van egy helyen.', point: 1 },
+    { q: '„Wang Ming és én barátok vagyunk."', a: '{我|wǒ}{和|hé}{王明|Wáng Míng}{是|shì}{朋友|péng·you}。', wrong: ['{我|wǒ}{王明|Wáng Míng}{和|hé}{是|shì}{朋友|péng·you}。', '{我|wǒ}{是|shì}{和|hé}{王明|Wáng Míng}{朋友|péng·you}。', '{和|hé}{我|wǒ}{王明|Wáng Míng}{朋友|péng·you}。'], why: 'A {和|hé} két főnevet köt össze.', point: 2 },
+    { q: 'Melyik mondat hibás?', a: '{我|wǒ}{喝|hē}{茶|chá}{和|hé}{看|kàn}{书|shū}。', wrong: ['{我|wǒ}{和|hé}{他|tā}{是|shì}{同学|tóng·xué}。', '{桌子|zhuō·zi}{上|shàng}{有|yǒu}{书|shū}{和|hé}{杯子|bēi·zi}。', '{爸爸|bà·ba}{和|hé}{妈妈|mā·ma}{在|zài}{家|jiā}。'], why: 'A {和|hé} nem köt össze igéket.', point: 2 },
+    { q: '„Ideülhetek?"', a: '{我|wǒ}{能|néng}{坐|zuò}{这儿|zhèr}{吗|ma}？', wrong: ['{我|wǒ}{会|huì}{坐|zuò}{这儿|zhèr}{吗|ma}？', '{我|wǒ}{坐|zuò}{能|néng}{这儿|zhèr}{吗|ma}？', '{请|qǐng}{我|wǒ}{坐|zuò}{这儿|zhèr}？'], why: 'Engedélyt a {能|néng} kér.', point: 3 },
+    { q: 'Mikor {会|huì} és mikor {能|néng}?', a: '{会|huì}: megtanult tudás · {能|néng}: lehetőség, engedély', wrong: ['{会|huì}: lehetőség, engedély · {能|néng}: megtanult tudás', '{会|huì}: múlt idő · {能|néng}: jövő idő, tervezett dolog', 'teljesen felcserélhetők, bármikor bármelyik jó'], why: '{我会说汉语|wǒ huì shuō Hànyǔ} vs. {我能坐这儿吗|wǒ néng zuò zhèr ma}？', point: 3 },
+    { q: '{我能坐这儿吗|wǒ néng zuò zhèr ma}？ — igenlő válasz:', a: '{能|néng}，{请|qǐng}{坐|zuò}。', wrong: ['{会|huì}，{请|qǐng}{坐|zuò}。', '{是|shì}，{坐|zuò}{请|qǐng}。', '{有|yǒu}，{请|qǐng}{坐|zuò}。'], why: 'A válasz a segédige: {能|néng}.', point: 3 },
+    { q: 'Mit jelent: {请喝茶|qǐng hē chá}。', a: 'Tessék, igyon teát.', wrong: ['Kérek egy teát.', 'Teát iszom.', 'Meghívtam teára.'], why: '{请|qǐng} + ige: udvarias kínálás.', point: 4 },
+    { q: 'Mit jelent: {我请你喝茶|wǒ qǐng nǐ hē chá}。', a: 'Meghívlak egy teára.', wrong: ['Kérlek, igyál teát!', 'Te hívsz meg teára.', 'Kérek tőled egy teát.'], why: 'A {请|qǐng} „meghívni" jelentésben.', point: 4 },
+    { q: '„az iskola mögött"', a: '{学校|xué·xiào}{后面|hòu·miàn}', wrong: ['{后面|hòu·miàn}{学校|xué·xiào}', '{学校|xué·xiào}{前面|qián·miàn}', '{在|zài}{后|hòu}{学校|xué·xiào}'], why: 'Főnév + helyszó.', point: 5 },
+    { q: 'Mit jelent a {前面|qiánmiàn}?', a: 'előtte, elöl', wrong: ['mögötte, hátul', 'benne', 'alatta'], why: '{前面|qiánmiàn} ↔ {后面|hòumiàn}.', point: 5 },
+    { q: 'Mit jelent: {杯子里有茶|bēizi li yǒu chá}。', a: 'A bögrében tea van.', wrong: ['A tea a bögre mellett van.', 'A bögre teás.', 'Teát iszik a bögréből.'], why: '{杯子里|bēizi li} „a bögrében".', point: 1 },
+    { q: 'Mit jelent a {电脑|diànnǎo}?', a: 'számítógép', wrong: ['televízió', 'telefon', 'könyvtár'], why: 'Szó szerint „elektromos agy".' },
+    { q: 'Mit jelent a {坐|zuò}?', a: 'ülni', wrong: ['állni', 'csinálni', 'menni'], why: '{请坐|qǐng zuò} „foglaljon helyet". (Figyelj: a {做|zuò} „csinálni" más írásjegy!)' },
+    { q: '„Holnap nem tudok iskolába menni (nem lehetséges)."', a: '{明天|míng·tiān}{我|wǒ}{不|bù}{能|néng}{去|qù}{学校|xué·xiào}。', wrong: ['{明天|míng·tiān}{我|wǒ}{不|bú}{会|huì}{去|qù}{学校|xué·xiào}。', '{明天|míng·tiān}{我|wǒ}{没|méi}{能|néng}{去|qù}{学校|xué·xiào}。', '{我|wǒ}{不|bù}{能|néng}{明天|míng·tiān}{学校|xué·xiào}{去|qù}。'], why: 'Körülmények miatti lehetetlenség: {不能|bù néng}.', point: 3 }
+  ]
+},
+
+/* ════════════════════════════════════════════════════
+   11. LECKE — idő: 几点, 点 + 分, 什么时候, 前
+   ════════════════════════════════════════════════════ */
+{
+  id: 'l11', no: 11, kicker: 'HSK 1 · 11. lecke',
+  title: 'Hány óra van? — idő és napirend',
+  lead: 'Megkérdezed és megmondod, hány óra van, mikor csinálsz valamit, és elmondod a napirendedet. A kínai itt is a nagyobb egységgel kezd: nap → napszak → óra → perc.',
+  cando: [
+    'Megkérdezed és megmondod a pontos időt (现在几点？ 十点十分).',
+    'Időpontot teszel a cselekvés elé (我七点吃早饭).',
+    'Megkérdezed: mikor? (什么时候？).',
+    'Kifejezed, hogy valami előtt (三点前).'
+  ],
+  intro: [
+    'Az időt mondó szavak a kínai mondatban mindig a cselekvés <b>előtt</b> állnak, és nagyobbtól a kisebb felé haladnak: {明天上午十点|míngtiān shàngwǔ shí diǎn} „holnap délelőtt tíz órakor". Ha ezt a szabályt megjegyzed, a napirendet már könnyen elmondod.',
+    'Az óra {点|diǎn}, a perc {分|fēn}: {八点二十分|bā diǎn èrshí fēn} „nyolc óra húsz". A „háromnegyed" és a „fél" is megvan, de a kezdő nyugodtan mondhat perceket.'
+  ],
+  dialogue: {
+    title: 'Mozi este',
+    scene: 'Anna és David a délelőtti óra után beszélgetnek. David moziba hívja Annát.',
+    lines: [
+      { who: 'David', zh: '{安娜|Ān·nà}，{现在|xiàn·zài}{几|jǐ}{点|diǎn}？', hu: 'Anna, hány óra van?' },
+      { who: 'Anna', zh: '{现在|xiàn·zài}{十一|shí·yī}{点|diǎn}{二十|èr·shí}{分|fēn}。', hu: 'Tizenegy óra húsz perc van.' },
+      { who: 'David', zh: '{你|nǐ}{中午|zhōng·wǔ}{几|jǐ}{点|diǎn}{吃|chī}{饭|fàn}？', hu: 'Délben hánykor eszel?' },
+      { who: 'Anna', zh: '{十二|shí·èr}{点|diǎn}。{你|nǐ}{呢|ne}？', hu: 'Tizenkettőkor. És te?' },
+      { who: 'David', zh: '{我|wǒ}{也|yě}{是|shì}。{晚上|wǎn·shang}{我们|wǒ·men}{去|qù}{看|kàn}{电影|diàn·yǐng}，{好|hǎo}{吗|ma}？', hu: 'Én is. Este elmegyünk moziba, jó?' },
+      { who: 'Anna', zh: '{好|hǎo}{啊|a}！{什么|shén·me}{时候|shí·hou}{去|qù}？', hu: 'Jó! Mikor megyünk?' },
+      { who: 'David', zh: '{电影|diàn·yǐng}{七|qī}{点|diǎn}{半|bàn}{开始|kāi·shǐ}，{我们|wǒ·men}{七|qī}{点|diǎn}{前|qián}{去|qù}。', hu: 'A film fél nyolckor kezdődik, hét előtt indulunk.' },
+      { who: 'Anna', zh: '{好|hǎo}，{我|wǒ}{六|liù}{点|diǎn}{半|bàn}{回|huí}{家|jiā}，{七|qī}{点|diǎn}{见|jiàn}！', hu: 'Jó, fél hétkor hazamegyek, hétkor találkozunk!' }
+    ],
+    notes: [
+      'A {几点|jǐ diǎn} „hány óra" a {几|jǐ}-vel kérdez, mert a válasz 12 alatti szám.',
+      'A …，{好吗|hǎo ma}？ „…, jó?" a javaslat utáni szokásos kérdés. Válasz: {好|hǎo} vagy {好啊|hǎo a} „rendben, jó!".',
+      'A {半|bàn} „fél": {七点半|qī diǎn bàn} „fél nyolc" — szó szerint „hét óra és fél". Figyelj: a magyar „fél nyolc" a 7:30, és a kínaiban is: <b>hét</b> óra fél.'
+    ]
+  },
+  points: [
+    {
+      title: '{几点|jǐ diǎn}', sub: 'hány óra? — óra és perc',
+      pattern: 'szám + {点|diǎn}（+ szám + {分|fēn}）',
+      body: 'Az óra {点|diǎn}, a perc {分|fēn}: {八点|bā diǎn} „nyolc óra", {八点十分|bā diǎn shí fēn} „nyolc óra tíz", {十一点二十|shíyī diǎn èrshí} „tizenegy húsz" (a {分|fēn} a végén elhagyható). Kérdés: {现在几点|xiànzài jǐ diǎn}？ „Hány óra van most?"',
+      more: [
+        'A „fél" {半|bàn}: {七点半|qī diǎn bàn} „hét óra harminc". A negyedóra {刻|kè}: {八点一刻|bā diǎn yí kè} „nyolc tizenöt".',
+        'Két óra: {两点|liǎng diǎn} (mérőszó-szerű a {点|diǎn}, ezért {两|liǎng}); de {十二点|shí\'èr diǎn} „tizenkét óra".',
+        'Tíz perc alatt a {零|líng} „nulla" is beszúrható: {九点零五分|jiǔ diǎn líng wǔ fēn} „kilenc óra öt perc".'
+      ],
+      tables: [
+        { caption: 'Időpontok',
+          head: ['Idő', 'Kínaiul'],
+          rows: [
+            ['8:00', '{八|bā}{点|diǎn}'],
+            ['8:10', '{八|bā}{点|diǎn}{十|shí}{分|fēn}'],
+            ['8:15', '{八|bā}{点|diǎn}{一|yí}{刻|kè} / {八|bā}{点|diǎn}{十五|shí·wǔ}'],
+            ['8:30', '{八|bā}{点|diǎn}{半|bàn}'],
+            ['2:05', '{两|liǎng}{点|diǎn}{零|líng}{五|wǔ}{分|fēn}']
+          ] }
+      ],
+      examples: [
+        { zh: '{现在|xiàn·zài}{几|jǐ}{点|diǎn}？', hu: 'Hány óra van?' },
+        { zh: '{现在|xiàn·zài}{十|shí}{点|diǎn}{十|shí}{分|fēn}。', hu: 'Tíz óra tíz perc van.' },
+        { zh: '{现在|xiàn·zài}{两|liǎng}{点|diǎn}{半|bàn}。', hu: 'Fél három van.' }
+      ],
+      mistakes: [
+        { bad: '{二|èr}{点|diǎn}', good: '{两|liǎng}{点|diǎn}', why: 'Két órakor {两点|liǎng diǎn}.' },
+        { bad: '{半|bàn}{八|bā}{点|diǎn} (= fél nyolc)', good: '{七|qī}{点|diǎn}{半|bàn}', why: 'A {半|bàn} az óra után áll: 7:30 = {七点半|qī diǎn bàn}.' }
+      ]
+    },
+    {
+      title: 'idő + cselekvés', sub: 'az időpont az ige előtt',
+      pattern: 'A + időpont + ige · időpont + A + ige',
+      body: 'Az időpont, amikor valami történik, <b>az ige elé</b> kerül (a mondat elejére vagy az alany után): {我七点吃早饭|wǒ qī diǎn chī zǎofàn} „hétkor reggelizem", {明天上午十点我去医院|míngtiān shàngwǔ shí diǎn wǒ qù yīyuàn} „holnap délelőtt tízkor megyek a kórházba". Több időszó esetén a nagyobb egység van elöl.',
+      more: [
+        'A napszakok: {早上|zǎoshang} „reggel", {上午|shàngwǔ} „délelőtt", {中午|zhōngwǔ} „dél", {下午|xiàwǔ} „délután", {晚上|wǎnshang} „este". Ezek is az óra elé kerülnek: {晚上八点|wǎnshang bā diǎn} „este nyolc".',
+        'Kérdés: {你几点吃饭|nǐ jǐ diǎn chī fàn}？ „Hánykor eszel?" — a {几点|jǐ diǎn} a helyén, az ige előtt.'
+      ],
+      examples: [
+        { zh: '{我|wǒ}{早上|zǎo·shang}{七|qī}{点|diǎn}{吃|chī}{早饭|zǎo·fàn}。', hu: 'Reggel hétkor reggelizem.' },
+        { zh: '{你|nǐ}{几|jǐ}{点|diǎn}{去|qù}{学校|xué·xiào}？', hu: 'Hánykor mész iskolába?' },
+        { zh: '{下午|xià·wǔ}{三|sān}{点|diǎn}{我|wǒ}{回|huí}{家|jiā}。', hu: 'Délután háromkor hazamegyek.' }
+      ],
+      mistakes: [
+        { bad: '{我|wǒ}{吃|chī}{饭|fàn}{十二|shí·èr}{点|diǎn}。', good: '{我|wǒ}{十二|shí·èr}{点|diǎn}{吃|chī}{饭|fàn}。', why: 'Az időpont az ige előtt áll.' },
+        { bad: '{八|bā}{点|diǎn}{晚上|wǎn·shang}', good: '{晚上|wǎn·shang}{八|bā}{点|diǎn}', why: 'Nagyobb egység elöl: napszak, aztán óra.' }
+      ]
+    },
+    {
+      title: '{什么时候|shénme shíhou}', sub: '„mikor?"',
+      pattern: 'A + {什么|shén·me}{时候|shí·hou} + ige？',
+      body: 'A {什么时候|shénme shíhou} „mikor" (szó szerint „milyen időben") általános időre kérdez: lehet nap, napszak vagy óra. Az ige elé kerül: {你什么时候回家|nǐ shénme shíhou huí jiā}？ „Mikor mész haza?" Ha pontos órát vársz, a {几点|jǐ diǎn} a jobb.',
+      examples: [
+        { zh: '{你|nǐ}{什么|shén·me}{时候|shí·hou}{回|huí}{家|jiā}？', hu: 'Mikor mész haza?' },
+        { zh: '{我们|wǒ·men}{什么|shén·me}{时候|shí·hou}{去|qù}{看|kàn}{电影|diàn·yǐng}？', hu: 'Mikor megyünk moziba?' },
+        { zh: '{明天|míng·tiān}{下午|xià·wǔ}。', hu: 'Holnap délután.' }
+      ],
+      mistakes: [
+        { bad: '{你|nǐ}{回|huí}{家|jiā}{什么|shén·me}{时候|shí·hou}？', good: '{你|nǐ}{什么|shén·me}{时候|shí·hou}{回|huí}{家|jiā}？', why: 'A „mikor" is időhatározó: az ige elé.' }
+      ]
+    },
+    {
+      title: '…{前|qián}', sub: 'valami előtt',
+      pattern: 'időpont / esemény + {前|qián}',
+      body: 'A {前|qián} egy időpont vagy esemény <b>után</b> állva „előtte" jelentésű: {七点前|qī diǎn qián} „hét óra előtt", {吃饭前|chī fàn qián} „evés előtt". A magyarhoz képest itt is fordított a sorrend: „hét óra előtt" = „hét óra" + „előtt".',
+      more: [
+        'Párja a {后|hòu} „utána": {吃饭后|chī fàn hòu} „evés után" (a 14. leckében még előkerül).',
+        'A {以前|yǐqián} hosszabb alak, ugyanilyen jelentéssel: {七点以前|qī diǎn yǐqián}.'
+      ],
+      examples: [
+        { zh: '{我们|wǒ·men}{七|qī}{点|diǎn}{前|qián}{去|qù}。', hu: 'Hét előtt indulunk.' },
+        { zh: '{吃|chī}{饭|fàn}{前|qián}{我|wǒ}{看|kàn}{一会儿|yí·huìr}{书|shū}。', hu: 'Evés előtt olvasok egy kicsit.' }
+      ]
+    },
+    {
+      title: '{回|huí}', sub: 'visszamenni, hazamenni',
+      pattern: '{回|huí} + hely（{回|huí}{家|jiā}）',
+      body: 'A {回|huí} „visszamenni, visszajönni": oda megy, ahonnan jött vagy ahová tartozik. Leggyakoribb: {回家|huí jiā} „hazamegy", {回学校|huí xuéxiào} „visszamegy az iskolába", {回国|huí guó} „hazautazik (a saját országába)". A hely itt is közvetlenül az ige után áll, rag nélkül.',
+      examples: [
+        { zh: '{我|wǒ}{六|liù}{点|diǎn}{半|bàn}{回|huí}{家|jiā}。', hu: 'Fél hétkor megyek haza.' },
+        { zh: '{她|tā}{明年|míng·nián}{回|huí}{国|guó}。', hu: 'Jövőre hazautazik (a hazájába).' }
+      ]
+    }
+  ],
+  phrases: [
+    { zh: '{现在|xiàn·zài}{几|jǐ}{点|diǎn}？', hu: 'Hány óra van?' },
+    { zh: '{你|nǐ}{几|jǐ}{点|diǎn}{吃|chī}{饭|fàn}？', hu: 'Hánykor eszel?' },
+    { zh: '{什么|shén·me}{时候|shí·hou}{去|qù}？', hu: 'Mikor megyünk?' },
+    { zh: '……，{好|hǎo}{吗|ma}？', hu: '…, jó? (javaslat)' },
+    { zh: '{七|qī}{点|diǎn}{见|jiàn}！', hu: 'Hétkor találkozunk!' }
+  ],
+  words: [
+    { title: 'Szavak',
+      items: [
+        { zh: '{现在|xiàn·zài}', pinyin: 'xiànzài', hu: 'most' },
+        { zh: '{点|diǎn}', pinyin: 'diǎn', hu: 'óra (időpont)' },
+        { zh: '{分|fēn}', pinyin: 'fēn', hu: 'perc' },
+        { zh: '{中午|zhōng·wǔ}', pinyin: 'zhōngwǔ', hu: 'dél' },
+        { zh: '{吃饭|chī fàn}', pinyin: 'chī fàn', hu: 'enni, étkezni' },
+        { zh: '{时候|shí·hou}', pinyin: 'shíhou', hu: 'idő, időpont' },
+        { zh: '{回|huí}', pinyin: 'huí', hu: 'visszamenni' },
+        { zh: '{我们|wǒ·men}', pinyin: 'wǒmen', hu: 'mi' },
+        { zh: '{电影|diàn·yǐng}', pinyin: 'diànyǐng', hu: 'film' },
+        { zh: '{住|zhù}', pinyin: 'zhù', hu: 'lakni' },
+        { zh: '{前|qián}', pinyin: 'qián', hu: 'előtt' }
+      ] },
+    { title: 'Napszakok és ráadás',
+      items: [
+        { zh: '{早上|zǎo·shang}', pinyin: 'zǎoshang', hu: 'reggel' },
+        { zh: '{上午|shàng·wǔ}', pinyin: 'shàngwǔ', hu: 'délelőtt' },
+        { zh: '{下午|xià·wǔ}', pinyin: 'xiàwǔ', hu: 'délután' },
+        { zh: '{晚上|wǎn·shang}', pinyin: 'wǎnshang', hu: 'este' },
+        { zh: '{半|bàn}', pinyin: 'bàn', hu: 'fél' },
+        { zh: '{开始|kāi·shǐ}', pinyin: 'kāishǐ', hu: 'kezdődni' }
+      ] }
+  ],
+  culture: [
+    { title: 'Egy időzóna', text: 'Kína szélessége öt időzónát fedne le, mégis az egész ország egyetlen, a pekingi időt használja. A nyugati Hszincsiangban ezért nyáron este tizenegykor is világos van, és a helyiek egymás közt gyakran a „helyi időben" ({新疆时间|Xīnjiāng shíjiān}) beszélnek.' },
+    { title: 'Ebédszünet', text: 'Kínában az ebéd korán van: déli tizenkettő körül, és sok iskolában, hivatalban utána rövid délutáni pihenő ({午休|wǔxiū}) következik. A vacsora is korábbi, mint nálunk, gyakran már hat körül.' }
+  ],
+  reading: {
+    title: '{我|wǒ}{的|de}{一|yì}{天|tiān}', titleHu: 'Egy napom',
+    text: [
+      { zh: '{我|wǒ}{早上|zǎo·shang}{七|qī}{点|diǎn}{吃|chī}{早饭|zǎo·fàn}，{八|bā}{点|diǎn}{去|qù}{学校|xué·xiào}。', hu: 'Reggel hétkor reggelizem, nyolckor megyek iskolába.' },
+      { zh: '{上午|shàng·wǔ}{我|wǒ}{学|xué}{汉语|Hàn·yǔ}。', hu: 'Délelőtt kínait tanulok.' },
+      { zh: '{中午|zhōng·wǔ}{十二|shí·èr}{点|diǎn}，{我|wǒ}{和|hé}{朋友|péng·you}{在|zài}{学校|xué·xiào}{吃|chī}{饭|fàn}。', hu: 'Délben tizenkettőkor a barátaimmal az iskolában ebédelek.', par: true },
+      { zh: '{下午|xià·wǔ}{我|wǒ}{在|zài}{图书馆|tú·shū·guǎn}{看|kàn}{书|shū}，{五|wǔ}{点|diǎn}{半|bàn}{回|huí}{家|jiā}。', hu: 'Délután a könyvtárban olvasok, fél hatkor megyek haza.' },
+      { zh: '{今天|jīn·tiān}{晚上|wǎn·shang}{我|wǒ}{和|hé}{大卫|Dà·wèi}{去|qù}{看|kàn}{电影|diàn·yǐng}。', hu: 'Ma este Daviddel moziba megyek.', par: true }
+    ],
+    words: [ { zh: '{早饭|zǎo·fàn}', hu: 'reggeli' }, { zh: '{一|yì}{天|tiān}', hu: 'egy nap' } ],
+    questions: [
+      { q: 'Hánykor megy iskolába?', a: 'nyolckor', wrong: ['hétkor', 'tizenkettőkor', 'fél hatkor'], why: '{八点去学校|bā diǎn qù xuéxiào}.' },
+      { q: 'Hol és kivel ebédel?', a: 'az iskolában, a barátaival', wrong: ['otthon, a családjával', 'a könyvtárban, egyedül', 'moziban, Daviddel'], why: '{我和朋友在学校吃饭|wǒ hé péngyou zài xuéxiào chī fàn}.' },
+      { q: 'Mikor megy haza?', a: 'fél hatkor', wrong: ['fél ötkor', 'hatkor', 'este nyolckor'], why: '{五点半回家|wǔ diǎn bàn huí jiā} = 5:30.' },
+      { q: 'Mit csinál ma este?', a: 'moziba megy Daviddel', wrong: ['otthon olvas', 'kínait tanul', 'a könyvtárban ül'], why: '{今天晚上我和大卫去看电影|jīntiān wǎnshang wǒ hé Dàwèi qù kàn diànyǐng}.' }
+    ]
+  },
+  quiz: [
+    { q: 'Hogyan kérdezed: „Hány óra van?"', a: '{现在|xiàn·zài}{几|jǐ}{点|diǎn}？', wrong: ['{现在|xiàn·zài}{多少|duō·shao}{钱|qián}？', '{现在|xiàn·zài}{什么|shén·me}{点|diǎn}{吗|ma}？', '{几|jǐ}{现在|xiàn·zài}{点|diǎn}？'], why: '{几点|jǐ diǎn} „hány óra".', point: 1 },
+    { q: 'Hogyan mondod: 8:10?', a: '{八|bā}{点|diǎn}{十|shí}{分|fēn}', wrong: ['{十|shí}{分|fēn}{八|bā}{点|diǎn}', '{八|bā}{分|fēn}{十|shí}{点|diǎn}', '{十|shí}{点|diǎn}{八|bā}{分|fēn}'], why: 'Óra, aztán perc.', point: 1 },
+    { q: 'Mennyi az idő: {七点半|qī diǎn bàn}?', a: '7:30', wrong: ['6:30', '7:50', '8:30'], why: '{七点|qī diǎn} + {半|bàn} „fél" = 7:30.', point: 1 },
+    { q: 'Hogyan mondod: „két óra"?', a: '{两|liǎng}{点|diǎn}', wrong: ['{二|èr}{点|diǎn}', '{二|èr}{个|ge}{点|diǎn}', '{点|diǎn}{两|liǎng}'], why: 'A {点|diǎn} előtt a „kettő" {两|liǎng}.', point: 1 },
+    { q: '„Hétkor reggelizem."', a: '{我|wǒ}{七|qī}{点|diǎn}{吃|chī}{早饭|zǎo·fàn}。', wrong: ['{我|wǒ}{吃|chī}{早饭|zǎo·fàn}{七|qī}{点|diǎn}。', '{七|qī}{点|diǎn}{吃|chī}{我|wǒ}{早饭|zǎo·fàn}。', '{我|wǒ}{早饭|zǎo·fàn}{七|qī}{点|diǎn}{吃|chī}{在|zài}。'], why: 'Az időpont az ige előtt.', point: 2 },
+    { q: 'Melyik a helyes: „este nyolckor"?', a: '{晚上|wǎn·shang}{八|bā}{点|diǎn}', wrong: ['{八|bā}{点|diǎn}{晚上|wǎn·shang}', '{晚上|wǎn·shang}{的|de}{八|bā}', '{八|bā}{晚上|wǎn·shang}{点|diǎn}'], why: 'Nagyobb egység elöl.', point: 2 },
+    { q: 'Hogyan kérdezed: „Mikor mész haza?"', a: '{你|nǐ}{什么|shén·me}{时候|shí·hou}{回|huí}{家|jiā}？', wrong: ['{你|nǐ}{回|huí}{家|jiā}{什么|shén·me}{时候|shí·hou}？', '{什么|shén·me}{你|nǐ}{回|huí}{家|jiā}{时候|shí·hou}？', '{你|nǐ}{回|huí}{家|jiā}{吗|ma}{什么|shén·me}？'], why: 'A {什么时候|shénme shíhou} az ige elé kerül.', point: 3 },
+    { q: 'Mikor jobb a {几点|jǐ diǎn}, mint a {什么时候|shénme shíhou}?', a: 'ha pontos órát vársz válaszul', wrong: ['ha napot vagy dátumot kérdezel', 'ha a múltról kérdezel valakit', 'ha udvariasan kérdezel idősebbet'], why: 'A {几点|jǐ diǎn} órára, a {什么时候|shénme shíhou} bármilyen időre kérdez.', point: 3 },
+    { q: '„hét óra előtt"', a: '{七|qī}{点|diǎn}{前|qián}', wrong: ['{前|qián}{七|qī}{点|diǎn}', '{七|qī}{前|qián}{点|diǎn}', '{前面|qián·miàn}{七|qī}{点|diǎn}'], why: 'Időpont + {前|qián}.', point: 4 },
+    { q: 'Mit jelent: {吃饭前|chī fàn qián}？', a: 'evés előtt', wrong: ['evés után', 'evés közben', 'a vendéglő előtt'], why: 'Esemény + {前|qián} „előtte".', point: 4 },
+    { q: 'Mit jelent: {我六点回家|wǒ liù diǎn huí jiā}。', a: 'Hatkor megyek haza.', wrong: ['Hat órát vagyok otthon.', 'Hat órára jövök vissza.', 'Hatkor jövök el otthonról.'], why: '{回家|huí jiā} „hazamenni".', point: 5 },
+    { q: 'Mit jelent a {现在|xiànzài}?', a: 'most', wrong: ['ma', 'mindig', 'később'], why: '{现在几点|xiànzài jǐ diǎn}？ „Hány óra van most?"' },
+    { q: 'Mit jelent a {电影|diànyǐng}?', a: 'film', wrong: ['televízió', 'számítógép', 'telefon'], why: '{看电影|kàn diànyǐng} „filmet néz, moziba megy".' },
+    { q: 'Melyik a „délután"?', a: '{下午|xià·wǔ}', wrong: ['{上午|shàng·wǔ}', '{中午|zhōng·wǔ}', '{晚上|wǎn·shang}'], why: '{上午|shàngwǔ} délelőtt · {中午|zhōngwǔ} dél · {下午|xiàwǔ} délután.', point: 2 },
+    { q: '{晚上我们去看电影，好吗|wǎnshang wǒmen qù kàn diànyǐng, hǎo ma}？ — mit jelent a {好吗|hǎo ma}?', a: '„jó?" — javaslat utáni kérdés', wrong: ['„jó film?" — a filmről kérdez', '„jól vagy?" — hogylétre kérdez', '„nem jó?" — tagadó kérdés'], why: 'Javaslat + {好吗|hǎo ma}？ = „…, jó lesz?"', point: 2 },
+    { q: 'Melyik mondat hibás?', a: '{我|wǒ}{吃|chī}{饭|fàn}{十二|shí·èr}{点|diǎn}。', wrong: ['{我|wǒ}{十二|shí·èr}{点|diǎn}{吃|chī}{饭|fàn}。', '{十二|shí·èr}{点|diǎn}{我|wǒ}{吃|chī}{饭|fàn}。', '{我|wǒ}{中午|zhōng·wǔ}{吃|chī}{饭|fàn}。'], why: 'Az időpont nem kerülhet az ige után.', point: 2 }
+  ]
 }
 
 ];

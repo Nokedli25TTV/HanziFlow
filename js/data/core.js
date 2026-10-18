@@ -117,7 +117,40 @@ const HANZIFLOW_PATH = [
     module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l8&round=listen' },
   { id: 'l8-read', glyph: '读', title: 'Olvasás: A boltban',
     desc: 'Rövid szöveg, utána négy kérdés a tartalmáról.',
-    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l8&round=read' }
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l8&round=read' },
+
+  // ── 9. lecke ──
+  { id: 'l9-lesson', glyph: '在', title: 'Magyarázat: 在, 哪儿, helyszavak',
+    desc: 'Hol van valami, hol dolgozik valaki: a 在 kétféle használata.',
+    module: 'lesson', href: 'pages/lesson.html?id=l9' },
+  { id: 'l9-listen', glyph: '听', title: 'Hallás: hol van?',
+    desc: 'A 9. lecke mondatai hang után.',
+    module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l9&round=listen' },
+  { id: 'l9-read', glyph: '读', title: 'Olvasás: Az én családom',
+    desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l9&round=read' },
+
+  // ── 10. lecke ──
+  { id: 'l10-lesson', glyph: '有', title: 'Magyarázat: hely + 有, 和, 能, 请',
+    desc: 'Mi van valahol, felsorolás, engedélykérés és udvarias kínálás.',
+    module: 'lesson', href: 'pages/lesson.html?id=l10' },
+  { id: 'l10-listen', glyph: '听', title: 'Hallás: szabad ide ülnöm?',
+    desc: 'A 10. lecke mondatai hang után.',
+    module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l10&round=listen' },
+  { id: 'l10-read', glyph: '读', title: 'Olvasás: A szobám',
+    desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l10&round=read' },
+
+  // ── 11. lecke ──
+  { id: 'l11-lesson', glyph: '点', title: 'Magyarázat: 几点, időpont, 什么时候',
+    desc: 'Hány óra van, mikor csinálsz valamit, mi történik mi előtt.',
+    module: 'lesson', href: 'pages/lesson.html?id=l11' },
+  { id: 'l11-listen', glyph: '听', title: 'Hallás: idő és napirend',
+    desc: 'A 11. lecke mondatai hang után.',
+    module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l11&round=listen' },
+  { id: 'l11-read', glyph: '读', title: 'Olvasás: Egy napom',
+    desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l11&round=read' }
 ];
 
 const HANZIFLOW_PATH_UNITS = [
@@ -138,5 +171,11 @@ const HANZIFLOW_PATH_UNITS = [
   { id: 'u-l7', kicker: 'HSK 1 · 7. lecke', title: 'Hányadika van ma?', sub: 'Dátum, a hét napjai, 去 + hely + cselekvés',
     steps: ['l7-lesson', 'l7-listen', 'l7-read'] },
   { id: 'u-l8', kicker: 'HSK 1 · 8. lecke', title: 'Mit kérsz?', sub: '想, mérőszavak, 多少钱, 这 / 那',
-    steps: ['l8-lesson', 'l8-listen', 'l8-read'] }
+    steps: ['l8-lesson', 'l8-listen', 'l8-read'] },
+  { id: 'u-l9', kicker: 'HSK 1 · 9. lecke', title: 'Hol van?', sub: '在 + hely, 在 + hely + ige, 哪儿, 下面',
+    steps: ['l9-lesson', 'l9-listen', 'l9-read'] },
+  { id: 'u-l10', kicker: 'HSK 1 · 10. lecke', title: 'Szabad ide ülnöm?', sub: 'hely + 有, 和, 能, 请, 前面 / 后面',
+    steps: ['l10-lesson', 'l10-listen', 'l10-read'] },
+  { id: 'u-l11', kicker: 'HSK 1 · 11. lecke', title: 'Hány óra van?', sub: '几点, 点 + 分, 什么时候, 前, 回',
+    steps: ['l11-lesson', 'l11-listen', 'l11-read'] }
 ];
