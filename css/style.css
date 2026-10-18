@@ -1803,6 +1803,71 @@ html.lesson-steps.ls-round .hf-tabbar { display: none; }
 .nm-try-label2 { font-size: var(--fs-sm); font-weight: 700; color: var(--ink-soft); }
 .nm-try-empty { font-size: var(--fs-sm); color: var(--ink-soft); }
 
+/* ═══ 8f. HSK PRÓBAVIZSGA (pages/exam.html) ════════════ */
+#examMain rt { font-size: max(0.5em, 12px); }
+.ex-nopy rt { visibility: hidden; }
+.ex-section { font-size: var(--fs-md); }
+.ex-time.is-low { color: var(--err); }
+
+/* kérdés */
+.ex-plays { font-size: var(--fs-sm); font-weight: 700; color: var(--ink-soft); }
+.ex-show { min-height: var(--touch); margin-left: 6px; }
+.ex-transcript { width: 100%; margin-top: 8px; padding: 10px 12px; border-radius: var(--radius-md); background: var(--surface-2); border: 1px solid var(--surface-2-edge); text-align: left; }
+.ex-line { margin: 0; font-size: var(--fs-lg); line-height: 1.9; }
+.ex-q { margin-top: 10px; font-size: var(--fs-xl); line-height: 1.8; }
+.ex-q-big { font-size: clamp(1.4rem, 6vw, 1.8rem); }
+.ex-text { width: 100%; margin-top: 6px; padding: 12px 14px; border-radius: var(--radius-md); background: var(--surface-2); border: 1px solid var(--surface-2-edge); text-align: left; font-size: var(--fs-lg); line-height: 2; }
+.ex-star { margin-top: 10px; font-size: var(--fs-lg); font-weight: 700; line-height: 1.9; }
+.ex-blank-py { display: inline-flex; flex-direction: column; align-items: center; vertical-align: bottom; }
+.ex-blank-pinyin { font-size: 0.55em; font-weight: 800; line-height: 1.2; color: var(--brand-deep); }
+.ex-options { grid-template-columns: 1fr; }
+.ex-options-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.ex-options-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.ex-option { flex-direction: row; justify-content: flex-start; gap: 12px; min-height: 56px; text-align: left; }
+.ex-option::before { content: none !important; }
+.ex-options-2 .ex-option, .ex-options-4 .ex-option { justify-content: center; }
+.ex-option.is-selected { border-color: var(--brand); background: var(--brand-soft); box-shadow: 0 3px 0 rgb(var(--brand-rgb) / 0.35); }
+.ex-letter { flex: none; display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; border-radius: 8px; background: rgb(var(--tint-rgb) / 0.07); color: var(--ink-soft); font-size: var(--fs-sm); font-weight: 800; }
+.ex-option.is-selected .ex-letter { background: var(--brand); color: var(--on-brand); }
+.ex-letter-sm { width: 24px; height: 24px; font-size: var(--fs-xs); }
+.ex-opt-body { font-size: var(--fs-lg); line-height: 1.7; }
+.ex-hanzi-opt { font-size: var(--fs-2xl); }
+.ex-nav { display: grid; grid-template-columns: 1fr 2fr; gap: 8px; }
+.ex-nav .btn { min-height: 52px; }
+.ex-nav .btn:disabled, .ex-order-actions .btn:disabled { opacity: 0.45; cursor: default; box-shadow: none; }
+.ex-order-actions { grid-template-columns: 1fr; justify-items: start; }
+
+/* eredmény */
+.ex-result { display: flex; flex-direction: column; align-items: center; gap: 10px; padding: 22px 16px; border-radius: var(--radius-lg); text-align: center; }
+.ex-result-title { margin: 0; font-size: var(--fs-xl); }
+.ex-total { font-size: var(--fs-4xl); font-weight: 800; line-height: 1; color: var(--brand-deep); }
+.ex-total span { font-size: var(--fs-xl); color: var(--ink-faint); }
+.ex-verdict { padding: 6px 14px; border-radius: 999px; font-size: var(--fs-sm); font-weight: 800; }
+.ex-verdict.is-pass { background: var(--ok-soft); color: var(--ok-deep); }
+.ex-verdict.is-fail { background: rgb(var(--amber-rgb) / 0.14); color: var(--amber-ink); }
+.ex-secs { display: flex; flex-direction: column; gap: 10px; width: 100%; max-width: 420px; margin-top: 6px; }
+.ex-sec-top { display: flex; justify-content: space-between; gap: 8px; margin-bottom: 4px; font-size: var(--fs-sm); font-weight: 700; }
+.ex-sec-score { color: var(--ink-soft); }
+.ex-note { margin: 0; font-size: var(--fs-sm); color: var(--ink-soft); }
+
+/* átnézés */
+.ex-review { display: flex; flex-direction: column; gap: 8px; margin-top: 16px; scroll-margin-top: calc(var(--header-h) + 12px); }
+.ex-review-h { margin: 0 0 4px; font-size: var(--fs-lg); }
+.ex-ritem { border-radius: var(--radius-md); background: var(--surface); border: 1px solid var(--line); border-left: 4px solid var(--ok); }
+.ex-ritem.is-bad { border-left-color: var(--err); }
+.ex-ritem summary { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 8px; min-height: var(--touch); padding: 8px 12px; cursor: pointer; list-style: none; font-size: var(--fs-sm); font-weight: 700; }
+.ex-ritem summary::-webkit-details-marker { display: none; }
+.ex-rmark { width: 22px; text-align: center; font-weight: 800; color: var(--ok-deep); }
+.ex-ritem.is-bad .ex-rmark { color: var(--err); }
+.ex-rnum { color: var(--ink-faint); }
+.ex-rsec { color: var(--seal-ink); }
+.ex-rtask { font-weight: 600; color: var(--ink-soft); }
+.ex-rbody { display: flex; flex-direction: column; gap: 8px; padding: 0 12px 12px; }
+.ex-hu { margin: 0; font-size: var(--fs-sm); line-height: 1.55; color: var(--ink-soft); }
+.ex-none { font-style: normal; color: var(--ink-faint); }
+.ex-dim { font-size: var(--fs-sm); color: var(--ink-faint); }
+.ex-rplay { align-self: flex-start; min-height: var(--touch); font-size: var(--fs-sm); }
+
 /* ═══ 9. APRÓSÁGOK: értesítő, ünneplés, mozgás ═════════ */
 .hf-toast {
   position: fixed; bottom: calc(20px + var(--tabbar-space)); left: 50%; z-index: 9500;

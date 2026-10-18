@@ -2774,12 +2774,13 @@ function initStatsPage() {
     pinyin: 'Pinyin-tábla',
     measure: 'Mérőszavak',
     sentence: 'Mondat-Mester',
-    numbers: 'Dátum, idő, pénz'
+    numbers: 'Dátum, idő, pénz',
+    exam: 'Próbavizsga'
   };
   const MODE_LABELS = {
     hear: 'Hallás után', see: 'Jelölés', pairs: 'Szópárok', match: 'Párosító',
     write: 'Beírás', dictate: 'Diktálás', pick: 'Párosítás', sentence: 'Mondatban', count: 'Számolás',
-    build: 'Sorba rakás', fill: 'Szócskák', say: 'Kimondás',
+    build: 'Sorba rakás', fill: 'Szócskák', say: 'Kimondás', hsk1: 'HSK 1', hsk2: 'HSK 2', hsk3: 'HSK 3',
     check: 'Ellenőrzés', listen: 'Hallás utáni kör', read: 'Olvasás', review: 'Ismétlés', retry: 'Hibák újra', quick: 'Gyors kérdések',
   };
   // Az Áttekintés műszerfal: benne az aktivitás (heatmap, sorozat) és a „mit gyakorolj" is.
@@ -3049,8 +3050,8 @@ function initStatsPage() {
 
   /* ── V4 P3 — radar + analytics helperek ────────── */
   // Radar tengely-sorrend (V5 bővítve: + Mintázatok)
-  const RADAR_ORDER = ['lesson', 'tones', 'pinyin', 'measure', 'sentence', 'numbers'];
-  const RADAR_LABELS = { lesson: 'Leckék', tones: 'Tónusok', pinyin: 'Pinyin', measure: 'Mérőszavak', sentence: 'Mondatok', numbers: 'Számok' };
+  const RADAR_ORDER = ['lesson', 'tones', 'pinyin', 'measure', 'sentence', 'numbers', 'exam'];
+  const RADAR_LABELS = { lesson: 'Leckék', tones: 'Tónusok', pinyin: 'Pinyin', measure: 'Mérőszavak', sentence: 'Mondatok', numbers: 'Számok', exam: 'Vizsga' };
   // Profil-alapú al-bontás (a modulok saját localStorage profiljaiból)
   const PROFILE_CONFIG = {
     tones: { key: 'hanziflow_tones_profile_v1', stats: [
@@ -3060,7 +3061,9 @@ function initStatsPage() {
     sentence: { key: 'hanziflow_sentence_profile_v1', stats: [
       { field: 'ruleStats', title: 'Szabályonként' } ] },
     numbers: { key: 'hanziflow_numbers_profile_v1', stats: [
-      { field: 'topicStats', title: 'Témánként' } ] }
+      { field: 'topicStats', title: 'Témánként' } ] },
+    exam: { key: 'hanziflow_exam_profile_v1', stats: [
+      { field: 'sectionStats', title: 'Részenként' } ] }
   };
 
   // a címkékben álló írásjegyek lang="zh-CN" alá kerülnek (különben japán változat jelenhet meg)
@@ -3716,7 +3719,7 @@ function initStatsPage() {
   }
 
   /* ── D) Blind Spot Detector ────────────────────── */
-  const MODULE_URL = { tones: 'tones.html', pinyin: 'pinyin.html', measure: 'measure.html', sentence: 'sentence.html', numbers: 'numbers.html', lesson: '../index.html#path' };
+  const MODULE_URL = { tones: 'tones.html', pinyin: 'pinyin.html', measure: 'measure.html', sentence: 'sentence.html', numbers: 'numbers.html', exam: 'exam.html', lesson: '../index.html#path' };
 
   // Stratégiai diagnózisok a statokból, severity-szerint rendezve
   function detectBlindSpots() {
@@ -6741,6 +6744,517 @@ function initNumbersPage() {
                       ITEM, makeCard, settings, run, startRound };
 }
 
+
+/* ====================================================
+   9c6. HSK PRÓBAVIZSGA (pages/exam.html)
+   ----------------------------------------------------
+   Adatok: js/data/exam.js (HANZIFLOW_EXAM_LEVELS, HANZIFLOW_EXAM_ITEMS).
+   Vizsgaszerű kör: a részek (Hallás, Olvasás, HSK 3-ban Írás) sorban jönnek, menet közben nincs
+   visszajelzés, előre-hátra lehet lépni, és a végén jön a pontszám (részenként 100 pont, 60% az átmenő)
+   meg a válaszok átnézése. A hallás feladatai kétszer hallgathatók meg; ha a hang nem szól,
+   a szöveg megmutatható. A pinyin HSK 1–2-ben alapból látszik, HSK 3-ban rejtve van.
+   ==================================================== */
+function initExamPage() {
+  const PROFILE_KEY  = 'hanziflow_exam_profile_v1';
+  const SETTINGS_KEY = 'hanziflow_exam_settings_v1';
+  const LEVELS = (typeof HANZIFLOW_EXAM_LEVELS !== 'undefined') ? HANZIFLOW_EXAM_LEVELS : null;
+  const ITEMS  = (typeof HANZIFLOW_EXAM_ITEMS !== 'undefined') ? HANZIFLOW_EXAM_ITEMS : [];
+  if (!LEVELS) return;
+  const MAX_PLAYS = 2;
+  const { esc, rich, reading } = HanziFlowZh;
+  const shuffle = arr => { const a = arr.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); const t = a[i]; a[i] = a[j]; a[j] = t; } return a; };
+  const PLAY_BIG = '<svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 5.5a9 9 0 0 1 0 13"/></svg>';
+  const LETTERS = 'ABCD';
+  const LEVEL_IDS = Object.keys(LEVELS);
+  const TASK = {
+    hearHu:  'Hallgasd meg a mondatot! Mit jelent?',
+    hear:    'Hallgasd meg, és válaszolj a kérdésre!',
+    reply:   'Melyik a jó válasz?',
+    blank:   'Melyik szó illik a mondatba?',
+    judge:   'Igaz vagy hamis a ★ állítás a szöveg alapján?',
+    passage: 'Olvasd el a szöveget, és válaszolj a kérdésre!',
+    order:   'Rakd sorba a szavakat!',
+    hanzi:   'Melyik írásjegy illik a pinyinhez?'
+  };
+  const isListen = it => it.t === 'hear' || it.t === 'hearHu';
+  // a felolvasott szöveg: a párbeszéd sorai a „男：" / „女：" jel nélkül, a végén a kérdés
+  function audioOf(it) {
+    if (it.t === 'hearHu') return reading(it.zh);
+    return it.lines.map(l => reading(l).replace(/^[男女]：/, '')).join(' ') + ' 问：' + reading(it.q);
+  }
+  const tileText = t => reading(t);
+
+  /* ── A) Beállítások + profil ───────────────────── */
+  function loadJson(key) {
+    try { return JSON.parse(localStorage.getItem(key) || 'null'); } catch (e) { return null; }
+  }
+  const saved = loadJson(SETTINGS_KEY) || {};
+  const settings = {
+    level: LEVELS[saved.level] ? saved.level : 'hsk1',
+    timer: saved.timer !== false,
+    pinyin: Object.assign({ hsk1: true, hsk2: true, hsk3: false }, saved.pinyin || {})
+  };
+  if (window.HanziFlowPath) HanziFlowPath.apply('exam', settings);
+  function saveSettings() {
+    try { localStorage.setItem(SETTINGS_KEY, JSON.stringify(settings)); } catch (e) {}
+  }
+  function loadProfile() {
+    const p = loadJson(PROFILE_KEY);
+    return (p && p.sectionStats) ? p : { sectionStats: {}, best: {}, last: {}, exams: {}, totalAttempts: 0, totalCorrect: 0 };
+  }
+  function saveProfile(p) {
+    try { localStorage.setItem(PROFILE_KEY, JSON.stringify(p)); } catch (e) {}
+    if (window.HanziFlowSync && HanziFlowSync.schedulePush) HanziFlowSync.schedulePush();
+  }
+  const maxScore = L => L.sections.length * 100;
+
+  /* ── B) A vizsga összeállítása ─────────────────── */
+  // részenként: a típusok a készletük arányában, típusonként egy blokkban (mint a valódi vizsgán)
+  function pickSection(L, sec) {
+    const pools = sec.types.map(t => shuffle(ITEMS.filter(it => it.lv === L.lv && it.t === t)));
+    const total = pools.reduce((n, p) => n + p.length, 0);
+    const quota = pools.map(p => Math.floor(sec.count * p.length / total));
+    let left = sec.count - quota.reduce((a, b) => a + b, 0);
+    for (let k = 0; left > 0 && k < 20; k++) {
+      pools.forEach((p, i) => { if (left > 0 && quota[i] < p.length) { quota[i]++; left--; } });
+    }
+    return pools.map((p, i) => p.slice(0, quota[i])).reduce((a, b) => a.concat(b), []);
+  }
+  function makeQuestion(it, sec) {
+    const q = { it: it, sec: sec, answer: null, plays: 0, shown: false };
+    if (it.t === 'judge') {
+      q.options = [{ html: 'Igaz · <span lang="zh-CN">对</span>' }, { html: 'Hamis · <span lang="zh-CN">错</span>' }];
+      q.right = it.ok ? 0 : 1;
+    } else if (it.t === 'order') {
+      q.tiles = it.tiles.map((zh, k) => ({ k: k, zh: zh, text: tileText(zh) }));
+      q.orders = [q.tiles.map(t => t.k)].concat((it.alts || []).map(a => a.split(' ').map(Number)));
+      q.answers = q.orders.map(o => o.map(k => q.tiles[k].text).join(''));
+      let bank = shuffle(q.tiles), tries = 0;
+      while (tries++ < 30 && q.answers.indexOf(bank.map(t => t.text).join('')) >= 0) bank = shuffle(q.tiles);
+      q.bank = bank; q.placed = [];
+    } else {
+      const opts = shuffle([{ v: it.a, ok: true }].concat(it.w.map(v => ({ v: v }))));
+      const fmt = it.t === 'hearHu' ? v => esc(v) : it.t === 'hanzi' ? v => `<span lang="zh-CN" class="ex-hanzi-opt">${esc(v)}</span>` : v => rich(v);
+      q.options = opts.map(o => ({ html: fmt(o.v), ok: !!o.ok }));
+      q.right = opts.findIndex(o => o.ok);
+    }
+    return q;
+  }
+  function isAnswered(q) { return q.it.t === 'order' ? q.placed.length === q.tiles.length : q.answer !== null; }
+  function isCorrect(q) {
+    if (q.it.t === 'order') return isAnswered(q) && q.answers.indexOf(q.placed.map(t => t.text).join('')) >= 0;
+    return q.answer === q.right;
+  }
+
+  /* ── C) Fejléc, tudnivalók ─────────────────────── */
+  function renderStatsBar() {
+    const el = document.getElementById('exStatsBar');
+    if (!el) return;
+    const p = loadProfile();
+    el.innerHTML = LEVEL_IDS.map(id => {
+      const b = p.best[id];
+      return `<div class="conj-stat-chip"><span class="csc-num">${b != null ? b : '—'}</span><span class="csc-label">${esc(LEVELS[id].name)} legjobb / ${maxScore(LEVELS[id])}</span></div>`;
+    }).join('');
+  }
+  function renderInfo() {
+    const el = document.getElementById('exInfo');
+    if (!el) return;
+    el.innerHTML = `
+      <div class="tone-chart-head">
+        <h2 class="tone-chart-h">Hogyan zajlik?</h2>
+        <p class="tone-chart-sub">A feladattípusok a HSK vizsgát követik; a képes feladatok helyett itt szöveges változat áll. Ez gyakorlás, nem hivatalos vizsga.</p>
+      </div>
+      <dl class="py-tip-list">
+        <div class="py-tip"><dt>Részek</dt><dd>HSK 1 és 2: Hallás és Olvasás. HSK 3: Hallás, Olvasás és Írás (sorba rakás, a pinyinhez illő írásjegy).</dd></div>
+        <div class="py-tip"><dt>Hallás</dt><dd>Minden hanganyag kétszer hallgatható meg. Ha a hang nem szól, a szöveget meg tudod nézni — ezt a pontozás nem bünteti.</dd></div>
+        <div class="py-tip"><dt>Menet közben</dt><dd>Nincs visszajelzés, mint a valódi vizsgán. Előre-hátra léphetsz, és a választ a beadásig megváltoztathatod.</dd></div>
+        <div class="py-tip"><dt>Pontozás</dt><dd>Minden rész 100 pontot ér. Átmenő: az összpontszám 60%-a (HSK 1–2: 120 / 200, HSK 3: 180 / 300). A végén minden választ átnézhetsz magyar fordítással.</dd></div>
+      </dl>`;
+  }
+
+  /* ── D) Lobbi ──────────────────────────────────── */
+  function renderLobby() {
+    const el = document.getElementById('exLobby');
+    const levels = LEVEL_IDS.map(id => {
+      const L = LEVELS[id];
+      const n = L.sections.reduce((a, s) => a + s.count, 0);
+      return `
+      <button class="cj-mode-btn ${settings.level === id ? 'active' : ''}" data-level="${id}" type="button">
+        <span class="cj-m-name">${esc(L.name)}</span>
+        <span class="cj-m-sub">${n} kérdés · ${L.minutes} perc</span>
+      </button>`;
+    }).join('');
+    const toggle = (key, on, labels) => [true, false].map(v => `
+      <button class="cj-mode-btn ${on === v ? 'active' : ''}" data-${key}="${v ? 1 : 0}" type="button">
+        <span class="cj-m-name">${labels[v ? 0 : 1]}</span>
+      </button>`).join('');
+    el.innerHTML = `
+      <div class="lobby-header">
+        <div class="lobby-eyebrow">Próbavizsga</div>
+        <h2 class="lobby-title">Melyik szintet írod meg?</h2>
+      </div>
+      <div class="lobby-section">
+        <div class="lobby-section-label">Szint</div>
+        <div class="cj-mode-row mw-level-row">${levels}</div>
+      </div>
+      <div class="lobby-section">
+        <div class="lobby-section-label">Időmérő</div>
+        <div class="cj-mode-row py-mode-row" id="exTimerRow">${toggle('timer', settings.timer, ['Időre', 'Idő nélkül'])}</div>
+      </div>
+      <div class="lobby-section">
+        <div class="lobby-section-label">Pinyin</div>
+        <div class="cj-mode-row py-mode-row" id="exPinyinRow">${toggle('pinyin', settings.pinyin[settings.level], ['Látszik', 'Rejtve'])}</div>
+      </div>
+      <button class="btn btn-primary ml-start" id="exStart" type="button">Indítás</button>`;
+    el.querySelectorAll('[data-level]').forEach(btn => btn.addEventListener('click', () => {
+      settings.level = btn.dataset.level; saveSettings(); renderLobby();
+    }));
+    el.querySelectorAll('[data-timer]').forEach(btn => btn.addEventListener('click', () => {
+      settings.timer = btn.dataset.timer === '1'; saveSettings(); renderLobby();
+    }));
+    el.querySelectorAll('[data-pinyin]').forEach(btn => btn.addEventListener('click', () => {
+      settings.pinyin[settings.level] = btn.dataset.pinyin === '1'; saveSettings(); renderLobby();
+    }));
+    document.getElementById('exStart').addEventListener('click', startExam);
+    const L = LEVELS[settings.level];
+    document.getElementById('exStart').textContent = 'Indítás — ' + L.name + (settings.timer ? ', ' + L.minutes + ' perc' : '');
+  }
+
+  /* ── E) A vizsga menete ────────────────────────── */
+  const run = { inLobby: true, L: null, qs: [], idx: 0, startTs: 0, deadline: 0, timerId: null, finished: false, timedOut: false };
+
+  function startExam() {
+    const L = LEVELS[settings.level];
+    run.L = L;
+    run.qs = [];
+    L.sections.forEach(sec => pickSection(L, sec).forEach(it => run.qs.push(makeQuestion(it, sec))));
+    if (!run.qs.length) return;
+    run.idx = 0; run.finished = false; run.timedOut = false; run.inLobby = false;
+    run.startTs = Date.now();
+    run.deadline = settings.timer ? run.startTs + L.minutes * 60000 : 0;
+    HanziFlowRound.begin(function () {
+      return { module: 'exam', mode: settings.level, results: gradedResults(true), score: 0, startTs: run.startTs };
+    });
+    document.querySelector('.module-hero')?.classList.add('hidden');
+    ['exLobby', 'exInfo'].forEach(id => document.getElementById(id).classList.add('hidden'));
+    const rt = document.getElementById('exRuntime');
+    rt.classList.remove('hidden');
+    rt.classList.toggle('ex-nopy', !settings.pinyin[settings.level]);
+    document.getElementById('exResult').classList.add('hidden');
+    document.getElementById('exResult').innerHTML = '';
+    document.getElementById('exExam').classList.remove('hidden');
+    if (run.timerId) clearInterval(run.timerId);
+    run.timerId = setInterval(tick, 1000);
+    tick();
+    renderQuestion();
+  }
+
+  const mmss = ms => { const s = Math.max(0, Math.round(ms / 1000)); return Math.floor(s / 60) + ':' + String(s % 60).padStart(2, '0'); };
+  function tick() {
+    const el = document.getElementById('exTime');
+    if (!el || run.finished) return;
+    if (run.deadline) {
+      const left = run.deadline - Date.now();
+      el.textContent = mmss(left);
+      el.classList.toggle('is-low', left < 60000);
+      if (left <= 0) { run.timedOut = true; finishExam(); }
+    } else {
+      el.textContent = mmss(Date.now() - run.startTs);
+    }
+  }
+
+  function play(text, btn) {
+    if (!window.HanziFlowAudio) return audioFailed();
+    if (btn) { btn.classList.add('is-playing'); setTimeout(() => btn.classList.remove('is-playing'), 1600); }
+    try { HanziFlowAudio.play(text, { speed: 0.85, onError: audioFailed }); } catch (e) { audioFailed(); }
+  }
+  function audioFailed() {
+    const el = document.getElementById('exNoAudio');
+    if (el) el.classList.remove('hidden');
+  }
+  function playQuestion(q, btn) {
+    if (q.plays >= MAX_PLAYS) return;
+    q.plays++;
+    play(audioOf(q.it), btn);
+    updatePlayBtn(q);
+  }
+  function updatePlayBtn(q) {
+    const left = MAX_PLAYS - q.plays;
+    const b = document.getElementById('exPlay'), note = document.getElementById('exPlaysLeft');
+    if (b) b.disabled = left <= 0;
+    if (note) note.textContent = left > 0 ? `Még ${left}× meghallgatható` : 'Kétszer hallottad — válassz!';
+  }
+
+  function transcriptHtml(it) {
+    if (it.t === 'hearHu') return `<p class="ex-line">${rich(it.zh)}</p>`;
+    return it.lines.map(l => `<p class="ex-line">${rich(l)}</p>`).join('');
+  }
+
+  function renderQuestion() {
+    const q = run.qs[run.idx], it = q.it, total = run.qs.length;
+    const inSec = run.qs.filter(x => x.sec === q.sec);
+    const posInSec = inSec.indexOf(q) + 1;
+    document.getElementById('exSection').textContent = q.sec.name;
+    document.getElementById('exCount').textContent = `Kérdés ${run.idx + 1} / ${total}`;
+    document.getElementById('exProgressFill').style.width = `${(run.qs.filter(isAnswered).length / total) * 100}%`;
+
+    let body = '';
+    if (isListen(it)) {
+      body += `
+        <div class="lq-listen">
+          <button class="lq-listen-btn" id="exPlay" type="button" aria-label="Lejátszás">${PLAY_BIG}</button>
+          <span class="ex-plays" id="exPlaysLeft"></span>
+        </div>
+        <p class="tone-noaudio hidden" id="exNoAudio">A hang most nem szól. <button class="btn btn-ghost ex-show" id="exShow" type="button">Mutasd a szöveget</button></p>
+        <div class="ex-transcript${q.shown ? '' : ' hidden'}" id="exTranscript">${transcriptHtml(it)}</div>`;
+      if (it.t === 'hear') body += `<div class="ex-q">${rich(it.q)}</div>`;
+    } else if (it.t === 'reply') {
+      body += `<div class="ex-q ex-q-big">${rich(it.q)}</div>`;
+    } else if (it.t === 'blank' || it.t === 'hanzi') {
+      const i = it.zh.indexOf('＿');
+      const blank = it.t === 'hanzi'
+        ? `<span class="ex-blank-py"><span class="ex-blank-pinyin">${esc(it.py)}</span><span class="mw-blank" aria-label="hiányzó írásjegy">?</span></span>`
+        : '<span class="mw-blank" aria-label="hiányzó szó">?</span>';
+      body += `<div class="mw-sentence">${rich(it.zh.slice(0, i))}${blank}${rich(it.zh.slice(i + 1))}</div>`;
+    } else if (it.t === 'judge') {
+      body += `<div class="ex-text">${rich(it.text)}</div><div class="ex-star">★ ${rich(it.s)}</div>`;
+    } else if (it.t === 'passage') {
+      body += `<div class="ex-text">${rich(it.text)}</div><div class="ex-q">${rich(it.q)}</div>`;
+    } else if (it.t === 'order') {
+      body += `<div class="sm-hu">${esc(it.hu)}</div>`;
+    }
+
+    let answer = '';
+    if (it.t === 'order') {
+      answer = `
+        <div class="sm-answer" id="exAnswer" aria-live="polite"></div>
+        <div class="sm-bank" id="exBank"></div>
+        <div class="sm-actions ex-order-actions"><button class="btn btn-outline sm-undo" id="exUndo" type="button">Vissza</button></div>`;
+    } else {
+      answer = `<div class="cj-options ex-options${it.t === 'judge' ? ' ex-options-2' : ''}${it.t === 'hanzi' ? ' ex-options-4' : ''}">
+        ${q.options.map((o, i) => `<button class="cj-option ex-option${q.answer === i ? ' is-selected' : ''}" type="button" data-idx="${i}" aria-pressed="${q.answer === i}"><span class="ex-letter">${LETTERS[i]}</span><span class="ex-opt-body">${o.html}</span></button>`).join('')}
+      </div>`;
+    }
+    const last = run.idx === total - 1;
+    document.getElementById('exCard').innerHTML = `
+      <div class="cj-prompt">
+        <div class="cj-prompt-eyebrow"><span class="cj-pe-group">${esc(q.sec.name)}</span><span class="cj-pe-dot">·</span>${posInSec} / ${inSec.length}</div>
+        <div class="kana-task">${TASK[it.t]}</div>
+        ${body}
+      </div>
+      ${answer}
+      <div class="ex-nav">
+        <button class="btn btn-outline" id="exPrev" type="button"${run.idx === 0 ? ' disabled' : ''}>← Előző</button>
+        <button class="btn btn-primary" id="exNext" type="button">${last ? 'Beadom' : isAnswered(q) ? 'Következő →' : 'Kihagyom →'}</button>
+      </div>`;
+
+    if (isListen(it)) {
+      const pb = document.getElementById('exPlay');
+      pb.addEventListener('click', () => playQuestion(q, pb));
+      document.getElementById('exShow').addEventListener('click', () => {
+        q.shown = true; document.getElementById('exTranscript').classList.remove('hidden');
+      });
+      updatePlayBtn(q);
+      if (q.plays === 0) playQuestion(q, pb);
+    }
+    if (it.t === 'order') drawOrder(q);
+    else document.querySelectorAll('#exCard .ex-option').forEach(btn => btn.addEventListener('click', () => {
+      q.answer = parseInt(btn.dataset.idx, 10);
+      document.querySelectorAll('#exCard .ex-option').forEach(b => {
+        const on = b === btn;
+        b.classList.toggle('is-selected', on); b.setAttribute('aria-pressed', on);
+      });
+      updateNav(q);
+    }));
+    document.getElementById('exPrev').addEventListener('click', () => go(-1));
+    document.getElementById('exNext').addEventListener('click', () => {
+      if (run.idx === total - 1) return submitExam();
+      go(1);
+    });
+  }
+  function updateNav(q) {
+    const btn = document.getElementById('exNext');
+    if (btn && run.idx < run.qs.length - 1) btn.textContent = isAnswered(q) ? 'Következő →' : 'Kihagyom →';
+    document.getElementById('exProgressFill').style.width = `${(run.qs.filter(isAnswered).length / run.qs.length) * 100}%`;
+  }
+  function go(step) {
+    if (window.HanziFlowAudio) HanziFlowAudio.stop();
+    run.idx = Math.max(0, Math.min(run.qs.length - 1, run.idx + step));
+    renderQuestion();
+    HanziFlowRound.scrollToRound();
+  }
+
+  function drawOrder(q) {
+    const ans = document.getElementById('exAnswer'), bank = document.getElementById('exBank');
+    if (!ans || !bank) return;
+    const used = q.placed.map(t => t.k);
+    ans.innerHTML = (q.placed.length
+      ? q.placed.map((t, i) => `<button class="sm-tile is-placed" type="button" data-pos="${i}">${rich(t.zh)}</button>`).join('')
+      : '<span class="sm-answer-hint">Koppints a szavakra a helyes sorrendben.</span>') +
+      (q.placed.length ? `<span class="sm-punct" lang="zh-CN">${esc(q.it.punct)}</span>` : '');
+    bank.innerHTML = q.bank.map(t => used.indexOf(t.k) >= 0
+      ? `<span class="sm-tile-slot" aria-hidden="true">${rich(t.zh)}</span>`
+      : `<button class="sm-tile" type="button" data-k="${t.k}">${rich(t.zh)}</button>`).join('');
+    ans.querySelectorAll('[data-pos]').forEach(btn => btn.addEventListener('click', () => {
+      q.placed.splice(parseInt(btn.dataset.pos, 10), 1); drawOrder(q);
+    }));
+    bank.querySelectorAll('[data-k]').forEach(btn => btn.addEventListener('click', () => {
+      q.placed.push(q.tiles[parseInt(btn.dataset.k, 10)]); drawOrder(q);
+    }));
+    const undo = document.getElementById('exUndo');
+    if (undo) { undo.disabled = !q.placed.length; undo.onclick = () => { if (q.placed.length) { q.placed.pop(); drawOrder(q); } }; }
+    updateNav(q);
+  }
+
+  function submitExam() {
+    const open = run.qs.filter(q => !isAnswered(q)).length;
+    if (open && !confirm(`${open} kérdésre még nem válaszoltál. Biztosan beadod?`)) return;
+    finishExam();
+  }
+
+  /* ── F) Eredmény és átnézés ────────────────────── */
+  function gradedResults(partial) {
+    return run.qs.filter(q => !partial || isAnswered(q)).map(q => {
+      const ok = isCorrect(q);
+      return { item: q.it.t + ':' + reading(q.it.zh || q.it.q || q.it.text || q.it.tiles.join('')).slice(0, 24),
+               section: q.sec.id, correct: ok,
+               errorCode: ok ? null : !isAnswered(q) ? (run.timedOut ? 'timeout' : 'empty') : 'wrong' };
+    });
+  }
+  function finishExam() {
+    if (run.finished) return;
+    run.finished = true;
+    if (run.timerId) { clearInterval(run.timerId); run.timerId = null; }
+    if (window.HanziFlowAudio) HanziFlowAudio.stop();
+    const L = run.L;
+    const secs = L.sections.map(sec => {
+      const qs = run.qs.filter(q => q.sec === sec);
+      const c = qs.filter(isCorrect).length;
+      return { sec: sec, n: qs.length, c: c, score: qs.length ? Math.round(c / qs.length * 100) : 0 };
+    });
+    const total = secs.reduce((a, s) => a + s.score, 0);
+    const max = maxScore(L);
+    const passed = total >= Math.ceil(max * L.pass);
+    const results = gradedResults(false);
+    HanziFlowStats.recordSession({ module: 'exam', mode: settings.level, results: results, score: total, startTs: run.startTs });
+    const p = loadProfile();
+    secs.forEach(s => {
+      const k = L.name + ' · ' + s.sec.name;
+      const st = p.sectionStats[k] = p.sectionStats[k] || { attempts: 0, correct: 0 };
+      st.attempts += s.n; st.correct += s.c;
+      p.totalAttempts += s.n; p.totalCorrect += s.c;
+    });
+    p.best[settings.level] = Math.max(p.best[settings.level] || 0, total);
+    p.last[settings.level] = total;
+    p.exams[settings.level] = (p.exams[settings.level] || 0) + 1;
+    saveProfile(p);
+
+    document.getElementById('exExam').classList.add('hidden');
+    const el = document.getElementById('exResult');
+    el.classList.remove('hidden');
+    el.innerHTML = `
+      <div class="ex-result glass-panel-heavy">
+        <div class="summary-icon">${passed ? '🏆' : '🌱'}</div>
+        <h3 class="ex-result-title">${esc(L.name)} próbavizsga</h3>
+        <div class="ex-total">${total} <span>/ ${max}</span></div>
+        <div class="ex-verdict ${passed ? 'is-pass' : 'is-fail'}">${passed ? 'Sikeres — elérted a 60%-ot' : 'Most még nem sikerült — az átmenő ' + Math.ceil(max * L.pass) + ' pont'}</div>
+        ${run.timedOut ? '<p class="ex-note">Lejárt az idő: a megválaszolatlan kérdések nem kaptak pontot.</p>' : ''}
+        <div class="ex-secs">
+          ${secs.map(s => `
+            <div class="ex-sec">
+              <div class="ex-sec-top"><span class="ex-sec-name">${esc(s.sec.name)}</span><span class="ex-sec-score">${s.score} / 100 · ${s.c} / ${s.n} jó</span></div>
+              <div class="round-progress-bar"><div class="round-progress-fill" style="width: ${s.score}%"></div></div>
+            </div>`).join('')}
+        </div>
+        <p class="ex-note">Idő: ${mmss(Date.now() - run.startTs)}</p>
+        <div class="kana-summary-actions">
+          <button class="btn btn-primary" id="exReviewBtn" type="button">Válaszok átnézése</button>
+          <button class="btn btn-outline" id="exAgain" type="button">Új próbavizsga</button>
+          <button class="btn btn-ghost" id="exBack" type="button">Vissza</button>
+        </div>
+      </div>
+      <div class="ex-review hidden" id="exReview"></div>`;
+    document.getElementById('exReviewBtn').addEventListener('click', () => {
+      const r = document.getElementById('exReview');
+      r.innerHTML = reviewHtml(); r.classList.remove('hidden');
+      bindSay(r);
+      r.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+    document.getElementById('exAgain').addEventListener('click', startExam);
+    document.getElementById('exBack').addEventListener('click', backToLobby);
+    HanziFlowRound.scrollToRound();
+    if (passed && total === max && window.HanziFlowMotion && HanziFlowMotion.celebrate) {
+      try { HanziFlowMotion.celebrate({ title: 'Hibátlan vizsga!', sub: `${total} / ${max}` }); } catch (e) {}
+    }
+  }
+
+  function answerHtml(q, idx) {
+    if (idx === null || idx === undefined) return '<em class="ex-none">nincs válasz</em>';
+    return `<span class="ex-letter ex-letter-sm">${LETTERS[idx]}</span> ${q.options[idx].html}`;
+  }
+  function reviewHtml() {
+    return `<h3 class="ex-review-h">A válaszaid</h3>` + run.qs.map((q, n) => {
+      const it = q.it, ok = isCorrect(q), answered = isAnswered(q);
+      let task = '';
+      if (isListen(it)) task = transcriptHtml(it) + (it.t === 'hear' ? `<p class="ex-line"><strong lang="zh-CN">问：</strong>${rich(it.q)}</p>` : '');
+      else if (it.t === 'reply') task = `<p class="ex-line">${rich(it.q)}</p>`;
+      else if (it.t === 'blank' || it.t === 'hanzi') task = `<p class="ex-line">${rich(it.zh)}${it.t === 'hanzi' ? ` <span class="ex-dim">(${esc(it.py)})</span>` : ''}</p>`;
+      else if (it.t === 'judge') task = `<p class="ex-line">${rich(it.text)}</p><p class="ex-line">★ ${rich(it.s)}</p>`;
+      else if (it.t === 'passage') task = `<p class="ex-line">${rich(it.text)}</p><p class="ex-line">${rich(it.q)}</p>`;
+      let mine, right;
+      if (it.t === 'order') {
+        mine = answered ? `<span class="mw-fb-zh">${rich(q.placed.map(t => t.zh).join('') + it.punct)}</span>` : '<em class="ex-none">nincs válasz</em>';
+        right = `<span class="mw-fb-zh">${rich(it.tiles.join('') + it.punct)}</span>`;
+      } else {
+        mine = answerHtml(q, q.answer);
+        right = answerHtml(q, q.right);
+      }
+      const hu = it.t === 'hearHu' ? '' : it.hu ? `<p class="ex-hu">${esc(it.hu)}</p>` : '';
+      const say = isListen(it) ? audioOf(it) : it.t === 'order' ? reading(it.tiles.join(''))
+        : (it.t === 'blank' || it.t === 'hanzi') ? reading(it.zh.replace('＿', it.a)) : reading(it.text || it.q || '');
+      return `
+        <details class="ex-ritem ${ok ? 'is-ok' : 'is-bad'}"${ok ? '' : ' open'}>
+          <summary><span class="ex-rmark">${ok ? '✓' : answered ? '✗' : '–'}</span><span class="ex-rnum">${n + 1}.</span><span class="ex-rsec">${esc(q.sec.name)}</span><span class="ex-rtask">${esc(TASK[it.t])}</span></summary>
+          <div class="ex-rbody">
+            ${task}
+            <div class="pfe-row pfe-correct"><span class="pfe-label">Helyes</span><span class="pfe-text">${right}</span></div>
+            ${ok ? '' : `<div class="pfe-row pfe-wrong"><span class="pfe-label">A te válaszod</span><span class="pfe-text">${mine}</span></div>`}
+            ${hu}
+            ${say ? `<button class="btn btn-ghost ex-rplay" type="button" data-say="${esc(say)}">Meghallgatom</button>` : ''}
+          </div>
+        </details>`;
+    }).join('');
+  }
+  function bindSay(root) {
+    root.querySelectorAll('[data-say]').forEach(btn => btn.addEventListener('click', () => {
+      if (window.HanziFlowAudio) HanziFlowAudio.play(btn.dataset.say, { speed: 0.85 });
+    }));
+  }
+
+  function backToLobby() {
+    if (run.timerId) { clearInterval(run.timerId); run.timerId = null; }
+    if (window.HanziFlowAudio) HanziFlowAudio.stop();
+    run.inLobby = true; run.finished = true; run.qs = [];
+    document.querySelector('.module-hero')?.classList.remove('hidden');   // → a kör-őr elmenti a részeredményt
+    document.getElementById('exRuntime').classList.add('hidden');
+    ['exLobby', 'exInfo'].forEach(id => document.getElementById(id).classList.remove('hidden'));
+    renderStatsBar(); renderLobby();
+  }
+
+  /* ── G) Init ───────────────────────────────────── */
+  document.getElementById('exExit').addEventListener('click', () => {
+    if (run.inLobby) return;
+    if (!run.finished && !confirm('Biztosan kilépsz a vizsgából? Az eddigi válaszaid nem kapnak pontszámot.')) return;
+    backToLobby();
+  });
+
+  renderStatsBar();
+  renderLobby();
+  renderInfo();
+
+  window._exam = { LEVELS, ITEMS, pickSection, makeQuestion, isCorrect, settings, run, startExam, finishExam, go };
+}
+
 /* ====================================================
    9d. LESSON PAGE — a tanulási út magyarázó oldala (lesson.html)
    ----------------------------------------------------
@@ -7933,6 +8447,8 @@ function initCurrentPage() {
     initSentencePage();
   } else if (document.getElementById('numbersMain')) {
     initNumbersPage();
+  } else if (document.getElementById('examMain')) {
+    initExamPage();
   } else if (document.getElementById('lessonMain')) {
     initLessonPage();
   } else if (document.querySelector('.auth-card')) {
