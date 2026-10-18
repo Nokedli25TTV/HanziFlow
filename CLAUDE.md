@@ -111,7 +111,9 @@ Színt csak tokenből; 12 px alatt nincs szöveg; érintési célpont ≥ 44 px;
   10 kérdéses részre; az előző vizsga kérdései (profil: recent) hátrébb kerülnek. Bővítés: új feladat a HANZIFLOW_EXAM_ITEMS-be.
 - [x] Dolgozatok (pages/tests.html): Szavak · Mondatok · Nyelvtan (a leckék quiz-kérdései) · Olvasás; a rossz nyelvtani
   válasz a HanziFlowSRS-be kerül (`lesson:<id>:<sorszám>`), újraíráskor az előző kérdések hátrébb kerülnek.
-- [ ] A dolgozatok és a próbavizsga lépésként a tanulási útba (HANZIFLOW_PATH) — ha a user kéri.
+- [x] A dolgozatok és a próbavizsgák nem kötelező lépésként az úton (core.js, `optional: true`): 5 leckénként egy
+  témazáró-fejezet, a szint végén szintzáró + próbavizsga. Nem állítják meg az utat, 60%-tól pipát kapnak; a lépésről
+  nyitott oldalon csak a lépés saját dolgozata / szintje teljesíti a lépést (`skipPath`).
 - Élő oldal: https://nokedli25ttv.github.io/HanziFlow/ (GitHub Pages, main ág, 2026-10-18 óta).
 - [ ] A NihonCore `sw.js`-ében a cache-törlést a saját előtagra kell szűkíteni (különben a HanziFlow offline-tárát is törli).
 - [ ] Firestore-szabály a `users/{uid}/apps/{app}` helyre (a user Firebase-konzolján).

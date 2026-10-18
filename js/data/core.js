@@ -9,13 +9,15 @@
      id       egyedi kulcs (a haladás ezzel mentődik)
      glyph    a lépés jele a térképen (egy írásjegy)
      title / desc
-     module   a HanziFlowStats modul-kulcsa: 'lesson' | 'tones'
+     module   a HanziFlowStats modul-kulcsa: 'lesson' | 'tones' | 'tests' | 'exam'
               (ehhez a modulhoz tartozó befejezett kör teljesíti a lépést)
      mode     a lecke-oldal körének fajtája: 'listen' | 'read' (alapból: ellenőrző kör)
      href     a megnyitandó oldal (a gyökérhez képest)
      level    'zero' = csak a nulláról indulónak kötelező; aki a pinyint már
               ismeri, annál „átugorva" jelenik meg
      preset   a modul beállításaira ültetett kör:  set: { kulcs: érték }
+     optional nem kötelező lépés (dolgozat, próbavizsga): nem állítja meg az utat, és nem számít
+              bele a haladásba; ha legalább 60%-os, pipát kap
    A lépés akkor „kész", ha az innen indított kör legalább 60%-os.
 
    HANZIFLOW_PATH_UNITS — fejezetek (a térkép ezek szerint tagol):
@@ -579,7 +581,57 @@ const HANZIFLOW_PATH = [
     module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l50&round=listen' },
   { id: 'l50-read', glyph: '读', title: 'Olvasás: Két év Pekingben',
     desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
-    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l50&round=read' }
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l50&round=read' },
+
+  // ── Dolgozatok és próbavizsgák: nem kötelező lépések (nem állítják meg az utat) ──
+  { id: 'test-h1a', glyph: '测', title: 'Dolgozat: HSK 1, 1–5. lecke',
+    desc: 'Témazáró jegyre. Köszönés, bemutatkozás, emberek körülöttem, család és életkor.',
+    module: 'tests', href: 'pages/tests.html?test=h1a', optional: true, preset: { set: { level: 1 } } },
+  { id: 'test-h1b', glyph: '测', title: 'Dolgozat: HSK 1, 6–10. lecke',
+    desc: 'Témazáró jegyre. Képességek, dátum, vásárlás és pénz, hely és munkahely.',
+    module: 'tests', href: 'pages/tests.html?test=h1b', optional: true, preset: { set: { level: 1 } } },
+  { id: 'test-h1c', glyph: '测', title: 'Dolgozat: HSK 1, 11–15. lecke',
+    desc: 'Témazáró jegyre. Idő és napirend, időjárás, telefon, ami megtörtént.',
+    module: 'tests', href: 'pages/tests.html?test=h1c', optional: true, preset: { set: { level: 1 } } },
+  { id: 'test-h2a', glyph: '测', title: 'Dolgozat: HSK 2, 1–5. lecke',
+    desc: 'Témazáró jegyre. Tervek és vélemény, szokások, dolgok azonosítása, ruhavásárlás.',
+    module: 'tests', href: 'pages/tests.html?test=h2a', optional: true, preset: { set: { level: 2 } } },
+  { id: 'test-h2b', glyph: '测', title: 'Dolgozat: HSK 2, 6–10. lecke',
+    desc: 'Témazáró jegyre. Okok és változások, közlekedés, tanács, a cselekvés eredménye, orvosnál.',
+    module: 'tests', href: 'pages/tests.html?test=h2b', optional: true, preset: { set: { level: 2 } } },
+  { id: 'test-h2c', glyph: '测', title: 'Dolgozat: HSK 2, 11–15. lecke',
+    desc: 'Témazáró jegyre. Összehasonlítás, hogyan csinálod, állapot és irány, tapasztalatok.',
+    module: 'tests', href: 'pages/tests.html?test=h2c', optional: true, preset: { set: { level: 2 } } },
+  { id: 'test-h3a', glyph: '测', title: 'Dolgozat: HSK 3, 1–5. lecke',
+    desc: 'Témazáró jegyre. Tervek, költözés, fokozás, képes vagy nem képes, idő és ismeretség.',
+    module: 'tests', href: 'pages/tests.html?test=h3a', optional: true, preset: { set: { level: 3 } } },
+  { id: 'test-h3b', glyph: '测', title: 'Dolgozat: HSK 3, 6–10. lecke',
+    desc: 'Témazáró jegyre. Meglepetésbuli, hasonlóság, első nap a munkahelyen, irodai munka, lakásbérlés.',
+    module: 'tests', href: 'pages/tests.html?test=h3b', optional: true, preset: { set: { level: 3 } } },
+  { id: 'test-h3c', glyph: '测', title: 'Dolgozat: HSK 3, 11–15. lecke',
+    desc: 'Témazáró jegyre. Egy hosszú hét, feltétel és cél, valószínűség, a szenvedő szerkezet.',
+    module: 'tests', href: 'pages/tests.html?test=h3c', optional: true, preset: { set: { level: 3 } } },
+  { id: 'test-h3d', glyph: '测', title: 'Dolgozat: HSK 3, 16–20. lecke',
+    desc: 'Témazáró jegyre. Az első munkahét, szempontok és viszonyok, hírek és meglepetések, búcsú.',
+    module: 'tests', href: 'pages/tests.html?test=h3d', optional: true, preset: { set: { level: 3 } } },
+  { id: 'test-h1z', glyph: '测', title: 'Szintzáró: HSK 1',
+    desc: 'Nagyobb dolgozat a HSK 1 összes leckéjéből: szavak, mondatok, nyelvtan, olvasmány.',
+    module: 'tests', href: 'pages/tests.html?test=h1z', optional: true, preset: { set: { level: 1 } } },
+  { id: 'exam-hsk1', glyph: '考', title: 'Próbavizsga: HSK 1',
+    desc: 'A HSK 1 vizsga mintájára: hallás és olvasás, időre, a végén pontszámmal.',
+    module: 'exam', href: 'pages/exam.html', optional: true, preset: { set: { level: 'hsk1' } } },
+  { id: 'test-h2z', glyph: '测', title: 'Szintzáró: HSK 2',
+    desc: 'Nagyobb dolgozat a HSK 2 összes leckéjéből: szavak, mondatok, nyelvtan, olvasmány.',
+    module: 'tests', href: 'pages/tests.html?test=h2z', optional: true, preset: { set: { level: 2 } } },
+  { id: 'exam-hsk2', glyph: '考', title: 'Próbavizsga: HSK 2',
+    desc: 'A HSK 2 vizsga mintájára: hallás és olvasás, időre, a végén pontszámmal.',
+    module: 'exam', href: 'pages/exam.html', optional: true, preset: { set: { level: 'hsk2' } } },
+  { id: 'test-h3z', glyph: '测', title: 'Szintzáró: HSK 3',
+    desc: 'Nagyobb dolgozat a HSK 3 összes leckéjéből: szavak, mondatok, nyelvtan, olvasmány.',
+    module: 'tests', href: 'pages/tests.html?test=h3z', optional: true, preset: { set: { level: 3 } } },
+  { id: 'exam-hsk3', glyph: '考', title: 'Próbavizsga: HSK 3',
+    desc: 'A HSK 3 vizsga mintájára: hallás, olvasás és írás, időre, a végén pontszámmal.',
+    module: 'exam', href: 'pages/exam.html', optional: true, preset: { set: { level: 'hsk3' } } }
 ];
 
 const HANZIFLOW_PATH_UNITS = [
@@ -595,6 +647,8 @@ const HANZIFLOW_PATH_UNITS = [
     steps: ['l4-lesson', 'l4-listen', 'l4-read'] },
   { id: 'u-l5', kicker: 'HSK 1 · 5. lecke', title: 'Család és életkor', sub: '几, 有, számok százig, 了, 多大',
     steps: ['l5-lesson', 'l5-listen', 'l5-read'] },
+  { id: 'u-t-h1a', kicker: 'HSK 1 · Dolgozat', title: '1. témazáró', sub: 'Az 1–5. lecke anyaga, jegyre — nem kötelező',
+    steps: ['test-h1a'] },
   { id: 'u-l6', kicker: 'HSK 1 · 6. lecke', title: 'Mit tudsz?', sub: '会, 很 + melléknév, 怎么, 一点儿',
     steps: ['l6-lesson', 'l6-listen', 'l6-read'] },
   { id: 'u-l7', kicker: 'HSK 1 · 7. lecke', title: 'Hányadika van ma?', sub: 'Dátum, a hét napjai, 去 + hely + cselekvés',
@@ -605,6 +659,8 @@ const HANZIFLOW_PATH_UNITS = [
     steps: ['l9-lesson', 'l9-listen', 'l9-read'] },
   { id: 'u-l10', kicker: 'HSK 1 · 10. lecke', title: 'Szabad ide ülnöm?', sub: 'hely + 有, 和, 能, 请, 前面 / 后面',
     steps: ['l10-lesson', 'l10-listen', 'l10-read'] },
+  { id: 'u-t-h1b', kicker: 'HSK 1 · Dolgozat', title: '2. témazáró', sub: 'A 6–10. lecke anyaga, jegyre — nem kötelező',
+    steps: ['test-h1b'] },
   { id: 'u-l11', kicker: 'HSK 1 · 11. lecke', title: 'Hány óra van?', sub: '几点, 点 + 分, 什么时候, 前, 回',
     steps: ['l11-lesson', 'l11-listen', 'l11-read'] },
   { id: 'u-l12', kicker: 'HSK 1 · 12. lecke', title: 'Milyen idő lesz?', sub: '怎么样, 太…了, téma + megjegyzés, 会',
@@ -615,6 +671,10 @@ const HANZIFLOW_PATH_UNITS = [
     steps: ['l14-lesson', 'l14-listen', 'l14-read'] },
   { id: 'u-l15', kicker: 'HSK 1 · 15. lecke', title: 'Hogyan jöttél?', sub: '是…的, 坐 + jármű, teljes dátum, 认识, 一起',
     steps: ['l15-lesson', 'l15-listen', 'l15-read'] },
+  { id: 'u-t-h1c', kicker: 'HSK 1 · Dolgozat', title: '3. témazáró', sub: 'A 11–15. lecke anyaga, jegyre — nem kötelező',
+    steps: ['test-h1c'] },
+  { id: 'u-z-h1', kicker: 'HSK 1 · Szintzáró', title: 'A HSK 1 vége', sub: 'Szintzáró dolgozat és próbavizsga — nem kötelező',
+    steps: ['test-h1z', 'exam-hsk1'] },
   { id: 'u-l16', kicker: 'HSK 2 · 1. lecke', title: 'Mikor a legjobb utazni?', sub: '要, 最, 觉得, 为什么 / 因为, közelítő számok',
     steps: ['l16-lesson', 'l16-listen', 'l16-read'] },
   { id: 'u-l17', kicker: 'HSK 2 · 2. lecke', title: 'Minden nap hatkor kelek', sub: '每…都, 是不是, időtartam, 多高 / 多长时间',
@@ -625,6 +685,8 @@ const HANZIFLOW_PATH_UNITS = [
     steps: ['l19-lesson', 'l19-listen', 'l19-read'] },
   { id: 'u-l20', kicker: 'HSK 2 · 5. lecke', title: 'Kicsit olcsóbban?', sub: '还, 就, 百 / 千 / 零, 有点儿 / 一点儿, ruhák mérőszavai',
     steps: ['l20-lesson', 'l20-listen', 'l20-read'] },
+  { id: 'u-t-h2a', kicker: 'HSK 2 · Dolgozat', title: '1. témazáró', sub: 'Az 1–5. lecke anyaga, jegyre — nem kötelező',
+    steps: ['test-h2a'] },
   { id: 'u-l21', kicker: 'HSK 2 · 6. lecke', title: 'Hogyhogy nem jöttél?', sub: '怎么 + 没, 因为…所以…, mondatvégi 了, 不…了, 可以',
     steps: ['l21-lesson', 'l21-listen', 'l21-read'] },
   { id: 'u-l22', kicker: 'HSK 2 · 7. lecke', title: 'Messze laksz?', sub: '离, 从…到…, 要 + időtartam, 还 = még mindig, …吧？',
@@ -635,6 +697,8 @@ const HANZIFLOW_PATH_UNITS = [
     steps: ['l24-lesson', 'l24-listen', 'l24-read'] },
   { id: 'u-l25', kicker: 'HSK 2 · 10. lecke', title: 'Ne aggódj!', sub: '别 + ige, 别…了, 正在…呢, 头疼, gyakoriság',
     steps: ['l25-lesson', 'l25-listen', 'l25-read'] },
+  { id: 'u-t-h2b', kicker: 'HSK 2 · Dolgozat', title: '2. témazáró', sub: 'A 6–10. lecke anyaga, jegyre — nem kötelező',
+    steps: ['test-h2b'] },
   { id: 'u-l26', kicker: 'HSK 2 · 11. lecke', title: 'Peking melegebb', sub: 'A 比 B + mn., 大三岁, 没有…那么, 更, 跟…一样',
     steps: ['l26-lesson', 'l26-listen', 'l26-read'] },
   { id: 'u-l27', kicker: 'HSK 2 · 12. lecke', title: 'Szépen énekelsz!', sub: '唱得很好, 说汉语说得很好, 打得比我好, 虽然…但是…',
@@ -645,6 +709,10 @@ const HANZIFLOW_PATH_UNITS = [
     steps: ['l29-lesson', 'l29-listen', 'l29-read'] },
   { id: 'u-l30', kicker: 'HSK 2 · 15. lecke', title: 'Boldog új évet!', sub: '快要…了, 就要…了, 都…了, 祝你…, 送, 节',
     steps: ['l30-lesson', 'l30-listen', 'l30-read'] },
+  { id: 'u-t-h2c', kicker: 'HSK 2 · Dolgozat', title: '3. témazáró', sub: 'A 11–15. lecke anyaga, jegyre — nem kötelező',
+    steps: ['test-h2c'] },
+  { id: 'u-z-h2', kicker: 'HSK 2 · Szintzáró', title: 'A HSK 2 vége', sub: 'Szintzáró dolgozat és próbavizsga — nem kötelező',
+    steps: ['test-h2z', 'exam-hsk2'] },
   { id: 'u-l31', kicker: 'HSK 3 · 1. lecke', title: 'Új félév, új tervek', sub: '打算, 还是 / 或者, 一边…一边…, 先…然后…, 以前 / 以后',
     steps: ['l31-lesson', 'l31-listen', 'l31-read'] },
   { id: 'u-l32', kicker: 'HSK 3 · 2. lecke', title: 'Hozd fel, vidd vissza!', sub: '上来 / 下去, 搬上来, 走进教室来, 买回来, 刚 / 刚才',
@@ -655,6 +723,8 @@ const HANZIFLOW_PATH_UNITS = [
     steps: ['l34-lesson', 'l34-listen', 'l34-read'] },
   { id: 'u-l35', kicker: 'HSK 3 · 5. lecke', title: 'Rég láttalak!', sub: '认识十年了, 半年没见面了, 见个面, 才 / 就, 知道 / 认识 / 了解',
     steps: ['l35-lesson', 'l35-listen', 'l35-read'] },
+  { id: 'u-t-h3a', kicker: 'HSK 3 · Dolgozat', title: '1. témazáró', sub: 'Az 1–5. lecke anyaga, jegyre — nem kötelező',
+    steps: ['test-h3a'] },
   { id: 'u-l36', kicker: 'HSK 3 · 6. lecke', title: 'Bárhol jó', sub: '谁都, 什么也没, 想吃什么就吃什么, 只要…就…, 只有…才…',
     steps: ['l36-lesson', 'l36-listen', 'l36-read'] },
   { id: 'u-l37', kicker: 'HSK 3 · 7. lecke', title: 'Olyan magas, mint te?', sub: '有你这么高吗, 像妈妈一样, 不如, 比我早到十分钟, 比较',
@@ -665,6 +735,8 @@ const HANZIFLOW_PATH_UNITS = [
     steps: ['l39-lesson', 'l39-listen', 'l39-read'] },
   { id: 'u-l40', kicker: 'HSK 3 · 10. lecke', title: 'Ezen kívül minden jó', sub: '除了…以外 都 / 还, 其他, 另外, 不但…而且…, 还是…吧',
     steps: ['l40-lesson', 'l40-listen', 'l40-read'] },
+  { id: 'u-t-h3b', kicker: 'HSK 3 · Dolgozat', title: '2. témazáró', sub: 'A 6–10. lecke anyaga, jegyre — nem kötelező',
+    steps: ['test-h3b'] },
   { id: 'u-l41', kicker: 'HSK 3 · 11. lecke', title: 'Olyan fáradt vagyok, hogy…', sub: '累得不想说话, 忙死了, 一到…就…, 刚…就…, 下了班就…',
     steps: ['l41-lesson', 'l41-listen', 'l41-read'] },
   { id: 'u-l42', kicker: 'HSK 3 · 12. lecke', title: 'Ha szombaton esik…', sub: '如果…就…, 要是…的话, 那…, 为了, 对…感兴趣',
@@ -675,6 +747,8 @@ const HANZIFLOW_PATH_UNITS = [
     steps: ['l44-lesson', 'l44-listen', 'l44-read'] },
   { id: 'u-l45', kicker: 'HSK 3 · 15. lecke', title: 'Ellopták a biciklimet!', sub: '被人偷了, 被偷了, 让弟弟吃了, 没被, 作业写完了',
     steps: ['l45-lesson', 'l45-listen', 'l45-read'] },
+  { id: 'u-t-h3c', kicker: 'HSK 3 · Dolgozat', title: '3. témazáró', sub: 'A 11–15. lecke anyaga, jegyre — nem kötelező',
+    steps: ['test-h3c'] },
   { id: 'u-l46', kicker: 'HSK 3 · 16. lecke', title: 'Még ebédelni sincs időm', sub: '连…都, 几乎, 差点儿, 不是…而是…, 习惯',
     steps: ['l46-lesson', 'l46-listen', 'l46-read'] },
   { id: 'u-l47', kicker: 'HSK 3 · 17. lecke', title: 'Egy cikk a teáról', sub: '对…来说, 关于, 对身体好, 向他学习, 跟老板聊聊',
@@ -684,5 +758,9 @@ const HANZIFLOW_PATH_UNITS = [
   { id: 'u-l49', kicker: 'HSK 3 · 19. lecke', title: 'Változott a terv', sub: '好像, 据说, 本来…可是…, 只好, 原来 (kiderült / régen)',
     steps: ['l49-lesson', 'l49-listen', 'l49-read'] },
   { id: 'u-l50', kicker: 'HSK 3 · 20. lecke', title: 'Igyunk a barátságra!', sub: '自己, 互相, 舍不得, 一天比一天, 希望',
-    steps: ['l50-lesson', 'l50-listen', 'l50-read'] }
+    steps: ['l50-lesson', 'l50-listen', 'l50-read'] },
+  { id: 'u-t-h3d', kicker: 'HSK 3 · Dolgozat', title: '4. témazáró', sub: 'A 16–20. lecke anyaga, jegyre — nem kötelező',
+    steps: ['test-h3d'] },
+  { id: 'u-z-h3', kicker: 'HSK 3 · Szintzáró', title: 'A HSK 3 vége', sub: 'Szintzáró dolgozat és próbavizsga — nem kötelező',
+    steps: ['test-h3z', 'exam-hsk3'] }
 ];

@@ -1876,6 +1876,7 @@ html.lesson-steps.ls-round .hf-tabbar { display: none; }
 @media (min-width: 720px) { .ts-list { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 .ts-card { display: flex; flex-direction: column; gap: 8px; padding: 14px; border-radius: var(--radius-md); background: var(--surface-2); border: 1px solid var(--surface-2-edge); }
 .ts-card.is-final { border-color: var(--seal); border-top-width: 3px; }
+.ts-card.is-step { border: 2px solid var(--brand); box-shadow: 0 0 0 4px var(--brand-soft); }
 .ts-card-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; }
 .ts-card-titles { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
 .ts-card-title { margin: 0; font-size: var(--fs-lg); font-weight: 800; }

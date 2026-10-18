@@ -2151,7 +2151,9 @@ function initLanding() {
     let gi = 0;                                           // csomópont-sorszám az egész úton (a kanyar folytonos)
     list.innerHTML = units.map((u, ui) => {
       const uid = u.unit.id || ('u' + ui);
-      const live = u.rows.filter(r => !r.skipped && !r.optional);
+      // a csak nem kötelező lépésekből (dolgozat, próbavizsga) álló fejezet a saját lépéseit számolja
+      const req = u.rows.filter(r => !r.skipped && !r.optional);
+      const live = req.length ? req : u.rows.filter(r => r.optional);
       const done = live.filter(r => r.done).length;
       const complete = live.length > 0 && done === live.length;
       // a frissen kész lépés fejezete ezen a megnyitáson még nyitva marad (hogy látsszon az animáció)
@@ -2277,7 +2279,9 @@ function initLanding() {
 
     tocBody.innerHTML = units.map((u, ui) => {
       const uid = u.unit.id || ('u' + ui);
-      const live = u.rows.filter(r => !r.skipped && !r.optional);
+      // a csak nem kötelező lépésekből (dolgozat, próbavizsga) álló fejezet a saját lépéseit számolja
+      const req = u.rows.filter(r => !r.skipped && !r.optional);
+      const live = req.length ? req : u.rows.filter(r => r.optional);
       const done = live.filter(r => r.done).length;
       const complete = live.length > 0 && done === live.length;
       const hasNext = !!nextId && u.rows.some(r => r.step.id === nextId);
@@ -6800,6 +6804,11 @@ function initExamPage() {
     pinyin: Object.assign({ hsk1: true, hsk2: true, hsk3: false }, saved.pinyin || {})
   };
   if (window.HanziFlowPath) HanziFlowPath.apply('exam', settings);
+  // a tanulási út lépéséről nyitva csak a lépés szintje teljesíti a lépést
+  const stepLevel = (function () {
+    const act = window.HanziFlowPath && HanziFlowPath.activeStep();
+    return act && act.module === 'exam' && act.preset && act.preset.set ? act.preset.set.level : null;
+  })();
   function saveSettings() {
     try { localStorage.setItem(SETTINGS_KEY, JSON.stringify(settings)); } catch (e) {}
   }
@@ -7147,7 +7156,8 @@ function initExamPage() {
     const max = maxScore(L);
     const passed = total >= Math.ceil(max * L.pass);
     const results = gradedResults(false);
-    HanziFlowStats.recordSession({ module: 'exam', mode: settings.level, results: results, score: total, startTs: run.startTs });
+    HanziFlowStats.recordSession({ module: 'exam', mode: settings.level, results: results, score: total, startTs: run.startTs,
+                                   skipPath: !!stepLevel && stepLevel !== settings.level });
     const p = loadProfile();
     secs.forEach(s => {
       const k = L.name + ' · ' + s.sec.name;
@@ -7313,6 +7323,14 @@ function initTestsPage() {
     pinyin: Object.assign({ 1: true, 2: true, 3: false }, saved.pinyin || {})
   };
   if (window.HanziFlowPath) HanziFlowPath.apply('tests', settings);
+  // a tanulási út lépéséről nyitva: a lépés dolgozata kiemelve, és csak az teljesíti a lépést
+  const stepTest = (function () {
+    const act = window.HanziFlowPath && HanziFlowPath.activeStep();
+    if (!act || act.module !== 'tests') return null;
+    try { const id = new URLSearchParams(act.href.split('?')[1] || '').get('test'); return BYID[id] ? id : null; } catch (e) { return null; }
+  })();
+  if (stepTest) settings.level = BYID[stepTest].level;
+  let stepScrolled = false;
   function saveSettings() {
     try { localStorage.setItem(SETTINGS_KEY, JSON.stringify(settings)); } catch (e) {}
   }
@@ -7428,7 +7446,7 @@ function initTestsPage() {
       const r = p.tests[t.id];
       const n = PARTS.reduce((a, part) => a + (t.final ? part.final : part.normal), 0);
       return `
-        <article class="ts-card${t.final ? ' is-final' : ''}">
+        <article class="ts-card${t.final ? ' is-final' : ''}${t.id === stepTest ? ' is-step' : ''}">
           <div class="ts-card-top">
             <div class="ts-card-titles">
               <h3 class="ts-card-title">${esc(t.title)}</h3>
@@ -7462,6 +7480,8 @@ function initTestsPage() {
     el.querySelectorAll('[data-timer]').forEach(b => b.addEventListener('click', () => { settings.timer = b.dataset.timer === '1'; saveSettings(); renderLobby(); }));
     el.querySelectorAll('[data-pinyin]').forEach(b => b.addEventListener('click', () => { settings.pinyin[lv] = b.dataset.pinyin === '1'; saveSettings(); renderLobby(); }));
     el.querySelectorAll('[data-test]').forEach(b => b.addEventListener('click', () => startTest(b.dataset.test)));
+    const stepCard = el.querySelector('.ts-card.is-step');
+    if (stepCard && !stepScrolled) { stepScrolled = true; stepCard.scrollIntoView({ block: 'center' }); }
   }
 
   function renderInfo() {
@@ -7604,7 +7624,8 @@ function initTestsPage() {
     const correct = run.qs.filter(isCorrect).length;
     const pct = total ? Math.round(correct / total * 100) : 0;
     const grade = gradeOf(pct);
-    HanziFlowStats.recordSession({ module: 'tests', mode: 'hsk' + t.level, results: graded(false), score: pct, startTs: run.startTs });
+    HanziFlowStats.recordSession({ module: 'tests', mode: 'hsk' + t.level, results: graded(false), score: pct, startTs: run.startTs,
+                                   skipPath: !!stepTest && stepTest !== t.id });
     const srsWrong = feedSrs();
     const p = loadProfile();
     const prev = p.tests[t.id];
