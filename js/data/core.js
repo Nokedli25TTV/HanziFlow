@@ -194,7 +194,40 @@ const HANZIFLOW_PATH = [
     module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l15&round=listen' },
   { id: 'l15-read', glyph: '读', title: 'Olvasás: Megérkeztem Kínába',
     desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
-    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l15&round=read' }
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l15&round=read' },
+
+  // ── HSK 2 · 1. lecke ──
+  { id: 'l16-lesson', glyph: '要', title: 'Magyarázat: 要, 最, 觉得, 为什么, 十几 · 二十多',
+    desc: 'Terv, vélemény és indoklás: mikor a legjobb utazni, és miért.',
+    module: 'lesson', href: 'pages/lesson.html?id=l16' },
+  { id: 'l16-listen', glyph: '听', title: 'Hallás: utazási tervek',
+    desc: 'A lecke mondatai hang után: mit jelent, amit hallasz?',
+    module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l16&round=listen' },
+  { id: 'l16-read', glyph: '读', title: 'Olvasás: Az utazási tervem',
+    desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l16&round=read' },
+
+  // ── HSK 2 · 2. lecke ──
+  { id: 'l17-lesson', glyph: '每', title: 'Magyarázat: 每…都, 是不是, ige + időtartam, 多 + melléknév',
+    desc: 'Napi szokások: mikor és mennyi ideig, és a megerősítő kérdés.',
+    module: 'lesson', href: 'pages/lesson.html?id=l17' },
+  { id: 'l17-listen', glyph: '听', title: 'Hallás: reggeli futás',
+    desc: 'A lecke mondatai hang után: mit jelent, amit hallasz?',
+    module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l17&round=listen' },
+  { id: 'l17-read', glyph: '读', title: 'Olvasás: David napja',
+    desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l17&round=read' },
+
+  // ── HSK 2 · 3. lecke ──
+  { id: 'l18-lesson', glyph: '色', title: 'Magyarázat: 的-szerkezet, színek, oldalak, 一下',
+    desc: 'Melyik az enyém? A piros, a bal oldali, az új — főnév nélkül.',
+    module: 'lesson', href: 'pages/lesson.html?id=l18' },
+  { id: 'l18-listen', glyph: '听', title: 'Hallás: a csomagszalagnál',
+    desc: 'A lecke mondatai hang után: mit jelent, amit hallasz?',
+    module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l18&round=listen' },
+  { id: 'l18-read', glyph: '读', title: 'Olvasás: A reptéren',
+    desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l18&round=read' }
 ];
 
 const HANZIFLOW_PATH_UNITS = [
@@ -229,5 +262,11 @@ const HANZIFLOW_PATH_UNITS = [
   { id: 'u-l14', kicker: 'HSK 1 · 14. lecke', title: 'Mit vettél?', sub: 'ige + 了, 没(有), 都, 后, 这些',
     steps: ['l14-lesson', 'l14-listen', 'l14-read'] },
   { id: 'u-l15', kicker: 'HSK 1 · 15. lecke', title: 'Hogyan jöttél?', sub: '是…的, 坐 + jármű, teljes dátum, 认识, 一起',
-    steps: ['l15-lesson', 'l15-listen', 'l15-read'] }
+    steps: ['l15-lesson', 'l15-listen', 'l15-read'] },
+  { id: 'u-l16', kicker: 'HSK 2 · 1. lecke', title: 'Mikor a legjobb utazni?', sub: '要, 最, 觉得, 为什么 / 因为, közelítő számok',
+    steps: ['l16-lesson', 'l16-listen', 'l16-read'] },
+  { id: 'u-l17', kicker: 'HSK 2 · 2. lecke', title: 'Minden nap hatkor kelek', sub: '每…都, 是不是, időtartam, 多高 / 多长时间',
+    steps: ['l17-lesson', 'l17-listen', 'l17-read'] },
+  { id: 'u-l18', kicker: 'HSK 2 · 3. lecke', title: 'A bal oldali piros az enyém', sub: '红色的 · 我的, színek, 左边 / 右边 / 旁边, 一下',
+    steps: ['l18-lesson', 'l18-listen', 'l18-read'] }
 ];
