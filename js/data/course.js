@@ -9855,6 +9855,341 @@ const HANZIFLOW_COURSE = [
     { q: 'Mit jelent a {申请|shēnqǐng}?', a: 'jelentkezik, kérvényez', wrong: ['elutasít, visszautasít', 'felvesz, alkalmaz', 'vizsgázik, felel'], why: '{申请大学|shēnqǐng dàxué} „egyetemre jelentkezik".' },
     { q: 'Mit jelent a {离开|líkāi}?', a: 'elhagy, eltávozik', wrong: ['megérkezik', 'visszatér', 'ott marad'], why: '{离开北京|líkāi Běijīng} „elhagyja Pekinget".' }
   ]
+},
+/* ════════════════════════════════════════════════════
+   HSK 4 · 1. LECKE — 不仅…而且…, 既…又…, 尤其, 挺…的, …之一
+   ════════════════════════════════════════════════════ */
+{
+  id: 'l51', no: 51, badge: '1', kicker: 'HSK 4 · 1. lecke', label: 'HSK 4 · 1. lecke',
+  title: 'Új város, új munka — nemcsak…, hanem…',
+  lead: 'Bemutatod az új munkahelyedet (这家公司不仅大，而且很有名), két tulajdonságot egyszerre állítasz (既方便又便宜), kiemelsz (尤其是夏天), lazán értékelsz (挺好的), és elmondod, minek az egyike valami (最大的城市之一).',
+  cando: [
+    'Fokozva kapcsolsz össze két állítást: 不仅…，而且….',
+    'Két tulajdonságot egyszerre állítasz: 既…又….',
+    'Kiemelsz egyet egy csoportból: 尤其(是)….',
+    'Beszélt nyelvi értékelést adsz (挺…的), és használod az …之一 („az egyik…") formát.'
+  ],
+  intro: [
+    'Két év Peking után Anna Sanghajba költözik: egy magyar–kínai kereskedelmi cégnél kapott állást. Az első napon új kollégája, Zhou Jie körbevezeti, és mesél a cégről meg a városról.',
+    'A HSK 4 első leckéjében árnyaltabban kapcsolod össze a gondolataidat: nemcsak…, hanem… is ({不仅|bùjǐn} … {而且|érqiě}), is…, is… ({既|jì} … {又|yòu}), különösen ({尤其|yóuqí}).'
+  ],
+  dialogue: {
+    title: 'Az első nap',
+    scene: 'Hétfő reggel egy sanghaji irodában. Zhou Jie, Anna új kollégája, fogadja.',
+    lines: [
+      { who: 'Zhou Jie', zh: '{欢迎|huān·yíng}{你|nǐ}{来|lái}{我们|wǒ·men}{公司|gōng·sī}！{我|wǒ}{叫|jiào}{周杰|Zhōu Jié}，{以后|yǐ·hòu}{我们|wǒ·men}{就|jiù}{是|shì}{同事|tóng·shì}{了|le}。', hu: 'Isten hozott a cégünknél! Zhou Jie vagyok, mostantól kollégák vagyunk.' },
+      { who: 'Anna', zh: '{你好|nǐ hǎo}，{我|wǒ}{叫|jiào}{安娜|Ān·nà}。{你们|nǐ·men}{的|de}{办公室|bàn·gōng·shì}{挺|tǐng}{漂亮|piào·liang}{的|de}！', hu: 'Szia, Anna vagyok. Egész szép az irodátok!' },
+      { who: 'Zhou Jie', zh: '{我们|wǒ·men}{公司|gōng·sī}{不仅|bù·jǐn}{在|zài}{上海|Shàng·hǎi}{有|yǒu}{办公室|bàn·gōng·shì}，{而且|ér·qiě}{在|zài}{北京|Běi·jīng}{和|hé}{广州|Guǎng·zhōu}{也|yě}{有|yǒu}。', hu: 'A cégünknek nemcsak Sanghajban van irodája, hanem Pekingben és Kantonban is.' },
+      { who: 'Anna', zh: '{我|wǒ}{听说|tīng·shuō}{上海|Shàng·hǎi}{是|shì}{中国|Zhōng·guó}{最|zuì}{大|dà}{的|de}{城市|chéng·shì}{之一|zhī·yī}。', hu: 'Úgy hallottam, Sanghaj Kína egyik legnagyobb városa.' },
+      { who: 'Zhou Jie', zh: '{对|duì}。{这儿|zhèr}{的|de}{地铁|dì·tiě}{既|jì}{方便|fāng·biàn}{又|yòu}{便宜|pián·yi}，{你|nǐ}{很|hěn}{快|kuài}{就|jiù}{能|néng}{习惯|xí·guàn}。', hu: 'Így van. Az itteni metró kényelmes is, olcsó is, hamar megszokod.' },
+      { who: 'Anna', zh: '{我|wǒ}{最|zuì}{怕|pà}{的|de}{是|shì}{这儿|zhèr}{的|de}{天气|tiān·qì}，{尤其|yóu·qí}{是|shì}{夏天|xià·tiān}。', hu: 'Leginkább az itteni időjárástól tartok, különösen a nyártól.' },
+      { who: 'Zhou Jie', zh: '{夏天|xià·tiān}{是|shì}{挺|tǐng}{热|rè}{的|de}，{不过|bú·guò}{秋天|qiū·tiān}{很|hěn}{舒服|shū·fu}。{走|zǒu}，{我|wǒ}{带|dài}{你|nǐ}{去|qù}{见|jiàn}{经理|jīng·lǐ}。', hu: 'A nyár elég meleg, de az ősz nagyon kellemes. Gyere, elviszlek a főnökhöz.' }
+    ],
+    notes: [
+      'A {同事|tóngshì} „kolléga", a {办公室|bàngōngshì} „iroda", az {经理|jīnglǐ} „vezető, menedzser".',
+      'A {广州|Guǎngzhōu} Kanton (Guangzhou), Dél-Kína nagy kereskedővárosa.',
+      'A {习惯|xíguàn} igeként „megszokik", főnévként „szokás": {我还不习惯|wǒ hái bù xíguàn} „még nem szoktam meg".'
+    ]
+  },
+  points: [
+    {
+      title: '{不仅|bùjǐn} … {而且|érqiě} …', sub: 'nemcsak …, hanem … is',
+      pattern: '{不仅|bù·jǐn} + A，{而且|ér·qiě} + B ({也|yě} / {还|hái})',
+      body: 'A {不仅|bùjǐn} „nemcsak" az első, az {而且|érqiě} „hanem … is" a második, erősebb állítást vezeti be: {这家公司不仅大，而且很有名|zhè jiā gōngsī bùjǐn dà, érqiě hěn yǒumíng} „ez a cég nemcsak nagy, hanem híres is". A második részben gyakran ott a {也|yě} vagy a {还|hái} is. A HSK 3-ban tanult {不但|búdàn} … {而且|érqiě} ugyanezt jelenti; a {不仅|bùjǐn} kicsit választékosabb.',
+      more: [
+        'Ha a két rész alanya ugyanaz, a {不仅|bùjǐn} az alany <b>után</b> áll: {他不仅会说汉语，而且会写|tā bùjǐn huì shuō Hànyǔ, érqiě huì xiě}. Ha különböző, az alany elé: {不仅我去，他也去|bùjǐn wǒ qù, tā yě qù}.'
+      ],
+      examples: [
+        { zh: '{我们|wǒ·men}{公司|gōng·sī}{不仅|bù·jǐn}{在|zài}{上海|Shàng·hǎi}{有|yǒu}{办公室|bàn·gōng·shì}，{而且|ér·qiě}{在|zài}{北京|Běi·jīng}{也|yě}{有|yǒu}。', hu: 'A cégünknek nemcsak Sanghajban van irodája, hanem Pekingben is.' },
+        { zh: '{她|tā}{不仅|bù·jǐn}{会|huì}{说|shuō}{汉语|Hàn·yǔ}，{而且|ér·qiě}{还|hái}{会|huì}{写|xiě}{汉字|Hàn·zì}。', hu: 'Nemcsak beszél kínaiul, hanem írásjegyeket is tud írni.' }
+      ],
+      mistakes: [
+        { bad: '{不仅|bù·jǐn}{他|tā}{会|huì}{说|shuō}{汉语|Hàn·yǔ}，{而且|ér·qiě}{会|huì}{写|xiě}。', good: '{他|tā}{不仅|bù·jǐn}{会|huì}{说|shuō}{汉语|Hàn·yǔ}，{而且|ér·qiě}{会|huì}{写|xiě}。', why: 'Ugyanaz az alany: a {不仅|bùjǐn} az alany után áll.' }
+      ]
+    },
+    {
+      title: '{既|jì} … {又|yòu} …', sub: 'is …, is … (egyszerre)',
+      pattern: '{既|jì} + mn. / ige，{又|yòu} / {也|yě} + mn. / ige',
+      body: 'Két tulajdonság vagy cselekvés egyszerre igaz: {地铁既方便又便宜|dìtiě jì fāngbiàn yòu piányi} „a metró kényelmes is, olcsó is", {他既是我的老师，也是我的朋友|tā jì shì wǒ de lǎoshī, yě shì wǒ de péngyou} „ő a tanárom is, a barátom is". Hasonlít a HSK 3-ban tanult {又|yòu} … {又|yòu} …-hoz, de választékosabb.',
+      examples: [
+        { zh: '{这儿|zhèr}{的|de}{地铁|dì·tiě}{既|jì}{方便|fāng·biàn}{又|yòu}{便宜|pián·yi}。', hu: 'Az itteni metró kényelmes is, olcsó is.' },
+        { zh: '{这|zhè}{件|jiàn}{衣服|yī·fu}{既|jì}{好看|hǎo·kàn}{又|yòu}{舒服|shū·fu}。', hu: 'Ez a ruha csinos is, kényelmes is.' }
+      ],
+      mistakes: [
+        { bad: '{这|zhè}{个|ge}{菜|cài}{既|jì}{好吃|hǎo·chī}{但是|dàn·shì}{便宜|pián·yi}。', good: '{这|zhè}{个|ge}{菜|cài}{既|jì}{好吃|hǎo·chī}{又|yòu}{便宜|pián·yi}。', why: 'A {既|jì} párja a {又|yòu} vagy a {也|yě}, nem a {但是|dànshì}.' }
+      ]
+    },
+    {
+      title: '{尤其|yóuqí} ({是|shì})', sub: 'különösen, főleg',
+      pattern: '…，{尤其|yóu·qí}({是|shì}) + kiemelt rész',
+      body: 'A {尤其|yóuqí} egy csoportból kiemel egyet: {我怕热，尤其是夏天|wǒ pà rè, yóuqí shì xiàtiān} „nem bírom a meleget, főleg nyáron", {他喜欢运动，尤其喜欢游泳|tā xǐhuan yùndòng, yóuqí xǐhuan yóuyǒng} „szereti a sportot, különösen az úszást". Főnév előtt {尤其是|yóuqí shì}, ige vagy melléknév előtt elég a {尤其|yóuqí}.',
+      examples: [
+        { zh: '{我|wǒ}{最|zuì}{怕|pà}{这儿|zhèr}{的|de}{天气|tiān·qì}，{尤其|yóu·qí}{是|shì}{夏天|xià·tiān}。', hu: 'Leginkább az itteni időjárástól tartok, különösen a nyártól.' },
+        { zh: '{她|tā}{喜欢|xǐ·huan}{中国|Zhōng·guó}{菜|cài}，{尤其|yóu·qí}{喜欢|xǐ·huan}{四川|Sì·chuān}{菜|cài}。', hu: 'Szereti a kínai konyhát, főleg a szecsuánit.' }
+      ]
+    },
+    {
+      title: '{挺|tǐng} … ({的|de})', sub: 'elég, egész (beszélt nyelvi)',
+      pattern: '{挺|tǐng} + mn. / érzelmet jelentő ige + ({的|de})',
+      body: 'A {挺|tǐng} a {很|hěn} beszélt nyelvi, kicsit lazább párja, gyakran {的|de}-vel a végén: {你们的办公室挺漂亮的|nǐmen de bàngōngshì tǐng piàoliang de} „egész szép az irodátok", {我挺喜欢这儿的|wǒ tǐng xǐhuan zhèr de} „elég jól érzem itt magam". Tagadásban inkább {不太|bú tài}: {不太远|bú tài yuǎn} „nem túl messze".',
+      examples: [
+        { zh: '{你们|nǐ·men}{的|de}{办公室|bàn·gōng·shì}{挺|tǐng}{漂亮|piào·liang}{的|de}！', hu: 'Egész szép az irodátok!' },
+        { zh: '{夏天|xià·tiān}{是|shì}{挺|tǐng}{热|rè}{的|de}，{不过|bú·guò}{秋天|qiū·tiān}{很|hěn}{舒服|shū·fu}。', hu: 'A nyár elég meleg, de az ősz nagyon kellemes.' }
+      ]
+    },
+    {
+      title: '… {之一|zhī yī}', sub: 'az egyik …',
+      pattern: '(… {最|zuì}) + mn. + {的|de} + főnév + {之一|zhī·yī}',
+      body: 'Az „egyik legnagyobb város" kínaiul: „a legnagyobb városok közül egy": {上海是中国最大的城市之一|Shànghǎi shì Zhōngguó zuì dà de chéngshì zhī yī}. Az {之一|zhī yī} mindig a főnév <b>után</b> áll: {他是我最好的朋友之一|tā shì wǒ zuì hǎo de péngyou zhī yī} „ő az egyik legjobb barátom".',
+      examples: [
+        { zh: '{上海|Shàng·hǎi}{是|shì}{中国|Zhōng·guó}{最|zuì}{大|dà}{的|de}{城市|chéng·shì}{之一|zhī·yī}。', hu: 'Sanghaj Kína egyik legnagyobb városa.' },
+        { zh: '{这|zhè}{是|shì}{我|wǒ}{最|zuì}{喜欢|xǐ·huan}{的|de}{电影|diàn·yǐng}{之一|zhī·yī}。', hu: 'Ez az egyik kedvenc filmem.' }
+      ],
+      mistakes: [
+        { bad: '{上海|Shàng·hǎi}{是|shì}{之一|zhī·yī}{中国|Zhōng·guó}{最|zuì}{大|dà}{的|de}{城市|chéng·shì}。', good: '{上海|Shàng·hǎi}{是|shì}{中国|Zhōng·guó}{最|zuì}{大|dà}{的|de}{城市|chéng·shì}{之一|zhī·yī}。', why: 'Az {之一|zhī yī} a főnév után áll.' }
+      ]
+    }
+  ],
+  phrases: [
+    { zh: '{欢迎|huān·yíng}{你|nǐ}{来|lái}！', hu: 'Isten hozott!' },
+    { zh: '{以后|yǐ·hòu}{我们|wǒ·men}{就|jiù}{是|shì}{同事|tóng·shì}{了|le}。', hu: 'Mostantól kollégák vagyunk.' },
+    { zh: '{我|wǒ}{带|dài}{你|nǐ}{去|qù}。', hu: 'Elviszlek.' },
+    { zh: '{慢慢|màn·màn}{就|jiù}{习惯|xí·guàn}{了|le}。', hu: 'Idővel megszokod.' }
+  ],
+  words: [
+    { title: 'Szavak',
+      items: [
+        { zh: '{不仅|bù·jǐn}', pinyin: 'bùjǐn', hu: 'nemcsak' },
+        { zh: '{而且|ér·qiě}', pinyin: 'érqiě', hu: 'hanem … is; ráadásul' },
+        { zh: '{既|jì}', pinyin: 'jì', hu: 'is …, is … (a {又|yòu} párja)' },
+        { zh: '{尤其|yóu·qí}', pinyin: 'yóuqí', hu: 'különösen, főleg' },
+        { zh: '{挺|tǐng}', pinyin: 'tǐng', hu: 'elég, egész (beszélt nyelvi)' },
+        { zh: '{之一|zhī·yī}', pinyin: 'zhī yī', hu: 'az egyik' },
+        { zh: '{同事|tóng·shì}', pinyin: 'tóngshì', hu: 'kolléga' },
+        { zh: '{办公室|bàn·gōng·shì}', pinyin: 'bàngōngshì', hu: 'iroda' },
+        { zh: '{经理|jīng·lǐ}', pinyin: 'jīnglǐ', hu: 'vezető, menedzser' },
+        { zh: '{习惯|xí·guàn}', pinyin: 'xíguàn', hu: 'megszokik; szokás' },
+        { zh: '{城市|chéng·shì}', pinyin: 'chéngshì', hu: 'város' },
+        { zh: '{有名|yǒu·míng}', pinyin: 'yǒumíng', hu: 'híres' }
+      ] },
+    { title: 'Ráadás',
+      items: [
+        { zh: '{广州|Guǎng·zhōu}', pinyin: 'Guǎngzhōu', hu: 'Kanton (Guangzhou)' },
+        { zh: '{贸易|mào·yì}', pinyin: 'màoyì', hu: 'kereskedelem' },
+        { zh: '{欢迎|huān·yíng}', pinyin: 'huānyíng', hu: 'üdvözöl; isten hozott' },
+        { zh: '{幽默|yōu·mò}', pinyin: 'yōumò', hu: 'vicces, humoros' }
+      ] }
+  ],
+  culture: [
+    { title: 'Sanghaj, a „tenger fölötti" város', text: 'A {上海|Shànghǎi} név szó szerint „a tenger fölött": a város a Jangce torkolatánál fekszik. A Huangpu folyó partján, a {外滩|Wàitān} (Bund) sétányon a 20. század eleji európai bankpaloták állnak, a túlparton, {浦东|Pǔdōng} negyedben a felhőkarcolók.' },
+    { title: 'Sanghaji beszéd', text: 'A sanghajiak egymás közt gyakran a helyi {上海话|Shànghǎihuà} nyelvjárást beszélik, amely annyira eltér a pekingitől, hogy egy északi kínai sem érti. Az irodákban és az iskolákban viszont a köznyelv, a {普通话|pǔtōnghuà} szól.' }
+  ],
+  reading: {
+    title: '{新|xīn}{的|de}{开始|kāi·shǐ}', titleHu: 'Új kezdet',
+    text: [
+      { zh: '{安娜|Ān·nà}{在|zài}{北京|Běi·jīng}{学|xué}{了|le}{两|liǎng}{年|nián}{汉语|Hàn·yǔ}，{现在|xiàn·zài}{在|zài}{上海|Shàng·hǎi}{的|de}{一|yì}{家|jiā}{贸易|mào·yì}{公司|gōng·sī}{工作|gōng·zuò}。', hu: 'Anna két évig tanult kínait Pekingben, most egy sanghaji kereskedelmi cégnél dolgozik.' },
+      { zh: '{这|zhè}{家|jiā}{公司|gōng·sī}{不仅|bù·jǐn}{很|hěn}{大|dà}，{而且|ér·qiě}{很|hěn}{有名|yǒu·míng}。', hu: 'Ez a cég nemcsak nagy, hanem híres is.' },
+      { zh: '{她|tā}{的|de}{同事|tóng·shì}{周杰|Zhōu Jié}{既|jì}{热情|rè·qíng}{又|yòu}{幽默|yōu·mò}，{第一|dì·yī}{天|tiān}{就|jiù}{带|dài}{她|tā}{认识|rèn·shi}{了|le}{很|hěn}{多|duō}{人|rén}。', hu: 'Kollégája, Zhou Jie kedves is, vicces is: már az első napon sok emberrel megismertette.', par: true },
+      { zh: '{安娜|Ān·nà}{觉得|jué·de}{上海|Shàng·hǎi}{挺|tǐng}{好|hǎo}{的|de}，{尤其|yóu·qí}{是|shì}{这儿|zhèr}{的|de}{地铁|dì·tiě}，{又|yòu}{快|kuài}{又|yòu}{方便|fāng·biàn}。', hu: 'Anna szerint Sanghaj egész jó hely, főleg a metró, ami gyors és kényelmes.' },
+      { zh: '{不过|bú·guò}{她|tā}{有点儿|yǒu diǎnr}{担心|dān·xīn}{这儿|zhèr}{的|de}{夏天|xià·tiān}，{听说|tīng·shuō}{非常|fēi·cháng}{热|rè}。', hu: 'Kicsit aggódik viszont a nyár miatt: úgy hallotta, nagyon meleg.', par: true }
+    ],
+    words: [ { zh: '{担心|dān·xīn}', hu: 'aggódik' } ],
+    questions: [
+      { q: 'Hol dolgozik most Anna?', a: 'egy sanghaji kereskedelmi cégnél', wrong: ['egy pekingi egyetemen', 'egy kantoni bankban', 'egy sanghaji iskolában'], why: '{在上海的一家贸易公司工作|zài Shànghǎi de yì jiā màoyì gōngsī gōngzuò}.' },
+      { q: 'Milyen a cég?', a: 'nagy és híres', wrong: ['kicsi, de híres', 'nagy, de nem ismert', 'új és kicsi'], why: '{不仅很大，而且很有名|bùjǐn hěn dà, érqiě hěn yǒumíng}.' },
+      { q: 'Milyen Zhou Jie?', a: 'kedves és vicces', wrong: ['szigorú és csendes', 'fáradt és ideges', 'fiatal és félénk'], why: '{既热情又幽默|jì rèqíng yòu yōumò}.' },
+      { q: 'Mitől tart Anna?', a: 'a sanghaji nyártól', wrong: ['a metrótól', 'az új kollégáktól', 'a sanghaji tél hidegétől'], why: '{她有点儿担心这儿的夏天|tā yǒudiǎnr dānxīn zhèr de xiàtiān}.' }
+    ]
+  },
+  quiz: [
+    { q: '„A cégnek nemcsak Sanghajban van irodája, hanem Pekingben is."', a: '{公司|gōng·sī}{不仅|bù·jǐn}{在|zài}{上海|Shàng·hǎi}{有|yǒu}{办公室|bàn·gōng·shì}，{而且|ér·qiě}{在|zài}{北京|Běi·jīng}{也|yě}{有|yǒu}。', wrong: ['{公司|gōng·sī}{而且|ér·qiě}{在|zài}{上海|Shàng·hǎi}{有|yǒu}{办公室|bàn·gōng·shì}，{不仅|bù·jǐn}{在|zài}{北京|Běi·jīng}{也|yě}{有|yǒu}。', '{公司|gōng·sī}{在|zài}{上海|Shàng·hǎi}{有|yǒu}{办公室|bàn·gōng·shì}{不仅|bù·jǐn}，{在|zài}{北京|Běi·jīng}{而且|ér·qiě}{有|yǒu}。', '{不仅|bù·jǐn}{公司|gōng·sī}{在|zài}{上海|Shàng·hǎi}，{而且|ér·qiě}{有|yǒu}{北京|Běi·jīng}{办公室|bàn·gōng·shì}{也|yě}。'], why: '{不仅|bùjǐn} …，{而且|érqiě} … {也|yě} ….', point: 1 },
+    { q: 'Hová kerül a {不仅|bùjǐn}, ha a két tagmondat alanya ugyanaz?', a: 'az alany után, az állítmány elé', wrong: ['az alany elé, a mondat elejére', 'a mondat legvégére', 'a második tagmondat elejére'], why: '{他不仅会说汉语，而且会写|tā bùjǐn huì shuō Hànyǔ, érqiě huì xiě}.', point: 1 },
+    { q: 'Mit jelent?', zh: '{她|tā}{不仅|bù·jǐn}{会|huì}{说|shuō}{汉语|Hàn·yǔ}，{而且|ér·qiě}{还|hái}{会|huì}{写|xiě}{汉字|Hàn·zì}。', a: 'Nemcsak beszél kínaiul, hanem írásjegyeket is tud írni.', wrong: ['Beszél kínaiul, de írásjegyeket nem tud írni.', 'Nem beszél kínaiul, csak írásjegyeket ír.', 'Kínaiul tanul, és írásjegyeket gyakorol.'], why: '{不仅|bùjǐn} … {而且还|érqiě hái} ….', point: 1 },
+    { q: '„A metró kényelmes is, olcsó is."', a: '{地铁|dì·tiě}{既|jì}{方便|fāng·biàn}{又|yòu}{便宜|pián·yi}。', wrong: ['{地铁|dì·tiě}{既|jì}{方便|fāng·biàn}{但是|dàn·shì}{便宜|pián·yi}。', '{地铁|dì·tiě}{方便|fāng·biàn}{既|jì}{便宜|pián·yi}{又|yòu}。', '{既|jì}{地铁|dì·tiě}{又|yòu}{方便|fāng·biàn}{便宜|pián·yi}。'], why: '{既|jì} + mn., {又|yòu} + mn.', point: 2 },
+    { q: 'Melyik szó illik a hiányzó helyre? {他|tā}{既|jì}{是|shì}{我|wǒ}{的|de}{老师|lǎo·shī}，___{是|shì}{我|wǒ}{的|de}{朋友|péng·you}。', a: '{也|yě}', wrong: ['{而|ér}', '{就|jiù}', '{才|cái}'], why: '{既|jì} … {也|yě} / {又|yòu} ….', point: 2 },
+    { q: 'Mit jelent: {这件衣服既好看又舒服|zhè jiàn yīfu jì hǎokàn yòu shūfu}。', a: 'Ez a ruha csinos is, kényelmes is.', wrong: ['Ez a ruha csinos, de nem kényelmes.', 'Ez a ruha se nem csinos, se nem kényelmes.', 'Ez a ruha kényelmesebb, mint a másik.'], why: '{既|jì} … {又|yòu} … „is…, is…".', point: 2 },
+    { q: '„Nem bírom a meleget, főleg nyáron."', a: '{我|wǒ}{怕|pà}{热|rè}，{尤其|yóu·qí}{是|shì}{夏天|xià·tiān}。', wrong: ['{我|wǒ}{怕|pà}{热|rè}，{夏天|xià·tiān}{是|shì}{尤其|yóu·qí}。', '{尤其|yóu·qí}{我|wǒ}{怕|pà}{热|rè}{是|shì}{夏天|xià·tiān}。', '{我|wǒ}{尤其|yóu·qí}{夏天|xià·tiān}{怕|pà}{是|shì}{热|rè}。'], why: '…，{尤其是|yóuqí shì} + kiemelt rész.', point: 3 },
+    { q: 'Mit jelent a {尤其|yóuqí}?', a: 'különösen, főleg', wrong: ['egyáltalán nem', 'talán, esetleg', 'ugyanúgy, mint'], why: '{尤其喜欢游泳|yóuqí xǐhuan yóuyǒng} „különösen szeret úszni".', point: 3 },
+    { q: 'Mit jelent: {你们的办公室挺漂亮的|nǐmen de bàngōngshì tǐng piàoliang de}！', a: 'Egész szép az irodátok!', wrong: ['Nem túl szép az irodátok.', 'Szépíteni kellene az irodátokat.', 'Az irodátok a legszebb a városban.'], why: '{挺|tǐng} … {的|de} „elég, egész".', point: 4 },
+    { q: '„Elég jó." — melyik a helyes szórend?', a: '{挺|tǐng}{好|hǎo}{的|de}。', wrong: ['{好|hǎo}{挺|tǐng}{的|de}。', '{的|de}{挺|tǐng}{好|hǎo}。', '{挺|tǐng}{的|de}{好|hǎo}。'], why: '{挺|tǐng} + mn. + {的|de}.', point: 4 },
+    { q: '„Sanghaj Kína egyik legnagyobb városa."', a: '{上海|Shàng·hǎi}{是|shì}{中国|Zhōng·guó}{最|zuì}{大|dà}{的|de}{城市|chéng·shì}{之一|zhī·yī}。', wrong: ['{上海|Shàng·hǎi}{是|shì}{之一|zhī·yī}{中国|Zhōng·guó}{最|zuì}{大|dà}{的|de}{城市|chéng·shì}。', '{上海|Shàng·hǎi}{是|shì}{中国|Zhōng·guó}{一|yí}{个|ge}{最|zuì}{大|dà}{城市|chéng·shì}{之一|zhī·yī}{的|de}。', '{之一|zhī·yī}{上海|Shàng·hǎi}{是|shì}{中国|Zhōng·guó}{最|zuì}{大|dà}{的|de}{城市|chéng·shì}。'], why: 'Főnév + {之一|zhī yī}.', point: 5 },
+    { q: 'Mit jelent: {他是我最好的朋友之一|tā shì wǒ zuì hǎo de péngyou zhī yī}。', a: 'Ő az egyik legjobb barátom.', wrong: ['Ő az egyetlen barátom.', 'Ő a legjobb barátom.', 'Nincs nála jobb barátom.'], why: '{之一|zhī yī} „az egyik".', point: 5 },
+    { q: 'Mit jelent a {同事|tóngshì}?', a: 'kolléga', wrong: ['osztálytárs', 'szomszéd', 'főnök'], why: '{我们是同事|wǒmen shì tóngshì} „kollégák vagyunk".' },
+    { q: 'Mit jelent: {我还不习惯这儿的天气|wǒ hái bù xíguàn zhèr de tiānqì}。', a: 'Még nem szoktam meg az itteni időjárást.', wrong: ['Nem szeretem az itteni időjárást.', 'Már megszoktam az itteni időjárást.', 'Nem tudom, milyen itt az időjárás.'], why: '{习惯|xíguàn} „megszokik".' },
+    { q: 'Mit jelent az {办公室|bàngōngshì}?', a: 'iroda', wrong: ['tárgyaló', 'étkezde', 'könyvtár'], why: '{在办公室工作|zài bàngōngshì gōngzuò} „irodában dolgozik".' },
+    { q: 'Mit jelent az {经理|jīnglǐ}?', a: 'vezető, menedzser', wrong: ['ügyfél', 'titkár', 'tolmács'], why: '{我带你去见经理|wǒ dài nǐ qù jiàn jīnglǐ}.' }
+  ]
+},
+
+/* ════════════════════════════════════════════════════
+   HSK 4 · 2. LECKE — 无论 / 不管…都…, 合适 · 适合, 稍微…一点儿, 光, 任何 · 所有
+   ════════════════════════════════════════════════════ */
+{
+  id: 'l52', no: 52, badge: '2', kicker: 'HSK 4 · 2. lecke', label: 'HSK 4 · 2. lecke',
+  title: 'Lakást bérelek — akármilyen…, mindenképp…',
+  lead: 'Lakást keresel ingatlanossal: feltételt szabsz, ami mindenképp érvényes (不管大不大，都要离地铁站近), megmondod, mi illik hozzád (很适合我), egy kicsit alkudsz (稍微便宜一点儿), szűkítesz (光房租就…), és általánosítasz (任何问题 · 所有的家具).',
+  cando: [
+    'Elmondod, hogy a feltételtől függetlenül mi igaz: 无论 / 不管 + kérdő alak + 都….',
+    'Megkülönbözteted a 合适 melléknevet és az 适合 igét.',
+    'Udvariasan tompítasz: 稍微 + mn. + 一点儿.',
+    'Használod a 光 („csak; már maga a…"), a 任何 és a 所有 szót.'
+  ],
+  intro: [
+    'Anna egy hétig szállodában lakott, most saját lakást keres. Egy ingatlanos, Li úr mutat neki egy kis lakást a metró közelében.',
+    'Ebben a leckében olyan feltételt fogalmazol meg, amely mindenképp érvényes: „akár nagy, akár kicsi" ({不管大不大|bùguǎn dà bu dà}), „akármilyen elfoglalt" ({无论多忙|wúlùn duō máng}) — a második részben mindig {都|dōu} áll.'
+  ],
+  dialogue: {
+    title: 'Lakásnézés',
+    scene: 'Szombat délelőtt. Anna és az ingatlanos, Li úr egy kis lakásban.',
+    lines: [
+      { who: 'Li úr', zh: '{您|nín}{想|xiǎng}{租|zū}{什么样|shén·me yàng}{的|de}{房子|fáng·zi}？', hu: 'Milyen lakást szeretne bérelni?' },
+      { who: 'Anna', zh: '{我|wǒ}{一|yí}{个|ge}{人|rén}{住|zhù}，{不用|bú yòng}{太|tài}{大|dà}。{不管|bù·guǎn}{房子|fáng·zi}{大|dà}{不|bu}{大|dà}，{都|dōu}{要|yào}{离|lí}{地铁站|dì·tiě·zhàn}{近|jìn}。', hu: 'Egyedül fogok lakni, nem kell túl nagy. Akár nagy, akár kicsi, közel legyen a metróhoz.' },
+      { who: 'Li úr', zh: '{这|zhè}{个|ge}{怎么样|zěn·me·yàng}？{走|zǒu}{到|dào}{地铁站|dì·tiě·zhàn}{只|zhǐ}{要|yào}{五|wǔ}{分钟|fēn·zhōng}，{很|hěn}{适合|shì·hé}{上班|shàng bān}{的|de}{人|rén}。', hu: 'Mit szól ehhez? A metró csak öt perc gyalog, ideális annak, aki dolgozni jár.' },
+      { who: 'Anna', zh: '{房子|fáng·zi}{不错|bú cuò}，{不过|bú·guò}{房租|fáng·zū}{有点儿|yǒu diǎnr}{贵|guì}。{能|néng}{稍微|shāo·wēi}{便宜|pián·yi}{一点儿|yì diǎnr}{吗|ma}？', hu: 'Szép lakás, de a lakbér kicsit drága. Lehetne valamivel olcsóbb?' },
+      { who: 'Li úr', zh: '{我|wǒ}{帮|bāng}{您|nín}{问问|wèn·wen}{房东|fáng·dōng}。{不过|bú·guò}{光|guāng}{这|zhè}{个|ge}{位置|wèi·zhì}{就|jiù}{值|zhí}{这|zhè}{个|ge}{价格|jià·gé}{了|le}。', hu: 'Megkérdezem a tulajdonost. De már maga a fekvése megéri ezt az árat.' },
+      { who: 'Anna', zh: '{那|nà}{家具|jiā·jù}{呢|ne}？{都|dōu}{是|shì}{新|xīn}{的|de}{吗|ma}？', hu: 'És a bútorok? Mind újak?' },
+      { who: 'Li úr', zh: '{所有|suǒ·yǒu}{的|de}{家具|jiā·jù}{都|dōu}{是|shì}{去年|qù·nián}{买|mǎi}{的|de}。{您|nín}{有|yǒu}{任何|rèn·hé}{问题|wèn·tí}{都|dōu}{可以|kě·yǐ}{给|gěi}{我|wǒ}{打|dǎ}{电话|diàn·huà}。', hu: 'Az összes bútort tavaly vették. Bármi kérdése van, nyugodtan hívjon.' },
+      { who: 'Anna', zh: '{这|zhè}{个|ge}{房子|fáng·zi}{对|duì}{我|wǒ}{很|hěn}{合适|hé·shì}，{我|wǒ}{就|jiù}{租|zū}{这|zhè}{个|ge}{吧|ba}。', hu: 'Ez a lakás pont megfelel nekem, ezt bérelem ki.' }
+    ],
+    notes: [
+      'A {租|zū} „bérel", a {房租|fángzū} „lakbér", a {房东|fángdōng} „a lakás tulajdonosa, főbérlő".',
+      'A {什么样|shénmeyàng} „milyen (fajta)": {什么样的房子|shénmeyàng de fángzi} „milyen lakás".',
+      'A {值|zhí} „ér, megér": {值这个价格|zhí zhège jiàgé} „megéri ezt az árat".'
+    ]
+  },
+  points: [
+    {
+      title: '{无论|wúlùn} · {不管|bùguǎn} … {都|dōu} …', sub: 'akár …, akár …; akármi(lyen) …, mindig …',
+      pattern: '{无论|wú·lùn} / {不管|bù·guǎn} + kérdő alak，(A) + {都|dōu} + …',
+      body: 'A feltétel itt nem számít: bármi legyen is, az eredmény ugyanaz. A {无论|wúlùn} (választékos) vagy a {不管|bùguǎn} (beszélt nyelvi) után <b>kérdő alak</b> áll — kérdőszó, igen-nem forma vagy {还是|háishi} —, a második részben pedig {都|dōu}: {不管房子大不大，都要离地铁站近|bùguǎn fángzi dà bu dà, dōu yào lí dìtiězhàn jìn} „akár nagy a lakás, akár nem, közel legyen a metróhoz", {无论谁来，我都欢迎|wúlùn shéi lái, wǒ dōu huānyíng} „akárki jön, szívesen látom".',
+      more: [
+        'A {无论|wúlùn} után nem állhat egyszerű kijelentés: *{不管房子大|bùguǎn fángzi dà}. Kell a kérdő alak: {大不大|dà bu dà}, {多大|duō dà}, {大还是小|dà háishi xiǎo}.'
+      ],
+      examples: [
+        { zh: '{不管|bù·guǎn}{房子|fáng·zi}{大|dà}{不|bu}{大|dà}，{都|dōu}{要|yào}{离|lí}{地铁站|dì·tiě·zhàn}{近|jìn}。', hu: 'Akár nagy a lakás, akár nem, közel legyen a metróhoz.' },
+        { zh: '{无论|wú·lùn}{工作|gōng·zuò}{多|duō}{忙|máng}，{他|tā}{每天|měi tiān}{都|dōu}{给|gěi}{妈妈|mā·ma}{打|dǎ}{电话|diàn·huà}。', hu: 'Akármilyen elfoglalt, minden nap felhívja az anyját.' }
+      ],
+      mistakes: [
+        { bad: '{不管|bù·guǎn}{下|xià}{雨|yǔ}，{我们|wǒ·men}{都|dōu}{去|qù}。', good: '{不管|bù·guǎn}{下|xià}{不|bu}{下|xià}{雨|yǔ}，{我们|wǒ·men}{都|dōu}{去|qù}。', why: 'A {不管|bùguǎn} után kérdő alak kell (igen-nem forma).' }
+      ]
+    },
+    {
+      title: '{合适|héshì} · {适合|shìhé}', sub: 'megfelelő · megfelel valakinek',
+      pattern: 'A + ({对|duì} + B) + ({很|hěn}) {合适|hé·shì} · A + {适合|shì·hé} + B',
+      body: 'Mindkettő „illik, megfelel", de a nyelvtanuk más. A {合适|héshì} <b>melléknév</b>: {这个房子很合适|zhège fángzi hěn héshì} „ez a lakás megfelelő", {大小正合适|dàxiǎo zhèng héshì} „a mérete épp jó". Az {适合|shìhé} <b>ige</b>, tárgya van: {这个房子很适合上班的人|zhège fángzi hěn shìhé shàngbān de rén} „ez a lakás ideális a dolgozóknak".',
+      tables: [
+        { caption: 'Melléknév vagy ige?',
+          head: ['', 'Szófaj', 'Példa'],
+          rows: [
+            ['{合适|hé·shì}', 'melléknév', '{这|zhè}{双|shuāng}{鞋|xié}{很|hěn}{合适|hé·shì}。'],
+            ['{适合|shì·hé}', 'ige (tárggyal)', '{这|zhè}{双|shuāng}{鞋|xié}{很|hěn}{适合|shì·hé}{你|nǐ}。']
+          ] }
+      ],
+      examples: [
+        { zh: '{这|zhè}{个|ge}{房子|fáng·zi}{很|hěn}{适合|shì·hé}{上班|shàng bān}{的|de}{人|rén}。', hu: 'Ez a lakás ideális azoknak, akik dolgozni járnak.' },
+        { zh: '{这|zhè}{个|ge}{房子|fáng·zi}{对|duì}{我|wǒ}{很|hěn}{合适|hé·shì}。', hu: 'Ez a lakás pont megfelel nekem.' }
+      ],
+      mistakes: [
+        { bad: '{这|zhè}{件|jiàn}{衣服|yī·fu}{很|hěn}{合适|hé·shì}{你|nǐ}。', good: '{这|zhè}{件|jiàn}{衣服|yī·fu}{很|hěn}{适合|shì·hé}{你|nǐ}。', why: 'Tárggyal az ige kell: {适合|shìhé}.' }
+      ]
+    },
+    {
+      title: '{稍微|shāowēi} … {一点儿|yìdiǎnr}', sub: 'egy kicsit, valamivel',
+      pattern: '{稍微|shāo·wēi} + mn. / ige + {一点儿|yì diǎnr} / {一下|yí xià}',
+      body: 'A {稍微|shāowēi} „egy kicsit, valamivel" udvariasan tompít; a melléknév vagy ige után {一点儿|yìdiǎnr} vagy {一下|yíxià} áll: {能稍微便宜一点儿吗|néng shāowēi piányi yìdiǎnr ma}？ „Lehetne valamivel olcsóbb?", {请稍微等一下|qǐng shāowēi děng yíxià} „kérem, várjon egy kicsit".',
+      examples: [
+        { zh: '{能|néng}{稍微|shāo·wēi}{便宜|pián·yi}{一点儿|yì diǎnr}{吗|ma}？', hu: 'Lehetne valamivel olcsóbb?' },
+        { zh: '{请|qǐng}{稍微|shāo·wēi}{等|děng}{一下|yí xià}，{经理|jīng·lǐ}{马上|mǎ·shàng}{来|lái}。', hu: 'Kérem, várjon egy kicsit, a vezető mindjárt jön.' }
+      ]
+    },
+    {
+      title: '{光|guāng}', sub: 'csak; már maga a …',
+      pattern: '{光|guāng} + ige … · {光|guāng} + főnév + {就|jiù} …',
+      body: 'A {光|guāng} beszélt nyelvi „csak": {光说不做|guāng shuō bú zuò} „csak beszél, nem csinál", {他光喝水，不吃饭|tā guāng hē shuǐ, bù chī fàn} „csak vizet iszik, nem eszik". Főnév előtt, {就|jiù}-val azt jelenti: „már maga a … is": {光房租就要五千块|guāng fángzū jiù yào wǔqiān kuài} „már maga a lakbér ötezer jüan".',
+      examples: [
+        { zh: '{光|guāng}{这|zhè}{个|ge}{位置|wèi·zhì}{就|jiù}{值|zhí}{这|zhè}{个|ge}{价格|jià·gé}{了|le}。', hu: 'Már maga a fekvése megéri ezt az árat.' },
+        { zh: '{别|bié}{光|guāng}{说|shuō}，{快|kuài}{做|zuò}{吧|ba}！', hu: 'Ne csak beszélj, csináld már!' }
+      ]
+    },
+    {
+      title: '{任何|rènhé} · {所有|suǒyǒu}', sub: 'bármely · az összes',
+      pattern: '{任何|rèn·hé} + főnév + {都|dōu} … · {所有|suǒ·yǒu}({的|de}) + főnév + {都|dōu} …',
+      body: 'A {任何|rènhé} „bármely(ik), akármilyen": {有任何问题，都可以给我打电话|yǒu rènhé wèntí, dōu kěyǐ gěi wǒ dǎ diànhuà} „bármi kérdése van, hívjon nyugodtan". A {所有|suǒyǒu} „az összes": {所有的家具都是新的|suǒyǒu de jiājù dōu shì xīn de} „az összes bútor új". Mindkettő után rendszerint {都|dōu} áll; tagadva a {任何|rènhé} „semmilyen": {我没有任何问题|wǒ méiyǒu rènhé wèntí} „semmi kérdésem nincs".',
+      examples: [
+        { zh: '{您|nín}{有|yǒu}{任何|rèn·hé}{问题|wèn·tí}{都|dōu}{可以|kě·yǐ}{给|gěi}{我|wǒ}{打|dǎ}{电话|diàn·huà}。', hu: 'Bármi kérdése van, nyugodtan hívjon.' },
+        { zh: '{所有|suǒ·yǒu}{的|de}{家具|jiā·jù}{都|dōu}{是|shì}{去年|qù·nián}{买|mǎi}{的|de}。', hu: 'Az összes bútort tavaly vették.' }
+      ]
+    }
+  ],
+  phrases: [
+    { zh: '{您|nín}{想|xiǎng}{租|zū}{什么样|shén·me yàng}{的|de}{房子|fáng·zi}？', hu: 'Milyen lakást szeretne bérelni?' },
+    { zh: '{能|néng}{稍微|shāo·wēi}{便宜|pián·yi}{一点儿|yì diǎnr}{吗|ma}？', hu: 'Lehetne valamivel olcsóbb?' },
+    { zh: '{我|wǒ}{帮|bāng}{您|nín}{问问|wèn·wen}。', hu: 'Megkérdezem Önnek.' },
+    { zh: '{就|jiù}{这|zhè}{个|ge}{吧|ba}。', hu: 'Legyen ez.' }
+  ],
+  words: [
+    { title: 'Szavak',
+      items: [
+        { zh: '{无论|wú·lùn}', pinyin: 'wúlùn', hu: 'akár…, akármi(lyen) (is)' },
+        { zh: '{不管|bù·guǎn}', pinyin: 'bùguǎn', hu: 'mindegy, hogy …; akár …' },
+        { zh: '{合适|hé·shì}', pinyin: 'héshì', hu: 'megfelelő' },
+        { zh: '{适合|shì·hé}', pinyin: 'shìhé', hu: 'megfelel valakinek' },
+        { zh: '{稍微|shāo·wēi}', pinyin: 'shāowēi', hu: 'egy kicsit, valamivel' },
+        { zh: '{光|guāng}', pinyin: 'guāng', hu: 'csak; már maga a …' },
+        { zh: '{任何|rèn·hé}', pinyin: 'rènhé', hu: 'bármely; (tagadva) semmilyen' },
+        { zh: '{所有|suǒ·yǒu}', pinyin: 'suǒyǒu', hu: 'az összes, minden' },
+        { zh: '{租|zū}', pinyin: 'zū', hu: 'bérel' },
+        { zh: '{房租|fáng·zū}', pinyin: 'fángzū', hu: 'lakbér' },
+        { zh: '{房东|fáng·dōng}', pinyin: 'fángdōng', hu: 'főbérlő, a lakás tulajdonosa' },
+        { zh: '{家具|jiā·jù}', pinyin: 'jiājù', hu: 'bútor' }
+      ] },
+    { title: 'Ráadás',
+      items: [
+        { zh: '{中介|zhōng·jiè}', pinyin: 'zhōngjiè', hu: 'ingatlanos, közvetítő' },
+        { zh: '{地铁站|dì·tiě·zhàn}', pinyin: 'dìtiězhàn', hu: 'metróállomás' },
+        { zh: '{位置|wèi·zhì}', pinyin: 'wèizhì', hu: 'fekvés, elhelyezkedés' },
+        { zh: '{价格|jià·gé}', pinyin: 'jiàgé', hu: 'ár' }
+      ] }
+  ],
+  culture: [
+    { title: 'Albérlet ingatlanossal', text: 'A nagyvárosokban a lakásbérlés szinte mindig {中介|zhōngjiè} (ingatlanos) révén megy. Szokásos a {押一付三|yā yī fù sān}: egy havi kaució és három havi lakbér előre. A közvetítő díja gyakran egy havi lakbér.' },
+    { title: 'Közel a metróhoz', text: 'Sanghajban a lakás árát leginkább a metrótól mért távolság dönti el. A hirdetésekben gyakori a {地铁房|dìtiěfáng} „metrós lakás" kifejezés: legfeljebb tízperces séta a legközelebbi állomásig.' }
+  ],
+  reading: {
+    title: '{找|zhǎo}{房子|fáng·zi}', titleHu: 'Lakáskeresés',
+    text: [
+      { zh: '{来|lái}{上海|Shàng·hǎi}{以后|yǐ·hòu}，{安娜|Ān·nà}{先|xiān}{在|zài}{公司|gōng·sī}{附近|fù·jìn}{的|de}{酒店|jiǔ·diàn}{住|zhù}{了|le}{一|yí}{个|ge}{星期|xīng·qī}。', hu: 'Sanghajba érkezése után Anna egy hétig egy szállodában lakott a cég közelében.' },
+      { zh: '{她|tā}{想|xiǎng}{租|zū}{一|yí}{个|ge}{小|xiǎo}{房子|fáng·zi}，{不管|bù·guǎn}{房子|fáng·zi}{新|xīn}{不|bu}{新|xīn}，{都|dōu}{要|yào}{离|lí}{地铁站|dì·tiě·zhàn}{近|jìn}。', hu: 'Kis lakást akart bérelni; mindegy, hogy új-e, csak legyen közel a metróhoz.' },
+      { zh: '{中介|zhōng·jiè}{带|dài}{她|tā}{看|kàn}{了|le}{三|sān}{个|ge}{房子|fáng·zi}，{第三|dì sān}{个|ge}{最|zuì}{合适|hé·shì}。', hu: 'Az ingatlanos három lakást mutatott meg neki, a harmadik volt a legmegfelelőbb.', par: true },
+      { zh: '{这|zhè}{个|ge}{房子|fáng·zi}{离|lí}{地铁站|dì·tiě·zhàn}{只有|zhǐ yǒu}{五|wǔ}{分钟|fēn·zhōng}，{所有|suǒ·yǒu}{的|de}{家具|jiā·jù}{都|dōu}{很|hěn}{新|xīn}。', hu: 'Ez a lakás csak öt percre van a metrótól, és az összes bútor új.' },
+      { zh: '{房租|fáng·zū}{稍微|shāo·wēi}{贵|guì}{了|le}{一点儿|yì diǎnr}，{但是|dàn·shì}{房东|fáng·dōng}{同意|tóng·yì}{每|měi}{个|ge}{月|yuè}{便宜|pián·yi}{两百|liǎng bǎi}{块|kuài}。', hu: 'A lakbér kicsit drágább volt, de a tulajdonos beleegyezett, hogy havonta kétszáz jüannal olcsóbban adja.', par: true }
+    ],
+    words: [ { zh: '{酒店|jiǔ·diàn}', hu: 'szálloda' } ],
+    questions: [
+      { q: 'Hol lakott Anna az első héten?', a: 'egy szállodában a cég közelében', wrong: ['egy kolléga lakásán', 'a cég irodájában', 'egy barátnőjénél Pekingben'], why: '{在公司附近的酒店住了一个星期|zài gōngsī fùjìn de jiǔdiàn zhù le yí ge xīngqī}.' },
+      { q: 'Mi volt Anna legfontosabb feltétele?', a: 'hogy közel legyen a metróhoz', wrong: ['hogy új legyen a lakás', 'hogy nagy legyen a lakás', 'hogy legyen erkélye'], why: '{不管房子新不新，都要离地铁站近|bùguǎn fángzi xīn bu xīn, dōu yào lí dìtiězhàn jìn}.' },
+      { q: 'Hány lakást nézett meg?', a: 'hármat', wrong: ['kettőt', 'ötöt', 'egyet'], why: '{看了三个房子|kàn le sān ge fángzi}.' },
+      { q: 'Miben egyezett bele a tulajdonos?', a: 'havonta kétszáz jüannal olcsóbban adja', wrong: ['új bútort vesz bele', 'ingyen adja az első hónapot', 'kifesti a lakást'], why: '{每个月便宜两百块|měi ge yuè piányi liǎngbǎi kuài}.' }
+    ]
+  },
+  quiz: [
+    { q: '„Akár nagy a lakás, akár nem, közel legyen a metróhoz."', a: '{不管|bù·guǎn}{房子|fáng·zi}{大|dà}{不|bu}{大|dà}，{都|dōu}{要|yào}{离|lí}{地铁站|dì·tiě·zhàn}{近|jìn}。', wrong: ['{不管|bù·guǎn}{房子|fáng·zi}{很|hěn}{大|dà}，{都|dōu}{要|yào}{离|lí}{地铁站|dì·tiě·zhàn}{近|jìn}。', '{房子|fáng·zi}{大|dà}{不|bu}{大|dà}{不管|bù·guǎn}，{离|lí}{地铁站|dì·tiě·zhàn}{要|yào}{近|jìn}{都|dōu}。', '{不管|bù·guǎn}{房子|fáng·zi}{大|dà}{不|bu}{大|dà}，{就|jiù}{要|yào}{离|lí}{地铁站|dì·tiě·zhàn}{远|yuǎn}。'], why: '{不管|bùguǎn} + kérdő alak, … {都|dōu} ….', point: 1 },
+    { q: 'Mi áll a {无论|wúlùn} / {不管|bùguǎn} után?', a: 'kérdő alak (kérdőszó vagy igen-nem forma)', wrong: ['egyszerű kijelentő mondat', 'csak egy főnév, ige nélkül', 'tagadó mondat a {不|bù} szóval'], why: '{不管大不大|bùguǎn dà bu dà}, {无论谁|wúlùn shéi}.', point: 1 },
+    { q: 'Mit jelent?', zh: '{无论|wú·lùn}{谁|shéi}{来|lái}，{我|wǒ}{都|dōu}{欢迎|huān·yíng}。', a: 'Akárki jön, szívesen látom.', wrong: ['Senki sem jön, pedig várom.', 'Ha ő jön, nem látom szívesen.', 'Nem tudom, ki jön, de félek tőle.'], why: '{无论|wúlùn} + kérdőszó, … {都|dōu} ….', point: 1 },
+    { q: '„Ez a ruha jól áll neked." — melyik a helyes?', a: '{这|zhè}{件|jiàn}{衣服|yī·fu}{很|hěn}{适合|shì·hé}{你|nǐ}。', wrong: ['{这|zhè}{件|jiàn}{衣服|yī·fu}{很|hěn}{合适|hé·shì}{你|nǐ}。', '{这|zhè}{件|jiàn}{衣服|yī·fu}{适合|shì·hé}{很|hěn}{你|nǐ}。', '{你|nǐ}{很|hěn}{适合|shì·hé}{这|zhè}{件|jiàn}{合适|hé·shì}。'], why: 'Tárggyal az ige: {适合|shìhé}.', point: 2 },
+    { q: 'Melyik melléknév (tárgy nélkül áll)?', a: '{合适|hé·shì}', wrong: ['{适合|shì·hé}', '{租|zū}', '{欢迎|huān·yíng}'], why: '{这个房子很合适|zhège fángzi hěn héshì}.', point: 2 },
+    { q: 'Mit jelent: {这个房子很适合上班的人|zhège fángzi hěn shìhé shàngbān de rén}。', a: 'Ez a lakás ideális azoknak, akik dolgozni járnak.', wrong: ['Ez a lakás túl messze van a munkahelytől.', 'Ebben a lakásban sokan dolgoznak.', 'A lakásban irodát is ki lehet alakítani.'], why: '{适合|shìhé} + tárgy.', point: 2 },
+    { q: '„Lehetne valamivel olcsóbb?"', a: '{能|néng}{稍微|shāo·wēi}{便宜|pián·yi}{一点儿|yì diǎnr}{吗|ma}？', wrong: ['{能|néng}{一点儿|yì diǎnr}{稍微|shāo·wēi}{便宜|pián·yi}{吗|ma}？', '{能|néng}{便宜|pián·yi}{稍微|shāo·wēi}{吗|ma}{一点儿|yì diǎnr}？', '{稍微|shāo·wēi}{能|néng}{一点儿|yì diǎnr}{便宜|pián·yi}{吗|ma}？'], why: '{稍微|shāowēi} + mn. + {一点儿|yìdiǎnr}.', point: 3 },
+    { q: 'Mi áll a {稍微|shāowēi} + melléknév után?', a: '{一点儿|yìdiǎnr} vagy {一下|yíxià}', wrong: ['{极了|jí le}', '{得很|de hěn}', '{死了|sǐ le}'], why: 'A {稍微|shāowēi} tompít, nem fokoz.', point: 3 },
+    { q: 'Mit jelent: {光房租就要五千块|guāng fángzū jiù yào wǔqiān kuài}。', a: 'Már maga a lakbér ötezer jüan.', wrong: ['A lakbér csak ötszáz jüan.', 'A lakbért ötezer jüannal emelték.', 'A lakbér és a rezsi együtt ötszáz.'], why: '{光|guāng} + főnév + {就|jiù} „már maga a …".', point: 4 },
+    { q: 'Mit jelent: {别光说，快做吧|bié guāng shuō, kuài zuò ba}！', a: 'Ne csak beszélj, csináld már!', wrong: ['Ne beszélj, menj aludni!', 'Beszélj gyorsabban!', 'Ne mondd el senkinek!'], why: '{光|guāng} „csak".', point: 4 },
+    { q: '„Bármi kérdése van, hívjon nyugodtan."', a: '{您|nín}{有|yǒu}{任何|rèn·hé}{问题|wèn·tí}{都|dōu}{可以|kě·yǐ}{给|gěi}{我|wǒ}{打|dǎ}{电话|diàn·huà}。', wrong: ['{您|nín}{有|yǒu}{问题|wèn·tí}{任何|rèn·hé}，{都|dōu}{可以|kě·yǐ}{打|dǎ}{电话|diàn·huà}{给|gěi}{我|wǒ}{吗|ma}。', '{任何|rèn·hé}{您|nín}{有|yǒu}{问题|wèn·tí}，{可以|kě·yǐ}{都|dōu}{打|dǎ}{电话|diàn·huà}。', '{您|nín}{都|dōu}{有|yǒu}{任何|rèn·hé}，{问题|wèn·tí}{给|gěi}{我|wǒ}{可以|kě·yǐ}{打|dǎ}。'], why: '{任何|rènhé} + főnév + {都|dōu} ….', point: 5 },
+    { q: 'Mit jelent: {我没有任何问题|wǒ méiyǒu rènhé wèntí}。', a: 'Semmi kérdésem nincs.', wrong: ['Minden kérdésemre van válasz.', 'Sok kérdésem van.', 'Nincs időm kérdezni.'], why: 'Tagadva {任何|rènhé} „semmilyen".', point: 5 },
+    { q: '„Az összes bútor új."', a: '{所有|suǒ·yǒu}{的|de}{家具|jiā·jù}{都|dōu}{是|shì}{新|xīn}{的|de}。', wrong: ['{家具|jiā·jù}{所有|suǒ·yǒu}{的|de}{是|shì}{都|dōu}{新|xīn}。', '{所有|suǒ·yǒu}{家具|jiā·jù}{新|xīn}{的|de}{都|dōu}{是|shì}。', '{都|dōu}{所有|suǒ·yǒu}{的|de}{家具|jiā·jù}{新|xīn}{是|shì}。'], why: '{所有的|suǒyǒu de} + főnév + {都|dōu} ….', point: 5 },
+    { q: 'Mit jelent a {房东|fángdōng}?', a: 'a lakás tulajdonosa', wrong: ['albérlő, lakó', 'a szomszéd', 'a házmester'], why: '{我帮您问问房东|wǒ bāng nín wènwen fángdōng}.' },
+    { q: 'Mit jelent a {租|zū}?', a: 'bérel', wrong: ['elad', 'épít', 'kifest'], why: '{租房子|zū fángzi} „lakást bérel".' },
+    { q: 'Mit jelent a {家具|jiājù}?', a: 'bútor', wrong: ['háztartási gép', 'szerszám', 'függöny'], why: '{所有的家具都是新的|suǒyǒu de jiājù dōu shì xīn de}.' }
+  ]
 }
 
 ];

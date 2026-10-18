@@ -693,7 +693,29 @@ const HANZIFLOW_PATH = [
     module: 'pinyin', href: 'pages/pinyin.html', optional: true, preset: { set: { mode: 'write', level: 'hsk2', tones: true } } },
   { id: 'py-write-h3', glyph: '拼', title: 'Pinyin-beírás: HSK 3',
     desc: 'A HSK 3 szavai: írd be a pinyint tónussal.',
-    module: 'pinyin', href: 'pages/pinyin.html', optional: true, preset: { set: { mode: 'write', level: 'hsk3', tones: true } } }
+    module: 'pinyin', href: 'pages/pinyin.html', optional: true, preset: { set: { mode: 'write', level: 'hsk3', tones: true } } },
+
+  // ── HSK 4 · 1. lecke ──
+  { id: 'l51-lesson', glyph: '新', title: 'Magyarázat: 不仅…而且, 既…又, 尤其, 挺…的, 之一',
+    desc: 'Új munka Sanghajban: nemcsak…, hanem…; is…, is…; különösen; az egyik….',
+    module: 'lesson', href: 'pages/lesson.html?id=l51' },
+  { id: 'l51-listen', glyph: '听', title: 'Hallás: az első nap',
+    desc: 'A lecke mondatai hang után: mit jelent, amit hallasz?',
+    module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l51&round=listen' },
+  { id: 'l51-read', glyph: '读', title: 'Olvasás: Új kezdet',
+    desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l51&round=read' },
+
+  // ── HSK 4 · 2. lecke ──
+  { id: 'l52-lesson', glyph: '租', title: 'Magyarázat: 无论 / 不管…都, 合适 · 适合, 稍微, 光, 任何 · 所有',
+    desc: 'Lakásbérlés: akármilyen…, mindig…; megfelelő vagy megfelel; egy kicsit; csak; bármely, az összes.',
+    module: 'lesson', href: 'pages/lesson.html?id=l52' },
+  { id: 'l52-listen', glyph: '听', title: 'Hallás: lakásnézés',
+    desc: 'A lecke mondatai hang után: mit jelent, amit hallasz?',
+    module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l52&round=listen' },
+  { id: 'l52-read', glyph: '读', title: 'Olvasás: Lakáskeresés',
+    desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l52&round=read' }
 ];
 
 const HANZIFLOW_PATH_UNITS = [
@@ -824,5 +846,9 @@ const HANZIFLOW_PATH_UNITS = [
   { id: 'u-t-h3d', kicker: 'HSK 3 · Dolgozat', title: '4. témazáró', sub: 'A 16–20. lecke anyaga, jegyre — nem kötelező',
     steps: ['test-h3d'] },
   { id: 'u-z-h3', kicker: 'HSK 3 · Szintzáró', title: 'A HSK 3 vége', sub: 'Szintzáró dolgozat, pinyin-beírás és próbavizsga — nem kötelező',
-    steps: ['test-h3z', 'py-write-h3', 'exam-hsk3'] }
+    steps: ['test-h3z', 'py-write-h3', 'exam-hsk3'] },
+  { id: 'u-l51', kicker: 'HSK 4 · 1. lecke', title: 'Új város, új munka', sub: '不仅…而且, 既…又, 尤其, 挺…的, …之一',
+    steps: ['l51-lesson', 'l51-listen', 'l51-read'] },
+  { id: 'u-l52', kicker: 'HSK 4 · 2. lecke', title: 'Lakást bérelek', sub: '无论 / 不管…都, 合适 · 适合, 稍微…一点儿, 光, 任何 · 所有',
+    steps: ['l52-lesson', 'l52-listen', 'l52-read'] }
 ];
