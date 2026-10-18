@@ -532,6 +532,8 @@ window.HanziFlowPath = (function () {
   function onSession(rec) {
     const step = (rec && rec.module === 'lesson') ? lessonStep(rec) : activeStep();
     if (!step || !rec || rec.partial || rec.module !== step.module || !rec.questionCount) return;
+    const presetMode = step.preset && step.preset.set && step.preset.set.mode;
+    if (presetMode && rec.mode !== presetMode) return;
     const pct = rec.correctCount / rec.questionCount;
     const st = load();
     const prev = st.steps[step.id] || {};
@@ -2072,6 +2074,8 @@ function initLanding() {
     document.documentElement.classList.remove('has-path-pop');
   }
 
+  const isTestStep = s => s.module === 'tests' || s.module === 'exam';
+  const optionalState = s => isTestStep(s) ? 'nem kötelező dolgozat' : 'nem kötelező gyakorlás';
   function openNode(btn, row, v) {
     const same = openPop && openPop.btn === btn;
     closePop();
@@ -2085,7 +2089,7 @@ function initLanding() {
     else if (row.optional) chips.push('<span class="path-pop-chip">Nem kötelező: nélküle is mehetsz tovább</span>');
     if (row.best !== null) chips.push('<span class="path-pop-chip' + (row.done ? ' is-ok' : '') + '">Legjobb köröd: ' + pctText(row.best) + '</span>');
     else if (!row.skipped) chips.push('<span class="path-pop-chip">A lépéshez ' + Math.round(Path.PASS * 100) + '% kell</span>');
-    const cta = row.optional ? (row.best !== null ? 'Megírom újra' : 'Megnézem') : row.done ? 'Gyakorlás újra' : row.skipped ? 'Mégis megnézem' : (row.best !== null ? 'Folytatás' : 'Kezdés');
+    const cta = row.optional ? (isTestStep(s) ? (row.best !== null ? 'Megírom újra' : 'Megnézem') : (row.best !== null ? 'Gyakorlás újra' : 'Kezdés')) : row.done ? 'Gyakorlás újra' : row.skipped ? 'Mégis megnézem' : (row.best !== null ? 'Folytatás' : 'Kezdés');
 
     const pop = document.createElement('div');
     pop.className = 'path-pop';
@@ -2174,7 +2178,7 @@ function initLanding() {
         const isNext = v.next && v.next.step.id === s.id && !!v.level;
         const cls = (r.done ? ' is-done' : r.skipped ? ' is-skipped' : isNext ? ' is-next' : '') +
                     (r.optional ? ' is-exam' : '') + (fresh.indexOf(s.id) >= 0 ? ' just-done' : '');
-        const state = r.done ? 'kész' : r.skipped ? 'átugorva' : isNext ? 'következő lépés' : r.optional ? 'nem kötelező dolgozat' : 'még nem kezdted el';
+        const state = r.done ? 'kész' : r.skipped ? 'átugorva' : isNext ? 'következő lépés' : r.optional ? optionalState(s) : 'még nem kezdted el';
         const n = gi + i;
         return `
           <li class="path-node${cls}" style="--x: ${xs[i]}px">
@@ -2291,7 +2295,7 @@ function initLanding() {
         const s = r.step;
         const isNext = s.id === nextId;
         const cls = (r.done ? ' is-done' : r.skipped ? ' is-skipped' : isNext ? ' is-next' : '') + (r.optional ? ' is-exam' : '');
-        const state = r.done ? 'kész' : r.skipped ? 'átugorva' : isNext ? 'következő lépés' : r.optional ? 'nem kötelező dolgozat' : 'még nem kezdted el';
+        const state = r.done ? 'kész' : r.skipped ? 'átugorva' : isNext ? 'következő lépés' : r.optional ? optionalState(s) : 'még nem kezdted el';
         return `
           <li class="ptoc-step${cls}">
             <button class="ptoc-step-btn" type="button" data-step="${esc(s.id)}" aria-label="${esc(s.title)}, ${state}">

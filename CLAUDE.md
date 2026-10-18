@@ -114,6 +114,9 @@ Színt csak tokenből; 12 px alatt nincs szöveg; érintési célpont ≥ 44 px;
 - [x] A dolgozatok és a próbavizsgák nem kötelező lépésként az úton (core.js, `optional: true`): 5 leckénként egy
   témazáró-fejezet, a szint végén szintzáró + próbavizsga. Nem állítják meg az utat, 60%-tól pipát kapnak; a lépésről
   nyitott oldalon csak a lépés saját dolgozata / szintje teljesíti a lépést (`skipPath`).
+- [x] A gyakorló modulok (Pinyin, Mérőszavak, Mondat-Mester, Dátum/idő/pénz) 20 nem kötelező lépéssel a leckék
+  fejezeteiben, előre beállított körrel (`preset.set`); a lépést csak a beállított mód teljesíti (onSession).
+  A lecke-oldal „Gyakorlás" listája ezeket is mutatja.
 - Élő oldal: https://nokedli25ttv.github.io/HanziFlow/ (GitHub Pages, main ág, 2026-10-18 óta).
 - [ ] A NihonCore `sw.js`-ében a cache-törlést a saját előtagra kell szűkíteni (különben a HanziFlow offline-tárát is törli).
 - [ ] Firestore-szabály a `users/{uid}/apps/{app}` helyre (a user Firebase-konzolján).
