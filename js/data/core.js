@@ -491,7 +491,40 @@ const HANZIFLOW_PATH = [
     module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l42&round=listen' },
   { id: 'l42-read', glyph: '读', title: 'Olvasás: A hétvégi terv',
     desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
-    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l42&round=read' }
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l42&round=read' },
+
+  // ── HSK 3 · 13. lecke ──
+  { id: 'l43-lesson', glyph: '定', title: 'Magyarázat: 会…的, 一定 / 肯定, 可能 / 也许, 认为 / 以为, 应该',
+    desc: 'Mennyire biztos? Biztatás, bizonytalanság, vélemény és tévedés.',
+    module: 'lesson', href: 'pages/lesson.html?id=l43' },
+  { id: 'l43-listen', glyph: '听', title: 'Hallás: várakozás',
+    desc: 'A lecke mondatai hang után: mit jelent, amit hallasz?',
+    module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l43&round=listen' },
+  { id: 'l43-read', glyph: '读', title: 'Olvasás: Jó hír',
+    desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l43&round=read' },
+
+  // ── HSK 3 · 14. lecke ──
+  { id: 'l44-lesson', glyph: '起', title: 'Magyarázat: 想起来, 看出来, ige + 起来 (kezd), 看起来 · 听起来, ige + 下去',
+    desc: 'Eszébe jut, felismer, elkezd, folytat — az irányjelölők átvitt értelme.',
+    module: 'lesson', href: 'pages/lesson.html?id=l44' },
+  { id: 'l44-listen', glyph: '听', title: 'Hallás: ismerős arc',
+    desc: 'A lecke mondatai hang után: mit jelent, amit hallasz?',
+    module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l44&round=listen' },
+  { id: 'l44-read', glyph: '读', title: 'Olvasás: A metrón',
+    desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l44&round=read' },
+
+  // ── HSK 3 · 15. lecke ──
+  { id: 'l45-lesson', glyph: '被', title: 'Magyarázat: 被 (cselekvővel és nélküle), 叫 / 让, tagadás, passzív 被 nélkül',
+    desc: 'Ellopták, eláztatta az eső, megszidták — a szenvedő szerkezet.',
+    module: 'lesson', href: 'pages/lesson.html?id=l45' },
+  { id: 'l45-listen', glyph: '听', title: 'Hallás: pech',
+    desc: 'A lecke mondatai hang után: mit jelent, amit hallasz?',
+    module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l45&round=listen' },
+  { id: 'l45-read', glyph: '读', title: 'Olvasás: Egy balszerencsés nap',
+    desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l45&round=read' }
 ];
 
 const HANZIFLOW_PATH_UNITS = [
@@ -580,5 +613,11 @@ const HANZIFLOW_PATH_UNITS = [
   { id: 'u-l41', kicker: 'HSK 3 · 11. lecke', title: 'Olyan fáradt vagyok, hogy…', sub: '累得不想说话, 忙死了, 一到…就…, 刚…就…, 下了班就…',
     steps: ['l41-lesson', 'l41-listen', 'l41-read'] },
   { id: 'u-l42', kicker: 'HSK 3 · 12. lecke', title: 'Ha szombaton esik…', sub: '如果…就…, 要是…的话, 那…, 为了, 对…感兴趣',
-    steps: ['l42-lesson', 'l42-listen', 'l42-read'] }
+    steps: ['l42-lesson', 'l42-listen', 'l42-read'] },
+  { id: 'u-l43', kicker: 'HSK 3 · 13. lecke', title: 'Biztosan felhívnak', sub: '会…的, 一定 / 肯定, 也许, 认为 vagy 以为, 应该 (valószínűleg)',
+    steps: ['l43-lesson', 'l43-listen', 'l43-read'] },
+  { id: 'u-l44', kicker: 'HSK 3 · 14. lecke', title: 'Már emlékszem!', sub: '想起来 / 想出来, 看出来, 下起雨来, 听起来, 学下去',
+    steps: ['l44-lesson', 'l44-listen', 'l44-read'] },
+  { id: 'u-l45', kicker: 'HSK 3 · 15. lecke', title: 'Ellopták a biciklimet!', sub: '被人偷了, 被偷了, 让弟弟吃了, 没被, 作业写完了',
+    steps: ['l45-lesson', 'l45-listen', 'l45-read'] }
 ];
