@@ -10,6 +10,7 @@
      HanziFlowPinyin.toNumbered('nǐ hǎo')       → 'ni3 hao3' (jeles → számos)
      HanziFlowPinyin.parse('ni3hao3')           → [{ base: 'ni', tone: 3 }, { base: 'hao', tone: 3 }]
      HanziFlowPinyin.segment('pingguo')         → ['ping', 'guo']
+     HanziFlowPinyin.isSyllable('lv')           → true (érvényes szótag-e)
      HanziFlowPinyin.check(beírt, elvárt)       → { status, syllables }
      HanziFlowPinyin.checkLive(beírt, elvárt)   → { ok, done, typed, total }
      HanziFlowPinyin.setToneMarks({ a: [...] }) → a tónustábla kitöltése futás közben
@@ -103,6 +104,11 @@ window.HanziFlowPinyin = (function () {
       if (TONE_MARKS[key] && Array.isArray(row) && row.length === 5) TONE_MARKS[key] = row.slice();
     });
     rebuildReverse();
+  }
+
+  // Érvényes szótag-e (tónus nélküli alak, ü = v)? A Pinyin-tábla ebből rajzolja a cellákat.
+  function isSyllable(base) {
+    return !!SYLLABLES[String(base || '').toLowerCase()];
   }
 
   function addSyllables(list) {
@@ -386,6 +392,7 @@ window.HanziFlowPinyin = (function () {
     toNumbered: toNumbered,
     parse: parse,
     segment: segment,
+    isSyllable: isSyllable,
     markIndex: markIndex,
     check: check,
     checkLive: checkLive,

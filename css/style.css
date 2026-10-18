@@ -1611,6 +1611,82 @@ html.lesson-steps.ls-round .hf-tabbar { display: none; }
 .tone-fb-actions { display: flex; justify-content: flex-start; }
 .tone-fb-actions .btn { min-height: 40px; font-size: var(--fs-sm); }
 
+/* ═══ 8b. PINYIN-TÁBLA (pages/pinyin.html) ═════════════ */
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+.py-mode-row { grid-template-columns: 1fr; }
+@media (min-width: 600px) { .py-mode-row { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.py-level-row { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (min-width: 600px) { .py-level-row { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+
+/* tábla */
+.py-tabs { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
+.py-tab { min-height: var(--touch); padding: 0 14px; border-radius: 999px; border: 1px solid var(--line-strong); background: var(--surface); color: var(--ink-soft); font-size: var(--fs-sm); font-weight: 800; cursor: pointer; transition: border-color var(--t-fast), background var(--t-fast); }
+.py-tab:hover { border-color: var(--brand); }
+.py-tab.active { background: var(--brand-soft); border-color: var(--brand); color: var(--brand-deep); }
+.py-table-wrap { overflow-x: auto; overscroll-behavior-x: contain; -webkit-overflow-scrolling: touch; padding-bottom: 4px; }
+.py-table { border-collapse: separate; border-spacing: 3px; }
+.py-table thead th { padding: 2px 2px 4px; font-size: var(--fs-xs); font-weight: 800; color: var(--ink-faint); white-space: nowrap; text-align: center; }
+.py-ini, .py-corner { position: sticky; left: 0; z-index: 1; background: var(--surface); }
+.py-ini { min-width: 34px; padding-right: 6px; text-align: right; font-size: var(--fs-sm); font-weight: 800; color: var(--seal-ink); }
+.py-table td { padding: 0; }
+.py-cell { display: block; min-width: var(--touch); min-height: var(--touch); padding: 0 6px; border-radius: var(--radius-sm); border: 1px solid var(--line); background: var(--surface-2); color: var(--ink); font-size: var(--fs-sm); font-weight: 700; white-space: nowrap; cursor: pointer; transition: border-color var(--t-fast), background var(--t-fast); }
+.py-cell:hover { border-color: var(--brand); }
+.py-cell.is-selected { background: var(--brand-soft); border: 2px solid var(--brand); color: var(--brand-deep); }
+
+/* a kiválasztott szótag */
+.py-detail { margin-bottom: 12px; padding: 14px; border-radius: var(--radius-md); background: var(--surface-2); border: 1px solid var(--surface-2-edge); scroll-margin-top: calc(var(--header-h) + 12px); }
+.py-detail-hint { font-size: var(--fs-sm); color: var(--ink-soft); }
+.py-detail-top { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 14px; margin-bottom: 10px; }
+.py-detail-syl { font-size: var(--fs-3xl); font-weight: 800; line-height: 1.1; color: var(--brand-deep); }
+.py-detail-parts { font-size: var(--fs-sm); color: var(--ink-soft); }
+.py-detail-parts strong { color: var(--ink); }
+.py-tones { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px; }
+.py-tone { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; min-height: 68px; padding: 6px 4px; border-radius: var(--radius-sm); border: 1px solid var(--line-strong); border-top: 4px solid var(--tone-c, var(--brand)); background: var(--surface); color: var(--ink); cursor: pointer; }
+.py-tone:hover:not(:disabled) { border-color: var(--tone-c); }
+.py-tone:disabled { cursor: default; opacity: 0.6; }
+.py-tone.is-playing { box-shadow: 0 0 0 3px rgb(var(--brand-rgb) / 0.15); }
+.py-tone-py { font-size: var(--fs-lg); font-weight: 800; color: var(--tone-c, var(--ink)); }
+.py-tone-zh { font-family: var(--font-zh); font-size: var(--fs-md); }
+.py-detail-note { margin-top: 10px; font-size: var(--fs-sm); line-height: 1.55; }
+.py-detail-small { margin-top: 6px; font-size: var(--fs-xs); color: var(--ink-faint); }
+
+/* nehéz párok */
+.py-tip-list { display: grid; grid-template-columns: 1fr; gap: 8px; margin: 0; }
+@media (min-width: 600px) { .py-tip-list { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.py-tip { padding: 12px 14px; border-radius: var(--radius-md); background: var(--surface-2); border: 1px solid var(--surface-2-edge); }
+.py-tip dt { font-size: var(--fs-base); font-weight: 800; color: var(--brand-deep); }
+.py-tip dd { margin: 4px 0 0; font-size: var(--fs-sm); line-height: 1.55; }
+
+/* beírás */
+.py-zh { font-family: var(--font-zh); font-size: clamp(2.6rem, 14vw, 3.6rem); font-weight: 600; line-height: 1.2; margin-top: 6px; }
+.py-hu { font-size: var(--fs-md); color: var(--ink-soft); margin-bottom: 6px; }
+.py-answer { display: flex; flex-direction: column; gap: 10px; margin-top: 16px; }
+.py-input { width: 100%; min-height: 54px; padding: 0 14px; border-radius: var(--radius-md); border: 2px solid var(--line-strong); background: var(--surface); color: var(--ink); font-family: var(--font-body); font-size: var(--fs-xl); font-weight: 700; transition: border-color var(--t-fast), box-shadow var(--t-fast), background var(--t-fast); }
+.py-input::placeholder { color: var(--ink-faint); font-weight: 500; font-size: var(--fs-md); }
+.py-input:focus { outline: none; border-color: var(--brand); box-shadow: 0 0 0 3px var(--brand-soft); }
+.py-input.is-off { border-color: var(--amber); }
+.py-input.is-ok { border-color: var(--ok); }
+.py-input.is-right { border-color: var(--ok); background: var(--ok-soft); }
+.py-input.is-wrong { border-color: var(--err); background: var(--err-soft); }
+.py-input:disabled { color: var(--ink); opacity: 1; }
+.py-keys { display: flex; flex-wrap: wrap; gap: 6px; }
+.py-key { display: inline-flex; align-items: baseline; justify-content: center; gap: 4px; min-width: var(--touch); min-height: var(--touch); padding: 0 12px; border-radius: 10px; border: 1px solid var(--line-strong); background: var(--surface); color: var(--tone-c, var(--ink)); font-size: var(--fs-md); font-weight: 800; cursor: pointer; }
+.py-key small { font-size: var(--fs-2xs); font-weight: 700; color: var(--ink-faint); }
+.py-key:hover:not(:disabled) { border-color: var(--tone-c, var(--brand)); }
+.py-key:disabled { opacity: 0.5; cursor: default; }
+.py-preview { min-height: 1.6em; font-size: var(--fs-lg); font-weight: 700; color: var(--brand-deep); overflow-wrap: anywhere; }
+.py-preview:not(:empty)::before { content: 'Ékezettel: '; font-size: var(--fs-sm); font-weight: 600; color: var(--ink-faint); }
+.py-submit { width: 100%; min-height: 52px; }
+.py-chips { display: inline-flex; flex-wrap: wrap; gap: 6px; }
+.py-chip { padding: 3px 10px; border-radius: var(--radius-sm); border: 1.5px solid var(--line-strong); background: var(--surface); font-size: var(--fs-md); font-weight: 800; }
+.py-chip.is-ok { border-color: var(--ok); color: var(--ok-deep); background: var(--ok-soft); }
+.py-chip.is-tone { border-color: var(--amber); color: var(--amber-ink); background: rgb(var(--amber-rgb) / 0.12); }
+.py-chip.is-bad { border-color: var(--err); color: var(--err); background: var(--err-soft); }
+.py-mine { font-weight: 700; overflow-wrap: anywhere; }
+.py-missed { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin: 12px 0 4px; }
+.py-missed-item { padding: 6px 10px; border-radius: var(--radius-sm); background: var(--surface-2); border: 1px solid var(--surface-2-edge); font-size: var(--fs-sm); }
+.py-missed-item strong { font-family: var(--font-zh); font-size: var(--fs-md); margin-right: 4px; }
+
 /* ═══ 9. APRÓSÁGOK: értesítő, ünneplés, mozgás ═════════ */
 .hf-toast {
   position: fixed; bottom: calc(20px + var(--tabbar-space)); left: 50%; z-index: 9500;

@@ -2770,10 +2770,12 @@ function initStatsPage() {
 
   const MODULE_LABELS = {
     lesson: 'Leckék',
-    tones: 'Tónus-tréner'
+    tones: 'Tónus-tréner',
+    pinyin: 'Pinyin-tábla'
   };
   const MODE_LABELS = {
     hear: 'Hallás után', see: 'Jelölés', pairs: 'Szópárok', match: 'Párosító',
+    write: 'Beírás', dictate: 'Diktálás',
     check: 'Ellenőrzés', listen: 'Hallás utáni kör', read: 'Olvasás', review: 'Ismétlés', retry: 'Hibák újra', quick: 'Gyors kérdések',
   };
   // Az Áttekintés műszerfal: benne az aktivitás (heatmap, sorozat) és a „mit gyakorolj" is.
@@ -3039,8 +3041,8 @@ function initStatsPage() {
 
   /* ── V4 P3 — radar + analytics helperek ────────── */
   // Radar tengely-sorrend (V5 bővítve: + Mintázatok)
-  const RADAR_ORDER = ['lesson', 'tones'];
-  const RADAR_LABELS = { lesson: 'Leckék', tones: 'Tónusok' };
+  const RADAR_ORDER = ['lesson', 'tones', 'pinyin'];
+  const RADAR_LABELS = { lesson: 'Leckék', tones: 'Tónusok', pinyin: 'Pinyin' };
   // Profil-alapú al-bontás (a modulok saját localStorage profiljaiból)
   const PROFILE_CONFIG = {
     tones: { key: 'hanziflow_tones_profile_v1', stats: [
@@ -3698,7 +3700,7 @@ function initStatsPage() {
   }
 
   /* ── D) Blind Spot Detector ────────────────────── */
-  const MODULE_URL = { tones: 'tones.html', lesson: '../index.html#path' };
+  const MODULE_URL = { tones: 'tones.html', pinyin: 'pinyin.html', lesson: '../index.html#path' };
 
   // Stratégiai diagnózisok a statokból, severity-szerint rendezve
   function detectBlindSpots() {
@@ -4243,6 +4245,653 @@ function initTonesPage() {
   renderChart();
 
   window._tones = { SYLLABLES, WORDS, buildQueue, patternOptions, drillSettings, run };
+}
+
+
+/* ====================================================
+   9c2. PINYIN-TÁBLA (pages/pinyin.html)
+   ----------------------------------------------------
+   A pinyin-motorra épül (js/pinyin.js, HanziFlowPinyin).
+     · Tábla: kezdőhangok × véghangok, négy csoportban (a-, i-, u-, ü-).
+       Egy cellára koppintva a szótag négy tónusa jelenik meg; ha a leckékben
+       van rá írásjegy, meg is szólal (a felolvasó írásjegyet kap, nem pinyint).
+     · Beírás ('write'): írásjegy + jelentés → a pinyin begépelése.
+     · Diktálás ('dictate'): a szó elhangzik → a pinyin begépelése.
+   Gépelés közben a mező jelzi, hogy a betűk jó irányba mennek-e (checkLive),
+   alatta a beírás ékezetes alakja látszik (toMarked); beküldéskor a check()
+   szótagonként megmondja, mi jó: a betű, a tónus.
+   A szavak a leckék szólistáiból jönnek (words[].items).
+   A beírt szöveg csak textContent-tel kerül az oldalra, innerHTML-lel soha.
+   Beállítás: 'hanziflow_pinyin_settings_v1' (mód, szint, tónus, kártyák száma).
+   ==================================================== */
+function initPinyinPage() {
+  const P = window.HanziFlowPinyin;
+  if (!P) return;
+  const COURSE = typeof HANZIFLOW_COURSE !== 'undefined' ? HANZIFLOW_COURSE : [];
+  const SETTINGS_KEY = 'hanziflow_pinyin_settings_v1';
+  const AUTO_ADVANCE_MS = 1100;
+  const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+  const PLAY = '<svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 5.5a9 9 0 0 1 0 13"/></svg>';
+  const shuffle = arr => { const a = arr.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+  const isHanzi = ch => { const c = ch.codePointAt(0); return c >= 0x3400 && c <= 0x9fff; };
+  const marked = s => P.toMarked(s.base + (s.tone || 5));      // { base, tone } → jeles alak
+
+  /* ── A) Beállítások ────────────────────────────── */
+  function loadJson(key) {
+    try { return JSON.parse(localStorage.getItem(key) || 'null'); } catch (e) { return null; }
+  }
+  const LEVELS = [
+    { id: 'hsk1', name: 'HSK 1', sub: 'előkészítő + 1–15. lecke', from: 0, to: 15 },
+    { id: 'hsk2', name: 'HSK 2', sub: '16–30. lecke', from: 16, to: 30 },
+    { id: 'hsk3', name: 'HSK 3', sub: '31–50. lecke', from: 31, to: 50 },
+    { id: 'all',  name: 'Mind',  sub: 'minden lecke szavai', from: 0, to: 9999 }
+  ];
+  const saved = loadJson(SETTINGS_KEY) || {};
+  const settings = {
+    mode: saved.mode === 'dictate' ? 'dictate' : 'write',
+    level: LEVELS.some(l => l.id === saved.level) ? saved.level : 'hsk1',
+    tones: saved.tones !== false,                 // a tónus is számít-e
+    cardCount: [10, 20, 40].indexOf(saved.cardCount) >= 0 ? saved.cardCount : 10
+  };
+  HanziFlowPath.apply('pinyin', settings);
+  function saveSettings() {
+    try { localStorage.setItem(SETTINGS_KEY, JSON.stringify(settings)); } catch (e) {}
+  }
+
+  /* ── B) Adatok a leckékből ─────────────────────── */
+  // '{学生|xué·sheng}{们|men}' → [{ zh: '学生', py: 'xué·sheng' }, { zh: '们', py: 'men' }]
+  function tokens(markup) {
+    const out = [];
+    const s = String(markup || '');
+    let i = s.indexOf('{');
+    while (i >= 0) {
+      const bar = s.indexOf('|', i), end = s.indexOf('}', i);
+      if (bar > i && end > bar) {
+        out.push({ zh: s.slice(i + 1, bar), py: s.slice(bar + 1, end) });
+        i = s.indexOf('{', end);
+      } else {
+        i = s.indexOf('{', i + 1);
+      }
+    }
+    return out;
+  }
+  function eachString(v, fn) {
+    if (typeof v === 'string') fn(v);
+    else if (Array.isArray(v)) v.forEach(x => eachString(x, fn));
+    else if (v && typeof v === 'object') Object.keys(v).forEach(k => eachString(v[k], fn));
+  }
+
+  // A gyakorlás szavai: { zh, expected, py, hu, no } — csak az olyan szavak, ahol
+  // a pinyin szótagszáma = írásjegyek száma (az erhuás 玩儿 és a tulajdonnevek egy része kimarad)
+  const WORDS = [];
+  (function buildWords() {
+    const seen = {};
+    COURSE.forEach(lesson => {
+      const no = parseInt(String(lesson.id).slice(1), 10) || 0;
+      (lesson.words || []).forEach(group => (group.items || []).forEach(it => {
+        const tk = tokens(it.zh);
+        if (!tk.length) return;
+        const zh = tk.map(t => t.zh).join('');
+        if (!zh || seen[zh] || [...zh].some(ch => !isHanzi(ch))) return;
+        const expected = tk.map(t => t.py).join(' ');
+        if (P.parse(expected).length !== [...zh].length) return;
+        seen[zh] = true;
+        WORDS.push({ zh: zh, expected: expected, py: it.pinyin || P.toMarked(expected), hu: it.hu || '', no: no });
+      }));
+    });
+  })();
+  function poolFor(levelId) {
+    const lv = LEVELS.find(l => l.id === levelId) || LEVELS[0];
+    const pool = WORDS.filter(w => w.no >= lv.from && w.no <= lv.to);
+    return pool.length >= 4 ? pool : WORDS;
+  }
+
+  // Szótag + tónus → egy írásjegy a leckékből, hogy a táblában meg is szólaljon: 'ma3' → '马'.
+  // A felolvasó egy magányos írásjegyet az alapolvasatával mond ki, ezért minden írásjegy
+  // csak a leckékben leggyakoribb olvasatához lehet példa (长 = cháng, nem zhǎng), a hangot
+  // váltó 不 és 一 pedig csak alaptónusban (bù, yī). A többszótagú jelölések is számítanak
+  // (觉得 jué·de → 觉 = jue2), ha a szótagszám egyezik az írásjegyekével.
+  let sayIndex = null;
+  function getSayIndex() {
+    if (sayIndex) return sayIndex;
+    const counts = {};                                     // írásjegy → { 'jue2': 12, 'jiao4': 3 }
+    eachString(COURSE, str => tokens(str).forEach(t => {
+      const chars = [...t.zh];
+      if (!chars.length || chars.some(ch => !isHanzi(ch))) return;
+      const syl = P.parse(t.py);
+      if (syl.length !== chars.length) return;
+      chars.forEach((ch, i) => {
+        const key = syl[i].base + syl[i].tone;
+        const c = counts[ch] = counts[ch] || {};
+        c[key] = (c[key] || 0) + 1;
+      });
+    }));
+    const best = {};                                       // 'jue2' → { ch, n }
+    Object.keys(counts).forEach(ch => {
+      const c = counts[ch];
+      let top = null;
+      Object.keys(c).forEach(k => { if (!top || c[k] > c[top]) top = k; });
+      if (ch === '不') top = c.bu4 ? 'bu4' : null;
+      if (ch === '一') top = c.yi1 ? 'yi1' : null;
+      if (!top || top.slice(-1) === '0') return;           // semleges tónus: nem jó hangpélda
+      if (!best[top] || c[top] > best[top].n) best[top] = { ch: ch, n: c[top] };
+    });
+    sayIndex = {};
+    Object.keys(best).forEach(k => { sayIndex[k] = best[k].ch; });
+    return sayIndex;
+  }
+
+  /* ── C) A tábla ────────────────────────────────── */
+  const INITIALS = ['', 'b', 'p', 'm', 'f', 'd', 't', 'n', 'l', 'g', 'k', 'h', 'j', 'q', 'x', 'zh', 'ch', 'sh', 'r', 'z', 'c', 's'];
+  const GROUPS = [
+    { id: 'a', name: 'a-, o-, e-', finals: ['a', 'o', 'e', 'ai', 'ei', 'ao', 'ou', 'an', 'en', 'ang', 'eng', 'ong', 'er'] },
+    { id: 'i', name: 'i-',         finals: ['i', 'ia', 'ie', 'iao', 'iu', 'ian', 'in', 'iang', 'ing', 'iong'] },
+    { id: 'u', name: 'u-',         finals: ['u', 'ua', 'uo', 'uai', 'ui', 'uan', 'un', 'uang', 'ueng'] },
+    { id: 'v', name: 'ü-',         finals: ['v', 've', 'van', 'vn'] }
+  ];
+  // kezdőhang + véghang → a leírt szótag (belső alak, ü = v).
+  // Kezdőhang nélkül y / w kerül elé (yi, ya, wu, wa, yu); j, q, x után az ü-t u-nak írjuk.
+  function spell(ini, fin) {
+    if (!ini) {
+      if (fin[0] === 'i') {
+        if (fin === 'i' || fin === 'in' || fin === 'ing') return 'y' + fin;
+        if (fin === 'iu') return 'you';
+        return 'y' + fin.slice(1);
+      }
+      if (fin[0] === 'u') {
+        if (fin === 'u') return 'wu';
+        if (fin === 'ui') return 'wei';
+        if (fin === 'un') return 'wen';
+        if (fin === 'ueng') return 'weng';
+        return 'w' + fin.slice(1);
+      }
+      if (fin[0] === 'v') return 'yu' + fin.slice(1);
+      return fin;
+    }
+    if (fin[0] === 'v' && (ini === 'j' || ini === 'q' || ini === 'x')) return ini + 'u' + fin.slice(1);
+    return ini + fin;
+  }
+  const chart = { group: 'a', sel: null };   // sel: { base, ini, fin }
+
+  function renderChart() {
+    const el = document.getElementById('pyChart');
+    if (!el) return;
+    const g = GROUPS.find(x => x.id === chart.group) || GROUPS[0];
+    const tabs = GROUPS.map(x => `
+      <button class="py-tab ${x.id === g.id ? 'active' : ''}" type="button" data-group="${x.id}" aria-pressed="${x.id === g.id}">${esc(x.name)}</button>`).join('');
+    const head = g.finals.map(f => `<th scope="col">${esc(P.toMarked(f))}</th>`).join('');
+    const rows = INITIALS.map(ini => {
+      let any = false;
+      const cells = g.finals.map(fin => {
+        const base = spell(ini, fin);
+        if (!P.isSyllable(base)) return '<td class="py-empty"></td>';
+        any = true;
+        const on = chart.sel && chart.sel.base === base ? ' is-selected' : '';
+        return `<td><button class="py-cell${on}" type="button" data-syl="${esc(base)}" data-ini="${esc(ini)}" data-fin="${esc(fin)}">${esc(P.toMarked(base))}</button></td>`;
+      }).join('');
+      return any ? `<tr><th scope="row" class="py-ini">${ini ? esc(ini) : '–'}</th>${cells}</tr>` : '';
+    }).join('');
+
+    el.innerHTML = `
+      <div class="tone-chart-head">
+        <h2 class="tone-chart-h">A pinyin-tábla</h2>
+        <p class="tone-chart-sub">Sorban a kezdőhangok, oszlopban a véghangok. Koppints egy szótagra: megmutatom a négy tónusát.</p>
+      </div>
+      <div class="py-tabs" role="group" aria-label="Véghang-csoport">${tabs}</div>
+      <div class="py-detail" id="pyDetail"></div>
+      <div class="py-table-wrap">
+        <table class="py-table">
+          <thead><tr><th scope="col" class="py-corner"><span class="sr-only">Kezdőhang</span></th>${head}</tr></thead>
+          <tbody>${rows}</tbody>
+        </table>
+      </div>`;
+    el.querySelectorAll('.py-tab').forEach(btn => btn.addEventListener('click', () => {
+      chart.group = btn.dataset.group;
+      renderChart();
+    }));
+    el.querySelectorAll('.py-cell').forEach(btn => btn.addEventListener('click', () => {
+      chart.sel = { base: btn.dataset.syl, ini: btn.dataset.ini, fin: btn.dataset.fin };
+      el.querySelectorAll('.py-cell.is-selected').forEach(b => b.classList.remove('is-selected'));
+      btn.classList.add('is-selected');
+      renderDetail(true);
+    }));
+    renderDetail(false);
+  }
+
+  function detailNote(sel) {
+    const { base, ini, fin } = sel;
+    if (fin[0] === 'v' && (ini === 'j' || ini === 'q' || ini === 'x')) return 'A j, q, x után mindig ü áll, ezért a pontjait elhagyjuk: ' + P.toMarked(base) + ' = ' + ini + P.toMarked(fin) + '.';
+    if (fin[0] === 'v' && !ini) return 'Kezdőhang nélkül az ü elé y kerül, a pontjai elmaradnak: yu, yue, yuan, yun.';
+    if (fin[0] === 'v') return 'Az n és az l után az ü pontjai megmaradnak (nǚ, lǜ). Gépeléskor írd v-vel: ' + base + '3.';
+    if (fin === 'i' && ['zh', 'ch', 'sh', 'r', 'z', 'c', 's'].indexOf(ini) >= 0) return 'Itt az i nem „i": a mássalhangzó zümmögő folytatása, a nyelv a helyén marad.';
+    if (!ini && (fin[0] === 'i' || fin[0] === 'u')) return 'Kezdőhang nélkül az i- és u-kezdetű véghangok elé y vagy w kerül: ' + P.toMarked(base) + '.';
+    if (fin === 'iu' || fin === 'ui' || fin === 'un') return 'Rövidített írás: ' + fin + ' = ' + ({ iu: 'iou', ui: 'uei', un: 'uen' }[fin]) + ' — a középső hangot halkan ejtjük.';
+    return '';
+  }
+
+  function renderDetail(scroll) {
+    const el = document.getElementById('pyDetail');
+    if (!el) return;
+    const sel = chart.sel;
+    if (!sel) {
+      el.innerHTML = '<p class="py-detail-hint">Válassz egy szótagot a táblából.</p>';
+      return;
+    }
+    const say = getSayIndex();
+    const tones = [1, 2, 3, 4].map(t => {
+      const zh = say[sel.base + t];
+      return `
+        <button class="py-tone tone-k${t}" type="button" ${zh ? `data-say="${esc(zh)}"` : 'disabled'} aria-label="${esc(P.toMarked(sel.base + t))}${zh ? ', ' + esc(zh) : ', nincs hangpélda'}">
+          <span class="py-tone-py">${esc(P.toMarked(sel.base + t))}</span>
+          <span class="py-tone-zh" lang="zh-CN">${zh ? esc(zh) : '—'}</span>
+        </button>`;
+    }).join('');
+    const missing = [1, 2, 3, 4].some(t => !say[sel.base + t]);
+    const note = detailNote(sel);
+    el.innerHTML = `
+      <div class="py-detail-top">
+        <span class="py-detail-syl">${esc(P.toMarked(sel.base))}</span>
+        <span class="py-detail-parts">kezdőhang: <strong>${sel.ini ? esc(sel.ini) : 'nincs'}</strong> · véghang: <strong>${esc(P.toMarked(sel.fin))}</strong></span>
+      </div>
+      <div class="py-tones">${tones}</div>
+      ${note ? `<p class="py-detail-note">${esc(note)}</p>` : ''}
+      ${missing ? '<p class="py-detail-small">A „—" jelű tónushoz a leckékben még nincs írásjegy, ezért nem szól.</p>' : ''}`;
+    el.querySelectorAll('[data-say]').forEach(btn => btn.addEventListener('click', () => {
+      btn.classList.add('is-playing');
+      setTimeout(() => btn.classList.remove('is-playing'), 1400);
+      if (window.HanziFlowAudio) HanziFlowAudio.play(btn.dataset.say, { speed: 0.8 });
+    }));
+    if (scroll) {
+      const header = document.getElementById('header');
+      const top = el.getBoundingClientRect().top - (header ? header.offsetHeight : 0) - 12;
+      if (top < 0 || top > window.innerHeight * 0.6) {
+        const calm = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        window.scrollTo({ top: Math.max(0, window.pageYOffset + top), behavior: calm ? 'auto' : 'smooth' });
+      }
+    }
+  }
+
+  function renderTips() {
+    const el = document.getElementById('pyTips');
+    if (!el) return;
+    const tips = [
+      ['zh · ch · sh · r', 'A nyelv hegye hátrahajlik a szájpadlás felé. zh ≈ kemény „dzs", ch ≈ kemény „cs" erős lehelettel, sh ≈ „s", r ≈ „zs"-szerű, gyenge hang.'],
+      ['z · c · s', 'A nyelv a fogak mögött marad. z ≈ „dz", c ≈ magyar „c", de erős lehelettel, s ≈ „sz".'],
+      ['j · q · x', 'A nyelv a szájpadlás közepéhez simul, az ajak kissé széthúzva. j ≈ lágy „dzs", q ≈ lágy „cs" lehelettel, x ≈ „sz" és „s" közötti hang. Csak i és ü előtt állnak.'],
+      ['b · d · g — p · t · k', 'A b, d, g nem zöngés, mint a magyarban: inkább lehelet nélküli p, t, k. A p, t, k utána erős lehelettel szól — tartsd a szád elé a tenyered, és érezni fogod.'],
+      ['ü', 'Mint a magyar ü. A j, q, x és y után a pontjai elmaradnak (ju, qu, xu, yu), az n és l után megmaradnak (nǚ, lǜ). Gépeléskor v-vel vagy u:-tal írd.'],
+      ['zhi · chi · shi · ri · zi · ci · si', 'Az i itt nem „i": a mássalhangzó zümmögő, magánhangzószerű folytatása. A nyelv nem mozdul el.']
+    ];
+    el.innerHTML = `
+      <div class="tone-chart-head">
+        <h2 class="tone-chart-h">Figyelj ezekre</h2>
+        <p class="tone-chart-sub">A magyar fülnek nehéz párok és a pinyin-írás buktatói.</p>
+      </div>
+      <dl class="py-tip-list">
+        ${tips.map(t => `<div class="py-tip"><dt>${esc(t[0])}</dt><dd>${esc(t[1])}</dd></div>`).join('')}
+      </dl>
+      <p class="tone-chart-note"><strong>Hogyan gépelj?</strong> Számmal a szótag után (ni3 hao3; a semleges tónus 5 vagy semmi), vagy ékezettel (nǐ hǎo). Az ü helyett írhatsz v-t.</p>`;
+  }
+
+  /* ── D) Fejléc-statisztika + lobbi ─────────────── */
+  function renderStatsBar() {
+    const el = document.getElementById('pyStatsBar');
+    if (!el || !window.HanziFlowStats) return;
+    const sess = HanziFlowStats.getSessions().filter(s => s.module === 'pinyin');
+    const Q = sess.reduce((n, s) => n + (s.questionCount || 0), 0);
+    const C = sess.reduce((n, s) => n + (s.correctCount || 0), 0);
+    el.innerHTML = `
+      <div class="conj-stat-chip"><span class="csc-num">${WORDS.length}</span><span class="csc-label">szó a leckékből</span></div>
+      <div class="conj-stat-chip"><span class="csc-num">${Q}</span><span class="csc-label">beírás</span></div>
+      <div class="conj-stat-chip"><span class="csc-num">${Q ? Math.round(C / Q * 100) : 0}%</span><span class="csc-label">pontosság</span></div>`;
+  }
+
+  function renderLobby() {
+    const el = document.getElementById('pyLobby');
+    const modes = [
+      { id: 'write',   name: 'Beírás',   sub: 'látod az írásjegyet: írd be a pinyint' },
+      { id: 'dictate', name: 'Diktálás', sub: 'hallod a szót: írd le pinyinnel' }
+    ].map(m => `
+      <button class="cj-mode-btn ${settings.mode === m.id ? 'active' : ''}" data-mode="${m.id}" type="button">
+        <span class="cj-m-name">${m.name}</span>
+        <span class="cj-m-sub">${m.sub}</span>
+      </button>`).join('');
+    const levels = LEVELS.map(l => `
+      <button class="cj-mode-btn ${settings.level === l.id ? 'active' : ''}" data-level="${l.id}" type="button">
+        <span class="cj-m-name">${l.name}</span>
+        <span class="cj-m-sub">${l.sub} · ${poolFor(l.id).length} szó</span>
+      </button>`).join('');
+    const tones = [
+      { v: true,  name: 'Tónussal',     sub: 'a tónus is számít' },
+      { v: false, name: 'Tónus nélkül', sub: 'elég, ha a betűk jók' }
+    ].map(t => `
+      <button class="cj-mode-btn ${settings.tones === t.v ? 'active' : ''}" data-tones="${t.v ? 1 : 0}" type="button">
+        <span class="cj-m-name">${t.name}</span>
+        <span class="cj-m-sub">${t.sub}</span>
+      </button>`).join('');
+    const presets = [10, 20, 40].map(n => `
+      <button class="ml-count-btn ${settings.cardCount === n ? 'active' : ''}" data-count="${n}" type="button">${n}</button>`).join('');
+
+    el.innerHTML = `
+      <div class="lobby-header">
+        <div class="lobby-eyebrow">Pinyin</div>
+        <h2 class="lobby-title">Mit gyakorolnál?</h2>
+      </div>
+      <div class="lobby-section">
+        <div class="lobby-section-label">Mód</div>
+        <div class="cj-mode-row py-mode-row">${modes}</div>
+      </div>
+      <div class="lobby-section">
+        <div class="lobby-section-label">Szavak</div>
+        <div class="cj-mode-row py-level-row">${levels}</div>
+      </div>
+      <div class="lobby-section">
+        <div class="lobby-section-label">Tónusok</div>
+        <div class="cj-mode-row py-mode-row">${tones}</div>
+      </div>
+      <div class="lobby-section">
+        <div class="lobby-section-label">Kártyák száma</div>
+        <div class="ml-count-row"><div class="ml-count-presets">${presets}</div></div>
+      </div>
+      <button class="btn btn-primary ml-start" id="pyStart" type="button">Indítás</button>`;
+
+    const pick = (sel, apply) => el.querySelectorAll(sel).forEach(btn => btn.addEventListener('click', () => {
+      apply(btn);
+      el.querySelectorAll(sel).forEach(b => b.classList.toggle('active', b === btn));
+      saveSettings(); updateStartBtn();
+    }));
+    pick('[data-mode]',   b => { settings.mode = b.dataset.mode; });
+    pick('[data-level]',  b => { settings.level = b.dataset.level; });
+    pick('[data-tones]',  b => { settings.tones = b.dataset.tones === '1'; });
+    pick('[data-count]',  b => { settings.cardCount = parseInt(b.dataset.count, 10); });
+    document.getElementById('pyStart').addEventListener('click', startRound);
+    updateStartBtn();
+  }
+  function updateStartBtn() {
+    const btn = document.getElementById('pyStart');
+    if (btn) btn.textContent = 'Indítás — ' + settings.cardCount + ' kártya';
+  }
+
+  /* ── E) Kör ────────────────────────────────────── */
+  const run = {
+    inLobby: true, cards: [], cardIdx: 0,
+    score: 0, streak: 0, bestStreak: 0, results: [],
+    submitted: false, roundStartTs: 0, advanceTimer: null
+  };
+
+  function startRound() {
+    const pool = poolFor(settings.level);
+    if (!pool.length) return;
+    let queue = shuffle(pool);
+    while (queue.length < settings.cardCount) queue = queue.concat(shuffle(pool));
+    run.cards = queue.slice(0, settings.cardCount).map(w => ({ item: w }));
+    run.cardIdx = 0; run.score = 0; run.streak = 0; run.bestStreak = 0; run.results = [];
+    run.roundStartTs = Date.now();
+    run.inLobby = false;
+    HanziFlowRound.begin(function () {
+      return { module: 'pinyin', mode: settings.mode, results: run.results, score: run.score, startTs: run.roundStartTs };
+    });
+    document.querySelector('.module-hero')?.classList.add('hidden');
+    ['pyLobby', 'pyChart', 'pyTips'].forEach(id => document.getElementById(id).classList.add('hidden'));
+    document.getElementById('pyRuntime').classList.remove('hidden');
+    const sEl = document.getElementById('pySummary');
+    sEl.classList.add('hidden'); sEl.innerHTML = '';
+    renderCard();
+  }
+
+  function updateHeader() {
+    const total = run.cards.length;
+    document.getElementById('pyScore').textContent = run.score;
+    document.getElementById('pyStreak').textContent = `${run.streak} 🔥`;
+    document.getElementById('pyCardCount').textContent = `Kártya ${Math.min(run.cardIdx + 1, total)} / ${total}`;
+    document.getElementById('pyProgressFill').style.width = `${total ? (run.cardIdx / total) * 100 : 0}%`;
+  }
+
+  function play(text, speed, btn) {
+    if (!window.HanziFlowAudio) return audioFailed();
+    if (btn) { btn.classList.add('is-playing'); setTimeout(() => btn.classList.remove('is-playing'), 1600); }
+    try { HanziFlowAudio.play(text, { speed: speed, onError: audioFailed }); } catch (e) { audioFailed(); }
+  }
+  function audioFailed() {
+    if (settings.mode !== 'dictate') return;               // beírásnál a hang csak ráadás
+    const el = document.getElementById('pyNoAudio');
+    if (el) el.classList.remove('hidden');
+  }
+
+  function renderCard() {
+    run.submitted = false;
+    updateHeader();
+    const fb = document.getElementById('pyFeedback');
+    fb.classList.add('hidden'); fb.innerHTML = '';
+    const card = run.cards[run.cardIdx];
+    const it = card.item;
+    const dictate = settings.mode === 'dictate';
+    const level = LEVELS.find(l => l.id === settings.level) || LEVELS[0];
+    const sylCount = P.parse(it.expected).length;
+    const keys = [1, 2, 3, 4].map(t => `
+      <button class="py-key tone-k${t}" type="button" data-ins="${t}" aria-label="${t}. tónus">${esc(P.toMarked('a' + t))}<small>${t}</small></button>`).join('') +
+      '<button class="py-key" type="button" data-ins="v" aria-label="ü (v)">ü<small>v</small></button>';
+
+    const prompt = dictate ? `
+        <div class="kana-task">Írd le pinyinnel, amit hallasz!</div>
+        <div class="lq-listen">
+          <button class="lq-listen-btn" id="pyPlay" type="button" aria-label="Lejátszás">${PLAY}</button>
+          <button class="btn btn-ghost lq-listen-slow" id="pySlow" type="button">Lassabban</button>
+        </div>` : `
+        <div class="py-zh" lang="zh-CN">${esc(it.zh)}</div>
+        <div class="py-hu">${esc(it.hu)}</div>
+        <div class="kana-task">Hogyan írjuk pinyinnel?</div>`;
+
+    document.getElementById('pyCard').innerHTML = `
+      <div class="cj-prompt">
+        <div class="cj-prompt-eyebrow"><span class="cj-pe-group">${dictate ? 'Diktálás' : 'Beírás'}</span><span class="cj-pe-dot">·</span>${esc(level.name)}<span class="cj-pe-dot">·</span>${sylCount} szótag</div>
+        ${prompt}
+        <p class="tone-noaudio hidden" id="pyNoAudio">A hang most nem szól. Ezt a kártyát a „Nem tudom" gombbal átugorhatod, vagy válts a Beírás módra.</p>
+      </div>
+      <form class="py-answer" id="pyForm" novalidate>
+        <label class="sr-only" for="pyInput">A szó pinyinje</label>
+        <input class="py-input" id="pyInput" type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" enterkeyhint="done"
+               placeholder="${dictate ? 'pl. xue2sheng' : 'pl. ni3 hao3 vagy nǐ hǎo'}" />
+        <div class="py-keys" aria-label="Tónus és ü beírása">${keys}</div>
+        <div class="py-preview" id="pyPreview" aria-live="polite"></div>
+        <button class="btn btn-primary py-submit" type="submit">Ellenőrzés</button>
+      </form>
+      <button class="dont-know-btn" type="button">Nem tudom</button>`;
+
+    const input = document.getElementById('pyInput');
+    const preview = document.getElementById('pyPreview');
+    function onInput() {
+      const v = input.value;
+      if (!v.trim()) {
+        preview.textContent = '';
+        input.classList.remove('is-ok', 'is-off');
+        return;
+      }
+      preview.textContent = P.toMarked(v);                 // csak textContent: a beírás nem HTML
+      const st = P.checkLive(v, it.expected);
+      input.classList.toggle('is-off', !st.ok);
+      input.classList.toggle('is-ok', st.ok && st.done);
+    }
+    input.addEventListener('input', onInput);
+    document.querySelectorAll('#pyCard .py-key').forEach(btn => btn.addEventListener('click', () => {
+      if (run.submitted) return;
+      const s = input.selectionStart == null ? input.value.length : input.selectionStart;
+      const e = input.selectionEnd == null ? s : input.selectionEnd;
+      input.setRangeText(btn.dataset.ins, s, e, 'end');
+      input.focus();
+      onInput();
+    }));
+    document.getElementById('pyForm').addEventListener('submit', ev => {
+      ev.preventDefault();
+      if (run.submitted) return;
+      if (!input.value.trim()) { input.focus(); return; }
+      submit(card, input.value);
+    });
+    document.querySelector('#pyCard .dont-know-btn').addEventListener('click', () => {
+      if (run.submitted) return;
+      lockCard();
+      finalize(card, false, { dontKnow: true });
+    });
+
+    const playBtn = document.getElementById('pyPlay');
+    if (playBtn) {
+      playBtn.addEventListener('click', () => play(it.zh, 0.85, playBtn));
+      document.getElementById('pySlow').addEventListener('click', () => play(it.zh, 0.6, playBtn));
+      play(it.zh, 0.85, playBtn);
+    }
+    try { input.focus({ preventScroll: true }); } catch (e) { input.focus(); }
+  }
+
+  function lockCard() {
+    const input = document.getElementById('pyInput');
+    if (input) { input.disabled = true; input.blur(); }
+    document.querySelectorAll('#pyCard button').forEach(b => {
+      if (b.id !== 'pyPlay' && b.id !== 'pySlow') b.disabled = true;
+    });
+  }
+
+  function submit(card, value) {
+    const res = P.check(value, card.item.expected);
+    const ok = res.status === 'correct' ||
+      (!settings.tones && (res.status === 'tone' || res.status === 'notone'));
+    lockCard();
+    const input = document.getElementById('pyInput');
+    if (input) input.classList.add(ok ? 'is-right' : 'is-wrong');
+    finalize(card, ok, { res: res, given: value });
+  }
+
+  function finalize(card, ok, info) {
+    run.submitted = true;
+    const it = card.item;
+    if (ok) { run.score += 10; run.streak++; run.bestStreak = Math.max(run.bestStreak, run.streak); }
+    else    { run.streak = 0; }
+    const code = ok ? null : (info.dontKnow ? 'dont_know' : info.res.status);
+    run.results.push({ item: it.zh, correct: ok, errorCode: code });
+    document.getElementById('pyScore').textContent = run.score;
+    document.getElementById('pyStreak').textContent = `${run.streak} 🔥`;
+    play(it.zh, 0.85);                                     // a válasz után a szó meg is szól
+    renderFeedback(card, ok, info);
+    if (ok && info.res && info.res.status === 'correct') {
+      run.advanceTimer = setTimeout(advance, AUTO_ADVANCE_MS);
+    }
+  }
+
+  function renderFeedback(card, ok, info) {
+    const it = card.item;
+    const res = info.res;
+    const fb = document.getElementById('pyFeedback');
+    const isLast = run.cardIdx + 1 >= run.cards.length;
+    const auto = ok && res && res.status === 'correct';
+
+    let mark = '🤔', title = 'Nézzük meg együtt', cls = 'pr-fb-wrong';
+    if (info.dontKnow) { mark = '💡'; title = 'Ez a helyes'; cls = 'pr-fb-dontknow'; }
+    else if (res.status === 'correct') { mark = '✅'; title = 'Pontosan!'; cls = 'pr-fb-correct'; }
+    else if (res.status === 'tone') { mark = '🎵'; title = ok ? 'Betűre jó — a tónus még nem pontos' : 'Betűre jó, de a tónus nem stimmel'; cls = ok ? 'pr-fb-correct' : 'pr-fb-dontknow'; }
+    else if (res.status === 'notone') { mark = '🎵'; title = ok ? 'Betűre jó!' : 'Betűre jó — írd hozzá a tónusokat is'; cls = ok ? 'pr-fb-correct' : 'pr-fb-dontknow'; }
+
+    // a helyes alak szótagonként: zöld = jó, borostyán = csak a tónus rossz, piros = a betűk rosszak
+    const rows = info.dontKnow
+      ? P.parse(it.expected).map(s => ({ expected: s, base: true, tone: true }))
+      : res.syllables.filter(r => r.expected);
+    const chips = rows.map(r => {
+      const state = info.dontKnow ? '' : (r.base && r.tone ? ' is-ok' : r.base ? ' is-tone' : ' is-bad');
+      return `<span class="py-chip${state}">${esc(marked(r.expected))}</span>`;
+    }).join('');
+    const toneTips = (!info.dontKnow && res.status !== 'wrong')
+      ? res.syllables.filter(r => r.expected && r.base && !r.tone).map(r =>
+          `${esc(marked(r.expected))}: ${r.expected.tone ? r.expected.tone + '. tónus' : 'semleges'} (nálad: ${r.given && r.given.tone ? r.given.tone + '.' : 'nincs'})`)
+      : [];
+
+    fb.className = 'conj-feedback ' + cls;
+    fb.innerHTML = `
+      <div class="pr-fb-header">
+        <span class="pr-fb-mark">${mark}</span>
+        <span class="pr-fb-title">${title}</span>
+      </div>
+      <div class="pr-fb-explain">
+        <div class="pfe-row pfe-correct"><span class="pfe-label">Helyes</span>
+          <span class="pfe-text"><span class="py-chips">${chips}</span><br><strong lang="zh-CN">${esc(it.zh)}</strong> — ${esc(it.hu)}</span></div>
+        ${info.given !== undefined && res.status !== 'correct' ? `<div class="pfe-row pfe-wrong"><span class="pfe-label">A te válaszod</span><span class="pfe-text py-mine" id="pyMine"></span></div>` : ''}
+        ${toneTips.length ? `<div class="pfe-row pfe-context"><span class="pfe-label">Tónus</span><span class="pfe-text">${toneTips.join('<br>')}</span></div>` : ''}
+      </div>
+      <div class="tone-fb-actions"><button class="btn btn-outline" id="pyAgain" type="button">Meghallgatom újra</button></div>
+      ${auto ? '' : `<button class="btn btn-primary cj-next" id="pyNext" type="button">${isLast ? 'Eredmények' : 'Következő'}</button>`}`;
+    const mine = document.getElementById('pyMine');
+    if (mine) mine.textContent = P.toMarked(info.given);  // a beírás: csak textContent
+    document.getElementById('pyAgain').addEventListener('click', () => play(it.zh, 0.7));
+    const next = document.getElementById('pyNext');
+    if (next) { next.addEventListener('click', advance); try { next.focus({ preventScroll: true }); } catch (e) {} }
+    fb.classList.remove('hidden');
+  }
+
+  function advance() {
+    if (run.advanceTimer) { clearTimeout(run.advanceTimer); run.advanceTimer = null; }
+    run.cardIdx++;
+    if (run.cardIdx >= run.cards.length) showSummary();
+    else renderCard();
+    HanziFlowRound.scrollToRound();
+  }
+
+  /* ── F) Összesítő ──────────────────────────────── */
+  function showSummary() {
+    HanziFlowStats.recordSession({
+      module: 'pinyin', mode: settings.mode,
+      results: run.results, score: run.score, startTs: run.roundStartTs
+    });
+    const total = run.results.length;
+    const correct = run.results.filter(r => r.correct).length;
+    const pct = total ? Math.round((correct / total) * 100) : 0;
+    const toneMiss = run.results.filter(r => r.errorCode === 'tone' || r.errorCode === 'notone').length;
+    const missed = run.cards.filter((c, i) => run.results[i] && !run.results[i].correct).map(c => c.item);
+    const uniq = [];
+    missed.forEach(w => { if (uniq.indexOf(w) < 0) uniq.push(w); });
+
+    document.getElementById('pyCard').innerHTML = '';
+    const fb = document.getElementById('pyFeedback');
+    fb.classList.add('hidden'); fb.innerHTML = '';
+    document.getElementById('pyProgressFill').style.width = '100%';
+    const sEl = document.getElementById('pySummary');
+    sEl.classList.remove('hidden');
+    sEl.innerHTML = `
+      <div class="summary-icon">${pct === 100 ? '🏆' : pct >= 75 ? '⚡' : pct >= 50 ? '🎯' : '🌱'}</div>
+      <h3>Kör vége: ${pct}%</h3>
+      <div class="summary-score">${correct} / ${total}</div>
+      ${toneMiss ? `<p class="lq-summary-note">${toneMiss} szónál a betűk jók voltak, csak a tónus nem — a Tónus-tréner segít.</p>` : ''}
+      ${uniq.length ? `<div class="py-missed">${uniq.slice(0, 8).map(w => `<span class="py-missed-item"><strong lang="zh-CN">${esc(w.zh)}</strong> ${esc(P.toMarked(w.expected))}</span>`).join('')}</div>` : ''}
+      <div class="kana-summary-actions">
+        <button class="btn btn-primary" id="pyRoundAgain" type="button">Még egy kör</button>
+        <button class="btn btn-outline" id="pyBack" type="button">Vissza a táblához</button>
+      </div>`;
+    document.getElementById('pyRoundAgain').addEventListener('click', startRound);
+    document.getElementById('pyBack').addEventListener('click', backToLobby);
+    if (pct === 100 && window.HanziFlowMotion && HanziFlowMotion.celebrate) {
+      try { HanziFlowMotion.celebrate({ title: 'Hibátlan kör!', sub: `${total} / ${total}` }); } catch (e) {}
+    }
+  }
+
+  function backToLobby() {
+    if (run.advanceTimer) { clearTimeout(run.advanceTimer); run.advanceTimer = null; }
+    if (window.HanziFlowAudio) HanziFlowAudio.stop();
+    run.inLobby = true; run.cards = [];
+    document.querySelector('.module-hero')?.classList.remove('hidden');   // → a kör-őr elmenti a részeredményt
+    document.getElementById('pyRuntime').classList.add('hidden');
+    ['pyLobby', 'pyChart', 'pyTips'].forEach(id => document.getElementById(id).classList.remove('hidden'));
+    renderStatsBar(); renderLobby();
+  }
+
+  /* ── G) Init ───────────────────────────────────── */
+  document.getElementById('pyExit').addEventListener('click', () => {
+    if (run.inLobby) return;
+    if (!confirm('Biztosan kilépsz a körből?')) return;
+    backToLobby();
+  });
+
+  renderStatsBar();
+  renderLobby();
+  renderChart();
+  renderTips();
+
+  window._pinyin = { WORDS, spell, poolFor, getSayIndex, settings, run, startRound, submit: v => submit(run.cards[run.cardIdx], v) };
 }
 
 
@@ -5430,6 +6079,8 @@ function initCurrentPage() {
     initStatsPage();
   } else if (document.getElementById('tonesMain')) {
     initTonesPage();
+  } else if (document.getElementById('pinyinMain')) {
+    initPinyinPage();
   } else if (document.getElementById('lessonMain')) {
     initLessonPage();
   } else if (document.querySelector('.auth-card')) {

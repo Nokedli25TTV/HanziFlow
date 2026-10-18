@@ -14,7 +14,7 @@
    ==================================================== */
 
 const CACHE_PREFIX  = 'hanziflow-';
-const CACHE_VERSION = CACHE_PREFIX + 'v17-2026-10-18-hsk3-kesz';
+const CACHE_VERSION = CACHE_PREFIX + 'v18-2026-10-18-pinyin-tabla';
 const APP_SHELL_CACHE = CACHE_VERSION + '-shell';
 const RUNTIME_CACHE   = CACHE_VERSION + '-runtime';
 
@@ -24,6 +24,7 @@ const APP_SHELL = [
   './manifest.webmanifest',
   './pages/lesson.html',
   './pages/tones.html',
+  './pages/pinyin.html',
   './pages/modules.html',
   './pages/stats.html',
   './pages/login.html',
@@ -33,6 +34,7 @@ const APP_SHELL = [
   './js/app.js',
   './js/auth.js',
   './js/sync.js',
+  './js/pinyin.js',
   './js/data/core.js',
   './js/data/course.js',
   './js/data/tones.js',
