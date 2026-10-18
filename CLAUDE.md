@@ -25,10 +25,11 @@ mellette **gyakorló modulok**, **időzített ismétlés** és **statisztika**.
   sorrendjét nézzük meg; **minden magyarázat, párbeszéd és példamondat saját szöveg**. A `Tananyagok/` soha
   nem kerülhet a repóba (`.gitignore`).
 - **A leckékben a pinyin a szövegben áll**, `{汉字|hànzì}` jelöléssel (ezt nem a motor számolja).
-- **Pinyin-motor: csak váz** (`js/pinyin.js`, user-kérés 2026-10-18): számos ↔ jeles átalakítás, szótagolás,
-  válasz-ellenőrzés, DOM nélkül. **Hosszú tónusjel-táblát és bonyolult regexet ne generálj** — a
-  `TONE_MARKS` táblát és a teljes `SYLLABLES` listát a user tölti ki kézzel. A felület és a ruby-párosítás külön.
-  Próba: a scratchpad `test-pinyin.js` ASCII-próbajelekkel fut.
+- **Pinyin-motor** (`js/pinyin.js`, user-kérés 2026-10-18): számos ↔ jeles átalakítás, szótagolás (erhua is),
+  válasz-ellenőrzés, `renderRuby()` (csak `textContent`). **Hosszú tónusjel-táblát és bonyolult regexet ne
+  generálj** — a `TONE_MARKS` táblát és a ~410 szótagos `SYLLABLES` listát a user adta meg, azokat ne írd újra.
+  Próba (scratchpad): `test-pinyin.js` (ASCII-próbajelek) és `test-pinyin-real.js` (valódi tábla + a leckék
+  összes `{汉字|pinyin}` jelölése: szótagszám és oda-vissza alakítás).
 - Ellenőrzés **szerver nélkül**: fej nélküli Chrome a helyi fájlokon (`file://`), `node --check`.
   Ne indíts localhostot, ne hozz létre `.claude/launch.json`-t.
 - Kiadásnál a `sw.js` `CACHE_VERSION`-jét léptetni kell. A Service Worker csak a `hanziflow-` kezdetű
@@ -46,7 +47,7 @@ css/style.css         a teljes stíluslap (tokenek → váz → kezdőlap → k�
 css/auth.css          a belépő oldalak kiegészítése
 js/app.js             minden logika: közös részek + oldalanként egy init…Page()
 js/auth.js · sync.js  HanziFlowAuth (Firebase Auth) · HanziFlowSync (Firestore)
-js/pinyin.js          HanziFlowPinyin — pinyin-motor váz (még egyik oldal sem tölti be)
+js/pinyin.js          HanziFlowPinyin — pinyin-motor (még egyik oldal sem tölti be)
 js/data/core.js       HANZIFLOW_PATH + HANZIFLOW_PATH_UNITS (a tanulási út)
 js/data/course.js     HANZIFLOW_COURSE (a leckék; a séma a fájl elején)
 js/data/tones.js      a Tónus-tréner adatai

@@ -14,18 +14,20 @@
      HanziFlowPinyin.checkLive(beírt, elvárt)   → { ok, done, typed, total }
      HanziFlowPinyin.setToneMarks({ a: [...] }) → a tónustábla kitöltése futás közben
      HanziFlowPinyin.addSyllables([...])        → a szótaglista bővítése
+     HanziFlowPinyin.renderRuby(elem, hanzik, pinyinek) → <ruby>-k, csak textContent-tel
 
    Belső ábrázolás: egy szótag = { base, tone }.
      • base: tónus nélküli kisbetűs alak, az ü helyén 'v' (lv, nv, lve)
      • tone: 1–4, a semleges tónus 0 (beírva 0 vagy 5)
 
-   🔴 KITÖLTENDŐ: a TONE_MARKS tábla és a SYLLABLES lista szándékosan
-   hiányos (próbaadat). Amíg egy jeles betű hiányzik, a toMarked a
-   számos alakot hagyja meg (ni3), hibát nem dob.
+   A TONE_MARKS tábla és a SYLLABLES lista a user kitöltése. Ha egy
+   jeles betű mégis hiányozna, a toMarked a számos alakot hagyja meg
+   (ni3), hibát nem dob.
 
    Reguláris kifejezés nincs: minden karakterenkénti ciklus.
    A visszaadott szöveget a felület textContent-tel tegye ki
-   (innerHTML-lel soha), mert felhasználói bevitelből is származhat.
+   (innerHTML-lel soha), mert felhasználói bevitelből is származhat —
+   erre való a renderRuby() segédfüggvény (9. rész).
    ==================================================== */
 
 window.HanziFlowPinyin = (function () {
@@ -34,23 +36,45 @@ window.HanziFlowPinyin = (function () {
   /* ── 1. Kitöltendő adatok ─────────────────────────── */
 
   // Magánhangzónként 5 elem: [alapbetű, 1. tónus, 2. tónus, 3. tónus, 4. tónus].
-  // A null helyére kézzel kell beírni a jeles betűt. A 'v' sor az ü-é:
-  // az alapbetű (0. elem) ott maga az ü, a többi az ü tónusjeles alakja.
+  // A 'v' sor az ü-é: az alapbetű (0. elem) ott maga az ü.
   const TONE_MARKS = {
-    a: ['a', null, null, null, null],
-    e: ['e', null, null, null, null],
-    i: ['i', null, null, null, null],
-    o: ['o', null, null, null, null],
-    u: ['u', null, null, null, null],
-    v: [null, null, null, null, null]
+    a: ['a', 'ā', 'á', 'ǎ', 'à'],
+    e: ['e', 'ē', 'é', 'ě', 'è'],
+    i: ['i', 'ī', 'í', 'ǐ', 'ì'],
+    o: ['o', 'ō', 'ó', 'ǒ', 'ò'],
+    u: ['u', 'ū', 'ú', 'ǔ', 'ù'],
+    v: ['ü', 'ǖ', 'ǘ', 'ǚ', 'ǜ']
   };
 
-  // Érvényes pinyin-szótagok (tónus nélkül, ü = v). Próbaadat:
-  // a teljes lista (kb. 410 szótag) kézzel vagy külön adatfájlból jön.
+  // Az érvényes pinyin-szótagok (tónus nélkül, ü = v), kb. 410 darab.
+  // Az r-es (erhua) alakokat — wánr, diǎnr — a segment() külön kezeli.
   const SYLLABLES = {};
-  ['a', 'an', 'ni', 'hao', 'xi', 'xue', 'sheng', 'ping', 'guo', 'pin', 'yin',
-   'bei', 'jing', 'zhong', 'wen', 'lv', 'nv', 'ma', 'shi', 'han', 'zi'
-  ].forEach(function (s) { SYLLABLES[s] = true; });
+  ('a,ai,an,ang,ao,ba,bai,ban,bang,bao,bei,ben,beng,bi,bian,biao,bie,bin,bing,bo,bu,' +
+   'ca,cai,can,cang,cao,ce,cen,ceng,cha,chai,chan,chang,chao,che,chen,cheng,chi,chong,chou,chu,' +
+   'chua,chuai,chuan,chuang,chui,chun,chuo,ci,cong,cou,cu,cuan,cui,cun,cuo,' +
+   'da,dai,dan,dang,dao,de,den,deng,di,dian,diao,die,ding,diu,dong,dou,du,duan,dui,dun,duo,' +
+   'e,ei,en,eng,er,fa,fan,fang,fei,fen,feng,fo,fou,fu,' +
+   'ga,gai,gan,gang,gao,ge,gei,gen,geng,gong,gou,gu,gua,guai,guan,guang,gui,gun,guo,' +
+   'ha,hai,han,hang,hao,he,hei,hen,heng,hong,hou,hu,hua,huai,huan,huang,hui,hun,huo,' +
+   'ji,jia,jian,jiang,jiao,jie,jin,jing,jiong,jiu,ju,juan,jue,jun,' +
+   'ka,kai,kan,kang,kao,ke,ken,keng,kong,kou,ku,kua,kuai,kuan,kuang,kui,kun,kuo,' +
+   'la,lai,lan,lang,lao,le,lei,leng,li,lia,lian,liang,liao,lie,lin,ling,liu,long,lou,lu,' +
+   'luan,lun,luo,lv,lve,' +
+   'ma,mai,man,mang,mao,me,mei,men,meng,mi,mian,miao,mie,min,ming,miu,mo,mou,mu,' +
+   'na,nai,nan,nang,nao,ne,nei,nen,neng,ng,ni,nian,niang,niao,nie,nin,ning,niu,nong,nou,' +
+   'nu,nuan,nun,nuo,nv,nve,o,ou,' +
+   'pa,pai,pan,pang,pao,pei,pen,peng,pi,pian,piao,pie,pin,ping,po,pou,pu,' +
+   'qi,qia,qian,qiang,qiao,qie,qin,qing,qiong,qiu,qu,quan,que,qun,' +
+   'ran,rang,rao,re,ren,reng,ri,rong,rou,ru,ruan,rui,run,ruo,' +
+   'sa,sai,san,sang,sao,se,sen,seng,sha,shai,shan,shang,shao,she,shei,shen,sheng,shi,shou,shu,' +
+   'shua,shuai,shuan,shuang,shui,shun,shuo,si,song,sou,su,suan,sui,sun,suo,' +
+   'ta,tai,tan,tang,tao,te,teng,ti,tian,tiao,tie,ting,tong,tou,tu,tuan,tui,tun,tuo,' +
+   'wa,wai,wan,wang,wei,wen,weng,wo,wu,' +
+   'xi,xia,xian,xiang,xiao,xie,xin,xing,xiong,xiu,xu,xuan,xue,xun,' +
+   'ya,yan,yang,yao,ye,yi,yin,ying,yo,yong,you,yu,yuan,yue,yun,' +
+   'za,zai,zan,zang,zao,ze,zei,zen,zeng,zha,zhai,zhan,zhang,zhao,zhe,zhei,zhen,zheng,zhi,' +
+   'zhong,zhou,zhu,zhua,zhuai,zhuan,zhuang,zhui,zhun,zhuo,zi,zong,zou,zu,zuan,zui,zun,zuo'
+  ).split(',').forEach(function (s) { SYLLABLES[s] = true; });
 
   /* ── 2. Állandók ─────────────────────────────────── */
 
@@ -58,7 +82,7 @@ window.HanziFlowPinyin = (function () {
   const VOWELS = 'aeiouv';
   const SYL_BREAK = '·\'’-';     // szótaghatár egy szón belül (xué·sheng, xī'ān)
   const SPACES = ' \t\n\r';
-  const MAX_SYL = 6;             // a leghosszabb szótag: zhuang, shuang, chuang
+  const MAX_SYL = 7;             // a leghosszabb szótag: zhuang (6) + erhua r: zhuangr
 
   // jeles betű → { key, tone } — a TONE_MARKS-ból épül
   let reverse = {};
@@ -104,12 +128,21 @@ window.HanziFlowPinyin = (function () {
   // Tónus nélküli betűsor → szótagok. A leghosszabb illeszkedést próbálja
   // először, és visszalép, ha a maradék nem bontható. Ha a sor nem bontható
   // (pl. hiányzik a szótaglistából), egyetlen szótagként adja vissza.
-  // Megjegyzés: a „xian" így lehet xian vagy xi + an — a listán múlik;
-  // a kétértelműséget a beírt ' vagy · jel oldja fel.
+  // Megjegyzés: a „xian" így xian lesz (nem xi + an) — a kétértelműséget
+  // a beírt ' vagy · jel oldja fel (xī'ān, Xī·ān).
   function segment(letters) {
     letters = String(letters || '');
     if (!letters) return [];
     const memo = {};
+
+    // Érvényes-e a darab? Az erhua (diǎnr, wánr) is: szótag + r, de csak ha
+    // utána nem magánhangzó jön — különben a shiren shir + en lenne, nem shi + ren.
+    function valid(piece, end) {
+      if (SYLLABLES[piece]) return true;
+      if (piece.length < 2 || piece[piece.length - 1] !== 'r' || piece === 'er') return false;
+      if (end < letters.length && VOWELS.indexOf(letters[end]) >= 0) return false;
+      return !!SYLLABLES[piece.slice(0, -1)];
+    }
 
     function from(i) {
       if (i === letters.length) return [];
@@ -117,7 +150,7 @@ window.HanziFlowPinyin = (function () {
       let result = null;
       for (let len = Math.min(MAX_SYL, letters.length - i); len >= 1 && !result; len--) {
         const piece = letters.substr(i, len);
-        if (SYLLABLES[piece]) {
+        if (valid(piece, i + len)) {
           const rest = from(i + len);
           if (rest) result = [piece].concat(rest);
         }
@@ -141,6 +174,7 @@ window.HanziFlowPinyin = (function () {
     const items = [];
     let word = null;       // a készülő szó
     let chunk = [];        // a készülő betűsor: [{ key, tone }]
+    let hyphen = false;    // kötőjel előzi meg a következő szótagot (dì-yī)
 
     function flushChunk(digitTone) {
       if (!chunk.length) return;
@@ -154,16 +188,20 @@ window.HanziFlowPinyin = (function () {
         }
         // a szám a betűsor utolsó szótagjára vonatkozik
         if (idx === parts.length - 1 && digitTone !== undefined) tone = digitTone;
-        word.syls.push({ base: part, tone: tone });
+        const syl = { base: part, tone: tone };
+        if (idx === 0 && hyphen) syl.hyphen = true;
+        word.syls.push(syl);
         pos += part.length;
       });
       chunk = [];
+      hyphen = false;
     }
 
     function flushWord() {
       flushChunk();
       if (word && word.syls.length) items.push(word);
       word = null;
+      hyphen = false;
     }
 
     function pushText(ch) {
@@ -189,6 +227,7 @@ window.HanziFlowPinyin = (function () {
         flushChunk(c.tone);                     // a szám lezárja a szótagot
       } else if (c.kind === 'break' && word) {
         flushChunk();
+        if (ch === '-') hyphen = true;          // a kötőjel megmarad, a · és a ' nem
       } else {
         flushWord();
         pushText(ch);
@@ -259,15 +298,17 @@ window.HanziFlowPinyin = (function () {
   // aposztróf kerül (xī'ān), ahogy a pinyin-helyesírás kéri.
   function toMarked(text) {
     return rebuild(text, function (s, j) {
-      const apos = j > 0 && 'aeo'.indexOf(s.base[0]) >= 0 ? '\'' : '';
-      return apos + markSyllable(s.base, s.tone);
+      let lead = '';
+      if (s.hyphen) lead = '-';
+      else if (j > 0 && 'aeo'.indexOf(s.base[0]) >= 0) lead = '\'';
+      return lead + markSyllable(s.base, s.tone);
     });
   }
 
   // Jeles (vagy vegyes) → számos. A semleges tónus 5-öt kap.
   function toNumbered(text) {
     return rebuild(text, function (s) {
-      return s.base + (s.tone ? s.tone : 5);
+      return (s.hyphen ? '-' : '') + s.base + (s.tone ? s.tone : 5);
     });
   }
 
@@ -321,7 +362,26 @@ window.HanziFlowPinyin = (function () {
     return { ok: ok, done: ok && typed.length === target.length, typed: typed.length, total: target.length };
   }
 
+  /* ── 9. Megjelenítés (DOM) ───────────────────────── */
+
+  // Hanzik és a hozzájuk tartozó pinyinek → <ruby> elemek a konténerben.
+  // Csak createElement + textContent: a bevitt szöveg nem értelmeződik HTML-ként.
+  // A pinyin lehet számos is (ni3) — a toMarked jeles alakra hozza.
+  function renderRuby(container, hanziList, pinyinList) {
+    if (!container || typeof document === 'undefined') return;
+    container.textContent = '';
+    (hanziList || []).forEach(function (hanzi, i) {
+      const ruby = document.createElement('ruby');
+      ruby.textContent = hanzi;
+      const rt = document.createElement('rt');
+      rt.textContent = pinyinList && pinyinList[i] ? toMarked(pinyinList[i]) : '';
+      ruby.appendChild(rt);
+      container.appendChild(ruby);
+    });
+  }
+
   return {
+    renderRuby: renderRuby,
     toMarked: toMarked,
     toNumbered: toNumbered,
     parse: parse,
