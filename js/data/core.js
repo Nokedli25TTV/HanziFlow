@@ -425,7 +425,40 @@ const HANZIFLOW_PATH = [
     module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l36&round=listen' },
   { id: 'l36-read', glyph: '读', title: 'Olvasás: Születésnapi meglepetés',
     desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
-    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l36&round=read' }
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l36&round=read' },
+
+  // ── HSK 3 · 7. lecke ──
+  { id: 'l37-lesson', glyph: '像', title: 'Magyarázat: 有…那么, 像…一样, 不如, 比 + 早 / 多 + ige, 比较 · 不同',
+    desc: 'Család és hasonlóság: olyan magas-e, kire hasonlít, ki mennyivel korábban.',
+    module: 'lesson', href: 'pages/lesson.html?id=l37' },
+  { id: 'l37-listen', glyph: '听', title: 'Hallás: családi fotók',
+    desc: 'A lecke mondatai hang után: mit jelent, amit hallasz?',
+    module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l37&round=listen' },
+  { id: 'l37-read', glyph: '读', title: 'Olvasás: Én és a húgom',
+    desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l37&round=read' },
+
+  // ── HSK 3 · 8. lecke ──
+  { id: 'l38-lesson', glyph: '把', title: 'Magyarázat: a 把 szerkezet I.: 把…完 / 好 / 了, 把…放在…, 把…交给…',
+    desc: 'Első nap a munkahelyen: mit hová tegyél, kinek add át, mit kapcsolj ki.',
+    module: 'lesson', href: 'pages/lesson.html?id=l38' },
+  { id: 'l38-listen', glyph: '听', title: 'Hallás: eligazítás',
+    desc: 'A lecke mondatai hang után: mit jelent, amit hallasz?',
+    module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l38&round=listen' },
+  { id: 'l38-read', glyph: '读', title: 'Olvasás: A gyakorlat első napja',
+    desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l38&round=read' },
+
+  // ── HSK 3 · 9. lecke ──
+  { id: 'l39-lesson', glyph: '成', title: 'Magyarázat: a 把 szerkezet II.: 把…到…, 把…出来 / 过来, 把…换成…',
+    desc: 'Az irodában: vidd át, nyomtasd ki, váltsd át, fordítsd le — és mikor nem jó a 把.',
+    module: 'lesson', href: 'pages/lesson.html?id=l39' },
+  { id: 'l39-listen', glyph: '听', title: 'Hallás: az irodában',
+    desc: 'A lecke mondatai hang után: mit jelent, amit hallasz?',
+    module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l39&round=listen' },
+  { id: 'l39-read', glyph: '读', title: 'Olvasás: Egy mozgalmas nap',
+    desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l39&round=read' }
 ];
 
 const HANZIFLOW_PATH_UNITS = [
@@ -502,5 +535,11 @@ const HANZIFLOW_PATH_UNITS = [
   { id: 'u-l35', kicker: 'HSK 3 · 5. lecke', title: 'Rég láttalak!', sub: '认识十年了, 半年没见面了, 见个面, 才 / 就, 知道 / 认识 / 了解',
     steps: ['l35-lesson', 'l35-listen', 'l35-read'] },
   { id: 'u-l36', kicker: 'HSK 3 · 6. lecke', title: 'Bárhol jó', sub: '谁都, 什么也没, 想吃什么就吃什么, 只要…就…, 只有…才…',
-    steps: ['l36-lesson', 'l36-listen', 'l36-read'] }
+    steps: ['l36-lesson', 'l36-listen', 'l36-read'] },
+  { id: 'u-l37', kicker: 'HSK 3 · 7. lecke', title: 'Olyan magas, mint te?', sub: '有你这么高吗, 像妈妈一样, 不如, 比我早到十分钟, 比较',
+    steps: ['l37-lesson', 'l37-listen', 'l37-read'] },
+  { id: 'u-l38', kicker: 'HSK 3 · 8. lecke', title: 'Kapcsold ki a légkondit!', sub: '把 + tárgy + ige + 了 / 完, 把…放在…, 把…交给…, 别把 / 没把',
+    steps: ['l38-lesson', 'l38-listen', 'l38-read'] },
+  { id: 'u-l39', kicker: 'HSK 3 · 9. lecke', title: 'Vidd át a tárgyalóba!', sub: '把…搬到…, 把…打印出来, 把…换成…, 帮我把…',
+    steps: ['l39-lesson', 'l39-listen', 'l39-read'] }
 ];

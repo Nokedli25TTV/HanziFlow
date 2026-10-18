@@ -7381,6 +7381,533 @@ const HANZIFLOW_COURSE = [
     { q: 'Mit jelent: {他怎么那么爱说话|tā zěnme nàme ài shuō huà}？', a: 'Hogyhogy ilyen beszédes?', wrong: ['Hogyan beszél?', 'Miért nem beszél?', 'Mit szeret mondani?'], why: 'Meglepődés + fokozás.', point: 5 },
     { q: 'Mit jelent a {请客|qǐng kè}?', a: 'vendégül lát (és fizet)', wrong: ['vendégségbe megy', 'pincért hív', 'asztalt foglal'], why: '{今天我请客|jīntiān wǒ qǐng kè} „ma én fizetek".' }
   ]
+},
+
+/* ════════════════════════════════════════════════════
+   HSK 3 · 7. LECKE — A 有 B 那么…, 像…一样, 不如, 比 + 早/多 + ige, 比较 · 不同
+   ════════════════════════════════════════════════════ */
+{
+  id: 'l37', no: 37, badge: '7', kicker: 'HSK 3 · 7. lecke', label: 'HSK 3 · 7. lecke',
+  title: 'Olyan magas, mint te? — család és hasonlóság',
+  lead: 'Finomabban hasonlítasz össze: olyan …-e, mint (有你这么高吗？), kire hasonlít (像她妈妈一样), mi nem olyan jó (不如), ki mennyivel korábban vagy többet csinált (比我早到十分钟), és mi viszonylag milyen (比较慢).',
+  cando: [
+    'Kérdezel és tagadsz: A 有 / 没有 B 那么 + melléknév.',
+    'Hasonlóságot fejezel ki: A 像 B 一样 + melléknév.',
+    'Azt mondod, valami nem olyan jó: A 不如 B.',
+    'Igével hasonlítasz: A 比 B 早 / 晚 / 多 / 少 + ige + különbség; és mértéket adsz: 比较 + melléknév.'
+  ],
+  intro: [
+    'Anna a telefonján családi fényképeket mutat Liu Fangnak. Kiderül, ki kire hasonlít, ki magasabb, ki tanult korábban nyelvet — és ki beszél jobban kínaiul.',
+    'A HSK 2 11. leckéjében megtanultad az alapokat ({比|bǐ}, {没有|méiyǒu}, {跟|gēn} … {一样|yíyàng}). Most árnyaltabb eszközök jönnek: a {有|yǒu} „olyan …, mint", a {像|xiàng} „hasonlít", a {不如|bùrú} „nem olyan jó, mint".'
+  ],
+  dialogue: {
+    title: 'Családi fotók',
+    scene: 'Anna a telefonján családi fényképeket mutat Liu Fangnak.',
+    lines: [
+      { who: 'Liu Fang', zh: '{这|zhè}{是|shì}{你|nǐ}{妹妹|mèi·mei}{吗|ma}？{她|tā}{长|zhǎng}{得|de}{跟|gēn}{你|nǐ}{一样|yí·yàng}{漂亮|piào·liang}！', hu: 'Ez a húgod? Ugyanolyan csinos, mint te!' },
+      { who: 'Anna', zh: '{大家|dà·jiā}{都|dōu}{说|shuō}{她|tā}{像|xiàng}{我|wǒ}{妈妈|mā·ma}，{我|wǒ}{像|xiàng}{我|wǒ}{爸爸|bà·ba}。', hu: 'Mindenki azt mondja, ő az anyukámra hasonlít, én az apukámra.' },
+      { who: 'Liu Fang', zh: '{她|tā}{有|yǒu}{你|nǐ}{这么|zhè·me}{高|gāo}{吗|ma}？', hu: 'Olyan magas, mint te?' },
+      { who: 'Anna', zh: '{没有|méi·yǒu}，{她|tā}{比|bǐ}{我|wǒ}{矮|ǎi}{一点儿|yì·diǎnr}。{但是|dàn·shì}{她|tā}{比|bǐ}{我|wǒ}{早|zǎo}{学|xué}{了|le}{两|liǎng}{年|nián}{英语|Yīng·yǔ}，{英语|Yīng·yǔ}{说|shuō}{得|de}{比|bǐ}{我|wǒ}{好|hǎo}。', hu: 'Nem, egy kicsit alacsonyabb nálam. De két évvel korábban kezdett angolul tanulni, és jobban is beszél, mint én.' },
+      { who: 'Liu Fang', zh: '{她|tā}{也|yě}{学|xué}{汉语|Hàn·yǔ}{吗|ma}？', hu: 'Ő is tanul kínaiul?' },
+      { who: 'Anna', zh: '{她|tā}{刚|gāng}{开始|kāi·shǐ}{学|xué}，{说|shuō}{得|de}{比较|bǐ·jiào}{慢|màn}。{她|tā}{的|de}{汉语|Hàn·yǔ}{不如|bù·rú}{我|wǒ}{的|de}{好|hǎo}。', hu: 'Csak most kezdte, elég lassan beszél. A kínaija nem olyan jó, mint az enyém.' },
+      { who: 'Liu Fang', zh: '{你们|nǐ·men}{姐妹|jiě·mèi}{俩|liǎ}{真|zhēn}{有|yǒu}{意思|yì·si}：{一个|yí·ge}{英语|Yīng·yǔ}{好|hǎo}，{一个|yí·ge}{汉语|Hàn·yǔ}{好|hǎo}！', hu: 'Ti ketten igazán érdekesek vagytok: az egyik angolul jó, a másik kínaiul!' }
+    ],
+    notes: [
+      'A {长得|zhǎng de} + melléknév „úgy néz ki": {长得很漂亮|zhǎng de hěn piàoliang} „csinos". A {长|zhǎng} itt 3. tónusú („nő, felnő"), nem a {长|cháng} „hosszú".',
+      'A {矮|ǎi} „alacsony" — párja a {高|gāo} „magas".',
+      'A {俩|liǎ} „ketten" (= {两个|liǎng ge}): {姐妹俩|jiěmèi liǎ} „a két nővér, a testvérpár".'
+    ]
+  },
+  points: [
+    {
+      title: 'A {有|yǒu} B ({这么|zhème} / {那么|nàme}) + mn.', sub: 'olyan …, mint?',
+      pattern: 'A + {有|yǒu} / {没有|méi·yǒu} + B + ({这么|zhè·me} / {那么|nà·me}) + melléknév',
+      body: 'A {有|yǒu} itt azt jelenti: „eléri B mértékét". Kérdésben: {她有你这么高吗|tā yǒu nǐ zhème gāo ma}？ „Olyan magas, mint te?" Tagadásban (HSK 2 11. lecke): {她没有我这么高|tā méiyǒu wǒ zhème gāo} „nem olyan magas, mint én". Mértékkel állításban is: {他有一米八那么高|tā yǒu yì mǐ bā nàme gāo} „van vagy egy nyolcvan".',
+      more: [
+        'A {这么|zhème} a beszélőhöz közeli dologra utal („ennyire, mint én / mint ez"), a {那么|nàme} a távolabbira („annyira, mint ő / az").'
+      ],
+      examples: [
+        { zh: '{她|tā}{有|yǒu}{你|nǐ}{这么|zhè·me}{高|gāo}{吗|ma}？', hu: 'Olyan magas, mint te?' },
+        { zh: '{我|wǒ}{没有|méi·yǒu}{他|tā}{那么|nà·me}{忙|máng}。', hu: 'Nem vagyok olyan elfoglalt, mint ő.' },
+        { zh: '{这|zhè}{个|ge}{孩子|hái·zi}{已经|yǐ·jīng}{有|yǒu}{他|tā}{爸爸|bà·ba}{那么|nà·me}{高|gāo}{了|le}。', hu: 'Ez a gyerek már akkora, mint az apja.' }
+      ],
+      mistakes: [
+        { bad: '{她|tā}{比|bǐ}{你|nǐ}{这么|zhè·me}{高|gāo}{吗|ma}？', good: '{她|tā}{有|yǒu}{你|nǐ}{这么|zhè·me}{高|gāo}{吗|ma}？', why: 'A {这么|zhème} / {那么|nàme} a {有|yǒu}-os szerkezetbe illik, a {比|bǐ}-be nem.' }
+      ]
+    },
+    {
+      title: 'A {像|xiàng} B ({一样|yíyàng})', sub: 'hasonlít, olyan, mint',
+      pattern: 'A + {像|xiàng} + B · A + {像|xiàng} + B + {一样|yí·yàng} + melléknév',
+      body: 'A {像|xiàng} „hasonlít, olyan, mint": {她像她妈妈|tā xiàng tā māma} „az anyjára hasonlít". Melléknévvel az {一样|yíyàng} is kell: {她像妈妈一样漂亮|tā xiàng māma yíyàng piàoliang} „olyan csinos, mint az anyja", {他说汉语像中国人一样|tā shuō Hànyǔ xiàng Zhōngguórén yíyàng} „úgy beszél kínaiul, mint egy kínai".',
+      more: [
+        'A {跟|gēn} … {一样|yíyàng} (HSK 2 11. lecke) inkább egyezést állapít meg („ugyanolyan"), a {像|xiàng} … {一样|yíyàng} hasonlatot is („mint egy …").',
+        'A {长得|zhǎng de} „kinézetre" gyakran kíséri: {她长得像她妈妈|tā zhǎng de xiàng tā māma}.'
+      ],
+      examples: [
+        { zh: '{大家|dà·jiā}{都|dōu}{说|shuō}{她|tā}{像|xiàng}{我|wǒ}{妈妈|mā·ma}。', hu: 'Mindenki azt mondja, az anyukámra hasonlít.' },
+        { zh: '{她|tā}{像|xiàng}{妈妈|mā·ma}{一样|yí·yàng}{爱|ài}{笑|xiào}。', hu: 'Az anyjához hasonlóan sokat mosolyog.' },
+        { zh: '{今天|jīn·tiān}{热|rè}{得|de}{像|xiàng}{夏天|xià·tiān}{一样|yí·yàng}。', hu: 'Ma olyan meleg van, mint nyáron.' }
+      ],
+      mistakes: [
+        { bad: '{她|tā}{像|xiàng}{一样|yí·yàng}{她|tā}{妈妈|mā·ma}{漂亮|piào·liang}。', good: '{她|tā}{像|xiàng}{她|tā}{妈妈|mā·ma}{一样|yí·yàng}{漂亮|piào·liang}。', why: 'A {像|xiàng} + B + {一样|yíyàng} + melléknév sorrend.' }
+      ]
+    },
+    {
+      title: 'A {不如|bùrú} B', sub: 'A nem olyan jó, mint B',
+      pattern: 'A + {不如|bù·rú} + B (+ melléknév)',
+      body: 'A {不如|bùrú} „nem ér fel vele, nem olyan jó, mint": {她的汉语不如我的|tā de Hànyǔ bùrú wǒ de} „a kínaija nem olyan jó, mint az enyém". Melléknévvel: {坐车不如走路快|zuò chē bùrú zǒu lù kuài} „kocsival nem olyan gyors, mint gyalog (gyalog gyorsabb)". Melléknév nélkül mindig „jó" értendő.',
+      more: [
+        'Tanácsként is: {你不如先休息一下|nǐ bùrú xiān xiūxi yíxià} „jobb lenne, ha előbb pihennél egy kicsit".'
+      ],
+      examples: [
+        { zh: '{她|tā}{的|de}{汉语|Hàn·yǔ}{不如|bù·rú}{我|wǒ}{的|de}{好|hǎo}。', hu: 'A kínaija nem olyan jó, mint az enyém.' },
+        { zh: '{坐|zuò}{车|chē}{不如|bù·rú}{走|zǒu}{路|lù}{快|kuài}。', hu: 'Gyalog gyorsabb, mint kocsival.' },
+        { zh: '{在|zài}{很|hěn}{多|duō}{方面|fāng·miàn}，{我|wǒ}{都|dōu}{不如|bù·rú}{她|tā}。', hu: 'Sok mindenben nem érek fel vele.' }
+      ]
+    },
+    {
+      title: 'A {比|bǐ} B {早|zǎo} / {晚|wǎn} / {多|duō} / {少|shǎo} + ige', sub: 'korábban, többet — mennyivel?',
+      pattern: 'A + {比|bǐ} + B + {早|zǎo} / {晚|wǎn} / {多|duō} / {少|shǎo} + ige + ({了|le}) + különbség',
+      body: 'Ha nem tulajdonságot, hanem <b>cselekvést</b> hasonlítasz, az {早|zǎo} „korán", {晚|wǎn} „későn", {多|duō} „többet", {少|shǎo} „kevesebbet" az ige <b>elé</b> kerül, a különbség az ige <b>után</b>: {我比他早到了十分钟|wǒ bǐ tā zǎo dàole shí fēnzhōng} „tíz perccel korábban érkeztem nála", {他比我多吃了两个饺子|tā bǐ wǒ duō chīle liǎng ge jiǎozi} „két gombóccal többet evett nálam", {她比我早学了两年英语|tā bǐ wǒ zǎo xuéle liǎng nián Yīngyǔ}.',
+      examples: [
+        { zh: '{她|tā}{每天|měi·tiān}{比|bǐ}{我|wǒ}{早|zǎo}{起|qǐ}{一|yí}{个|ge}{小时|xiǎo·shí}。', hu: 'Minden nap egy órával korábban kel, mint én.' },
+        { zh: '{我|wǒ}{比|bǐ}{你|nǐ}{少|shǎo}{睡|shuì}{了|le}{两|liǎng}{个|ge}{小时|xiǎo·shí}。', hu: 'Két órával kevesebbet aludtam nálad.' }
+      ],
+      mistakes: [
+        { bad: '{我|wǒ}{比|bǐ}{他|tā}{到|dào}{早|zǎo}{十|shí}{分钟|fēn·zhōng}。', good: '{我|wǒ}{比|bǐ}{他|tā}{早|zǎo}{到|dào}{十|shí}{分钟|fēn·zhōng}。', why: 'Az {早|zǎo} az ige elé, a különbség utána.' }
+      ]
+    },
+    {
+      title: '{比较|bǐjiào} · {不同|bùtóng}', sub: 'viszonylag; különböző',
+      pattern: '{比较|bǐ·jiào} + melléknév · A + {和|hé} / {跟|gēn} + B + {不同|bù·tóng}',
+      body: 'A {比较|bǐjiào} melléknév előtt „<b>viszonylag, elég</b>": {说得比较慢|shuō de bǐjiào màn} „elég lassan beszél", {今天比较冷|jīntiān bǐjiào lěng} „ma elég hideg van". A {不同|bùtóng} „különböző" — kicsit írásosabb párja a {不一样|bù yíyàng}-nak: {这两个词的意思不同|zhè liǎng ge cí de yìsi bùtóng} „a két szó jelentése más". Ellentéte a {相同|xiāngtóng} „azonos".',
+      more: [
+        'A {比较|bǐjiào} igeként „összehasonlít": {比较一下|bǐjiào yíxià} „hasonlítsd össze".'
+      ],
+      examples: [
+        { zh: '{她|tā}{刚|gāng}{开始|kāi·shǐ}{学|xué}，{说|shuō}{得|de}{比较|bǐ·jiào}{慢|màn}。', hu: 'Csak most kezdte, elég lassan beszél.' },
+        { zh: '{南方|nán·fāng}{和|hé}{北方|běi·fāng}{的|de}{菜|cài}{很|hěn}{不|bù}{同|tóng}。', hu: 'A déli és az északi konyha nagyon különbözik.' }
+      ]
+    }
+  ],
+  phrases: [
+    { zh: '{你|nǐ}{长|zhǎng}{得|de}{像|xiàng}{你|nǐ}{妈妈|mā·ma}。', hu: 'Az anyukádra hasonlítasz.' },
+    { zh: '{他|tā}{有|yǒu}{你|nǐ}{这么|zhè·me}{高|gāo}{吗|ma}？', hu: 'Olyan magas, mint te?' },
+    { zh: '{我|wǒ}{不如|bù·rú}{你|nǐ}。', hu: 'Nem érek fel veled.' },
+    { zh: '{比较|bǐ·jiào}{好|hǎo}。', hu: 'Elég jó, viszonylag jó.' }
+  ],
+  words: [
+    { title: 'Szavak',
+      items: [
+        { zh: '{像|xiàng}', pinyin: 'xiàng', hu: 'hasonlít; mint' },
+        { zh: '{不如|bù·rú}', pinyin: 'bùrú', hu: 'nem olyan jó, mint' },
+        { zh: '{比较|bǐ·jiào}', pinyin: 'bǐjiào', hu: 'viszonylag; összehasonlít' },
+        { zh: '{不同|bù·tóng}', pinyin: 'bùtóng', hu: 'különböző' },
+        { zh: '{相同|xiāng·tóng}', pinyin: 'xiāngtóng', hu: 'azonos' },
+        { zh: '{矮|ǎi}', pinyin: 'ǎi', hu: 'alacsony' },
+        { zh: '{长|zhǎng}', pinyin: 'zhǎng', hu: 'nő, felnő; kinéz' },
+        { zh: '{俩|liǎ}', pinyin: 'liǎ', hu: 'ketten' },
+        { zh: '{姐妹|jiě·mèi}', pinyin: 'jiěmèi', hu: 'nővérek, lánytestvérek' },
+        { zh: '{方面|fāng·miàn}', pinyin: 'fāngmiàn', hu: 'szempont, terület' },
+        { zh: '{词|cí}', pinyin: 'cí', hu: 'szó' },
+        { zh: '{胖|pàng}', pinyin: 'pàng', hu: 'kövér, telt' }
+      ] },
+    { title: 'Ráadás',
+      items: [
+        { zh: '{瘦|shòu}', pinyin: 'shòu', hu: 'sovány, vékony' },
+        { zh: '{南方|nán·fāng}', pinyin: 'nánfāng', hu: 'dél (az ország déli része)' },
+        { zh: '{北方|běi·fāng}', pinyin: 'běifāng', hu: 'észak' }
+      ] }
+  ],
+  culture: [
+    { title: 'Ki kire hasonlít?', text: 'Kínában kedvelt családi beszédtéma, ki kire hasonlít. Az újszülöttet nézve a rokonok hamar eldöntik: {像爸爸|xiàng bàba} vagy {像妈妈|xiàng māma}. Úgy tartják, hogy a lányok gyakran az apjukra, a fiúk az anyjukra ütnek — és a nagyszülők szívesen keresik a gyerekben a saját vonásaikat is.' },
+    { title: 'Észak és dél', text: 'Kínában gyakori összehasonlítás az észak ({北方|běifāng}) és a dél ({南方|nánfāng}) közötti különbség. Északon inkább búzából készült ételeket esznek (tésztát, gombócot, gőzölt zsemlét), délen rizst. Az északiakat nyíltabbnak, magasabbnak, a délieket szelídebbnek tartja a közvélekedés — persze sok tréfás túlzással.' }
+  ],
+  reading: {
+    title: '{我|wǒ}{和|hé}{我|wǒ}{妹妹|mèi·mei}', titleHu: 'Én és a húgom',
+    text: [
+      { zh: '{我|wǒ}{妹妹|mèi·mei}{比|bǐ}{我|wǒ}{小|xiǎo}{三|sān}{岁|suì}，{今年|jīn·nián}{二十|èr·shí}{岁|suì}。', hu: 'A húgom három évvel fiatalabb nálam, idén húszéves.' },
+      { zh: '{大家|dà·jiā}{都|dōu}{说|shuō}{她|tā}{像|xiàng}{妈妈|mā·ma}{一样|yí·yàng}{漂亮|piào·liang}，{也|yě}{像|xiàng}{妈妈|mā·ma}{一样|yí·yàng}{爱|ài}{笑|xiào}。', hu: 'Mindenki azt mondja, olyan csinos, mint az anyukánk, és ugyanúgy sokat mosolyog.' },
+      { zh: '{她|tā}{没有|méi·yǒu}{我|wǒ}{这么|zhè·me}{高|gāo}，{但是|dàn·shì}{跑|pǎo}{得|de}{比|bǐ}{我|wǒ}{快|kuài}{多|duō}{了|le}。', hu: 'Nem olyan magas, mint én, de sokkal gyorsabban fut.', par: true },
+      { zh: '{她|tā}{每天|měi·tiān}{比|bǐ}{我|wǒ}{早|zǎo}{起|qǐ}{一|yí}{个|ge}{小时|xiǎo·shí}，{去|qù}{公园|gōng·yuán}{跑|pǎo}{步|bù}。', hu: 'Minden nap egy órával korábban kel, mint én, és futni megy a parkba.' },
+      { zh: '{我|wǒ}{觉得|jué·de}{在|zài}{很|hěn}{多|duō}{方面|fāng·miàn}，{我|wǒ}{都|dōu}{不如|bù·rú}{她|tā}。', hu: 'Úgy érzem, sok mindenben nem érek fel vele.', par: true }
+    ],
+    words: [ { zh: '{跑步|pǎo bù}', hu: 'futás, futni' } ],
+    questions: [
+      { q: 'Hány évvel fiatalabb Anna húga?', a: 'hárommal', wrong: ['kettővel', 'öttel', 'eggyel'], why: '{比我小三岁|bǐ wǒ xiǎo sān suì}.' },
+      { q: 'Kire hasonlít a húga?', a: 'az anyjukra', wrong: ['az apjukra', 'Annára', 'a nagymamájukra'], why: '{她像妈妈一样漂亮|tā xiàng māma yíyàng piàoliang}.' },
+      { q: 'Miben jobb a húga Annánál?', a: 'sokkal gyorsabban fut', wrong: ['magasabb nála', 'jobban beszél kínaiul', 'többet alszik'], why: '{跑得比我快多了|pǎo de bǐ wǒ kuài duō le}.' },
+      { q: 'Mikor kel a húga?', a: 'egy órával korábban, mint Anna', wrong: ['egy órával később, mint Anna', 'ugyanakkor, mint Anna', 'csak délben'], why: '{比我早起一个小时|bǐ wǒ zǎo qǐ yí ge xiǎoshí}.' }
+    ]
+  },
+  quiz: [
+    { q: '„Olyan magas, mint te?"', a: '{她|tā}{有|yǒu}{你|nǐ}{这么|zhè·me}{高|gāo}{吗|ma}？', wrong: ['{她|tā}{比|bǐ}{你|nǐ}{这么|zhè·me}{高|gāo}{吗|ma}？', '{她|tā}{有|yǒu}{这么|zhè·me}{高|gāo}{你|nǐ}{吗|ma}？', '{她|tā}{这么|zhè·me}{有|yǒu}{你|nǐ}{高|gāo}{吗|ma}？'], why: 'A + {有|yǒu} + B + {这么|zhème} + melléknév.', point: 1 },
+    { q: '„Nem vagyok olyan magas, mint ő."', a: '{我|wǒ}{没有|méi·yǒu}{他|tā}{那么|nà·me}{高|gāo}。', wrong: ['{我|wǒ}{不|bù}{有|yǒu}{他|tā}{那么|nà·me}{高|gāo}。', '{我|wǒ}{没有|méi·yǒu}{那么|nà·me}{他|tā}{高|gāo}。', '{我|wǒ}{比|bǐ}{他|tā}{没有|méi·yǒu}{高|gāo}。'], why: 'A + {没有|méiyǒu} + B + {那么|nàme} + melléknév.', point: 1 },
+    { q: 'Mit jelent: {他有一米八那么高|tā yǒu yì mǐ bā nàme gāo}。', a: 'Van vagy egy nyolcvan magas.', wrong: ['Egy nyolcvannál alacsonyabb.', 'Nyolcvan kiló.', 'Nyolc évvel idősebb.'], why: 'A {有|yǒu} itt „eléri ezt a mértéket".', point: 1 },
+    { q: '„Olyan csinos, mint az anyja."', a: '{她|tā}{像|xiàng}{她|tā}{妈妈|mā·ma}{一样|yí·yàng}{漂亮|piào·liang}。', wrong: ['{她|tā}{像|xiàng}{一样|yí·yàng}{她|tā}{妈妈|mā·ma}{漂亮|piào·liang}。', '{她|tā}{漂亮|piào·liang}{像|xiàng}{她|tā}{妈妈|mā·ma}{一样|yí·yàng}{了|le}。', '{她|tā}{一样|yí·yàng}{她|tā}{妈妈|mā·ma}{像|xiàng}{漂亮|piào·liang}。'], why: 'A + {像|xiàng} + B + {一样|yíyàng} + melléknév.', point: 2 },
+    { q: 'Mit jelent: {她像她妈妈|tā xiàng tā māma}。', a: 'Az anyjára hasonlít.', wrong: ['Szereti az anyját.', 'Az anyjával lakik.', 'Az anyja tanította.'], why: '{像|xiàng} „hasonlít".', point: 2 },
+    { q: 'Mit jelent: {她长得很漂亮|tā zhǎng de hěn piàoliang}。', a: 'Nagyon csinos.', wrong: ['Gyorsan nőtt.', 'Hosszú a haja.', 'Szépen énekel.'], why: '{长得|zhǎng de} + melléknév „úgy néz ki".', point: 2 },
+    { q: '„Az én kínaim nem olyan jó, mint az övé."', a: '{我|wǒ}{的|de}{汉语|Hàn·yǔ}{不如|bù·rú}{他|tā}{的|de}。', wrong: ['{我|wǒ}{的|de}{汉语|Hàn·yǔ}{不|bù}{比|bǐ}{他|tā}{的|de}{很|hěn}{好|hǎo}。', '{我|wǒ}{的|de}{汉语|Hàn·yǔ}{如|rú}{不|bù}{他|tā}{的|de}。', '{他|tā}{的|de}{不如|bù·rú}{汉语|Hàn·yǔ}{我|wǒ}{的|de}。'], why: 'A + {不如|bùrú} + B.', point: 3 },
+    { q: 'Mit jelent: {坐车不如走路快|zuò chē bùrú zǒu lù kuài}。', a: 'Gyalog gyorsabb, mint kocsival.', wrong: ['Kocsival gyorsabb, mint gyalog.', 'Kocsival és gyalog ugyanolyan gyors.', 'Ne menj se kocsival, se gyalog.'], why: 'A {不如|bùrú} B {快|kuài}: A nem olyan gyors, mint B.', point: 3 },
+    { q: '„Tíz perccel korábban érkeztem nála."', a: '{我|wǒ}{比|bǐ}{他|tā}{早|zǎo}{到|dào}{了|le}{十|shí}{分钟|fēn·zhōng}。', wrong: ['{我|wǒ}{比|bǐ}{他|tā}{到|dào}{早|zǎo}{十|shí}{分钟|fēn·zhōng}{了|le}。', '{我|wǒ}{早|zǎo}{比|bǐ}{他|tā}{十|shí}{分钟|fēn·zhōng}{到|dào}。', '{我|wǒ}{十|shí}{分钟|fēn·zhōng}{比|bǐ}{他|tā}{早|zǎo}{到|dào}{了|le}。'], why: '{比|bǐ} B + {早|zǎo} + ige + különbség.', point: 4 },
+    { q: 'Mit jelent: {他比我多吃了两个饺子|tā bǐ wǒ duō chīle liǎng ge jiǎozi}。', a: 'Két gombóccal többet evett nálam.', wrong: ['Két gombóccal kevesebbet evett nálam.', 'Két gombócot evett velem együtt.', 'Kétszer annyit evett, mint én.'], why: '{多|duō} + ige + különbség.', point: 4 },
+    { q: 'Hová kerül az {早|zǎo} / {多|duō} a {比|bǐ}-s mondatban?', a: 'az ige elé, a különbség az ige után', wrong: ['az ige után, a különbség az ige elé', 'a mondat legvégére', 'a {比|bǐ} elé, az alany mögé'], why: '{我比他早到十分钟|wǒ bǐ tā zǎo dào shí fēnzhōng}.', point: 4 },
+    { q: 'Melyik mondat helyes?', a: '{她|tā}{比|bǐ}{我|wǒ}{矮|ǎi}{一点儿|yì·diǎnr}。', wrong: ['{她|tā}{比|bǐ}{我|wǒ}{有点儿|yǒu·diǎnr}{矮|ǎi}。', '{她|tā}{比|bǐ}{我|wǒ}{很|hěn}{矮|ǎi}。', '{她|tā}{比|bǐ}{我|wǒ}{一点儿|yì·diǎnr}{矮|ǎi}。'], why: 'A különbség ({一点儿|yìdiǎnr}) a melléknév után.', point: 4 },
+    { q: 'Mit jelent a {比较|bǐjiào} itt: {他说得比较慢|tā shuō de bǐjiào màn}?', a: 'viszonylag, elég (lassan)', wrong: ['összehasonlítva valakivel', 'nagyon, rendkívül', 'egyáltalán nem'], why: '{比较|bǐjiào} + melléknév „viszonylag".', point: 5 },
+    { q: '„A két szó jelentése más."', a: '{这|zhè}{两|liǎng}{个|ge}{词|cí}{的|de}{意思|yì·si}{不|bù}{同|tóng}。', wrong: ['{这|zhè}{两|liǎng}{个|ge}{词|cí}{的|de}{意思|yì·si}{一样|yí·yàng}。', '{这|zhè}{两|liǎng}{个|ge}{词|cí}{不|bù}{的|de}{同|tóng}{意思|yì·si}。', '{两|liǎng}{个|ge}{这|zhè}{词|cí}{意思|yì·si}{同|tóng}{不|bù}。'], why: '{不同|bùtóng} „különböző".', point: 5 },
+    { q: 'Mit jelent a {矮|ǎi}?', a: 'alacsony', wrong: ['magas', 'kövér', 'sovány'], why: 'Párja a {高|gāo}.' },
+    { q: 'Mit jelent: {你们俩|nǐmen liǎ}？', a: 'ti ketten', wrong: ['ti mindannyian', 'ti hárman', 'ők ketten'], why: '{俩|liǎ} = {两个|liǎng ge}.' }
+  ]
+},
+
+/* ════════════════════════════════════════════════════
+   HSK 3 · 8. LECKE — a 把 szerkezet I.: 把 + tárgy + ige + 了 / 完 / 好, 在, 给; tagadás
+   ════════════════════════════════════════════════════ */
+{
+  id: 'l38', no: 38, badge: '8', kicker: 'HSK 3 · 8. lecke', label: 'HSK 3 · 8. lecke',
+  title: 'Kapcsold ki a légkondit! — első nap a munkahelyen',
+  lead: 'Megtanulod a 把 szerkezetet, amellyel azt mondod, mit csinálsz egy konkrét dologgal: elvégzed (把文件看完), leteszed valahová (把包放在这儿), átadod valakinek (把文件交给小王), vagy kikapcsolod (把空调关了).',
+  cando: [
+    'Felépíted a 把-mondatot: A + 把 + tárgy + ige + kiegészítő.',
+    'Tudod, mikor kell 把: határozott tárgy, és az ige után „valami" áll.',
+    'Hely- és címzettmegadással használod: 把…放在…, 把…交给….',
+    'Helyesen tagadsz és kérsz: 别把…, 没把…, 能把…吗？'
+  ],
+  intro: [
+    'Anna első napja a gyakornoki helyén: Chen úr, a csapatvezető eligazítja. Mit hová tegyen, mit olvasson végig, kinek adja át — és munka végén mit kapcsoljon ki.',
+    'Az utasításokban a kínai gyakran a {把|bǎ} szerkezetet használja. A {把|bǎ} a tárgyat az ige <b>elé</b> hozza, és azt hangsúlyozza, mi <b>történik</b> vele: {把空调关了|bǎ kōngtiáo guān le} „a légkondit — kapcsold ki". Ez a HSK 3 egyik legfontosabb szerkezete.'
+  ],
+  dialogue: {
+    title: 'Eligazítás',
+    scene: 'Anna első napja a gyakornoki helyén, egy kereskedelmi cég irodájában. Chen úr, a csapatvezető, eligazítja.',
+    lines: [
+      { who: 'Chen úr', zh: '{安娜|Ān·nà}，{欢迎|huān·yíng}！{你|nǐ}{先|xiān}{把|bǎ}{包|bāo}{放|fàng}{在|zài}{这儿|zhèr}{吧|ba}。', hu: 'Anna, isten hozott! Tedd le a táskádat ide.' },
+      { who: 'Anna', zh: '{好|hǎo}{的|de}。{今天|jīn·tiān}{我|wǒ}{要|yào}{做|zuò}{什么|shén·me}？', hu: 'Rendben. Mi lesz ma a feladatom?' },
+      { who: 'Chen úr', zh: '{请|qǐng}{你|nǐ}{先|xiān}{把|bǎ}{这些|zhè·xiē}{文件|wén·jiàn}{看|kàn}{完|wán}，{下午|xià·wǔ}{我们|wǒ·men}{开|kāi}{会|huì}。', hu: 'Először olvasd végig ezeket a dokumentumokat; délután megbeszélésünk lesz.' },
+      { who: 'Anna', zh: '{看|kàn}{完|wán}{以后|yǐ·hòu}，{我|wǒ}{把|bǎ}{它们|tā·men}{放|fàng}{在|zài}{哪儿|nǎr}？', hu: 'Ha végigolvastam, hová tegyem őket?' },
+      { who: 'Chen úr', zh: '{把|bǎ}{文件|wén·jiàn}{交|jiāo}{给|gěi}{小王|Xiǎo Wáng}{就|jiù}{行|xíng}。{对|duì}{了|le}，{下|xià}{班|bān}{的|de}{时候|shí·hou}{别|bié}{忘|wàng}{了|le}{把|bǎ}{空调|kōng·tiáo}{关|guān}{了|le}。', hu: 'Elég, ha átadod Xiao Wangnak. Ja, és munka végén ne felejtsd el kikapcsolni a légkondit.' },
+      { who: 'Anna', zh: '{好|hǎo}，{我|wǒ}{记|jì}{住|zhù}{了|le}。{我|wǒ}{的|de}{电脑|diàn·nǎo}{密码|mì·mǎ}{是|shì}{多少|duō·shao}？', hu: 'Rendben, megjegyeztem. Mi a gépem jelszava?' },
+      { who: 'Chen úr', zh: '{我|wǒ}{已经|yǐ·jīng}{把|bǎ}{密码|mì·mǎ}{写|xiě}{在|zài}{这|zhè}{张|zhāng}{纸|zhǐ}{上|shang}{了|le}。{有|yǒu}{问题|wèn·tí}{就|jiù}{问|wèn}{我|wǒ}。', hu: 'Már felírtam a jelszót erre a papírra. Ha kérdésed van, kérdezz bátran.' }
+    ],
+    notes: [
+      'A {文件|wénjiàn} „dokumentum, irat", a {开会|kāi huì} „értekezletet tart" (szétválasztható ige).',
+      'A {交给|jiāogěi} „átad, lead valakinek"; a {空调|kōngtiáo} „légkondicionáló".',
+      'A {记住|jìzhù} „megjegyez" — a {住|zhù} kiegészítő „rögzít, megtart"; a {密码|mìmǎ} „jelszó".'
+    ]
+  },
+  points: [
+    {
+      title: 'A {把|bǎ} szerkezet', sub: 'mit csinálsz a dologgal?',
+      pattern: 'A + {把|bǎ} + tárgy + ige + kiegészítő / {了|le}',
+      body: 'A {把|bǎ} a tárgyat az ige <b>elé</b> hozza: {我把文件看完了|wǒ bǎ wénjiàn kànwán le} „a dokumentumokat végigolvastam", {把空调关了|bǎ kōngtiáo guān le} „kapcsold ki a légkondit". Akkor használjuk, ha egy <b>konkrét, ismert</b> dologgal teszünk valamit, és az eredmény a fontos: hová kerül, milyen állapotba jut, kihez jut el.',
+      more: [
+        'Utasításokban, kérésekben nagyon gyakori: {请把门关上|qǐng bǎ mén guānshang} „kérem, csukja be az ajtót".',
+        'A „sima" szórenddel is mondhatod: {我看完文件了|wǒ kànwán wénjiàn le} — de a {把|bǎ} a dologra irányítja a figyelmet.'
+      ],
+      examples: [
+        { zh: '{请|qǐng}{你|nǐ}{先|xiān}{把|bǎ}{这些|zhè·xiē}{文件|wén·jiàn}{看|kàn}{完|wán}。', hu: 'Először olvasd végig ezeket a dokumentumokat.' },
+        { zh: '{别|bié}{忘|wàng}{了|le}{把|bǎ}{空调|kōng·tiáo}{关|guān}{了|le}。', hu: 'Ne felejtsd el kikapcsolni a légkondit.' },
+        { zh: '{我|wǒ}{把|bǎ}{作业|zuò·yè}{做|zuò}{好|hǎo}{了|le}。', hu: 'Elkészítettem a házi feladatot.' }
+      ]
+    },
+    {
+      title: 'Mikor jó a {把|bǎ}?', sub: 'két feltétel',
+      pattern: '(1) határozott tárgy · (2) az ige után „valami" áll',
+      body: 'Két szabály. (1) A tárgy <b>határozott</b>: ismert, megmutatott dolog ({这些文件|zhèxiē wénjiàn}, {空调|kōngtiáo}, {你的手机|nǐ de shǒujī}). (2) Az ige <b>nem állhat egyedül</b>: utána {了|le}, eredménykiegészítő ({完|wán}, {好|hǎo}, {住|zhù}), hely ({在|zài} …), címzett ({给|gěi} …), {一下|yíxià} vagy kettőzött ige jön. *{我把饭吃|wǒ bǎ fàn chī} hibás — helyesen {我把饭吃了|wǒ bǎ fàn chī le}.',
+      tables: [
+        { caption: 'Mi jöhet az ige után?',
+          head: ['Kínaiul', 'Magyarul'],
+          rows: [
+            ['{把|bǎ}{饭|fàn}{吃|chī}{了|le}', 'megette az ételt'],
+            ['{把|bǎ}{文件|wén·jiàn}{看|kàn}{完|wán}', 'végigolvassa az iratot'],
+            ['{把|bǎ}{密码|mì·mǎ}{记|jì}{住|zhù}', 'megjegyzi a jelszót'],
+            ['{把|bǎ}{房间|fáng·jiān}{打扫|dǎ·sǎo}{一下|yí·xià}', 'kitakarítja a szobát'],
+            ['{把|bǎ}{包|bāo}{放|fàng}{在|zài}{这儿|zhèr}', 'ideteszi a táskát']
+          ] }
+      ],
+      examples: [
+        { zh: '{你|nǐ}{把|bǎ}{这|zhè}{个|ge}{词|cí}{记|jì}{住|zhù}。', hu: 'Jegyezd meg ezt a szót.' },
+        { zh: '{你|nǐ}{把|bǎ}{房间|fáng·jiān}{打扫|dǎ·sǎo}{一下|yí·xià}{吧|ba}。', hu: 'Takarítsd ki egy kicsit a szobát.' }
+      ],
+      mistakes: [
+        { bad: '{我|wǒ}{把|bǎ}{饭|fàn}{吃|chī}。', good: '{我|wǒ}{把|bǎ}{饭|fàn}{吃|chī}{了|le}。', why: 'A {把|bǎ}-mondatban az ige után „valaminek" állnia kell.' }
+      ]
+    },
+    {
+      title: '{把|bǎ} … ige + {在|zài} + hely', sub: 'letesz, felír valahová',
+      pattern: 'A + {把|bǎ} + tárgy + ige + {在|zài} + hely',
+      body: 'Ha egy dolog a cselekvés eredményeként <b>valahová kerül</b>, a {把|bǎ} szinte kötelező: {把包放在这儿|bǎ bāo fàng zài zhèr} „tedd ide a táskát", {把密码写在纸上|bǎ mìmǎ xiě zài zhǐ shang} „írd fel a jelszót a papírra", {把车停在门口|bǎ chē tíng zài ménkǒu} „állj meg a kocsival a bejáratnál". A „sima" szórend (*{放包在这儿|fàng bāo zài zhèr}) itt hibás.',
+      examples: [
+        { zh: '{你|nǐ}{先|xiān}{把|bǎ}{包|bāo}{放|fàng}{在|zài}{这儿|zhèr}{吧|ba}。', hu: 'Tedd le a táskádat ide.' },
+        { zh: '{我|wǒ}{已经|yǐ·jīng}{把|bǎ}{密码|mì·mǎ}{写|xiě}{在|zài}{这|zhè}{张|zhāng}{纸|zhǐ}{上|shang}{了|le}。', hu: 'Már felírtam a jelszót erre a papírra.' }
+      ],
+      mistakes: [
+        { bad: '{我|wǒ}{放|fàng}{包|bāo}{在|zài}{这儿|zhèr}。', good: '{我|wǒ}{把|bǎ}{包|bāo}{放|fàng}{在|zài}{这儿|zhèr}。', why: 'Ige + {在|zài} + hely mellett a tárgyat {把|bǎ} hozza előre.' }
+      ]
+    },
+    {
+      title: '{把|bǎ} … ige + {给|gěi} + személy', sub: 'átad, visszaad, odaad',
+      pattern: 'A + {把|bǎ} + tárgy + ige + {给|gěi} + személy',
+      body: 'Ha a dolog a cselekvés eredményeként <b>valakihez kerül</b>: {把文件交给小王|bǎ wénjiàn jiāogěi Xiǎo Wáng} „add át az iratokat Xiao Wangnak", {把书还给图书馆|bǎ shū huángěi túshūguǎn} „vidd vissza a könyvet a könyvtárba", {把礼物送给妈妈|bǎ lǐwù sònggěi māma} „add oda az ajándékot anyának".',
+      examples: [
+        { zh: '{把|bǎ}{文件|wén·jiàn}{交|jiāo}{给|gěi}{小王|Xiǎo Wáng}{就|jiù}{行|xíng}。', hu: 'Elég, ha átadod az iratokat Xiao Wangnak.' },
+        { zh: '{我|wǒ}{明天|míng·tiān}{把|bǎ}{书|shū}{还|huán}{给|gěi}{你|nǐ}。', hu: 'Holnap visszaadom a könyvedet.' }
+      ],
+      mistakes: [
+        { bad: '{我|wǒ}{把|bǎ}{书|shū}{还|huán}{你|nǐ}{给|gěi}。', good: '{我|wǒ}{把|bǎ}{书|shū}{还|huán}{给|gěi}{你|nǐ}。', why: 'Az ige után közvetlenül a {给|gěi}, aztán a személy.' }
+      ]
+    },
+    {
+      title: 'Tagadás és segédige', sub: 'a tagadás és a segédige helye',
+      pattern: 'A + {没|méi} / {别|bié} / {要|yào} / {能|néng} / {应该|yīng·gāi} + {把|bǎ} + tárgy + ige + …',
+      body: 'A tagadás ({没|méi}, {不|bù}, {别|bié}) és a segédige ({要|yào}, {能|néng}, {想|xiǎng}, {应该|yīnggāi}) mindig a {把|bǎ} <b>elé</b> kerül, nem az ige elé: {我没把作业做完|wǒ méi bǎ zuòyè zuòwán} „nem csináltam meg a leckét", {别把手机忘在家里|bié bǎ shǒujī wàng zài jiā li} „ne hagyd otthon a telefont", {你能把窗户打开吗|nǐ néng bǎ chuānghu dǎkāi ma}？ „Ki tudnád nyitni az ablakot?"',
+      examples: [
+        { zh: '{别|bié}{把|bǎ}{手机|shǒu·jī}{忘|wàng}{在|zài}{家|jiā}{里|li}。', hu: 'Ne hagyd otthon a telefonodat.' },
+        { zh: '{你|nǐ}{能|néng}{把|bǎ}{窗户|chuāng·hu}{打|dǎ}{开|kāi}{吗|ma}？', hu: 'Ki tudnád nyitni az ablakot?' },
+        { zh: '{我|wǒ}{还|hái}{没|méi}{把|bǎ}{文件|wén·jiàn}{看|kàn}{完|wán}。', hu: 'Még nem olvastam végig az iratokat.' }
+      ],
+      mistakes: [
+        { bad: '{我|wǒ}{把|bǎ}{作业|zuò·yè}{没|méi}{做|zuò}{完|wán}。', good: '{我|wǒ}{没|méi}{把|bǎ}{作业|zuò·yè}{做|zuò}{完|wán}。', why: 'A tagadás a {把|bǎ} elé kerül.' }
+      ]
+    }
+  ],
+  phrases: [
+    { zh: '{请|qǐng}{把|bǎ}{门|mén}{关|guān}{上|shang}。', hu: 'Kérem, csukja be az ajtót.' },
+    { zh: '{别|bié}{忘|wàng}{了|le}……', hu: 'Ne felejtsd el, …' },
+    { zh: '{我|wǒ}{记|jì}{住|zhù}{了|le}。', hu: 'Megjegyeztem.' },
+    { zh: '{有|yǒu}{问题|wèn·tí}{就|jiù}{问|wèn}{我|wǒ}。', hu: 'Ha kérdésed van, kérdezz.' }
+  ],
+  words: [
+    { title: 'Szavak',
+      items: [
+        { zh: '{把|bǎ}', pinyin: 'bǎ', hu: 'a tárgyat az ige elé hozó szó' },
+        { zh: '{文件|wén·jiàn}', pinyin: 'wénjiàn', hu: 'dokumentum, irat' },
+        { zh: '{开会|kāi huì}', pinyin: 'kāi huì', hu: 'értekezletet tart' },
+        { zh: '{交|jiāo}', pinyin: 'jiāo', hu: 'átad, bead' },
+        { zh: '{空调|kōng·tiáo}', pinyin: 'kōngtiáo', hu: 'légkondicionáló' },
+        { zh: '{记住|jì·zhù}', pinyin: 'jìzhù', hu: 'megjegyez' },
+        { zh: '{密码|mì·mǎ}', pinyin: 'mìmǎ', hu: 'jelszó' },
+        { zh: '{纸|zhǐ}', pinyin: 'zhǐ', hu: 'papír' },
+        { zh: '{包|bāo}', pinyin: 'bāo', hu: 'táska' },
+        { zh: '{还|huán}', pinyin: 'huán', hu: 'visszaad' },
+        { zh: '{打扫|dǎ·sǎo}', pinyin: 'dǎsǎo', hu: 'takarít' },
+        { zh: '{经理|jīng·lǐ}', pinyin: 'jīnglǐ', hu: 'vezető, menedzser' }
+      ] },
+    { title: 'Ráadás',
+      items: [
+        { zh: '{打开|dǎ·kāi}', pinyin: 'dǎkāi', hu: 'kinyit, bekapcsol' },
+        { zh: '{关上|guān·shang}', pinyin: 'guānshang', hu: 'becsuk' },
+        { zh: '{停|tíng}', pinyin: 'tíng', hu: 'megáll, parkol' },
+        { zh: '{它们|tā·men}', pinyin: 'tāmen', hu: 'ők (dolgok)' }
+      ] }
+  ],
+  culture: [
+    { title: 'Megszólítás a munkahelyen', text: 'Kínai munkahelyen a vezetőt gyakran a vezetékneve és a beosztása együtt jelöli: {陈经理|Chén jīnglǐ} „Chen menedzser", {王老师|Wáng lǎoshī}. A fiatalabb kollégákat {小|xiǎo} + vezetéknév ({小王|Xiǎo Wáng}), az idősebbeket {老|lǎo} + vezetéknév ({老李|Lǎo Lǐ}) néven szólítják — ez barátságos, nem udvariatlan.' },
+    { title: 'Gyakornokként Kínában', text: 'A kínai cégek szívesen fogadnak külföldi gyakornokokat ({实习生|shíxíshēng}), főleg nyelvtudásuk miatt: fordítanak, nemzetközi ügyfelekkel leveleznek. A munkanap sokszor hosszú, de az ebédszünet szent: sokan ebéd után rövid szundikálásra ({午睡|wǔshuì}) is ráhajtják a fejüket az asztalra.' }
+  ],
+  reading: {
+    title: '{实习|shí·xí}{的|de}{第一|dì·yī}{天|tiān}', titleHu: 'A gyakorlat első napja',
+    text: [
+      { zh: '{今天|jīn·tiān}{是|shì}{我|wǒ}{实习|shí·xí}{的|de}{第一|dì·yī}{天|tiān}。', hu: 'Ma volt a gyakorlatom első napja.' },
+      { zh: '{陈|Chén}{经理|jīng·lǐ}{让|ràng}{我|wǒ}{先|xiān}{把|bǎ}{包|bāo}{放|fàng}{在|zài}{桌子|zhuō·zi}{上|shang}，{然后|rán·hòu}{给|gěi}{了|le}{我|wǒ}{很|hěn}{多|duō}{文件|wén·jiàn}。', hu: 'Chen úr először azt kérte, tegyem a táskámat az asztalra, aztán egy csomó iratot adott.' },
+      { zh: '{上午|shàng·wǔ}{我|wǒ}{把|bǎ}{文件|wén·jiàn}{都|dōu}{看|kàn}{完|wán}{了|le}，{把|bǎ}{它们|tā·men}{交|jiāo}{给|gěi}{了|le}{小王|Xiǎo Wáng}。', hu: 'Délelőtt mindet végigolvastam, és átadtam Xiao Wangnak.', par: true },
+      { zh: '{下午|xià·wǔ}{开|kāi}{会|huì}{的|de}{时候|shí·hou}，{我|wǒ}{把|bǎ}{经理|jīng·lǐ}{说|shuō}{的|de}{话|huà}{都|dōu}{写|xiě}{在|zài}{本子|běn·zi}{上|shang}{了|le}。', hu: 'A délutáni megbeszélésen mindent leírtam a füzetembe, amit a vezető mondott.' },
+      { zh: '{下|xià}{班|bān}{的|de}{时候|shí·hou}，{我|wǒ}{没|méi}{忘|wàng}{把|bǎ}{空调|kōng·tiáo}{关|guān}{了|le}！', hu: 'Munka végén nem felejtettem el kikapcsolni a légkondit!', par: true }
+    ],
+    words: [ { zh: '{本子|běn·zi}', hu: 'füzet' } ],
+    questions: [
+      { q: 'Hová tette Anna a táskáját?', a: 'az asztalra', wrong: ['a földre', 'a szekrénybe', 'Xiao Wang székére'], why: '{把包放在桌子上|bǎ bāo fàng zài zhuōzi shang}.' },
+      { q: 'Mit csinált az iratokkal délelőtt?', a: 'végigolvasta és átadta Xiao Wangnak', wrong: ['lefordította angolra', 'kinyomtatta és elküldte', 'elvitte haza olvasni'], why: '{把文件都看完了，把它们交给了小王|bǎ wénjiàn dōu kànwán le, bǎ tāmen jiāogěile Xiǎo Wáng}.' },
+      { q: 'Mit csinált a megbeszélésen?', a: 'leírta, amit a vezető mondott', wrong: ['sokat kérdezett', 'bemutatkozott', 'fordított a vezetőnek'], why: '{把经理说的话都写在本子上了|bǎ jīnglǐ shuō de huà dōu xiě zài běnzi shang le}.' },
+      { q: 'Mit nem felejtett el munka végén?', a: 'kikapcsolni a légkondit', wrong: ['bezárni az ajtót', 'elvinni a táskáját', 'elköszönni Chen úrtól'], why: '{没忘把空调关了|méi wàng bǎ kōngtiáo guān le}.' }
+    ]
+  },
+  quiz: [
+    { q: '„Végigolvastam az iratokat." ({把|bǎ}-val)', a: '{我|wǒ}{把|bǎ}{文件|wén·jiàn}{看|kàn}{完|wán}{了|le}。', wrong: ['{我|wǒ}{把|bǎ}{看|kàn}{完|wán}{文件|wén·jiàn}{了|le}。', '{把|bǎ}{我|wǒ}{文件|wén·jiàn}{看|kàn}{完|wán}{了|le}。', '{我|wǒ}{看|kàn}{把|bǎ}{文件|wén·jiàn}{完|wán}{了|le}。'], why: 'A + {把|bǎ} + tárgy + ige + kiegészítő.', point: 1 },
+    { q: '„Kapcsold ki a légkondit!"', a: '{把|bǎ}{空调|kōng·tiáo}{关|guān}{了|le}！', wrong: ['{把|bǎ}{关|guān}{空调|kōng·tiáo}{了|le}！', '{空调|kōng·tiáo}{把|bǎ}{关|guān}{了|le}！', '{关|guān}{把|bǎ}{空调|kōng·tiáo}{了|le}！'], why: '{把|bǎ} + tárgy + ige + {了|le}.', point: 1 },
+    { q: 'Mit hangsúlyoz a {把|bǎ}-mondat?', a: 'mi történik egy konkrét dologgal', wrong: ['ki végzi a cselekvést', 'mikor történt a cselekvés', 'hogy a cselekvés még nem történt meg'], why: 'A tárgyat előrehozza, az eredményre figyel.', point: 1 },
+    { q: 'Miért hibás: {我把饭吃|wǒ bǎ fàn chī}?', a: 'az ige után nem áll semmi', wrong: ['a {饭|fàn} nem lehet tárgy', 'a {把|bǎ} a mondat végére kerül', 'nem hibás, így helyes'], why: 'Helyesen: {我把饭吃了|wǒ bǎ fàn chī le}.', point: 2 },
+    { q: 'Melyik NEM állhat a {把|bǎ}-mondatban az ige után?', a: 'semmi (az ige egyedül)', wrong: ['{了|le}', 'eredménykiegészítő ({完|wán}, {好|hǎo})', '{在|zài} + hely'], why: 'Az ige után mindig kell „valami".', point: 2 },
+    { q: '„Jegyezd meg ezt a szót!"', a: '{你|nǐ}{把|bǎ}{这|zhè}{个|ge}{词|cí}{记|jì}{住|zhù}。', wrong: ['{你|nǐ}{把|bǎ}{记|jì}{住|zhù}{这|zhè}{个|ge}{词|cí}。', '{你|nǐ}{记|jì}{把|bǎ}{这|zhè}{个|ge}{词|cí}{住|zhù}。', '{你|nǐ}{把|bǎ}{这|zhè}{个|ge}{词|cí}{记|jì}。'], why: '{把|bǎ} + tárgy + {记住|jìzhù}.', point: 2 },
+    { q: '„Tedd ide a táskádat!"', a: '{你|nǐ}{把|bǎ}{包|bāo}{放|fàng}{在|zài}{这儿|zhèr}{吧|ba}。', wrong: ['{你|nǐ}{放|fàng}{包|bāo}{在|zài}{这儿|zhèr}{吧|ba}。', '{你|nǐ}{把|bǎ}{包|bāo}{在|zài}{这儿|zhèr}{放|fàng}{了|le}{吗|ma}。', '{你|nǐ}{把|bǎ}{放|fàng}{在|zài}{这儿|zhèr}{包|bāo}{吧|ba}。'], why: '{把|bǎ} + tárgy + ige + {在|zài} + hely.', point: 3 },
+    { q: 'Mit jelent: {我把密码写在纸上了|wǒ bǎ mìmǎ xiě zài zhǐ shang le}。', a: 'Felírtam a jelszót a papírra.', wrong: ['A papíron megtaláltam a jelszót.', 'Papírt kértem a jelszóhoz.', 'Elfelejtettem felírni a jelszót.'], why: '{把|bǎ} … {写在|xiě zài} … „felír valahová".', point: 3 },
+    { q: '„Add át az iratokat Xiao Wangnak!"', a: '{把|bǎ}{文件|wén·jiàn}{交|jiāo}{给|gěi}{小王|Xiǎo Wáng}。', wrong: ['{把|bǎ}{文件|wén·jiàn}{给|gěi}{交|jiāo}{小王|Xiǎo Wáng}。', '{把|bǎ}{小王|Xiǎo Wáng}{交|jiāo}{给|gěi}{文件|wén·jiàn}。', '{交|jiāo}{文件|wén·jiàn}{把|bǎ}{给|gěi}{小王|Xiǎo Wáng}。'], why: '{把|bǎ} + tárgy + ige + {给|gěi} + személy.', point: 4 },
+    { q: '„Holnap visszaadom a könyvedet."', a: '{我|wǒ}{明天|míng·tiān}{把|bǎ}{书|shū}{还|huán}{给|gěi}{你|nǐ}。', wrong: ['{我|wǒ}{明天|míng·tiān}{把|bǎ}{书|shū}{还|huán}{你|nǐ}{给|gěi}。', '{我|wǒ}{把|bǎ}{明天|míng·tiān}{还|huán}{给|gěi}{你|nǐ}{书|shū}。', '{明天|míng·tiān}{我|wǒ}{还|huán}{把|bǎ}{书|shū}{给|gěi}{你|nǐ}。'], why: 'Az időhatározó a {把|bǎ} elé, a {给|gěi} + személy az ige után.', point: 4 },
+    { q: '„Nem csináltam meg a leckét." ({把|bǎ}-val)', a: '{我|wǒ}{没|méi}{把|bǎ}{作业|zuò·yè}{做|zuò}{完|wán}。', wrong: ['{我|wǒ}{把|bǎ}{作业|zuò·yè}{没|méi}{做|zuò}{完|wán}。', '{我|wǒ}{把|bǎ}{没|méi}{作业|zuò·yè}{做|zuò}{完|wán}。', '{我|wǒ}{把|bǎ}{作业|zuò·yè}{做|zuò}{没|méi}{完|wán}。'], why: 'A tagadás a {把|bǎ} elé kerül.', point: 5 },
+    { q: '„Ne hagyd otthon a telefonodat!"', a: '{别|bié}{把|bǎ}{手机|shǒu·jī}{忘|wàng}{在|zài}{家|jiā}{里|li}。', wrong: ['{把|bǎ}{手机|shǒu·jī}{别|bié}{忘|wàng}{在|zài}{家|jiā}{里|li}。', '{把|bǎ}{别|bié}{手机|shǒu·jī}{忘|wàng}{在|zài}{家|jiā}{里|li}。', '{别|bié}{忘|wàng}{把|bǎ}{在|zài}{家|jiā}{里|li}{手机|shǒu·jī}。'], why: '{别|bié} + {把|bǎ} + tárgy + ige + {在|zài} + hely.', point: 5 },
+    { q: '„Ki tudnád nyitni az ablakot?"', a: '{你|nǐ}{能|néng}{把|bǎ}{窗户|chuāng·hu}{打|dǎ}{开|kāi}{吗|ma}？', wrong: ['{你|nǐ}{把|bǎ}{窗户|chuāng·hu}{能|néng}{打|dǎ}{开|kāi}{吗|ma}？', '{你|nǐ}{把|bǎ}{能|néng}{窗户|chuāng·hu}{打|dǎ}{开|kāi}{吗|ma}？', '{你|nǐ}{能|néng}{打|dǎ}{开|kāi}{把|bǎ}{窗户|chuāng·hu}{吗|ma}？'], why: 'A segédige a {把|bǎ} elé kerül.', point: 5 },
+    { q: 'Mit jelent: {我还没把文件看完|wǒ hái méi bǎ wénjiàn kànwán}。', a: 'Még nem olvastam végig az iratokat.', wrong: ['Már végigolvastam az iratokat.', 'Nem akarom elolvasni az iratokat.', 'Az iratokat valaki más olvassa el.'], why: '{还没|hái méi} + {把|bǎ} … „még nem".', point: 5 },
+    { q: 'Mit jelent a {密码|mìmǎ}?', a: 'jelszó', wrong: ['telefonszám', 'lakcím', 'névjegy'], why: '{电脑密码|diànnǎo mìmǎ} „a gép jelszava".' },
+    { q: 'Mit jelent: {我记住了|wǒ jìzhù le}。', a: 'Megjegyeztem.', wrong: ['Elfelejtettem.', 'Leírtam.', 'Emlékszel?'], why: '{记住|jìzhù} „megjegyez".' }
+  ]
+},
+
+/* ════════════════════════════════════════════════════
+   HSK 3 · 9. LECKE — a 把 szerkezet II.: 到 + hely, irányjelölő, 成, 帮…把…, mikor nem 把
+   ════════════════════════════════════════════════════ */
+{
+  id: 'l39', no: 39, badge: '9', kicker: 'HSK 3 · 9. lecke', label: 'HSK 3 · 9. lecke',
+  title: 'Vidd át a tárgyalóba! — irodai munka',
+  lead: 'A 把 szerkezetet irányokkal és változással is használod: elviszel valamit valahová (把箱子搬到会议室), kinyomtatsz (把它打印出来), átváltasz, lefordítasz (把欧元换成人民币), segítséget kérsz (帮我把…), és tudod, mikor nem jó a 把.',
+  cando: [
+    'Célhelyet adsz: 把 + tárgy + ige + 到 + hely.',
+    'Irányjelölővel: 把…拿过来, 把…打印出来, 把…带回去.',
+    'Átalakítást fejezel ki: 把 A + ige + 成 + B (换成, 翻译成, 看成).',
+    'Udvariasan kérsz (帮我把…), és tudod, milyen igékkel nem használható a 把.'
+  ],
+  intro: [
+    'Anna második hete az irodában: dobozokat visz a tárgyalóba, anyagot fordít angolra, eurót vált jüanra. Xiao Wang, a kollégája, segít neki eligazodni.',
+    'Az előző leckében a {把|bǎ}-mondat végén {了|le}, eredmény, {在|zài} + hely vagy {给|gěi} + személy állt. Most három új lehetőség jön: {到|dào} + hely („-ba, -ig"), irányjelölő („fel, be, át") és {成|chéng} („-vá, -re").'
+  ],
+  dialogue: {
+    title: 'Az irodában',
+    scene: 'Gyakornoki hét. Anna és kollégája, Xiao Wang az irodában dolgoznak.',
+    lines: [
+      { who: 'Xiao Wang', zh: '{安娜|Ān·nà}，{你|nǐ}{能|néng}{帮|bāng}{我|wǒ}{把|bǎ}{这|zhè}{个|ge}{箱子|xiāng·zi}{搬|bān}{到|dào}{会议室|huì·yì·shì}{去|qù}{吗|ma}？', hu: 'Anna, segítenél bevinni ezt a dobozt a tárgyalóba?' },
+      { who: 'Anna', zh: '{没|méi}{问题|wèn·tí}。{对|duì}{了|le}，{经理|jīng·lǐ}{让|ràng}{我|wǒ}{把|bǎ}{这|zhè}{份|fèn}{材料|cái·liào}{翻译|fān·yì}{成|chéng}{英语|Yīng·yǔ}，{我|wǒ}{已经|yǐ·jīng}{翻|fān}{好|hǎo}{了|le}。', hu: 'Semmi gond. Ja, a vezető kérte, hogy fordítsam le ezt az anyagot angolra — már kész vagyok.' },
+      { who: 'Xiao Wang', zh: '{这么|zhè·me}{快|kuài}！{你|nǐ}{把|bǎ}{它|tā}{发|fā}{给|gěi}{我|wǒ}{吧|ba}，{我|wǒ}{把|bǎ}{它|tā}{打|dǎ}{印|yìn}{出|chu}{来|lai}。', hu: 'Ilyen gyorsan! Küldd el nekem, kinyomtatom.' },
+      { who: 'Anna', zh: '{好|hǎo}。{我|wǒ}{想|xiǎng}{把|bǎ}{一些|yì·xiē}{欧元|Ōu·yuán}{换|huàn}{成|chéng}{人民币|rén·mín·bì}，{去|qù}{哪儿|nǎr}{换|huàn}{比较|bǐ·jiào}{好|hǎo}？', hu: 'Jó. Szeretnék eurót jüanra váltani — hol érdemes?' },
+      { who: 'Xiao Wang', zh: '{楼|lóu}{下|xià}{就|jiù}{有|yǒu}{银行|yín·háng}。{别|bié}{忘|wàng}{了|le}{把|bǎ}{护照|hù·zhào}{带|dài}{上|shang}。', hu: 'Lent épp van egy bank. Ne felejtsd el magaddal vinni az útleveledet.' },
+      { who: 'Anna', zh: '{护照|hù·zhào}{我|wǒ}{放|fàng}{在|zài}{宿舍|sù·shè}{了|le}……{明天|míng·tiān}{我|wǒ}{把|bǎ}{它|tā}{带|dài}{过|guo}{来|lai}。', hu: 'Az útlevelemet a kollégiumban hagytam… holnap elhozom.' },
+      { who: 'Xiao Wang', zh: '{行|xíng}。{来|lái}，{我们|wǒ·men}{先|xiān}{把|bǎ}{箱子|xiāng·zi}{抬|tái}{过|guo}{去|qu}！', hu: 'Rendben. Gyere, előbb vigyük át a dobozt!' }
+    ],
+    notes: [
+      'A {会议室|huìyìshì} „tárgyaló", a {份|fèn} az iratok, újságok mérőszava, a {材料|cáiliào} „anyag (írásos)".',
+      'A {打印|dǎyìn} „kinyomtat", a {护照|hùzhào} „útlevél", a {带上|dàishang} „magával visz (felvesz magára)".',
+      'Az {欧元|Ōuyuán} „euró", a {人民币|rénmínbì} „jüan (a kínai pénz hivatalos neve)"; a {抬|tái} „(ketten) emel, cipel".'
+    ]
+  },
+  points: [
+    {
+      title: '{把|bǎ} … ige + {到|dào} + hely', sub: 'elvisz, áthelyez valahová',
+      pattern: 'A + {把|bǎ} + tárgy + ige + {到|dào} + hely (+ {来|lái} / {去|qù})',
+      body: 'Ha a dolog a cselekvés eredményeként egy <b>célhelyre</b> jut el: {把箱子搬到会议室去|bǎ xiāngzi bān dào huìyìshì qù} „vidd be a dobozt a tárgyalóba", {把车开到门口|bǎ chē kāi dào ménkǒu} „állj a kocsival a bejárathoz", {把书带到教室来|bǎ shū dài dào jiàoshì lái} „hozd be a könyvet a terembe". A végén a {来|lái} / {去|qù} a beszélőhöz viszonyított irányt is megadhatja.',
+      examples: [
+        { zh: '{你|nǐ}{能|néng}{帮|bāng}{我|wǒ}{把|bǎ}{箱子|xiāng·zi}{搬|bān}{到|dào}{会议室|huì·yì·shì}{去|qù}{吗|ma}？', hu: 'Segítenél bevinni a dobozt a tárgyalóba?' },
+        { zh: '{请|qǐng}{把|bǎ}{车|chē}{开|kāi}{到|dào}{门|mén}{口|kǒu}。', hu: 'Kérem, álljon a kocsival a bejárathoz.' }
+      ],
+      mistakes: [
+        { bad: '{我|wǒ}{搬|bān}{箱子|xiāng·zi}{到|dào}{会议室|huì·yì·shì}。', good: '{我|wǒ}{把|bǎ}{箱子|xiāng·zi}{搬|bān}{到|dào}{会议室|huì·yì·shì}。', why: 'Ige + {到|dào} + hely mellett a tárgyat {把|bǎ} hozza előre.' }
+      ]
+    },
+    {
+      title: '{把|bǎ} … ige + irányjelölő', sub: 'kinyomtat, elhoz, átvisz',
+      pattern: 'A + {把|bǎ} + tárgy + ige + ({上|shàng} / {出|chū} / {过|guò} / {回|huí} …) + {来|lai} / {去|qu}',
+      body: 'Az irányjelölők (HSK 3 2. lecke) a {把|bǎ}-mondat végén is állhatnak: {把它打印出来|bǎ tā dǎyìn chulai} „nyomtasd ki (hogy előjöjjön)", {把护照带过来|bǎ hùzhào dài guolai} „hozd ide az útleveled", {把箱子抬过去|bǎ xiāngzi tái guoqu} „vigyük át a dobozt", {把书放回去|bǎ shū fàng huiqu} „tedd vissza a könyvet". Az ismert tárgyat így könnyű az ige elé hozni.',
+      examples: [
+        { zh: '{我|wǒ}{把|bǎ}{它|tā}{打|dǎ}{印|yìn}{出|chu}{来|lai}。', hu: 'Kinyomtatom.' },
+        { zh: '{明天|míng·tiān}{我|wǒ}{把|bǎ}{护照|hù·zhào}{带|dài}{过|guo}{来|lai}。', hu: 'Holnap elhozom az útlevelem.' },
+        { zh: '{看|kàn}{完|wán}{以后|yǐ·hòu}，{请|qǐng}{把|bǎ}{书|shū}{放|fàng}{回|hui}{去|qu}。', hu: 'Ha elolvastad, tedd vissza a könyvet.' }
+      ]
+    },
+    {
+      title: '{把|bǎ} A + ige + {成|chéng} + B', sub: 'átvált, lefordít, összetéveszt',
+      pattern: 'A + {把|bǎ} + X + ige + {成|chéng} + Y',
+      body: 'A {成|chéng} „-vá, -ré válik" azt mondja meg, <b>mivé</b> alakul a dolog: {把欧元换成人民币|bǎ Ōuyuán huànchéng rénmínbì} „eurót jüanra vált", {把材料翻译成英语|bǎ cáiliào fānyì chéng Yīngyǔ} „lefordítja az anyagot angolra", {把这个字写成了那个字|bǎ zhège zì xiěchéngle nàge zì} „ezt az írásjegyet amaz írásjegynek írta". A {看成|kànchéng} „összetéveszt (néz valaminek)": {我把“大”看成了“太”|wǒ bǎ “dà” kànchéngle “tài”}.',
+      examples: [
+        { zh: '{我|wǒ}{想|xiǎng}{把|bǎ}{欧元|Ōu·yuán}{换|huàn}{成|chéng}{人民币|rén·mín·bì}。', hu: 'Eurót szeretnék jüanra váltani.' },
+        { zh: '{经理|jīng·lǐ}{让|ràng}{我|wǒ}{把|bǎ}{材料|cái·liào}{翻译|fān·yì}{成|chéng}{英语|Yīng·yǔ}。', hu: 'A vezető kérte, hogy fordítsam le az anyagot angolra.' },
+        { zh: '{对不起|duì·bu·qǐ}，{我|wǒ}{把|bǎ}{你|nǐ}{看|kàn}{成|chéng}{你|nǐ}{姐姐|jiě·jie}{了|le}。', hu: 'Bocsánat, összetévesztettelek a nővéreddel.' }
+      ],
+      mistakes: [
+        { bad: '{我|wǒ}{换|huàn}{欧元|Ōu·yuán}{成|chéng}{人民币|rén·mín·bì}。', good: '{我|wǒ}{把|bǎ}{欧元|Ōu·yuán}{换|huàn}{成|chéng}{人民币|rén·mín·bì}。', why: 'Az ige + {成|chéng} mellé a tárgyat {把|bǎ} hozza előre.' }
+      ]
+    },
+    {
+      title: 'Kérés: {帮|bāng} + valaki + {把|bǎ} …', sub: 'segítenél …?',
+      pattern: '({你|nǐ}{能|néng}) + {帮|bāng} + személy + {把|bǎ} + tárgy + ige + … ({吗|ma})？',
+      body: 'Udvarias kérésben a {帮|bāng} (HSK 2 4. lecke) és a {把|bǎ} gyakran együtt áll: {你能帮我把箱子搬到会议室去吗|nǐ néng bāng wǒ bǎ xiāngzi bān dào huìyìshì qù ma}？ „Segítenél bevinni a dobozt a tárgyalóba?", {请帮我把门打开|qǐng bāng wǒ bǎ mén dǎkāi} „kérlek, nyisd ki nekem az ajtót". A sorrend: {帮|bāng} + személy + {把|bǎ} + tárgy + ige.',
+      examples: [
+        { zh: '{请|qǐng}{帮|bāng}{我|wǒ}{把|bǎ}{门|mén}{打|dǎ}{开|kāi}。', hu: 'Kérlek, nyisd ki nekem az ajtót.' },
+        { zh: '{你|nǐ}{能|néng}{帮|bāng}{我|wǒ}{把|bǎ}{这|zhè}{句|jù}{话|huà}{翻译|fān·yì}{成|chéng}{汉语|Hàn·yǔ}{吗|ma}？', hu: 'Le tudnád fordítani nekem ezt a mondatot kínaira?' }
+      ],
+      mistakes: [
+        { bad: '{你|nǐ}{把|bǎ}{箱子|xiāng·zi}{帮|bāng}{我|wǒ}{搬|bān}{到|dào}{会议室|huì·yì·shì}。', good: '{你|nǐ}{帮|bāng}{我|wǒ}{把|bǎ}{箱子|xiāng·zi}{搬|bān}{到|dào}{会议室|huì·yì·shì}。', why: 'A {帮|bāng} + személy a {把|bǎ} elé kerül.' }
+      ]
+    },
+    {
+      title: 'Mikor NEM jó a {把|bǎ}?', sub: 'három tiltott eset',
+      pattern: '×{把|bǎ} + {是|shì} / {有|yǒu} / {喜欢|xǐ·huan} / {知道|zhī·dào} … · ×{把|bǎ} … ige + {不|bu} + kieg.',
+      body: 'A {把|bǎ} csak olyan igével áll, amely <b>hat</b> a tárgyra. Nem jó (1) a létezés, birtoklás, érzés, érzékelés igéivel: {是|shì}, {有|yǒu}, {在|zài}, {喜欢|xǐhuan}, {知道|zhīdào}, {认识|rènshi}, {觉得|juéde}, {看见|kànjiàn}: *{我把他认识|wǒ bǎ tā rènshi}. (2) A lehetőséget kifejező kiegészítővel (HSK 3 4. lecke): *{我把箱子搬不动|wǒ bǎ xiāngzi bān bu dòng} → {箱子我搬不动|xiāngzi wǒ bān bu dòng}. (3) Határozatlan, „akármilyen" tárggyal.',
+      examples: [
+        { zh: '{箱子|xiāng·zi}{太|tài}{重|zhòng}{了|le}，{我|wǒ}{搬|bān}{不|bu}{动|dòng}。', hu: 'A doboz túl nehéz, nem bírom megmozdítani.' },
+        { zh: '{我|wǒ}{很|hěn}{喜欢|xǐ·huan}{这|zhè}{份|fèn}{工作|gōng·zuò}。', hu: 'Nagyon szeretem ezt a munkát.' }
+      ],
+      mistakes: [
+        { bad: '{我|wǒ}{把|bǎ}{这|zhè}{份|fèn}{工作|gōng·zuò}{很|hěn}{喜欢|xǐ·huan}。', good: '{我|wǒ}{很|hěn}{喜欢|xǐ·huan}{这|zhè}{份|fèn}{工作|gōng·zuò}。', why: 'Érzelmi igével nem használható a {把|bǎ}.' },
+        { bad: '{我|wǒ}{把|bǎ}{箱子|xiāng·zi}{搬|bān}{不|bu}{动|dòng}。', good: '{箱子|xiāng·zi}{我|wǒ}{搬|bān}{不|bu}{动|dòng}。', why: 'Lehetőséget kifejező kiegészítővel nem áll {把|bǎ}.' }
+      ]
+    }
+  ],
+  phrases: [
+    { zh: '{你|nǐ}{能|néng}{帮|bāng}{我|wǒ}……{吗|ma}？', hu: 'Segítenél …?' },
+    { zh: '{别|bié}{忘|wàng}{了|le}{把|bǎ}{护照|hù·zhào}{带|dài}{上|shang}。', hu: 'Ne felejtsd el magaddal vinni az útleveled.' },
+    { zh: '{我|wǒ}{把|bǎ}{它|tā}{打|dǎ}{印|yìn}{出|chu}{来|lai}。', hu: 'Kinyomtatom.' },
+    { zh: '{我|wǒ}{把|bǎ}{你|nǐ}{看|kàn}{成|chéng}{别|bié}{人|rén}{了|le}。', hu: 'Összetévesztettelek valakivel.' }
+  ],
+  words: [
+    { title: 'Szavak',
+      items: [
+        { zh: '{会议室|huì·yì·shì}', pinyin: 'huìyìshì', hu: 'tárgyaló' },
+        { zh: '{材料|cái·liào}', pinyin: 'cáiliào', hu: 'anyag (írásos)' },
+        { zh: '{份|fèn}', pinyin: 'fèn', hu: 'példány (mérőszó)' },
+        { zh: '{翻译|fān·yì}', pinyin: 'fānyì', hu: 'fordít; fordító' },
+        { zh: '{成|chéng}', pinyin: 'chéng', hu: '-vá / -vé válik' },
+        { zh: '{打印|dǎ·yìn}', pinyin: 'dǎyìn', hu: 'kinyomtat' },
+        { zh: '{换|huàn}', pinyin: 'huàn', hu: 'cserél, vált' },
+        { zh: '{欧元|Ōu·yuán}', pinyin: 'Ōuyuán', hu: 'euró' },
+        { zh: '{人民币|rén·mín·bì}', pinyin: 'rénmínbì', hu: 'jüan (renminbi)' },
+        { zh: '{护照|hù·zhào}', pinyin: 'hùzhào', hu: 'útlevél' },
+        { zh: '{银行|yín·háng}', pinyin: 'yínháng', hu: 'bank' },
+        { zh: '{发|fā}', pinyin: 'fā', hu: 'küld' }
+      ] },
+    { title: 'Ráadás',
+      items: [
+        { zh: '{抬|tái}', pinyin: 'tái', hu: '(ketten) emel, cipel' },
+        { zh: '{带上|dài·shang}', pinyin: 'dàishang', hu: 'magával visz' },
+        { zh: '{门口|mén·kǒu}', pinyin: 'ménkǒu', hu: 'bejárat' },
+        { zh: '{开车|kāi chē}', pinyin: 'kāi chē', hu: 'autót vezet' }
+      ] }
+  ],
+  culture: [
+    { title: 'Pénz Kínában', text: 'A kínai pénz hivatalos neve {人民币|rénmínbì} „népi pénz", egysége a {元|yuán} — beszédben {块|kuài} (HSK 1). Pénzt bankban vagy a reptéren lehet váltani, útlevéllel. A mindennapokban azonban szinte csak telefonnal fizetnek, ezért sok külföldi először egy kínai bankszámlát és egy fizetős alkalmazást intéz el.' },
+    { title: 'Egy írásjegy, sok jelentés', text: 'A {成|chéng} „válik valamivé" sok szóban visszaköszön: {成功|chénggōng} „siker" („a munka elkészül"), {成为|chéngwéi} „válik valamivé", {完成|wánchéng} „befejez". A kínai szókincs nagy része ilyen „építőkockákból" áll — aki egy írásjegy jelentését megérti, sok új szót könnyebben megtanul.' }
+  ],
+  reading: {
+    title: '{忙|máng}{碌|lù}{的|de}{一|yì}{天|tiān}', titleHu: 'Egy mozgalmas nap',
+    text: [
+      { zh: '{今天|jīn·tiān}{我|wǒ}{先|xiān}{把|bǎ}{一|yí}{份|fèn}{材料|cái·liào}{翻译|fān·yì}{成|chéng}{了|le}{英语|Yīng·yǔ}。', hu: 'Ma először lefordítottam egy anyagot angolra.' },
+      { zh: '{然后|rán·hòu}{我|wǒ}{和|hé}{小王|Xiǎo Wáng}{把|bǎ}{三|sān}{个|ge}{大|dà}{箱子|xiāng·zi}{搬|bān}{到|dào}{了|le}{会议室|huì·yì·shì}。', hu: 'Aztán Xiao Wanggal bevittünk három nagy dobozt a tárgyalóba.' },
+      { zh: '{中午|zhōng·wǔ}{我|wǒ}{想|xiǎng}{把|bǎ}{欧元|Ōu·yuán}{换|huàn}{成|chéng}{人民币|rén·mín·bì}，{但是|dàn·shì}{我|wǒ}{把|bǎ}{护照|hù·zhào}{忘|wàng}{在|zài}{宿舍|sù·shè}{了|le}。', hu: 'Délben eurót akartam jüanra váltani, de az útlevelemet a kollégiumban felejtettem.', par: true },
+      { zh: '{小王|Xiǎo Wáng}{说|shuō}：“{没|méi}{关系|guān·xi}，{明天|míng·tiān}{你|nǐ}{把|bǎ}{它|tā}{带|dài}{过|guo}{来|lai}{就|jiù}{行|xíng}。”', hu: 'Xiao Wang azt mondta: „Semmi baj, elég, ha holnap elhozod."' },
+      { zh: '{下|xià}{班|bān}{以前|yǐ·qián}，{我|wǒ}{把|bǎ}{所有|suǒ·yǒu}{的|de}{文件|wén·jiàn}{都|dōu}{放|fàng}{回|hui}{了|le}{柜子|guì·zi}{里|li}。', hu: 'Munka vége előtt minden iratot visszatettem a szekrénybe.', par: true }
+    ],
+    words: [ { zh: '{忙碌|máng·lù}', hu: 'mozgalmas, sürgős' }, { zh: '{所有|suǒ·yǒu}', hu: 'összes, minden' } ],
+    questions: [
+      { q: 'Mit fordított le Anna?', a: 'egy anyagot angolra', wrong: ['egy levelet kínaira', 'egy könyvet magyarra', 'egy szerződést angolról kínaira'], why: '{把一份材料翻译成了英语|bǎ yí fèn cáiliào fānyì chéngle Yīngyǔ}.' },
+      { q: 'Hány dobozt vittek a tárgyalóba?', a: 'hármat', wrong: ['egyet', 'kettőt', 'ötöt'], why: '{把三个大箱子搬到了会议室|bǎ sān ge dà xiāngzi bān dàole huìyìshì}.' },
+      { q: 'Miért nem tudott pénzt váltani?', a: 'a kollégiumban felejtette az útlevelét', wrong: ['zárva volt a bank', 'nem volt nála euró', 'nem volt ideje délben'], why: '{我把护照忘在宿舍了|wǒ bǎ hùzhào wàng zài sùshè le}.' },
+      { q: 'Mit csinált munka vége előtt?', a: 'visszatette az iratokat a szekrénybe', wrong: ['kinyomtatta az iratokat', 'átadta az iratokat Chen úrnak', 'hazavitte az iratokat'], why: '{把所有的文件都放回了柜子里|bǎ suǒyǒu de wénjiàn dōu fàng huile guìzi li}.' }
+    ]
+  },
+  quiz: [
+    { q: '„Vidd be a dobozt a tárgyalóba!"', a: '{把|bǎ}{箱子|xiāng·zi}{搬|bān}{到|dào}{会议室|huì·yì·shì}{去|qù}。', wrong: ['{搬|bān}{箱子|xiāng·zi}{到|dào}{会议室|huì·yì·shì}{去|qù}{把|bǎ}。', '{把|bǎ}{会议室|huì·yì·shì}{搬|bān}{到|dào}{箱子|xiāng·zi}{去|qù}。', '{把|bǎ}{箱子|xiāng·zi}{到|dào}{会议室|huì·yì·shì}{搬|bān}{去|qù}{了|le}{吗|ma}。'], why: '{把|bǎ} + tárgy + ige + {到|dào} + hely.', point: 1 },
+    { q: 'Mit jelent: {请把车开到门口|qǐng bǎ chē kāi dào ménkǒu}。', a: 'Kérem, álljon a kocsival a bejárathoz.', wrong: ['Kérem, nyissa ki az autó ajtaját.', 'Kérem, a bejáratnál szálljon be.', 'Kérem, ne parkoljon a bejáratnál.'], why: '{开到|kāi dào} + hely „odahajt".', point: 1 },
+    { q: '„Kinyomtatom."', a: '{我|wǒ}{把|bǎ}{它|tā}{打|dǎ}{印|yìn}{出|chu}{来|lai}。', wrong: ['{我|wǒ}{打|dǎ}{印|yìn}{把|bǎ}{它|tā}{出|chu}{来|lai}。', '{我|wǒ}{把|bǎ}{打|dǎ}{印|yìn}{它|tā}{出|chu}{来|lai}。', '{我|wǒ}{把|bǎ}{它|tā}{出|chu}{来|lai}{打|dǎ}{印|yìn}。'], why: '{把|bǎ} + tárgy + ige + irányjelölő.', point: 2 },
+    { q: '„Holnap elhozom az útlevelem."', a: '{明天|míng·tiān}{我|wǒ}{把|bǎ}{护照|hù·zhào}{带|dài}{过|guo}{来|lai}。', wrong: ['{明天|míng·tiān}{我|wǒ}{带|dài}{过|guo}{来|lai}{把|bǎ}{护照|hù·zhào}。', '{明天|míng·tiān}{我|wǒ}{把|bǎ}{带|dài}{护照|hù·zhào}{过|guo}{来|lai}。', '{我|wǒ}{把|bǎ}{明天|míng·tiān}{护照|hù·zhào}{带|dài}{来|lai}{过|guo}。'], why: 'Idő + A + {把|bǎ} + tárgy + {带过来|dài guolai}.', point: 2 },
+    { q: 'Mit jelent: {请把书放回去|qǐng bǎ shū fàng huiqu}。', a: 'Kérem, tegye vissza a könyvet.', wrong: ['Kérem, hozza vissza holnap a könyvet.', 'Kérem, vegye ki a könyvet.', 'Kérem, adja oda a könyvet.'], why: '{放回去|fàng huiqu} „visszatesz".', point: 2 },
+    { q: '„Eurót szeretnék jüanra váltani."', a: '{我|wǒ}{想|xiǎng}{把|bǎ}{欧元|Ōu·yuán}{换|huàn}{成|chéng}{人民币|rén·mín·bì}。', wrong: ['{我|wǒ}{想|xiǎng}{把|bǎ}{人民币|rén·mín·bì}{换|huàn}{成|chéng}{欧元|Ōu·yuán}。', '{我|wǒ}{想|xiǎng}{换|huàn}{欧元|Ōu·yuán}{成|chéng}{把|bǎ}{人民币|rén·mín·bì}。', '{我|wǒ}{把|bǎ}{想|xiǎng}{欧元|Ōu·yuán}{成|chéng}{换|huàn}{人民币|rén·mín·bì}。'], why: '{把|bǎ} + X + {换成|huànchéng} + Y.', point: 3 },
+    { q: 'Mit jelent: {我把你看成你姐姐了|wǒ bǎ nǐ kànchéng nǐ jiějie le}。', a: 'Összetévesztettelek a nővéreddel.', wrong: ['Láttam a nővéredet.', 'Olyan vagy, mint a nővéred.', 'A nővéreddel együtt láttalak.'], why: '{看成|kànchéng} „összetéveszt".', point: 3 },
+    { q: '„Fordítsd le ezt a mondatot kínaira!"', a: '{把|bǎ}{这|zhè}{句|jù}{话|huà}{翻译|fān·yì}{成|chéng}{汉语|Hàn·yǔ}。', wrong: ['{把|bǎ}{汉语|Hàn·yǔ}{翻译|fān·yì}{成|chéng}{这|zhè}{句|jù}{话|huà}。', '{翻译|fān·yì}{这|zhè}{句|jù}{话|huà}{把|bǎ}{成|chéng}{汉语|Hàn·yǔ}。', '{把|bǎ}{这|zhè}{句|jù}{话|huà}{成|chéng}{汉语|Hàn·yǔ}{翻译|fān·yì}。'], why: '{把|bǎ} + X + {翻译成|fānyì chéng} + Y.', point: 3 },
+    { q: '„Segítenél bevinni a dobozt?"', a: '{你|nǐ}{能|néng}{帮|bāng}{我|wǒ}{把|bǎ}{箱子|xiāng·zi}{搬|bān}{进|jìn}{去|qu}{吗|ma}？', wrong: ['{你|nǐ}{能|néng}{把|bǎ}{箱子|xiāng·zi}{帮|bāng}{我|wǒ}{搬|bān}{进|jìn}{去|qu}{吗|ma}？', '{你|nǐ}{帮|bāng}{把|bǎ}{我|wǒ}{箱子|xiāng·zi}{搬|bān}{进|jìn}{去|qu}{吗|ma}？', '{你|nǐ}{能|néng}{帮|bāng}{我|wǒ}{搬|bān}{进|jìn}{去|qu}{把|bǎ}{箱子|xiāng·zi}{吗|ma}？'], why: '{帮|bāng} + személy + {把|bǎ} + tárgy + ige.', point: 4 },
+    { q: 'Mit jelent: {请帮我把门打开|qǐng bāng wǒ bǎ mén dǎkāi}。', a: 'Kérlek, nyisd ki nekem az ajtót.', wrong: ['Kérlek, csukd be az ajtót.', 'Segíts nekem bemenni.', 'Kérlek, ne nyisd ki az ajtót.'], why: '{打开|dǎkāi} „kinyit".', point: 4 },
+    { q: 'Melyik mondat hibás?', a: '{我|wǒ}{把|bǎ}{这|zhè}{份|fèn}{工作|gōng·zuò}{很|hěn}{喜欢|xǐ·huan}。', wrong: ['{我|wǒ}{把|bǎ}{文件|wén·jiàn}{交|jiāo}{给|gěi}{小王|Xiǎo Wáng}{了|le}。', '{我|wǒ}{把|bǎ}{箱子|xiāng·zi}{搬|bān}{到|dào}{会议室|huì·yì·shì}{了|le}。', '{我|wǒ}{把|bǎ}{欧元|Ōu·yuán}{换|huàn}{成|chéng}{了|le}{人民币|rén·mín·bì}。'], why: 'Érzelmi igével ({喜欢|xǐhuan}) nem áll {把|bǎ}.', point: 5 },
+    { q: '„Nem bírom megmozdítani a dobozt." — melyik helyes?', a: '{箱子|xiāng·zi}{我|wǒ}{搬|bān}{不|bu}{动|dòng}。', wrong: ['{我|wǒ}{把|bǎ}{箱子|xiāng·zi}{搬|bān}{不|bu}{动|dòng}。', '{我|wǒ}{把|bǎ}{箱子|xiāng·zi}{不|bù}{搬|bān}{动|dòng}。', '{我|wǒ}{不|bù}{把|bǎ}{箱子|xiāng·zi}{搬|bān}{得|de}{动|dòng}。'], why: 'Lehetőséget kifejező kiegészítővel nem áll {把|bǎ}.', point: 5 },
+    { q: 'Melyik igével NEM használható a {把|bǎ}?', a: '{认识|rèn·shi}', wrong: ['{放|fàng}', '{翻译|fān·yì}', '{交|jiāo}'], why: 'A {认识|rènshi} nem hat a tárgyra — ismeretet jelöl.', point: 5 },
+    { q: 'Mit jelent a {护照|hùzhào}?', a: 'útlevél', wrong: ['személyi igazolvány', 'vízum', 'jogosítvány'], why: '{别忘了把护照带上|bié wàngle bǎ hùzhào dàishang}.' },
+    { q: 'Mit jelent a {打印|dǎyìn}?', a: 'kinyomtat', wrong: ['beszkennel', 'lemásol', 'aláír'], why: '{把它打印出来|bǎ tā dǎyìn chulai} „nyomtasd ki".' },
+    { q: 'Mit jelent: {别忘了把护照带上|bié wàngle bǎ hùzhào dàishang}。', a: 'Ne felejtsd el magaddal vinni az útleveled.', wrong: ['Ne felejtsd el leadni az útleveled.', 'Ne vidd magaddal az útleveled.', 'Ne felejtsd el, hol az útleveled.'], why: '{带上|dàishang} „magával visz".', point: 2 }
+  ]
 }
 
 ];
