@@ -227,7 +227,40 @@ const HANZIFLOW_PATH = [
     module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l18&round=listen' },
   { id: 'l18-read', glyph: '读', title: 'Olvasás: A reptéren',
     desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
-    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l18&round=read' }
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l18&round=read' },
+
+  // ── HSK 2 · 4. lecke ──
+  { id: 'l19-lesson', glyph: '帮', title: 'Magyarázat: 是…的 (ki?), …的时候, 已经…了, 帮, két tárgy',
+    desc: 'Ki tette, mikor, és már megtörtént-e: segítség és új munka.',
+    module: 'lesson', href: 'pages/lesson.html?id=l19' },
+  { id: 'l19-listen', glyph: '听', title: 'Hallás: az új munka',
+    desc: 'A lecke mondatai hang után: mit jelent, amit hallasz?',
+    module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l19&round=listen' },
+  { id: 'l19-read', glyph: '读', title: 'Olvasás: Anna új munkája',
+    desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l19&round=read' },
+
+  // ── HSK 2 · 5. lecke ──
+  { id: 'l20-lesson', glyph: '千', title: 'Magyarázat: 还, 就, 千, 有点儿 / 一点儿, 件 · 条 · 双',
+    desc: 'Ruhavásárlás: ár ezres nagyságrendben, alku, még egy darab.',
+    module: 'lesson', href: 'pages/lesson.html?id=l20' },
+  { id: 'l20-listen', glyph: '听', title: 'Hallás: a ruhavásáron',
+    desc: 'A lecke mondatai hang után: mit jelent, amit hallasz?',
+    module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l20&round=listen' },
+  { id: 'l20-read', glyph: '读', title: 'Olvasás: Kabátvásárlás',
+    desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l20&round=read' },
+
+  // ── HSK 2 · 6. lecke ──
+  { id: 'l21-lesson', glyph: '因', title: 'Magyarázat: 怎么 (hogyhogy), 因为…所以, 了 (változás), 不…了, 可以',
+    desc: 'Magyarázkodás: miért nem jöttél, mi változott, mit nem csinálsz már.',
+    module: 'lesson', href: 'pages/lesson.html?id=l21' },
+  { id: 'l21-listen', glyph: '听', title: 'Hallás: magyarázkodás',
+    desc: 'A lecke mondatai hang után: mit jelent, amit hallasz?',
+    module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l21&round=listen' },
+  { id: 'l21-read', glyph: '读', title: 'Olvasás: Miért nem jött David?',
+    desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l21&round=read' }
 ];
 
 const HANZIFLOW_PATH_UNITS = [
@@ -268,5 +301,11 @@ const HANZIFLOW_PATH_UNITS = [
   { id: 'u-l17', kicker: 'HSK 2 · 2. lecke', title: 'Minden nap hatkor kelek', sub: '每…都, 是不是, időtartam, 多高 / 多长时间',
     steps: ['l17-lesson', 'l17-listen', 'l17-read'] },
   { id: 'u-l18', kicker: 'HSK 2 · 3. lecke', title: 'A bal oldali piros az enyém', sub: '红色的 · 我的, színek, 左边 / 右边 / 旁边, 一下',
-    steps: ['l18-lesson', 'l18-listen', 'l18-read'] }
+    steps: ['l18-lesson', 'l18-listen', 'l18-read'] },
+  { id: 'u-l19', kicker: 'HSK 2 · 4. lecke', title: 'Ki ajánlotta?', sub: '是…的 (ki?), …的时候, 已经…了, 帮, 教 / 给 / 问 / 送',
+    steps: ['l19-lesson', 'l19-listen', 'l19-read'] },
+  { id: 'u-l20', kicker: 'HSK 2 · 5. lecke', title: 'Kicsit olcsóbban?', sub: '还, 就, 百 / 千 / 零, 有点儿 / 一点儿, ruhák mérőszavai',
+    steps: ['l20-lesson', 'l20-listen', 'l20-read'] },
+  { id: 'u-l21', kicker: 'HSK 2 · 6. lecke', title: 'Hogyhogy nem jöttél?', sub: '怎么 + 没, 因为…所以…, mondatvégi 了, 不…了, 可以',
+    steps: ['l21-lesson', 'l21-listen', 'l21-read'] }
 ];
