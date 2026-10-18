@@ -2006,7 +2006,7 @@ const HANZIFLOW_COURSE = [
     {
       title: '{呢|ne}', sub: '„hol van…?" — {小猫|xiǎo māo}{呢|ne}？',
       pattern: 'főnév + {呢|ne}？（beszélgetés elején）',
-      body: 'Ha egy főnév után egymagában, a beszélgetés elején áll a {呢|ne}, azt kérdezi: <b>hol van?</b> {小猫呢|xiǎo māo ne}？ „Hol a cica?", {你的书呢|nǐ de shū ne}？ „Hol a könyved?" Ez a kérdés természetesebb és rövidebb, mint a {…在哪儿|… zài nǎr}？',
+      body: 'Ha egy főnév után egymagában, a beszélgetés elején áll a {呢|ne}, azt kérdezi: <b>hol van?</b> {小猫呢|xiǎo māo ne}？ „Hol a cica?", {你的书呢|nǐ de shū ne}？ „Hol a könyved?" Ez a kérdés természetesebb és rövidebb, mint a …{在哪儿|zài nǎr}？',
       more: [
         'A 4. leckében a {呢|ne} visszakérdezett („és te?"). A két jelentés a helyzetből válik szét: ha előtte már mondtál valamit ({我很好，你呢|wǒ hěn hǎo, nǐ ne}？), visszakérdez; ha a beszélgetés elején jön, a hollétre kérdez.'
       ],
@@ -2489,6 +2489,764 @@ const HANZIFLOW_COURSE = [
     { q: 'Melyik a „délután"?', a: '{下午|xià·wǔ}', wrong: ['{上午|shàng·wǔ}', '{中午|zhōng·wǔ}', '{晚上|wǎn·shang}'], why: '{上午|shàngwǔ} délelőtt · {中午|zhōngwǔ} dél · {下午|xiàwǔ} délután.', point: 2 },
     { q: '{晚上我们去看电影，好吗|wǎnshang wǒmen qù kàn diànyǐng, hǎo ma}？ — mit jelent a {好吗|hǎo ma}?', a: '„jó?" — javaslat utáni kérdés', wrong: ['„jó film?" — a filmről kérdez', '„jól vagy?" — hogylétre kérdez', '„nem jó?" — tagadó kérdés'], why: 'Javaslat + {好吗|hǎo ma}？ = „…, jó lesz?"', point: 2 },
     { q: 'Melyik mondat hibás?', a: '{我|wǒ}{吃|chī}{饭|fàn}{十二|shí·èr}{点|diǎn}。', wrong: ['{我|wǒ}{十二|shí·èr}{点|diǎn}{吃|chī}{饭|fàn}。', '{十二|shí·èr}{点|diǎn}{我|wǒ}{吃|chī}{饭|fàn}。', '{我|wǒ}{中午|zhōng·wǔ}{吃|chī}{饭|fàn}。'], why: 'Az időpont nem kerülhet az ige után.', point: 2 }
+  ]
+},
+
+/* ════════════════════════════════════════════════════
+   12. LECKE — 怎么样, 太…了, téma + állítmány, 会 (valószínűség)
+   ════════════════════════════════════════════════════ */
+{
+  id: 'l12', no: 12, kicker: 'HSK 1 · 12. lecke',
+  title: 'Milyen idő lesz holnap? — időjárás és hogylét',
+  lead: 'Beszélsz az időjárásról, megkérdezed, hogy van valaki, és javaslatot teszel. Közben: a sokoldalú 怎么样, a túlzó 太…了, és a 会 második jelentése — „valószínűleg fog".',
+  cando: [
+    'Megkérdezed, milyen valami (天气怎么样？), és javaslatot teszel (…，怎么样？).',
+    'Erős érzést fejezel ki: 太热了！ 太好了！',
+    'Elmondod, hogy van valaki: 我身体很好.',
+    'Előrejelzést mondasz a 会 segédigével: 明天会下雨.'
+  ],
+  intro: [
+    'Az időjárás Kínában is az első beszédtéma két ismeretlen között. A legfontosabb kérdés: {天气怎么样|tiānqì zěnmeyàng}？ „Milyen az idő?" — és a {怎么样|zěnmeyàng} szinte bármire rákérdez: hogylétre, ízre, filmre, tervre.',
+    'Új mondatszerkezetet is tanulsz: a <b>téma + megjegyzés</b> mondatot. A {我身体很好|wǒ shēntǐ hěn hǎo} szó szerint „én — a testem jó": előbb kimondod, kiről/miről beszélsz, aztán azt, ami róla igaz. A kínaiban ez nagyon gyakori.'
+  ],
+  dialogue: {
+    title: 'Hétvégi tervek',
+    scene: 'Péntek este. Anna felhívja Zhang tanárnőt, mert szombaton közös kirándulást terveztek a Nagy Falhoz.',
+    lines: [
+      { who: 'Anna', zh: '{张|Zhāng}{老师|lǎo·shī}，{明天|míng·tiān}{天气|tiān·qì}{怎么样|zěn·me·yàng}？', hu: 'Zhang tanárnő, milyen idő lesz holnap?' },
+      { who: 'Zhang tanárnő', zh: '{明天|míng·tiān}{会|huì}{下雨|xià yǔ}，{很|hěn}{冷|lěng}。', hu: 'Holnap esni fog, és hideg lesz.' },
+      { who: 'Anna', zh: '{太|tài}{冷|lěng}{了|le}！{我们|wǒ·men}{星期天|xīng·qī·tiān}{去|qù}，{怎么样|zěn·me·yàng}？', hu: 'Az túl hideg! Menjünk vasárnap, jó?' },
+      { who: 'Zhang tanárnő', zh: '{好|hǎo}。{星期天|xīng·qī·tiān}{不|bú}{会|huì}{下雨|xià yǔ}，{天气|tiān·qì}{很|hěn}{好|hǎo}。', hu: 'Rendben. Vasárnap nem fog esni, szép idő lesz.' },
+      { who: 'Zhang tanárnő', zh: '{你|nǐ}{身体|shēn·tǐ}{怎么样|zěn·me·yàng}？', hu: 'És hogy vagy (egészségileg)?' },
+      { who: 'Anna', zh: '{我|wǒ}{身体|shēn·tǐ}{很|hěn}{好|hǎo}，{谢谢|xiè·xie}！', hu: 'Jól vagyok, köszönöm!' },
+      { who: 'Zhang tanárnő', zh: '{北京|Běi·jīng}{的|de}{秋天|qiū·tiān}{很|hěn}{漂亮|piào·liang}，{你|nǐ}{会|huì}{喜欢|xǐ·huan}{的|de}。', hu: 'A pekingi ősz nagyon szép, meg fog tetszeni.' }
+    ],
+    notes: [
+      'A {下雨|xià yǔ} szó szerint „esőt ejt (le)": a {下|xià} „le" + {雨|yǔ} „eső". Ugyanígy: {下雪|xià xuě} „havazik".',
+      'A {…，怎么样|…, zěnmeyàng}？ a javaslat utáni kérdés: „…, mit szólsz?" Ugyanaz a funkció, mint a 11. lecke {好吗|hǎo ma}？ kérdésének.',
+      'A {你会喜欢的|nǐ huì xǐhuan de} „biztosan tetszeni fog": a mondat végi {的|de} a meggyőződést erősíti. Most egészében jegyezd meg.'
+    ]
+  },
+  points: [
+    {
+      title: '{怎么样|zěnmeyàng}', sub: '„milyen?", „hogy?", „mit szólsz?"',
+      pattern: 'A + {怎么样|zěn·me·yàng}？ · javaslat，{怎么样|zěn·me·yàng}？',
+      body: 'A {怎么样|zěnmeyàng} kétféleképpen kérdez. Egy dolog után <b>milyenségre</b>: {天气怎么样|tiānqì zěnmeyàng}？ „Milyen az idő?", {这个菜怎么样|zhège cài zěnmeyàng}？ „Milyen ez az étel?". Egy javaslat után <b>véleményre</b>: {我们去看电影，怎么样|wǒmen qù kàn diànyǐng, zěnmeyàng}？ „Menjünk moziba, mit szólsz?"',
+      more: [
+        'A válasz rendszerint melléknév ({很好|hěn hǎo}, {不错|búcuò} „nem rossz", {太冷了|tài lěng le}), javaslatra {好|hǎo} / {好啊|hǎo a} „jó!" vagy {不行|bù xíng} „nem jó, nem megy".',
+        'Ne keverd a {怎么|zěnme}-vel (6. lecke): a {怎么|zěnme} ige előtt „hogyan csinálni", a {怎么样|zěnmeyàng} mondat végén „milyen".'
+      ],
+      examples: [
+        { zh: '{今天|jīn·tiān}{天气|tiān·qì}{怎么样|zěn·me·yàng}？', hu: 'Milyen ma az idő?' },
+        { zh: '{这个|zhè·ge}{电影|diàn·yǐng}{怎么样|zěn·me·yàng}？', hu: 'Milyen ez a film?' },
+        { zh: '{我们|wǒ·men}{明天|míng·tiān}{去|qù}，{怎么样|zěn·me·yàng}？', hu: 'Menjünk holnap, mit szólsz?' }
+      ],
+      mistakes: [
+        { bad: '{天气|tiān·qì}{怎么|zěn·me}？', good: '{天气|tiān·qì}{怎么样|zěn·me·yàng}？', why: 'A „milyen?" kérdés {怎么样|zěnmeyàng}; a {怎么|zěnme} ige előtt áll.' }
+      ]
+    },
+    {
+      title: '{太|tài}…{了|le}', sub: '„túl …", „de …!"',
+      pattern: '{太|tài} + melléknév + {了|le}',
+      body: 'A {太|tài} + melléknév + {了|le} erős érzést fejez ki: vagy túlzást („túl hideg"), vagy lelkesedést („de jó!"). {太冷了|tài lěng le} „túl hideg van / de hideg van!", {太好了|tài hǎo le} „nagyszerű!", {太贵了|tài guì le} „túl drága!". A {了|le} itt a mondat végén áll, és a {太|tài}-val együtt jár.',
+      more: [
+        'Tagadva a {了|le} elmarad: {不太冷|bú tài lěng} „nem túl hideg, nem nagyon hideg" — ez udvarias, tompított tagadás.',
+        'Pozitív melléknévvel ({好|hǎo}, {漂亮|piàoliang}) általában lelkesedés, negatívval ({冷|lěng}, {贵|guì}) panasz a jelentése.'
+      ],
+      examples: [
+        { zh: '{太|tài}{冷|lěng}{了|le}！', hu: 'Túl hideg van! / De hideg van!' },
+        { zh: '{太|tài}{好|hǎo}{了|le}！', hu: 'Nagyszerű!' },
+        { zh: '{今天|jīn·tiān}{不|bú}{太|tài}{热|rè}。', hu: 'Ma nincs túl meleg.' }
+      ],
+      mistakes: [
+        { bad: '{太|tài}{冷|lěng}！', good: '{太|tài}{冷|lěng}{了|le}！', why: 'Állításban a {太|tài} mellé a mondat végére {了|le} kell.' }
+      ]
+    },
+    {
+      title: '{我|wǒ}{身体|shēntǐ}{很|hěn}{好|hǎo}', sub: 'téma + megjegyzés',
+      pattern: 'téma + (alany + állítmány)',
+      body: 'A kínai mondat gyakran egy <b>témával</b> kezdődik, és utána egy teljes kis mondat mondja el, mi igaz rá: {我身体很好|wǒ shēntǐ hěn hǎo} „én — a testem jó" = „egészséges vagyok", {北京天气很冷|Běijīng tiānqì hěn lěng} „Peking — az időjárás hideg" = „Pekingben hideg van". Magyarul gyakran „-nál/-nél, -ban" vagy birtokos szerkezet lesz belőle.',
+      more: [
+        'A {你身体怎么样|nǐ shēntǐ zěnmeyàng}？ „Hogy van az egészséged?" udvarias, gondoskodó kérdés, főleg idősebbeknek.',
+        'Ez nem birtokos szerkezet: nem kell {的|de}. {我身体很好|wǒ shēntǐ hěn hǎo} természetesebb, mint {我的身体很好|wǒ de shēntǐ hěn hǎo}.'
+      ],
+      examples: [
+        { zh: '{我|wǒ}{身体|shēn·tǐ}{很|hěn}{好|hǎo}。', hu: 'Egészséges vagyok. (Jól vagyok.)' },
+        { zh: '{北京|Běi·jīng}{天气|tiān·qì}{很|hěn}{冷|lěng}。', hu: 'Pekingben hideg van.' },
+        { zh: '{她|tā}{汉语|Hàn·yǔ}{很|hěn}{好|hǎo}。', hu: 'Jól tud kínaiul. (A kínaija jó.)' }
+      ]
+    },
+    {
+      title: '{会|huì}', sub: '„valószínűleg fog" — előrejelzés',
+      pattern: 'A + {会|huì} + ige / melléknév · A + {不会|bú huì} + …',
+      body: 'A 6. leckében a {会|huì} megtanult tudást jelentett. Most egy második jelentést tanulsz: <b>valószínű jövő, előrejelzés</b>. {明天会下雨|míngtiān huì xià yǔ} „holnap esni fog", {他会来|tā huì lái} „el fog jönni (szerintem)". Tagadva {不会|bú huì}: {明天不会下雨|míngtiān bú huì xià yǔ} „holnap nem fog esni".',
+      more: [
+        'A kettőt a helyzet választja szét: {我会说汉语|wǒ huì shuō Hànyǔ} „tudok kínaiul" (megtanult tudás), {明天会冷|míngtiān huì lěng} „holnap hideg lesz" (előrejelzés).',
+        'A mondat végi {的|de} erősítheti a bizonyosságot: {你会喜欢的|nǐ huì xǐhuan de} „biztosan tetszeni fog".'
+      ],
+      examples: [
+        { zh: '{明天|míng·tiān}{会|huì}{下雨|xià yǔ}。', hu: 'Holnap esni fog.' },
+        { zh: '{他|tā}{今天|jīn·tiān}{不|bú}{会|huì}{来|lái}。', hu: 'Ma nem fog eljönni.' },
+        { zh: '{晚上|wǎn·shang}{会|huì}{很|hěn}{冷|lěng}。', hu: 'Este hideg lesz.' }
+      ]
+    },
+    {
+      title: '{热|rè} · {冷|lěng} · {下雨|xià yǔ}', sub: 'időjárás-szavak',
+      pattern: '{天气|tiān·qì} + {很|hěn} + {热|rè} / {冷|lěng} · {下雨|xià yǔ} / {下雪|xià xuě}',
+      body: 'Az időjárásról a melléknév-állítmányos mondattal beszélsz: {今天很热|jīntiān hěn rè} „ma meleg van", {外面很冷|wàimiàn hěn lěng} „kint hideg van". A csapadék ige: {下雨|xià yǔ} „esik az eső", {下雪|xià xuě} „havazik". A kínai ilyenkor nem tesz alanyt a mondatba, mint a magyar „esik".',
+      tables: [
+        { caption: 'Időjárás',
+          head: ['Kínaiul', 'Magyarul'],
+          rows: [
+            ['{热|rè}', 'meleg, forró'], ['{冷|lěng}', 'hideg'],
+            ['{下雨|xià yǔ}', 'esik az eső'], ['{下雪|xià xuě}', 'havazik'],
+            ['{晴天|qíng·tiān}', 'derült idő'], ['{阴天|yīn·tiān}', 'borult idő']
+          ] }
+      ],
+      examples: [
+        { zh: '{今天|jīn·tiān}{很|hěn}{热|rè}。', hu: 'Ma meleg van.' },
+        { zh: '{外面|wài·miàn}{下雨|xià yǔ}{了|le}。', hu: 'Kint elkezdett esni.' }
+      ]
+    }
+  ],
+  phrases: [
+    { zh: '{天气|tiān·qì}{怎么样|zěn·me·yàng}？', hu: 'Milyen az idő?' },
+    { zh: '{太|tài}{好|hǎo}{了|le}！', hu: 'Nagyszerű!' },
+    { zh: '{太|tài}{冷|lěng}{了|le}！', hu: 'De hideg van!' },
+    { zh: '{你|nǐ}{身体|shēn·tǐ}{怎么样|zěn·me·yàng}？', hu: 'Hogy van az egészséged?' },
+    { zh: '……，{怎么样|zěn·me·yàng}？', hu: '…, mit szólsz?' }
+  ],
+  words: [
+    { title: 'Szavak',
+      items: [
+        { zh: '{天气|tiān·qì}', pinyin: 'tiānqì', hu: 'időjárás' },
+        { zh: '{怎么样|zěn·me·yàng}', pinyin: 'zěnmeyàng', hu: 'milyen, hogy' },
+        { zh: '{太|tài}', pinyin: 'tài', hu: 'túl, nagyon' },
+        { zh: '{热|rè}', pinyin: 'rè', hu: 'meleg' },
+        { zh: '{冷|lěng}', pinyin: 'lěng', hu: 'hideg' },
+        { zh: '{下雨|xià yǔ}', pinyin: 'xià yǔ', hu: 'esik az eső' },
+        { zh: '{小姐|xiǎo·jiě}', pinyin: 'xiǎojiě', hu: 'kisasszony' },
+        { zh: '{来|lái}', pinyin: 'lái', hu: 'jönni' },
+        { zh: '{身体|shēn·tǐ}', pinyin: 'shēntǐ', hu: 'test; egészség' },
+        { zh: '{爱|ài}', pinyin: 'ài', hu: 'szeretni' },
+        { zh: '{些|xiē}', pinyin: 'xiē', hu: 'néhány' },
+        { zh: '{水果|shuǐ·guǒ}', pinyin: 'shuǐguǒ', hu: 'gyümölcs' },
+        { zh: '{水|shuǐ}', pinyin: 'shuǐ', hu: 'víz' }
+      ] },
+    { title: 'Ráadás',
+      items: [
+        { zh: '{秋天|qiū·tiān}', pinyin: 'qiūtiān', hu: 'ősz' },
+        { zh: '{漂亮|piào·liang}', pinyin: 'piàoliang', hu: 'szép' },
+        { zh: '{喜欢|xǐ·huan}', pinyin: 'xǐhuan', hu: 'szeretni, kedvelni' },
+        { zh: '{下雪|xià xuě}', pinyin: 'xià xuě', hu: 'havazik' },
+        { zh: '{贵|guì}', pinyin: 'guì', hu: 'drága' }
+      ] }
+  ],
+  culture: [
+    { title: 'Négy évszak, sok éghajlat', text: 'Peking telén mínusz tíz fok is lehet, nyara forró és párás; tavasszal a Góbiból érkező homokviharok szürkére festik az eget. Közben Kína déli partvidékén szinte sosincs tél, a délnyugati Kunmingot pedig „az örök tavasz városának" nevezik. Pekingben a legszebb évszak az ősz: tiszta, napos, enyhe.' },
+    { title: 'Igyál meleg vizet!', text: 'Kínában a hideg vizet sokan egészségtelennek tartják: inkább meleg vizet vagy teát isznak, nyáron is. Ha megfázol, szinte biztosan ezt a tanácsot kapod: {多喝热水|duō hē rè shuǐ} „igyál sok meleg vizet!" — ez annyira közismert, hogy a kínaiak maguk is viccelődnek vele.' }
+  ],
+  reading: {
+    title: '{北京|Běi·jīng}{的|de}{天气|tiān·qì}', titleHu: 'Peking időjárása',
+    text: [
+      { zh: '{我|wǒ}{很|hěn}{喜欢|xǐ·huan}{北京|Běi·jīng}，{但是|dàn·shì}{北京|Běi·jīng}{的|de}{冬天|dōng·tiān}{太|tài}{冷|lěng}{了|le}。', hu: 'Nagyon szeretem Pekinget, de a pekingi tél túl hideg.' },
+      { zh: '{夏天|xià·tiān}{很|hěn}{热|rè}，{常常|cháng·cháng}{下雨|xià yǔ}。', hu: 'A nyár meleg, gyakran esik.' },
+      { zh: '{秋天|qiū·tiān}{天气|tiān·qì}{最|zuì}{好|hǎo}，{不|bù}{冷|lěng}{也|yě}{不|bú}{热|rè}。', hu: 'Ősszel a legjobb az idő: se nem hideg, se nem meleg.', par: true },
+      { zh: '{今天|jīn·tiān}{是|shì}{十月|shí·yuè}{二十|èr·shí}{号|hào}，{天气|tiān·qì}{很|hěn}{好|hǎo}。', hu: 'Ma október 20. van, szép idő van.' },
+      { zh: '{明天|míng·tiān}{会|huì}{下雨|xià yǔ}，{我|wǒ}{不|bù}{想|xiǎng}{出去|chū·qu}。', hu: 'Holnap esni fog, nincs kedvem kimenni.', par: true }
+    ],
+    words: [ { zh: '{冬天|dōng·tiān}', hu: 'tél' }, { zh: '{夏天|xià·tiān}', hu: 'nyár' }, { zh: '{常常|cháng·cháng}', hu: 'gyakran' }, { zh: '{最|zuì}', hu: 'leg-' }, { zh: '{出去|chū·qu}', hu: 'kimenni' } ],
+    questions: [
+      { q: 'Mi nem tetszik a szöveg írójának Pekingben?', a: 'a túl hideg tél', wrong: ['a meleg nyár', 'az esős ősz', 'semmi'], why: '{北京的冬天太冷了|Běijīng de dōngtiān tài lěng le}.' },
+      { q: 'Milyen a nyár?', a: 'meleg, és gyakran esik', wrong: ['hideg és száraz', 'enyhe, sosem esik', 'havazik'], why: '{夏天很热，常常下雨|xiàtiān hěn rè, chángcháng xià yǔ}.' },
+      { q: 'Melyik évszakban a legjobb az idő?', a: 'ősszel', wrong: ['nyáron', 'télen', 'tavasszal'], why: '{秋天天气最好|qiūtiān tiānqì zuì hǎo}.' },
+      { q: 'Miért nem akar holnap kimenni?', a: 'mert esni fog', wrong: ['mert túl meleg lesz', 'mert beteg', 'mert dolgoznia kell'], why: '{明天会下雨，我不想出去|míngtiān huì xià yǔ, wǒ bù xiǎng chūqu}.' }
+    ]
+  },
+  quiz: [
+    { q: 'Hogyan kérdezed: „Milyen az idő?"', a: '{天气|tiān·qì}{怎么样|zěn·me·yàng}？', wrong: ['{天气|tiān·qì}{怎么|zěn·me}？', '{天气|tiān·qì}{什么|shén·me}？', '{怎么样|zěn·me·yàng}{天气|tiān·qì}{吗|ma}？'], why: '{怎么样|zěnmeyàng} a mondat végén.', point: 1 },
+    { q: 'Mit jelent: {我们去吃饭，怎么样|wǒmen qù chī fàn, zěnmeyàng}？', a: 'Menjünk enni, mit szólsz?', wrong: ['Hogyan megyünk enni?', 'Milyen volt az étel?', 'Mit eszünk?'], why: 'Javaslat + {怎么样|zěnmeyàng}: véleményt kér.', point: 1 },
+    { q: 'Mi a különbség a {怎么|zěnme} és a {怎么样|zěnmeyàng} között?', a: '{怎么|zěnme} + ige: hogyan csinálni · {怎么样|zěnmeyàng}: milyen', wrong: ['{怎么样|zěnmeyàng} + ige: hogyan csinálni · {怎么|zěnme}: milyen', 'a {怎么样|zěnmeyàng} csak az udvarias, hosszabb alakja', 'a {怎么|zěnme} múlt idő, a {怎么样|zěnmeyàng} jelen'], why: '{怎么写|zěnme xiě}？ „hogyan írjuk" · {天气怎么样|tiānqì zěnmeyàng}？ „milyen az idő".', point: 1 },
+    { q: '„De hideg van!"', a: '{太|tài}{冷|lěng}{了|le}！', wrong: ['{太|tài}{冷|lěng}！', '{冷|lěng}{太|tài}{了|le}！', '{很|hěn}{太|tài}{冷|lěng}！'], why: '{太|tài} + melléknév + {了|le}.', point: 2 },
+    { q: 'Mit jelent: {太好了|tài hǎo le}！', a: 'Nagyszerű!', wrong: ['Túl jó, nem kérem.', 'Nem jó.', 'Jó volt.'], why: 'Pozitív melléknévvel a {太|tài}…{了|le} lelkesedés.', point: 2 },
+    { q: 'Mit jelent: {今天不太热|jīntiān bú tài rè}。', a: 'Ma nincs túl meleg.', wrong: ['Ma nagyon meleg van.', 'Ma hideg van.', 'Ma nem lesz meleg.'], why: '{不太|bú tài} + melléknév: tompított tagadás.', point: 2 },
+    { q: '„Egészséges vagyok." (szó szerint: én – test – jó)', a: '{我|wǒ}{身体|shēn·tǐ}{很|hěn}{好|hǎo}。', wrong: ['{我|wǒ}{是|shì}{身体|shēn·tǐ}{好|hǎo}。', '{身体|shēn·tǐ}{我|wǒ}{好|hǎo}{很|hěn}。', '{我|wǒ}{很|hěn}{身体|shēn·tǐ}{好|hǎo}。'], why: 'Téma ({我|wǒ}) + kis mondat ({身体很好|shēntǐ hěn hǎo}).', point: 3 },
+    { q: 'Mit jelent: {北京天气很冷|Běijīng tiānqì hěn lěng}。', a: 'Pekingben hideg van.', wrong: ['Peking hideg város.', 'Pekingbe hideg idő jön.', 'Pekingben milyen az idő?'], why: 'Téma + megjegyzés: „Peking — az idő hideg".', point: 3 },
+    { q: '„Holnap esni fog."', a: '{明天|míng·tiān}{会|huì}{下雨|xià yǔ}。', wrong: ['{明天|míng·tiān}{下雨|xià yǔ}{会|huì}。', '{明天|míng·tiān}{是|shì}{下雨|xià yǔ}。', '{明天|míng·tiān}{能|néng}{下雨|xià yǔ}。'], why: 'Előrejelzés: {会|huì} + ige.', point: 4 },
+    { q: 'Melyik mondatban jelent a {会|huì} előrejelzést?', a: '{明天|míng·tiān}{会|huì}{很|hěn}{冷|lěng}。', wrong: ['{我|wǒ}{会|huì}{说|shuō}{汉语|Hàn·yǔ}。', '{她|tā}{会|huì}{做|zuò}{中国菜|Zhōng·guó·cài}。', '{你|nǐ}{会|huì}{写|xiě}{汉字|Hàn·zì}{吗|ma}？'], why: 'A többiben a {会|huì} megtanult tudást jelent.', point: 4 },
+    { q: 'Mit jelent: {下雨|xià yǔ}?', a: 'esik az eső', wrong: ['esernyő', 'havazik', 'felhős'], why: '{下|xià} „le" + {雨|yǔ} „eső".', point: 5 },
+    { q: 'Melyik a „hideg"?', a: '{冷|lěng}', wrong: ['{热|rè}', '{太|tài}', '{水|shuǐ}'], why: '{冷|lěng} hideg ↔ {热|rè} meleg.', point: 5 },
+    { q: 'Mit jelent a {身体|shēntǐ}?', a: 'test; egészség', wrong: ['időjárás', 'gyümölcs', 'család'], why: '{你身体怎么样|nǐ shēntǐ zěnmeyàng}？ „Hogy van az egészséged?"', point: 3 },
+    { q: 'Mit jelent a {水果|shuǐguǒ}?', a: 'gyümölcs', wrong: ['víz', 'gyümölcslé', 'zöldség'], why: '{水|shuǐ} „víz" + {果|guǒ} „termés": lédús termés.' },
+    { q: 'Melyik mondat hibás?', a: '{今天|jīn·tiān}{太|tài}{热|rè}。', wrong: ['{今天|jīn·tiān}{太|tài}{热|rè}{了|le}。', '{今天|jīn·tiān}{很|hěn}{热|rè}。', '{今天|jīn·tiān}{不|bú}{太|tài}{热|rè}。'], why: 'Állításban a {太|tài} mellé {了|le} kell.', point: 2 },
+    { q: '{我们星期天去，怎么样|wǒmen xīngqītiān qù, zěnmeyàng}？ — elfogadó válasz:', a: '{好|hǎo}{啊|a}！', wrong: ['{怎么样|zěn·me·yàng}！', '{不|bù}{会|huì}。', '{太|tài}{冷|lěng}{了|le}{吗|ma}？'], why: 'Javaslatra: {好|hǎo} / {好啊|hǎo a}.', point: 1 }
+  ]
+},
+
+/* ════════════════════════════════════════════════════
+   13. LECKE — 在…呢, 喂, 给…打电话, 吧, 喜欢
+   ════════════════════════════════════════════════════ */
+{
+  id: 'l13', no: 13, kicker: 'HSK 1 · 13. lecke',
+  title: 'Mit csinálsz éppen? — telefonon',
+  lead: 'Telefonon beszélsz: felveszed (喂？), elmondod, mit csinálsz éppen (我在看电视呢), megkérdezed, mit szeret a másik, és javasolsz valamit (吧).',
+  cando: [
+    'Elmondod, mit csinálsz éppen: 在 + ige (+ 呢).',
+    'Telefonon köszönsz (喂), és elmondod, kit hívsz fel (给…打电话).',
+    'Javasolsz és feltételezel a 吧 szócskával.',
+    'Elmondod, mit szeretsz csinálni (我喜欢看电影).'
+  ],
+  intro: [
+    'A kínai igének nincs folyamatos alakja („olvasok" vs. „éppen olvasok"), de van egy egyszerű szerkezet, amely ezt kifejezi: a {在|zài} az ige előtt, és gyakran egy {呢|ne} a mondat végén. {他在看电视呢|tā zài kàn diànshì ne} „éppen tévét néz".',
+    'Telefonáláskor egy különleges szó jön elő: a {喂|wéi}, amely csak a telefonba mondott „halló". Mellé a {吧|ba} szócskát is megtanulod, amely a javaslatot és a feltevést kedvesebbé, puhábbá teszi.'
+  ],
+  dialogue: {
+    title: 'Egy telefonhívás',
+    scene: 'Szombat délelőtt. David felhívja Wang Minget.',
+    lines: [
+      { who: 'Wang Ming', zh: '{喂|wéi}？', hu: 'Halló?' },
+      { who: 'David', zh: '{喂|wéi}，{王明|Wáng Míng}，{我|wǒ}{是|shì}{大卫|Dà·wèi}。{你|nǐ}{在|zài}{做|zuò}{什么|shén·me}{呢|ne}？', hu: 'Halló, Wang Ming, David vagyok. Mit csinálsz éppen?' },
+      { who: 'Wang Ming', zh: '{我|wǒ}{在|zài}{看|kàn}{电视|diàn·shì}{呢|ne}。{你|nǐ}{呢|ne}？', hu: 'Éppen tévét nézek. És te?' },
+      { who: 'David', zh: '{我|wǒ}{在|zài}{学习|xué·xí}{汉语|Hàn·yǔ}。{安娜|Ān·nà}{在|zài}{你|nǐ}{那儿|nàr}{吗|ma}？', hu: 'Kínait tanulok. Anna ott van nálad?' },
+      { who: 'Wang Ming', zh: '{在|zài}，{她|tā}{在|zài}{跟|gēn}{我|wǒ}{妈妈|mā·ma}{学|xué}{做|zuò}{中国菜|Zhōng·guó·cài}{呢|ne}。', hu: 'Itt van, éppen anyukámtól tanul kínai ételt főzni.' },
+      { who: 'David', zh: '{太|tài}{好|hǎo}{了|le}！{下午|xià·wǔ}{我们|wǒ·men}{一起|yì·qǐ}{去|qù}{看|kàn}{电影|diàn·yǐng}{吧|ba}？', hu: 'Nagyszerű! Délután menjünk el együtt moziba, jó?' },
+      { who: 'Wang Ming', zh: '{好|hǎo}{啊|a}！{安娜|Ān·nà}{也|yě}{喜欢|xǐ·huan}{看|kàn}{电影|diàn·yǐng}。{三|sān}{点|diǎn}{我|wǒ}{给|gěi}{你|nǐ}{打|dǎ}{电话|diàn·huà}。', hu: 'Jó! Anna is szeret moziba járni. Háromkor felhívlak.' }
+    ],
+    notes: [
+      'A {喂|wéi} csak telefonon „halló"; szótárban <i>wèi</i> is áll, de a telefonba szinte mindig emelkedő dallammal mondják.',
+      'A {我是大卫|wǒ shì Dàwèi} telefonon a „David vagyok" bemutatkozás — itt a {是|shì} kell.',
+      'A {跟|gēn}…{学|xué} „valakitől tanul": a {跟|gēn} „-val/-vel" elöljárószó.'
+    ]
+  },
+  points: [
+    {
+      title: '{在|zài} + ige (+ {呢|ne})', sub: 'éppen történő cselekvés',
+      pattern: 'A + {在|zài} + ige (+ tárgy) + {呢|ne}',
+      body: 'Ha egy cselekvés <b>éppen most folyik</b>, a {在|zài} az ige elé kerül, és a mondat végére gyakran {呢|ne} jön: {我在看电视呢|wǒ zài kàn diànshì ne} „éppen tévét nézek", {她在学做菜呢|tā zài xué zuò cài ne} „éppen főzni tanul". A {在|zài} és a {呢|ne} külön-külön is elég: {我在看电视|wǒ zài kàn diànshì} / {我看电视呢|wǒ kàn diànshì ne}.',
+      more: [
+        'Kérdés: {你在做什么呢|nǐ zài zuò shénme ne}？ „Mit csinálsz éppen?" Tagadva {没(在)|méi (zài)}: {我没在看电视|wǒ méi zài kàn diànshì} „nem tévét nézek (most)".',
+        'Ez ugyanaz a {在|zài}, mint a 9. leckében („valahol van"): itt az időben helyezi el a cselekvést, „benne van" a cselekvésben. Ha hely is van, a hely veszi át: {他在医院工作呢|tā zài yīyuàn gōngzuò ne} „éppen a kórházban dolgozik".'
+      ],
+      examples: [
+        { zh: '{我|wǒ}{在|zài}{看|kàn}{电视|diàn·shì}{呢|ne}。', hu: 'Éppen tévét nézek.' },
+        { zh: '{你|nǐ}{在|zài}{做|zuò}{什么|shén·me}{呢|ne}？', hu: 'Mit csinálsz éppen?' },
+        { zh: '{他|tā}{在|zài}{睡觉|shuì·jiào}。', hu: 'Éppen alszik.' },
+        { zh: '{妈妈|mā·ma}{做|zuò}{饭|fàn}{呢|ne}。', hu: 'Anya éppen főz.' }
+      ],
+      mistakes: [
+        { bad: '{我|wǒ}{看|kàn}{在|zài}{电视|diàn·shì}。', good: '{我|wǒ}{在|zài}{看|kàn}{电视|diàn·shì}。', why: 'A {在|zài} az ige előtt áll.' },
+        { bad: '{我|wǒ}{不|bú}{在|zài}{看|kàn}{电视|diàn·shì}。', good: '{我|wǒ}{没|méi}{在|zài}{看|kàn}{电视|diàn·shì}。', why: 'A folyamatos cselekvést a {没|méi} tagadja.' }
+      ]
+    },
+    {
+      title: '{喂|wéi}', sub: '„halló" — telefonon',
+      pattern: '{喂|wéi}？· {喂|wéi}，{我|wǒ}{是|shì}…',
+      body: 'A {喂|wéi} a telefonos „halló": ezzel veszed fel, és ezzel kezded, ha te hívsz. Utána bemutatkozol ({我是安娜|wǒ shì Ānnà} „Anna vagyok"), vagy megkérdezed, kit keresel: {喂，王老师在吗|wéi, Wáng lǎoshī zài ma}？ „Halló, Wang tanár úr ott van?"',
+      more: [
+        'Személyesen, utcán a {喂|wèi} (4. tónussal) „hé!" figyelemfelkeltő, és udvariatlannak hathat. Ismeretlent inkább {你好|nǐ hǎo}-val vagy {请问|qǐngwèn}-nel szólíts meg.'
+      ],
+      examples: [
+        { zh: '{喂|wéi}，{你好|nǐ hǎo}！', hu: 'Halló, jó napot!' },
+        { zh: '{喂|wéi}，{请问|qǐng·wèn}{张|Zhāng}{老师|lǎo·shī}{在|zài}{吗|ma}？', hu: 'Halló, Zhang tanárnő ott van?' }
+      ]
+    },
+    {
+      title: '{给|gěi}…{打电话|dǎ diànhuà}', sub: 'valakit felhívni',
+      pattern: 'A + {给|gěi} + B + {打|dǎ}{电话|diàn·huà}',
+      body: 'A „felhív valakit" kínaiul: „valakinek telefont üt" — {给|gěi} „-nak/-nek" + személy + {打电话|dǎ diànhuà}: {我给你打电话|wǒ gěi nǐ dǎ diànhuà} „felhívlak". A {给|gěi} itt elöljárószó, és mint minden ilyen bővítmény, az ige <b>előtt</b> áll.',
+      more: [
+        'A {给|gěi} önálló igeként „adni": {给我一本书|gěi wǒ yì běn shū} „adj nekem egy könyvet".',
+        'Telefonszámot számjegyenként olvasnak, és az {一|yī}-t <i>yāo</i>-nak mondják: 138… = {一三八|yāo sān bā}…'
+      ],
+      examples: [
+        { zh: '{我|wǒ}{给|gěi}{你|nǐ}{打|dǎ}{电话|diàn·huà}。', hu: 'Felhívlak.' },
+        { zh: '{晚上|wǎn·shang}{我|wǒ}{给|gěi}{妈妈|mā·ma}{打|dǎ}{电话|diàn·huà}。', hu: 'Este felhívom anyát.' },
+        { zh: '{你|nǐ}{的|de}{电话|diàn·huà}{是|shì}{多少|duō·shao}？', hu: 'Mi a telefonszámod?' }
+      ],
+      mistakes: [
+        { bad: '{我|wǒ}{打|dǎ}{电话|diàn·huà}{给|gěi}{你|nǐ}。', good: '{我|wǒ}{给|gěi}{你|nǐ}{打|dǎ}{电话|diàn·huà}。', why: 'A {给|gěi} + személy az ige elé kerül (a fordított sorrend beszédben előfordul, de kezdőnek ez a biztos).' }
+      ]
+    },
+    {
+      title: '{吧|ba}', sub: 'javaslat és feltevés',
+      pattern: 'javaslat + {吧|ba}！ · feltevés + {吧|ba}？',
+      body: 'A mondat végi {吧|ba} két dolgot csinál. <b>Javaslatot</b> tesz kedvesebbé: {我们去看电影吧|wǒmen qù kàn diànyǐng ba} „menjünk moziba!" (nem parancs, hanem „mi lenne, ha…"). <b>Feltevést</b> erősíttet meg: {你是安娜吧|nǐ shì Ānnà ba}？ „Te Anna vagy, ugye?"',
+      more: [
+        'A {吗|ma}-s kérdés semleges („Anna vagy?"), a {吧|ba}-s kérdésnél már sejted a választ („Anna vagy, ugye?").',
+        'A {吧|ba} semleges tónusú, röviden ejted.'
+      ],
+      examples: [
+        { zh: '{我们|wǒ·men}{一起|yì·qǐ}{去|qù}{吧|ba}！', hu: 'Menjünk együtt!' },
+        { zh: '{你|nǐ}{是|shì}{王明|Wáng Míng}{的|de}{朋友|péng·you}{吧|ba}？', hu: 'Te Wang Ming barátja vagy, ugye?' },
+        { zh: '{喝|hē}{点儿|diǎnr}{水|shuǐ}{吧|ba}。', hu: 'Igyál egy kis vizet!' }
+      ]
+    },
+    {
+      title: '{喜欢|xǐhuan}', sub: 'szeretni, kedvelni',
+      pattern: 'A + {喜欢|xǐ·huan} + főnév / ige',
+      body: 'A {喜欢|xǐhuan} „szeretni, kedvelni" után főnév és ige is állhat: {我喜欢猫|wǒ xǐhuan māo} „szeretem a macskákat", {我喜欢看电影|wǒ xǐhuan kàn diànyǐng} „szeretek filmet nézni". Fokozva {很喜欢|hěn xǐhuan} „nagyon szeret", tagadva {不喜欢|bù xǐhuan}.',
+      more: [
+        'A {爱|ài} (12. lecke) erősebb: emberekre „szeretni (szerelemmel)", dolgokra „imádni". A mindennapi „szeretem" a {喜欢|xǐhuan}.',
+        'Az {也|yě} „is" az ige elé kerül, nem a szó mellé, mint a magyarban: {她也喜欢|tā yě xǐhuan} „ő is szereti".'
+      ],
+      examples: [
+        { zh: '{我|wǒ}{很|hěn}{喜欢|xǐ·huan}{中国菜|Zhōng·guó·cài}。', hu: 'Nagyon szeretem a kínai ételeket.' },
+        { zh: '{她|tā}{喜欢|xǐ·huan}{看|kàn}{书|shū}。', hu: 'Szeret olvasni.' },
+        { zh: '{安娜|Ān·nà}{也|yě}{喜欢|xǐ·huan}{看|kàn}{电影|diàn·yǐng}。', hu: 'Anna is szeret moziba járni.' }
+      ],
+      mistakes: [
+        { bad: '{也|yě}{安娜|Ān·nà}{喜欢|xǐ·huan}。', good: '{安娜|Ān·nà}{也|yě}{喜欢|xǐ·huan}。', why: 'Az {也|yě} az alany után, az ige előtt áll.' }
+      ]
+    }
+  ],
+  phrases: [
+    { zh: '{喂|wéi}？', hu: 'Halló?' },
+    { zh: '{你|nǐ}{在|zài}{做|zuò}{什么|shén·me}{呢|ne}？', hu: 'Mit csinálsz éppen?' },
+    { zh: '{我|wǒ}{给|gěi}{你|nǐ}{打|dǎ}{电话|diàn·huà}。', hu: 'Felhívlak.' },
+    { zh: '{我们|wǒ·men}{一起|yì·qǐ}{去|qù}{吧|ba}！', hu: 'Menjünk együtt!' }
+  ],
+  words: [
+    { title: 'Szavak',
+      items: [
+        { zh: '{喂|wéi}', pinyin: 'wéi', hu: 'halló (telefonon)' },
+        { zh: '{也|yě}', pinyin: 'yě', hu: 'is' },
+        { zh: '{学习|xué·xí}', pinyin: 'xuéxí', hu: 'tanulni' },
+        { zh: '{上午|shàng·wǔ}', pinyin: 'shàngwǔ', hu: 'délelőtt' },
+        { zh: '{睡觉|shuì·jiào}', pinyin: 'shuìjiào', hu: 'aludni' },
+        { zh: '{电视|diàn·shì}', pinyin: 'diànshì', hu: 'televízió' },
+        { zh: '{喜欢|xǐ·huan}', pinyin: 'xǐhuan', hu: 'szeretni, kedvelni' },
+        { zh: '{给|gěi}', pinyin: 'gěi', hu: 'adni; -nak/-nek' },
+        { zh: '{打电话|dǎ diàn·huà}', pinyin: 'dǎ diànhuà', hu: 'telefonálni' },
+        { zh: '{吧|ba}', pinyin: 'ba', hu: 'javasló / feltevő szócska' }
+      ] },
+    { title: 'Ráadás',
+      items: [
+        { zh: '{一起|yì·qǐ}', pinyin: 'yìqǐ', hu: 'együtt' },
+        { zh: '{跟|gēn}', pinyin: 'gēn', hu: '-val/-vel' },
+        { zh: '{电话|diàn·huà}', pinyin: 'diànhuà', hu: 'telefon(szám)' }
+      ] }
+  ],
+  culture: [
+    { title: 'Telefonszámok és szerencse', text: 'A {八|bā} „nyolc" hangzása a {发|fā} „meggazdagodni" szóra emlékeztet, ezért a sok nyolcast tartalmazó telefonszámért és rendszámért sokat fizetnek. A {四|sì} „négy" kerülendő (a „halál" szóra hasonlít). A pekingi olimpia is 2008. augusztus 8-án, este 8 óra 8 perckor kezdődött.' },
+    { title: 'Üzenetek hangban', text: 'A kínai fiatalok a hívás helyett gyakran hangüzenetet küldenek a csevegőalkalmazásban. Ennek oka részben a gépelés: kínaiul írni lassabb, mint beszélni. Ha kínai ismerősöd van, készülj rá, hogy sok hangüzenetet kapsz — ez remek hallásgyakorlat!' }
+  ],
+  reading: {
+    title: '{星期六|xīng·qī·liù}{上午|shàng·wǔ}', titleHu: 'Szombat délelőtt',
+    text: [
+      { zh: '{今天|jīn·tiān}{星期六|xīng·qī·liù}，{我们|wǒ·men}{家|jiā}{的|de}{人|rén}{都|dōu}{在|zài}{家|jiā}。', hu: 'Ma szombat van, a családunk minden tagja otthon van.' },
+      { zh: '{爸爸|bà·ba}{在|zài}{看|kàn}{电视|diàn·shì}，{妈妈|mā·ma}{在|zài}{做|zuò}{饭|fàn}。', hu: 'Apa tévét néz, anya főz.' },
+      { zh: '{我|wǒ}{在|zài}{学习|xué·xí}{汉语|Hàn·yǔ}，{小猫|xiǎo māo}{在|zài}{睡觉|shuì·jiào}{呢|ne}。', hu: 'Én kínait tanulok, a cica alszik.', par: true },
+      { zh: '{十|shí}{点|diǎn}，{我|wǒ}{的|de}{朋友|péng·you}{给|gěi}{我|wǒ}{打|dǎ}{电话|diàn·huà}：“{下午|xià·wǔ}{我们|wǒ·men}{去|qù}{商店|shāng·diàn}{吧|ba}！”', hu: 'Tízkor felhív a barátom: „Délután menjünk el a boltba!"' },
+      { zh: '{我|wǒ}{很|hěn}{喜欢|xǐ·huan}{买|mǎi}{东西|dōng·xi}，{我|wǒ}{说|shuō}：“{好|hǎo}{啊|a}！”', hu: 'Nagyon szeretek vásárolni, azt mondom: „Jó!"', par: true }
+    ],
+    words: [ { zh: '{都|dōu}', hu: 'mind, mindnyájan' }, { zh: '{东西|dōng·xi}', hu: 'dolog, holmi' } ],
+    questions: [
+      { q: 'Mit csinál az apa?', a: 'tévét néz', wrong: ['főz', 'alszik', 'kínait tanul'], why: '{爸爸在看电视|bàba zài kàn diànshì}.' },
+      { q: 'Ki alszik?', a: 'a cica', wrong: ['az apa', 'az anya', 'a szöveg írója'], why: '{小猫在睡觉呢|xiǎo māo zài shuìjiào ne}.' },
+      { q: 'Mit javasol a barát?', a: 'hogy délután menjenek boltba', wrong: ['hogy menjenek moziba', 'hogy tanuljanak együtt', 'hogy ebédeljenek együtt'], why: '{下午我们去商店吧|xiàwǔ wǒmen qù shāngdiàn ba}！' },
+      { q: 'Mit válaszol a szöveg írója?', a: 'elfogadja: szeret vásárolni', wrong: ['nemet mond, tanulnia kell', 'nem válaszol', 'azt mondja, majd visszahívja'], why: '{我很喜欢买东西，我说：“好啊！”|wǒ hěn xǐhuan mǎi dōngxi, wǒ shuō: "hǎo a!"}' }
+    ]
+  },
+  quiz: [
+    { q: '„Éppen tévét nézek."', a: '{我|wǒ}{在|zài}{看|kàn}{电视|diàn·shì}{呢|ne}。', wrong: ['{我|wǒ}{看|kàn}{在|zài}{电视|diàn·shì}{呢|ne}。', '{我|wǒ}{是|shì}{看|kàn}{电视|diàn·shì}。', '{在|zài}{我|wǒ}{看|kàn}{电视|diàn·shì}{吗|ma}。'], why: '{在|zài} + ige (+ {呢|ne}).', point: 1 },
+    { q: 'Hogyan kérdezed: „Mit csinálsz éppen?"', a: '{你|nǐ}{在|zài}{做|zuò}{什么|shén·me}{呢|ne}？', wrong: ['{你|nǐ}{做|zuò}{在|zài}{什么|shén·me}？', '{你|nǐ}{在|zài}{哪儿|nǎr}{呢|ne}？', '{你|nǐ}{会|huì}{做|zuò}{什么|shén·me}？'], why: '{在|zài} + {做什么|zuò shénme} + {呢|ne}.', point: 1 },
+    { q: 'Hogyan tagadod: {我在看电视|wǒ zài kàn diànshì}?', a: '{我|wǒ}{没|méi}{在|zài}{看|kàn}{电视|diàn·shì}。', wrong: ['{我|wǒ}{不|bú}{在|zài}{看|kàn}{电视|diàn·shì}。', '{我|wǒ}{在|zài}{不|bú}{看|kàn}{电视|diàn·shì}。', '{我|wǒ}{在|zài}{没|méi}{看|kàn}{电视|diàn·shì}。'], why: 'A folyamatos cselekvés tagadása {没(在)|méi (zài)}.', point: 1 },
+    { q: 'Mit mondasz, amikor felveszed a telefont?', a: '{喂|wéi}？', wrong: ['{吧|ba}？', '{呢|ne}？', '{啊|a}？'], why: 'A telefonos „halló" {喂|wéi}.', point: 2 },
+    { q: '„Felhívlak."', a: '{我|wǒ}{给|gěi}{你|nǐ}{打|dǎ}{电话|diàn·huà}。', wrong: ['{我|wǒ}{打|dǎ}{你|nǐ}{电话|diàn·huà}{给|gěi}。', '{我|wǒ}{电话|diàn·huà}{你|nǐ}。', '{给|gěi}{我|wǒ}{打|dǎ}{你|nǐ}{电话|diàn·huà}。'], why: '{给|gěi} + személy + {打电话|dǎ diànhuà}.', point: 3 },
+    { q: 'Hogyan olvasnak egy telefonszámban 1-est?', a: 'yāo', wrong: ['yī', 'yí', 'yì'], why: 'Telefonszámban az {一|yī} = <i>yāo</i>, hogy ne keverjék a {七|qī}-vel.', point: 3 },
+    { q: 'Mit jelent: {我们去看电影吧|wǒmen qù kàn diànyǐng ba}！', a: 'Menjünk moziba!', wrong: ['Moziba mentünk.', 'Moziba megyünk?', 'Nem megyünk moziba.'], why: 'Javaslat + {吧|ba}.', point: 4 },
+    { q: 'Mit fejez ki a {你是安娜吧|nǐ shì Ānnà ba}？ kérdés?', a: '„Te Anna vagy, ugye?" — sejtett válasz', wrong: ['„Anna vagy?" — teljesen semleges kérdés', '„Legyél Anna!" — parancs', '„Te nem vagy Anna." — tagadás'], why: 'A {吧|ba}-s kérdés megerősítést kér.', point: 4 },
+    { q: '„Szeretek filmet nézni."', a: '{我|wǒ}{喜欢|xǐ·huan}{看|kàn}{电影|diàn·yǐng}。', wrong: ['{我|wǒ}{看|kàn}{电影|diàn·yǐng}{喜欢|xǐ·huan}。', '{我|wǒ}{喜欢|xǐ·huan}{电影|diàn·yǐng}{看|kàn}。', '{喜欢|xǐ·huan}{我|wǒ}{看|kàn}{电影|diàn·yǐng}。'], why: '{喜欢|xǐhuan} + ige + tárgy.', point: 5 },
+    { q: '„Anna is szereti."', a: '{安娜|Ān·nà}{也|yě}{喜欢|xǐ·huan}。', wrong: ['{也|yě}{安娜|Ān·nà}{喜欢|xǐ·huan}。', '{安娜|Ān·nà}{喜欢|xǐ·huan}{也|yě}。', '{安娜|Ān·nà}{喜欢|xǐ·huan}{吧|ba}{也|yě}。'], why: 'Az {也|yě} az ige előtt áll.', point: 5 },
+    { q: 'Mit jelent a {睡觉|shuìjiào}?', a: 'aludni', wrong: ['felkelni', 'pihenni', 'enni'], why: '{他在睡觉|tā zài shuìjiào} „alszik".', point: 1 },
+    { q: 'Mit jelent a {电视|diànshì}?', a: 'televízió', wrong: ['telefon', 'számítógép', 'mozi'], why: '{看电视|kàn diànshì} „tévét néz".' },
+    { q: 'Mit jelent: {她在跟妈妈学做菜呢|tā zài gēn māma xué zuò cài ne}。', a: 'Éppen anyától tanul főzni.', wrong: ['Anyának főz.', 'Anyával eszik.', 'Anya tanítja meg magát főzni.'], why: '{跟|gēn}…{学|xué} „valakitől tanul" + {在|zài}…{呢|ne} folyamatos.', point: 1 },
+    { q: 'Mit jelent a {给|gěi} önálló igeként?', a: 'adni', wrong: ['venni', 'hívni', 'kérni'], why: '{给我一本书|gěi wǒ yì běn shū} „adj nekem egy könyvet".', point: 3 },
+    { q: 'Melyik mondat hibás?', a: '{我|wǒ}{看|kàn}{在|zài}{书|shū}{呢|ne}。', wrong: ['{我|wǒ}{在|zài}{看|kàn}{书|shū}{呢|ne}。', '{我|wǒ}{在|zài}{看|kàn}{书|shū}。', '{我|wǒ}{看|kàn}{书|shū}{呢|ne}。'], why: 'A {在|zài} az ige előtt áll, nem utána.', point: 1 },
+    { q: 'Mit jelent a {一起|yìqǐ}?', a: 'együtt', wrong: ['egyszer', 'egyedül', 'először'], why: '{我们一起去|wǒmen yìqǐ qù} „együtt megyünk".', point: 4 }
+  ]
+},
+
+/* ════════════════════════════════════════════════════
+   14. LECKE — 了 (befejezett cselekvés), 没有, 都, 后
+   ════════════════════════════════════════════════════ */
+{
+  id: 'l14', no: 14, kicker: 'HSK 1 · 14. lecke',
+  title: 'Mit vettél? — ami megtörtént',
+  lead: 'Elmondod, mit csináltál (我买了三个苹果), mit nem (我没买), és összefoglalod: mind (都). Megtanulod a 了 legfontosabb jelentését, és azt, mikor marad el.',
+  cando: [
+    'Befejezett cselekvést mondasz: ige + 了 + mennyiség + tárgy.',
+    'Tagadod: 没(有) + ige — 了 nélkül.',
+    'Összefoglalsz a 都 szóval: 这些都是我的.',
+    'Kifejezed, mi után történik valami: 五分钟后.'
+  ],
+  intro: [
+    'A kínai igének nincs múlt ideje. A {了|le} azt jelzi, hogy egy cselekvés <b>megtörtént, lezárult</b> — függetlenül attól, hogy múltban, jelenben vagy jövőben. {我买了三个苹果|wǒ mǎile sān ge píngguǒ} „vettem három almát".',
+    'Két dologra kell vigyázni: a {了|le} mellé gyakran mennyiség kell a tárgyhoz (különben a mondat „lógva" marad), és a tagadásból <b>eltűnik</b>: „nem vettem" = {我没买|wǒ méi mǎi}, a {了|le} nélkül.'
+  ],
+  dialogue: {
+    title: 'Hazaérkezés a vásárlásból',
+    scene: 'Anna hazaér a szállásra, sok szatyorral. A szobatársa, Li Hua kíváncsi.',
+    lines: [
+      { who: 'Li Hua', zh: '{你|nǐ}{买|mǎi}{了|le}{什么|shén·me}？', hu: 'Mit vettél?' },
+      { who: 'Anna', zh: '{我|wǒ}{买|mǎi}{了|le}{一些|yì·xiē}{水果|shuǐ·guǒ}{和|hé}{两|liǎng}{件|jiàn}{衣服|yī·fu}。', hu: 'Vettem egy kis gyümölcsöt és két ruhát.' },
+      { who: 'Li Hua', zh: '{这些|zhè·xiē}{衣服|yī·fu}{都|dōu}{是|shì}{你|nǐ}{的|de}{吗|ma}？{太|tài}{漂亮|piào·liang}{了|le}！', hu: 'Ezek a ruhák mind a tieid? Nagyon szépek!' },
+      { who: 'Anna', zh: '{不|bú}{是|shì}，{这|zhè}{件|jiàn}{是|shì}{我|wǒ}{妈妈|mā·ma}{的|de}，{我|wǒ}{买|mǎi}{了|le}{一|yí}{件|jiàn}{给|gěi}{她|tā}。', hu: 'Nem, ez itt anyukámé, vettem neki egyet.' },
+      { who: 'Li Hua', zh: '{你|nǐ}{买|mǎi}{苹果|píng·guǒ}{了|le}{吗|ma}？', hu: 'Almát vettél?' },
+      { who: 'Anna', zh: '{没|méi}{买|mǎi}。{商店|shāng·diàn}{的|de}{苹果|píng·guǒ}{太|tài}{贵|guì}{了|le}。', hu: 'Nem vettem. A boltban túl drága volt az alma.' },
+      { who: 'Li Hua', zh: '{没|méi}{关系|guān·xi}，{我|wǒ}{有|yǒu}。{你|nǐ}{先|xiān}{休息|xiū·xi}，{十|shí}{分钟|fēn·zhōng}{后|hòu}{我们|wǒ·men}{吃|chī}{饭|fàn}。', hu: 'Semmi baj, nekem van. Pihenj egy kicsit, tíz perc múlva eszünk.' }
+    ],
+    notes: [
+      'A {一些|yìxiē} „néhány, egy kevés": a {些|xiē} megszámlálhatatlan mennyiség jelölője.',
+      'Ruhadarabok mérőszava a {件|jiàn}: {两件衣服|liǎng jiàn yīfu} „két ruha(darab)".',
+      'A kérdés {了吗|le ma}-val: {你买苹果了吗|nǐ mǎi píngguǒ le ma}？ A nemleges válasz {没买|méi mǎi} vagy {没有|méiyǒu}.'
+    ]
+  },
+  points: [
+    {
+      title: 'ige + {了|le}', sub: 'megtörtént, lezárult cselekvés',
+      pattern: 'A + ige + {了|le} + mennyiség + tárgy',
+      body: 'A közvetlenül az ige után álló {了|le} azt mondja: a cselekvés <b>megtörtént</b>. {我买了三个苹果|wǒ mǎile sān ge píngguǒ} „vettem három almát", {他喝了一杯茶|tā hēle yì bēi chá} „ivott egy csésze teát". Ha a tárgynak van mennyisége (szám + mérőszó, {一些|yìxiē}, {很多|hěn duō}), a {了|le} az ige után áll.',
+      more: [
+        'Ha a tárgy puszta főnév (mennyiség nélkül), a {了|le} inkább a mondat végére kerül: {我买苹果了|wǒ mǎi píngguǒ le} „almát vettem / vettem almát". A {*我买了苹果|wǒ mǎile píngguǒ} egymagában befejezetlennek hat („vettem almát, és…").',
+        'A {了|le} nem múlt idő: {明天吃了饭我们去|míngtiān chīle fàn wǒmen qù} „holnap, miután ettünk, megyünk" — jövőbeli, de lezárt cselekvés.',
+        'Szokásos, ismétlődő múltbeli cselekvéshez nem kell {了|le}: {以前我常常去|yǐqián wǒ chángcháng qù} „régen gyakran jártam oda".'
+      ],
+      examples: [
+        { zh: '{我|wǒ}{买|mǎi}{了|le}{三|sān}{个|ge}{苹果|píng·guǒ}。', hu: 'Vettem három almát.' },
+        { zh: '{她|tā}{买|mǎi}{了|le}{不少|bù shǎo}{衣服|yī·fu}。', hu: 'Elég sok ruhát vett.' },
+        { zh: '{你|nǐ}{买|mǎi}{了|le}{什么|shén·me}？', hu: 'Mit vettél?' },
+        { zh: '{我|wǒ}{喝|hē}{了|le}{一|yì}{杯|bēi}{茶|chá}。', hu: 'Megittam egy csésze teát.' }
+      ],
+      mistakes: [
+        { bad: '{我|wǒ}{昨天|zuó·tiān}{买|mǎi}{三|sān}{个|ge}{苹果|píng·guǒ}。（lezárt vásárlás）', good: '{我|wǒ}{昨天|zuó·tiān}{买|mǎi}{了|le}{三|sān}{个|ge}{苹果|píng·guǒ}。', why: 'A megtörtént, lezárt cselekvés mellé {了|le} kell.' }
+      ]
+    },
+    {
+      title: '{没(有)|méi(yǒu)} + ige', sub: 'nem történt meg — {了|le} nélkül',
+      pattern: 'A + {没|méi}（{有|yǒu}）+ ige (+ tárgy)',
+      body: 'Ha egy cselekvés <b>nem történt meg</b>, a {没|méi} vagy {没有|méiyǒu} kerül az ige elé, és a {了|le} <b>eltűnik</b>: {我没买苹果|wǒ méi mǎi píngguǒ} „nem vettem almát", {他没来|tā méi lái} „nem jött el". A {不|bù} itt nem jó: az a szándékot, szokást tagadja ({我不买|wǒ bù mǎi} „nem veszem meg, nem akarom").',
+      more: [
+        'Kérdés: {你买苹果了吗|nǐ mǎi píngguǒ le ma}？ vagy {你买苹果了没有|nǐ mǎi píngguǒ le méiyǒu}？ Válasz: {买了|mǎi le} „igen, vettem" / {没买|méi mǎi} / {没有|méiyǒu} „nem".'
+      ],
+      tables: [
+        { caption: '{了|le} és tagadása',
+          head: ['', 'Példa', 'Jelentés'],
+          rows: [
+            ['megtörtént', '{我|wǒ}{买|mǎi}{了|le}{一|yí}{件|jiàn}{衣服|yī·fu}。', 'Vettem egy ruhát.'],
+            ['nem történt meg', '{我|wǒ}{没|méi}{买|mǎi}{衣服|yī·fu}。', 'Nem vettem ruhát.'],
+            ['nem akarja', '{我|wǒ}{不|bù}{买|mǎi}{衣服|yī·fu}。', 'Nem veszek ruhát.'],
+            ['kérdés', '{你|nǐ}{买|mǎi}{衣服|yī·fu}{了|le}{吗|ma}？', 'Vettél ruhát?']
+          ] }
+      ],
+      examples: [
+        { zh: '{我|wǒ}{没|méi}{买|mǎi}{苹果|píng·guǒ}。', hu: 'Nem vettem almát.' },
+        { zh: '{他|tā}{今天|jīn·tiān}{没|méi}{来|lái}。', hu: 'Ma nem jött el.' },
+        { zh: '{你|nǐ}{吃|chī}{饭|fàn}{了|le}{吗|ma}？—{没有|méi·yǒu}。', hu: 'Ettél már? — Nem.' }
+      ],
+      mistakes: [
+        { bad: '{我|wǒ}{没|méi}{买|mǎi}{了|le}{苹果|píng·guǒ}。', good: '{我|wǒ}{没|méi}{买|mǎi}{苹果|píng·guǒ}。', why: 'A {没|méi} mellől a {了|le} elmarad.' },
+        { bad: '{昨天|zuó·tiān}{我|wǒ}{不|bú}{去|qù}{学校|xué·xiào}。（= nem mentem）', good: '{昨天|zuó·tiān}{我|wǒ}{没|méi}{去|qù}{学校|xué·xiào}。', why: 'Meg nem történt múltbeli cselekvést a {没|méi} tagad.' }
+      ]
+    },
+    {
+      title: '{都|dōu}', sub: '„mind" — az ige előtt',
+      pattern: 'A (többes) + {都|dōu} + ige / melléknév',
+      body: 'A {都|dōu} „mind, mindnyájan" egy előtte álló többes számú dologra vonatkozik, és <b>az ige vagy a melléknév előtt</b> áll: {这些衣服都是我的|zhèxiē yīfu dōu shì wǒ de} „ezek a ruhák mind az enyémek", {我们都喜欢|wǒmen dōu xǐhuan} „mindannyian szeretjük". A magyar „mind" helye szabadabb; a kínai {都|dōu}-é kötött.',
+      more: [
+        'Az {也|yě} „is" és a {都|dōu} együtt: {我们也都去|wǒmen yě dōu qù} „mi is mindannyian megyünk" — az {也|yě} áll elöl.',
+        'Tagadással: {都不|dōu bù} „egyik sem" ({我们都不去|wǒmen dōu bú qù} „egyikünk sem megy"), {不都|bù dōu} „nem mindegyik".'
+      ],
+      examples: [
+        { zh: '{这些|zhè·xiē}{衣服|yī·fu}{都|dōu}{很|hěn}{漂亮|piào·liang}。', hu: 'Ezek a ruhák mind szépek.' },
+        { zh: '{我们|wǒ·men}{都|dōu}{是|shì}{学生|xué·sheng}。', hu: 'Mindannyian diákok vagyunk.' },
+        { zh: '{他们|tā·men}{都|dōu}{不|bú}{在|zài}{家|jiā}。', hu: 'Egyikük sincs otthon.' }
+      ],
+      mistakes: [
+        { bad: '{都|dōu}{我们|wǒ·men}{是|shì}{学生|xué·sheng}。', good: '{我们|wǒ·men}{都|dōu}{是|shì}{学生|xué·sheng}。', why: 'A {都|dōu} az alany után, az ige előtt áll.' }
+      ]
+    },
+    {
+      title: '…{后|hòu}', sub: 'valami után, valamennyi idő múlva',
+      pattern: 'időtartam / esemény + {后|hòu}',
+      body: 'A {后|hòu} „után" a 11. leckében tanult {前|qián} „előtt" párja, és ugyanúgy a kifejezés <b>végére</b> kerül: {十分钟后|shí fēnzhōng hòu} „tíz perc múlva", {吃饭后|chī fàn hòu} „evés után". A mondatban az ige előtt áll, mint minden időhatározó.',
+      more: [
+        'Az {分钟|fēnzhōng} „perc" mint időtartam (tíz percig, tíz perc múlva); a {分|fēn} az óra perce (8:10). Hasonlóan: {小时|xiǎoshí} „óra (időtartam)" ↔ {点|diǎn} „óra (időpont)".',
+        'Hosszabb alakja: {以后|yǐhòu} — {下课以后|xià kè yǐhòu} „óra után".'
+      ],
+      examples: [
+        { zh: '{十|shí}{分钟|fēn·zhōng}{后|hòu}{我们|wǒ·men}{吃|chī}{饭|fàn}。', hu: 'Tíz perc múlva eszünk.' },
+        { zh: '{吃|chī}{饭|fàn}{后|hòu}{我|wǒ}{去|qù}{商店|shāng·diàn}。', hu: 'Evés után boltba megyek.' }
+      ]
+    },
+    {
+      title: '{这些|zhèxiē} · {那些|nàxiē}', sub: 'ezek, azok',
+      pattern: '{这些|zhè·xiē} / {那些|nà·xiē} + főnév',
+      body: 'A {些|xiē} „néhány" a {这|zhè} / {那|nà} után többes számot ad: {这些衣服|zhèxiē yīfu} „ezek a ruhák", {那些人|nàxiē rén} „azok az emberek". Itt nem kell külön mérőszó. Az {一些|yìxiē} „néhány, egy kevés": {一些水果|yìxiē shuǐguǒ}.',
+      examples: [
+        { zh: '{这些|zhè·xiē}{苹果|píng·guǒ}{很|hěn}{好吃|hǎo·chī}。', hu: 'Ezek az almák finomak.' },
+        { zh: '{我|wǒ}{买|mǎi}{了|le}{一些|yì·xiē}{东西|dōng·xi}。', hu: 'Vettem egy-két dolgot.' }
+      ]
+    }
+  ],
+  phrases: [
+    { zh: '{你|nǐ}{买|mǎi}{了|le}{什么|shén·me}？', hu: 'Mit vettél?' },
+    { zh: '{你|nǐ}{吃|chī}{饭|fàn}{了|le}{吗|ma}？', hu: 'Ettél már?' },
+    { zh: '{没有|méi·yǒu}。', hu: 'Még nem. (Nem.)' },
+    { zh: '{太|tài}{漂亮|piào·liang}{了|le}！', hu: 'Nagyon szép!' },
+    { zh: '{十|shí}{分钟|fēn·zhōng}{后|hòu}{见|jiàn}！', hu: 'Tíz perc múlva találkozunk!' }
+  ],
+  words: [
+    { title: 'Szavak',
+      items: [
+        { zh: '{东西|dōng·xi}', pinyin: 'dōngxi', hu: 'dolog, holmi' },
+        { zh: '{苹果|píng·guǒ}', pinyin: 'píngguǒ', hu: 'alma' },
+        { zh: '{看见|kàn·jiàn}', pinyin: 'kànjiàn', hu: 'meglátni' },
+        { zh: '{开|kāi}', pinyin: 'kāi', hu: 'nyitni; vezetni (autót)' },
+        { zh: '{车|chē}', pinyin: 'chē', hu: 'autó, jármű' },
+        { zh: '{回来|huí·lai}', pinyin: 'huílai', hu: 'visszajönni' },
+        { zh: '{分钟|fēn·zhōng}', pinyin: 'fēnzhōng', hu: 'perc (időtartam)' },
+        { zh: '{后|hòu}', pinyin: 'hòu', hu: 'után' },
+        { zh: '{衣服|yī·fu}', pinyin: 'yīfu', hu: 'ruha' },
+        { zh: '{漂亮|piào·liang}', pinyin: 'piàoliang', hu: 'szép, csinos' },
+        { zh: '{啊|a}', pinyin: 'a', hu: 'felkiáltó szócska' },
+        { zh: '{少|shǎo}', pinyin: 'shǎo', hu: 'kevés' },
+        { zh: '{这些|zhè·xiē}', pinyin: 'zhèxiē', hu: 'ezek' },
+        { zh: '{都|dōu}', pinyin: 'dōu', hu: 'mind' }
+      ] },
+    { title: 'Ráadás',
+      items: [
+        { zh: '{件|jiàn}', pinyin: 'jiàn', hu: 'ruhadarab mérőszava' },
+        { zh: '{贵|guì}', pinyin: 'guì', hu: 'drága' },
+        { zh: '{休息|xiū·xi}', pinyin: 'xiūxi', hu: 'pihenni' },
+        { zh: '{一些|yì·xiē}', pinyin: 'yìxiē', hu: 'néhány' }
+      ] }
+  ],
+  culture: [
+    { title: '„Ettél már?"', text: 'A {你吃饭了吗|nǐ chī fàn le ma}？ „Ettél már?" sokáig az egyik leggyakoribb kínai köszönés volt, főleg idősebbek között. Nem meghívás és nem kíváncsiság: annyit jelent, „hogy vagy?". Elég rá annyit felelni: {吃了|chī le} „ettem", és visszakérdezni.' },
+    { title: 'Vásárlás telefonról', text: 'Kína a világ legnagyobb internetes piaca. Novemberben a „Szinglik napja" ({双十一|Shuāng Shíyī}, november 11.) a világ legnagyobb vásárlási napja. A csomagok sokszor még aznap megérkeznek, és a futár ({快递|kuàidì}) a városi élet mindennapos szereplője.' }
+  ],
+  reading: {
+    title: '{买|mǎi}{东西|dōng·xi}', titleHu: 'Vásárlás',
+    text: [
+      { zh: '{昨天|zuó·tiān}{下午|xià·wǔ}，{我|wǒ}{和|hé}{妈妈|mā·ma}{去|qù}{商店|shāng·diàn}{买|mǎi}{东西|dōng·xi}。', hu: 'Tegnap délután anyával elmentünk vásárolni.' },
+      { zh: '{妈妈|mā·ma}{买|mǎi}{了|le}{很|hěn}{多|duō}{水果|shuǐ·guǒ}，{我|wǒ}{买|mǎi}{了|le}{两|liǎng}{件|jiàn}{衣服|yī·fu}。', hu: 'Anya sok gyümölcsöt vett, én két ruhát.' },
+      { zh: '{这|zhè}{两|liǎng}{件|jiàn}{衣服|yī·fu}{都|dōu}{很|hěn}{漂亮|piào·liang}，{也|yě}{不|bú}{贵|guì}。', hu: 'Mindkét ruha nagyon szép, és nem is drága.', par: true },
+      { zh: '{我|wǒ}{想|xiǎng}{买|mǎi}{一个|yí ge}{杯子|bēi·zi}，{但是|dàn·shì}{没|méi}{买|mǎi}，{太|tài}{贵|guì}{了|le}。', hu: 'Egy bögrét is akartam venni, de nem vettem, túl drága volt.' },
+      { zh: '{五|wǔ}{点|diǎn}{我们|wǒ·men}{回|huí}{家|jiā}，{二十|èr·shí}{分钟|fēn·zhōng}{后|hòu}{爸爸|bà·ba}{也|yě}{回来|huí·lai}{了|le}。', hu: 'Ötkor hazamentünk, húsz perc múlva apa is hazajött.', par: true }
+    ],
+    words: [ { zh: '{件|jiàn}', hu: 'ruhadarab mérőszava' }, { zh: '{但是|dàn·shì}', hu: 'de' } ],
+    questions: [
+      { q: 'Mit vett az anya?', a: 'sok gyümölcsöt', wrong: ['két ruhát', 'egy bögrét', 'semmit'], why: '{妈妈买了很多水果|māma mǎile hěn duō shuǐguǒ}.' },
+      { q: 'Milyenek a ruhák?', a: 'szépek, és nem drágák', wrong: ['szépek, de drágák', 'csúnyák, de olcsók', 'túl nagyok'], why: '{都很漂亮，也不贵|dōu hěn piàoliang, yě bú guì}.' },
+      { q: 'Miért nem vette meg a bögrét?', a: 'mert túl drága volt', wrong: ['mert nem tetszett neki', 'mert már van bögréje', 'mert elfogyott'], why: '{没买，太贵了|méi mǎi, tài guì le}.' },
+      { q: 'Mikor jött haza az apa?', a: 'húsz perccel utánuk', wrong: ['ötkor, velük együtt', 'húsz perccel előttük', 'nem jött haza'], why: '{二十分钟后爸爸也回来了|èrshí fēnzhōng hòu bàba yě huílai le}.' }
+    ]
+  },
+  quiz: [
+    { q: '„Vettem három almát."', a: '{我|wǒ}{买|mǎi}{了|le}{三|sān}{个|ge}{苹果|píng·guǒ}。', wrong: ['{我|wǒ}{了|le}{买|mǎi}{三|sān}{个|ge}{苹果|píng·guǒ}。', '{我|wǒ}{买|mǎi}{三|sān}{个|ge}{了|le}{苹果|píng·guǒ}。', '{了|le}{我|wǒ}{买|mǎi}{三|sān}{个|ge}{苹果|píng·guǒ}。'], why: 'Ige + {了|le} + mennyiség + tárgy.', point: 1 },
+    { q: 'Mit jelöl az ige utáni {了|le}?', a: 'hogy a cselekvés megtörtént, lezárult', wrong: ['a múlt időt, mint a magyar „-t" jel', 'a felszólítást, mint a {吧|ba} szócska', 'a többes számot, mint a {们|men}'], why: 'A {了|le} befejezettséget jelöl, nem igeidőt.', point: 1 },
+    { q: 'Hogyan kérdezed: „Mit vettél?"', a: '{你|nǐ}{买|mǎi}{了|le}{什么|shén·me}？', wrong: ['{你|nǐ}{了|le}{买|mǎi}{什么|shén·me}？', '{你|nǐ}{买|mǎi}{什么|shén·me}{了|le}{吗|ma}？', '{什么|shén·me}{你|nǐ}{买|mǎi}{了|le}？'], why: 'Ige + {了|le} + {什么|shénme}.', point: 1 },
+    { q: '„Nem vettem almát."', a: '{我|wǒ}{没|méi}{买|mǎi}{苹果|píng·guǒ}。', wrong: ['{我|wǒ}{没|méi}{买|mǎi}{了|le}{苹果|píng·guǒ}。', '{我|wǒ}{不|bù}{买|mǎi}{了|le}{苹果|píng·guǒ}。', '{我|wǒ}{买|mǎi}{没|méi}{苹果|píng·guǒ}。'], why: 'A {没|méi} mellől a {了|le} elmarad.', point: 2 },
+    { q: 'Mi a különbség: {我没买|wǒ méi mǎi} / {我不买|wǒ bù mǎi}?', a: '„nem vettem meg" / „nem veszem meg, nem akarom"', wrong: ['„nem veszem meg" / „nem vettem meg"', 'semmi, a kettő pontosan ugyanazt jelenti', '„nincs pénzem" / „nincs kedvem"'], why: 'A {没|méi} meg nem történtet, a {不|bù} szándékot tagad.', point: 2 },
+    { q: '{你吃饭了吗|nǐ chī fàn le ma}？ — nemleges válasz:', a: '{没有|méi·yǒu}。', wrong: ['{不|bù}{了|le}。', '{没|méi}{吃|chī}{了|le}。', '{不|bù}{吃|chī}{了|le}{吗|ma}。'], why: 'Rövid nemleges válasz: {没有|méiyǒu} / {没吃|méi chī}.', point: 2 },
+    { q: '„Mindannyian diákok vagyunk."', a: '{我们|wǒ·men}{都|dōu}{是|shì}{学生|xué·sheng}。', wrong: ['{都|dōu}{我们|wǒ·men}{是|shì}{学生|xué·sheng}。', '{我们|wǒ·men}{是|shì}{都|dōu}{学生|xué·sheng}。', '{我们|wǒ·men}{是|shì}{学生|xué·sheng}{都|dōu}。'], why: 'A {都|dōu} az ige előtt áll.', point: 3 },
+    { q: 'Mit jelent: {他们都不在家|tāmen dōu bú zài jiā}。', a: 'Egyikük sincs otthon.', wrong: ['Nem mindegyikük van otthon.', 'Mindannyian otthon vannak.', 'Nincs otthonuk.'], why: '{都不|dōu bù} „egyik sem".', point: 3 },
+    { q: '„tíz perc múlva"', a: '{十|shí}{分钟|fēn·zhōng}{后|hòu}', wrong: ['{后|hòu}{十|shí}{分钟|fēn·zhōng}', '{十|shí}{分|fēn}{后面|hòu·miàn}', '{十|shí}{点|diǎn}{后|hòu}'], why: 'Időtartam + {后|hòu}; a {十点后|shí diǎn hòu} „tíz óra után".', point: 4 },
+    { q: 'Mi a különbség a {分|fēn} és a {分钟|fēnzhōng} között?', a: '{分|fēn}: időpont perce (8:10) · {分钟|fēnzhōng}: időtartam', wrong: ['{分钟|fēnzhōng}: időpont perce · {分|fēn}: időtartam', 'a {分钟|fēnzhōng} az óra, a {分|fēn} a perc', 'nincs különbség, csak a hosszuk más'], why: '{八点十分|bā diǎn shí fēn} 8:10 · {十分钟|shí fēnzhōng} tíz perc.', point: 4 },
+    { q: '„Ezek az almák finomak."', a: '{这些|zhè·xiē}{苹果|píng·guǒ}{很|hěn}{好吃|hǎo·chī}。', wrong: ['{这|zhè}{苹果|píng·guǒ}{些|xiē}{很|hěn}{好吃|hǎo·chī}。', '{这些|zhè·xiē}{个|ge}{苹果|píng·guǒ}{很|hěn}{好吃|hǎo·chī}。', '{些|xiē}{这|zhè}{苹果|píng·guǒ}{很|hěn}{好吃|hǎo·chī}。'], why: '{这些|zhèxiē} + főnév, külön mérőszó nélkül.', point: 5 },
+    { q: 'Mit jelent a {衣服|yīfu}?', a: 'ruha', wrong: ['cipő', 'táska', 'szövet'], why: '{两件衣服|liǎng jiàn yīfu} „két ruha".' },
+    { q: 'Mit jelent a {漂亮|piàoliang}?', a: 'szép, csinos', wrong: ['drága', 'új', 'nagy'], why: '{太漂亮了|tài piàoliang le}！ „Nagyon szép!"' },
+    { q: 'Melyik mondat hibás?', a: '{昨天|zuó·tiān}{我|wǒ}{不|bú}{去|qù}{了|le}{学校|xué·xiào}。', wrong: ['{昨天|zuó·tiān}{我|wǒ}{没|méi}{去|qù}{学校|xué·xiào}。', '{昨天|zuó·tiān}{我|wǒ}{去|qù}{学校|xué·xiào}{了|le}。', '{我|wǒ}{买|mǎi}{了|le}{两|liǎng}{本|běn}{书|shū}。'], why: 'Meg nem történt cselekvés: {没去|méi qù}, {了|le} nélkül.', point: 2 },
+    { q: 'Mit jelent: {你买苹果了吗|nǐ mǎi píngguǒ le ma}？', a: 'Vettél almát?', wrong: ['Veszel almát?', 'Szereted az almát?', 'Hol vetted az almát?'], why: '…{了吗|le ma}？ megtörténtre kérdez.', point: 1 },
+    { q: 'Mit jelent a {回来|huílai}?', a: 'visszajönni (ide)', wrong: ['visszamenni (oda)', 'elmenni', 'megérkezni oda'], why: '{回|huí} „vissza" + {来|lái} „ide jönni".' }
+  ]
+},
+
+/* ════════════════════════════════════════════════════
+   15. LECKE — 是…的, év + hónap + nap, 认识, 一起
+   ════════════════════════════════════════════════════ */
+{
+  id: 'l15', no: 15, kicker: 'HSK 1 · 15. lecke',
+  title: 'Hogyan jöttél? — egy megtörtént dolog részletei',
+  lead: 'Egy már megtörtént dolog részleteiről kérdezel és mesélsz: mikor, hol, kivel, mivel történt (我是坐飞机来的). Bemutatkozáskor elmondod, örülsz, hogy megismerted a másikat.',
+  cando: [
+    'Egy múltbeli esemény körülményét emeled ki: 是 + körülmény + ige + 的.',
+    'Teljes dátumot mondasz évvel és nappal.',
+    'Elmondod, mivel közlekedsz: 坐飞机, 坐出租车, 开车.',
+    'Ismerkedéskor: 认识你很高兴, 我们一起去吧.'
+  ],
+  intro: [
+    'Ha már tudjuk, hogy valami megtörtént, és csak a részletek érdekelnek — mikor, hogyan, kivel —, a kínai egy különleges keretet használ: a {是|shì}…{的|de} szerkezetet. {我是坐飞机来的|wǒ shì zuò fēijī lái de} „repülővel jöttem" (nem az a hír, hogy jöttem, hanem hogy repülővel).',
+    'Ez az utolsó HSK 1 lecke. Ha végigértél rajta, az alapszavakkal már bemutatkozol, vásárolsz, időpontot egyeztetsz és a múltról is mesélsz.'
+  ],
+  dialogue: {
+    title: 'Egy új ismerős',
+    scene: 'Egy baráti vacsorán David bemutatja Annának egy régi barátját, Liu Fangot.',
+    lines: [
+      { who: 'David', zh: '{安娜|Ān·nà}，{这|zhè}{是|shì}{我|wǒ}{的|de}{朋友|péng·you}{刘|Liú}{芳|Fāng}。', hu: 'Anna, ő a barátom, Liu Fang.' },
+      { who: 'Liu Fang', zh: '{你好|nǐ hǎo}！{认识|rèn·shi}{你|nǐ}{很|hěn}{高兴|gāo·xìng}。', hu: 'Szia! Örülök, hogy megismerhetlek.' },
+      { who: 'Anna', zh: '{认识|rèn·shi}{你|nǐ}{我|wǒ}{也|yě}{很|hěn}{高兴|gāo·xìng}。{你们|nǐ·men}{是|shì}{什么|shén·me}{时候|shí·hou}{认识|rèn·shi}{的|de}？', hu: 'Én is örülök. Ti mikor ismerkedtetek meg?' },
+      { who: 'Liu Fang', zh: '{我们|wǒ·men}{是|shì}{二〇一九年|èr líng yī jiǔ nián}{在|zài}{美国|Měi·guó}{认识|rèn·shi}{的|de}。', hu: '2019-ben ismerkedtünk meg, Amerikában.' },
+      { who: 'Anna', zh: '{你|nǐ}{是|shì}{怎么|zěn·me}{来|lái}{的|de}？', hu: 'Te hogy jöttél ide?' },
+      { who: 'Liu Fang', zh: '{我|wǒ}{是|shì}{坐|zuò}{出租车|chū·zū·chē}{来|lái}{的|de}。{大卫|Dà·wèi}{是|shì}{开|kāi}{车|chē}{来|lái}{的|de}。', hu: 'Taxival jöttem. David autóval jött.' },
+      { who: 'David', zh: '{吃|chī}{饭|fàn}{后|hòu}，{我们|wǒ·men}{一起|yì·qǐ}{去|qù}{喝|hē}{茶|chá}{吧|ba}！', hu: 'Evés után menjünk el együtt teázni!' }
+    ],
+    notes: [
+      'A {认识你很高兴|rènshi nǐ hěn gāoxìng} „örülök, hogy megismertelek" a bemutatkozás szokásos zárása; a sorrend fordítva is jó: {很高兴认识你|hěn gāoxìng rènshi nǐ}.',
+      'A {是|shì}…{的|de} keretben a {是|shì} rendszerint elhagyható a beszédben: {我坐出租车来的|wǒ zuò chūzūchē lái de}. A {的|de} viszont kell.',
+      'A {这是|zhè shì}… „ez itt …" a bemutatás szokásos formája embereknél is.'
+    ]
+  },
+  points: [
+    {
+      title: '{是|shì}…{的|de}', sub: 'egy megtörtént dolog körülménye',
+      pattern: 'A + {是|shì} + mikor / hol / hogyan / kivel + ige + {的|de}',
+      body: 'Ha <b>már tudott, megtörtént</b> eseménynek egy részletét emeled ki, a részlet a {是|shì} és az ige közé kerül, a mondat végére pedig {的|de}: {我是坐飞机来的|wǒ shì zuò fēijī lái de} „repülővel jöttem", {我们是在美国认识的|wǒmen shì zài Měiguó rènshi de} „Amerikában ismerkedtünk meg", {他是昨天来的|tā shì zuótiān lái de} „tegnap jött".',
+      more: [
+        'Mikor használd? Ha a beszélgetésből már tudjuk, hogy valaki eljött, megérkezett, megvette — és a kérdés csak az, <b>mikor, hol, hogyan</b>. „Eljöttél?" → {你来了吗|nǐ lái le ma}？ ({了|le}) · „Mivel jöttél?" → {你是怎么来的|nǐ shì zěnme lái de}？ ({是|shì}…{的|de}).',
+        'Tagadva {不是|bú shì}…{的|de}: {我不是坐飞机来的|wǒ bú shì zuò fēijī lái de} „nem repülővel jöttem".'
+      ],
+      tables: [
+        { caption: 'Mit emel ki?',
+          head: ['Körülmény', 'Példa', 'Jelentés'],
+          rows: [
+            ['mikor', '{他|tā}{是|shì}{昨天|zuó·tiān}{来|lái}{的|de}。', 'Tegnap jött.'],
+            ['hol', '{我们|wǒ·men}{是|shì}{在|zài}{北京|Běi·jīng}{认识|rèn·shi}{的|de}。', 'Pekingben ismerkedtünk meg.'],
+            ['hogyan', '{我|wǒ}{是|shì}{坐|zuò}{飞机|fēi·jī}{来|lái}{的|de}。', 'Repülővel jöttem.'],
+            ['kivel', '{我|wǒ}{是|shì}{和|hé}{朋友|péng·you}{一起|yì·qǐ}{来|lái}{的|de}。', 'A barátommal jöttem.']
+          ] }
+      ],
+      examples: [
+        { zh: '{我|wǒ}{是|shì}{坐|zuò}{飞机|fēi·jī}{来|lái}{的|de}。', hu: 'Repülővel jöttem.' },
+        { zh: '{你|nǐ}{是|shì}{什么|shén·me}{时候|shí·hou}{来|lái}{中国|Zhōng·guó}{的|de}？', hu: 'Mikor jöttél Kínába?' },
+        { zh: '{这|zhè}{件|jiàn}{衣服|yī·fu}{是|shì}{在|zài}{北京|Běi·jīng}{买|mǎi}{的|de}。', hu: 'Ezt a ruhát Pekingben vettem.' }
+      ],
+      mistakes: [
+        { bad: '{我|wǒ}{是|shì}{坐|zuò}{飞机|fēi·jī}{来|lái}。', good: '{我|wǒ}{是|shì}{坐|zuò}{飞机|fēi·jī}{来|lái}{的|de}。', why: 'A keret második fele, a {的|de} nem maradhat el.' },
+        { bad: '{我|wǒ}{是|shì}{坐|zuò}{飞机|fēi·jī}{来|lái}{了|le}{的|de}。', good: '{我|wǒ}{是|shì}{坐|zuò}{飞机|fēi·jī}{来|lái}{的|de}。', why: 'A {是|shì}…{的|de} keretben nincs {了|le}.' }
+      ]
+    },
+    {
+      title: '{坐|zuò} + jármű', sub: 'közlekedés',
+      pattern: '{坐|zuò} + {飞机|fēi·jī} / {出租车|chū·zū·chē} / {火车|huǒ·chē} · {开车|kāi chē}',
+      body: 'A „valamivel utazik" kínaiul: {坐|zuò} „ül" + jármű — {坐飞机|zuò fēijī} „repülővel", {坐出租车|zuò chūzūchē} „taxival", {坐火车|zuò huǒchē} „vonattal". Ha te vezetsz: {开车|kāi chē} „autót vezet". A közlekedés módja a „menni/jönni" előtt áll: {坐火车去|zuò huǒchē qù} „vonattal megy".',
+      tables: [
+        { caption: 'Járművek',
+          head: ['Kínaiul', 'Magyarul'],
+          rows: [
+            ['{坐|zuò}{飞机|fēi·jī}', 'repülővel'], ['{坐|zuò}{火车|huǒ·chē}', 'vonattal'],
+            ['{坐|zuò}{出租车|chū·zū·chē}', 'taxival'], ['{坐|zuò}{公共汽车|gōng·gòng·qì·chē}', 'busszal'],
+            ['{开|kāi}{车|chē}', 'autóval (vezetve)'], ['{走|zǒu}{路|lù}', 'gyalog']
+          ] }
+      ],
+      examples: [
+        { zh: '{我|wǒ}{坐|zuò}{出租车|chū·zū·chē}{去|qù}{饭店|fàn·diàn}。', hu: 'Taxival megyek a szállodába.' },
+        { zh: '{他|tā}{每天|měi·tiān}{开|kāi}{车|chē}{去|qù}{工作|gōng·zuò}。', hu: 'Minden nap autóval megy dolgozni.' }
+      ]
+    },
+    {
+      title: '{年|nián}{月|yuè}{日|rì}{星期|xīngqī}', sub: 'a teljes dátum',
+      pattern: 'év + {年|nián} · hónap + {月|yuè} · nap + {号|hào} · {星期|xīng·qī}…',
+      body: 'A teljes dátum a nagyobbtól a kisebb felé halad, és a hét napja is a végére kerülhet: {二〇二六年十月十八号，星期天|èr líng èr liù nián shíyuè shíbā hào, xīngqītiān} „2026. október 18., vasárnap". Az évszámot számjegyenként olvasod.',
+      more: [
+        'Kérdés az évre: {你是哪年来的|nǐ shì nǎ nián lái de}？ „Melyik évben jöttél?", vagy {你是哪一年出生的|nǐ shì nǎ yì nián chūshēng de}？ „Melyik évben születtél?" — mindkettő {是|shì}…{的|de} szerkezet.'
+      ],
+      examples: [
+        { zh: '{我|wǒ}{是|shì}{二〇〇五年|èr líng líng wǔ nián}{出生|chū·shēng}{的|de}。', hu: '2005-ben születtem.' },
+        { zh: '{今天|jīn·tiān}{是|shì}{二〇二六年|èr líng èr liù nián}{十月|shí·yuè}{十八|shí·bā}{号|hào}。', hu: 'Ma 2026. október 18. van.' }
+      ]
+    },
+    {
+      title: '{认识|rènshi}', sub: 'ismerni (személyt), megismerkedni',
+      pattern: 'A + {认识|rèn·shi} + B · {认识|rèn·shi}{你|nǐ}{很|hěn}{高兴|gāo·xìng}',
+      body: 'A {认识|rènshi} embert (vagy helyet, írásjegyet) „ismer", „megismer": {我认识他|wǒ rènshi tā} „ismerem őt", {你认识这个字吗|nǐ rènshi zhège zì ma}？ „Ismered ezt az írásjegyet?" A bemutatkozás zárása: {认识你很高兴|rènshi nǐ hěn gāoxìng} „örülök, hogy megismertelek".',
+      more: [
+        'A tényt, információt nem a {认识|rènshi}, hanem a {知道|zhīdào} „tud valamiről" fejezi ki: {我知道他的名字|wǒ zhīdào tā de míngzi} „tudom a nevét".'
+      ],
+      examples: [
+        { zh: '{认识|rèn·shi}{你|nǐ}{很|hěn}{高兴|gāo·xìng}。', hu: 'Örülök, hogy megismertelek.' },
+        { zh: '{你|nǐ}{认识|rèn·shi}{王明|Wáng Míng}{吗|ma}？', hu: 'Ismered Wang Minget?' }
+      ]
+    },
+    {
+      title: '{一起|yìqǐ}', sub: 'együtt',
+      pattern: 'A + ({和|hé} + B) + {一起|yì·qǐ} + ige',
+      body: 'Az {一起|yìqǐ} „együtt" az ige előtt áll: {我们一起去吧|wǒmen yìqǐ qù ba} „menjünk együtt". Ha megmondod, kivel: {我和朋友一起来的|wǒ hé péngyou yìqǐ lái de} „a barátommal együtt jöttem" — a {和|hé} + személy az {一起|yìqǐ} elé kerül.',
+      examples: [
+        { zh: '{我们|wǒ·men}{一起|yì·qǐ}{吃|chī}{饭|fàn}{吧|ba}！', hu: 'Együnk együtt!' },
+        { zh: '{我|wǒ}{和|hé}{妈妈|mā·ma}{一起|yì·qǐ}{去|qù}{商店|shāng·diàn}。', hu: 'Anyával megyek a boltba.' }
+      ],
+      mistakes: [
+        { bad: '{我们|wǒ·men}{去|qù}{一起|yì·qǐ}。', good: '{我们|wǒ·men}{一起|yì·qǐ}{去|qù}。', why: 'Az {一起|yìqǐ} az ige előtt áll.' }
+      ]
+    }
+  ],
+  phrases: [
+    { zh: '{认识|rèn·shi}{你|nǐ}{很|hěn}{高兴|gāo·xìng}。', hu: 'Örülök, hogy megismertelek.' },
+    { zh: '{你|nǐ}{是|shì}{怎么|zěn·me}{来|lái}{的|de}？', hu: 'Hogyan jöttél?' },
+    { zh: '{我|wǒ}{是|shì}{坐|zuò}{飞机|fēi·jī}{来|lái}{的|de}。', hu: 'Repülővel jöttem.' },
+    { zh: '{我们|wǒ·men}{一起|yì·qǐ}{去|qù}{吧|ba}！', hu: 'Menjünk együtt!' }
+  ],
+  words: [
+    { title: 'Szavak',
+      items: [
+        { zh: '{认识|rèn·shi}', pinyin: 'rènshi', hu: 'ismerni (személyt)' },
+        { zh: '{年|nián}', pinyin: 'nián', hu: 'év' },
+        { zh: '{大学|dà·xué}', pinyin: 'dàxué', hu: 'egyetem' },
+        { zh: '{饭店|fàn·diàn}', pinyin: 'fàndiàn', hu: 'szálloda; étterem' },
+        { zh: '{出租车|chū·zū·chē}', pinyin: 'chūzūchē', hu: 'taxi' },
+        { zh: '{一起|yì·qǐ}', pinyin: 'yìqǐ', hu: 'együtt' },
+        { zh: '{高兴|gāo·xìng}', pinyin: 'gāoxìng', hu: 'boldog, örül' },
+        { zh: '{听|tīng}', pinyin: 'tīng', hu: 'hallgatni' },
+        { zh: '{飞机|fēi·jī}', pinyin: 'fēijī', hu: 'repülőgép' }
+      ] },
+    { title: 'Ráadás',
+      items: [
+        { zh: '{火车|huǒ·chē}', pinyin: 'huǒchē', hu: 'vonat' },
+        { zh: '{开车|kāi chē}', pinyin: 'kāi chē', hu: 'autót vezetni' },
+        { zh: '{出生|chū·shēng}', pinyin: 'chūshēng', hu: 'születni' },
+        { zh: '{知道|zhī·dào}', pinyin: 'zhīdào', hu: 'tudni (valamiről)' }
+      ] }
+  ],
+  culture: [
+    { title: 'Telefon mindenre', text: 'Kínában a telefon a pénztárca, a személyi és a postaláda helyett is szolgál. A {微信|Wēixìn} (WeChat) csevegő, fizetőeszköz és közösségi oldal egyben: rajta fizetsz a piacon, rendelsz taxit, foglalsz orvost. Ismerkedéskor ezért nem telefonszámot cserélnek, hanem egymás QR-kódját olvassák be: {加个微信吧|jiā ge Wēixìn ba} „adjuk hozzá egymást WeChaten!"' },
+    { title: 'Nagysebességű vasút', text: 'Kínában épült a világ legnagyobb nagysebességű vasúthálózata: Peking és Sanghaj között a {高铁|gāotiě} kb. négy és fél óra alatt viszi az utast, 300 km/óra fölötti sebességgel. Sokan a repülő helyett is inkább a vonatot választják.' }
+  ],
+  reading: {
+    title: '{我|wǒ}{来|lái}{中国|Zhōng·guó}{了|le}', titleHu: 'Megérkeztem Kínába',
+    text: [
+      { zh: '{我|wǒ}{是|shì}{二〇二六年|èr líng èr liù nián}{九月|jiǔ·yuè}{一|yī}{号|hào}{来|lái}{中国|Zhōng·guó}{的|de}。', hu: '2026. szeptember 1-jén jöttem Kínába.' },
+      { zh: '{我|wǒ}{是|shì}{坐|zuò}{飞机|fēi·jī}{来|lái}{的|de}，{和|hé}{我|wǒ}{的|de}{同学|tóng·xué}{一起|yì·qǐ}。', hu: 'Repülővel jöttem, az évfolyamtársammal együtt.' },
+      { zh: '{在|zài}{北京|Běi·jīng}，{我们|wǒ·men}{坐|zuò}{出租车|chū·zū·chē}{去|qù}{了|le}{大学|dà·xué}。', hu: 'Pekingben taxival mentünk az egyetemre.', par: true },
+      { zh: '{在|zài}{大学|dà·xué}{我|wǒ}{认识|rèn·shi}{了|le}{王明|Wáng Míng}，{他|tā}{是|shì}{我|wǒ}{的|de}{第一|dì·yī}{个|ge}{中国|Zhōng·guó}{朋友|péng·you}。', hu: 'Az egyetemen megismerkedtem Wang Minggel, ő az első kínai barátom.' },
+      { zh: '{认识|rèn·shi}{他|tā}{我|wǒ}{很|hěn}{高兴|gāo·xìng}。', hu: 'Nagyon örülök, hogy megismertem.', par: true }
+    ],
+    words: [ { zh: '{第一|dì·yī}', hu: 'első' } ],
+    questions: [
+      { q: 'Mikor jött a szöveg írója Kínába?', a: '2026. szeptember 1-jén', wrong: ['2026. október 1-jén', '2025. szeptember 1-jén', 'nem derül ki'], why: '{二〇二六年九月一号|èr líng èr liù nián jiǔyuè yī hào}.' },
+      { q: 'Hogyan és kivel jött?', a: 'repülővel, az évfolyamtársával', wrong: ['vonattal, egyedül', 'repülővel, a családjával', 'taxival, Wang Minggel'], why: '{坐飞机来的，和我的同学一起|zuò fēijī lái de, hé wǒ de tóngxué yìqǐ}.' },
+      { q: 'Hogyan jutottak el az egyetemre?', a: 'taxival', wrong: ['busszal', 'gyalog', 'autóval, ő vezetett'], why: '{我们坐出租车去了大学|wǒmen zuò chūzūchē qùle dàxué}.' },
+      { q: 'Ki Wang Ming a szövegben?', a: 'az író első kínai barátja', wrong: ['a tanára', 'az évfolyamtársa, akivel jött', 'a taxisofőr'], why: '{他是我的第一个中国朋友|tā shì wǒ de dì-yī ge Zhōngguó péngyou}.' }
+    ]
+  },
+  quiz: [
+    { q: '„Repülővel jöttem." (a jövetel tudott, a mód a hír)', a: '{我|wǒ}{是|shì}{坐|zuò}{飞机|fēi·jī}{来|lái}{的|de}。', wrong: ['{我|wǒ}{是|shì}{坐|zuò}{飞机|fēi·jī}{来|lái}。', '{我|wǒ}{坐|zuò}{飞机|fēi·jī}{是|shì}{来|lái}{的|de}。', '{我|wǒ}{是|shì}{来|lái}{的|de}{坐|zuò}{飞机|fēi·jī}。'], why: '{是|shì} + körülmény + ige + {的|de}.', point: 1 },
+    { q: 'Mikor használod a {是|shì}…{的|de} szerkezetet?', a: 'ha egy megtörtént dolognak a körülményét (mikor, hol, hogyan) emeled ki', wrong: ['ha egy jövőbeli tervről, szándékról beszélsz valakinek', 'ha valakit udvariasan, tisztelettel szólítasz meg', 'ha egy cselekvés éppen most folyik a beszéd idején'], why: 'A tény ismert, a részlet a hír.', point: 1 },
+    { q: 'Hogyan kérdezed: „Mikor jöttél Kínába?"', a: '{你|nǐ}{是|shì}{什么|shén·me}{时候|shí·hou}{来|lái}{中国|Zhōng·guó}{的|de}？', wrong: ['{你|nǐ}{什么|shén·me}{时候|shí·hou}{来|lái}{中国|Zhōng·guó}{了|le}{的|de}？', '{你|nǐ}{来|lái}{中国|Zhōng·guó}{是|shì}{什么|shén·me}{时候|shí·hou}？', '{什么|shén·me}{时候|shí·hou}{你|nǐ}{是|shì}{来|lái}？'], why: 'A {是|shì} és az ige közé kerül a kérdezett körülmény.', point: 1 },
+    { q: 'Melyik mondat hibás?', a: '{我|wǒ}{是|shì}{昨天|zuó·tiān}{来|lái}{了|le}{的|de}。', wrong: ['{我|wǒ}{是|shì}{昨天|zuó·tiān}{来|lái}{的|de}。', '{我|wǒ}{昨天|zuó·tiān}{来|lái}{的|de}。', '{我|wǒ}{昨天|zuó·tiān}{来|lái}{了|le}。'], why: 'A {是|shì}…{的|de} keretben nincs {了|le}.', point: 1 },
+    { q: 'Mit jelent: {我们是在美国认识的|wǒmen shì zài Měiguó rènshi de}。', a: 'Amerikában ismerkedtünk meg.', wrong: ['Amerikában fogunk megismerkedni.', 'Amerikát ismerjük.', 'Amerikaiak vagyunk, és ismerjük egymást.'], why: '{是|shì} + {在美国|zài Měiguó} (hely) + ige + {的|de}.', point: 1 },
+    { q: '„taxival megy"', a: '{坐|zuò}{出租车|chū·zū·chē}{去|qù}', wrong: ['{去|qù}{出租车|chū·zū·chē}{坐|zuò}', '{开|kāi}{出租车|chū·zū·chē}{去|qù}', '{出租车|chū·zū·chē}{去|qù}{坐|zuò}'], why: '{坐|zuò} + jármű + {去|qù}.', point: 2 },
+    { q: 'Mit jelent a {开车|kāi chē}?', a: 'autót vezetni', wrong: ['autóval utazni utasként', 'autót venni', 'kinyitni az autót'], why: 'A {开|kāi} itt „vezetni".', point: 2 },
+    { q: 'Hogyan zárod a bemutatkozást?', a: '{认识|rèn·shi}{你|nǐ}{很|hěn}{高兴|gāo·xìng}。', wrong: ['{你|nǐ}{很|hěn}{高兴|gāo·xìng}{认识|rèn·shi}。', '{高兴|gāo·xìng}{你|nǐ}{认识|rèn·shi}。', '{认识|rèn·shi}{很|hěn}{高兴|gāo·xìng}{你|nǐ}{吗|ma}。'], why: '„Örülök, hogy megismertelek."', point: 4 },
+    { q: '{认识|rènshi} vagy {知道|zhīdào}: „Ismerem Wang Minget."', a: '{我|wǒ}{认识|rèn·shi}{王明|Wáng Míng}。', wrong: ['{我|wǒ}{知道|zhī·dào}{王明|Wáng Míng}{了|le}。', '{我|wǒ}{是|shì}{认识|rèn·shi}{王明|Wáng Míng}。', '{我|wǒ}{会|huì}{王明|Wáng Míng}。'], why: 'Személyt a {认识|rènshi} „ismer".', point: 4 },
+    { q: '„Menjünk együtt!"', a: '{我们|wǒ·men}{一起|yì·qǐ}{去|qù}{吧|ba}！', wrong: ['{我们|wǒ·men}{去|qù}{一起|yì·qǐ}{吧|ba}！', '{一起|yì·qǐ}{去|qù}{我们|wǒ·men}{吧|ba}！', '{我们|wǒ·men}{吧|ba}{一起|yì·qǐ}{去|qù}！'], why: 'Az {一起|yìqǐ} az ige előtt.', point: 5 },
+    { q: 'Hogyan olvasod: 2019{年|nián}?', a: '{二〇一九年|èr líng yī jiǔ nián}', wrong: ['{两千零一十九年|liǎngqiān líng yīshíjiǔ nián}', '{二十一九年|èrshíyī jiǔ nián}', '{一九二〇年|yī jiǔ èr líng nián}'], why: 'Számjegyenként: èr líng yī jiǔ.', point: 3 },
+    { q: 'Mit jelent a {飞机|fēijī}?', a: 'repülőgép', wrong: ['vonat', 'taxi', 'hajó'], why: '{飞|fēi} „repülni" + {机|jī} „gép".' },
+    { q: 'Mit jelent a {高兴|gāoxìng}?', a: 'boldog, örül', wrong: ['magas', 'fáradt', 'ideges'], why: '{很高兴|hěn gāoxìng} „nagyon örül".' },
+    { q: '„A barátommal jöttem." (kivel — kiemelve)', a: '{我|wǒ}{是|shì}{和|hé}{朋友|péng·you}{一起|yì·qǐ}{来|lái}{的|de}。', wrong: ['{我|wǒ}{是|shì}{一起|yì·qǐ}{朋友|péng·you}{来|lái}{的|de}。', '{我|wǒ}{和|hé}{朋友|péng·you}{是|shì}{来|lái}{一起|yì·qǐ}。', '{我|wǒ}{来|lái}{的|de}{和|hé}{朋友|péng·you}{一起|yì·qǐ}。'], why: '{是|shì} + {和朋友一起|hé péngyou yìqǐ} + {来|lái} + {的|de}.', point: 1 },
+    { q: 'Mit jelent a {饭店|fàndiàn}?', a: 'szálloda; étterem', wrong: ['bolt', 'konyha', 'egyetem'], why: 'A {饭店|fàndiàn} szállodát és éttermet is jelenthet.' },
+    { q: 'Mit jelent: {你是怎么来的|nǐ shì zěnme lái de}？', a: 'Hogyan (mivel) jöttél?', wrong: ['Miért jöttél?', 'Mikor jössz?', 'Eljössz?'], why: '{是|shì} + {怎么|zěnme} + {来|lái} + {的|de}: a módra kérdez.', point: 1 }
   ]
 }
 

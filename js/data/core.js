@@ -150,7 +150,51 @@ const HANZIFLOW_PATH = [
     module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l11&round=listen' },
   { id: 'l11-read', glyph: '读', title: 'Olvasás: Egy napom',
     desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
-    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l11&round=read' }
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l11&round=read' },
+
+  // ── 12. lecke ──
+  { id: 'l12-lesson', glyph: '天', title: 'Magyarázat: 怎么样, 太…了, 会 (előrejelzés)',
+    desc: 'Időjárás, hogylét, javaslat; a 会 második jelentése.',
+    module: 'lesson', href: 'pages/lesson.html?id=l12' },
+  { id: 'l12-listen', glyph: '听', title: 'Hallás: időjárás',
+    desc: 'A 12. lecke mondatai hang után.',
+    module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l12&round=listen' },
+  { id: 'l12-read', glyph: '读', title: 'Olvasás: Peking időjárása',
+    desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l12&round=read' },
+
+  // ── 13. lecke ──
+  { id: 'l13-lesson', glyph: '呢', title: 'Magyarázat: 在…呢, 喂, 给…打电话, 吧',
+    desc: 'Éppen történő cselekvés, telefonálás, javaslat és feltevés.',
+    module: 'lesson', href: 'pages/lesson.html?id=l13' },
+  { id: 'l13-listen', glyph: '听', title: 'Hallás: telefonon',
+    desc: 'A 13. lecke mondatai hang után.',
+    module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l13&round=listen' },
+  { id: 'l13-read', glyph: '读', title: 'Olvasás: Szombat délelőtt',
+    desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l13&round=read' },
+
+  // ── 14. lecke ──
+  { id: 'l14-lesson', glyph: '了', title: 'Magyarázat: 了, 没(有), 都, 后',
+    desc: 'Ami megtörtént és ami nem; mind; valami után.',
+    module: 'lesson', href: 'pages/lesson.html?id=l14' },
+  { id: 'l14-listen', glyph: '听', title: 'Hallás: ami megtörtént',
+    desc: 'A 14. lecke mondatai hang után.',
+    module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l14&round=listen' },
+  { id: 'l14-read', glyph: '读', title: 'Olvasás: Vásárlás',
+    desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l14&round=read' },
+
+  // ── 15. lecke ──
+  { id: 'l15-lesson', glyph: '的', title: 'Magyarázat: 是…的, közlekedés, 认识',
+    desc: 'Egy megtörtént dolog körülményei: mikor, hol, hogyan, kivel.',
+    module: 'lesson', href: 'pages/lesson.html?id=l15' },
+  { id: 'l15-listen', glyph: '听', title: 'Hallás: hogyan jöttél?',
+    desc: 'A 15. lecke mondatai hang után.',
+    module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l15&round=listen' },
+  { id: 'l15-read', glyph: '读', title: 'Olvasás: Megérkeztem Kínába',
+    desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l15&round=read' }
 ];
 
 const HANZIFLOW_PATH_UNITS = [
@@ -177,5 +221,13 @@ const HANZIFLOW_PATH_UNITS = [
   { id: 'u-l10', kicker: 'HSK 1 · 10. lecke', title: 'Szabad ide ülnöm?', sub: 'hely + 有, 和, 能, 请, 前面 / 后面',
     steps: ['l10-lesson', 'l10-listen', 'l10-read'] },
   { id: 'u-l11', kicker: 'HSK 1 · 11. lecke', title: 'Hány óra van?', sub: '几点, 点 + 分, 什么时候, 前, 回',
-    steps: ['l11-lesson', 'l11-listen', 'l11-read'] }
+    steps: ['l11-lesson', 'l11-listen', 'l11-read'] },
+  { id: 'u-l12', kicker: 'HSK 1 · 12. lecke', title: 'Milyen idő lesz?', sub: '怎么样, 太…了, téma + megjegyzés, 会',
+    steps: ['l12-lesson', 'l12-listen', 'l12-read'] },
+  { id: 'u-l13', kicker: 'HSK 1 · 13. lecke', title: 'Mit csinálsz éppen?', sub: '在…呢, 喂, 给…打电话, 吧, 喜欢',
+    steps: ['l13-lesson', 'l13-listen', 'l13-read'] },
+  { id: 'u-l14', kicker: 'HSK 1 · 14. lecke', title: 'Mit vettél?', sub: 'ige + 了, 没(有), 都, 后, 这些',
+    steps: ['l14-lesson', 'l14-listen', 'l14-read'] },
+  { id: 'u-l15', kicker: 'HSK 1 · 15. lecke', title: 'Hogyan jöttél?', sub: '是…的, 坐 + jármű, teljes dátum, 认识, 一起',
+    steps: ['l15-lesson', 'l15-listen', 'l15-read'] }
 ];
