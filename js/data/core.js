@@ -524,7 +524,40 @@ const HANZIFLOW_PATH = [
     module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l45&round=listen' },
   { id: 'l45-read', glyph: '读', title: 'Olvasás: Egy balszerencsés nap',
     desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
-    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l45&round=read' }
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l45&round=read' },
+
+  // ── HSK 3 · 16. lecke ──
+  { id: 'l46-lesson', glyph: '连', title: 'Magyarázat: 连…都 / 也, 几乎, 差点儿, 不是…而是…, 习惯',
+    desc: 'Az első munkahét: még ebédelni sincs idő, majdnem elkésett, még nem szokta meg.',
+    module: 'lesson', href: 'pages/lesson.html?id=l46' },
+  { id: 'l46-listen', glyph: '听', title: 'Hallás: az első hét',
+    desc: 'A lecke mondatai hang után: mit jelent, amit hallasz?',
+    module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l46&round=listen' },
+  { id: 'l46-read', glyph: '读', title: 'Olvasás: Wang Ming új munkája',
+    desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l46&round=read' },
+
+  // ── HSK 3 · 17. lecke ──
+  { id: 'l47-lesson', glyph: '关', title: 'Magyarázat: 对…来说, 关于, 对, 向, 跟 + ige',
+    desc: 'Egy cikk a teáról: kinek a szempontjából, miről, mire hat, kitől, kivel.',
+    module: 'lesson', href: 'pages/lesson.html?id=l47' },
+  { id: 'l47-listen', glyph: '听', title: 'Hallás: tanácskérés',
+    desc: 'A lecke mondatai hang után: mit jelent, amit hallasz?',
+    module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l47&round=listen' },
+  { id: 'l47-read', glyph: '读', title: 'Olvasás: A cikkem',
+    desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l47&round=read' },
+
+  // ── HSK 3 · 18. lecke ──
+  { id: 'l48-lesson', glyph: '地', title: 'Magyarázat: 地, melléknév-kettőzés, gyakoriság, 终于 / 最后, 再 · 又 · 还',
+    desc: 'Gombócsütés: lassan, gondosan, mindig, végre — és újra.',
+    module: 'lesson', href: 'pages/lesson.html?id=l48' },
+  { id: 'l48-listen', glyph: '听', title: 'Hallás: gombócsütés',
+    desc: 'A lecke mondatai hang után: mit jelent, amit hallasz?',
+    module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l48&round=listen' },
+  { id: 'l48-read', glyph: '读', title: 'Olvasás: Az első gombócaim',
+    desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l48&round=read' }
 ];
 
 const HANZIFLOW_PATH_UNITS = [
@@ -619,5 +652,11 @@ const HANZIFLOW_PATH_UNITS = [
   { id: 'u-l44', kicker: 'HSK 3 · 14. lecke', title: 'Már emlékszem!', sub: '想起来 / 想出来, 看出来, 下起雨来, 听起来, 学下去',
     steps: ['l44-lesson', 'l44-listen', 'l44-read'] },
   { id: 'u-l45', kicker: 'HSK 3 · 15. lecke', title: 'Ellopták a biciklimet!', sub: '被人偷了, 被偷了, 让弟弟吃了, 没被, 作业写完了',
-    steps: ['l45-lesson', 'l45-listen', 'l45-read'] }
+    steps: ['l45-lesson', 'l45-listen', 'l45-read'] },
+  { id: 'u-l46', kicker: 'HSK 3 · 16. lecke', title: 'Még ebédelni sincs időm', sub: '连…都, 几乎, 差点儿, 不是…而是…, 习惯',
+    steps: ['l46-lesson', 'l46-listen', 'l46-read'] },
+  { id: 'u-l47', kicker: 'HSK 3 · 17. lecke', title: 'Egy cikk a teáról', sub: '对…来说, 关于, 对身体好, 向他学习, 跟老板聊聊',
+    steps: ['l47-lesson', 'l47-listen', 'l47-read'] },
+  { id: 'u-l48', kicker: 'HSK 3 · 18. lecke', title: 'Lassan, gondosan', sub: '慢慢地, 干干净净, 总是 / 一般, 终于 / 最后, 再 / 又 / 还',
+    steps: ['l48-lesson', 'l48-listen', 'l48-read'] }
 ];
