@@ -293,7 +293,40 @@ const HANZIFLOW_PATH = [
     module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l24&round=listen' },
   { id: 'l24-read', glyph: '读', title: 'Olvasás: Az első dolgozat',
     desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
-    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l24&round=read' }
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l24&round=read' },
+
+  // ── HSK 2 · 10. lecke ──
+  { id: 'l25-lesson', glyph: '别', title: 'Magyarázat: 别, 别…了, 正在…呢, testrész + 疼, 一天三次',
+    desc: 'Orvosnál: mi fáj, hányszor kell bevenni a gyógyszert — és ne aggódj!',
+    module: 'lesson', href: 'pages/lesson.html?id=l25' },
+  { id: 'l25-listen', glyph: '听', title: 'Hallás: orvosnál',
+    desc: 'A lecke mondatai hang után: mit jelent, amit hallasz?',
+    module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l25&round=listen' },
+  { id: 'l25-read', glyph: '读', title: 'Olvasás: Anna megfázott',
+    desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l25&round=read' },
+
+  // ── HSK 2 · 11. lecke ──
+  { id: 'l26-lesson', glyph: '比', title: 'Magyarázat: 比, a különbség, 没有…那么, 更 / 还, 跟…一样',
+    desc: 'Összehasonlítás: nagyobb, sokkal melegebb, nem olyan, ugyanolyan.',
+    module: 'lesson', href: 'pages/lesson.html?id=l26' },
+  { id: 'l26-listen', glyph: '听', title: 'Hallás: fagylalt a hőségben',
+    desc: 'A lecke mondatai hang után: mit jelent, amit hallasz?',
+    module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l26&round=listen' },
+  { id: 'l26-read', glyph: '读', title: 'Olvasás: Peking és Budapest',
+    desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l26&round=read' },
+
+  // ── HSK 2 · 12. lecke ──
+  { id: 'l27-lesson', glyph: '得', title: 'Magyarázat: ige + 得 + melléknév, 虽然…但是, dicséret',
+    desc: 'Hogyan csinálod? Szépen énekelsz, gyorsan beszélsz — bár…, de….',
+    module: 'lesson', href: 'pages/lesson.html?id=l27' },
+  { id: 'l27-listen', glyph: '听', title: 'Hallás: az iskolai est után',
+    desc: 'A lecke mondatai hang után: mit jelent, amit hallasz?',
+    module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l27&round=listen' },
+  { id: 'l27-read', glyph: '读', title: 'Olvasás: Az iskolai est',
+    desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l27&round=read' }
 ];
 
 const HANZIFLOW_PATH_UNITS = [
@@ -346,5 +379,11 @@ const HANZIFLOW_PATH_UNITS = [
   { id: 'u-l23', kicker: 'HSK 2 · 8. lecke', title: 'Hadd gondolkodjak', sub: '让, 看看 / 休息休息, 再 és 又, 告诉, 先…再…',
     steps: ['l23-lesson', 'l23-listen', 'l23-read'] },
   { id: 'u-l24', kicker: 'HSK 2 · 9. lecke', title: 'Megértetted?', sub: '做完, 听懂, 看见, 找到, 写错, 没 + ige + kieg., 第 + szám',
-    steps: ['l24-lesson', 'l24-listen', 'l24-read'] }
+    steps: ['l24-lesson', 'l24-listen', 'l24-read'] },
+  { id: 'u-l25', kicker: 'HSK 2 · 10. lecke', title: 'Ne aggódj!', sub: '别 + ige, 别…了, 正在…呢, 头疼, gyakoriság',
+    steps: ['l25-lesson', 'l25-listen', 'l25-read'] },
+  { id: 'u-l26', kicker: 'HSK 2 · 11. lecke', title: 'Peking melegebb', sub: 'A 比 B + mn., 大三岁, 没有…那么, 更, 跟…一样',
+    steps: ['l26-lesson', 'l26-listen', 'l26-read'] },
+  { id: 'u-l27', kicker: 'HSK 2 · 12. lecke', title: 'Szépen énekelsz!', sub: '唱得很好, 说汉语说得很好, 打得比我好, 虽然…但是…',
+    steps: ['l27-lesson', 'l27-listen', 'l27-read'] }
 ];
