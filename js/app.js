@@ -6783,6 +6783,8 @@ function initExamPage() {
     return it.lines.map(l => reading(l).replace(/^[男女]：/, '')).join(' ') + ' 问：' + reading(it.q);
   }
   const tileText = t => reading(t);
+  // a feladat azonosítója (az előző vizsga kérdéseinek kerüléséhez és a naplóhoz)
+  const keyOf = it => it.t + ':' + reading(it.zh || (it.lines && it.lines[0]) || it.text || it.q || it.tiles.join('')).slice(0, 40);
 
   /* ── A) Beállítások + profil ───────────────────── */
   function loadJson(key) {
@@ -6800,7 +6802,7 @@ function initExamPage() {
   }
   function loadProfile() {
     const p = loadJson(PROFILE_KEY);
-    return (p && p.sectionStats) ? p : { sectionStats: {}, best: {}, last: {}, exams: {}, totalAttempts: 0, totalCorrect: 0 };
+    return (p && p.sectionStats) ? p : { sectionStats: {}, best: {}, last: {}, exams: {}, recent: {}, totalAttempts: 0, totalCorrect: 0 };
   }
   function saveProfile(p) {
     try { localStorage.setItem(PROFILE_KEY, JSON.stringify(p)); } catch (e) {}
@@ -6809,9 +6811,15 @@ function initExamPage() {
   const maxScore = L => L.sections.length * 100;
 
   /* ── B) A vizsga összeállítása ─────────────────── */
-  // részenként: a típusok a készletük arányában, típusonként egy blokkban (mint a valódi vizsgán)
+  // részenként: a típusok a készletük arányában, típusonként egy blokkban (mint a valódi vizsgán);
+  // az előző vizsga kérdései a sor végére kerülnek, így csak akkor jönnek újra, ha nincs elég más
   function pickSection(L, sec) {
-    const pools = sec.types.map(t => shuffle(ITEMS.filter(it => it.lv === L.lv && it.t === t)));
+    const recent = (loadProfile().recent || {})[settings.level] || [];
+    const fresh = it => recent.indexOf(keyOf(it)) < 0;
+    const pools = sec.types.map(t => {
+      const p = shuffle(ITEMS.filter(it => it.lv === L.lv && it.t === t));
+      return p.filter(fresh).concat(p.filter(it => !fresh(it)));
+    });
     const total = pools.reduce((n, p) => n + p.length, 0);
     const quota = pools.map(p => Math.floor(sec.count * p.length / total));
     let left = sec.count - quota.reduce((a, b) => a + b, 0);
@@ -7116,7 +7124,7 @@ function initExamPage() {
   function gradedResults(partial) {
     return run.qs.filter(q => !partial || isAnswered(q)).map(q => {
       const ok = isCorrect(q);
-      return { item: q.it.t + ':' + reading(q.it.zh || q.it.q || q.it.text || q.it.tiles.join('')).slice(0, 24),
+      return { item: keyOf(q.it),
                section: q.sec.id, correct: ok,
                errorCode: ok ? null : !isAnswered(q) ? (run.timedOut ? 'timeout' : 'empty') : 'wrong' };
     });
@@ -7147,6 +7155,8 @@ function initExamPage() {
     p.best[settings.level] = Math.max(p.best[settings.level] || 0, total);
     p.last[settings.level] = total;
     p.exams[settings.level] = (p.exams[settings.level] || 0) + 1;
+    p.recent = p.recent || {};
+    p.recent[settings.level] = run.qs.map(q => keyOf(q.it));
     saveProfile(p);
 
     document.getElementById('exExam').classList.add('hidden');

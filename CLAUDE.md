@@ -59,7 +59,7 @@ js/data/tones.js      a Tónus-tréner adatai
 js/data/measure.js    a Mérőszavak adatai (29 mérőszó, főnevek, mondatok, szabályok; a séma a fájl elején)
 js/data/sentence.js   a Mondat-Mester adatai (21 szabály, 41 sorba rakós és 28 szócskás mondat; séma a fájl elején)
 js/data/numbers.js    a Dátum, idő, pénz alapelemei és szabályai; a kínai alakot az app.js generátora állítja elő
-js/data/exam.js       a próbavizsga részei szintenként és a saját feladatbank (103 feladat, 8 típus; séma a fájl elején)
+js/data/exam.js       a próbavizsga részei szintenként és a saját feladatbank (182 feladat, 8 típus; séma a fájl elején)
 sw.js · manifest.webmanifest · img/ (ikonok)
 ```
 
@@ -105,8 +105,9 @@ Színt csak tokenből; 12 px alatt nincs szöveg; érintési célpont ≥ 44 px;
   timeParts, moneyParts); a rossz válaszok tipikus hibák (二/两, hiányzó 零, „fél négy", napszak, sorrend, 块/毛).
   Próba (scratchpad): `nm-test.js` (kényes értékek kiírása, 3000 kártya, minden pinyin érvényes-e).
 - [x] HSK 1–3 próbavizsga (pages/exam.html): részenként 100 pont, 60% az átmenő; a hallás kétszer hallgatható,
-  hang nélkül a szöveg megmutatható; HSK 3-ban a pinyin alapból rejtve. Bővítés: új feladat a HANZIFLOW_EXAM_ITEMS-be.
-- [ ] Dolgozatok (leckénkénti témazárók); a próbavizsga feladatbankjának bővítése (most szintenként 30–42 feladat).
+  hang nélkül a szöveg megmutatható; HSK 3-ban a pinyin alapból rejtve. Szintenként 26–28 feladat jut egy
+  10 kérdéses részre; az előző vizsga kérdései (profil: recent) hátrébb kerülnek. Bővítés: új feladat a HANZIFLOW_EXAM_ITEMS-be.
+- [ ] Dolgozatok (leckénkénti témazárók).
 - Élő oldal: https://nokedli25ttv.github.io/HanziFlow/ (GitHub Pages, main ág, 2026-10-18 óta).
 - [ ] A NihonCore `sw.js`-ében a cache-törlést a saját előtagra kell szűkíteni (különben a HanziFlow offline-tárát is törli).
 - [ ] Firestore-szabály a `users/{uid}/apps/{app}` helyre (a user Firebase-konzolján).
