@@ -392,7 +392,40 @@ const HANZIFLOW_PATH = [
     module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l33&round=listen' },
   { id: 'l33-read', glyph: '读', title: 'Olvasás: Én és a kínai',
     desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
-    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l33&round=read' }
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l33&round=read' },
+
+  // ── HSK 3 · 4. lecke ──
+  { id: 'l34-lesson', glyph: '得', title: 'Magyarázat: ige + 得 / 不 + kiegészítő, 得了 / 不了, 来得及, 突然',
+    desc: 'Képes vagy nem képes: megérted-e, megtalálod-e, odaérsz-e még.',
+    module: 'lesson', href: 'pages/lesson.html?id=l34' },
+  { id: 'l34-listen', glyph: '听', title: 'Hallás: hol a kulcs?',
+    desc: 'A lecke mondatai hang után: mit jelent, amit hallasz?',
+    module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l34&round=listen' },
+  { id: 'l34-read', glyph: '读', title: 'Olvasás: Egy bosszantó este',
+    desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l34&round=read' },
+
+  // ── HSK 3 · 5. lecke ──
+  { id: 'l35-lesson', glyph: '久', title: 'Magyarázat: időtartam + 了…了, …没…了, szétválasztható igék, 才 / 就, 知道 · 认识 · 了解',
+    desc: 'Mióta tart, mióta nem történt — és ki kit hogyan ismer.',
+    module: 'lesson', href: 'pages/lesson.html?id=l35' },
+  { id: 'l35-listen', glyph: '听', title: 'Hallás: találkozás a metrón',
+    desc: 'A lecke mondatai hang után: mit jelent, amit hallasz?',
+    module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l35&round=listen' },
+  { id: 'l35-read', glyph: '读', title: 'Olvasás: Régi osztálytársak',
+    desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l35&round=read' },
+
+  // ── HSK 3 · 6. lecke ──
+  { id: 'l36-lesson', glyph: '谁', title: 'Magyarázat: 谁都 / 什么都, kérdőszó…就…, 只要…就…, 只有…才…, 怎么这么',
+    desc: 'Bárhol, bármi, bárki — és a feltételek: elég, ha…, csak akkor, ha….',
+    module: 'lesson', href: 'pages/lesson.html?id=l36' },
+  { id: 'l36-listen', glyph: '听', title: 'Hallás: a terv',
+    desc: 'A lecke mondatai hang után: mit jelent, amit hallasz?',
+    module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l36&round=listen' },
+  { id: 'l36-read', glyph: '读', title: 'Olvasás: Születésnapi meglepetés',
+    desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l36&round=read' }
 ];
 
 const HANZIFLOW_PATH_UNITS = [
@@ -463,5 +496,11 @@ const HANZIFLOW_PATH_UNITS = [
   { id: 'u-l32', kicker: 'HSK 3 · 2. lecke', title: 'Hozd fel, vidd vissza!', sub: '上来 / 下去, 搬上来, 走进教室来, 买回来, 刚 / 刚才',
     steps: ['l32-lesson', 'l32-listen', 'l32-read'] },
   { id: 'u-l33', kicker: 'HSK 3 · 3. lecke', title: 'Egyre szebb', sub: '越来越, 越…越…, 又…又…, 一点儿也不 / 一…也没, 极了',
-    steps: ['l33-lesson', 'l33-listen', 'l33-read'] }
+    steps: ['l33-lesson', 'l33-listen', 'l33-read'] },
+  { id: 'u-l34', kicker: 'HSK 3 · 4. lecke', title: 'Nem találom!', sub: '看得懂 / 看不懂, 进不去, 吃不了, 来得及, 没找到 vagy 找不到',
+    steps: ['l34-lesson', 'l34-listen', 'l34-read'] },
+  { id: 'u-l35', kicker: 'HSK 3 · 5. lecke', title: 'Rég láttalak!', sub: '认识十年了, 半年没见面了, 见个面, 才 / 就, 知道 / 认识 / 了解',
+    steps: ['l35-lesson', 'l35-listen', 'l35-read'] },
+  { id: 'u-l36', kicker: 'HSK 3 · 6. lecke', title: 'Bárhol jó', sub: '谁都, 什么也没, 想吃什么就吃什么, 只要…就…, 只有…才…',
+    steps: ['l36-lesson', 'l36-listen', 'l36-read'] }
 ];
