@@ -326,7 +326,40 @@ const HANZIFLOW_PATH = [
     module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l27&round=listen' },
   { id: 'l27-read', glyph: '读', title: 'Olvasás: Az iskolai est',
     desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
-    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l27&round=read' }
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l27&round=read' },
+
+  // ── HSK 2 · 13. lecke ──
+  { id: 'l28-lesson', glyph: '着', title: 'Magyarázat: ige + 着, hely + ige + 着, 往, 进来 / 出去',
+    desc: 'Állapot és irány: mi van rajtad, mi hol van, merre menj.',
+    module: 'lesson', href: 'pages/lesson.html?id=l28' },
+  { id: 'l28-listen', glyph: '听', title: 'Hallás: a kávézóban',
+    desc: 'A lecke mondatai hang után: mit jelent, amit hallasz?',
+    module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l28&round=listen' },
+  { id: 'l28-read', glyph: '读', title: 'Olvasás: Egy fénykép',
+    desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l28&round=read' },
+
+  // ── HSK 2 · 14. lecke ──
+  { id: 'l29-lesson', glyph: '过', title: 'Magyarázat: ige + 过, 没…过, 过 + szám + 次, 过 vagy 了, 还没…呢',
+    desc: 'Tapasztalatok: mit csináltál már, mit még soha, hányszor.',
+    module: 'lesson', href: 'pages/lesson.html?id=l29' },
+  { id: 'l29-listen', glyph: '听', title: 'Hallás: a Nagy Fal',
+    desc: 'A lecke mondatai hang után: mit jelent, amit hallasz?',
+    module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l29&round=listen' },
+  { id: 'l29-read', glyph: '读', title: 'Olvasás: Ahol már jártam',
+    desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l29&round=read' },
+
+  // ── HSK 2 · 15. lecke ──
+  { id: 'l30-lesson', glyph: '祝', title: 'Magyarázat: (快 / 就)要…了, 都…了, 祝, 送, ünnepek',
+    desc: 'Búcsú és jókívánságok: mindjárt itt az újév, jó utat, boldog új évet!',
+    module: 'lesson', href: 'pages/lesson.html?id=l30' },
+  { id: 'l30-listen', glyph: '听', title: 'Hallás: búcsú',
+    desc: 'A lecke mondatai hang után: mit jelent, amit hallasz?',
+    module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l30&round=listen' },
+  { id: 'l30-read', glyph: '读', title: 'Olvasás: Viszlát, Peking!',
+    desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l30&round=read' }
 ];
 
 const HANZIFLOW_PATH_UNITS = [
@@ -385,5 +418,11 @@ const HANZIFLOW_PATH_UNITS = [
   { id: 'u-l26', kicker: 'HSK 2 · 11. lecke', title: 'Peking melegebb', sub: 'A 比 B + mn., 大三岁, 没有…那么, 更, 跟…一样',
     steps: ['l26-lesson', 'l26-listen', 'l26-read'] },
   { id: 'u-l27', kicker: 'HSK 2 · 12. lecke', title: 'Szépen énekelsz!', sub: '唱得很好, 说汉语说得很好, 打得比我好, 虽然…但是…',
-    steps: ['l27-lesson', 'l27-listen', 'l27-read'] }
+    steps: ['l27-lesson', 'l27-listen', 'l27-read'] },
+  { id: 'u-l28', kicker: 'HSK 2 · 13. lecke', title: 'Fehér ruha van rajtam', sub: '门开着, 桌子上放着…, 笑着说, 往左走, 进来 / 出去',
+    steps: ['l28-lesson', 'l28-listen', 'l28-read'] },
+  { id: 'u-l29', kicker: 'HSK 2 · 14. lecke', title: 'Voltál már a Nagy Falon?', sub: '吃过, 没去过, 去过两次, 过 vagy 了, 还没…呢',
+    steps: ['l29-lesson', 'l29-listen', 'l29-read'] },
+  { id: 'u-l30', kicker: 'HSK 2 · 15. lecke', title: 'Boldog új évet!', sub: '快要…了, 就要…了, 都…了, 祝你…, 送, 节',
+    steps: ['l30-lesson', 'l30-listen', 'l30-read'] }
 ];
