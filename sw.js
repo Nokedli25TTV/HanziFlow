@@ -14,7 +14,7 @@
    ==================================================== */
 
 const CACHE_PREFIX  = 'hanziflow-';
-const CACHE_VERSION = CACHE_PREFIX + 'v18-2026-10-18-pinyin-tabla';
+const CACHE_VERSION = CACHE_PREFIX + 'v19-2026-10-18-meroszavak';
 const APP_SHELL_CACHE = CACHE_VERSION + '-shell';
 const RUNTIME_CACHE   = CACHE_VERSION + '-runtime';
 
@@ -25,6 +25,7 @@ const APP_SHELL = [
   './pages/lesson.html',
   './pages/tones.html',
   './pages/pinyin.html',
+  './pages/measure.html',
   './pages/modules.html',
   './pages/stats.html',
   './pages/login.html',
@@ -38,6 +39,7 @@ const APP_SHELL = [
   './js/data/core.js',
   './js/data/course.js',
   './js/data/tones.js',
+  './js/data/measure.js',
   './img/icon.svg',
   './img/icon-192.png',
   './img/icon-512.png'

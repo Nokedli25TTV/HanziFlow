@@ -33,7 +33,9 @@ window.HanziFlowSync = (function () {
     'hanziflow_goal_v1',            // napi cél (a kezdőlap „Folytatás" kártyáján)
     'hanziflow_tones_profile_v1',   // Tónus-tréner: tónusonkénti eredmény
     'hanziflow_tones_settings_v1',
-    'hanziflow_pinyin_settings_v1'  // Pinyin-tábla: mód, szint, tónus, kártyák száma
+    'hanziflow_pinyin_settings_v1', // Pinyin-tábla: mód, szint, tónus, kártyák száma
+    'hanziflow_measure_profile_v1', // Mérőszavak: mérőszavankénti eredmény
+    'hanziflow_measure_settings_v1'
   ];
   const PREFIX_KEYS = [];
 

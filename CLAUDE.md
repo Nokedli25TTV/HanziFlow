@@ -42,6 +42,7 @@ index.html            kezdőlap: szintválasztó / „Folytatás", napi cél, is
 pages/lesson.html     lecke (?id=l0…l50 · l1–l15 HSK 1, l16–l30 HSK 2, l31–l50 HSK 3 · &round=listen | read · ?review=1 = napi ismétlés)
 pages/tones.html      Tónus-tréner (hallás után · jelölés · szópárok)
 pages/pinyin.html     Pinyin-tábla (a tábla a négy tónussal · beírás és diktálás élő ellenőrzéssel)
+pages/measure.html    Mérőszavak (tábla csoportonként · párosítás · mondatban · számolás)
 pages/modules.html    a modulok kártyái („Szabad gyakorlás")
 pages/stats.html      statisztika · login.html · register.html
 css/style.css         a teljes stíluslap (tokenek → váz → kezdőlap → kör-keret → statisztika → lecke → tónusok)
@@ -52,11 +53,12 @@ js/pinyin.js          HanziFlowPinyin — pinyin-motor (a pages/pinyin.html hasz
 js/data/core.js       HANZIFLOW_PATH + HANZIFLOW_PATH_UNITS (a tanulási út)
 js/data/course.js     HANZIFLOW_COURSE (a leckék; a séma a fájl elején)
 js/data/tones.js      a Tónus-tréner adatai
+js/data/measure.js    a Mérőszavak adatai (29 mérőszó, főnevek, mondatok, szabályok; a séma a fájl elején)
 sw.js · manifest.webmanifest · img/ (ikonok)
 ```
 
 Oldal-felismerő (`initCurrentPage`, az `app.js` végén) a `<main>` azonosítója szerint: `statsMain`,
-`tonesMain`, `pinyinMain`, `lessonMain`, `.auth-card`, `homeMain`.
+`tonesMain`, `pinyinMain`, `measureMain`, `lessonMain`, `.auth-card`, `homeMain`.
 
 ## 4. Kínai szöveg a leckékben
 
@@ -70,7 +72,7 @@ Oldal-felismerő (`initCurrentPage`, az `app.js` végén) a `<main>` azonosító
 ## 5. Tárolás (localStorage, minden kulcs `hanziflow_` előtagú)
 
 Szinkronizált: `sessions_v1` (munkamenet-napló), `srs_v1` (ismétlés), `path_v1` (út), `goal_v1` (napi cél),
-`tones_profile_v1`, `tones_settings_v1`, `pinyin_settings_v1`. Eszköz-helyi: `theme`, `helpers_*`, `audio_on`, `toc_v1`, `lesson_pos_v1` stb.
+`tones_profile_v1`, `tones_settings_v1`, `pinyin_settings_v1`, `measure_profile_v1`, `measure_settings_v1`. Eszköz-helyi: `theme`, `helpers_*`, `audio_on`, `toc_v1`, `lesson_pos_v1` stb.
 Új szinkronizálandó kulcs → a `sync.js` `EXACT_KEYS` listájára.
 
 ## 6. Design (style.css `:root`)
@@ -87,7 +89,9 @@ Színt csak tokenből; 12 px alatt nincs szöveg; érintési célpont ≥ 44 px;
 - [x] HSK 2: mind a 15 lecke (l16–l30; kicker és jelvény a HSK 2-n belüli sorszámot mutatja, a kereszthivatkozások „HSK 2 N. lecke" alakúak).
 - [x] HSK 3: mind a 20 lecke (l31–l50; kicker és jelvény „HSK 3 · N. lecke", kereszthivatkozás „HSK 3 N. lecke").
 - [x] Pinyin-tábla modul (pages/pinyin.html): a szavak a leckék szólistáiból, a hangpélda az írásjegy leggyakoribb olvasata.
-- [ ] Modulok: Mérőszavak, Mondat-Mester, Dátum/idő/pénz, dolgozatok, HSK 1–3 próbavizsga.
+- [x] Mérőszavak modul (pages/measure.html): a rossz válaszok közé nem kerül olyan mérőszó, amely az adott főnévvel
+  szintén helyes lehet (a főnév saját listája, a közös főnevek, a `free` / `any` jelű mérőszavak — lásd a measure.js fejét).
+- [ ] Modulok: Mondat-Mester, Dátum/idő/pénz, dolgozatok, HSK 1–3 próbavizsga.
 - Élő oldal: https://nokedli25ttv.github.io/HanziFlow/ (GitHub Pages, main ág, 2026-10-18 óta).
 - [ ] A NihonCore `sw.js`-ében a cache-törlést a saját előtagra kell szűkíteni (különben a HanziFlow offline-tárát is törli).
 - [ ] Firestore-szabály a `users/{uid}/apps/{app}` helyre (a user Firebase-konzolján).
