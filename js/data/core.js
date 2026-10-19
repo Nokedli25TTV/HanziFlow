@@ -1100,7 +1100,29 @@ const HANZIFLOW_PATH = [
     module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l84&round=listen' },
   { id: 'l84-read', glyph: '读', title: 'Olvasás: Wang Ming lakást vesz',
     desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
-    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l84&round=read' }
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l84&round=read' },
+
+  // ── HSK 5 · 15. lecke ──
+  { id: 'l85-lesson', glyph: '成', title: 'Magyarázat: 成语: 一举两得, 入乡随俗, 半途而废, 千方百计, 名副其实',
+    desc: 'Kínai szólások: két legyet egy csapásra, ahány ház, annyi szokás, félúton feladni, minden követ megmozgatni, nem hiába.',
+    module: 'lesson', href: 'pages/lesson.html?id=l85' },
+  { id: 'l85-listen', glyph: '听', title: 'Hallás: két legyet egy csapásra',
+    desc: 'A lecke mondatai hang után: mit jelent, amit hallasz?',
+    module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l85&round=listen' },
+  { id: 'l85-read', glyph: '读', title: 'Olvasás: A fatönk mellett váró paraszt',
+    desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l85&round=read' },
+
+  // ── HSK 5 · 16. lecke ──
+  { id: 'l86-lesson', glyph: '心', title: 'Magyarázat: 根本, 明明, 亲自, 顺便, 赶紧 · 赶快',
+    desc: 'Önkéntes hétvége: egyáltalán nem, pedig, személyesen, ha már úgyis, gyorsan.',
+    module: 'lesson', href: 'pages/lesson.html?id=l86' },
+  { id: 'l86-listen', glyph: '听', title: 'Hallás: okostelefon-óra',
+    desc: 'A lecke mondatai hang után: mit jelent, amit hallasz?',
+    module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l86&round=listen' },
+  { id: 'l86-read', glyph: '读', title: 'Olvasás: Hétvégi önkéntes',
+    desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l86&round=read' }
 ];
 
 const HANZIFLOW_PATH_UNITS = [
@@ -1309,5 +1331,9 @@ const HANZIFLOW_PATH_UNITS = [
   { id: 'u-l83', kicker: 'HSK 5 · 13. lecke', title: 'Utazás Jünnanba', sub: '陆续, 连续, 接着, 临时, 随时',
     steps: ['l83-lesson', 'l83-listen', 'l83-read'] },
   { id: 'u-l84', kicker: 'HSK 5 · 14. lecke', title: 'Saját lakás?', sub: '要么…要么, 一来…二来, 至于, 不但不…反而, 反正',
-    steps: ['l84-lesson', 'l84-listen', 'l84-read'] }
+    steps: ['l84-lesson', 'l84-listen', 'l84-read'] },
+  { id: 'u-l85', kicker: 'HSK 5 · 15. lecke', title: 'Kínai szólások', sub: '一举两得, 入乡随俗, 半途而废, 千方百计, 名副其实',
+    steps: ['l85-lesson', 'l85-listen', 'l85-read'] },
+  { id: 'u-l86', kicker: 'HSK 5 · 16. lecke', title: 'Önkéntes hétvége', sub: '根本, 明明, 亲自, 顺便, 赶紧 · 赶快',
+    steps: ['l86-lesson', 'l86-listen', 'l86-read'] }
 ];

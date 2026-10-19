@@ -15432,6 +15432,311 @@ const HANZIFLOW_COURSE = [
     { q: 'Mit jelent: {原来是这样|yuánlái shì zhèyàng}。', a: 'Szóval így áll a dolog.', wrong: ['Ez nem igaz.', 'Ez mindig így volt.', 'Ezt nem tudom.'], why: 'Megértés kifejezése.' },
     { q: 'Mit jelent a {欠|qiàn}?', a: 'tartozik', wrong: ['kölcsönad', 'ajándékoz', 'megtakarít'], why: '{觉得欠父母的|juéde qiàn fùmǔ de} „úgy érzi, tartozik a szüleinek".' }
   ]
+},
+/* ════════════════════════════════════════════════════
+   HSK 5 · 15. LECKE — 成语: 一举两得, 入乡随俗, 半途而废, 千方百计, 名副其实
+   ════════════════════════════════════════════════════ */
+{
+  id: 'l85', no: 85, badge: '15', kicker: 'HSK 5 · 15. lecke', label: 'HSK 5 · 15. lecke',
+  title: 'Négy írásjegy, egy egész történet — kínai szólások',
+  lead: 'Megismered a négyírásjegyes kínai szólásokat (成语): két legyet egy csapásra (一举两得), ahány ház, annyi szokás (入乡随俗), félúton feladni (半途而废), minden követ megmozgatni (千方百计), és nem hiába viselni a nevét (名副其实).',
+  cando: [
+    'Felismered és megérted a gyakori négyírásjegyes szólásokat.',
+    'Szólást használsz állítmányként: 真是一举两得！',
+    'Szólást használsz határozóként és jelzőként: 千方百计地…, 名副其实的….',
+    'Elmeséled egy szólás eredetét saját szavaiddal.'
+  ],
+  intro: [
+    'Anna kerékpáros munkába járást szervezett a csapatnak: mozognak is, és a környezetet is kímélik. Chen igazgató egy négyírásjegyes szólással dicséri meg — Anna pedig rájön, hogy a kínai szólások külön világot alkotnak.',
+    'A {成语|chéngyǔ} „kínai szólás" többnyire négy írásjegyből áll, és sokszor egy régi történetre utal. Rövid, tömör, választékos — a művelt kínai beszéd és írás elengedhetetlen része.'
+  ],
+  dialogue: {
+    title: 'Két legyet egy csapásra',
+    scene: 'Hétfő délben, közös ebéd a cég étkezőjében. Chen igazgató, Anna és Zhou Jie.',
+    lines: [
+      { who: 'Chen', zh: '{安娜|Ān·nà}{带|dài}{大家|dà·jiā}{骑|qí}{自行车|zì·xíng·chē}{上|shàng}{班|bān}，{既|jì}{锻炼|duàn·liàn}{了|le}{身体|shēn·tǐ}，{又|yòu}{保护|bǎo·hù}{了|le}{环境|huán·jìng}，{真|zhēn}{是|shì}{一举两得|yì jǔ liǎng dé}！', hu: 'Anna rávett mindenkit, hogy biciklivel jöjjön dolgozni: mozgunk is, és a környezetet is védjük — két legyet egy csapásra!' },
+      { who: 'Anna', zh: '“{一举两得|yì jǔ liǎng dé}”？{是|shì}{什么|shén·me}{意思|yì·si}？', hu: '„Egy mozdulat, két nyereség"? Mit jelent ez?' },
+      { who: 'Zhou Jie', zh: '{就|jiù}{是|shì}{做|zuò}{一|yí}{件|jiàn}{事|shì}，{得|dé}{到|dào}{两|liǎng}{个|ge}{好处|hǎo·chù}。{这|zhè}{是|shì}{成语|chéng yǔ}，{只|zhǐ}{有|yǒu}{四|sì}{个|ge}{字|zì}，{意思|yì·si}{却|què}{很|hěn}{丰富|fēng fù}。', hu: 'Azt, hogy egy dologgal két hasznot szerzel. Ez egy szólás: csak négy írásjegy, de gazdag jelentésű.' },
+      { who: 'Anna', zh: '{我|wǒ}{刚|gāng}{来|lái}{中国|Zhōng·guó}{的|de}{时候|shí·hou}，{就|jiù}{学|xué}{过|guo}{一|yí}{个|ge}：“{入乡随俗|rù xiāng suí sú}”。', hu: 'Amikor Kínába jöttem, már tanultam egyet: „Ahány ház, annyi szokás."' },
+      { who: 'Chen', zh: '{对|duì}，{你|nǐ}{学|xué}{中文|Zhōng·wén}、{吃|chī}{中国|Zhōng·guó}{菜|cài}、{过|guò}{中国|Zhōng·guó}{节|jié}，{这|zhè}{就|jiù}{是|shì}{入乡随俗|rù xiāng suí sú}。', hu: 'Úgy van: kínaiul tanulsz, kínai ételt eszel, a kínai ünnepeket ünnepled — ez az.' },
+      { who: 'Anna', zh: '{不过|bú·guò}{成语|chéng yǔ}{太|tài}{难|nán}{了|le}，{有|yǒu}{时候|shí·hou}{我|wǒ}{真|zhēn}{想|xiǎng}{放弃|fàng qì}。', hu: 'De a szólások nagyon nehezek, néha legszívesebben feladnám.' },
+      { who: 'Zhou Jie', zh: '{千万|qiān·wàn}{别|bié}{半途而废|bàn tú ér fèi}！{你|nǐ}{千方百计|qiān fāng bǎi jì}{地|de}{学|xué}{了|le}{这么|zhè·me}{久|jiǔ}，{现在|xiàn·zài}{已经|yǐ·jīng}{是|shì}{名副其实|míng fù qí shí}{的|de}“{中国通|Zhōng guó tōng}”{了|le}！', hu: 'Csak félúton ne add fel! Annyi mindent megtettél a tanulásért, mostanra igazi „Kína-szakértő" vagy!' }
+    ],
+    notes: [
+      'A {成语|chéngyǔ} „kínai szólás, idióma"; legtöbbjük négy írásjegyből áll.',
+      'A {中国通|Zhōngguótōng} „Kína-szakértő": olyan külföldi, aki jól ismeri Kínát és a kínai nyelvet.',
+      'A {既|jì}…{又|yòu}… „is…, is…" a HSK 4 első leckéjéből ismerős.'
+    ]
+  },
+  points: [
+    {
+      title: '{一举两得|yì jǔ liǎng dé}', sub: 'két legyet egy csapásra',
+      pattern: '(cselekvés)，{真|zhēn}{是|shì}{一举两得|yì jǔ liǎng dé}',
+      body: 'Szó szerint „egy mozdulat, két nyereség": egyetlen cselekvéssel <b>két előnyhöz</b> jutunk. Leggyakrabban állítmányként, a mondat végén áll: {骑车上班，既锻炼身体，又保护环境，一举两得|qí chē shàngbān, jì duànliàn shēntǐ, yòu bǎohù huánjìng, yì jǔ liǎng dé}. Rokon szólás: {一箭双雕|yí jiàn shuāng diāo} „egy nyíllal két sast".',
+      examples: [
+        { zh: '{骑|qí}{车|chē}{上|shàng}{班|bān}，{既|jì}{锻炼|duàn·liàn}{身体|shēn·tǐ}，{又|yòu}{省|shěng}{钱|qián}，{一举两得|yì jǔ liǎng dé}。', hu: 'Biciklivel járni dolgozni: mozgás is, spórolás is — két legyet egy csapásra.' },
+        { zh: '{和|hé}{中国|Zhōng·guó}{朋友|péng·you}{做|zuò}{语言|yǔ yán}{交换|jiāo huàn}，{真|zhēn}{是|shì}{一举两得|yì jǔ liǎng dé}。', hu: 'Nyelvcsere egy kínai baráttal — két legyet egy csapásra.' }
+      ]
+    },
+    {
+      title: '{入乡随俗|rù xiāng suí sú}', sub: 'ahány ház, annyi szokás; alkalmazkodik',
+      pattern: '{入乡随俗|rù xiāng suí sú} · A + {入乡随俗|rù xiāng suí sú}',
+      body: 'Szó szerint „aki falujába lép, kövesse annak szokásait": új helyen <b>alkalmazkodjunk a helyi szokásokhoz</b>. Tanácsként vagy dicséretként hangzik el: {到了中国就要入乡随俗|dào le Zhōngguó jiù yào rù xiāng suí sú} „ha Kínában vagy, kövesd a helyi szokásokat". A magyar „Rómában élj úgy, mint a rómaiak" mondás felel meg neki.',
+      examples: [
+        { zh: '{到|dào}{了|le}{一|yí}{个|ge}{新|xīn}{地方|dì·fang}，{最好|zuì hǎo}{入乡随俗|rù xiāng suí sú}。', hu: 'Ha új helyre érkezel, a legjobb, ha alkalmazkodsz a helyi szokásokhoz.' },
+        { zh: '{安娜|Ān·nà}{学|xué}{会|huì}{了|le}{用|yòng}{筷子|kuài·zi}，{真|zhēn}{是|shì}{入乡随俗|rù xiāng suí sú}。', hu: 'Anna megtanult pálcikával enni — igazán alkalmazkodott a helyi szokásokhoz.' }
+      ]
+    },
+    {
+      title: '{半途而废|bàn tú ér fèi}', sub: 'félúton abbahagyja, feladja',
+      pattern: '{别|bié} / {不能|bù néng} + {半途而废|bàn tú ér fèi}',
+      body: 'Szó szerint „az út felén abbahagyja": egy elkezdett dolgot <b>félbehagy</b>. Leggyakrabban tiltásban, figyelmeztetésben: {千万别半途而废|qiānwàn bié bàn tú ér fèi} „csak félúton ne add fel!", {学习不能半途而废|xuéxí bù néng bàn tú ér fèi} „a tanulást nem szabad félbehagyni". Ellentéte: {坚持到底|jiānchí dào dǐ} „végig kitart".',
+      examples: [
+        { zh: '{学|xué}{语言|yǔ yán}{最|zuì}{怕|pà}{半途而废|bàn tú ér fèi}。', hu: 'Nyelvtanulásnál a legrosszabb, ha félúton feladod.' },
+        { zh: '{这|zhè}{个|ge}{项目|xiàng·mù}{已经|yǐ·jīng}{做|zuò}{了|le}{一|yí}{半|bàn}，{不能|bù néng}{半途而废|bàn tú ér fèi}。', hu: 'Ennek a projektnek már a felénél tartunk, nem hagyhatjuk félbe.' }
+      ]
+    },
+    {
+      title: '{千方百计|qiān fāng bǎi jì}', sub: 'minden követ megmozgat',
+      pattern: 'A + {千方百计|qiān fāng bǎi jì} + ({地|de}) + ige',
+      body: 'Szó szerint „ezer mód, száz terv": valaki <b>minden lehetséges módon</b> igyekszik elérni valamit. Határozóként áll az ige előtt, gyakran {地|de}-vel: {千方百计地学汉语|qiān fāng bǎi jì de xué Hànyǔ} „minden lehetséges módon tanul kínaiul", {千方百计地帮助我们|qiān fāng bǎi jì de bāngzhù wǒmen} „mindent megtesz, hogy segítsen nekünk".',
+      examples: [
+        { zh: '{她|tā}{千方百计|qiān fāng bǎi jì}{地|de}{找|zhǎo}{机会|jī·huì}{练习|liàn·xí}{汉语|Hàn·yǔ}。', hu: 'Minden követ megmozgat, hogy alkalmat találjon a kínai gyakorlására.' },
+        { zh: '{陈|Chén}{经理|jīng·lǐ}{千方百计|qiān fāng bǎi jì}{地|de}{帮|bāng}{我们|wǒ·men}{解决|jiě jué}{问题|wèn·tí}。', hu: 'Chen igazgató minden lehetséges módon segít megoldani a gondjainkat.' }
+      ]
+    },
+    {
+      title: '{名副其实|míng fù qí shí}', sub: 'nem hiába viseli a nevét; valódi',
+      pattern: '{名副其实|míng fù qí shí}{的|de} + főnév · A + {名副其实|míng fù qí shí}',
+      body: 'Szó szerint „a név megfelel a valóságnak": valaki vagy valami <b>valóban olyan</b>, amilyennek nevezik. Jelzőként {的|de}-vel: {名副其实的中国通|míng fù qí shí de Zhōngguótōng} „igazi Kína-szakértő"; állítmányként: {这家饭馆的“老字号”名副其实|zhè jiā fànguǎn de „lǎozìhao" míng fù qí shí} „ez az étterem nem hiába viseli a „régi márka" nevet". Ellentéte: {名不副实|míng bú fù shí}.',
+      examples: [
+        { zh: '{安娜|Ān·nà}{已经|yǐ·jīng}{是|shì}{名副其实|míng fù qí shí}{的|de}“{中国通|Zhōng guó tōng}”{了|le}。', hu: 'Anna már igazi „Kína-szakértő".' },
+        { zh: '{大家|dà·jiā}{都|dōu}{说|shuō}{这儿|zhèr}{的|de}{风景|fēng jǐng}{最|zuì}{美|měi}，{果然|guǒ rán}{名副其实|míng fù qí shí}。', hu: 'Mindenki azt mondja, itt a legszebb a táj — és valóban, nem hiába.' }
+      ]
+    }
+  ],
+  phrases: [
+    { zh: '{真|zhēn}{是|shì}{一举两得|yì jǔ liǎng dé}！', hu: 'Két legyet egy csapásra!' },
+    { zh: '{入乡随俗|rù xiāng suí sú}{嘛|ma}。', hu: 'Ahány ház, annyi szokás.' },
+    { zh: '{别|bié}{半途而废|bàn tú ér fèi}！', hu: 'Ne add fel félúton!' },
+    { zh: '{你|nǐ}{真|zhēn}{是|shì}{个|ge}{中国通|Zhōng guó tōng}！', hu: 'Igazi Kína-szakértő vagy!' }
+  ],
+  words: [
+    { title: 'Szavak',
+      items: [
+        { zh: '{成语|chéng yǔ}', pinyin: 'chéngyǔ', hu: 'kínai szólás, idióma' },
+        { zh: '{一举两得|yì jǔ liǎng dé}', pinyin: 'yì jǔ liǎng dé', hu: 'két legyet egy csapásra' },
+        { zh: '{入乡随俗|rù xiāng suí sú}', pinyin: 'rù xiāng suí sú', hu: 'ahány ház, annyi szokás' },
+        { zh: '{半途而废|bàn tú ér fèi}', pinyin: 'bàn tú ér fèi', hu: 'félúton feladja' },
+        { zh: '{千方百计|qiān fāng bǎi jì}', pinyin: 'qiān fāng bǎi jì', hu: 'minden követ megmozgat' },
+        { zh: '{名副其实|míng fù qí shí}', pinyin: 'míng fù qí shí', hu: 'nem hiába viseli a nevét' },
+        { zh: '{中国通|Zhōng guó tōng}', pinyin: 'Zhōngguótōng', hu: 'Kína-szakértő' },
+        { zh: '{典故|diǎn gù}', pinyin: 'diǎngù', hu: 'régi történet, utalás' },
+        { zh: '{含义|hán yì}', pinyin: 'hányì', hu: 'jelentés, tartalom' },
+        { zh: '{比喻|bǐ yù}', pinyin: 'bǐyù', hu: 'hasonlat; képletesen jelent' },
+        { zh: '{省钱|shěng qián}', pinyin: 'shěng qián', hu: 'pénzt spórol' },
+        { zh: '{风俗|fēng sú}', pinyin: 'fēngsú', hu: 'szokás, hagyomány' }
+      ] },
+    { title: 'Ráadás',
+      items: [
+        { zh: '{守株待兔|shǒu zhū dài tù}', pinyin: 'shǒu zhū dài tù', hu: 'a sült galambra vár' },
+        { zh: '{画蛇添足|huà shé tiān zú}', pinyin: 'huà shé tiān zú', hu: 'túlbonyolít, elront a fölösleggel' },
+        { zh: '{对牛弹琴|duì niú tán qín}', pinyin: 'duì niú tán qín', hu: 'falra hányt borsó' },
+        { zh: '{马马虎虎|mǎ mǎ hū hū}', pinyin: 'mǎmǎhūhū', hu: 'hanyag; elmegy' }
+      ] }
+  ],
+  culture: [
+    { title: 'Szólások régi történetekből', text: 'Sok {成语|chéngyǔ} egy régi történet ({典故|diǎngù}) rövidítése: aki ismeri a történetet, négy írásjegyből is érti az egészet. A {画蛇添足|huà shé tiān zú} „kígyót rajzol és lábat tesz hozzá" például arról szól, aki egy versenyen a kígyórajzát lábakkal „tökéletesítette" — és ezzel elvesztette a győzelmet.' },
+    { title: 'Szólás-lánc', text: 'Népszerű kínai nyelvi játék a {成语接龙|chéngyǔ jiēlóng} „szólás-lánc": a következő játékosnak olyan szólást kell mondania, amely az előző utolsó írásjegyével (vagy annak hangjával) kezdődik. Iskolákban, tévéműsorokban és családi összejöveteleken is játsszák.' }
+  ],
+  reading: {
+    title: '{守株待兔|shǒu zhū dài tù}', titleHu: 'A fatönk mellett váró paraszt',
+    text: [
+      { zh: '{古|gǔ}{时候|shí·hou}，{有|yǒu}{一|yí}{个|ge}{农民|nóng mín}{每天|měi tiān}{在|zài}{田|tián}{里|li}{干|gàn}{活儿|huór}。', hu: 'Hajdanán élt egy paraszt, aki minden nap a földjén dolgozott.' },
+      { zh: '{有|yǒu}{一|yì}{天|tiān}，{一|yì}{只|zhī}{兔子|tù·zi}{跑|pǎo}{得|de}{太|tài}{快|kuài}，{撞|zhuàng}{在|zài}{了|le}{田|tián}{边|biān}{的|de}{树|shù}{上|shang}，{农民|nóng mín}{一点儿|yì diǎnr}{力气|lì·qi}{也|yě}{没|méi}{花|huā}{就|jiù}{得到|dé dào}{了|le}{它|tā}。', hu: 'Egy nap egy nyúl olyan gyorsan futott, hogy nekiszaladt a föld szélén álló fának, és a paraszt minden erőfeszítés nélkül megszerezte.' },
+      { zh: '{从此|cóng cǐ}，{他|tā}{不|bú}{再|zài}{干|gàn}{活儿|huór}，{每天|měi tiān}{坐|zuò}{在|zài}{树|shù}{旁边|páng·biān}，{等|děng}{着|zhe}{兔子|tù·zi}{再|zài}{撞|zhuàng}{过|guò}{来|lai}。', hu: 'Attól kezdve nem dolgozott többet, hanem minden nap a fa mellett ült, és várta, hogy újabb nyúl szaladjon bele.', par: true },
+      { zh: '{可是|kě·shì}{他|tā}{等|děng}{了|le}{很|hěn}{久|jiǔ}，{一|yì}{只|zhī}{兔子|tù·zi}{也|yě}{没|méi}{等|děng}{到|dào}，{田|tián}{里|li}{的|de}{庄稼|zhuāng·jia}{也|yě}{都|dōu}{荒|huāng}{了|le}。', hu: 'Ám sokáig várt, és egyetlen nyulat sem kapott, a földje pedig közben elgazosodott.' },
+      { zh: '{后来|hòu·lái}，{人们|rén·men}{用|yòng}“{守株待兔|shǒu zhū dài tù}”{比喻|bǐ yù}{不|bù}{努力|nǔ lì}、{只|zhǐ}{想|xiǎng}{靠|kào}{运气|yùn·qi}{的|de}{人|rén}。', hu: 'Később a „fatönk mellett vár a nyúlra" szólással azokat illették, akik nem dolgoznak, csak a szerencsére várnak.', par: true }
+    ],
+    words: [ { zh: '{运气|yùn·qi}', hu: 'szerencse' } ],
+    questions: [
+      { q: 'Mi történt egy nap a nyúllal?', a: 'nekiszaladt egy fának', wrong: ['a paraszt elkapta', 'beugrott a folyóba', 'elszaladt az erdőbe'], why: '{撞在了田边的树上|zhuàng zài le tián biān de shù shang}.' },
+      { q: 'Mit csinált azután a paraszt?', a: 'a fa mellett várta a nyulakat', wrong: ['még többet dolgozott', 'eladta a földjét', 'vadászni tanult'], why: '{每天坐在树旁边，等着兔子再撞过来|měitiān zuò zài shù pángbiān, děngzhe tùzi zài zhuàng guòlai}.' },
+      { q: 'Mi lett a földjével?', a: 'elgazosodott', wrong: ['dús termést hozott', 'eladta', 'erdő lett belőle'], why: '{庄稼也都荒了|zhuāngjia yě dōu huāng le}.' },
+      { q: 'Kire mondják ma ezt a szólást?', a: 'aki csak a szerencsére vár', wrong: ['aki nagyon szorgalmas', 'aki szereti az állatokat', 'aki gyorsan fut'], why: '{只想靠运气的人|zhǐ xiǎng kào yùnqi de rén}.' }
+    ]
+  },
+  quiz: [
+    { q: 'Mit jelent az {一举两得|yì jǔ liǎng dé}?', a: 'két legyet egy csapásra', wrong: ['két ember, egy vélemény', 'kétszer meggondolja', 'egy lépés előre, kettő hátra'], why: '„Egy mozdulat, két nyereség".', point: 1 },
+    { q: '„Biciklivel járni: mozgás is, spórolás is — két legyet egy csapásra."', a: '{骑|qí}{车|chē}{既|jì}{锻炼|duàn·liàn}{身体|shēn·tǐ}，{又|yòu}{省|shěng}{钱|qián}，{一举两得|yì jǔ liǎng dé}。', wrong: ['{骑|qí}{车|chē}{既|jì}{锻炼|duàn·liàn}{身体|shēn·tǐ}，{又|yòu}{省|shěng}{钱|qián}，{半途而废|bàn tú ér fèi}。', '{骑|qí}{车|chē}{既|jì}{锻炼|duàn·liàn}{身体|shēn·tǐ}，{又|yòu}{省|shěng}{钱|qián}，{入乡随俗|rù xiāng suí sú}。', '{骑|qí}{车|chē}{既|jì}{锻炼|duàn·liàn}{身体|shēn·tǐ}，{又|yòu}{省|shěng}{钱|qián}，{名副其实|míng fù qí shí}{地|de}。'], why: 'Két haszon egy cselekvésből.', point: 1 },
+    { q: 'Mit tanácsol az {入乡随俗|rù xiāng suí sú}?', a: 'alkalmazkodj a helyi szokásokhoz', wrong: ['maradj otthon', 'tartsd meg a saját szokásaidat', 'utazz sokat'], why: '„Aki falujába lép, kövesse szokásait".', point: 2 },
+    { q: 'Melyik magyar mondás felel meg az {入乡随俗|rù xiāng suí sú}-nak?', a: 'Rómában élj úgy, mint a rómaiak.', wrong: ['Lassan járj, tovább érsz.', 'Ki korán kel, aranyat lel.', 'Aki mer, az nyer.'], why: 'Mindkettő az alkalmazkodásról szól.', point: 2 },
+    { q: '„Csak félúton ne add fel!"', a: '{千万|qiān·wàn}{别|bié}{半途而废|bàn tú ér fèi}！', wrong: ['{千万|qiān·wàn}{别|bié}{一举两得|yì jǔ liǎng dé}！', '{千万|qiān·wàn}{别|bié}{名副其实|míng fù qí shí}！', '{千万|qiān·wàn}{别|bié}{入乡随俗|rù xiāng suí sú}{了|le}！'], why: '{半途而废|bàn tú ér fèi} „félúton feladja".', point: 3 },
+    { q: 'Mi a {半途而废|bàn tú ér fèi} ellentéte?', a: '{坚持到底|jiānchí dào dǐ}', wrong: ['{一举两得|yì jǔ liǎng dé}', '{入乡随俗|rù xiāng suí sú}', '{马马虎虎|mǎmǎhūhū}'], why: '„Végig kitart".', point: 3 },
+    { q: '„Minden követ megmozgat, hogy gyakorolhassa a kínait."', a: '{她|tā}{千方百计|qiān fāng bǎi jì}{地|de}{找|zhǎo}{机会|jī·huì}{练习|liàn·xí}{汉语|Hàn·yǔ}。', wrong: ['{她|tā}{找|zhǎo}{机会|jī·huì}{千方百计|qiān fāng bǎi jì}{的|de}{练习|liàn·xí}{汉语|Hàn·yǔ}。', '{千方百计|qiān fāng bǎi jì}{她|tā}{的|de}{机会|jī·huì}{找|zhǎo}{汉语|Hàn·yǔ}{练习|liàn·xí}。', '{她|tā}{练习|liàn·xí}{汉语|Hàn·yǔ}{找|zhǎo}{机会|jī·huì}{千方百计|qiān fāng bǎi jì}{了|le}。'], why: '{千方百计地|qiān fāng bǎi jì de} + ige.', point: 4 },
+    { q: 'Mit jelent szó szerint a {千方百计|qiān fāng bǎi jì}?', a: 'ezer mód, száz terv', wrong: ['ezer év, száz nap', 'ezer ember, száz vélemény', 'ezer út, száz híd'], why: '{方|fāng} „mód", {计|jì} „terv".', point: 4 },
+    { q: '„Anna már igazi Kína-szakértő."', a: '{安娜|Ān·nà}{已经|yǐ·jīng}{是|shì}{名副其实|míng fù qí shí}{的|de}{中国通|Zhōng guó tōng}{了|le}。', wrong: ['{安娜|Ān·nà}{已经|yǐ·jīng}{是|shì}{半途而废|bàn tú ér fèi}{的|de}{中国通|Zhōng guó tōng}{了|le}。', '{安娜|Ān·nà}{名副其实|míng fù qí shí}{已经|yǐ·jīng}{中国通|Zhōng guó tōng}{的|de}{是|shì}。', '{名副其实|míng fù qí shí}{的|de}{安娜|Ān·nà}{是|shì}{中国通|Zhōng guó tōng}{已经|yǐ·jīng}。'], why: '{名副其实的|míng fù qí shí de} + főnév.', point: 5 },
+    { q: 'Mi a {名副其实|míng fù qí shí} ellentéte?', a: '{名不副实|míng bú fù shí}', wrong: ['{名不虚传|míng bù xū chuán}', '{一举两得|yì jǔ liǎng dé}', '{千方百计|qiān fāng bǎi jì}'], why: '„A név nem felel meg a valóságnak".', point: 5 },
+    { q: 'Hány írásjegyből áll a legtöbb {成语|chéngyǔ}?', a: 'négyből', wrong: ['kettőből', 'hatból', 'tízből'], why: '{只有四个字|zhǐ yǒu sì ge zì}.' },
+    { q: 'Mit jelent a {中国通|Zhōngguótōng}?', a: 'Kína-szakértő', wrong: ['kínai útlevél', 'kínai tolmács', 'kínai telefonszolgáltató'], why: 'Kínát jól ismerő külföldi.' },
+    { q: 'Mit jelent a {守株待兔|shǒu zhū dài tù}?', a: 'a sült galambra vár', wrong: ['nyulat vadászik', 'fát ültet', 'korán kel'], why: 'A fatönk mellett váró paraszt története.' },
+    { q: 'Mit jelent az {对牛弹琴|duì niú tán qín}?', a: 'falra hányt borsó', wrong: ['jól zenél', 'tehenet fej', 'koncertre megy'], why: 'Szó szerint „tehénnek lantozik".' },
+    { q: 'Mit jelent a {典故|diǎngù}?', a: 'régi történet', wrong: ['vastag szótár', 'népi ünnep', 'régi törvény'], why: 'Sok szólás egy régi történetből ered.' },
+    { q: 'Mit jelent a {风俗|fēngsú}?', a: 'szokás, hagyomány', wrong: ['időjárás', 'táj', 'nyelvjárás'], why: '{入乡随俗|rù xiāng suí sú}: a {俗|sú} is „szokás".' }
+  ]
+},
+
+/* ════════════════════════════════════════════════════
+   HSK 5 · 16. LECKE — 根本, 明明, 亲自, 顺便, 赶紧 · 赶快
+   ════════════════════════════════════════════════════ */
+{
+  id: 'l86', no: 86, badge: '16', kicker: 'HSK 5 · 16. lecke', label: 'HSK 5 · 16. lecke',
+  title: 'Önkéntes hétvége — hiszen megnyomtam!',
+  lead: 'Önkéntesként segítesz: elmondod, hogy valami egyáltalán nem megy (根本), hogy pedig nyilvánvalóan megtörtént (明明), hogy valaki személyesen jött el (亲自), hogy útba ejtesz valamit (顺便), és hogy sietned kell (赶紧 · 赶快).',
+  cando: [
+    'Teljes tagadást fejezel ki: 根本不 / 没….',
+    'Ellentmondást jelzel a tény és az eredmény között: 明明…，怎么…？',
+    'Elmondod, hogy valaki személyesen csinál valamit: 亲自….',
+    'Útba ejtesz egy feladatot (顺便), és jelzed, hogy sietsz (赶紧 · 赶快).'
+  ],
+  intro: [
+    'Anna hétvégente önkéntesként a lakókörzeti központban segít idős embereknek okostelefont használni. Ma Zhang nagyapának mutatja meg, hogyan hívhatja videón az unokáját.',
+    'Ebben a leckében a hétköznapi beszéd gyakori, kifejező határozószóit tanulod: egyáltalán nem, pedig, személyesen, ha már úgyis, gyorsan.'
+  ],
+  dialogue: {
+    title: 'Okostelefon-óra',
+    scene: 'Szombat délután a lakókörzeti központban. Zhang nagyapa, Anna és Liu néni, a szervező.',
+    lines: [
+      { who: 'Zhang nagyapa', zh: '{姑娘|gū·niang}，{这|zhè}{个|ge}{手机|shǒu·jī}{我|wǒ}{根本|gēn běn}{不|bú}{会|huì}{用|yòng}。{孩子|hái·zi}{们|men}{教|jiāo}{了|le}{好|hǎo}{几|jǐ}{次|cì}，{我|wǒ}{还是|hái·shi}{记|jì}{不|bu}{住|zhù}。', hu: 'Kislányom, én ezt a telefont egyáltalán nem tudom használni. A gyerekek többször megmutatták, de nem tudom megjegyezni.' },
+      { who: 'Anna', zh: '{没|méi}{关系|guān·xi}，{爷爷|yé·ye}，{我|wǒ}{一|yí}{步|bù}{一|yí}{步|bù}{教|jiāo}{您|nín}。{您|nín}{看|kàn}，{先|xiān}{按|àn}{这里|zhè·lǐ}……', hu: 'Semmi baj, nagyapa, lépésről lépésre megmutatom. Nézze, először ide kell nyomni…' },
+      { who: 'Zhang nagyapa', zh: '{哎|ài}，{我|wǒ}{明明|míng míng}{按|àn}{了|le}，{怎么|zěn·me}{没|méi}{反应|fǎn yìng}？', hu: 'Ejnye, hiszen megnyomtam, miért nem történik semmi?' },
+      { who: 'Anna', zh: '{您|nín}{按|àn}{得|de}{太|tài}{轻|qīng}{了|le}，{再|zài}{按|àn}{一下|yí xià}……{好|hǎo}{了|le}！{您|nín}{可以|kě·yǐ}{跟|gēn}{孙子|sūn·zi}{视频|shì pín}{了|le}。', hu: 'Túl finoman nyomta meg, nyomja meg még egyszer… Kész! Már videóhívhatja is az unokáját.' },
+      { who: 'Zhang nagyapa', zh: '{太|tài}{好|hǎo}{了|le}！{你|nǐ}{一|yí}{个|ge}{外国|wài guó}{姑娘|gū·niang}，{还|hái}{亲自|qīn zì}{来|lái}{教|jiāo}{我们|wǒ·men}，{真|zhēn}{不|bù}{容易|róng·yì}。', hu: 'Nagyszerű! Egy külföldi lány, és személyesen eljön tanítani minket — nem semmi.' },
+      { who: 'Liu néni', zh: '{安娜|Ān·nà}{每|měi}{个|ge}{周末|zhōu·mò}{都|dōu}{来|lái}。{安娜|Ān·nà}，{你|nǐ}{回|huí}{去|qu}{的|de}{时候|shí·hou}{顺便|shùn biàn}{把|bǎ}{这些|zhè·xiē}{宣传单|xuān chuán dān}{带|dài}{给|gěi}{楼|lóu}{下|xià}{的|de}{王|Wáng}{奶奶|nǎi·nai}，{好|hǎo}{吗|ma}？', hu: 'Anna minden hétvégén eljön. Anna, ha már úgyis arra mész, levinnéd ezeket a szórólapokat Wang néninek a földszintre?' },
+      { who: 'Anna', zh: '{没|méi}{问题|wèn·tí}。{哎呀|āi·yā}，{快|kuài}{五|wǔ}{点|diǎn}{了|le}，{我|wǒ}{得|děi}{赶紧|gǎn jǐn}{走|zǒu}{了|le}，{晚上|wǎn·shang}{还|hái}{有|yǒu}{个|ge}{约|yuē}。', hu: 'Rendben. Jaj, mindjárt öt óra, sietnem kell, este még találkozóm van.' }
+    ],
+    notes: [
+      'A {社区|shèqū} „lakókörzet, lakóközösség"; a {社区中心|shèqū zhōngxīn} a helyi közösségi ház.',
+      'Az {一步一步|yí bù yí bù} „lépésről lépésre": a mérőszós szerkezet kettőzése.',
+      'A {宣传单|xuānchuándān} „szórólap", az {约|yuē} itt „megbeszélt találkozó".'
+    ]
+  },
+  points: [
+    {
+      title: '{根本|gēnběn}', sub: 'egyáltalán (nem); alapvetően',
+      pattern: 'A + {根本|gēn běn} + {不|bù} / {没|méi} + ige · {根本|gēn běn}{的|de} + főnév',
+      body: 'Határozóként, tagadással a {根本|gēnběn} <b>teljes tagadás</b>: „egyáltalán nem, szó sincs róla": {这个手机我根本不会用|zhège shǒujī wǒ gēnběn bú huì yòng} „ezt a telefont egyáltalán nem tudom használni", {我根本没听说过|wǒ gēnběn méi tīngshuō guo} „sosem hallottam róla". Főnévként, jelzőként „alap, gyökér": {根本的问题|gēnběn de wèntí} „az alapvető probléma".',
+      examples: [
+        { zh: '{这|zhè}{个|ge}{手机|shǒu·jī}{我|wǒ}{根本|gēn běn}{不|bú}{会|huì}{用|yòng}。', hu: 'Ezt a telefont egyáltalán nem tudom használni.' },
+        { zh: '{他|tā}{说|shuō}{的|de}{那|nà}{个|ge}{地方|dì·fang}，{我|wǒ}{根本|gēn běn}{没|méi}{去|qù}{过|guo}。', hu: 'Azon a helyen, amiről beszél, egyáltalán nem jártam.' }
+      ]
+    },
+    {
+      title: '{明明|míngmíng}', sub: 'pedig nyilvánvalóan, hiszen',
+      pattern: 'A + {明明|míng míng} + tény，({怎么|zěn·me} / {却|què}) + ellentétes dolog',
+      body: 'A {明明|míngmíng} egy <b>nyilvánvaló tényt</b> hangsúlyoz, amellyel szemben az eredmény vagy a viselkedés ellentmondásos: {我明明按了，怎么没反应|wǒ míngmíng àn le, zěnme méi fǎnyìng} „hiszen megnyomtam, miért nem történik semmi?", {他明明知道，却说不知道|tā míngmíng zhīdào, què shuō bù zhīdào} „pedig tudja, mégis azt mondja, nem tudja". Gyakran értetlenséget vagy szemrehányást fejez ki.',
+      examples: [
+        { zh: '{我|wǒ}{明明|míng míng}{按|àn}{了|le}，{怎么|zěn·me}{没|méi}{反应|fǎn yìng}？', hu: 'Hiszen megnyomtam, miért nem történik semmi?' },
+        { zh: '{他|tā}{明明|míng míng}{知道|zhī·dào}{答案|dá àn}，{却|què}{说|shuō}{不|bù}{知道|zhī·dào}。', hu: 'Pedig tudja a választ, mégis azt mondja, nem tudja.' }
+      ]
+    },
+    {
+      title: '{亲自|qīnzì}', sub: 'személyesen, saját maga',
+      pattern: 'A + {亲自|qīn zì} + ige',
+      body: 'Az {亲自|qīnzì} azt hangsúlyozza, hogy valaki <b>maga, személyesen</b> csinál valamit, nem bízza másra — gyakran elismerést fejez ki: {你还亲自来教我们|nǐ hái qīnzì lái jiāo wǒmen} „még személyesen is eljössz tanítani minket", {经理亲自去机场接客户|jīnglǐ qīnzì qù jīchǎng jiē kèhù} „az igazgató személyesen ment ki az ügyfélért a reptérre".',
+      examples: [
+        { zh: '{你|nǐ}{还|hái}{亲自|qīn zì}{来|lái}{教|jiāo}{我们|wǒ·men}，{真|zhēn}{不|bù}{容易|róng·yì}。', hu: 'Még személyesen is eljössz tanítani minket — nem semmi.' },
+        { zh: '{陈|Chén}{经理|jīng·lǐ}{亲自|qīn zì}{去|qù}{机场|jī chǎng}{接|jiē}{了|le}{客户|kè·hù}。', hu: 'Chen igazgató személyesen ment ki az ügyfélért a reptérre.' }
+      ]
+    },
+    {
+      title: '{顺便|shùnbiàn}', sub: 'ha már úgyis, útba ejtve',
+      pattern: '(fő cselekvés közben)，{顺便|shùn biàn} + mellékes teendő',
+      body: 'A {顺便|shùnbiàn} egy <b>mellékes teendőt</b> vezet be, amelyet valaki egy másik dolog közben, külön fáradság nélkül elintéz: {你回去的时候顺便把这些带给王奶奶|nǐ huíqu de shíhou shùnbiàn bǎ zhèxiē dài gěi Wáng nǎinai} „ha már úgyis arra mész, vidd le ezeket Wang néninek", {你去超市的时候，顺便帮我买瓶水|nǐ qù chāoshì de shíhou, shùnbiàn bāng wǒ mǎi píng shuǐ} „ha már a boltba mész, hozz nekem egy üveg vizet is".',
+      examples: [
+        { zh: '{你|nǐ}{回|huí}{去|qu}{的|de}{时候|shí·hou}，{顺便|shùn biàn}{把|bǎ}{这些|zhè·xiē}{带|dài}{给|gěi}{王|Wáng}{奶奶|nǎi·nai}。', hu: 'Ha már úgyis arra mész, vidd le ezeket Wang néninek.' },
+        { zh: '{你|nǐ}{去|qù}{超市|chāo shì}{的|de}{时候|shí·hou}，{顺便|shùn biàn}{帮|bāng}{我|wǒ}{买|mǎi}{瓶|píng}{水|shuǐ}。', hu: 'Ha már a boltba mész, hozz nekem is egy üveg vizet.' }
+      ]
+    },
+    {
+      title: '{赶紧|gǎnjǐn} · {赶快|gǎnkuài}', sub: 'gyorsan, sietve, azonnal',
+      pattern: 'A + {赶紧|gǎn jǐn} / {赶快|gǎn kuài} + ige',
+      body: 'Mindkettő azt jelzi, hogy valamit <b>gyorsan, haladéktalanul</b> meg kell tenni: {我得赶紧走了|wǒ děi gǎnjǐn zǒu le} „sietnem kell", {赶快告诉他|gǎnkuài gàosu tā} „gyorsan szólj neki!". A {赶快|gǎnkuài} különösen felszólításban gyakori; a {赶紧|gǎnjǐn} inkább elbeszélésben, a helyzetre adott gyors reakciónál: {看到下雨了，她赶紧收衣服|kàn dào xià yǔ le, tā gǎnjǐn shōu yīfu} „látta, hogy esik, gyorsan beszedte a ruhákat".',
+      examples: [
+        { zh: '{快|kuài}{五|wǔ}{点|diǎn}{了|le}，{我|wǒ}{得|děi}{赶紧|gǎn jǐn}{走|zǒu}{了|le}。', hu: 'Mindjárt öt óra, sietnem kell.' },
+        { zh: '{要|yào}{下|xià}{雨|yǔ}{了|le}，{赶快|gǎn kuài}{回|huí}{家|jiā}{吧|ba}！', hu: 'Mindjárt esik, siessünk haza!' }
+      ]
+    }
+  ],
+  phrases: [
+    { zh: '{我|wǒ}{一|yí}{步|bù}{一|yí}{步|bù}{教|jiāo}{您|nín}。', hu: 'Lépésről lépésre megmutatom.' },
+    { zh: '{送|sòng}{人|rén}{玫瑰|méi guī}，{手|shǒu}{有|yǒu}{余|yú}{香|xiāng}。', hu: 'Aki másnak jót tesz, magának is jót tesz.' },
+    { zh: '{能|néng}{帮|bāng}{上|shàng}{忙|máng}{我|wǒ}{很|hěn}{高兴|gāo·xìng}。', hu: 'Örülök, hogy segíthettem.' },
+    { zh: '{我|wǒ}{得|děi}{赶紧|gǎn jǐn}{走|zǒu}{了|le}。', hu: 'Sietnem kell.' }
+  ],
+  words: [
+    { title: 'Szavak',
+      items: [
+        { zh: '{根本|gēn běn}', pinyin: 'gēnběn', hu: 'egyáltalán (nem); alapvető' },
+        { zh: '{明明|míng míng}', pinyin: 'míngmíng', hu: 'pedig nyilvánvalóan' },
+        { zh: '{亲自|qīn zì}', pinyin: 'qīnzì', hu: 'személyesen' },
+        { zh: '{顺便|shùn biàn}', pinyin: 'shùnbiàn', hu: 'ha már úgyis, útba ejtve' },
+        { zh: '{赶紧|gǎn jǐn}', pinyin: 'gǎnjǐn', hu: 'gyorsan, sietve' },
+        { zh: '{赶快|gǎn kuài}', pinyin: 'gǎnkuài', hu: 'gyorsan, azonnal' },
+        { zh: '{志愿者|zhì yuàn zhě}', pinyin: 'zhìyuànzhě', hu: 'önkéntes' },
+        { zh: '{社区|shè qū}', pinyin: 'shèqū', hu: 'lakókörzet, közösség' },
+        { zh: '{老人|lǎo rén}', pinyin: 'lǎorén', hu: 'idős ember' },
+        { zh: '{反应|fǎn yìng}', pinyin: 'fǎnyìng', hu: 'reakció; reagál' },
+        { zh: '{按|àn}', pinyin: 'àn', hu: 'megnyom' },
+        { zh: '{宣传|xuān chuán}', pinyin: 'xuānchuán', hu: 'népszerűsít; tájékoztatás' }
+      ] },
+    { title: 'Ráadás',
+      items: [
+        { zh: '{宣传单|xuān chuán dān}', pinyin: 'xuānchuándān', hu: 'szórólap' },
+        { zh: '{智能手机|zhì néng shǒu jī}', pinyin: 'zhìnéng shǒujī', hu: 'okostelefon' },
+        { zh: '{爷爷|yé·ye}', pinyin: 'yéye', hu: 'nagyapa (apai)' },
+        { zh: '{献爱心|xiàn ài xīn}', pinyin: 'xiàn àixīn', hu: 'jótékonykodik' }
+      ] }
+  ],
+  culture: [
+    { title: 'Önkéntesek napja', text: 'Március 5. Kínában a {学雷锋纪念日|Xué Léi Fēng jìniànrì}, amikor iskolák, cégek és lakóközösségek önkéntes akciókat szerveznek: utcát takarítanak, időseket látogatnak, ingyenes szolgáltatásokat kínálnak. Az önkéntes neve {志愿者|zhìyuànzhě}, egyenpólójukon gyakran piros szív látható.' },
+    { title: 'Idősek a digitális világban', text: 'Kínában szinte mindent telefonnal intéznek: fizetést, orvosi időpontot, vonatjegyet. Az idősek közül sokan nehezen boldogulnak ezzel, ezért a lakóközösségekben önkéntesek tartanak okostelefon-órákat, a bankokban és kórházakban pedig külön segítő pultok működnek.' }
+  ],
+  reading: {
+    title: '{周末|zhōu·mò}{的|de}{志愿者|zhì yuàn zhě}', titleHu: 'Hétvégi önkéntes',
+    text: [
+      { zh: '{安娜|Ān·nà}{的|de}{小区|xiǎo qū}{里|li}{住|zhù}{着|zhe}{很|hěn}{多|duō}{老人|lǎo rén}，{他们|tā·men}{有|yǒu}{的|de}{根本|gēn běn}{不|bú}{会|huì}{用|yòng}{智能|zhì néng}{手机|shǒu·jī}。', hu: 'Anna lakóparkjában sok idős ember él; közülük van, aki egyáltalán nem tudja használni az okostelefont.' },
+      { zh: '{于是|yú·shì}{她|tā}{报|bào}{名|míng}{当|dāng}{了|le}{社区|shè qū}{志愿者|zhì yuàn zhě}，{每|měi}{个|ge}{周末|zhōu·mò}{亲自|qīn zì}{去|qù}{教|jiāo}{他们|tā·men}。', hu: 'Ezért jelentkezett közösségi önkéntesnek, és minden hétvégén személyesen tanítja őket.' },
+      { zh: '{开始|kāi·shǐ}{的|de}{时候|shí·hou}{很|hěn}{不|bù}{容易|róng·yì}，{老人|lǎo rén}{们|men}{明明|míng míng}{学|xué}{过|guo}，{第二|dì èr}{天|tiān}{又|yòu}{忘|wàng}{了|le}。', hu: 'Eleinte nem volt könnyű: az idősek, pedig már tanulták, másnapra megint elfelejtették.', par: true },
+      { zh: '{安娜|Ān·nà}{就|jiù}{把|bǎ}{每|měi}{一|yí}{步|bù}{都|dōu}{写|xiě}{在|zài}{纸|zhǐ}{上|shang}，{顺便|shùn biàn}{画|huà}{上|shang}{图|tú}，{让|ràng}{他们|tā·men}{带|dài}{回|huí}{家|jiā}。', hu: 'Anna ezért minden lépést leírt egy papírra, mellé rajzot is készített, hogy hazavihessék.' },
+      { zh: '{现在|xiàn·zài}，{很|hěn}{多|duō}{老人|lǎo rén}{一|yì}{有|yǒu}{问题|wèn·tí}，{就|jiù}{赶紧|gǎn jǐn}{来|lái}{找|zhǎo}“{外国|wài guó}{老师|lǎo·shī}”。', hu: 'Most sok idős, ha gondja van, rögtön siet a „külföldi tanárhoz".', par: true }
+    ],
+    words: [ { zh: '{图|tú}', hu: 'ábra, kép' } ],
+    questions: [
+      { q: 'Miért lett Anna önkéntes?', a: 'sok idős nem tudja használni a telefont', wrong: ['kevés a munkája', 'a cég küldte', 'pénzt kap érte'], why: '{他们有的根本不会用智能手机|tāmen yǒude gēnběn bú huì yòng zhìnéng shǒujī}.' },
+      { q: 'Mi volt nehéz eleinte?', a: 'az idősek másnapra elfelejtették', wrong: ['nem volt elég telefon', 'Anna nem értette őket', 'senki sem jött el'], why: '{明明学过，第二天又忘了|míngmíng xué guo, dì èr tiān yòu wàng le}.' },
+      { q: 'Mit csinált Anna, hogy segítsen?', a: 'leírta és lerajzolta a lépéseket', wrong: ['videót forgatott', 'új telefonokat vett', 'megkérte az unokákat'], why: '{把每一步都写在纸上，顺便画上图|bǎ měi yí bù dōu xiě zài zhǐ shang, shùnbiàn huà shang tú}.' },
+      { q: 'Kihez sietnek most az idősek, ha gondjuk van?', a: 'a „külföldi tanárhoz"', wrong: ['a gyerekeikhez', 'a bankba', 'a boltba'], why: '{赶紧来找“外国老师”|gǎnjǐn lái zhǎo „wàiguó lǎoshī"}.' }
+    ]
+  },
+  quiz: [
+    { q: '„Ezt a telefont egyáltalán nem tudom használni."', a: '{这|zhè}{个|ge}{手机|shǒu·jī}{我|wǒ}{根本|gēn běn}{不|bú}{会|huì}{用|yòng}。', wrong: ['{这|zhè}{个|ge}{手机|shǒu·jī}{我|wǒ}{不|bú}{会|huì}{根本|gēn běn}{用|yòng}。', '{根本|gēn běn}{这|zhè}{个|ge}{我|wǒ}{手机|shǒu·jī}{用|yòng}{不|bú}{会|huì}。', '{这|zhè}{个|ge}{手机|shǒu·jī}{根本|gēn běn}{我|wǒ}{会|huì}{不|bú}{用|yòng}。'], why: 'A + {根本|gēnběn} + {不|bù} + ige.', point: 1 },
+    { q: 'Mit jelent: {根本的问题|gēnběn de wèntí}?', a: 'az alapvető probléma', wrong: ['egy apró probléma', 'egy megoldott probléma', 'egy új probléma'], why: 'Jelzőként „alapvető".', point: 1 },
+    { q: '„Hiszen megnyomtam, miért nem történik semmi?"', a: '{我|wǒ}{明明|míng míng}{按|àn}{了|le}，{怎么|zěn·me}{没|méi}{反应|fǎn yìng}？', wrong: ['{我|wǒ}{按|àn}{了|le}{明明|míng míng}，{怎么|zěn·me}{没|méi}{反应|fǎn yìng}？', '{明明|míng míng}{我|wǒ}{没|méi}{按|àn}，{怎么|zěn·me}{反应|fǎn yìng}{了|le}？', '{我|wǒ}{怎么|zěn·me}{按|àn}{明明|míng míng}，{没|méi}{反应|fǎn yìng}{了|le}？'], why: '{明明|míngmíng} + tény, {怎么|zěnme} + ellentmondás.', point: 2 },
+    { q: 'Mit fejez ki a {明明|míngmíng}?', a: 'ellentmondást', wrong: ['jövőbeli tervet', 'egy feltételt', 'udvarias kérést'], why: '„Pedig nyilvánvalóan…".', point: 2 },
+    { q: '„Az igazgató személyesen ment ki az ügyfélért."', a: '{经理|jīng·lǐ}{亲自|qīn zì}{去|qù}{接|jiē}{客户|kè·hù}{了|le}。', wrong: ['{经理|jīng·lǐ}{去|qù}{亲自|qīn zì}{接|jiē}{了|le}{客户|kè·hù}{吗|ma}。', '{亲自|qīn zì}{经理|jīng·lǐ}{客户|kè·hù}{去|qù}{接|jiē}。', '{经理|jīng·lǐ}{接|jiē}{客户|kè·hù}{亲自|qīn zì}{去|qù}{了|le}。'], why: 'A + {亲自|qīnzì} + ige.', point: 3 },
+    { q: 'Mit hangsúlyoz az {亲自|qīnzì}?', a: 'hogy valaki maga csinálja', wrong: ['hogy gyorsan csinálja', 'hogy véletlenül csinálja', 'hogy másra bízza'], why: '„Személyesen".', point: 3 },
+    { q: '„Ha már a boltba mész, hozz nekem is egy üveg vizet."', a: '{你|nǐ}{去|qù}{超市|chāo shì}{的|de}{时候|shí·hou}，{顺便|shùn biàn}{帮|bāng}{我|wǒ}{买|mǎi}{瓶|píng}{水|shuǐ}。', wrong: ['{你|nǐ}{去|qù}{超市|chāo shì}{的|de}{时候|shí·hou}，{随便|suí biàn}{帮|bāng}{我|wǒ}{买|mǎi}{瓶|píng}{水|shuǐ}。', '{顺便|shùn biàn}{你|nǐ}{去|qù}{超市|chāo shì}，{我|wǒ}{帮|bāng}{买|mǎi}{瓶|píng}{水|shuǐ}{的|de}。', '{你|nǐ}{顺便|shùn biàn}{的|de}{时候|shí·hou}{去|qù}{超市|chāo shì}，{买|mǎi}{瓶|píng}{水|shuǐ}。'], why: '…, {顺便|shùnbiàn} + mellékes teendő.', point: 4 },
+    { q: 'Miben más a {顺便|shùnbiàn}, mint a {随便|suíbiàn}?', a: '„útba ejtve" ↔ „ahogy tetszik"', wrong: ['ugyanazt jelentik', '„gyorsan" ↔ „lassan"', '„mindig" ↔ „soha"'], why: '{顺便|shùnbiàn} = ha már úgyis; {随便|suíbiàn} = tetszés szerint.', point: 4 },
+    { q: '„Mindjárt öt óra, sietnem kell."', a: '{快|kuài}{五|wǔ}{点|diǎn}{了|le}，{我|wǒ}{得|děi}{赶紧|gǎn jǐn}{走|zǒu}{了|le}。', wrong: ['{快|kuài}{五|wǔ}{点|diǎn}{了|le}，{我|wǒ}{得|děi}{走|zǒu}{赶紧|gǎn jǐn}{了|le}。', '{赶紧|gǎn jǐn}{快|kuài}{五|wǔ}{点|diǎn}{了|le}，{我|wǒ}{走|zǒu}{得|děi}。', '{快|kuài}{五|wǔ}{点|diǎn}{了|le}，{我|wǒ}{得|děi}{亲自|qīn zì}{走|zǒu}{了|le}{吗|ma}。'], why: 'A + {赶紧|gǎnjǐn} + ige.', point: 5 },
+    { q: 'Melyik illik? {要|yào}{下|xià}{雨|yǔ}{了|le}，___{回|huí}{家|jiā}{吧|ba}！', a: '{赶快|gǎn kuài}', wrong: ['{明明|míng míng}', '{根本|gēn běn}', '{顺便|shùn biàn}'], why: 'Felszólításban: {赶快|gǎnkuài}.', point: 5 },
+    { q: 'Mit jelent a {志愿者|zhìyuànzhě}?', a: 'önkéntes', wrong: ['nyugdíjas', 'szervező', 'tanár'], why: '{社区志愿者|shèqū zhìyuànzhě}.' },
+    { q: 'Mit jelent a {社区|shèqū}?', a: 'lakókörzet', wrong: ['iskola', 'kórház', 'piac'], why: '{社区中心|shèqū zhōngxīn} „közösségi ház".' },
+    { q: 'Mit jelent az {按|àn}?', a: 'megnyom', wrong: ['elenged', 'kikapcsol', 'letöröl'], why: '{先按这里|xiān àn zhèlǐ} „először ide nyomj".' },
+    { q: 'Mit jelent: {能帮上忙我很高兴|néng bāng shang máng wǒ hěn gāoxìng}。', a: 'Örülök, hogy segíthettem.', wrong: ['Segíts nekem, kérlek.', 'Nem tudok segíteni.', 'Nagyon elfoglalt vagyok.'], why: '{帮上忙|bāng shang máng} „sikerült segíteni".' },
+    { q: 'Mit jelent a {反应|fǎnyìng}?', a: 'reakció', wrong: ['jelszó', 'akkumulátor', 'hálózat'], why: '{怎么没反应|zěnme méi fǎnyìng}？' },
+    { q: 'Mit jelent az {老人|lǎorén}?', a: 'idős ember', wrong: ['régi barát', 'tanár', 'főnök'], why: '{很多老人|hěn duō lǎorén}.' }
+  ]
 }
 
 ];
