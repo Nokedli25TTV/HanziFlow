@@ -11846,6 +11846,344 @@ const HANZIFLOW_COURSE = [
     { q: 'Mit jelent: {祝你成功|zhù nǐ chénggōng}！', a: 'Sok sikert!', wrong: ['Gratulálok!', 'Jobbulást!', 'Jó utat!'], why: '{成功|chénggōng} „siker".' },
     { q: 'Mit jelent a {接受|jiēshòu}?', a: 'elfogad', wrong: ['elutasít', 'megkérdez', 'befejez'], why: '{你能接受吗|nǐ néng jiēshòu ma} „el tudod fogadni?".' }
   ]
+},
+/* ════════════════════════════════════════════════════
+   HSK 4 · 13. LECKE — ige + 下来, ige + 过来 · 过去, melléknév-kettőzés, 忍不住, 了不起
+   ════════════════════════════════════════════════════ */
+{
+  id: 'l63', no: 63, badge: '13', kicker: 'HSK 4 · 13. lecke', label: 'HSK 4 · 13. lecke',
+  title: 'Holdünnep — kerek, fényes hold',
+  lead: 'Ünnepi este egy kínai családnál: lefényképezel és lejegyzel valamit, elmondod, mi maradt ránk a régiektől, és mi csendesedett el (ige + 下来), mit javítottak ki és mit nem győzöl (ige + 过来), szemléletesen írsz le (圆圆的, 高高兴兴), nem bírod megállni (忍不住), és elismerést fejezel ki (了不起).',
+  cando: [
+    'Az ige + 下来 három jelentését használod: rögzítés, a múltból máig, megnyugvás.',
+    'Az ige + 过来 · 过去 átvitt jelentését érted: kijavít, magához tér, nem győzi; elájul.',
+    'Szemléletesen írsz le kettőzött melléknévvel: 圆圆的, 干干净净.',
+    'Kifejezed, hogy nem bírod megállni (忍不住), és elismerést mondasz (了不起).'
+  ],
+  intro: [
+    'A Holdünnep a család ünnepe. Zhou Jie meghívja Annát a nagymamájához, aki maga süti a holdsüteményt a családi recept szerint — és vacsora után régi történetet mesél.',
+    'Ebben a leckében az ige utáni irányszavak ({下来|xiàlai}, {过来|guòlai}, {过去|guòqu}) átvitt jelentéseit tanulod: már nem térbeli mozgást jelölnek, hanem azt, hogyan alakul a cselekvés eredménye.'
+  ],
+  dialogue: {
+    title: 'Holdnézés a nagymamánál',
+    scene: 'A Holdünnep estéje Zhou Jie nagymamájának udvarán. Zhou nagymama, Anna és Zhou Jie.',
+    lines: [
+      { who: 'Zhou nagymama', zh: '{安娜|Ān·nà}，{快|kuài}{来|lái}{看|kàn}，{今天|jīn·tiān}{的|de}{月亮|yuè·liang}{圆圆|yuán yuán}{的|de}，{亮亮|liàng liàng}{的|de}！', hu: 'Anna, gyere gyorsan, nézd, milyen kerek és fényes ma a hold!' },
+      { who: 'Anna', zh: '{真|zhēn}{美|měi}！{我|wǒ}{要|yào}{把|bǎ}{它|tā}{拍|pāi}{下来|xià·lai}，{发|fā}{给|gěi}{我|wǒ}{妈妈|mā·ma}。', hu: 'Gyönyörű! Lefényképezem, és elküldöm anyukámnak.' },
+      { who: 'Zhou Jie', zh: '{奶奶|nǎi·nai}{的|de}{月饼|yuè·bing}{也|yě}{做|zuò}{好|hǎo}{了|le}。{这|zhè}{是|shì}{我们|wǒ·men}{家|jiā}{传|chuán}{下来|xià·lai}{的|de}{做法|zuò·fǎ}。', hu: 'A nagyi holdsüteménye is elkészült. Ez a mi családunkban öröklődő recept.' },
+      { who: 'Anna', zh: '{太|tài}{香|xiāng}{了|le}，{我|wǒ}{忍不住|rěn bu zhù}{想|xiǎng}{先|xiān}{吃|chī}{一|yí}{个|ge}！', hu: 'Olyan jó illata van, nem bírom ki, hogy ne egyek egyet rögtön!' },
+      { who: 'Zhou nagymama', zh: '{吃|chī}{吧|ba}{吃|chī}{吧|ba}！{你|nǐ}{一|yí}{个|ge}{人|rén}{在|zài}{中国|Zhōng·guó}{工作|gōng·zuò}，{汉语|Hàn·yǔ}{又|yòu}{说|shuō}{得|de}{这么|zhè·me}{好|hǎo}，{真|zhēn}{了不起|liǎo·bu·qǐ}！', hu: 'Egyél csak! Egyedül dolgozol Kínában, és ilyen jól beszélsz kínaiul — ez igazán nagyszerű!' },
+      { who: 'Anna', zh: '{哪里|nǎ·lǐ}{哪里|nǎ·lǐ}。{刚|gāng}{来|lái}{的|de}{时候|shí·hou}{我|wǒ}{常常|cháng·cháng}{说|shuō}{错|cuò}，{是|shì}{周杰|Zhōu Jié}{帮|bāng}{我|wǒ}{一|yí}{个|ge}{一|yí}{个|ge}{改|gǎi}{过来|guò·lai}{的|de}。', hu: 'Ugyan. Amikor idejöttem, sokszor hibáztam, Zhou Jie javította ki őket egyenként.' },
+      { who: 'Zhou nagymama', zh: '{好|hǎo}{了|le}，{大家|dà·jiā}{安静|ān·jìng}{下来|xià·lai}，{我|wǒ}{给|gěi}{你们|nǐ·men}{讲|jiǎng}{嫦娥|Cháng·é}{的|de}{故事|gù·shi}。', hu: 'Na, csendesedjetek el, elmesélem nektek Chang\'e történetét.' }
+    ],
+    notes: [
+      'A {奶奶|nǎinai} az apai nagymama; az anyait {外婆|wàipó} vagy {姥姥|lǎolao} néven szólítják.',
+      'A {哪里哪里|nǎlǐ nǎlǐ} szerény válasz a dicséretre: „ugyan, dehogy".',
+      'Az {一个一个|yí ge yí ge} „egyenként, egyesével": a mérőszós szerkezet kettőzése.'
+    ]
+  },
+  points: [
+    {
+      title: 'ige + {下来|xiàlai}', sub: 'rögzít · a múltból máig · megnyugszik',
+      pattern: 'ige + {下来|xià·lai} · {把|bǎ} + tárgy + ige + {下来|xià·lai}',
+      body: 'A {下来|xiàlai} „le(felé jön)" átvitt jelentései: <b>1. rögzítés</b> — valami megmarad, nem vész el: {拍下来|pāi xiàlai} „lefényképez", {记下来|jì xiàlai} „lejegyez". <b>2. a múltból a jelenig</b>: {传下来|chuán xiàlai} „ránk maradt, öröklődött". <b>3. mozgásból nyugalomba</b>: {安静下来|ānjìng xiàlai} „elcsendesedik", {停下来|tíng xiàlai} „megáll". A {下来|xiàlai} gyakran semleges hangsúlyú.',
+      tables: [
+        { caption: 'A {下来|xià·lai} jelentései',
+          head: ['Jelentés', 'Példa', 'Magyarul'],
+          rows: [
+            ['rögzítés', '{拍|pāi}{下来|xià·lai} · {记|jì}{下来|xià·lai}', 'lefényképez · lejegyez'],
+            ['múltból máig', '{传|chuán}{下来|xià·lai} · {留|liú}{下来|xià·lai}', 'ránk maradt · megmaradt'],
+            ['megnyugvás', '{安静|ān·jìng}{下来|xià·lai} · {停|tíng}{下来|xià·lai}', 'elcsendesedik · megáll']
+          ] }
+      ],
+      examples: [
+        { zh: '{我|wǒ}{要|yào}{把|bǎ}{月亮|yuè·liang}{拍|pāi}{下来|xià·lai}。', hu: 'Lefényképezem a holdat.' },
+        { zh: '{这|zhè}{是|shì}{我们|wǒ·men}{家|jiā}{传|chuán}{下来|xià·lai}{的|de}{做法|zuò·fǎ}。', hu: 'Ez a mi családunkban öröklődő recept.' }
+      ]
+    },
+    {
+      title: 'ige + {过来|guòlai} · {过去|guòqu}', sub: 'helyre jön · elveszti az eszméletét',
+      pattern: 'ige + {过来|guò·lai} · ige + {不|bu} + {过来|guò·lai} · ige + {过去|guò·qu}',
+      body: 'Átvitt jelentésben a {过来|guòlai} a <b>helyes, normális állapotba</b> való visszatérést jelöli: {改过来|gǎi guòlai} „kijavít", {醒过来|xǐng guòlai} „magához tér, felébred". A {忙不过来|máng bu guòlai} „nem győzi (a munkát)". A {过去|guòqu} ennek ellentéte, a normális állapot <b>elvesztése</b>: {晕过去|yūn guòqu} „elájul".',
+      examples: [
+        { zh: '{是|shì}{周杰|Zhōu Jié}{帮|bāng}{我|wǒ}{把|bǎ}{错|cuò}{的|de}{地方|dì·fang}{改|gǎi}{过来|guò·lai}{的|de}。', hu: 'Zhou Jie segített kijavítani a hibákat.' },
+        { zh: '{事情|shì·qing}{太|tài}{多|duō}{了|le}，{我|wǒ}{一|yí}{个|ge}{人|rén}{忙|máng}{不|bu}{过来|guò·lai}。', hu: 'Túl sok a dolog, egyedül nem győzöm.' }
+      ]
+    },
+    {
+      title: 'Melléknév kettőzése', sub: '{圆圆的|yuán yuán de} · {高高兴兴|gāo gāo xìng xìng}',
+      pattern: 'AA + {的|de} · AABB (+ {地|de} / {的|de})',
+      body: 'A kettőzött melléknév szemléletesebb, élénkebb, és kedves színezetet ad: {圆圆的月亮|yuányuán de yuèliang} „kerek-kerek hold", {高高兴兴地回家|gāogāoxìngxìng de huí jiā} „vidáman hazamegy". Egyszótagú melléknévből AA lesz, kétszótagúból AABB: {干净|gānjìng} → {干干净净|gāngānjìngjìng}. A kettőzött melléknév mellé nem kerül {很|hěn}, és tagadni sem lehet.',
+      tables: [
+        { caption: 'Kettőzés',
+          head: ['Alap', 'Kettőzve', 'Magyarul'],
+          rows: [
+            ['{圆|yuán}', '{圆圆|yuán yuán}{的|de}', 'kerek-kerek'],
+            ['{高兴|gāo·xìng}', '{高高兴兴|gāo gāo xìng xìng}', 'vidáman'],
+            ['{干净|gān·jìng}', '{干干净净|gān gān jìng jìng}', 'tiszta, ragyogó']
+          ] }
+      ],
+      examples: [
+        { zh: '{今天|jīn·tiān}{的|de}{月亮|yuè·liang}{圆圆|yuán yuán}{的|de}，{亮亮|liàng liàng}{的|de}。', hu: 'Ma kerek és fényes a hold.' },
+        { zh: '{孩子|hái·zi}{们|men}{高高兴兴|gāo gāo xìng xìng}{地|de}{回|huí}{家|jiā}{了|le}。', hu: 'A gyerekek vidáman hazamentek.' }
+      ],
+      mistakes: [
+        { bad: '{今天|jīn·tiān}{的|de}{月亮|yuè·liang}{很|hěn}{圆圆|yuán yuán}{的|de}。', good: '{今天|jīn·tiān}{的|de}{月亮|yuè·liang}{圆圆|yuán yuán}{的|de}。', why: 'A kettőzött melléknév mellé nem kerül {很|hěn}.' }
+      ]
+    },
+    {
+      title: '{忍不住|rěnbuzhù}', sub: 'nem bírja ki, hogy ne …',
+      pattern: 'A + {忍不住|rěn bu zhù} + ige',
+      body: 'A {忍|rěn} „visszatart, elvisel"; a {忍不住|rěnbuzhù} azt jelenti: valaki <b>nem tudja visszatartani</b> magát: {我忍不住想先吃一个|wǒ rěnbuzhù xiǎng xiān chī yí ge} „nem bírom ki, hogy ne egyek egyet rögtön", {她忍不住笑了|tā rěnbuzhù xiào le} „nem bírta megállni nevetés nélkül". Állítva: {忍得住|rěn de zhù} „ki tudja bírni".',
+      examples: [
+        { zh: '{太|tài}{香|xiāng}{了|le}，{我|wǒ}{忍不住|rěn bu zhù}{想|xiǎng}{先|xiān}{吃|chī}{一|yí}{个|ge}。', hu: 'Olyan jó illata van, nem bírom ki, hogy ne egyek egyet rögtön.' },
+        { zh: '{听|tīng}{了|le}{这|zhè}{个|ge}{笑话|xiào·hua}，{大家|dà·jiā}{都|dōu}{忍不住|rěn bu zhù}{笑|xiào}{了|le}。', hu: 'A vicc hallatán mindenki elnevette magát.' }
+      ]
+    },
+    {
+      title: '{了不起|liǎobuqǐ}', sub: 'nagyszerű, nem semmi',
+      pattern: 'A + ({真|zhēn}) + {了不起|liǎo·bu·qǐ} · {没什么了不起的|méi shénme liǎobuqǐ de}',
+      body: 'A {了不起|liǎobuqǐ} „nagyszerű, figyelemre méltó" — elismerés: {你真了不起|nǐ zhēn liǎobuqǐ} „igazán nagyszerű vagy!". Tagadva szerénykedés vagy lekicsinylés: {这没什么了不起的|zhè méi shénme liǎobuqǐ de} „ebben nincs semmi különös". Vigyázz a kiejtésre: a {了|liǎo} itt harmadik hangú.',
+      examples: [
+        { zh: '{你|nǐ}{汉语|Hàn·yǔ}{说|shuō}{得|de}{这么|zhè·me}{好|hǎo}，{真|zhēn}{了不起|liǎo·bu·qǐ}！', hu: 'Ilyen jól beszélsz kínaiul — igazán nagyszerű!' },
+        { zh: '{会|huì}{做|zuò}{月饼|yuè·bing}{没|méi}{什么|shén·me}{了不起|liǎo·bu·qǐ}{的|de}。', hu: 'Holdsüteményt sütni nem nagy kunszt.' }
+      ]
+    }
+  ],
+  phrases: [
+    { zh: '{中秋|Zhōng·qiū}{快乐|kuài·lè}！', hu: 'Boldog Holdünnepet!' },
+    { zh: '{哪里|nǎ·lǐ}{哪里|nǎ·lǐ}。', hu: 'Ugyan, dehogy.' },
+    { zh: '{每|měi}{逢|féng}{佳节|jiā jié}{倍|bèi}{思|sī}{亲|qīn}。', hu: 'Ünnepen kétszer annyira hiányzik a család.' },
+    { zh: '{来|lái}，{尝|cháng}{一|yì}{块|kuài}。', hu: 'Tessék, kóstolj meg egy darabot.' }
+  ],
+  words: [
+    { title: 'Szavak',
+      items: [
+        { zh: '{月亮|yuè·liang}', pinyin: 'yuèliang', hu: 'hold' },
+        { zh: '{月饼|yuè·bing}', pinyin: 'yuèbing', hu: 'holdsütemény' },
+        { zh: '{圆|yuán}', pinyin: 'yuán', hu: 'kerek' },
+        { zh: '{亮|liàng}', pinyin: 'liàng', hu: 'fényes, világos' },
+        { zh: '{传|chuán}', pinyin: 'chuán', hu: 'továbbad, öröklődik' },
+        { zh: '{拍|pāi}', pinyin: 'pāi', hu: 'fényképez' },
+        { zh: '{香|xiāng}', pinyin: 'xiāng', hu: 'illatos, ízletes' },
+        { zh: '{忍不住|rěn bu zhù}', pinyin: 'rěnbuzhù', hu: 'nem bírja ki' },
+        { zh: '{了不起|liǎo·bu·qǐ}', pinyin: 'liǎobuqǐ', hu: 'nagyszerű' },
+        { zh: '{醒|xǐng}', pinyin: 'xǐng', hu: 'felébred, magához tér' },
+        { zh: '{故事|gù·shi}', pinyin: 'gùshi', hu: 'történet, mese' },
+        { zh: '{讲|jiǎng}', pinyin: 'jiǎng', hu: 'mesél, elmond' }
+      ] },
+    { title: 'Ráadás',
+      items: [
+        { zh: '{嫦娥|Cháng·é}', pinyin: 'Cháng\'é', hu: 'Chang\'e, a holdistennő' },
+        { zh: '{团圆|tuán·yuán}', pinyin: 'tuányuán', hu: '(család) újra együtt van' },
+        { zh: '{赏月|shǎng yuè}', pinyin: 'shǎng yuè', hu: 'holdat néz, gyönyörködik' },
+        { zh: '{院子|yuàn·zi}', pinyin: 'yuànzi', hu: 'udvar' }
+      ] }
+  ],
+  culture: [
+    { title: 'A család ünnepe', text: 'A Holdünnep a holdnaptár 8. hónapjának 15. napja, ősszel, amikor a legkerekebb a hold. A kerek hold a család együttlétét ({团圆|tuányuán}) jelképezi: ilyenkor sokan hazautaznak, közösen vacsoráznak, holdat néznek, és holdsüteményt esznek, amelyet egymásnak ajándékba is adnak.' },
+    { title: 'A holdistennő', text: 'A legenda szerint {嫦娥|Cháng\'é} egy halhatatlanságot adó szert ivott meg, és felszállt a Holdra, ahol azóta egy fehér nyúllal ({玉兔|yùtù}) él. Nevét a kínai holdszondák is viselik: a {嫦娥|Cháng\'é}-programban szonda szállt le a Hold túlsó oldalán is.' }
+  ],
+  reading: {
+    title: '{中秋|Zhōng·qiū}{之夜|zhī yè}', titleHu: 'A Holdünnep éjszakája',
+    text: [
+      { zh: '{今年|jīn·nián}{中秋节|Zhōng·qiū Jié}，{周杰|Zhōu Jié}{请|qǐng}{安娜|Ān·nà}{去|qù}{奶奶|nǎi·nai}{家|jiā}{过|guò}{节|jié}。', hu: 'Idén a Holdünnepen Zhou Jie meghívta Annát a nagymamájához ünnepelni.' },
+      { zh: '{奶奶|nǎi·nai}{做|zuò}{的|de}{月饼|yuè·bing}{香香|xiāng xiāng}{的|de}、{甜甜|tián tián}{的|de}，{安娜|Ān·nà}{忍不住|rěn bu zhù}{吃|chī}{了|le}{三|sān}{个|ge}。', hu: 'A nagymama holdsüteménye illatos és édes volt, Anna nem bírta ki, hármat is megevett.' },
+      { zh: '{吃|chī}{完|wán}{饭|fàn}，{大家|dà·jiā}{坐|zuò}{在|zài}{院子|yuàn·zi}{里|li}{赏|shǎng}{月|yuè}，{奶奶|nǎi·nai}{讲|jiǎng}{了|le}{一|yí}{个|ge}{古老|gǔ lǎo}{的|de}{故事|gù·shi}。', hu: 'Vacsora után kiültek az udvarra holdat nézni, és a nagymama elmesélt egy régi történetet.', par: true },
+      { zh: '{安娜|Ān·nà}{把|bǎ}{故事|gù·shi}{记|jì}{了|le}{下来|xià·lai}，{想|xiǎng}{讲|jiǎng}{给|gěi}{匈牙利|Xiōng·yá·lì}{的|de}{朋友|péng·you}{听|tīng}。', hu: 'Anna lejegyezte a történetet, hogy elmesélje a magyar barátainak.' },
+      { zh: '{奶奶|nǎi·nai}{说|shuō}：“{一|yí}{个|ge}{外国|wài·guó}{姑娘|gū·niang}{能|néng}{听|tīng}{懂|dǒng}{这么|zhè·me}{多|duō}，{真|zhēn}{了不起|liǎo·bu·qǐ}！”', hu: 'A nagymama azt mondta: „Egy külföldi lány, és ennyit megért — igazán nagyszerű!"', par: true }
+    ],
+    words: [ { zh: '{古老|gǔ lǎo}', hu: 'régi, ősi' } ],
+    questions: [
+      { q: 'Hol töltötte Anna az ünnepet?', a: 'Zhou Jie nagymamájánál', wrong: ['egy étteremben', 'otthon Lin Jinggel', 'a cég ünnepségén'], why: '{去奶奶家过节|qù nǎinai jiā guò jié}.' },
+      { q: 'Hány holdsüteményt evett Anna?', a: 'hármat', wrong: ['egyet', 'kettőt', 'ötöt'], why: '{忍不住吃了三个|rěnbuzhù chī le sān ge}.' },
+      { q: 'Mit csinált Anna a történettel?', a: 'lejegyezte', wrong: ['elfelejtette', 'felvette videóra', 'lefordította'], why: '{把故事记了下来|bǎ gùshi jì le xiàlai}.' },
+      { q: 'Mit mondott a nagymama Annáról?', a: 'nagyszerű, hogy ennyit megért', wrong: ['túl sokat eszik', 'még sokat kell tanulnia', 'nagyon fáradtnak látszik'], why: '{能听懂这么多，真了不起|néng tīng dǒng zhème duō, zhēn liǎobuqǐ}.' }
+    ]
+  },
+  quiz: [
+    { q: '„Lefényképezem a holdat."', a: '{我|wǒ}{要|yào}{把|bǎ}{月亮|yuè·liang}{拍|pāi}{下来|xià·lai}。', wrong: ['{我|wǒ}{要|yào}{把|bǎ}{月亮|yuè·liang}{拍|pāi}{下去|xià·qu}。', '{我|wǒ}{要|yào}{拍|pāi}{月亮|yuè·liang}{把|bǎ}{下来|xià·lai}。', '{我|wǒ}{把|bǎ}{下来|xià·lai}{要|yào}{拍|pāi}{月亮|yuè·liang}。'], why: 'Rögzítés: ige + {下来|xiàlai}.', point: 1 },
+    { q: 'Melyik illik? {大家|dà·jiā}{安静|ān·jìng}___，{奶奶|nǎi·nai}{要|yào}{讲|jiǎng}{故事|gù·shi}{了|le}。', a: '{下来|xià·lai}', wrong: ['{上去|shàng·qu}', '{出来|chū·lai}', '{过去|guò·qu}'], why: 'Megnyugvás: {安静下来|ānjìng xiàlai}.', point: 1 },
+    { q: 'Mit jelent: {这是传下来的做法|zhè shì chuán xiàlai de zuòfǎ}。', a: 'Ez régről öröklődő recept.', wrong: ['Ez egy új, saját recept.', 'Ezt a receptet továbbadom.', 'Ez a recept elveszett.'], why: '{传下来|chuán xiàlai} „ránk maradt".', point: 1 },
+    { q: '„Zhou Jie segített kijavítani a hibákat."', a: '{周杰|Zhōu Jié}{帮|bāng}{我|wǒ}{把|bǎ}{错|cuò}{的|de}{地方|dì·fang}{改|gǎi}{过来|guò·lai}{了|le}。', wrong: ['{周杰|Zhōu Jié}{帮|bāng}{我|wǒ}{把|bǎ}{错|cuò}{的|de}{地方|dì·fang}{改|gǎi}{过去|guò·qu}{了|le}。', '{周杰|Zhōu Jié}{帮|bāng}{我|wǒ}{改|gǎi}{把|bǎ}{过来|guò·lai}{错|cuò}{的|de}{地方|dì·fang}。', '{周杰|Zhōu Jié}{过来|guò·lai}{帮|bāng}{我|wǒ}{错|cuò}{的|de}{地方|dì·fang}{改|gǎi}{了|le}。'], why: 'Helyes állapotba: {改过来|gǎi guòlai}.', point: 2 },
+    { q: 'Mit jelent: {我一个人忙不过来|wǒ yí ge rén máng bu guòlai}。', a: 'Egyedül nem győzöm.', wrong: ['Egyedül nem jöhetek át.', 'Egyedül nem vagyok elfoglalt.', 'Egyedül is győzöm.'], why: '{忙不过来|máng bu guòlai} „nem győzi".', point: 2 },
+    { q: 'Mit jelent a {晕过去|yūn guòqu}?', a: 'elájul', wrong: ['magához tér', 'átmegy a túloldalra', 'felébred'], why: 'A {过去|guòqu} a normális állapot elvesztése.', point: 2 },
+    { q: '„Ma kerek-kerek a hold."', a: '{今天|jīn·tiān}{的|de}{月亮|yuè·liang}{圆圆|yuán yuán}{的|de}。', wrong: ['{今天|jīn·tiān}{的|de}{月亮|yuè·liang}{很|hěn}{圆圆|yuán yuán}{的|de}。', '{今天|jīn·tiān}{的|de}{月亮|yuè·liang}{不|bù}{圆圆|yuán yuán}{的|de}。', '{今天|jīn·tiān}{的|de}{圆圆|yuán yuán}{月亮|yuè·liang}{很|hěn}。'], why: 'Kettőzött melléknév mellé nincs {很|hěn}.', point: 3 },
+    { q: 'Mi a {干净|gānjìng} kettőzött alakja?', a: '{干干净净|gāngānjìngjìng}', wrong: ['{干净干净|gānjìng gānjìng}', '{干净净|gānjìngjìng}', '{干干净|gāngānjìng}'], why: 'Kétszótagú melléknév: AABB.', point: 3 },
+    { q: '„Nem bírom ki, hogy ne egyek egyet."', a: '{我|wǒ}{忍不住|rěn bu zhù}{想|xiǎng}{吃|chī}{一|yí}{个|ge}。', wrong: ['{我|wǒ}{想|xiǎng}{吃|chī}{一|yí}{个|ge}{忍不住|rěn bu zhù}。', '{忍不住|rěn bu zhù}{我|wǒ}{一|yí}{个|ge}{想|xiǎng}{吃|chī}。', '{我|wǒ}{不|bù}{忍|rěn}{住|zhù}{想|xiǎng}{吃|chī}{一|yí}{个|ge}。'], why: 'A + {忍不住|rěnbuzhù} + ige.', point: 4 },
+    { q: 'Mit jelent: {大家都忍不住笑了|dàjiā dōu rěnbuzhù xiào le}。', a: 'Mindenki elnevette magát.', wrong: ['Senki sem nevetett.', 'Mindenki megpróbált nevetni.', 'Mindenki nevetett, de csak színlelte.'], why: '{忍不住|rěnbuzhù} „nem bírta visszatartani".', point: 4 },
+    { q: '„Igazán nagyszerű vagy!"', a: '{你|nǐ}{真|zhēn}{了不起|liǎo·bu·qǐ}！', wrong: ['{你|nǐ}{真|zhēn}{不|bù}{起|qǐ}{了|le}！', '{你|nǐ}{了|le}{真|zhēn}{不起|bù qǐ}！', '{你|nǐ}{真|zhēn}{起|qǐ}{不|bu}{了|liǎo}！'], why: '{了不起|liǎobuqǐ} egy szó.', point: 5 },
+    { q: 'Mit jelent: {这没什么了不起的|zhè méi shénme liǎobuqǐ de}。', a: 'Ebben nincs semmi különös.', wrong: ['Ez nagyon különleges.', 'Ezt nem tudom megcsinálni.', 'Erről nem tudok semmit.'], why: 'Tagadva szerénykedés vagy lekicsinylés.', point: 5 },
+    { q: 'Mit jelent a {月亮|yuèliang}?', a: 'hold', wrong: ['csillag', 'nap', 'felhő'], why: '{圆圆的月亮|yuányuán de yuèliang}.' },
+    { q: 'Mit jelent: {中秋快乐|Zhōngqiū kuàilè}！', a: 'Boldog Holdünnepet!', wrong: ['Boldog új évet!', 'Boldog születésnapot!', 'Jó étvágyat!'], why: 'A {中秋节|Zhōngqiū Jié} köszöntése.' },
+    { q: 'Mit jelent a {香|xiāng}?', a: 'illatos, ízletes', wrong: ['édes', 'csípős', 'sós'], why: '{月饼太香了|yuèbing tài xiāng le}.' },
+    { q: 'Mit jelent: {哪里哪里|nǎlǐ nǎlǐ}。', a: 'Ugyan, dehogy.', wrong: ['Hol, hol?', 'Mindenhol.', 'Sehol sincs.'], why: 'Szerény válasz a dicséretre.' }
+  ]
+},
+
+/* ════════════════════════════════════════════════════
+   HSK 4 · 14. LECKE — ige + 上 · 开 · 住 · 掉, 好 + melléknév
+   ════════════════════════════════════════════════════ */
+{
+  id: 'l64', no: 64, badge: '14', kicker: 'HSK 4 · 14. lecke', label: 'HSK 4 · 14. lecke',
+  title: 'Az első maraton — vedd fel, vedd le, jegyezd meg!',
+  lead: 'Sportversenyen vagy: felveszel valamit és megszeretsz valamit (ige + 上), szétváltok vagy kinyitsz (ige + 开), megjegyzel és megállsz (ige + 住), leveszel és eldobsz (ige + 掉), és felkiáltasz (好冷啊！).',
+  cando: [
+    'Az ige + 上 jelentéseit használod: rákerül (穿上), célba ér (考上), megszeret (爱上).',
+    'Az ige + 开 jelentéseit használod: szétválik, eltávolodik (分开, 离开), kinyílik (打开).',
+    'Az ige + 住 (记住, 站住) és az ige + 掉 (脱掉, 扔掉) jelentését használod.',
+    'Felkiáltásban fokozol: 好 + melléknév (好冷啊！), 好多, 好几.'
+  ],
+  intro: [
+    'Anna tavasz óta fut, és most Zhou Jie-vel elindul a sanghaji félmaratonon. Hideg novemberi reggel van, a rajtnál rengeteg ember tolong.',
+    'Az előző leckében a {下来|xiàlai} és a {过来|guòlai} átvitt jelentéseit tanultad. Most négy rövid eredményhatározót veszel sorra: a {上|shang}, a {开|kāi}, a {住|zhù} és a {掉|diào} azt mondja meg, mi lett a cselekvés eredménye.'
+  ],
+  dialogue: {
+    title: 'A rajtnál',
+    scene: 'Novemberi reggel a sanghaji félmaraton rajtjánál, majd a célban. Anna és Zhou Jie.',
+    lines: [
+      { who: 'Zhou Jie', zh: '{安娜|Ān·nà}，{快|kuài}{把|bǎ}{运动鞋|yùn·dòng xié}{穿|chuān}{上|shang}，{比赛|bǐ·sài}{马上|mǎ·shàng}{就|jiù}{开始|kāi·shǐ}{了|le}！', hu: 'Anna, gyorsan vedd fel a futócipőt, mindjárt kezdődik a verseny!' },
+      { who: 'Anna', zh: '{好|hǎo}{冷|lěng}{啊|a}！{外套|wài·tào}{我|wǒ}{先|xiān}{不|bù}{脱|tuō}{了|le}。', hu: 'De hideg van! A kabátot még nem veszem le.' },
+      { who: 'Zhou Jie', zh: '{跑|pǎo}{起来|qǐ·lai}{就|jiù}{热|rè}{了|le}，{还是|hái·shi}{脱|tuō}{掉|diào}{吧|ba}。{记|jì}{住|zhù}，{开始|kāi·shǐ}{的|de}{时候|shí·hou}{别|bié}{跑|pǎo}{太|tài}{快|kuài}。', hu: 'Ha futsz, majd meleged lesz, inkább vedd le. És jegyezd meg: az elején ne fuss túl gyorsan.' },
+      { who: 'Anna', zh: '{放心|fàng xīn}，{我|wǒ}{练|liàn}{了|le}{好|hǎo}{几|jǐ}{个|ge}{月|yuè}。{说|shuō}{实话|shí huà}，{我|wǒ}{已经|yǐ·jīng}{爱|ài}{上|shang}{跑|pǎo}{步|bù}{了|le}。', hu: 'Nyugi, jó néhány hónapig edzettem. Őszintén szólva már megszerettem a futást.' },
+      { who: 'Zhou Jie', zh: '{人|rén}{好|hǎo}{多|duō}{啊|a}。{我们|wǒ·men}{别|bié}{分|fēn}{开|kāi}，{你|nǐ}{跟|gēn}{着|zhe}{我|wǒ}{跑|pǎo}。', hu: 'Rengeteg ember van. Ne váljunk el, gyere utánam.' },
+      { who: 'Anna', zh: '{终于|zhōng·yú}{跑|pǎo}{完|wán}{了|le}！{我|wǒ}{的|de}{腿|tuǐ}{好|hǎo}{疼|téng}，{可是|kě·shì}{我|wǒ}{好|hǎo}{开心|kāi·xīn}！', hu: 'Végre lefutottuk! Nagyon fáj a lábam, de olyan boldog vagyok!' },
+      { who: 'Zhou Jie', zh: '{第一|dì yī}{次|cì}{就|jiù}{跑|pǎo}{完|wán}{了|le}{半程|bàn chéng}{马拉松|mǎ·lā·sōng}，{真|zhēn}{棒|bàng}！{来|lái}，{拍|pāi}{张|zhāng}{照片|zhào·piàn}，{把|bǎ}{今天|jīn·tiān}{记|jì}{住|zhù}！', hu: 'Elsőre lefutottad a félmaratont, szuper! Gyere, csináljunk egy fotót, hogy emlékezzünk erre a napra!' }
+    ],
+    notes: [
+      'A {半程马拉松|bànchéng mǎlāsōng} „félmaraton"; a teljes maraton {全程马拉松|quánchéng mǎlāsōng}, röviden {全马|quán mǎ}, a félmaraton {半马|bàn mǎ}.',
+      'A {跑起来|pǎo qǐlai} „ha futni kezdesz": a {起来|qǐlai} a cselekvés kezdetét jelöli.',
+      'A {说实话|shuō shíhuà} „őszintén szólva", a {真棒|zhēn bàng} „szuper, nagyszerű" (beszélt nyelv).'
+    ]
+  },
+  points: [
+    {
+      title: 'ige + {上|shang}', sub: 'rákerül · célba ér · megszeret',
+      pattern: 'ige + {上|shang} · {把|bǎ} + tárgy + ige + {上|shang}',
+      body: 'A {上|shang} eredményhatározóként: <b>1. rákerül, odatapad, bezárul</b> — {穿上|chuān shang} „felvesz", {戴上|dài shang} „feltesz (sapkát, szemüveget)", {关上|guān shang} „becsuk". <b>2. nehéz célt ér el</b> — {考上大学|kǎo shang dàxué} „bejut az egyetemre". <b>3. elkezd és folytat</b> (érzelemnél) — {爱上|ài shang} „megszeret", {喜欢上|xǐhuan shang} „megkedvel".',
+      tables: [
+        { caption: 'A {上|shang} jelentései',
+          head: ['Jelentés', 'Példa', 'Magyarul'],
+          rows: [
+            ['rákerül, bezárul', '{穿|chuān}{上|shang} · {关|guān}{上|shang}', 'felvesz · becsuk'],
+            ['célba ér', '{考|kǎo}{上|shang}', 'bejut (vizsgával)'],
+            ['megszeret', '{爱|ài}{上|shang} · {喜欢|xǐ·huan}{上|shang}', 'megszeret · megkedvel']
+          ] }
+      ],
+      examples: [
+        { zh: '{快|kuài}{把|bǎ}{运动鞋|yùn·dòng xié}{穿|chuān}{上|shang}！', hu: 'Gyorsan vedd fel a futócipőt!' },
+        { zh: '{我|wǒ}{已经|yǐ·jīng}{爱|ài}{上|shang}{跑|pǎo}{步|bù}{了|le}。', hu: 'Már megszerettem a futást.' }
+      ]
+    },
+    {
+      title: 'ige + {开|kāi}', sub: 'szétválik, eltávolodik · kinyílik',
+      pattern: 'ige + {开|kāi} · {把|bǎ} + tárgy + ige + {开|kāi}',
+      body: 'A {开|kāi} eredményhatározóként: <b>1. szétválás, eltávolodás</b> — {分开|fēn kāi} „szétválik", {离开|lí kāi} „elhagy, elmegy", {拿开|ná kāi} „elvesz (onnan)", {走开|zǒu kāi} „odébb megy". <b>2. kinyílás, szétnyílás</b> — {打开|dǎ kāi} „kinyit", {拉开|lā kāi} „széthúz".',
+      examples: [
+        { zh: '{人|rén}{太|tài}{多|duō}{了|le}，{我们|wǒ·men}{别|bié}{分|fēn}{开|kāi}。', hu: 'Túl sok az ember, ne váljunk el.' },
+        { zh: '{太|tài}{热|rè}{了|le}，{请|qǐng}{把|bǎ}{窗户|chuāng·hu}{打|dǎ}{开|kāi}。', hu: 'Nagyon meleg van, kérlek, nyisd ki az ablakot.' }
+      ]
+    },
+    {
+      title: 'ige + {住|zhù}', sub: 'szilárdan rögzül, megáll',
+      pattern: 'ige + {住|zhù} · ige + {得|de} / {不|bu} + {住|zhù}',
+      body: 'A {住|zhù} azt jelöli, hogy a cselekvés eredménye <b>szilárdan rögzül</b>, valami megáll, nem mozdul tovább: {记住|jì zhù} „megjegyez", {站住|zhàn zhù} „megáll (helyben)", {抓住|zhuā zhù} „megragad", {拿住|ná zhù} „erősen fog". Lehetőség: {记得住|jì de zhù} „meg tudja jegyezni", {记不住|jì bu zhù} „nem tudja megjegyezni".',
+      examples: [
+        { zh: '{记|jì}{住|zhù}，{开始|kāi·shǐ}{的|de}{时候|shí·hou}{别|bié}{跑|pǎo}{太|tài}{快|kuài}。', hu: 'Jegyezd meg: az elején ne fuss túl gyorsan.' },
+        { zh: '{生词|shēng cí}{太|tài}{多|duō}{了|le}，{我|wǒ}{记|jì}{不|bu}{住|zhù}。', hu: 'Túl sok az új szó, nem tudom megjegyezni.' }
+      ]
+    },
+    {
+      title: 'ige + {掉|diào}', sub: 'eltávolít, eltűnik',
+      pattern: 'ige + {掉|diào} · {把|bǎ} + tárgy + ige + {掉|diào}',
+      body: 'A {掉|diào} „leesik" eredményhatározóként azt jelzi, hogy valami <b>eltávolodik, eltűnik, elfogy</b>: {脱掉|tuō diào} „levesz (ruhát)", {扔掉|rēng diào} „kidob", {吃掉|chī diào} „megeszi (az egészet)", {忘掉|wàng diào} „elfelejt", {卖掉|mài diào} „elad". Gyakran {把|bǎ}-os mondatban áll.',
+      examples: [
+        { zh: '{跑|pǎo}{起来|qǐ·lai}{就|jiù}{热|rè}{了|le}，{把|bǎ}{外套|wài·tào}{脱|tuō}{掉|diào}{吧|ba}。', hu: 'Ha futsz, meleged lesz, vedd le a kabátot.' },
+        { zh: '{他|tā}{把|bǎ}{旧|jiù}{车|chē}{卖|mài}{掉|diào}{了|le}。', hu: 'Eladta a régi autóját.' }
+      ],
+      mistakes: [
+        { bad: '{我|wǒ}{把|bǎ}{外套|wài·tào}{脱|tuō}。', good: '{我|wǒ}{把|bǎ}{外套|wài·tào}{脱|tuō}{掉|diào}{了|le}。', why: 'A {把|bǎ}-os mondatban az ige mellé eredmény kell (például {掉|diào} + {了|le}).' }
+      ]
+    },
+    {
+      title: '{好|hǎo} + melléknév', sub: 'milyen …! nagyon …',
+      pattern: '{好|hǎo} + melléknév + ({啊|a})！ · {好|hǎo}{多|duō} · {好|hǎo}{几|jǐ} · {好|hǎo}{久|jiǔ}',
+      body: 'Beszélt nyelvben a {好|hǎo} a melléknév előtt erős fokozó, gyakran felkiáltásban: {好冷啊|hǎo lěng a} „de hideg van!", {我好开心|wǒ hǎo kāixīn} „olyan boldog vagyok!". Állandó kapcsolatok: {好多|hǎo duō} „rengeteg", {好几个月|hǎo jǐ ge yuè} „jó néhány hónap", {好久|hǎo jiǔ} „nagyon sokáig".',
+      examples: [
+        { zh: '{好|hǎo}{冷|lěng}{啊|a}！{外套|wài·tào}{我|wǒ}{先|xiān}{不|bù}{脱|tuō}{了|le}。', hu: 'De hideg van! A kabátot még nem veszem le.' },
+        { zh: '{我|wǒ}{练|liàn}{了|le}{好|hǎo}{几|jǐ}{个|ge}{月|yuè}。', hu: 'Jó néhány hónapig edzettem.' }
+      ]
+    }
+  ],
+  phrases: [
+    { zh: '{加油|jiā yóu}！', hu: 'Hajrá!' },
+    { zh: '{我|wǒ}{坚持|jiān·chí}{不|bú}{下去|xià·qu}{了|le}。', hu: 'Nem bírom tovább.' },
+    { zh: '{别|bié}{放弃|fàng qì}！', hu: 'Ne add fel!' },
+    { zh: '{真|zhēn}{棒|bàng}！', hu: 'Szuper!' }
+  ],
+  words: [
+    { title: 'Szavak',
+      items: [
+        { zh: '{马拉松|mǎ·lā·sōng}', pinyin: 'mǎlāsōng', hu: 'maraton' },
+        { zh: '{终点|zhōng diǎn}', pinyin: 'zhōngdiǎn', hu: 'cél (verseny vége)' },
+        { zh: '{坚持|jiān·chí}', pinyin: 'jiānchí', hu: 'kitart, kitartóan csinál' },
+        { zh: '{脱|tuō}', pinyin: 'tuō', hu: 'levet (ruhát)' },
+        { zh: '{戴|dài}', pinyin: 'dài', hu: 'visel, feltesz (sapkát, órát)' },
+        { zh: '{外套|wài·tào}', pinyin: 'wàitào', hu: 'kabát, felöltő' },
+        { zh: '{腿|tuǐ}', pinyin: 'tuǐ', hu: 'láb (comb, lábszár)' },
+        { zh: '{分开|fēn kāi}', pinyin: 'fēnkāi', hu: 'szétválik, különválaszt' },
+        { zh: '{报名|bào míng}', pinyin: 'bào míng', hu: 'jelentkezik, nevez' },
+        { zh: '{速度|sù·dù}', pinyin: 'sùdù', hu: 'sebesség' },
+        { zh: '{公里|gōng·lǐ}', pinyin: 'gōnglǐ', hu: 'kilométer' },
+        { zh: '{加油|jiā yóu}', pinyin: 'jiā yóu', hu: 'hajrá; igyekszik' }
+      ] },
+    { title: 'Ráadás',
+      items: [
+        { zh: '{运动鞋|yùn·dòng xié}', pinyin: 'yùndòngxié', hu: 'sportcipő' },
+        { zh: '{实话|shí huà}', pinyin: 'shíhuà', hu: 'igazság, őszinte szó' },
+        { zh: '{出汗|chū hàn}', pinyin: 'chū hàn', hu: 'izzad' },
+        { zh: '{棒|bàng}', pinyin: 'bàng', hu: 'szuper, remek' }
+      ] }
+  ],
+  culture: [
+    { title: 'Maratonláz', text: 'Kínában az utóbbi években rendkívül népszerű lett a futás: évente több száz maratont rendeznek, és a nagyobb versenyekre (például a novemberi sanghajira) annyian jelentkeznek, hogy sorsolással ({抽签|chōuqiān}) döntik el, ki indulhat.' },
+    { title: 'Reggeli mozgás a parkban', text: 'Kora reggel a parkokban az idősebbek {太极拳|tàijíquán} gyakorlatokat végeznek, este a tereken a {广场舞|guǎngchǎngwǔ} „téri tánc" a népszerű: zenére, csoportosan táncolnak, többnyire középkorú és idősebb nők.' }
+  ],
+  reading: {
+    title: '{安娜|Ān·nà}{的|de}{第一|dì yī}{次|cì}{马拉松|mǎ·lā·sōng}', titleHu: 'Anna első maratonja',
+    text: [
+      { zh: '{今年|jīn·nián}{春天|chūn·tiān}{安娜|Ān·nà}{爱|ài}{上|shang}{了|le}{跑|pǎo}{步|bù}，{每|měi}{天|tiān}{早上|zǎo·shang}{都|dōu}{跑|pǎo}{五|wǔ}{公里|gōng·lǐ}。', hu: 'Idén tavasszal Anna megszerette a futást, és minden reggel öt kilométert fut.' },
+      { zh: '{她|tā}{和|hé}{周杰|Zhōu Jié}{一起|yì·qǐ}{报|bào}{了|le}{名|míng}，{参加|cān·jiā}{十一月|shí·yī yuè}{的|de}{上海|Shàng·hǎi}{半程|bàn chéng}{马拉松|mǎ·lā·sōng}。', hu: 'Zhou Jie-vel együtt benevezett a novemberi sanghaji félmaratonra.' },
+      { zh: '{比赛|bǐ·sài}{那|nà}{天|tiān}{好|hǎo}{冷|lěng}，{可是|kě·shì}{跑|pǎo}{了|le}{几|jǐ}{公里|gōng·lǐ}{以后|yǐ·hòu}，{她|tā}{就|jiù}{把|bǎ}{外套|wài·tào}{脱|tuō}{掉|diào}{了|le}。', hu: 'A verseny napján nagyon hideg volt, de néhány kilométer után levette a kabátját.', par: true },
+      { zh: '{最后|zuì·hòu}{三|sān}{公里|gōng·lǐ}{她|tā}{的|de}{腿|tuǐ}{好|hǎo}{疼|téng}，{但是|dàn·shì}{她|tā}{记|jì}{住|zhù}{了|le}{周杰|Zhōu Jié}{的|de}{话|huà}：{别|bié}{停|tíng}{下来|xià·lai}！', hu: 'Az utolsó három kilométeren nagyon fájt a lába, de emlékezett Zhou Jie szavaira: ne állj meg!' },
+      { zh: '{两|liǎng}{个|ge}{多|duō}{小时|xiǎo·shí}{后|hòu}，{她|tā}{终于|zhōng·yú}{跑|pǎo}{到|dào}{了|le}{终点|zhōng diǎn}。', hu: 'Valamivel több mint két óra múlva végre beért a célba.', par: true }
+    ],
+    words: [ { zh: '{半程|bàn chéng}', hu: 'fél táv' } ],
+    questions: [
+      { q: 'Mióta szeret Anna futni?', a: 'idén tavasz óta', wrong: ['gyerekkora óta', 'tavaly ősz óta', 'a verseny óta'], why: '{今年春天安娜爱上了跑步|jīnnián chūntiān Ānnà ài shang le pǎobù}.' },
+      { q: 'Milyen versenyen indult?', a: 'félmaratonon', wrong: ['teljes maratonon', 'tízkilométeres futáson', 'kerékpárversenyen'], why: '{半程马拉松|bànchéng mǎlāsōng}.' },
+      { q: 'Mit csinált néhány kilométer után?', a: 'levette a kabátját', wrong: ['megállt pihenni', 'vizet ivott', 'felhívta Zhou Jie-t'], why: '{把外套脱掉了|bǎ wàitào tuō diào le}.' },
+      { q: 'Mennyi idő alatt ért célba?', a: 'kicsit több mint két óra', wrong: ['pontosan egy óra', 'majdnem négy óra', 'fél óra'], why: '{两个多小时|liǎng ge duō xiǎoshí}.' }
+    ]
+  },
+  quiz: [
+    { q: '„Gyorsan vedd fel a futócipőt!"', a: '{快|kuài}{把|bǎ}{运动鞋|yùn·dòng xié}{穿|chuān}{上|shang}！', wrong: ['{快|kuài}{把|bǎ}{运动鞋|yùn·dòng xié}{穿|chuān}{掉|diào}！', '{快|kuài}{穿|chuān}{把|bǎ}{上|shang}{运动鞋|yùn·dòng xié}！', '{快|kuài}{把|bǎ}{上|shang}{运动鞋|yùn·dòng xié}{穿|chuān}！'], why: 'Rákerül: ige + {上|shang}.', point: 1 },
+    { q: 'Mit jelent: {我已经爱上跑步了|wǒ yǐjīng ài shang pǎobù le}。', a: 'Már megszerettem a futást.', wrong: ['Már abbahagytam a futást.', 'Még sosem futottam.', 'A futás nem nekem való.'], why: '{爱上|ài shang} „megszeret".', point: 1 },
+    { q: 'Melyik illik? {他|tā}{考|kǎo}___{了|le}{北京|Běi·jīng}{大学|dà·xué}。 („Bejutott a Pekingi Egyetemre.")', a: '{上|shang}', wrong: ['{开|kāi}', '{掉|diào}', '{住|zhù}'], why: 'Nehéz célt ér el: {考上|kǎo shang}.', point: 1 },
+    { q: '„Túl sok az ember, ne váljunk el."', a: '{人|rén}{太|tài}{多|duō}{了|le}，{我们|wǒ·men}{别|bié}{分|fēn}{开|kāi}。', wrong: ['{人|rén}{太|tài}{多|duō}{了|le}，{我们|wǒ·men}{别|bié}{分|fēn}{上|shang}。', '{人|rén}{太|tài}{多|duō}{了|le}，{我们|wǒ·men}{分|fēn}{别|bié}{开|kāi}。', '{人|rén}{太|tài}{多|duō}{了|le}，{别|bié}{开|kāi}{我们|wǒ·men}{分|fēn}。'], why: 'Szétválás: {分开|fēn kāi}.', point: 2 },
+    { q: 'Melyik illik? {请|qǐng}{把|bǎ}{窗户|chuāng·hu}{打|dǎ}___。', a: '{开|kāi}', wrong: ['{住|zhù}', '{掉|diào}', '{下来|xià·lai}'], why: 'Kinyílás: {打开|dǎ kāi}.', point: 2 },
+    { q: '„Jegyezd meg: az elején ne fuss túl gyorsan."', a: '{记|jì}{住|zhù}，{开始|kāi·shǐ}{的|de}{时候|shí·hou}{别|bié}{跑|pǎo}{太|tài}{快|kuài}。', wrong: ['{记|jì}{开|kāi}，{开始|kāi·shǐ}{的|de}{时候|shí·hou}{别|bié}{跑|pǎo}{太|tài}{快|kuài}。', '{记|jì}{掉|diào}，{开始|kāi·shǐ}{的|de}{时候|shí·hou}{别|bié}{跑|pǎo}{太|tài}{快|kuài}。', '{住|zhù}{记|jì}，{开始|kāi·shǐ}{的|de}{时候|shí·hou}{太|tài}{快|kuài}{别|bié}{跑|pǎo}。'], why: 'Rögzül: {记住|jì zhù}.', point: 3 },
+    { q: 'Mit jelent: {生词太多了，我记不住|shēngcí tài duō le, wǒ jì bu zhù}。', a: 'Túl sok az új szó, nem tudom megjegyezni.', wrong: ['Túl sok az új szó, nem akarom megtanulni.', 'Az új szavakat már mind megjegyeztem.', 'Kevés az új szó, könnyű megjegyezni.'], why: '{记不住|jì bu zhù} „nem tudja megjegyezni".', point: 3 },
+    { q: '„Vedd le a kabátot!"', a: '{把|bǎ}{外套|wài·tào}{脱|tuō}{掉|diào}{吧|ba}！', wrong: ['{把|bǎ}{外套|wài·tào}{脱|tuō}{上|shang}{吧|ba}！', '{把|bǎ}{外套|wài·tào}{脱|tuō}{吧|ba}{掉|diào}！', '{把|bǎ}{掉|diào}{外套|wài·tào}{脱|tuō}{吧|ba}！'], why: 'Eltávolítás: {脱掉|tuō diào}.', point: 4 },
+    { q: 'Melyik NEM az eltávolítás jelentésű {掉|diào}?', a: '{记住|jì zhù}', wrong: ['{扔掉|rēng diào}', '{卖掉|mài diào}', '{忘掉|wàng diào}'], why: 'A {记住|jì zhù} rögzít, nem eltávolít.', point: 4 },
+    { q: '„De hideg van!"', a: '{好|hǎo}{冷|lěng}{啊|a}！', wrong: ['{冷|lěng}{好|hǎo}{啊|a}！', '{好|hǎo}{的|de}{冷|lěng}！', '{冷|lěng}{得|de}{好|hǎo}！'], why: '{好|hǎo} + melléknév + {啊|a}.', point: 5 },
+    { q: 'Mit jelent: {我练了好几个月|wǒ liàn le hǎo jǐ ge yuè}。', a: 'Jó néhány hónapig edzettem.', wrong: ['Néhány jó hónapom volt.', 'Csak pár napig edzettem.', 'Hónapok óta nem edzettem.'], why: '{好几|hǎo jǐ} „jó néhány".', point: 5 },
+    { q: 'Mit jelent a {马拉松|mǎlāsōng}?', a: 'maraton', wrong: ['úszás', 'torna', 'kerékpározás'], why: 'Az angol marathon hangalakjából.' },
+    { q: 'Mit jelent a {终点|zhōngdiǎn}?', a: 'cél', wrong: ['rajt', 'pálya', 'frissítőpont'], why: '{跑到了终点|pǎo dào le zhōngdiǎn} „beért a célba".' },
+    { q: 'Mit jelent: {加油|jiā yóu}！', a: 'Hajrá!', wrong: ['Állj meg!', 'Vigyázz!', 'Gratulálok!'], why: 'Biztatás, szó szerint „olajat önt hozzá".' },
+    { q: 'Mit jelent: {别放弃|bié fàngqì}！', a: 'Ne add fel!', wrong: ['Ne siess!', 'Ne félj!', 'Ne nézz hátra!'], why: '{放弃|fàngqì} „feladja".' },
+    { q: 'Mit jelent a {坚持|jiānchí}?', a: 'kitart', wrong: ['feladja', 'elkezdi', 'megáll'], why: '{坚持跑步|jiānchí pǎobù} „kitartóan fut".' }
+  ]
 }
 
 ];

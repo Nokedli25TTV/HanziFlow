@@ -825,7 +825,29 @@ const HANZIFLOW_PATH = [
     module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l62&round=listen' },
   { id: 'l62-read', glyph: '读', title: 'Olvasás: Lin Jing interjúja',
     desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
-    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l62&round=read' }
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l62&round=read' },
+
+  // ── HSK 4 · 13. lecke ──
+  { id: 'l63-lesson', glyph: '月', title: 'Magyarázat: ige + 下来, ige + 过来 · 过去, 圆圆的, 忍不住, 了不起',
+    desc: 'Holdünnep: lefényképez, ránk maradt, elcsendesedik; kijavít, nem győzi; kettőzött melléknév; nem bírja ki; nagyszerű.',
+    module: 'lesson', href: 'pages/lesson.html?id=l63' },
+  { id: 'l63-listen', glyph: '听', title: 'Hallás: holdnézés a nagymamánál',
+    desc: 'A lecke mondatai hang után: mit jelent, amit hallasz?',
+    module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l63&round=listen' },
+  { id: 'l63-read', glyph: '读', title: 'Olvasás: A Holdünnep éjszakája',
+    desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l63&round=read' },
+
+  // ── HSK 4 · 14. lecke ──
+  { id: 'l64-lesson', glyph: '跑', title: 'Magyarázat: ige + 上 · 开 · 住 · 掉, 好 + melléknév',
+    desc: 'Az első maraton: felvesz és megszeret, szétválik és kinyit, megjegyez, levesz és kidob; de hideg van!',
+    module: 'lesson', href: 'pages/lesson.html?id=l64' },
+  { id: 'l64-listen', glyph: '听', title: 'Hallás: a rajtnál',
+    desc: 'A lecke mondatai hang után: mit jelent, amit hallasz?',
+    module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l64&round=listen' },
+  { id: 'l64-read', glyph: '读', title: 'Olvasás: Anna első maratonja',
+    desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l64&round=read' }
 ];
 
 const HANZIFLOW_PATH_UNITS = [
@@ -980,5 +1002,9 @@ const HANZIFLOW_PATH_UNITS = [
   { id: 'u-l61', kicker: 'HSK 4 · 11. lecke', title: 'Szelektív gyűjtés', sub: '对于, 使, 对…有好处 · 坏处, 在…方面, 值得',
     steps: ['l61-lesson', 'l61-listen', 'l61-read'] },
   { id: 'u-l62', kicker: 'HSK 4 · 12. lecke', title: 'Állásinterjú', sub: '即使…也, 不是…就是, 甚至, 的确 · 确实, 再…也',
-    steps: ['l62-lesson', 'l62-listen', 'l62-read'] }
+    steps: ['l62-lesson', 'l62-listen', 'l62-read'] },
+  { id: 'u-l63', kicker: 'HSK 4 · 13. lecke', title: 'Holdünnep', sub: 'ige + 下来 · 过来 · 过去, melléknév-kettőzés, 忍不住, 了不起',
+    steps: ['l63-lesson', 'l63-listen', 'l63-read'] },
+  { id: 'u-l64', kicker: 'HSK 4 · 14. lecke', title: 'Az első maraton', sub: 'ige + 上 · 开 · 住 · 掉, 好 + melléknév',
+    steps: ['l64-lesson', 'l64-listen', 'l64-read'] }
 ];
