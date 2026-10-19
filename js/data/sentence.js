@@ -27,7 +27,7 @@ const HANZIFLOW_SM_RULES = [
     ex: [['{我|wǒ}{明天|míng·tiān}{下午|xià·wǔ}{在|zài}{图书馆|tú·shū·guǎn}{学习|xué·xí}。', 'Holnap délután a könyvtárban tanulok.']] },
   { id: 'adv', key: 'Határozószó', level: 1, title: '也, 都, 不, 没: közvetlenül az ige előtt',
     text: 'Ezek a szavak az alany után, az ige (vagy a {在|zài}, {跟|gēn}) elé kerülnek. Ha több is van, a sorrend: {也|yě} → {都|dōu} → {不|bù}.',
-    ex: [['{我们|wǒ·men}{也|yě}{都|dōu}{是|shì}{学生|xué·sheng}。', 'Mi is mindannyian diákok vagyunk.'], ['{他|tā}{今天|jīn·tiān}{不|bú}{来|lái}。', 'Ő ma nem jön.']] },
+    ex: [['{我们|wǒ·men}{也|yě}{都|dōu}{是|shì}{学生|xué·sheng}。', 'Mi is mindannyian diákok vagyunk.'], ['{他|tā}{今天|jīn·tiān}{不|bù}{来|lái}。', 'Ő ma nem jön.']] },
   { id: 'manner', key: 'Kivel, mivel', level: 1, title: 'Kivel? Mivel? — ez is az ige előtt',
     text: 'A társ ({和|hé} / {跟|gēn} + valaki + {一起|yì·qǐ}) és az eszköz ({坐|zuò} + jármű) az ige előtt áll: előbb mondod, hogyan, aztán hogy mit csinálsz.',
     ex: [['{我|wǒ}{每天|měi tiān}{坐|zuò}{地铁|dì·tiě}{去|qù}{上班|shàng·bān}。', 'Minden nap metróval járok dolgozni.'], ['{我|wǒ}{和|hé}{朋友|péng·you}{一起|yì·qǐ}{吃饭|chī fàn}。', 'A barátommal együtt eszem.']] },

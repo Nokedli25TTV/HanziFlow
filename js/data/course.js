@@ -2280,7 +2280,7 @@ const HANZIFLOW_COURSE = [
   },
   quiz: [
     { q: '„Az asztalon van egy számítógép."', a: '{桌子|zhuō·zi}{上|shàng}{有|yǒu}{一个|yí ge}{电脑|diàn·nǎo}。', wrong: ['{一个|yí ge}{电脑|diàn·nǎo}{有|yǒu}{桌子|zhuō·zi}{上|shàng}。', '{有|yǒu}{电脑|diàn·nǎo}{桌子|zhuō·zi}{上|shàng}。', '{桌子|zhuō·zi}{有|yǒu}{上|shàng}{电脑|diàn·nǎo}。'], why: 'Hely + {有|yǒu} + dolog.', point: 1 },
-    { q: 'Hogyan tagadod: {这儿有汉语书|zhèr yǒu Hànyǔ shū}?', a: '{这儿|zhèr}{没有|méi·yǒu}{汉语|Hàn·yǔ}{书|shū}。', wrong: ['{这儿|zhèr}{不|bù}{有|yǒu}{汉语|Hàn·yǔ}{书|shū}。', '{这儿|zhèr}{有|yǒu}{不|bù}{汉语|Hàn·yǔ}{书|shū}。', '{这儿|zhèr}{不是|bú shì}{汉语|Hàn·yǔ}{书|shū}。'], why: 'A {有|yǒu} tagadása {没有|méiyǒu}.', point: 1 },
+    { q: 'Hogyan tagadod: {这儿有汉语书|zhèr yǒu Hànyǔ shū}?', a: '{这儿|zhèr}{没有|méi·yǒu}{汉语|Hàn·yǔ}{书|shū}。', wrong: ['{这儿|zhèr}{不|bù}{有|yǒu}{汉语|Hàn·yǔ}{书|shū}。', '{这儿|zhèr}{有|yǒu}{不|bú}{汉语|Hàn·yǔ}{书|shū}。', '{这儿|zhèr}{不是|bú shì}{汉语|Hàn·yǔ}{书|shū}。'], why: 'A {有|yǒu} tagadása {没有|méiyǒu}.', point: 1 },
     { q: 'Mi a különbség: {电脑在桌子上|diànnǎo zài zhuōzi shàng} / {桌子上有电脑|zhuōzi shàng yǒu diànnǎo}?', a: '{在|zài}: hol van az ismert gép · {有|yǒu}: mi van az asztalon', wrong: ['az első múlt idejű, a második jelen idejű mondat', 'az első kérdés, a második egy egyszerű állítás', 'semmi, teljesen azonos a jelentésük minden helyzetben'], why: '{在|zài}: ismert dolog helye; {有|yǒu}: mi van egy helyen.', point: 1 },
     { q: '„Wang Ming és én barátok vagyunk."', a: '{我|wǒ}{和|hé}{王明|Wáng Míng}{是|shì}{朋友|péng·you}。', wrong: ['{我|wǒ}{王明|Wáng Míng}{和|hé}{是|shì}{朋友|péng·you}。', '{我|wǒ}{是|shì}{和|hé}{王明|Wáng Míng}{朋友|péng·you}。', '{和|hé}{我|wǒ}{王明|Wáng Míng}{朋友|péng·you}。'], why: 'A {和|hé} két főnevet köt össze.', point: 2 },
     { q: 'Melyik mondat hibás?', a: '{我|wǒ}{喝|hē}{茶|chá}{和|hé}{看|kàn}{书|shū}。', wrong: ['{我|wǒ}{和|hé}{他|tā}{是|shì}{同学|tóng·xué}。', '{桌子|zhuō·zi}{上|shàng}{有|yǒu}{书|shū}{和|hé}{杯子|bēi·zi}。', '{爸爸|bà·ba}{和|hé}{妈妈|mā·ma}{在|zài}{家|jiā}。'], why: 'A {和|hé} nem köt össze igéket.', point: 2 },
@@ -2679,7 +2679,7 @@ const HANZIFLOW_COURSE = [
     { q: 'Mit jelent a {身体|shēntǐ}?', a: 'test; egészség', wrong: ['időjárás', 'gyümölcs', 'család'], why: '{你身体怎么样|nǐ shēntǐ zěnmeyàng}？ „Hogy van az egészséged?"', point: 3 },
     { q: 'Mit jelent a {水果|shuǐguǒ}?', a: 'gyümölcs', wrong: ['víz', 'gyümölcslé', 'zöldség'], why: '{水|shuǐ} „víz" + {果|guǒ} „termés": lédús termés.' },
     { q: 'Melyik mondat hibás?', a: '{今天|jīn·tiān}{太|tài}{热|rè}。', wrong: ['{今天|jīn·tiān}{太|tài}{热|rè}{了|le}。', '{今天|jīn·tiān}{很|hěn}{热|rè}。', '{今天|jīn·tiān}{不|bú}{太|tài}{热|rè}。'], why: 'Állításban a {太|tài} mellé {了|le} kell.', point: 2 },
-    { q: '{我们星期天去，怎么样|wǒmen xīngqītiān qù, zěnmeyàng}？ — elfogadó válasz:', a: '{好|hǎo}{啊|a}！', wrong: ['{怎么样|zěn·me·yàng}！', '{不|bù}{会|huì}。', '{太|tài}{冷|lěng}{了|le}{吗|ma}？'], why: 'Javaslatra: {好|hǎo} / {好啊|hǎo a}.', point: 1 }
+    { q: '{我们星期天去，怎么样|wǒmen xīngqītiān qù, zěnmeyàng}？ — elfogadó válasz:', a: '{好|hǎo}{啊|a}！', wrong: ['{怎么样|zěn·me·yàng}！', '{不|bú}{会|huì}。', '{太|tài}{冷|lěng}{了|le}{吗|ma}？'], why: 'Javaslatra: {好|hǎo} / {好啊|hǎo a}.', point: 1 }
   ]
 },
 
@@ -3432,7 +3432,7 @@ const HANZIFLOW_COURSE = [
     { q: 'Mit jelent: {我要一杯茶|wǒ yào yì bēi chá}。', a: 'Kérek egy teát.', wrong: ['Iszom egy teát.', 'Egy teát akartam.', 'Van egy teám.'], why: 'Önálló igeként a {要|yào} „kér, akar valamit".', point: 1 },
     { q: '„a legjobb barátom"', a: '{我|wǒ}{最|zuì}{好|hǎo}{的|de}{朋友|péng·you}', wrong: ['{我|wǒ}{好|hǎo}{最|zuì}{的|de}{朋友|péng·you}', '{最|zuì}{我|wǒ}{的|de}{好|hǎo}{朋友|péng·you}', '{我|wǒ}{的|de}{朋友|péng·you}{最|zuì}'], why: '{最好的|zuì hǎo de} + főnév.', point: 2 },
     { q: '„A legjobban a teát szeretem."', a: '{我|wǒ}{最|zuì}{喜欢|xǐ·huan}{茶|chá}。', wrong: ['{我|wǒ}{喜欢|xǐ·huan}{最|zuì}{茶|chá}。', '{我|wǒ}{喜欢|xǐ·huan}{茶|chá}{最|zuì}。', '{最|zuì}{我|wǒ}{茶|chá}{喜欢|xǐ·huan}。'], why: 'A {最|zuì} az ige elé kerül.', point: 2 },
-    { q: '„Szerintem a kínai nem nehéz."', a: '{我|wǒ}{觉得|jué·de}{汉语|Hàn·yǔ}{不|bù}{难|nán}。', wrong: ['{我|wǒ}{汉语|Hàn·yǔ}{觉得|jué·de}{不|bù}{难|nán}。', '{觉得|jué·de}{我|wǒ}{不|bù}{难|nán}{汉语|Hàn·yǔ}。', '{我|wǒ}{是|shì}{觉得|jué·de}{汉语|Hàn·yǔ}{不|bù}{是|shì}{难|nán}。'], why: '{觉得|juéde} + vélemény-mondat.', point: 3 },
+    { q: '„Szerintem a kínai nem nehéz."', a: '{我|wǒ}{觉得|jué·de}{汉语|Hàn·yǔ}{不|bù}{难|nán}。', wrong: ['{我|wǒ}{汉语|Hàn·yǔ}{觉得|jué·de}{不|bù}{难|nán}。', '{觉得|jué·de}{我|wǒ}{不|bù}{难|nán}{汉语|Hàn·yǔ}。', '{我|wǒ}{是|shì}{觉得|jué·de}{汉语|Hàn·yǔ}{不|bú}{是|shì}{难|nán}。'], why: '{觉得|juéde} + vélemény-mondat.', point: 3 },
     { q: 'Mit jelent: {你觉得这个菜怎么样|nǐ juéde zhège cài zěnmeyàng}？', a: 'Mit gondolsz, milyen ez az étel?', wrong: ['Érzed az étel illatát?', 'Hogyan kell ezt az ételt elkészíteni?', 'Ki főzte ezt az ételt?'], why: '{觉得|juéde} + {怎么样|zěnmeyàng}: véleményt kér.', point: 3 },
     { q: 'Hogyan kérdezed: „Miért tanulsz kínaiul?"', a: '{你|nǐ}{为什么|wèi·shén·me}{学|xué}{汉语|Hàn·yǔ}？', wrong: ['{你|nǐ}{学|xué}{汉语|Hàn·yǔ}{为什么|wèi·shén·me}{吗|ma}？', '{为什么|wèi·shén·me}{学|xué}{你|nǐ}{汉语|Hàn·yǔ}？', '{你|nǐ}{怎么样|zěn·me·yàng}{学|xué}{汉语|Hàn·yǔ}？'], why: 'A {为什么|wèishénme} az ige előtt áll.', point: 4 },
     { q: 'Mivel kezdődik a válasz a {为什么|wèishénme}-re?', a: '{因为|yīn·wèi}', wrong: ['{所以|suǒ·yǐ}', '{但是|dàn·shì}', '{如果|rú·guǒ}'], why: '{因为|yīnwèi} „mert".', point: 4 },
@@ -6228,7 +6228,7 @@ const HANZIFLOW_COURSE = [
     { q: 'Mit jelent: {时间过得真快|shíjiān guò de zhēn kuài}！', a: 'Milyen gyorsan repül az idő!', wrong: ['Nincs elég időm!', 'Siess, késésben vagyunk!', 'Az óra siet!'], why: '{过|guò} „telik" + {得真快|de zhēn kuài}.', point: 2 },
     { q: '„Boldog új évet!"', a: '{祝|zhù}{你|nǐ}{新年|xīn·nián}{快乐|kuài·lè}！', wrong: ['{你|nǐ}{祝|zhù}{新年|xīn·nián}{快乐|kuài·lè}{了|le}！', '{新年|xīn·nián}{祝|zhù}{快乐|kuài·lè}{你|nǐ}！', '{祝|zhù}{新年|xīn·nián}{你|nǐ}{快乐|kuài·lè}{吗|ma}！'], why: '{祝|zhù} + személy + jókívánság.', point: 3 },
     { q: 'Mit jelent: {一路平安|yílù píng\'ān}！', a: 'Jó utat!', wrong: ['Isten hozott!', 'Jó étvágyat!', 'Jó éjszakát!'], why: 'Szó szerint „az egész út legyen békés".', point: 3 },
-    { q: 'Mit válaszolsz: {祝你新年快乐|zhù nǐ xīnnián kuàilè}！', a: '{也|yě}{祝|zhù}{你|nǐ}{新年|xīn·nián}{快乐|kuài·lè}！', wrong: ['{不客气|bú kè·qi}，{新年|xīn·nián}{快乐|kuài·lè}{吗|ma}？', '{对不起|duì·bu·qǐ}，{新年|xīn·nián}！', '{新年|xīn·nián}{我|wǒ}{不|bù}{快乐|kuài·lè}。'], why: '{也祝你|yě zhù nǐ} … „neked is …".', point: 3 },
+    { q: 'Mit válaszolsz: {祝你新年快乐|zhù nǐ xīnnián kuàilè}！', a: '{也|yě}{祝|zhù}{你|nǐ}{新年|xīn·nián}{快乐|kuài·lè}！', wrong: ['{不客气|bú kè·qi}，{新年|xīn·nián}{快乐|kuài·lè}{吗|ma}？', '{对不起|duì·bu·qǐ}，{新年|xīn·nián}！', '{新年|xīn·nián}{我|wǒ}{不|bú}{快乐|kuài·lè}。'], why: '{也祝你|yě zhù nǐ} … „neked is …".', point: 3 },
     { q: 'Mit jelent a {快乐|kuàilè}?', a: 'boldog, vidám', wrong: ['gyors, sietős', 'fáradt, álmos', 'gazdag, sikeres'], why: '{新年快乐|xīnnián kuàilè} „boldog új évet".', point: 3 },
     { q: '„Egy doboz teát ajándékozunk neked."', a: '{我们|wǒ·men}{送|sòng}{你|nǐ}{一|yì}{盒|hé}{茶|chá}。', wrong: ['{我们|wǒ·men}{送|sòng}{一|yì}{盒|hé}{茶|chá}{你|nǐ}。', '{我们|wǒ·men}{给|gěi}{你|nǐ}{送|sòng}{了|le}{吗|ma}{茶|chá}。', '{你|nǐ}{我们|wǒ·men}{送|sòng}{一|yì}{盒|hé}{茶|chá}。'], why: '{送|sòng} + személy + dolog.', point: 4 },
     { q: 'Mit jelent: {我送你去机场|wǒ sòng nǐ qù jīchǎng}。', a: 'Kikísérlek a reptérre.', wrong: ['Elküldelek a reptérre.', 'Ajándékot viszek a reptérre.', 'Elviszem a csomagodat.'], why: '{送|sòng} „elkísér".', point: 4 },
@@ -6615,7 +6615,7 @@ const HANZIFLOW_COURSE = [
     { q: 'Melyik helyes? „Hozott három üveg vizet."', a: '{他|tā}{买|mǎi}{回|huí}{来|lai}{三|sān}{瓶|píng}{水|shuǐ}。', wrong: ['{他|tā}{买|mǎi}{回|huí}{三|sān}{瓶|píng}{来|lai}{水|shuǐ}。', '{他|tā}{三|sān}{瓶|píng}{水|shuǐ}{买|mǎi}{来|lai}{回|huí}。', '{他|tā}{来|lai}{买|mǎi}{回|huí}{三|sān}{瓶|píng}{水|shuǐ}{吗|ma}。'], why: 'Ige + irányige + {来|lai} + tárgy.', point: 4 },
     { q: 'Hová kerülhet a tárgy (a dolog)?', a: 'a {来|lai} / {去|qu} elé vagy mögé is', wrong: ['csak az ige elé', 'csak a mondat elejére', 'csak a {来|lai} / {去|qu} mögé'], why: '{买回来三瓶水|mǎi huilai sān píng shuǐ} = {买回三瓶水来|mǎi huí sān píng shuǐ lai}.', point: 4 },
     { q: '„Épp most érkeztem."', a: '{我|wǒ}{刚|gāng}{到|dào}。', wrong: ['{我|wǒ}{到|dào}{刚|gāng}。', '{刚|gāng}{我|wǒ}{到|dào}{了|le}{吗|ma}。', '{我|wǒ}{刚才|gāng·cái}{到|dào}{没|méi}。'], why: 'A {刚|gāng} közvetlenül az ige előtt áll.', point: 5 },
-    { q: '„Az előbb nem voltam itthon."', a: '{我|wǒ}{刚才|gāng·cái}{不|bú}{在|zài}{家|jiā}。', wrong: ['{我|wǒ}{刚|gāng}{不|bú}{在|zài}{家|jiā}。', '{我|wǒ}{不|bú}{刚|gāng}{在|zài}{家|jiā}。', '{刚|gāng}{我|wǒ}{不|bú}{在|zài}{家|jiā}{了|le}。'], why: 'Tagadással {刚才|gāngcái}.', point: 5 },
+    { q: '„Az előbb nem voltam itthon."', a: '{我|wǒ}{刚才|gāng·cái}{不|bú}{在|zài}{家|jiā}。', wrong: ['{我|wǒ}{刚|gāng}{不|bú}{在|zài}{家|jiā}。', '{我|wǒ}{不|bù}{刚|gāng}{在|zài}{家|jiā}。', '{刚|gāng}{我|wǒ}{不|bú}{在|zài}{家|jiā}{了|le}。'], why: 'Tagadással {刚才|gāngcái}.', point: 5 },
     { q: 'Mit jelent: {我得回家一趟|wǒ děi huí jiā yí tàng}。', a: 'Haza kell ugranom egyszer.', wrong: ['Egyszer már hazamentem.', 'Nem kell hazamennem.', 'Egy hétre hazautazom.'], why: '{得|děi} „kell", {一趟|yí tàng} „egy út".' },
     { q: 'Mit jelent a {搬|bān}?', a: 'cipel, költözik', wrong: ['épít, készít', 'takarít, rendez', 'vásárol, rendel'], why: '{搬家|bān jiā} „költözik".' }
   ]
@@ -6871,7 +6871,7 @@ const HANZIFLOW_COURSE = [
         { zh: '{你|nǐ}{说|shuō}{大|dà}{声|shēng}{一点儿|yì·diǎnr}，{我|wǒ}{听|tīng}{不|bu}{见|jiàn}。', hu: 'Beszélj hangosabban, nem hallom.' }
       ],
       mistakes: [
-        { bad: '{我|wǒ}{不|bù}{看|kàn}{懂|dǒng}。', good: '{我|wǒ}{看|kàn}{不|bu}{懂|dǒng}。', why: 'A {不|bu} az ige és a kiegészítő közé kerül.' }
+        { bad: '{我|wǒ}{不|bú}{看|kàn}{懂|dǒng}。', good: '{我|wǒ}{看|kàn}{不|bu}{懂|dǒng}。', why: 'A {不|bu} az ige és a kiegészítő közé kerül.' }
       ]
     },
     {
@@ -6987,7 +6987,7 @@ const HANZIFLOW_COURSE = [
     { q: '„Nem találom a kulcsomat." (képtelen vagyok megtalálni)', a: '{我|wǒ}{的|de}{钥匙|yào·shi}{找|zhǎo}{不|bu}{到|dào}{了|le}。', wrong: ['{我|wǒ}{的|de}{钥匙|yào·shi}{不|bù}{找|zhǎo}{到|dào}{了|le}。', '{我|wǒ}{的|de}{钥匙|yào·shi}{找|zhǎo}{到|dào}{不|bù}{了|le}。', '{我|wǒ}{的|de}{钥匙|yào·shi}{没|méi}{不|bù}{找|zhǎo}{到|dào}。'], why: 'Ige + {不|bu} + kiegészítő.', point: 1 },
     { q: 'Mit jelent: {这本书你看得懂吗|zhè běn shū nǐ kàn de dǒng ma}？', a: 'Érted (meg tudod érteni) ezt a könyvet?', wrong: ['Elolvastad már ezt a könyvet?', 'Szereted ezt a könyvet?', 'Megmutatod nekem ezt a könyvet?'], why: '{看得懂|kàn de dǒng} „meg tudja érteni".', point: 1 },
     { q: '„Nem hallom, amit mondasz." (túl halk)', a: '{我|wǒ}{听|tīng}{不|bu}{见|jiàn}{你|nǐ}{说|shuō}{的|de}{话|huà}。', wrong: ['{我|wǒ}{不|bù}{听|tīng}{见|jiàn}{你|nǐ}{说|shuō}{的|de}{话|huà}。', '{我|wǒ}{听|tīng}{见|jiàn}{不|bù}{你|nǐ}{说|shuō}{的|de}{话|huà}。', '{我|wǒ}{没|méi}{听|tīng}{不|bu}{见|jiàn}{你|nǐ}{的|de}{话|huà}。'], why: '{听不见|tīng bu jiàn} „nem hallja".', point: 1 },
-    { q: '„Nem tudok bemenni."', a: '{我|wǒ}{进|jìn}{不|bu}{去|qù}。', wrong: ['{我|wǒ}{不|bù}{进|jìn}{去|qù}{了|le}{吗|ma}。', '{我|wǒ}{进|jìn}{去|qù}{不|bù}。', '{我|wǒ}{没|méi}{进|jìn}{不|bu}{去|qù}。'], why: 'Ige + {不|bu} + irány.', point: 2 },
+    { q: '„Nem tudok bemenni."', a: '{我|wǒ}{进|jìn}{不|bu}{去|qù}。', wrong: ['{我|wǒ}{不|bú}{进|jìn}{去|qù}{了|le}{吗|ma}。', '{我|wǒ}{进|jìn}{去|qù}{不|bù}。', '{我|wǒ}{没|méi}{进|jìn}{不|bu}{去|qù}。'], why: 'Ige + {不|bu} + irány.', point: 2 },
     { q: 'Mit jelent: {我走不动了|wǒ zǒu bu dòng le}。', a: 'Már nem bírok tovább menni.', wrong: ['Nem akarok menni.', 'Nem szabad mennem.', 'Nem tudom, merre menjek.'], why: '{走不动|zǒu bu dòng} „nem bír (tovább) menni".', point: 2 },
     { q: 'Mit jelent: {他明天回得来吗|tā míngtiān huí de lái ma}？', a: 'Vissza tud jönni holnapra?', wrong: ['Visszajött tegnap?', 'Holnap visszamegy?', 'Akar holnap visszajönni?'], why: '{回得来|huí de lái} „vissza tud jönni".', point: 2 },
     { q: 'Mit jelent?', zh: '{菜|cài}{太|tài}{多|duō}{了|le}，{我|wǒ}{吃|chī}{不|bu}{了|liǎo}。', a: 'Túl sok az étel, nem bírom megenni.', wrong: ['Túl sok az étel, nem szabad megennem.', 'Túl sok az étel, nem ízlik.', 'Túl kevés az étel, éhes maradok.'], why: '{吃不了|chī bu liǎo} „nem bírja megenni".', point: 3 },
@@ -7232,7 +7232,7 @@ const HANZIFLOW_COURSE = [
       { who: 'Xiao Yu', zh: '{她|tā}{什么|shén·me}{菜|cài}{都|dōu}{爱|ài}{吃|chī}，{我们|wǒ·men}{去|qù}{她|tā}{最|zuì}{喜欢|xǐ·huan}{的|de}{四川|Sì·chuān}{饭馆|fàn·guǎn}{吧|ba}。', hu: 'Mindenféle ételt szeret; menjünk a kedvenc szecsuáni éttermébe.' },
       { who: 'Anna', zh: '{好|hǎo}！{请|qǐng}{谁|shéi}{呢|ne}？', hu: 'Jó! És kit hívjunk meg?' },
       { who: 'Xiao Yu', zh: '{她|tā}{的|de}{朋友|péng·you}{谁|shéi}{想|xiǎng}{来|lái}{谁|shéi}{就|jiù}{来|lái}。{但是|dàn·shì}{只有|zhǐ·yǒu}{大家|dà·jiā}{都|dōu}{不|bù}{说|shuō}，{才|cái}{能|néng}{给|gěi}{她|tā}{一|yí}{个|ge}{惊喜|jīng·xǐ}。', hu: 'A barátai közül jöjjön, aki akar. De csak akkor lesz meglepetés, ha senki nem árulja el.' },
-      { who: 'Anna', zh: '{王明|Wáng Míng}{怎么|zěn·me}{这么|zhè·me}{爱|ài}{说|shuō}{话|huà}……{他|tā}{能|néng}{不|bú}{说|shuō}{吗|ma}？', hu: 'Wang Ming olyan szószátyár… vajon meg tudja tartani magának?' },
+      { who: 'Anna', zh: '{王明|Wáng Míng}{怎么|zěn·me}{这么|zhè·me}{爱|ài}{说|shuō}{话|huà}……{他|tā}{能|néng}{不|bù}{说|shuō}{吗|ma}？', hu: 'Wang Ming olyan szószátyár… vajon meg tudja tartani magának?' },
       { who: 'Xiao Yu', zh: '{哈哈|hā·hā}，{我们|wǒ·men}{最后|zuì·hòu}{一|yì}{天|tiān}{再|zài}{告诉|gào·su}{他|tā}！', hu: 'Haha, majd csak az utolsó napon szólunk neki!' }
     ],
     notes: [
@@ -7365,7 +7365,7 @@ const HANZIFLOW_COURSE = [
   },
   quiz: [
     { q: '„Ezt mindenki tudja."', a: '{这|zhè}{个|ge}{谁|shéi}{都|dōu}{知道|zhī·dào}。', wrong: ['{这|zhè}{个|ge}{都|dōu}{谁|shéi}{知道|zhī·dào}。', '{谁|shéi}{知道|zhī·dào}{这|zhè}{个|ge}{都|dōu}。', '{这|zhè}{个|ge}{谁|shéi}{知道|zhī·dào}{吗|ma}。'], why: '{谁都|shéi dōu} + ige.', point: 1 },
-    { q: '„Sehová nem akarok menni."', a: '{我|wǒ}{哪儿|nǎr}{都|dōu}{不|bù}{想|xiǎng}{去|qù}。', wrong: ['{我|wǒ}{不|bù}{想|xiǎng}{去|qù}{哪儿|nǎr}{都|dōu}。', '{哪儿|nǎr}{我|wǒ}{不|bù}{想|xiǎng}{都|dōu}{去|qù}。', '{我|wǒ}{都|dōu}{哪儿|nǎr}{不|bù}{去|qù}{想|xiǎng}。'], why: 'Kérdőszó + {都|dōu} + tagadás + ige.', point: 1 },
+    { q: '„Sehová nem akarok menni."', a: '{我|wǒ}{哪儿|nǎr}{都|dōu}{不|bù}{想|xiǎng}{去|qù}。', wrong: ['{我|wǒ}{不|bù}{想|xiǎng}{去|qù}{哪儿|nǎr}{都|dōu}。', '{哪儿|nǎr}{我|wǒ}{不|bù}{想|xiǎng}{都|dōu}{去|qù}。', '{我|wǒ}{都|dōu}{哪儿|nǎr}{不|bú}{去|qù}{想|xiǎng}。'], why: 'Kérdőszó + {都|dōu} + tagadás + ige.', point: 1 },
     { q: 'Mit jelent: {她什么菜都爱吃|tā shénme cài dōu ài chī}。', a: 'Mindenféle ételt szeret.', wrong: ['Semmilyen ételt nem szeret.', 'Milyen ételt szeret?', 'Csak egyféle ételt szeret.'], why: '{什么|shénme} + főnév + {都|dōu}.', point: 1 },
     { q: 'Mit jelent: {我什么也没买|wǒ shénme yě méi mǎi}。', a: 'Semmit sem vettem.', wrong: ['Mindent megvettem.', 'Mit vettem?', 'Valamit azért vettem.'], why: '{什么也没|shénme yě méi} „semmit sem".', point: 1 },
     { q: '„Egyél, amit csak akarsz!"', a: '{你|nǐ}{想|xiǎng}{吃|chī}{什么|shén·me}{就|jiù}{吃|chī}{什么|shén·me}。', wrong: ['{你|nǐ}{想|xiǎng}{吃|chī}{什么|shén·me}{吃|chī}{就|jiù}。', '{你|nǐ}{吃|chī}{什么|shén·me}{就|jiù}{想|xiǎng}。', '{什么|shén·me}{你|nǐ}{想|xiǎng}{吃|chī}{就|jiù}{什么|shén·me}。'], why: 'Kérdőszó … {就|jiù} … ugyanaz a kérdőszó.', point: 2 },
@@ -8170,7 +8170,7 @@ const HANZIFLOW_COURSE = [
         { zh: '{他|tā}{一|yì}{喝|hē}{酒|jiǔ}{就|jiù}{脸|liǎn}{红|hóng}。', hu: 'Valahányszor iszik, elvörösödik az arca.' }
       ],
       mistakes: [
-        { bad: '{我|wǒ}{就|jiù}{到|dào}{公司|gōng·sī}{一|yí}{开始|kāi·shǐ}{翻译|fān·yì}。', good: '{我|wǒ}{一|yí}{到|dào}{公司|gōng·sī}{就|jiù}{开始|kāi·shǐ}{翻译|fān·yì}。', why: 'Az {一|yī} az első, a {就|jiù} a második ige elé kerül.' }
+        { bad: '{我|wǒ}{就|jiù}{到|dào}{公司|gōng·sī}{一|yì}{开始|kāi·shǐ}{翻译|fān·yì}。', good: '{我|wǒ}{一|yí}{到|dào}{公司|gōng·sī}{就|jiù}{开始|kāi·shǐ}{翻译|fān·yì}。', why: 'Az {一|yī} az első, a {就|jiù} a második ige elé kerül.' }
       ]
     },
     {
@@ -8254,7 +8254,7 @@ const HANZIFLOW_COURSE = [
     { q: 'Mit jelent: {我饿坏了|wǒ è huài le}。', a: 'Borzasztóan éhes vagyok.', wrong: ['Rossz volt az étel.', 'Elrontottam a gyomrom.', 'Nem vagyok éhes.'], why: 'A {坏了|huài le} itt fokozó.', point: 2 },
     { q: 'Melyik fokozó a legbizalmasabb, beszélt nyelvi?', a: '{死了|sǐ le}', wrong: ['{非常|fēi·cháng}', '{特别|tè·bié}', '{比较|bǐ·jiào}'], why: 'A {死了|sǐ le} túlzó, bizalmas.', point: 2 },
     { q: 'Mit jelent: {饿得不得了|è de bùdéliǎo}', a: 'borzasztóan éhes', wrong: ['egyáltalán nem éhes', 'kicsit éhes', 'már nem éhes'], why: '{得不得了|de bùdéliǎo} „rettenetesen".', point: 2 },
-    { q: '„Amint beérek a céghez, rögtön fordítani kezdek."', a: '{我|wǒ}{一|yí}{到|dào}{公司|gōng·sī}{就|jiù}{开始|kāi·shǐ}{翻译|fān·yì}。', wrong: ['{我|wǒ}{就|jiù}{到|dào}{公司|gōng·sī}{一|yí}{开始|kāi·shǐ}{翻译|fān·yì}。', '{一|yí}{我|wǒ}{到|dào}{公司|gōng·sī}，{开始|kāi·shǐ}{就|jiù}{翻译|fān·yì}。', '{我|wǒ}{到|dào}{公司|gōng·sī}{一|yí}{就|jiù}{开始|kāi·shǐ}{翻译|fān·yì}。'], why: '{一|yī} + ige₁ … {就|jiù} + ige₂.', point: 3 },
+    { q: '„Amint beérek a céghez, rögtön fordítani kezdek."', a: '{我|wǒ}{一|yí}{到|dào}{公司|gōng·sī}{就|jiù}{开始|kāi·shǐ}{翻译|fān·yì}。', wrong: ['{我|wǒ}{就|jiù}{到|dào}{公司|gōng·sī}{一|yì}{开始|kāi·shǐ}{翻译|fān·yì}。', '{一|yì}{我|wǒ}{到|dào}{公司|gōng·sī}，{开始|kāi·shǐ}{就|jiù}{翻译|fān·yì}。', '{我|wǒ}{到|dào}{公司|gōng·sī}{一|yí}{就|jiù}{开始|kāi·shǐ}{翻译|fān·yì}。'], why: '{一|yī} + ige₁ … {就|jiù} + ige₂.', point: 3 },
     { q: 'Mit jelent: {他一喝酒就脸红|tā yì hē jiǔ jiù liǎn hóng}。', a: 'Valahányszor iszik, elvörösödik az arca.', wrong: ['Ha nem iszik, elvörösödik.', 'Egyszer ivott, és elpirult.', 'Csak vörösbort iszik.'], why: 'Szokás: {一|yī} … {就|jiù} ….', point: 3 },
     { q: '„Alig végeztem, máris adott egy másikat."', a: '{我|wǒ}{刚|gāng}{翻|fān}{完|wán}，{他|tā}{就|jiù}{又|yòu}{给|gěi}{了|le}{我|wǒ}{一|yí}{个|ge}。', wrong: ['{我|wǒ}{就|jiù}{翻|fān}{完|wán}，{他|tā}{刚|gāng}{又|yòu}{给|gěi}{了|le}{我|wǒ}{一|yí}{个|ge}。', '{我|wǒ}{刚|gāng}{翻|fān}{完|wán}，{他|tā}{才|cái}{给|gěi}{我|wǒ}{一|yí}{个|ge}{了|le}。', '{刚|gāng}{我|wǒ}{翻|fān}{完|wán}{就|jiù}，{他|tā}{给|gěi}{了|le}{我|wǒ}{又|yòu}{一|yí}{个|ge}。'], why: '{刚|gāng} + ige₁, (B) + {就|jiù} + ige₂.', point: 4 },
     { q: 'Mit jelent: {我刚到家就下雨了|wǒ gāng dào jiā jiù xià yǔ le}。', a: 'Alig értem haza, máris esni kezdett.', wrong: ['Hazaértem, mielőtt esni kezdett.', 'Esett, amikor elindultam.', 'Az eső miatt nem értem haza.'], why: '{刚|gāng} … {就|jiù} … „alig …, máris …".', point: 4 },
@@ -10591,7 +10591,7 @@ const HANZIFLOW_COURSE = [
         { zh: '{不必|bú bì}{打|dǎ}{针|zhēn}，{吃|chī}{药|yào}{就|jiù}{行|xíng}。', hu: 'Nem kell injekció, elég a gyógyszer.' }
       ],
       mistakes: [
-        { bad: '{你|nǐ}{不|bù}{必须|bì·xū}{打|dǎ}{针|zhēn}。', good: '{你|nǐ}{不必|bú bì}{打|dǎ}{针|zhēn}。', why: 'A {必须|bìxū} tagadása {不必|búbì} vagy {不用|búyòng}.' }
+        { bad: '{你|nǐ}{不|bú}{必须|bì·xū}{打|dǎ}{针|zhēn}。', good: '{你|nǐ}{不必|bú bì}{打|dǎ}{针|zhēn}。', why: 'A {必须|bìxū} tagadása {不必|búbì} vagy {不用|búyòng}.' }
       ]
     },
     {
@@ -10651,7 +10651,7 @@ const HANZIFLOW_COURSE = [
     title: '{安娜|Ān·nà}{感冒|gǎn·mào}{了|le}', titleHu: 'Anna megfázott',
     text: [
       { zh: '{上|shàng}{星期|xīng·qī}{下|xià}{大|dà}{雨|yǔ}，{安娜|Ān·nà}{没|méi}{带|dài}{伞|sǎn}，{第二|dì èr}{天|tiān}{就|jiù}{感冒|gǎn·mào}{了|le}。', hu: 'Múlt héten nagy eső volt, Anna nem vitt esernyőt, és másnap megfázott.' },
-      { zh: '{她|tā}{头|tóu}{疼|téng}，{嗓子|sǎng·zi}{疼|téng}，{还|hái}{有点儿|yǒu diǎnr}{发烧|fā shāo}，{不得不|bù dé bù}{去|qù}{医院|yī·yuàn}。', hu: 'Fájt a feje és a torka, kicsit lázas is volt, ezért kénytelen volt kórházba menni.' },
+      { zh: '{她|tā}{头|tóu}{疼|téng}，{嗓子|sǎng·zi}{疼|téng}，{还|hái}{有点儿|yǒu diǎnr}{发烧|fā shāo}，{不得不|bù dé bú}{去|qù}{医院|yī·yuàn}。', hu: 'Fájt a feje és a torka, kicsit lázas is volt, ezért kénytelen volt kórházba menni.' },
       { zh: '{医生|yī·shēng}{说|shuō}{不必|bú bì}{打|dǎ}{针|zhēn}，{但是|dàn·shì}{她|tā}{必须|bì·xū}{按时|àn shí}{吃|chī}{药|yào}，{多|duō}{休息|xiū·xi}。', hu: 'Az orvos szerint nem kell injekció, de rendszeresen be kell vennie a gyógyszert, és sokat kell pihennie.', par: true },
       { zh: '{周杰|Zhōu Jié}{给|gěi}{她|tā}{发|fā}{短信|duǎn·xìn}：“{你|nǐ}{千万|qiān·wàn}{别|bié}{来|lái}{上班|shàng bān}，{否则|fǒu·zé}{大家|dà·jiā}{都|dōu}{会|huì}{感冒|gǎn·mào}{的|de}！”', hu: 'Zhou Jie üzent neki: „Semmiképp ne gyere be dolgozni, különben mindenki megfázik!"' },
       { zh: '{安娜|Ān·nà}{笑|xiào}{了|le}，{在|zài}{家|jiā}{休息|xiū·xi}{了|le}{三|sān}{天|tiān}。', hu: 'Anna nevetett, és három napig otthon pihent.', par: true }
@@ -10670,10 +10670,10 @@ const HANZIFLOW_COURSE = [
     { q: 'Mit jelent: {恐怕他来不了了|kǒngpà tā lái bu liǎo le}。', a: 'Attól tartok, nem tud eljönni.', wrong: ['Fél eljönni.', 'Biztosan eljön.', 'Nem akar eljönni, mert fél.'], why: '{恐怕|kǒngpà} „attól tartok".', point: 1 },
     { q: '„Semmiképp ne menj dolgozni!"', a: '{你|nǐ}{千万|qiān·wàn}{别|bié}{去|qù}{上班|shàng bān}！', wrong: ['{你|nǐ}{别|bié}{千万|qiān·wàn}{去|qù}{上班|shàng bān}！', '{千万|qiān·wàn}{你|nǐ}{去|qù}{别|bié}{上班|shàng bān}！', '{你|nǐ}{去|qù}{上班|shàng bān}{千万|qiān·wàn}{别|bié}！'], why: '{千万|qiānwàn} + {别|bié} + ige.', point: 2 },
     { q: 'Melyik mondat helyes?', a: '{路|lù}{上|shang}{千万|qiān·wàn}{要|yào}{小心|xiǎo·xīn}！', wrong: ['{我|wǒ}{千万|qiān·wàn}{喜欢|xǐ·huan}{这|zhè}{本|běn}{书|shū}。', '{他|tā}{千万|qiān·wàn}{来|lái}{了|le}。', '{今天|jīn·tiān}{千万|qiān·wàn}{很|hěn}{热|rè}。'], why: 'A {千万|qiānwàn} csak kérésben, figyelmeztetésben áll.', point: 2 },
-    { q: '„Nem kell injekció."', a: '{不必|bú bì}{打|dǎ}{针|zhēn}。', wrong: ['{不|bù}{必须|bì·xū}{打|dǎ}{针|zhēn}。', '{必须|bì·xū}{不|bù}{打|dǎ}{针|zhēn}。', '{不得不|bù dé bù}{打|dǎ}{针|zhēn}。'], why: '{不必|búbì} „nem kell".', point: 3 },
+    { q: '„Nem kell injekció."', a: '{不必|bú bì}{打|dǎ}{针|zhēn}。', wrong: ['{不|bú}{必须|bì·xū}{打|dǎ}{针|zhēn}。', '{必须|bì·xū}{不|bù}{打|dǎ}{针|zhēn}。', '{不得不|bù dé bù}{打|dǎ}{针|zhēn}。'], why: '{不必|búbì} „nem kell".', point: 3 },
     { q: 'Mi a {必须|bìxū} („muszáj") tagadása?', a: '{不必|búbì} vagy {不用|búyòng}', wrong: ['{不必须|bù bìxū}', '{没必须|méi bìxū}', '{必须不|bìxū bù}'], why: '{不必打针|búbì dǎ zhēn}.', point: 3 },
     { q: 'Mit jelent: {你必须多喝水|nǐ bìxū duō hē shuǐ}。', a: 'Sokat kell innod.', wrong: ['Nem kell sokat innod.', 'Ne igyál sokat!', 'Ihatsz, ha akarsz.'], why: '{必须|bìxū} „muszáj".', point: 3 },
-    { q: '„Túl nagy volt az eső, kénytelenek voltunk hazamenni."', a: '{雨|yǔ}{太|tài}{大|dà}{了|le}，{我们|wǒ·men}{不得不|bù dé bù}{回|huí}{家|jiā}。', wrong: ['{雨|yǔ}{太|tài}{大|dà}{了|le}，{我们|wǒ·men}{不|bù}{回|huí}{家|jiā}{不得|bù dé}。', '{雨|yǔ}{太|tài}{大|dà}{了|le}，{不得不|bù dé bù}{我们|wǒ·men}{家|jiā}{回|huí}。', '{我们|wǒ·men}{雨|yǔ}{不得不|bù dé bù}{太|tài}{大|dà}{回|huí}{家|jiā}{了|le}。'], why: 'A + {不得不|bùdébù} + ige.', point: 4 },
+    { q: '„Túl nagy volt az eső, kénytelenek voltunk hazamenni."', a: '{雨|yǔ}{太|tài}{大|dà}{了|le}，{我们|wǒ·men}{不得不|bù dé bù}{回|huí}{家|jiā}。', wrong: ['{雨|yǔ}{太|tài}{大|dà}{了|le}，{我们|wǒ·men}{不|bù}{回|huí}{家|jiā}{不得|bù dé}。', '{雨|yǔ}{太|tài}{大|dà}{了|le}，{不得不|bù dé bù}{我们|wǒ·men}{家|jiā}{回|huí}。', '{我们|wǒ·men}{雨|yǔ}{不得不|bù dé bú}{太|tài}{大|dà}{回|huí}{家|jiā}{了|le}。'], why: 'A + {不得不|bùdébù} + ige.', point: 4 },
     { q: 'Mit jelent a {不得不|bùdébù}?', a: 'kénytelen', wrong: ['nem szabad', 'nem szükséges', 'nem akar'], why: '{不得不回家|bùdébù huí jiā} „kénytelen hazamenni".', point: 4 },
     { q: '„Siessünk, különben elkésünk."', a: '{我们|wǒ·men}{快|kuài}{走|zǒu}{吧|ba}，{否则|fǒu·zé}{要|yào}{迟到|chí dào}{了|le}。', wrong: ['{否则|fǒu·zé}{我们|wǒ·men}{快|kuài}{走|zǒu}{吧|ba}，{要|yào}{迟到|chí dào}{了|le}。', '{我们|wǒ·men}{快|kuài}{走|zǒu}{否则|fǒu·zé}{吧|ba}，{迟到|chí dào}{了|le}{要|yào}。', '{我们|wǒ·men}{否则|fǒu·zé}{快|kuài}{走|zǒu}，{迟到|chí dào}{要|yào}{吧|ba}。'], why: '…，{否则|fǒuzé} + következmény.', point: 5 },
     { q: 'Mit jelent: {千万别去上班，否则会更严重|qiānwàn bié qù shàngbān, fǒuzé huì gèng yánzhòng}。', a: 'Semmiképp ne menj dolgozni, különben rosszabb lesz.', wrong: ['Menj dolgozni, mert ott jobb lesz.', 'Ha nem mész dolgozni, nem lesz baj.', 'Akkor is menj dolgozni, ha rosszabb.'], why: '{否则|fǒuzé} „különben".', point: 5 },
@@ -10877,7 +10877,7 @@ const HANZIFLOW_COURSE = [
       { who: 'Anna', zh: '{你|nǐ}{说|shuō}{得|de}{对|duì}，{这|zhè}{双|shuāng}{鞋|xié}{就|jiù}{小|xiǎo}{了|le}。{不|bù}{知道|zhī·dào}{是否|shì·fǒu}{可以|kě·yǐ}{退|tuì}。', hu: 'Igazad van, ez a cipő éppen kicsi lett. Nem tudom, vissza lehet-e küldeni.' },
       { who: 'Wang Li', zh: '{七|qī}{天|tiān}{之内|zhī nèi}{一般|yì·bān}{都|dōu}{可以|kě·yǐ}{退|tuì}。{你|nǐ}{问问|wèn·wen}{客服|kè·fú}{吧|ba}。', hu: 'Hét napon belül általában vissza lehet küldeni. Kérdezd meg az ügyfélszolgálatot.' },
       { who: 'Anna', zh: '{客服|kè·fú}{回|huí}{了|le}：“{由于|yóu·yú}{最近|zuì·jìn}{订单|dìng·dān}{太|tài}{多|duō}，{因此|yīn·cǐ}{退货|tuì huò}{要|yào}{等|děng}{三|sān}{天|tiān}。”', hu: 'Az ügyfélszolgálat válaszolt: „Mivel mostanában túl sok a rendelés, a visszaküldésre három napot kell várni."' },
-      { who: 'Wang Li', zh: '{三|sān}{天|tiān}{不|bù}{算|suàn}{久|jiǔ}。{下|xià}{次|cì}{买|mǎi}{鞋|xié}{以前|yǐ·qián}，{先|xiān}{看看|kàn·kan}{尺寸|chǐ·cùn}{吧|ba}！', hu: 'Három nap nem sok. Legközelebb cipővásárlás előtt előbb nézd meg a méretet!' }
+      { who: 'Wang Li', zh: '{三|sān}{天|tiān}{不|bú}{算|suàn}{久|jiǔ}。{下|xià}{次|cì}{买|mǎi}{鞋|xié}{以前|yǐ·qián}，{先|xiān}{看看|kàn·kan}{尺寸|chǐ·cùn}{吧|ba}！', hu: 'Három nap nem sok. Legközelebb cipővásárlás előtt előbb nézd meg a méretet!' }
     ],
     notes: [
       'A {快递|kuàidì} „gyorsposta, futárszolgálat", de magát a csomagot is jelenti: {三个快递|sān ge kuàidì} „három csomag".',
@@ -11954,7 +11954,7 @@ const HANZIFLOW_COURSE = [
     { zh: '{中秋|Zhōng·qiū}{快乐|kuài·lè}！', hu: 'Boldog Holdünnepet!' },
     { zh: '{哪里|nǎ·lǐ}{哪里|nǎ·lǐ}。', hu: 'Ugyan, dehogy.' },
     { zh: '{每|měi}{逢|féng}{佳节|jiā jié}{倍|bèi}{思|sī}{亲|qīn}。', hu: 'Ünnepen kétszer annyira hiányzik a család.' },
-    { zh: '{来|lái}，{尝|cháng}{一|yì}{块|kuài}。', hu: 'Tessék, kóstolj meg egy darabot.' }
+    { zh: '{来|lái}，{尝|cháng}{一|yí}{块|kuài}。', hu: 'Tessék, kóstolj meg egy darabot.' }
   ],
   words: [
     { title: 'Szavak',
@@ -12948,7 +12948,7 @@ const HANZIFLOW_COURSE = [
   ],
   phrases: [
     { zh: '{你|nǐ}{说|shuō}{得|de}{有|yǒu}{道理|dào·lǐ}。', hu: 'Ebben van igazság.' },
-    { zh: '{我|wǒ}{不|bù}{太|tài}{同意|tóng yì}。', hu: 'Nem egészen értek egyet.' },
+    { zh: '{我|wǒ}{不|bú}{太|tài}{同意|tóng yì}。', hu: 'Nem egészen értek egyet.' },
     { zh: '{你|nǐ}{的|de}{看法|kàn·fǎ}{呢|ne}？', hu: 'És te mit gondolsz?' },
     { zh: '{这|zhè}{件|jiàn}{事|shì}{以后|yǐ·hòu}{再|zài}{说|shuō}{吧|ba}。', hu: 'Ezt majd később megbeszéljük.' }
   ],
@@ -13161,7 +13161,7 @@ const HANZIFLOW_COURSE = [
     { q: 'Mit fejez ki az {无论如何|wúlùn rúhé}?', a: 'erős elszántságot', wrong: ['bizonytalanságot', 'sajnálkozást', 'meglepetést'], why: '„Bármi történjék".', point: 2 },
     { q: '„Egy év egy szempillantás alatt elszállt."', a: '{一|yì}{年|nián}{一下子|yí xià·zi}{就|jiù}{过去|guò·qù}{了|le}。', wrong: ['{一|yì}{年|nián}{过去|guò·qù}{一下子|yí xià·zi}{就|jiù}{了|le}。', '{一下子|yí xià·zi}{一|yì}{年|nián}{过去|guò·qù}{就|jiù}{了|le}。', '{一|yì}{年|nián}{就|jiù}{过去|guò·qù}{了|le}{一下|yí xià}。'], why: 'A + {一下子|yíxiàzi} + {就|jiù} + ige.', point: 3 },
     { q: 'Melyik illik? {请|qǐng}{等|děng}___，{我|wǒ}{马上|mǎ·shàng}{来|lái}。', a: '{一下|yí xià}', wrong: ['{一下子|yí xià·zi}', '{总之|zǒng zhī}', '{不光|bù guāng}'], why: 'Ige után {一下|yíxià} „egy kicsit".', point: 3 },
-    { q: '„Nemcsak beszél kínaiul, hanem írni is tud."', a: '{他|tā}{不光|bù guāng}{会|huì}{说|shuō}{汉语|Hàn·yǔ}，{还|hái}{会|huì}{写|xiě}。', wrong: ['{他|tā}{光|guāng}{不|bù}{会|huì}{说|shuō}{汉语|Hàn·yǔ}，{还|hái}{会|huì}{写|xiě}。', '{不光|bù guāng}{他|tā}{会|huì}{说|shuō}{汉语|Hàn·yǔ}，{会|huì}{写|xiě}{还|hái}。', '{他|tā}{会|huì}{说|shuō}{不光|bù guāng}{汉语|Hàn·yǔ}，{也|yě}{还|hái}{写|xiě}。'], why: '{不光|bùguāng} A, {还|hái} B.', point: 4 },
+    { q: '„Nemcsak beszél kínaiul, hanem írni is tud."', a: '{他|tā}{不光|bù guāng}{会|huì}{说|shuō}{汉语|Hàn·yǔ}，{还|hái}{会|huì}{写|xiě}。', wrong: ['{他|tā}{光|guāng}{不|bú}{会|huì}{说|shuō}{汉语|Hàn·yǔ}，{还|hái}{会|huì}{写|xiě}。', '{不光|bù guāng}{他|tā}{会|huì}{说|shuō}{汉语|Hàn·yǔ}，{会|huì}{写|xiě}{还|hái}。', '{他|tā}{会|huì}{说|shuō}{不光|bù guāng}{汉语|Hàn·yǔ}，{也|yě}{还|hái}{写|xiě}。'], why: '{不光|bùguāng} A, {还|hái} B.', point: 4 },
     { q: 'Melyik a {不光|bùguāng} választékosabb párja?', a: '{不仅|bùjǐn}', wrong: ['{不过|búguò}', '{不然|bùrán}', '{不必|búbì}'], why: '{不仅…而且|bùjǐn … érqiě} „nemcsak…, hanem…".', point: 4 },
     { q: '„Összességében ez az év nagyon érdekes volt."', a: '{总的来说|zǒng de lái shuō}，{这|zhè}{一|yì}{年|nián}{很|hěn}{有|yǒu}{意思|yì·si}。', wrong: ['{这|zhè}{一|yì}{年|nián}{总的来说|zǒng de lái shuō}{有|yǒu}{意思|yì·si}{很|hěn}。', '{总|zǒng}{来|lái}{的|de}{说|shuō}，{这|zhè}{一|yì}{年|nián}{很|hěn}{有|yǒu}{意思|yì·si}。', '{来说|lái shuō}{总的|zǒng de}，{很|hěn}{有|yǒu}{意思|yì·si}{这|zhè}{一|yì}{年|nián}。'], why: '{总的来说|zǒng de lái shuō} a mondat elején.', point: 5 },
     { q: 'Melyik szó jelent szintén „egyszóval, röviden"?', a: '{总之|zǒngzhī}', wrong: ['{比如|bǐrú}', '{再说|zàishuō}', '{于是|yúshì}'], why: 'A {总之|zǒngzhī} rövidebb, írottabb.', point: 5 },
@@ -13400,7 +13400,7 @@ const HANZIFLOW_COURSE = [
       ],
       examples: [
         { zh: '{我|wǒ}{宁可|nìng kě}{少|shǎo}{挣|zhèng}{一点儿|yì diǎnr}，{也|yě}{不|bù}{想|xiǎng}{离开|lí kāi}{大家|dà·jiā}。', hu: 'Inkább keresek kevesebbet, de nem akarom itthagyni mindenkit.' },
-        { zh: '{他|tā}{宁可|nìng kě}{走|zǒu}{路|lù}{回|huí}{家|jiā}，{也|yě}{不|bù}{坐|zuò}{这么|zhè·me}{挤|jǐ}{的|de}{公共汽车|gōng·gòng·qì·chē}。', hu: 'Inkább gyalog megy haza, mint hogy ilyen zsúfolt buszra szálljon.' }
+        { zh: '{他|tā}{宁可|nìng kě}{走|zǒu}{路|lù}{回|huí}{家|jiā}，{也|yě}{不|bú}{坐|zuò}{这么|zhè·me}{挤|jǐ}{的|de}{公共汽车|gōng·gòng·qì·chē}。', hu: 'Inkább gyalog megy haza, mint hogy ilyen zsúfolt buszra szálljon.' }
       ]
     },
     {
@@ -13486,9 +13486,9 @@ const HANZIFLOW_COURSE = [
     ]
   },
   quiz: [
-    { q: '„Ahelyett, hogy otthon várnánk, inkább kérdezzük meg magunk."', a: '{与其|yǔ qí}{在|zài}{家|jiā}{等|děng}，{不如|bù rú}{自己|zì·jǐ}{去|qù}{问|wèn}。', wrong: ['{不如|bù rú}{在|zài}{家|jiā}{等|děng}，{与其|yǔ qí}{自己|zì·jǐ}{去|qù}{问|wèn}。', '{与其|yǔ qí}{在|zài}{家|jiā}{等|děng}，{也|yě}{不|bù}{自己|zì·jǐ}{去|qù}{问|wèn}。', '{在|zài}{家|jiā}{等|děng}{与其|yǔ qí}，{自己|zì·jǐ}{去|qù}{问|wèn}{不如|bù rú}。'], why: '{与其|yǔqí} A, {不如|bùrú} B.', point: 1 },
+    { q: '„Ahelyett, hogy otthon várnánk, inkább kérdezzük meg magunk."', a: '{与其|yǔ qí}{在|zài}{家|jiā}{等|děng}，{不如|bù rú}{自己|zì·jǐ}{去|qù}{问|wèn}。', wrong: ['{不如|bù rú}{在|zài}{家|jiā}{等|děng}，{与其|yǔ qí}{自己|zì·jǐ}{去|qù}{问|wèn}。', '{与其|yǔ qí}{在|zài}{家|jiā}{等|děng}，{也|yě}{不|bú}{自己|zì·jǐ}{去|qù}{问|wèn}。', '{在|zài}{家|jiā}{等|děng}{与其|yǔ qí}，{自己|zì·jǐ}{去|qù}{问|wèn}{不如|bù rú}。'], why: '{与其|yǔqí} A, {不如|bùrú} B.', point: 1 },
     { q: 'Melyik lehetőséget tartja jobbnak a beszélő a {与其|yǔqí} A {不如|bùrú} B szerkezetben?', a: 'B-t', wrong: ['A-t', 'mindkettőt', 'egyiket sem'], why: 'A {不如|bùrú} utáni a jobb választás.', point: 1 },
-    { q: '„Inkább gyalog megyek, mint hogy ilyen zsúfolt buszra szálljak."', a: '{我|wǒ}{宁可|nìng kě}{走|zǒu}{路|lù}，{也|yě}{不|bù}{坐|zuò}{这么|zhè·me}{挤|jǐ}{的|de}{车|chē}。', wrong: ['{我|wǒ}{宁可|nìng kě}{走|zǒu}{路|lù}，{不如|bù rú}{坐|zuò}{这么|zhè·me}{挤|jǐ}{的|de}{车|chē}。', '{我|wǒ}{也|yě}{不|bù}{走|zǒu}{路|lù}，{宁可|nìng kě}{坐|zuò}{这么|zhè·me}{挤|jǐ}{的|de}{车|chē}。', '{宁可|nìng kě}{我|wǒ}{坐|zuò}{这么|zhè·me}{挤|jǐ}{的|de}{车|chē}，{也|yě}{走|zǒu}{路|lù}。'], why: '{宁可|nìngkě} A, {也不|yě bù} B.', point: 2 },
+    { q: '„Inkább gyalog megyek, mint hogy ilyen zsúfolt buszra szálljak."', a: '{我|wǒ}{宁可|nìng kě}{走|zǒu}{路|lù}，{也|yě}{不|bú}{坐|zuò}{这么|zhè·me}{挤|jǐ}{的|de}{车|chē}。', wrong: ['{我|wǒ}{宁可|nìng kě}{走|zǒu}{路|lù}，{不如|bù rú}{坐|zuò}{这么|zhè·me}{挤|jǐ}{的|de}{车|chē}。', '{我|wǒ}{也|yě}{不|bù}{走|zǒu}{路|lù}，{宁可|nìng kě}{坐|zuò}{这么|zhè·me}{挤|jǐ}{的|de}{车|chē}。', '{宁可|nìng kě}{我|wǒ}{坐|zuò}{这么|zhè·me}{挤|jǐ}{的|de}{车|chē}，{也|yě}{走|zǒu}{路|lù}。'], why: '{宁可|nìngkě} A, {也不|yě bù} B.', point: 2 },
     { q: 'Mit fejez ki a {宁可|nìngkě}?', a: 'egy vállalt hátrányt', wrong: ['egy feltételt', 'egy időpontot', 'egy kérdést'], why: '„Inkább …, mint hogy …".', point: 2 },
     { q: '„Ezt még a tanár sem tudja, hát még mi!"', a: '{这|zhè}{个|ge}{连|lián}{老师|lǎo·shī}{都|dōu}{不|bú}{会|huì}，{何况|hé kuàng}{我们|wǒ·men}{呢|ne}？', wrong: ['{这|zhè}{个|ge}{连|lián}{老师|lǎo·shī}{都|dōu}{不|bú}{会|huì}，{毕竟|bì jìng}{我们|wǒ·men}{呢|ne}？', '{何况|hé kuàng}{这|zhè}{个|ge}{老师|lǎo·shī}{都|dōu}{不|bú}{会|huì}，{连|lián}{我们|wǒ·men}{呢|ne}？', '{这|zhè}{个|ge}{老师|lǎo·shī}{何况|hé kuàng}{都|dōu}{不|bú}{会|huì}，{连|lián}{我们|wǒ·men}{呢|ne}？'], why: '{连|lián}…{都|dōu}…，{何况|hékuàng}…{呢|ne}.', point: 3 },
     { q: 'Mit jelent: {何况你刚当上经理|hékuàng nǐ gāng dāng shang jīnglǐ}。', a: 'ráadásul most lettél vezető', wrong: ['mivel régóta vezető vagy', 'mielőtt vezető lettél', 'bár nem vagy vezető'], why: '{何况|hékuàng} „ráadásul".', point: 3 },
@@ -13654,7 +13654,7 @@ const HANZIFLOW_COURSE = [
     { q: 'Melyik a {似乎|sìhū} beszélt nyelvi párja?', a: '{好像|hǎoxiàng}', wrong: ['{果然|guǒrán}', '{毕竟|bìjìng}', '{尽量|jǐnliàng}'], why: 'Mindkettő „úgy tűnik".', point: 1 },
     { q: '„Olyan, mintha tíz évvel fiatalabb lennék."', a: '{我|wǒ}{觉得|jué·de}{仿佛|fǎng fú}{年轻|nián·qīng}{了|le}{十|shí}{岁|suì}。', wrong: ['{我|wǒ}{觉得|jué·de}{年轻|nián·qīng}{仿佛|fǎng fú}{了|le}{十|shí}{岁|suì}。', '{仿佛|fǎng fú}{我|wǒ}{十|shí}{岁|suì}{年轻|nián·qīng}{觉得|jué·de}{了|le}。', '{我|wǒ}{仿佛|fǎng fú}{觉得|jué·de}{十|shí}{岁|suì}{了|le}{年轻|nián·qīng}。'], why: '{仿佛|fǎngfú} + hasonlat.', point: 2 },
     { q: 'Mit fejez ki leginkább a {仿佛|fǎngfú}?', a: 'hasonlatot', wrong: ['biztos tényt', 'tiltást', 'okot'], why: '„Mintha, akárcsak" — gyakran nem szó szerint.', point: 2 },
-    { q: '„Elsőre óhatatlan, hogy hibázik az ember."', a: '{第一|dì yī}{次|cì}{做|zuò}，{出|chū}{错|cuò}{是|shì}{难免|nán miǎn}{的|de}。', wrong: ['{第一|dì yī}{次|cì}{做|zuò}，{出|chū}{错|cuò}{是|shì}{以免|yǐ miǎn}{的|de}。', '{第一|dì yī}{次|cì}{做|zuò}，{难免|nán miǎn}{出|chū}{错|cuò}{不|bù}{会|huì}。', '{难免|nán miǎn}{第一|dì yī}{次|cì}{出|chū}{错|cuò}{做|zuò}{的|de}{是|shì}。'], why: '… {是难免的|shì nánmiǎn de}.', point: 3 },
+    { q: '„Elsőre óhatatlan, hogy hibázik az ember."', a: '{第一|dì yī}{次|cì}{做|zuò}，{出|chū}{错|cuò}{是|shì}{难免|nán miǎn}{的|de}。', wrong: ['{第一|dì yī}{次|cì}{做|zuò}，{出|chū}{错|cuò}{是|shì}{以免|yǐ miǎn}{的|de}。', '{第一|dì yī}{次|cì}{做|zuò}，{难免|nán miǎn}{出|chū}{错|cuò}{不|bú}{会|huì}。', '{难免|nán miǎn}{第一|dì yī}{次|cì}{出|chū}{错|cuò}{做|zuò}{的|de}{是|shì}。'], why: '… {是难免的|shì nánmiǎn de}.', point: 3 },
     { q: 'Mit jelent: {长时间用电脑，难免会腰疼|cháng shíjiān yòng diànnǎo, nánmiǎn huì yāo téng}。', a: 'Aki sokáig ül a gép előtt, annak óhatatlanul fájni fog a dereka.', wrong: ['Aki sokáig ül a gép előtt, annak sosem fáj a dereka.', 'Hogy ne fájjon a derekad, ülj sokat a gép előtt.', 'A derékfájás miatt nem tudok a gép előtt ülni.'], why: '{难免|nánmiǎn} „óhatatlanul".', point: 3 },
     { q: '„Öltözz fel melegebben, nehogy megfázz."', a: '{多|duō}{穿|chuān}{点儿|diǎnr}{衣服|yī·fu}，{以免|yǐ miǎn}{感冒|gǎn·mào}。', wrong: ['{多|duō}{穿|chuān}{点儿|diǎnr}{衣服|yī·fu}，{以免|yǐ miǎn}{暖和|nuǎn·huo}。', '{以免|yǐ miǎn}{多|duō}{穿|chuān}{点儿|diǎnr}{衣服|yī·fu}，{感冒|gǎn·mào}{了|le}。', '{多|duō}{穿|chuān}{点儿|diǎnr}{衣服|yī·fu}，{难免|nán miǎn}{感冒|gǎn·mào}。'], why: '…, {以免|yǐmiǎn} + nem kívánt eredmény.', point: 4 },
     { q: 'Mi áll az {以免|yǐmiǎn} / {免得|miǎnde} után?', a: 'amit el akarunk kerülni', wrong: ['amit el akarunk érni', 'az időpont', 'a cselekvő'], why: '„Nehogy …".', point: 4 },
@@ -14510,7 +14510,7 @@ const HANZIFLOW_COURSE = [
     lines: [
       { who: 'Xiao Li', zh: '{周杰|Zhōu Jié}{今天|jīn·tiān}{在|zài}{会|huì}{上|shang}{说|shuō}{我|wǒ}{的|de}{报告|bào gào}{有|yǒu}{问题|wèn·tí}，{当着|dāng zhe}{那么|nà·me}{多|duō}{人|rén}，{我|wǒ}{真|zhēn}{受|shòu}{不|bu}{了|liǎo}。', hu: 'Zhou Jie ma az értekezleten azt mondta, hogy hibás a jelentésem — ennyi ember előtt! Ezt nem bírom elviselni.' },
       { who: 'Anna', zh: '{别|bié}{生气|shēng qì}。{他|tā}{说|shuō}{话|huà}{一向|yí xiàng}{比较|bǐ·jiào}{直|zhí}，{不至于|bú zhì yú}{是|shì}{故意|gù yì}{的|de}。', hu: 'Ne haragudj. Mindig is elég egyenesen beszél, azért szándékosan biztosan nem akart megbántani.' },
-      { who: 'Xiao Li', zh: '{可是|kě·shì}{他|tā}{何必|hé bì}{当着|dāng zhe}{大家|dà·jiā}{的|de}{面|miàn}{说|shuō}{呢|ne}？{私下|sī xià}{告诉|gào·su}{我|wǒ}{不|bù}{就|jiù}{行|xíng}{了|le}？', hu: 'De minek kellett ezt mindenki előtt mondania? Négyszemközt is megmondhatta volna, nem?' },
+      { who: 'Xiao Li', zh: '{可是|kě·shì}{他|tā}{何必|hé bì}{当着|dāng zhe}{大家|dà·jiā}{的|de}{面|miàn}{说|shuō}{呢|ne}？{私下|sī xià}{告诉|gào·su}{我|wǒ}{不|bú}{就|jiù}{行|xíng}{了|le}？', hu: 'De minek kellett ezt mindenki előtt mondania? Négyszemközt is megmondhatta volna, nem?' },
       { who: 'Anna', zh: '{你|nǐ}{说|shuō}{得|de}{有|yǒu}{道理|dào·lǐ}。{说不定|shuō bu dìng}{他|tā}{根本|gēn běn}{没|méi}{想|xiǎng}{那么|nà·me}{多|duō}。{我|wǒ}{去|qù}{跟|gēn}{他|tā}{聊|liáo}{聊|liao}。', hu: 'Ebben igazad van. Lehet, hogy egyszerűen bele sem gondolt. Beszélek vele.' },
       { who: 'Anna', zh: '{周杰|Zhōu Jié}，{同事|tóng·shì}{之间|zhī jiān}{一旦|yí dàn}{有|yǒu}{了|le}{误会|wù·huì}，{就|jiù}{要|yào}{早|zǎo}{点儿|diǎnr}{解决|jiě jué}。{哪怕|nǎ pà}{只|zhǐ}{是|shì}{一|yí}{句|jù}{话|huà}，{也|yě}{可能|kě·néng}{让|ràng}{人|rén}{难过|nán guò}。', hu: 'Zhou Jie, ha egyszer félreértés támad a kollégák között, minél hamarabb meg kell oldani. Akár egyetlen mondat is fájhat valakinek.' },
       { who: 'Zhou Jie', zh: '{你|nǐ}{说|shuō}{得|de}{对|duì}，{是|shì}{我|wǒ}{考虑|kǎo lǜ}{得|de}{不|bù}{周到|zhōu·dao}。{我|wǒ}{现在|xiàn·zài}{就|jiù}{去|qù}{跟|gēn}{小|Xiǎo}{李|Lǐ}{道|dào}{个|ge}{歉|qiàn}。', hu: 'Igazad van, nem gondoltam végig. Most rögtön megyek, és bocsánatot kérek Xiao Litől.' },
@@ -14607,12 +14607,12 @@ const HANZIFLOW_COURSE = [
     { title: 'A béke a legdrágább', text: 'A {和为贵|hé wéi guì} „a harmónia a legértékesebb" régi mondás, és a mai munkahelyi kultúrában is érvényes. A vezetőtől azt várják, hogy elsimítsa a konfliktusokat, mielőtt nyílt vitává válnának.' }
   ],
   reading: {
-    title: '{一|yí}{场|chǎng}{误会|wù·huì}', titleHu: 'Egy félreértés',
+    title: '{一|yì}{场|chǎng}{误会|wù·huì}', titleHu: 'Egy félreértés',
     text: [
       { zh: '{小|Xiǎo}{李|Lǐ}{写|xiě}{了|le}{一|yí}{份|fèn}{报告|bào gào}，{周杰|Zhōu Jié}{在|zài}{会|huì}{上|shang}{当着|dāng zhe}{大家|dà·jiā}{的|de}{面|miàn}{指|zhǐ}{出|chū}{了|le}{几|jǐ}{个|ge}{错误|cuò wù}。', hu: 'Xiao Li írt egy jelentést, Zhou Jie pedig az értekezleten mindenki előtt rámutatott néhány hibájára.' },
-      { zh: '{小|Xiǎo}{李|Lǐ}{觉得|jué·de}{很|hěn}{没|méi}{面子|miàn·zi}，{一|yí}{整|zhěng}{天|tiān}{都|dōu}{不|bù}{说|shuō}{话|huà}。', hu: 'Xiao Li nagyon megszégyenülve érezte magát, egész nap nem szólt egy szót sem.' },
+      { zh: '{小|Xiǎo}{李|Lǐ}{觉得|jué·de}{很|hěn}{没|méi}{面子|miàn·zi}，{一|yì}{整|zhěng}{天|tiān}{都|dōu}{不|bù}{说|shuō}{话|huà}。', hu: 'Xiao Li nagyon megszégyenülve érezte magát, egész nap nem szólt egy szót sem.' },
       { zh: '{安娜|Ān·nà}{知道|zhī·dào}，{同事|tóng·shì}{之间|zhī jiān}{一旦|yí dàn}{有|yǒu}{了|le}{冲突|chōng tū}，{就|jiù}{会|huì}{影响|yǐng xiǎng}{整个|zhěng·gè}{团队|tuán duì}。', hu: 'Anna tudta: ha egyszer konfliktus támad a kollégák között, az az egész csapatra kihat.', par: true },
-      { zh: '{她|tā}{分别|fēn bié}{跟|gēn}{两|liǎng}{个|ge}{人|rén}{聊|liáo}{了|le}{聊|liao}。{原来|yuán·lái}{周杰|Zhōu Jié}{根本|gēn běn}{不|bù}{是|shì}{故意|gù yì}{的|de}，{他|tā}{只|zhǐ}{是|shì}{想|xiǎng}{帮|bāng}{忙|máng}。', hu: 'Mindkettőjükkel külön beszélt. Kiderült, hogy Zhou Jie egyáltalán nem szándékosan tette, csak segíteni akart.' },
+      { zh: '{她|tā}{分别|fēn bié}{跟|gēn}{两|liǎng}{个|ge}{人|rén}{聊|liáo}{了|le}{聊|liao}。{原来|yuán·lái}{周杰|Zhōu Jié}{根本|gēn běn}{不|bú}{是|shì}{故意|gù yì}{的|de}，{他|tā}{只|zhǐ}{是|shì}{想|xiǎng}{帮|bāng}{忙|máng}。', hu: 'Mindkettőjükkel külön beszélt. Kiderült, hogy Zhou Jie egyáltalán nem szándékosan tette, csak segíteni akart.' },
       { zh: '{第二|dì èr}{天|tiān}，{周杰|Zhōu Jié}{请|qǐng}{小|Xiǎo}{李|Lǐ}{喝|hē}{了|le}{一|yì}{杯|bēi}{咖啡|kā·fēi}，{两|liǎng}{个|ge}{人|rén}{又|yòu}{有|yǒu}{说|shuō}{有|yǒu}{笑|xiào}{了|le}。', hu: 'Másnap Zhou Jie meghívta Xiao Lit egy kávéra, és újra jókedvűen beszélgettek.', par: true }
     ],
     words: [ { zh: '{分别|fēn bié}', hu: 'külön-külön' } ],
@@ -14775,7 +14775,7 @@ const HANZIFLOW_COURSE = [
       { zh: '{她|tā}{发现|fā·xiàn}，{想|xiǎng}{提高|tí gāo}{口语|kǒu yǔ}，{非|fēi}{跟|gēn}{中国|Zhōng·guó}{人|rén}{多|duō}{交流|jiāo·liú}{不可|bù kě}。', hu: 'Rájött, hogy ha fejleszteni akarja a beszédkészségét, muszáj sokat beszélgetnie kínaiakkal.' },
       { zh: '{于是|yú·shì}{她|tā}{把|bǎ}{每|měi}{一|yí}{次|cì}{聊|liáo}{天儿|tiānr}{都|dōu}{看作|kàn zuò}{一|yì}{节|jié}{课|kè}，{把|bǎ}{新|xīn}{学|xué}{的|de}{词|cí}{记|jì}{在|zài}{本子|běn·zi}{上|shang}。', hu: 'Ezért minden beszélgetést tanórának tekintett, és a tanult új szavakat felírta egy füzetbe.', par: true },
       { zh: '{她|tā}{说|shuō}：“{没有|méi·yǒu}{一|yí}{个|ge}{人|rén}{学|xué}{外语|wài yǔ}{不|bú}{犯|fàn}{错|cuò}，{只不过|zhǐ bú guò}{有|yǒu}{的|de}{人|rén}{怕|pà}{说|shuō}，{有|yǒu}{的|de}{人|rén}{不|bú}{怕|pà}。”', hu: 'Azt mondja: „Nincs olyan nyelvtanuló, aki ne hibázna — csak van, aki fél megszólalni, és van, aki nem."' },
-      { zh: '{现在|xiàn·zài}{她|tā}{和|hé}{小|Xiǎo}{李|Lǐ}{每|měi}{周|zhōu}{见|jiàn}{两|liǎng}{次|cì}{面|miàn}，{一|yì}{个|ge}{学|xué}{匈牙利|Xiōng·yá·lì}{语|yǔ}，{一|yí}{个|ge}{练|liàn}{汉语|Hàn·yǔ}。', hu: 'Most Xiao Livel hetente kétszer találkoznak: egyikük magyarul tanul, a másik kínaiul gyakorol.', par: true }
+      { zh: '{现在|xiàn·zài}{她|tā}{和|hé}{小|Xiǎo}{李|Lǐ}{每|měi}{周|zhōu}{见|jiàn}{两|liǎng}{次|cì}{面|miàn}，{一|yí}{个|ge}{学|xué}{匈牙利|Xiōng·yá·lì}{语|yǔ}，{一|yí}{个|ge}{练|liàn}{汉语|Hàn·yǔ}。', hu: 'Most Xiao Livel hetente kétszer találkoznak: egyikük magyarul tanul, a másik kínaiul gyakorol.', par: true }
     ],
     words: [ { zh: '{口语|kǒu yǔ}', hu: 'beszélt nyelv, beszédkészség' } ],
     questions: [
@@ -15082,7 +15082,7 @@ const HANZIFLOW_COURSE = [
       { zh: '{十|shí}{几|jǐ}{年|nián}{前|qián}，{中国|Zhōng·guó}{很|hěn}{多|duō}{大|dà}{城市|chéng·shì}{的|de}{雾霾|wù mái}{都|dōu}{很|hěn}{严重|yán·zhòng}，{以至于|yǐ zhì yú}{人们|rén·men}{常常|cháng·cháng}{看|kàn}{不|bú}{见|jiàn}{太阳|tài·yáng}。', hu: 'Bő tíz éve Kína sok nagyvárosában olyan súlyos volt a szmog, hogy az emberek gyakran nem látták a napot.' },
       { zh: '{后来|hòu·lái}{政府|zhèng fǔ}{和|hé}{市民|shì mín}{一起|yì·qǐ}{努力|nǔ lì}，{空气|kōng qì}{逐渐|zhú jiàn}{改善|gǎi shàn}{了|le}。', hu: 'Aztán a kormány és a lakosok közös erőfeszítésével a levegő fokozatosan javult.' },
       { zh: '{就|jiù}{上海|Shàng·hǎi}{而言|ér yán}，{现在|xiàn·zài}{一|yì}{年|nián}{里|li}{大|dà}{部分|bù·fen}{时间|shí·jiān}{都|dōu}{能|néng}{看|kàn}{到|dào}{蓝天|lán tiān}，{可见|kě jiàn}{变化|biàn·huà}{之|zhī}{大|dà}。', hu: 'Sanghajban ma az év nagy részében kék az ég — ebből látszik, mekkora a változás.', par: true },
-      { zh: '{不过|bú·guò}{陈|Chén}{经理|jīng·lǐ}{认为|rèn·wéi}，{除非|chú fēi}{每|měi}{个|ge}{人|rén}{都|dōu}{改变|gǎi biàn}{生活|shēng·huó}{习惯|xí·guàn}，{否则|fǒu·zé}{环境|huán·jìng}{问题|wèn·tí}{不|bù}{会|huì}{真正|zhēn zhèng}{解决|jiě jué}。', hu: 'Chen igazgató szerint azonban a környezeti gondok csak akkor oldódnak meg igazán, ha mindenki megváltoztatja a szokásait.' },
+      { zh: '{不过|bú·guò}{陈|Chén}{经理|jīng·lǐ}{认为|rèn·wéi}，{除非|chú fēi}{每|měi}{个|ge}{人|rén}{都|dōu}{改变|gǎi biàn}{生活|shēng·huó}{习惯|xí·guàn}，{否则|fǒu·zé}{环境|huán·jìng}{问题|wèn·tí}{不|bú}{会|huì}{真正|zhēn zhèng}{解决|jiě jué}。', hu: 'Chen igazgató szerint azonban a környezeti gondok csak akkor oldódnak meg igazán, ha mindenki megváltoztatja a szokásait.' },
       { zh: '{于是|yú·shì}{安娜|Ān·nà}{在|zài}{公司|gōng·sī}{里|li}{发起|fā qǐ}{了|le}“{不|bú}{用|yòng}{一次性|yí cì xìng}{杯子|bēi·zi}”{的|de}{活动|huó·dòng}，{很|hěn}{快|kuài}{就|jiù}{为|wéi}{大家|dà·jiā}{所|suǒ}{接受|jiē·shòu}。', hu: 'Ezért Anna kampányt indított a cégnél „Ne használjunk eldobható poharat!" jelszóval, amit hamar mindenki elfogadott.', par: true }
     ],
     words: [ { zh: '{发起|fā qǐ}', hu: 'kezdeményez, elindít' } ],
@@ -15897,7 +15897,7 @@ const HANZIFLOW_COURSE = [
     { q: '„Zuhog, még jó, hogy hoztam esernyőt."', a: '{下|xià}{大|dà}{雨|yǔ}{了|le}，{好在|hǎo zài}{我|wǒ}{带|dài}{了|le}{伞|sǎn}。', wrong: ['{下|xià}{大|dà}{雨|yǔ}{了|le}，{可惜|kě·xī}{我|wǒ}{带|dài}{了|le}{伞|sǎn}。', '{好在|hǎo zài}{下|xià}{大|dà}{雨|yǔ}{了|le}，{我|wǒ}{伞|sǎn}{带|dài}{了|le}{吗|ma}。', '{下|xià}{大|dà}{雨|yǔ}{好在|hǎo zài}，{我|wǒ}{带|dài}{伞|sǎn}{了|le}{不|bù}。'], why: 'Nehéz helyzet, {好在|hǎozài} + szerencsés körülmény.', point: 4 },
     { q: 'Melyik szóhoz áll közel a {好在|hǎozài}?', a: '{幸亏|xìngkuī}', wrong: ['{可惜|kěxī}', '{偏偏|piānpiān}', '{居然|jūrán}'], why: 'Mindkettő „szerencsére".', point: 4 },
     { q: '„Attól kezdve soha többé nem kételkedtem magamban."', a: '{从|cóng}{那|nà}{以后|yǐ·hòu}，{我|wǒ}{再|zài}{也|yě}{没|méi}{怀疑|huái yí}{过|guo}{自己|zì·jǐ}。', wrong: ['{从|cóng}{那|nà}{以后|yǐ·hòu}，{我|wǒ}{再|zài}{也|yě}{不|bù}{怀疑|huái yí}{过|guo}{自己|zì·jǐ}。', '{从|cóng}{那|nà}{以后|yǐ·hòu}，{我|wǒ}{没|méi}{再|zài}{也|yě}{自己|zì·jǐ}{怀疑|huái yí}{过|guo}。', '{再|zài}{也|yě}{从|cóng}{那|nà}{以后|yǐ·hòu}，{我|wǒ}{自己|zì·jǐ}{没|méi}{怀疑|huái yí}。'], why: 'Múlt, „azóta": {再也没|zài yě méi} + ige + {过|guo}.', point: 5 },
-    { q: '„Soha többé nem késem el!" (ígéret)', a: '{我|wǒ}{再|zài}{也|yě}{不|bù}{迟到|chí dào}{了|le}！', wrong: ['{我|wǒ}{再|zài}{也|yě}{没|méi}{迟到|chí dào}{过|guo}{了|le}！', '{我|wǒ}{不|bù}{再|zài}{也|yě}{迟到|chí dào}{了|le}！', '{再|zài}{也|yě}{我|wǒ}{迟到|chí dào}{不|bù}{了|le}！'], why: 'Jövő, ígéret: {再也不|zài yě bù}.', point: 5 },
+    { q: '„Soha többé nem késem el!" (ígéret)', a: '{我|wǒ}{再|zài}{也|yě}{不|bù}{迟到|chí dào}{了|le}！', wrong: ['{我|wǒ}{再|zài}{也|yě}{没|méi}{迟到|chí dào}{过|guo}{了|le}！', '{我|wǒ}{不|bú}{再|zài}{也|yě}{迟到|chí dào}{了|le}！', '{再|zài}{也|yě}{我|wǒ}{迟到|chí dào}{不|bù}{了|le}！'], why: 'Jövő, ígéret: {再也不|zài yě bù}.', point: 5 },
     { q: 'Mit jelent a {作家|zuòjiā}?', a: 'író', wrong: ['kiadó', 'olvasó', 'szerkesztő'], why: '{苏文是作家|Sū Wén shì zuòjiā}.' },
     { q: 'Mit jelent a {拒绝|jùjué}?', a: 'elutasít', wrong: ['elfogad', 'kiad', 'kijavít'], why: '{被出版社拒绝了|bèi chūbǎnshè jùjué le}.' },
     { q: 'Mit jelent a {偷懒|tōu lǎn}?', a: 'lustálkodik', wrong: ['lop', 'siet', 'túlórázik'], why: '{我再也不敢偷懒了|wǒ zài yě bù gǎn tōu lǎn le}.' },
@@ -16181,7 +16181,7 @@ const HANZIFLOW_COURSE = [
       { zh: '{在|zài}{中国|Zhōng·guó}，{去|qù}{别人|bié·rén}{家|jiā}{做|zuò}{客|kè}{很|hěn}{讲究|jiǎng·jiu}{礼物|lǐ·wù}。', hu: 'Kínában, ha valaki vendégségbe megy, nagyon számít, mit visz ajándékba.' },
       { zh: '{安娜|Ān·nà}{本来|běn·lái}{只|zhǐ}{想|xiǎng}{带|dài}{一|yì}{瓶|píng}{酒|jiǔ}，{周杰|Zhōu Jié}{觉得|jué·de}{未免|wèi miǎn}{太|tài}{少|shǎo}，{建议|jiàn yì}{她|tā}{不妨|bù fáng}{再|zài}{买|mǎi}{些|xiē}{点心|diǎn·xin}。', hu: 'Anna eredetileg csak egy üveg bort akart vinni; Zhou Jie azonban kicsit kevesellte, és azt javasolta, vegyen még süteményt is.' },
       { zh: '{刘|Liú}{总|zǒng}{收|shōu}{到|dào}{礼物|lǐ·wù}{以后|yǐ·hòu}{先|xiān}{推辞|tuī cí}{了|le}{一|yí}{下|xià}，{然后|rán·hòu}{才|cái}{高兴|gāo·xìng}{地|de}{收|shōu}{下|xia}{了|le}。', hu: 'Liu úr az ajándékot előbb udvariasan elhárította, aztán örömmel elfogadta.', par: true },
-      { zh: '{吃|chī}{饭|fàn}{的|de}{时候|shí·hou}，{刘|Liú}{总|zǒng}{的|de}{太太|tài·tai}{不|bú}{停|tíng}{地|de}{给|gěi}{安娜|Ān·nà}{夹|jiā}{菜|cài}，{显得|xiǎn·de}{非常|fēi·cháng}{热情|rè qíng}。', hu: 'Vacsora közben Liu úr felesége folyton szedett Annának, nagyon szívélyesnek mutatkozott.' },
+      { zh: '{吃|chī}{饭|fàn}{的|de}{时候|shí·hou}，{刘|Liú}{总|zǒng}{的|de}{太太|tài·tai}{不|bù}{停|tíng}{地|de}{给|gěi}{安娜|Ān·nà}{夹|jiā}{菜|cài}，{显得|xiǎn·de}{非常|fēi·cháng}{热情|rè qíng}。', hu: 'Vacsora közben Liu úr felesége folyton szedett Annának, nagyon szívélyesnek mutatkozott.' },
       { zh: '{安娜|Ān·nà}{觉得|jué·de}，{能|néng}{这样|zhè·yàng}{了解|liǎo·jiě}{中国|Zhōng·guó}{家庭|jiā tíng}，{真|zhēn}{是|shì}{一|yí}{个|ge}{难得|nán dé}{的|de}{机会|jī·huì}。', hu: 'Anna úgy érezte, ritka lehetőség, hogy így megismerhet egy kínai családot.', par: true }
     ],
     words: [ { zh: '{夹菜|jiā cài}', hu: 'pálcikával ételt szed (másnak)' } ],

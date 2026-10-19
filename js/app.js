@@ -6767,8 +6767,9 @@ function initNumbersPage() {
    Vizsgaszerű kör: a részek (Hallás, Olvasás, HSK 3–4-ben Írás) sorban jönnek, menet közben nincs
    visszajelzés, előre-hátra lehet lépni, és a végén jön a pontszám (részenként 100 pont, 60% az átmenő)
    meg a válaszok átnézése. A hallás feladatai kétszer hallgathatók meg; ha a hang nem szól,
-   a szöveg megmutatható. A pinyin HSK 1–2-ben alapból látszik, HSK 3–4-ben rejtve van.
+   a szöveg megmutatható. A pinyin HSK 1–2-ben alapból látszik, HSK 3–5-ben rejtve van.
    HSK 4-ben két további típus: hallás utáni igaz–hamis (hearJudge) és mondatrészek sorba rakása (sort).
+   HSK 5-ben négy válaszlehetőség van, és az Írásban új típus: melyik mondat helyes (correct).
    ==================================================== */
 function initExamPage() {
   const PROFILE_KEY  = 'hanziflow_exam_profile_v1';
@@ -6777,7 +6778,7 @@ function initExamPage() {
   const ITEMS  = (typeof HANZIFLOW_EXAM_ITEMS !== 'undefined') ? HANZIFLOW_EXAM_ITEMS : [];
   if (!LEVELS) return;
   const MAX_PLAYS = 2;
-  const { esc, rich, reading } = HanziFlowZh;
+  const { esc, rich, prose, reading } = HanziFlowZh;
   const shuffle = arr => { const a = arr.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); const t = a[i]; a[i] = a[j]; a[j] = t; } return a; };
   const PLAY_BIG = '<svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 5.5a9 9 0 0 1 0 13"/></svg>';
   const LETTERS = 'ABCD';
@@ -6792,7 +6793,8 @@ function initExamPage() {
     order:   'Rakd sorba a szavakat!',
     hanzi:   'Melyik írásjegy illik a pinyinhez?',
     hearJudge: 'Hallgasd meg! Igaz vagy hamis a ★ állítás?',
-    sort:    'Rakd sorba a mondatrészeket!'
+    sort:    'Rakd sorba a mondatrészeket!',
+    correct: 'Melyik mondat helyes?'
   };
   const isListen = it => it.t === 'hear' || it.t === 'hearHu' || it.t === 'hearJudge';
   const isOrder  = it => it.t === 'order' || it.t === 'sort';
@@ -6805,7 +6807,7 @@ function initExamPage() {
   }
   const tileText = t => reading(t);
   // a feladat azonosítója (az előző vizsga kérdéseinek kerüléséhez és a naplóhoz)
-  const keyOf = it => it.t + ':' + reading(it.zh || (it.lines && it.lines[0]) || it.text || it.q || it.tiles.join('')).slice(0, 40);
+  const keyOf = it => it.t + ':' + reading(it.zh || (it.lines && it.lines[0]) || it.text || it.q || it.a || it.tiles.join('')).slice(0, 40);
 
   /* ── A) Beállítások + profil ───────────────────── */
   function loadJson(key) {
@@ -6815,7 +6817,7 @@ function initExamPage() {
   const settings = {
     level: LEVELS[saved.level] ? saved.level : 'hsk1',
     timer: saved.timer !== false,
-    pinyin: Object.assign({ hsk1: true, hsk2: true, hsk3: false, hsk4: false }, saved.pinyin || {})
+    pinyin: Object.assign({ hsk1: true, hsk2: true, hsk3: false, hsk4: false, hsk5: false }, saved.pinyin || {})
   };
   if (window.HanziFlowPath) HanziFlowPath.apply('exam', settings);
   // a tanulási út lépéséről nyitva csak a lépés szintje teljesíti a lépést
@@ -6899,10 +6901,10 @@ function initExamPage() {
         <p class="tone-chart-sub">A feladattípusok a HSK vizsgát követik; a képes feladatok helyett itt szöveges változat áll. Ez gyakorlás, nem hivatalos vizsga.</p>
       </div>
       <dl class="py-tip-list">
-        <div class="py-tip"><dt>Részek</dt><dd>HSK 1 és 2: Hallás és Olvasás. HSK 3 és 4: Hallás, Olvasás és Írás (sorba rakás, a pinyinhez illő írásjegy). HSK 4-ben a hallásban igaz–hamis állítás, az olvasásban mondatrészek sorba rakása is van.</dd></div>
+        <div class="py-tip"><dt>Részek</dt><dd>HSK 1 és 2: Hallás és Olvasás. HSK 3–5: Hallás, Olvasás és Írás (sorba rakás, a pinyinhez illő írásjegy). HSK 4-ben a hallásban igaz–hamis állítás, az olvasásban mondatrészek sorba rakása is van. HSK 5-ben négy válasz közül kell választani, a hallásban rövid szövegek is jönnek, az Írásban pedig azt kell eldönteni, melyik mondat helyes.</dd></div>
         <div class="py-tip"><dt>Hallás</dt><dd>Minden hanganyag kétszer hallgatható meg. Ha a hang nem szól, a szöveget meg tudod nézni — ezt a pontozás nem bünteti.</dd></div>
         <div class="py-tip"><dt>Menet közben</dt><dd>Nincs visszajelzés, mint a valódi vizsgán. Előre-hátra léphetsz, és a választ a beadásig megváltoztathatod.</dd></div>
-        <div class="py-tip"><dt>Pontozás</dt><dd>Minden rész 100 pontot ér. Átmenő: az összpontszám 60%-a (HSK 1–2: 120 / 200, HSK 3–4: 180 / 300). A végén minden választ átnézhetsz magyar fordítással.</dd></div>
+        <div class="py-tip"><dt>Pontozás</dt><dd>Minden rész 100 pontot ér. Átmenő: az összpontszám 60%-a (HSK 1–2: 120 / 200, HSK 3–5: 180 / 300). A végén minden választ átnézhetsz magyar fordítással.</dd></div>
       </dl>`;
   }
 
@@ -6929,7 +6931,7 @@ function initExamPage() {
       </div>
       <div class="lobby-section">
         <div class="lobby-section-label">Szint</div>
-        <div class="cj-mode-row mw-level-row">${levels}</div>
+        <div class="cj-mode-row mw-level-row ex-level-row">${levels}</div>
       </div>
       <div class="lobby-section">
         <div class="lobby-section-label">Időmérő</div>
@@ -7249,9 +7251,9 @@ function initExamPage() {
         mine = answerHtml(q, q.answer);
         right = answerHtml(q, q.right);
       }
-      const hu = it.t === 'hearHu' ? '' : it.hu ? `<p class="ex-hu">${esc(it.hu)}</p>` : '';
+      const hu = it.t === 'hearHu' ? '' : it.hu ? `<p class="ex-hu">${prose(it.hu)}</p>` : '';
       const say = isListen(it) ? audioOf(it) : isOrder(it) ? reading(it.tiles.join(''))
-        : (it.t === 'blank' || it.t === 'hanzi') ? reading(it.zh.replace('＿', it.a)) : reading(it.text || it.q || '');
+        : (it.t === 'blank' || it.t === 'hanzi') ? reading(it.zh.replace('＿', it.a)) : it.t === 'correct' ? reading(it.a) : reading(it.text || it.q || '');
       return `
         <details class="ex-ritem ${ok ? 'is-ok' : 'is-bad'}"${ok ? '' : ' open'}>
           <summary><span class="ex-rmark">${ok ? '✓' : answered ? '✗' : '–'}</span><span class="ex-rnum">${n + 1}.</span><span class="ex-rsec">${esc(q.sec.name)}</span><span class="ex-rtask">${esc(TASK[it.t])}</span></summary>

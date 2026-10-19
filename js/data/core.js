@@ -665,6 +665,9 @@ const HANZIFLOW_PATH = [
   { id: 'test-h5z', glyph: '测', title: 'Szintzáró: HSK 5',
     desc: 'Nagyobb dolgozat a HSK 5 összes leckéjéből: szavak, mondatok, nyelvtan, olvasmány.',
     module: 'tests', href: 'pages/tests.html?test=h5z', optional: true, preset: { set: { level: 5 } } },
+  { id: 'exam-hsk5', glyph: '考', title: 'Próbavizsga: HSK 5',
+    desc: 'A HSK 5 vizsga mintájára: hallás, olvasás és írás, négy válaszlehetőséggel, időre.',
+    module: 'exam', href: 'pages/exam.html', optional: true, preset: { set: { level: 'hsk5' } } },
 
   // ── Gyakorló modulok a leckék fejezeteiben: nem kötelező lépések ──
   { id: 'py-dictate', glyph: '拼', title: 'Diktálás: írd le, amit hallasz',
@@ -1414,6 +1417,6 @@ const HANZIFLOW_PATH_UNITS = [
     steps: ['l90-lesson', 'l90-listen', 'l90-read'] },
   { id: 'u-t-h5d', kicker: 'HSK 5 · Dolgozat', title: '4. témazáró', sub: 'A 16–20. lecke anyaga, jegyre — nem kötelező',
     steps: ['test-h5d'] },
-  { id: 'u-z-h5', kicker: 'HSK 5 · Szintzáró', title: 'A HSK 5 vége', sub: 'Szintzáró dolgozat és pinyin-beírás — nem kötelező',
-    steps: ['test-h5z', 'py-write-h5'] }
+  { id: 'u-z-h5', kicker: 'HSK 5 · Szintzáró', title: 'A HSK 5 vége', sub: 'Szintzáró dolgozat, pinyin-beírás és próbavizsga — nem kötelező',
+    steps: ['test-h5z', 'py-write-h5', 'exam-hsk5'] }
 ];
