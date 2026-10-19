@@ -1056,7 +1056,29 @@ const HANZIFLOW_PATH = [
     module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l80&round=listen' },
   { id: 'l80-read', glyph: '读', title: 'Olvasás: Az én tanulási módszerem',
     desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
-    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l80&round=read' }
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l80&round=read' },
+
+  // ── HSK 5 · 11. lecke ──
+  { id: 'l81-lesson', glyph: '购', title: 'Magyarázat: 相当, 极其, 格外, 得很 · 得不得了, 简直',
+    desc: 'Vásárlási láz: elég nagyon, rendkívül, különösen, hihetetlenül, valóságos….',
+    module: 'lesson', href: 'pages/lesson.html?id=l81' },
+  { id: 'l81-listen', glyph: '听', title: 'Hallás: dobozhegy az előszobában',
+    desc: 'A lecke mondatai hang után: mit jelent, amit hallasz?',
+    module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l81&round=listen' },
+  { id: 'l81-read', glyph: '读', title: 'Olvasás: Lin Jing „Szinglik napja"',
+    desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l81&round=read' },
+
+  // ── HSK 5 · 12. lecke ──
+  { id: 'l82-lesson', glyph: '蓝', title: 'Magyarázat: 就…而言, 可见, 以至于, 被…所, 除非…否则',
+    desc: 'Kék ég Sanghaj felett: szempontból, látható tehát, olyannyira, hogy, írott szenvedő, csak ha.',
+    module: 'lesson', href: 'pages/lesson.html?id=l82' },
+  { id: 'l82-listen', glyph: '听', title: 'Hallás: az ablaknál',
+    desc: 'A lecke mondatai hang után: mit jelent, amit hallasz?',
+    module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l82&round=listen' },
+  { id: 'l82-read', glyph: '读', title: 'Olvasás: Visszatért a kék ég',
+    desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l82&round=read' }
 ];
 
 const HANZIFLOW_PATH_UNITS = [
@@ -1257,5 +1279,9 @@ const HANZIFLOW_PATH_UNITS = [
   { id: 'u-l79', kicker: 'HSK 5 · 9. lecke', title: 'Feszültség a csapatban', sub: '不至于, 何必, 说不定, 一旦…就, 哪怕…也',
     steps: ['l79-lesson', 'l79-listen', 'l79-read'] },
   { id: 'u-l80', kicker: 'HSK 5 · 10. lecke', title: 'Hogyan tanuljunk nyelvet?', sub: '非…不可, 不能不 · 没有…不, 把…当作 · 看作, ige + 个 + kiegészítő, 只不过',
-    steps: ['l80-lesson', 'l80-listen', 'l80-read'] }
+    steps: ['l80-lesson', 'l80-listen', 'l80-read'] },
+  { id: 'u-l81', kicker: 'HSK 5 · 11. lecke', title: 'Vásárlási láz', sub: '相当, 极其, 格外, …得很 · …得不得了, 简直',
+    steps: ['l81-lesson', 'l81-listen', 'l81-read'] },
+  { id: 'u-l82', kicker: 'HSK 5 · 12. lecke', title: 'Kék ég Sanghaj felett', sub: '就…而言, 可见, 以至于, 被 / 为…所, 除非…否则',
+    steps: ['l82-lesson', 'l82-listen', 'l82-read'] }
 ];

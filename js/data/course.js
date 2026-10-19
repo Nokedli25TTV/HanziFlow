@@ -14803,6 +14803,314 @@ const HANZIFLOW_COURSE = [
     { q: 'Mit jelent a {掌握|zhǎngwò}?', a: 'elsajátít', wrong: ['elfelejt', 'kiejt', 'lefordít'], why: '{掌握一门语言|zhǎngwò yì mén yǔyán} „elsajátít egy nyelvet".' },
     { q: 'Mit jelent a {当初|dāngchū}?', a: 'annak idején', wrong: ['manapság', 'hamarosan', 'mindig'], why: '{你当初是怎么学的|nǐ dāngchū shì zěnme xué de}？' }
   ]
+},
+/* ════════════════════════════════════════════════════
+   HSK 5 · 11. LECKE — 相当, 极其, 格外, 得很 · 得不得了, 简直
+   ════════════════════════════════════════════════════ */
+{
+  id: 'l81', no: 81, badge: '11', kicker: 'HSK 5 · 11. lecke', label: 'HSK 5 · 11. lecke',
+  title: 'Vásárlási láz — valóságos raktár!',
+  lead: 'Túlzásba vitt vásárlásról beszélsz: fokozod a mértéket (相当, 极其), összeveted a szokásossal (格外), színesen nyomatékosítasz (…得很 · …得不得了), és túlzással élsz (简直).',
+  cando: [
+    'Megkülönbözteted a fokozó határozókat: 相当 („elég nagyon"), 极其 („rendkívül").',
+    'Kifejezed, hogy valami a szokásosnál jobban áll fenn: 格外….',
+    'Színes fokhatározót használsz: …得很, …得不得了.',
+    'Túlzással nyomatékosítasz: 简直….'
+  ],
+  intro: [
+    'November közepe van, a nagy akciós napok után. Anna hazaér, és az ajtó előtt egy halom dobozt talál — mind Lin Jingéi.',
+    'Ebben a leckében a mérték és a fokozás finom eszközeit tanulod: a {很|hěn} és a {非常|fēicháng} mellé árnyaltabb, választékosabb és színesebb formákat.'
+  ],
+  dialogue: {
+    title: 'Dobozhegy az előszobában',
+    scene: 'November, este Anna és Lin Jing lakásában.',
+    lines: [
+      { who: 'Anna', zh: '{林静|Lín Jìng}，{门口|mén kǒu}{这些|zhè·xiē}{箱子|xiāng·zi}{都|dōu}{是|shì}{你|nǐ}{的|de}？{简直|jiǎn·zhí}{像|xiàng}{个|ge}{小|xiǎo}{仓库|cāng kù}！', hu: 'Lin Jing, ezek a dobozok az ajtó előtt mind a tieid? Valóságos kis raktár!' },
+      { who: 'Lin Jing', zh: '{哈哈|hā·hā}，{这|zhè}{几|jǐ}{天|tiān}{打|dǎ}{折|zhé}{打|dǎ}{得|de}{厉害|lì·hai}，{东西|dōng·xi}{便宜|pián·yi}{得|de}{不得了|bù dé liǎo}，{我|wǒ}{就|jiù}{忍不住|rěn bu zhù}{多|duō}{买|mǎi}{了|le}{一些|yì xiē}。', hu: 'Haha, ezekben a napokban óriási akciók voltak, minden hihetetlenül olcsó volt, nem bírtam ki, és vettem egy keveset.' },
+      { who: 'Anna', zh: '{一些|yì xiē}？{你|nǐ}{这|zhè}{次|cì}{花|huā}{了|le}{多少|duō·shao}{钱|qián}？', hu: 'Egy keveset? Mennyit költöttél?' },
+      { who: 'Lin Jing', zh: '{相当|xiāng dāng}{多|duō}……{差不多|chà·bu·duō}{是|shì}{一|yí}{个|ge}{月|yuè}{的|de}{工资|gōng·zī}。', hu: 'Elég sokat… nagyjából egy havi fizetést.' },
+      { who: 'Anna', zh: '{这|zhè}{也|yě}{太|tài}{夸张|kuā zhāng}{了|le}！{你|nǐ}{真|zhēn}{的|de}{需要|xū·yào}{这么|zhè·me}{多|duō}{东西|dōng·xi}{吗|ma}？', hu: 'Ez azért túlzás! Tényleg szükséged van ennyi mindenre?' },
+      { who: 'Lin Jing', zh: '{极其|jí qí}{需要|xū·yào}！{你|nǐ}{看|kàn}{这|zhè}{件|jiàn}{大衣|dà·yī}，{今年|jīn·nián}{冬天|dōng·tiān}{格外|gé wài}{冷|lěng}，{正好|zhèng hǎo}{穿|chuān}。', hu: 'Rendkívül nagy szükségem van rá! Nézd ezt a kabátot: idén a tél szokatlanul hideg, épp jó lesz.' },
+      { who: 'Lin Jing', zh: '{不过|bú·guò}{说|shuō}{实话|shí huà}，{我|wǒ}{现在|xiàn·zài}{后悔|hòu huǐ}{得|de}{很|hěn}……{下|xià}{次|cì}{一定|yí dìng}{理性|lǐ xìng}{消费|xiāo fèi}！', hu: 'De őszintén szólva most nagyon bánom… legközelebb biztosan átgondoltabban vásárolok!' }
+    ],
+    notes: [
+      'Az {打折打得厉害|dǎ zhé dǎ de lìhai} „nagyon nagy az árengedmény": a {厉害|lìhai} „heves, erős; nagyon".',
+      'A {理性消费|lǐxìng xiāofèi} „átgondolt, észszerű vásárlás" — gyakori jelszó a nagy akciók idején.',
+      'Az {大衣|dàyī} „hosszú télikabát" (HSK 1-es szó).'
+    ]
+  },
+  points: [
+    {
+      title: '{相当|xiāngdāng}', sub: 'elég (nagyon), meglehetősen',
+      pattern: '{相当|xiāng dāng} + melléknév / ige · A {相当于|xiāng dāng yú} B',
+      body: 'A {相当|xiāngdāng} „meglehetősen, elég" magas fokot jelöl, de visszafogottabban, mint a {非常|fēicháng}: {相当多|xiāngdāng duō} „elég sok", {相当不错|xiāngdāng búcuò} „egész jó". A {相当于|xiāngdāngyú} „megfelel valaminek, annyi, mint": {一百块相当于十二欧元|yì bǎi kuài xiāngdāngyú shí\'èr ōuyuán} „száz jüan nagyjából tizenkét euró".',
+      examples: [
+        { zh: '{这|zhè}{次|cì}{我|wǒ}{花|huā}{的|de}{钱|qián}{相当|xiāng dāng}{多|duō}。', hu: 'Ezúttal elég sok pénzt költöttem.' },
+        { zh: '{你|nǐ}{的|de}{汉语|Hàn·yǔ}{已经|yǐ·jīng}{相当|xiāng dāng}{不错|bú cuò}{了|le}。', hu: 'A kínaid már egészen jó.' }
+      ]
+    },
+    {
+      title: '{极其|jíqí}', sub: 'rendkívül (írott)',
+      pattern: '{极其|jí qí} + kétszótagú melléknév / ige',
+      body: 'A {极其|jíqí} „rendkívül, a legnagyobb mértékben" írott, ünnepélyes fokozó, főleg <b>kétszótagú</b> melléknevek és igék előtt: {极其重要|jíqí zhòngyào} „rendkívül fontos", {极其需要|jíqí xūyào} „rendkívül szükséges". Egyszótagú melléknév elé inkább {非常|fēicháng} vagy {极了|jí le} kell. Lin Jing a beszélgetésben tréfásan, túlzó stílusban használja.',
+      examples: [
+        { zh: '{这|zhè}{次|cì}{会议|huì·yì}{极其|jí qí}{重要|zhòng·yào}，{大家|dà·jiā}{一定|yí dìng}{要|yào}{准时|zhǔn shí}{参加|cān·jiā}。', hu: 'Ez az értekezlet rendkívül fontos, mindenki pontosan jelenjen meg.' },
+        { zh: '{山|shān}{里|li}{的|de}{生活|shēng·huó}{极其|jí qí}{简单|jiǎn·dān}。', hu: 'Az élet a hegyekben rendkívül egyszerű.' }
+      ],
+      mistakes: [
+        { bad: '{这|zhè}{个|ge}{菜|cài}{极其|jí qí}{好|hǎo}。', good: '{这|zhè}{个|ge}{菜|cài}{好吃|hǎo chī}{极|jí}{了|le}。', why: 'A {极其|jíqí} kétszótagú szó elé illik; egyszótagúnál {极了|jí le} vagy {非常|fēicháng}.' }
+      ]
+    },
+    {
+      title: '{格外|géwài}', sub: 'különösen, a szokásosnál jobban',
+      pattern: 'A + {格外|gé wài} + melléknév / ige',
+      body: 'A {格外|géwài} azt jelzi, hogy valami <b>a szokásosnál, a vártnál</b> erősebb: {今年冬天格外冷|jīnnián dōngtiān géwài lěng} „idén a tél szokatlanul hideg", {雨后的空气格外新鲜|yǔ hòu de kōngqì géwài xīnxiān} „eső után a levegő különösen friss". Mindig ott van mögötte egy összehasonlítás a megszokottal.',
+      examples: [
+        { zh: '{今年|jīn·nián}{冬天|dōng·tiān}{格外|gé wài}{冷|lěng}。', hu: 'Idén a tél szokatlanul hideg.' },
+        { zh: '{下|xià}{过|guo}{雨|yǔ}{以后|yǐ·hòu}，{空气|kōng qì}{格外|gé wài}{新鲜|xīn·xiān}。', hu: 'Eső után a levegő különösen friss.' }
+      ]
+    },
+    {
+      title: '…{得很|de hěn} · …{得不得了|de bùdéliǎo}', sub: 'nagyon · hihetetlenül (beszélt)',
+      pattern: 'melléknév / érzelmet jelentő ige + {得很|de hěn} / {得不得了|de bù dé liǎo}',
+      body: 'A melléknév vagy érzelmet kifejező ige után álló fokhatározó: {后悔得很|hòuhuǐ de hěn} „nagyon bánja", {便宜得不得了|piányi de bùdéliǎo} „hihetetlenül olcsó", {高兴得不得了|gāoxìng de bùdéliǎo} „nem fér a bőrébe". A {得不得了|de bùdéliǎo} erősebb és színesebb, mint a {得很|de hěn}. Beszélt nyelvi; a fokozó itt az állítmány <b>után</b> áll.',
+      examples: [
+        { zh: '{双十一|Shuāng Shí yī}{的|de}{时候|shí·hou}，{东西|dōng·xi}{便宜|pián·yi}{得|de}{不得了|bù dé liǎo}。', hu: 'A „Szinglik napján" minden hihetetlenül olcsó.' },
+        { zh: '{买|mǎi}{了|le}{这么|zhè·me}{多|duō}{东西|dōng·xi}，{我|wǒ}{现在|xiàn·zài}{后悔|hòu huǐ}{得|de}{很|hěn}。', hu: 'Ennyi mindent vettem, most nagyon bánom.' }
+      ]
+    },
+    {
+      title: '{简直|jiǎnzhí}', sub: 'egyenesen, valósággal (túlzás)',
+      pattern: 'A + {简直|jiǎn·zhí} + ({像|xiàng} / {是|shì} / {太|tài}…{了|le})',
+      body: 'A {简直|jiǎnzhí} <b>túlzással</b> nyomatékosít: „egyenesen, szinte, valósággal". {简直像个小仓库|jiǎnzhí xiàng ge xiǎo cāngkù} „valóságos kis raktár", {这简直太好了|zhè jiǎnzhí tài hǎo le} „ez egyenesen fantasztikus". A HSK 4-ben a {简直不敢相信|jiǎnzhí bù gǎn xiāngxìn} „alig merem elhinni" fordulatban már találkoztál vele.',
+      examples: [
+        { zh: '{门口|mén kǒu}{的|de}{箱子|xiāng·zi}{简直|jiǎn·zhí}{像|xiàng}{个|ge}{小|xiǎo}{仓库|cāng kù}。', hu: 'Az ajtó előtti dobozok valóságos kis raktárt alkotnak.' },
+        { zh: '{他|tā}{做|zuò}{的|de}{菜|cài}{简直|jiǎn·zhí}{比|bǐ}{饭馆|fàn guǎn}{的|de}{还|hái}{好吃|hǎo chī}。', hu: 'A főztje egyenesen finomabb, mint az étteremé.' }
+      ]
+    }
+  ],
+  phrases: [
+    { zh: '{太|tài}{夸张|kuā zhāng}{了|le}！', hu: 'Ez túlzás!' },
+    { zh: '{买|mǎi}{买|mǎi}{买|mǎi}！', hu: 'Vegyük, vegyük, vegyük! (tréfás)' },
+    { zh: '{我|wǒ}{要|yào}{剁|duò}{手|shǒu}{了|le}。', hu: 'Abbahagyom a vásárlást! (tréfás)' },
+    { zh: '{理性|lǐ xìng}{消费|xiāo fèi}。', hu: 'Átgondolt vásárlás.' }
+  ],
+  words: [
+    { title: 'Szavak',
+      items: [
+        { zh: '{相当|xiāng dāng}', pinyin: 'xiāngdāng', hu: 'meglehetősen, elég' },
+        { zh: '{极其|jí qí}', pinyin: 'jíqí', hu: 'rendkívül' },
+        { zh: '{格外|gé wài}', pinyin: 'géwài', hu: 'különösen, szokatlanul' },
+        { zh: '{仓库|cāng kù}', pinyin: 'cāngkù', hu: 'raktár' },
+        { zh: '{夸张|kuā zhāng}', pinyin: 'kuāzhāng', hu: 'túlzó; túloz' },
+        { zh: '{浪费|làng fèi}', pinyin: 'làngfèi', hu: 'pazarol; pazarlás' },
+        { zh: '{消费|xiāo fèi}', pinyin: 'xiāofèi', hu: 'fogyaszt, költ; fogyasztás' },
+        { zh: '{优惠|yōu huì}', pinyin: 'yōuhuì', hu: 'kedvezményes; kedvezmény' },
+        { zh: '{理性|lǐ xìng}', pinyin: 'lǐxìng', hu: 'észszerű, átgondolt' },
+        { zh: '{收货|shōu huò}', pinyin: 'shōu huò', hu: 'átveszi a küldeményt' },
+        { zh: '{购物车|gòu wù chē}', pinyin: 'gòuwùchē', hu: 'bevásárlókocsi, kosár' },
+        { zh: '{快递员|kuài dì yuán}', pinyin: 'kuàidìyuán', hu: 'futár' }
+      ] },
+    { title: 'Ráadás',
+      items: [
+        { zh: '{剁手|duò shǒu}', pinyin: 'duò shǒu', hu: '(tréfás) leszokik a vásárlásról' },
+        { zh: '{直播|zhí bō}', pinyin: 'zhíbō', hu: 'élő közvetítés' },
+        { zh: '{冲动|chōng dòng}', pinyin: 'chōngdòng', hu: 'hirtelen késztetés; meggondolatlan' },
+        { zh: '{退款|tuì kuǎn}', pinyin: 'tuì kuǎn', hu: 'visszatéríti az árat' }
+      ] }
+  ],
+  culture: [
+    { title: '„Levágom a kezem"', text: 'A {剁手|duò shǒu} „levágja a kezét" tréfás internetes szó: aki túl sokat költött a neten, azt fogadja meg, hogy „levágja a kezét", hogy ne tudjon többet kattintani. A nagy vásárlók tréfás neve {剁手党|duòshǒudǎng} „a kézlevágók pártja".' },
+    { title: 'Vásárlás élő adásban', text: 'Kínában rendkívül népszerű az élő közvetítéses vásárlás ({直播带货|zhíbō dài huò}): egy műsorvezető élőben mutatja be a termékeket, a nézők pedig azonnal megrendelhetik őket. A legismertebb műsorvezetők egy este alatt hatalmas forgalmat bonyolítanak.' }
+  ],
+  reading: {
+    title: '{林静|Lín Jìng}{的|de}“{双十一|Shuāng Shí yī}”', titleHu: 'Lin Jing „Szinglik napja"',
+    text: [
+      { zh: '{每|měi}{年|nián}{的|de}“{双十一|Shuāng Shí yī}”，{网上|wǎng shàng}{的|de}{东西|dōng·xi}{都|dōu}{便宜|pián·yi}{得|de}{不得了|bù dé liǎo}。', hu: 'Minden évben a „Szinglik napján" a neten hihetetlenül olcsó minden.' },
+      { zh: '{今年|jīn·nián}{林静|Lín Jìng}{一|yì}{口|kǒu}{气|qì}{买|mǎi}{了|le}{二十|èr shí}{多|duō}{样|yàng}{东西|dōng·xi}，{快递员|kuài dì yuán}{来|lái}{了|le}{好|hǎo}{几|jǐ}{次|cì}。', hu: 'Idén Lin Jing egy szuszra több mint húszféle dolgot vett, a futár többször is fordult.' },
+      { zh: '{安娜|Ān·nà}{说|shuō}{她|tā}{的|de}{房间|fáng·jiān}{简直|jiǎn·zhí}{成|chéng}{了|le}{仓库|cāng kù}，{林静|Lín Jìng}{自己|zì·jǐ}{也|yě}{觉得|jué·de}{相当|xiāng dāng}{不|bù}{好意思|hǎo yì·si}。', hu: 'Anna szerint a szobája valóságos raktár lett, és Lin Jing maga is elég kínosan érezte magát.', par: true },
+      { zh: '{她|tā}{发现|fā·xiàn}，{有|yǒu}{一|yí}{半|bàn}{的|de}{东西|dōng·xi}{其实|qí shí}{根本|gēn běn}{用|yòng}{不|bu}{上|shàng}，{这|zhè}{是|shì}{极其|jí qí}{严重|yán·zhòng}{的|de}{浪费|làng fèi}。', hu: 'Rájött, hogy a holmik felét valójában egyáltalán nem fogja használni — ez rendkívül nagy pazarlás.' },
+      { zh: '{她|tā}{把|bǎ}{用|yòng}{不|bu}{上|shàng}{的|de}{东西|dōng·xi}{都|dōu}{退|tuì}{了|le}，{还|hái}{在|zài}{手机|shǒu·jī}{上|shang}{写|xiě}{了|le}{四|sì}{个|ge}{字|zì}：“{理性|lǐ xìng}{消费|xiāo fèi}”。', hu: 'Mindent visszaküldött, amire nem volt szüksége, és a telefonjára felírta: „Átgondolt vásárlás".', par: true }
+    ],
+    words: [ { zh: '{一口气|yì kǒu qì}', hu: 'egy szuszra' } ],
+    questions: [
+      { q: 'Milyenek az árak a „Szinglik napján"?', a: 'hihetetlenül alacsonyak', wrong: ['különösen magasak', 'ugyanolyanok', 'mindig változnak'], why: '{便宜得不得了|piányi de bùdéliǎo}.' },
+      { q: 'Hányféle dolgot vett Lin Jing?', a: 'több mint húszfélét', wrong: ['kettőt', 'pontosan tízet', 'egyetlen kabátot'], why: '{买了二十多样东西|mǎi le èrshí duō yàng dōngxi}.' },
+      { q: 'Mire jött rá Lin Jing?', a: 'a holmik felére nincs szüksége', wrong: ['mindent olcsón vett', 'a futár hibázott', 'Anna is vásárolt'], why: '{有一半的东西其实根本用不上|yǒu yí bàn de dōngxi qíshí gēnběn yòng bu shàng}.' },
+      { q: 'Mit csinált végül?', a: 'visszaküldte a felesleges holmikat', wrong: ['még többet vásárolt', 'mindent elajándékozott', 'eladta a telefonját'], why: '{把用不上的东西都退了|bǎ yòng bu shàng de dōngxi dōu tuì le}.' }
+    ]
+  },
+  quiz: [
+    { q: '„Elég sok pénzt költöttem."', a: '{我|wǒ}{花|huā}{的|de}{钱|qián}{相当|xiāng dāng}{多|duō}。', wrong: ['{我|wǒ}{花|huā}{的|de}{钱|qián}{多|duō}{相当|xiāng dāng}。', '{相当|xiāng dāng}{我|wǒ}{的|de}{钱|qián}{花|huā}{多|duō}。', '{我|wǒ}{相当|xiāng dāng}{花|huā}{钱|qián}{的|de}{多|duō}{了|le}。'], why: '{相当|xiāngdāng} + melléknév.', point: 1 },
+    { q: 'Mit jelent: {一百块相当于十二欧元|yì bǎi kuài xiāngdāngyú shí\'èr ōuyuán}。', a: 'Száz jüan nagyjából tizenkét euró.', wrong: ['Száz jüan több, mint tizenkét euró.', 'Száz jüanért tizenkét eurót kapsz ingyen.', 'Tizenkét jüan száz euró.'], why: '{相当于|xiāngdāngyú} „megfelel valaminek".', point: 1 },
+    { q: 'Melyik mondat helyes?', a: '{这|zhè}{次|cì}{会议|huì·yì}{极其|jí qí}{重要|zhòng·yào}。', wrong: ['{这|zhè}{个|ge}{菜|cài}{极其|jí qí}{好|hǎo}。', '{这|zhè}{次|cì}{会议|huì·yì}{重要|zhòng·yào}{极其|jí qí}。', '{极其|jí qí}{这|zhè}{次|cì}{会议|huì·yì}{重要|zhòng·yào}{了|le}。'], why: 'A {极其|jíqí} kétszótagú szó elé áll.', point: 2 },
+    { q: 'Milyen stílusú a {极其|jíqí}?', a: 'írott, ünnepélyes', wrong: ['bizalmas, szleng', 'gyereknyelvi', 'csak kérdésben használatos'], why: '„Rendkívül".', point: 2 },
+    { q: '„Idén a tél szokatlanul hideg."', a: '{今年|jīn·nián}{冬天|dōng·tiān}{格外|gé wài}{冷|lěng}。', wrong: ['{今年|jīn·nián}{冬天|dōng·tiān}{冷|lěng}{格外|gé wài}。', '{格外|gé wài}{今年|jīn·nián}{冷|lěng}{冬天|dōng·tiān}{了|le}。', '{今年|jīn·nián}{格外|gé wài}{的|de}{冬天|dōng·tiān}{冷|lěng}{吗|ma}。'], why: 'A + {格外|géwài} + melléknév.', point: 3 },
+    { q: 'Mihez viszonyít a {格外|géwài}?', a: 'a megszokotthoz', wrong: ['egy másik személyhez', 'a jövőhöz', 'egy kérdéshez'], why: '„A szokásosnál jobban".', point: 3 },
+    { q: '„Minden hihetetlenül olcsó volt."', a: '{东西|dōng·xi}{便宜|pián·yi}{得|de}{不得了|bù dé liǎo}。', wrong: ['{东西|dōng·xi}{不得了|bù dé liǎo}{便宜|pián·yi}{得|de}。', '{东西|dōng·xi}{得|de}{便宜|pián·yi}{不得了|bù dé liǎo}。', '{不得了|bù dé liǎo}{东西|dōng·xi}{得|de}{便宜|pián·yi}。'], why: 'Melléknév + {得不得了|de bùdéliǎo}.', point: 4 },
+    { q: 'Hová kerül a {得很|de hěn}?', a: 'a melléknév vagy ige után', wrong: ['a melléknév elé', 'a mondat elejére', 'az alany elé'], why: '{后悔得很|hòuhuǐ de hěn}.', point: 4 },
+    { q: '„Valóságos kis raktár!"', a: '{简直|jiǎn·zhí}{像|xiàng}{个|ge}{小|xiǎo}{仓库|cāng kù}！', wrong: ['{像|xiàng}{简直|jiǎn·zhí}{个|ge}{小|xiǎo}{仓库|cāng kù}！', '{个|ge}{小|xiǎo}{仓库|cāng kù}{简直|jiǎn·zhí}{像|xiàng}{了|le}！', '{简直|jiǎn·zhí}{小|xiǎo}{像|xiàng}{个|ge}{仓库|cāng kù}{吗|ma}！'], why: '{简直|jiǎnzhí} + {像|xiàng} ….', point: 5 },
+    { q: 'Mit fejez ki a {简直|jiǎnzhí}?', a: 'túlzó nyomatékot', wrong: ['bizonytalanságot', 'tiltást', 'okot'], why: '„Egyenesen, valósággal".', point: 5 },
+    { q: 'Mit jelent a {浪费|làngfèi}?', a: 'pazarlás', wrong: ['megtakarítás', 'kedvezmény', 'befektetés'], why: '{极其严重的浪费|jíqí yánzhòng de làngfèi}.' },
+    { q: 'Mit jelent a {夸张|kuāzhāng}?', a: 'túlzó', wrong: ['unalmas', 'olcsó', 'pontos'], why: '{这也太夸张了|zhè yě tài kuāzhāng le}！' },
+    { q: 'Mit jelent: {理性消费|lǐxìng xiāofèi}?', a: 'átgondolt vásárlás', wrong: ['akciós vásárlás', 'online vásárlás', 'közös vásárlás'], why: '{理性|lǐxìng} „észszerű".' },
+    { q: 'Mit jelent a {快递员|kuàidìyuán}?', a: 'futár', wrong: ['pénztáros', 'eladó', 'raktáros'], why: '{快递员来了好几次|kuàidìyuán lái le hǎo jǐ cì}.' },
+    { q: 'Mit jelent a {优惠|yōuhuì}?', a: 'kedvezmény', wrong: ['minőség', 'szállítás', 'garancia'], why: '{优惠价|yōuhuì jià} „kedvezményes ár".' },
+    { q: 'Mit jelent: {我要剁手了|wǒ yào duò shǒu le}。', a: 'Nem vásárolok többet!', wrong: ['Megsérült a kezem.', 'Kezet mosok most.', 'Segíts nekem, kérlek!'], why: 'Internetes tréfás fordulat.' }
+  ]
+},
+
+/* ════════════════════════════════════════════════════
+   HSK 5 · 12. LECKE — 就…而言, 可见, 以至于, 被…所, 除非…否则
+   ════════════════════════════════════════════════════ */
+{
+  id: 'l82', no: 82, badge: '12', kicker: 'HSK 5 · 12. lecke', label: 'HSK 5 · 12. lecke',
+  title: 'Kék ég Sanghaj felett — csak ha mindenki részt vesz',
+  lead: 'Környezetvédelemről beszélsz írott, választékos stílusban: megadod a szempontot (就…而言), következtetsz (可见), elmondod, milyen súlyos volt valami (以至于), írott szenvedő szerkezetet használsz (被…所), és kizáró feltételt szabsz (除非…否则…).',
+  cando: [
+    'Megadod, milyen szempontból beszélsz: 就…而言.',
+    'Rövid következtetést vonsz le: 可见….',
+    'Elmondod, milyen fokig jutott valami: …，以至于….',
+    'Írott szenvedő szerkezetet (被…所) és kizáró feltételt (除非…否则…) használsz.'
+  ],
+  intro: [
+    'Ragyogó, kék égű nap van Sanghajban. Chen igazgató az irodaablakból nézi a várost, és elmeséli Annának, milyen volt a levegő tíz évvel ezelőtt — és mi múlik ma a cégen.',
+    'Ebben a leckében a hírek, cikkek, beszámolók írott nyelvét tanulod: szempont megadása, következtetés, következmény és kizáró feltétel.'
+  ],
+  dialogue: {
+    title: 'Az ablaknál',
+    scene: 'Szerda délelőtt Chen igazgató irodájában. Chen igazgató és Anna.',
+    lines: [
+      { who: 'Chen', zh: '{你|nǐ}{看|kàn}，{今天|jīn·tiān}{的|de}{天空|tiān kōng}{多|duō}{蓝|lán}{啊|a}！{十|shí}{年|nián}{前|qián}{上海|Shàng·hǎi}{的|de}{雾霾|wù mái}{严重|yán·zhòng}{得|de}{很|hěn}，{以至于|yǐ zhì yú}{很|hěn}{多|duō}{人|rén}{出|chū}{门|mén}{都|dōu}{要|yào}{戴|dài}{口罩|kǒu zhào}。', hu: 'Nézd, milyen kék ma az ég! Tíz éve olyan súlyos volt a szmog Sanghajban, hogy sokan csak maszkban mentek ki az utcára.' },
+      { who: 'Anna', zh: '{真|zhēn}{的|de}{吗|ma}？{现在|xiàn·zài}{空气|kōng qì}{这么|zhè·me}{好|hǎo}，{可见|kě jiàn}{这些|zhè·xiē}{年|nián}{的|de}{努力|nǔ lì}{没有|méi·yǒu}{白费|bái fèi}。', hu: 'Tényleg? Most ilyen jó a levegő — ebből látszik, hogy az elmúlt évek erőfeszítései nem voltak hiábavalók.' },
+      { who: 'Chen', zh: '{就|jiù}{空气|kōng qì}{而言|ér yán}，{变化|biàn·huà}{确实|què·shí}{很|hěn}{大|dà}。{不过|bú·guò}{就|jiù}{整个|zhěng·gè}{环境|huán·jìng}{而言|ér yán}，{还|hái}{有|yǒu}{很|hěn}{多|duō}{问题|wèn·tí}。', hu: 'Ami a levegőt illeti, valóban nagy a változás. De ha az egész környezetet nézzük, még sok a gond.' },
+      { who: 'Anna', zh: '{比如|bǐ·rú}{塑料|sù·liào}{垃圾|lā·jī}？', hu: 'Például a műanyag szemét?' },
+      { who: 'Chen', zh: '{对|duì}。{很|hěn}{多|duō}{人|rén}{已经|yǐ·jīng}{被|bèi}{环保|huán bǎo}{意识|yì·shi}{所|suǒ}{改变|gǎi biàn}，{开始|kāi·shǐ}{自己|zì·jǐ}{带|dài}{购物袋|gòu wù dài}。{但是|dàn·shì}{除非|chú fēi}{每|měi}{个|ge}{人|rén}{都|dōu}{参与|cān yù}，{否则|fǒu·zé}{问题|wèn·tí}{解决|jiě jué}{不|bù}{了|liǎo}。', hu: 'Igen. Sokakat már megváltoztatott a környezettudatosság, saját bevásárlótáskát visznek. De csak ha mindenki részt vesz, akkor oldható meg a probléma — különben nem.' },
+      { who: 'Anna', zh: '{我们|wǒ·men}{公司|gōng·sī}{也|yě}{可以|kě·yǐ}{做|zuò}{点儿|diǎnr}{什么|shén·me}，{比如|bǐ·rú}{少|shǎo}{用|yòng}{一次性|yí cì xìng}{杯子|bēi·zi}。', hu: 'A cégünk is tehetne valamit, például kevesebb eldobható poharat használhatnánk.' },
+      { who: 'Chen', zh: '{好|hǎo}{主意|zhǔ·yi}！{这|zhè}{件|jiàn}{事|shì}{就|jiù}{由|yóu}{你|nǐ}{来|lái}{负责|fù zé}{吧|ba}。', hu: 'Jó ötlet! Akkor ezért te leszel a felelős.' }
+    ],
+    notes: [
+      'A {雾霾|wùmái} „szmog (köd és por keveréke)", a {戴口罩|dài kǒuzhào} „maszkot visel".',
+      'Az {白费|báifèi} „hiábavaló, kárba vész": {努力没有白费|nǔlì méiyǒu báifèi} „az erőfeszítés nem volt hiábavaló".',
+      'Az {一次性|yícìxìng} „egyszer használatos, eldobható": {一次性杯子|yícìxìng bēizi} „eldobható pohár".'
+    ]
+  },
+  points: [
+    {
+      title: '{就|jiù} … {而言|ér\'yán}', sub: '… -t illetően, … szempontjából',
+      pattern: '{就|jiù} + szempont + {而言|ér yán}，…',
+      body: 'A {就|jiù}…{而言|ér\'yán} írott szerkezet megadja, <b>melyik szempontból</b> igaz az állítás: {就空气而言，变化确实很大|jiù kōngqì ér\'yán, biànhuà quèshí hěn dà} „ami a levegőt illeti, nagy a változás", {就我而言|jiù wǒ ér\'yán} „ami engem illet". Jó két szempont szembeállítására is. Beszéltebb párja a {对|duì}…{来说|lái shuō}.',
+      examples: [
+        { zh: '{就|jiù}{空气|kōng qì}{而言|ér yán}，{变化|biàn·huà}{确实|què·shí}{很|hěn}{大|dà}。', hu: 'Ami a levegőt illeti, valóban nagy a változás.' },
+        { zh: '{就|jiù}{价格|jià·gé}{而言|ér yán}，{这|zhè}{家|jiā}{比|bǐ}{那|nà}{家|jiā}{便宜|pián·yi}；{就|jiù}{质量|zhì·liàng}{而言|ér yán}，{那|nà}{家|jiā}{更|gèng}{好|hǎo}。', hu: 'Árban ez a bolt olcsóbb, minőségben az a jobb.' }
+      ]
+    },
+    {
+      title: '{可见|kějiàn}', sub: 'látható tehát, ebből látszik',
+      pattern: '(tény)，{可见|kě jiàn} + következtetés',
+      body: 'A {可见|kějiàn} a HSK 5 8. leckéjében tanult {由此可见|yóucǐ kějiàn} rövidebb párja: egy tényből <b>következtetést</b> von le. {现在空气这么好，可见这些年的努力没有白费|xiànzài kōngqì zhème hǎo, kějiàn zhèxiē nián de nǔlì méiyǒu báifèi} „ilyen jó a levegő, ebből látszik, hogy az erőfeszítések nem voltak hiábavalók".',
+      examples: [
+        { zh: '{现在|xiàn·zài}{空气|kōng qì}{这么|zhè·me}{好|hǎo}，{可见|kě jiàn}{努力|nǔ lì}{没有|méi·yǒu}{白费|bái fèi}。', hu: 'Most ilyen jó a levegő, ebből látszik, hogy az erőfeszítés nem volt hiábavaló.' },
+        { zh: '{他|tā}{连|lián}{饭|fàn}{都|dōu}{忘|wàng}{了|le}{吃|chī}，{可见|kě jiàn}{工作|gōng·zuò}{有|yǒu}{多|duō}{忙|máng}。', hu: 'Még enni is elfelejtett — látható tehát, mennyire elfoglalt.' }
+      ]
+    },
+    {
+      title: '{以至于|yǐzhìyú}', sub: 'olyannyira, hogy …',
+      pattern: '(nagy fokú) állapot，{以至于|yǐ zhì yú} + (súlyos) következmény',
+      body: 'Az {以至于|yǐzhìyú} azt mondja meg, <b>milyen fokig jutott</b> valami, milyen (gyakran kellemetlen) következménnyel: {雾霾严重得很，以至于很多人出门都要戴口罩|wùmái yánzhòng de hěn, yǐzhìyú hěn duō rén chū mén dōu yào dài kǒuzhào} „olyan súlyos volt a szmog, hogy sokan csak maszkban mentek ki", {他太忙了，以至于忘了吃饭|tā tài máng le, yǐzhìyú wàng le chī fàn} „annyira elfoglalt volt, hogy elfelejtett enni".',
+      examples: [
+        { zh: '{雾霾|wù mái}{严重|yán·zhòng}{得|de}{很|hěn}，{以至于|yǐ zhì yú}{很|hěn}{多|duō}{人|rén}{出|chū}{门|mén}{都|dōu}{要|yào}{戴|dài}{口罩|kǒu zhào}。', hu: 'Olyan súlyos volt a szmog, hogy sokan csak maszkban mentek ki.' },
+        { zh: '{他|tā}{工作|gōng·zuò}{太|tài}{忙|máng}，{以至于|yǐ zhì yú}{忘|wàng}{了|le}{吃|chī}{午饭|wǔ fàn}。', hu: 'Annyira elfoglalt volt, hogy elfelejtett ebédelni.' }
+      ]
+    },
+    {
+      title: '{被|bèi} / {为|wéi} … {所|suǒ} + ige', sub: 'írott szenvedő szerkezet',
+      pattern: 'A + {被|bèi} / {为|wéi} + cselekvő + {所|suǒ} + (kétszótagú) ige',
+      body: 'A HSK 3-ban tanult {被|bèi}-s szenvedő szerkezet írott, ünnepélyes változata: a cselekvő után {所|suǒ} áll, utána többnyire kétszótagú ige: {很多人已经被环保意识所改变|hěn duō rén yǐjīng bèi huánbǎo yìshi suǒ gǎibiàn} „sokakat megváltoztatott a környezettudatosság", {这本书为大家所喜爱|zhè běn shū wéi dàjiā suǒ xǐ\'ài} „ezt a könyvet mindenki szereti". Az ige után nem áll kiegészítő.',
+      examples: [
+        { zh: '{很|hěn}{多|duō}{人|rén}{已经|yǐ·jīng}{被|bèi}{环保|huán bǎo}{意识|yì·shi}{所|suǒ}{改变|gǎi biàn}。', hu: 'Sokakat már megváltoztatott a környezettudatosság.' },
+        { zh: '{这|zhè}{位|wèi}{作家|zuò jiā}{的|de}{小说|xiǎo·shuō}{为|wéi}{很|hěn}{多|duō}{年轻人|nián·qīng·rén}{所|suǒ}{喜爱|xǐ ài}。', hu: 'Ennek az írónak a regényeit sok fiatal szereti.' }
+      ]
+    },
+    {
+      title: '{除非|chúfēi} … {否则|fǒuzé} …', sub: 'csak ha …, különben …',
+      pattern: '{除非|chú fēi} + (egyetlen) feltétel，{否则|fǒu·zé} / {不然|bù rán} + (nem) …',
+      body: 'A {除非|chúfēi} az <b>egyetlen</b> feltételt adja meg, amely nélkül valami nem következik be: {除非每个人都参与，否则问题解决不了|chúfēi měi ge rén dōu cānyù, fǒuzé wèntí jiějué bu liǎo} „csak ha mindenki részt vesz, akkor oldható meg — különben nem". Gyakori alakja még: {除非|chúfēi}…{才|cái}…: {除非你去，他才会去|chúfēi nǐ qù, tā cái huì qù} „csak akkor megy, ha te is mész".',
+      examples: [
+        { zh: '{除非|chú fēi}{每|měi}{个|ge}{人|rén}{都|dōu}{参与|cān yù}，{否则|fǒu·zé}{问题|wèn·tí}{解决|jiě jué}{不|bù}{了|liǎo}。', hu: 'Csak ha mindenki részt vesz, akkor oldható meg a probléma.' },
+        { zh: '{除非|chú fēi}{下|xià}{大|dà}{雨|yǔ}，{否则|fǒu·zé}{比赛|bǐ·sài}{照常|zhào cháng}{进行|jìn xíng}。', hu: 'Hacsak nem zuhog, a meccset a szokott módon megtartják.' }
+      ]
+    }
+  ],
+  phrases: [
+    { zh: '{今天|jīn·tiān}{是|shì}{个|ge}{蓝天|lán tiān}！', hu: 'Ma tiszta, kék az ég!' },
+    { zh: '{保护|bǎo·hù}{环境|huán·jìng}，{人人|rén rén}{有|yǒu}{责|zé}。', hu: 'A környezet védelme mindenki dolga.' },
+    { zh: '{请|qǐng}{自|zì}{带|dài}{购物袋|gòu wù dài}。', hu: 'Kérjük, hozza saját bevásárlótáskáját.' },
+    { zh: '{从|cóng}{我|wǒ}{做|zuò}{起|qǐ}。', hu: 'Kezdjük magunkon.' }
+  ],
+  words: [
+    { title: 'Szavak',
+      items: [
+        { zh: '{而言|ér yán}', pinyin: 'ér\'yán', hu: '(jiù … ér\'yán) …-t illetően' },
+        { zh: '{可见|kě jiàn}', pinyin: 'kějiàn', hu: 'látható tehát' },
+        { zh: '{以至于|yǐ zhì yú}', pinyin: 'yǐzhìyú', hu: 'olyannyira, hogy' },
+        { zh: '{除非|chú fēi}', pinyin: 'chúfēi', hu: 'csak ha, hacsak nem' },
+        { zh: '{雾霾|wù mái}', pinyin: 'wùmái', hu: 'szmog' },
+        { zh: '{口罩|kǒu zhào}', pinyin: 'kǒuzhào', hu: 'maszk' },
+        { zh: '{天空|tiān kōng}', pinyin: 'tiānkōng', hu: 'égbolt' },
+        { zh: '{意识|yì·shi}', pinyin: 'yìshi', hu: 'tudatosság, tudat' },
+        { zh: '{参与|cān yù}', pinyin: 'cānyù', hu: 'részt vesz' },
+        { zh: '{白费|bái fèi}', pinyin: 'báifèi', hu: 'hiábavaló, kárba vész' },
+        { zh: '{一次性|yí cì xìng}', pinyin: 'yícìxìng', hu: 'eldobható, egyszer használatos' },
+        { zh: '{改善|gǎi shàn}', pinyin: 'gǎishàn', hu: 'javít; javul' }
+      ] },
+    { title: 'Ráadás',
+      items: [
+        { zh: '{购物袋|gòu wù dài}', pinyin: 'gòuwùdài', hu: 'bevásárlótáska' },
+        { zh: '{蓝天|lán tiān}', pinyin: 'lántiān', hu: 'kék ég' },
+        { zh: '{新能源|xīn néng yuán}', pinyin: 'xīn néngyuán', hu: 'megújuló energia' },
+        { zh: '{节约|jié yuē}', pinyin: 'jiéyuē', hu: 'takarékoskodik' }
+      ] }
+  ],
+  culture: [
+    { title: 'Harc a kék égért', text: 'A 2010-es évek elején több kínai nagyvárosban súlyos volt a szmog. Azóta szigorú intézkedések születtek: gyárakat költöztettek ki, a széntüzelést gázra cserélték, és rengeteg elektromos autó, busz és robogó jelent meg az utakon. A „kék égű napok" száma azóta jelentősen nőtt.' },
+    { title: 'Fizetős szatyor', text: 'Kínában 2008 óta a szupermarketekben pénzt kell fizetni a műanyag zacskóért. Azóta sokan saját bevásárlótáskával járnak, és a nagyvárosokban egyre több üzlet kínál újrahasznosítható csomagolást.' }
+  ],
+  reading: {
+    title: '{蓝天|lán tiān}{回来|huí·lái}{了|le}', titleHu: 'Visszatért a kék ég',
+    text: [
+      { zh: '{十|shí}{几|jǐ}{年|nián}{前|qián}，{中国|Zhōng·guó}{很|hěn}{多|duō}{大|dà}{城市|chéng·shì}{的|de}{雾霾|wù mái}{都|dōu}{很|hěn}{严重|yán·zhòng}，{以至于|yǐ zhì yú}{人们|rén·men}{常常|cháng·cháng}{看|kàn}{不|bú}{见|jiàn}{太阳|tài·yáng}。', hu: 'Bő tíz éve Kína sok nagyvárosában olyan súlyos volt a szmog, hogy az emberek gyakran nem látták a napot.' },
+      { zh: '{后来|hòu·lái}{政府|zhèng fǔ}{和|hé}{市民|shì mín}{一起|yì·qǐ}{努力|nǔ lì}，{空气|kōng qì}{逐渐|zhú jiàn}{改善|gǎi shàn}{了|le}。', hu: 'Aztán a kormány és a lakosok közös erőfeszítésével a levegő fokozatosan javult.' },
+      { zh: '{就|jiù}{上海|Shàng·hǎi}{而言|ér yán}，{现在|xiàn·zài}{一|yì}{年|nián}{里|li}{大|dà}{部分|bù·fen}{时间|shí·jiān}{都|dōu}{能|néng}{看|kàn}{到|dào}{蓝天|lán tiān}，{可见|kě jiàn}{变化|biàn·huà}{之|zhī}{大|dà}。', hu: 'Sanghajban ma az év nagy részében kék az ég — ebből látszik, mekkora a változás.', par: true },
+      { zh: '{不过|bú·guò}{陈|Chén}{经理|jīng·lǐ}{认为|rèn·wéi}，{除非|chú fēi}{每|měi}{个|ge}{人|rén}{都|dōu}{改变|gǎi biàn}{生活|shēng·huó}{习惯|xí·guàn}，{否则|fǒu·zé}{环境|huán·jìng}{问题|wèn·tí}{不|bù}{会|huì}{真正|zhēn zhèng}{解决|jiě jué}。', hu: 'Chen igazgató szerint azonban a környezeti gondok csak akkor oldódnak meg igazán, ha mindenki megváltoztatja a szokásait.' },
+      { zh: '{于是|yú·shì}{安娜|Ān·nà}{在|zài}{公司|gōng·sī}{里|li}{发起|fā qǐ}{了|le}“{不|bú}{用|yòng}{一次性|yí cì xìng}{杯子|bēi·zi}”{的|de}{活动|huó·dòng}，{很|hěn}{快|kuài}{就|jiù}{为|wéi}{大家|dà·jiā}{所|suǒ}{接受|jiē·shòu}。', hu: 'Ezért Anna kampányt indított a cégnél „Ne használjunk eldobható poharat!" jelszóval, amit hamar mindenki elfogadott.', par: true }
+    ],
+    words: [ { zh: '{发起|fā qǐ}', hu: 'kezdeményez, elindít' } ],
+    questions: [
+      { q: 'Milyen volt a helyzet bő tíz éve?', a: 'gyakran nem látszott a nap', wrong: ['mindig kék volt az ég', 'sokat esett a hó', 'nem voltak autók'], why: '{以至于人们常常看不见太阳|yǐzhìyú rénmen chángcháng kàn bu jiàn tàiyáng}.' },
+      { q: 'Kik dolgoztak együtt a változásért?', a: 'a kormány és a lakosok', wrong: ['csak a gyárak', 'csak a külföldiek', 'csak az iskolák'], why: '{政府和市民一起努力|zhèngfǔ hé shìmín yìqǐ nǔlì}.' },
+      { q: 'Mit gondol Chen igazgató?', a: 'mindenkinek változtatnia kell a szokásain', wrong: ['már minden probléma megoldódott', 'a levegő romlik', 'csak a kormány dolga'], why: '{除非每个人都改变生活习惯|chúfēi měi ge rén dōu gǎibiàn shēnghuó xíguàn}.' },
+      { q: 'Milyen kampányt indított Anna?', a: 'ne használjanak eldobható poharat', wrong: ['járjanak biciklivel dolgozni', 'ne nyomtassanak papírt', 'ültessenek fát'], why: '“{不用一次性杯子|bú yòng yícìxìng bēizi}”.' }
+    ]
+  },
+  quiz: [
+    { q: '„Ami a levegőt illeti, nagy a változás."', a: '{就|jiù}{空气|kōng qì}{而言|ér yán}，{变化|biàn·huà}{很|hěn}{大|dà}。', wrong: ['{而言|ér yán}{空气|kōng qì}{就|jiù}，{变化|biàn·huà}{很|hěn}{大|dà}。', '{就|jiù}{而言|ér yán}{空气|kōng qì}，{很|hěn}{大|dà}{变化|biàn·huà}。', '{空气|kōng qì}{就|jiù}{变化|biàn·huà}{而言|ér yán}{很|hěn}{大|dà}{吗|ma}。'], why: '{就|jiù} + szempont + {而言|ér\'yán}.', point: 1 },
+    { q: 'Melyik a {就|jiù}…{而言|ér\'yán} beszéltebb párja?', a: '{对|duì}…{来说|lái shuō}', wrong: ['{一|yī}…{就|jiù}', '{越|yuè}…{越|yuè}', '{先|xiān}…{再|zài}'], why: 'Mindkettő „… szempontjából".', point: 1 },
+    { q: '„Még enni is elfelejtett — látható tehát, mennyire elfoglalt."', a: '{他|tā}{连|lián}{饭|fàn}{都|dōu}{忘|wàng}{了|le}{吃|chī}，{可见|kě jiàn}{有|yǒu}{多|duō}{忙|máng}。', wrong: ['{可见|kě jiàn}{他|tā}{连|lián}{饭|fàn}{都|dōu}{忘|wàng}{了|le}{吃|chī}，{有|yǒu}{多|duō}{忙|máng}{可见|kě jiàn}。', '{他|tā}{连|lián}{饭|fàn}{可见|kě jiàn}{都|dōu}{忘|wàng}{了|le}，{吃|chī}{多|duō}{忙|máng}。', '{他|tā}{可见|kě jiàn}{连|lián}{忙|máng}{都|dōu}{忘|wàng}{了|le}{吃|chī}{饭|fàn}。'], why: 'Tény, {可见|kějiàn} + következtetés.', point: 2 },
+    { q: '„Annyira elfoglalt volt, hogy elfelejtett ebédelni."', a: '{他|tā}{太|tài}{忙|máng}{了|le}，{以至于|yǐ zhì yú}{忘|wàng}{了|le}{吃|chī}{午饭|wǔ fàn}。', wrong: ['{以至于|yǐ zhì yú}{他|tā}{太|tài}{忙|máng}{了|le}，{忘|wàng}{了|le}{吃|chī}{午饭|wǔ fàn}。', '{他|tā}{太|tài}{忙|máng}{以至于|yǐ zhì yú}{了|le}，{午饭|wǔ fàn}{吃|chī}{忘|wàng}。', '{他|tā}{以至于|yǐ zhì yú}{太|tài}{忙|máng}，{忘|wàng}{了|le}{午饭|wǔ fàn}{吃|chī}{了|le}。'], why: 'Állapot, {以至于|yǐzhìyú} + következmény.', point: 3 },
+    { q: 'Mit vezet be az {以至于|yǐzhìyú}?', a: 'a súlyos következményt', wrong: ['egy feltételt', 'egy elérendő célt', 'egy ellentétet'], why: '„Olyannyira, hogy…".', point: 3 },
+    { q: '„Sokakat megváltoztatott a környezettudatosság." (írott)', a: '{很|hěn}{多|duō}{人|rén}{被|bèi}{环保|huán bǎo}{意识|yì·shi}{所|suǒ}{改变|gǎi biàn}。', wrong: ['{很|hěn}{多|duō}{人|rén}{所|suǒ}{环保|huán bǎo}{意识|yì·shi}{被|bèi}{改变|gǎi biàn}。', '{被|bèi}{很|hěn}{多|duō}{人|rén}{环保|huán bǎo}{意识|yì·shi}{改变|gǎi biàn}{所|suǒ}。', '{很|hěn}{多|duō}{人|rén}{被|bèi}{所|suǒ}{改变|gǎi biàn}{环保|huán bǎo}{意识|yì·shi}。'], why: 'A + {被|bèi} + cselekvő + {所|suǒ} + ige.', point: 4 },
+    { q: 'Mit jelent: {这本书为大家所喜爱|zhè běn shū wéi dàjiā suǒ xǐ\'ài}。', a: 'Ezt a könyvet mindenki szereti.', wrong: ['Ezt a könyvet mindenkinek megvették.', 'Ez a könyv mindenkit szeret.', 'Ezt a könyvet senki sem szereti.'], why: 'Írott szenvedő szerkezet.', point: 4 },
+    { q: '„Csak ha mindenki részt vesz, oldható meg a probléma."', a: '{除非|chú fēi}{每|měi}{个|ge}{人|rén}{都|dōu}{参与|cān yù}，{否则|fǒu·zé}{问题|wèn·tí}{解决|jiě jué}{不|bù}{了|liǎo}。', wrong: ['{除非|chú fēi}{每|měi}{个|ge}{人|rén}{都|dōu}{参与|cān yù}，{所以|suǒ·yǐ}{问题|wèn·tí}{解决|jiě jué}{了|le}。', '{否则|fǒu·zé}{每|měi}{个|ge}{人|rén}{都|dōu}{参与|cān yù}，{除非|chú fēi}{问题|wèn·tí}{解决|jiě jué}{不|bù}{了|liǎo}。', '{每|měi}{个|ge}{人|rén}{除非|chú fēi}{参与|cān yù}{都|dōu}，{问题|wèn·tí}{否则|fǒu·zé}{解决|jiě jué}。'], why: '{除非|chúfēi} A, {否则|fǒuzé} nem B.', point: 5 },
+    { q: 'Mit jelent: {除非下大雨，否则比赛照常进行|chúfēi xià dà yǔ, fǒuzé bǐsài zhàocháng jìnxíng}。', a: 'Hacsak nem zuhog, a meccset megtartják.', wrong: ['Ha zuhog, a meccset megtartják.', 'A meccs csak esőben lesz.', 'Esik, ezért elmarad a meccs.'], why: '{除非|chúfēi} „hacsak nem".', point: 5 },
+    { q: 'Mit jelent a {雾霾|wùmái}?', a: 'szmog', wrong: ['eső', 'szél', 'hó'], why: '{雾霾严重|wùmái yánzhòng} „súlyos a szmog".' },
+    { q: 'Mit jelent az {一次性|yícìxìng}?', a: 'eldobható', wrong: ['újrahasznosított', 'drága', 'kézzel készült'], why: '{一次性杯子|yícìxìng bēizi} „eldobható pohár".' },
+    { q: 'Mit jelent a {白费|báifèi}?', a: 'hiábavaló', wrong: ['ingyenes', 'fehér', 'sikeres'], why: '{努力没有白费|nǔlì méiyǒu báifèi}.' },
+    { q: 'Mit jelent a {参与|cānyù}?', a: 'részt vesz', wrong: ['megtilt', 'megfigyel', 'elkerül'], why: '{每个人都参与|měi ge rén dōu cānyù}.' },
+    { q: 'Mit jelent: {保护环境，人人有责|bǎohù huánjìng, rénrén yǒu zé}。', a: 'A környezet védelme mindenki dolga.', wrong: ['A környezetet senki sem védi.', 'Csak a kormány védheti a környezetet.', 'A környezet mindenkit megvéd.'], why: '{人人有责|rénrén yǒu zé} „mindenkinek kötelessége".' },
+    { q: 'Mit jelent a {改善|gǎishàn}?', a: 'javul', wrong: ['romlik', 'eltűnik', 'változatlan'], why: '{空气逐渐改善了|kōngqì zhújiàn gǎishàn le}.' },
+    { q: 'Mit jelent a {口罩|kǒuzhào}?', a: 'maszk', wrong: ['sál', 'kesztyű', 'szemüveg'], why: '{戴口罩|dài kǒuzhào} „maszkot visel".' }
+  ]
 }
 
 ];
