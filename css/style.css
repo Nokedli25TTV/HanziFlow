@@ -1616,7 +1616,7 @@ html.lesson-steps.ls-round .hf-tabbar { display: none; }
 .py-mode-row { grid-template-columns: 1fr; }
 @media (min-width: 600px) { .py-mode-row { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 .py-level-row { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-@media (min-width: 600px) { .py-level-row { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+@media (min-width: 600px) { .py-level-row { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 
 /* tábla */
 .py-tabs { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }

@@ -49,7 +49,18 @@ const HANZIFLOW_TESTS = [
   { id: 'h4d', level: 4, title: '4. témazáró', lessons: [66, 67, 68, 69, 70],
     topics: 'A szülők látogatása, esküvő, előléptetés, vita egy cikkről, egy év Sanghajban.' },
   { id: 'h4z', level: 4, title: 'Szintzáró: HSK 4', lessons: [51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70], final: true,
-    topics: 'A HSK 4 mind a húsz leckéje egy nagyobb dolgozatban.' }
+    topics: 'A HSK 4 mind a húsz leckéje egy nagyobb dolgozatban.' },
+
+  { id: 'h5a', level: 5, title: '1. témazáró', lessons: [71, 72, 73, 74, 75],
+    topics: 'Új projekt, döntés a jövőről, a kínai orvosnál, váratlan vendég, egy változó város.' },
+  { id: 'h5b', level: 5, title: '2. témazáró', lessons: [76, 77, 78, 79, 80],
+    topics: 'Nagymama születésnapja, a tavaszi ünnep, kalligráfia a neten, feszültség a csapatban, nyelvtanulás.' },
+  { id: 'h5c', level: 5, title: '3. témazáró', lessons: [81, 82, 83, 84, 85],
+    topics: 'Vásárlási láz, kék ég Sanghaj felett, utazás Jünnanba, saját lakás, kínai szólások.' },
+  { id: 'h5d', level: 5, title: '4. témazáró', lessons: [86, 87, 88, 89, 90],
+    topics: 'Önkéntes hétvége, egy írónő estje, mesterséges intelligencia, vendégség, búcsú Sanghajtól.' },
+  { id: 'h5z', level: 5, title: 'Szintzáró: HSK 5', lessons: [71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90], final: true,
+    topics: 'A HSK 5 mind a húsz leckéje egy nagyobb dolgozatban.' }
 ];
 
 const HANZIFLOW_TEST_PARTS = [
