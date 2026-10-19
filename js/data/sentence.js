@@ -7,7 +7,7 @@
                           key = rövid név a statisztikához; a text-ben lehet jelölés
    HANZIFLOW_SM_FORMULA   a szórend-képlet a lap tetején: [kérdés, jelölés]
    HANZIFLOW_SM_PARTICLES a szócskák: { zh, py, level, family, rule, short }
-                          family: q (mondatvégi), de (的 / 得 / 地), asp (了 / 过 / 着)
+                          family: q (mondatvégi), de (的 / 得 / 地), asp (了 / 过 / 着), lit (之 / 所 / 而 / 以 — csak egymás rossz válaszai)
    HANZIFLOW_SM_BUILD     Sorba rakás: [magyar, [kártyák a helyes sorrendben], írásjel, szabály, szint, [más jó sorrendek]?]
                           a más jó sorrend a kártyák sorszámaiból áll: '1 0 2 3'
    HANZIFLOW_SM_FILL      Szócskák: [mondat ＿ hellyel, szócska, magyar, [más jó szócskák]?, szabály, szint]
@@ -99,7 +99,26 @@ const HANZIFLOW_SM_RULES = [
     ex: [['{难道|nán·dào}{你|nǐ}{不|bù}{知道|zhī·dào}{吗|ma}？', 'Csak nem tudod?'], ['{你|nǐ}{不是|bú shì}{去|qù}{过|guo}{北京|Běi·jīng}{吗|ma}？', 'Hát nem jártál már Pekingben?']] },
   { id: 'cause', key: '使 · 让', level: 4, title: '使 / 让: ami hat, akire hat, és ami történik vele',
     text: 'A + {使|shǐ} / {让|ràng} + B + ige vagy melléknév: előbb az ok, aztán akire hat, végül a hatás. {这件事让我很感动|zhè jiàn shì ràng wǒ hěn gǎn·dòng} (ez nagyon meghatott). A B nem maradhat el.',
-    ex: [['{老师|lǎo·shī}{的|de}{话|huà}{让|ràng}{大家|dà·jiā}{很|hěn}{感动|gǎn·dòng}。', 'A tanár szavai mindenkit meghatottak.']] }
+    ex: [['{老师|lǎo·shī}{的|de}{话|huà}{让|ràng}{大家|dà·jiā}{很|hěn}{感动|gǎn·dòng}。', 'A tanár szavai mindenkit meghatottak.']] },
+  /* HSK 5 */
+  { id: 'lit', key: '之 · 所 · 而 · 以', level: 5, title: 'Az írott nyelv szócskái: 之, 所, 而, 以',
+    text: 'A {之|zhī} a {的|de} írott párja: {城市之一|chéng shì zhī yī} (az egyik város), {三天之后|sān tiān zhī hòu} (három nap múlva). A {所|suǒ} az ige elé kerül: {被大家所熟悉|bèi dà jiā suǒ shú xī}, {我所知道的|wǒ suǒ zhī dào de} (amit én tudok). Az {而|ér} összeköt vagy szembeállít: {不是结束|bú shì jié shù}，{而是开始|ér shì kāi shǐ}. Az {以|yǐ} eszközt vagy célt jelöl: {以客户为中心|yǐ kè hù wéi zhōng xīn}, {以免|yǐ miǎn}, {难以|nán yǐ}.',
+    ex: [['{这|zhè}{是|shì}{中国|Zhōng·guó}{最|zuì}{大|dà}{的|de}{城市|chéng·shì}{之一|zhī yī}。', 'Ez Kína egyik legnagyobb városa.'], ['{这|zhè}{不|bú}{是|shì}{结束|jié shù}，{而|ér}{是|shì}{新|xīn}{的|de}{开始|kāi·shǐ}。', 'Ez nem a vég, hanem egy új kezdet.']] },
+  { id: 'topic', key: 'Téma elöl', level: 5, title: 'A téma a mondat elejére kerülhet',
+    text: 'A kínaiban gyakran előre kerül, amiről beszélünk — akár a tárgy is —, és utána jön, amit mondunk róla: {这本书我看过三遍|zhè běn shū wǒ kàn guo sān biàn} (ezt a könyvet háromszor olvastam). A tárgy ilyenkor nem ismétlődik az ige után, a téma mögött pedig az alany és a határozók a megszokott sorrendben jönnek.',
+    ex: [['{这|zhè}{件|jiàn}{事|shì}{我|wǒ}{已经|yǐ·jīng}{告诉|gào·su}{他|tā}{了|le}。', 'Ezt az ügyet már elmondtam neki.'], ['{那|nà}{部|bù}{电影|diàn·yǐng}{我|wǒ}{看|kàn}{过|guo}{两|liǎng}{遍|biàn}。', 'Azt a filmet kétszer láttam.']] },
+  { id: 'pair5', key: 'Választás, feltétel', level: 5, title: 'Kötőszó-párok: 与其 … 不如, 宁可 … 也不, 除非 … 否则, 哪怕 … 也',
+    text: 'A pár első fele az első tagmondatba, a második a másodikba kerül. A {不如|bù rú} és a {否则|fǒu·zé} a tagmondat elején áll, a {也|yě} viszont határozószó: az alany után, az állítmány előtt — {哪怕下雨|nǎ pà xià yǔ}，{我也去|wǒ yě qù}. A {与其|yǔ qí} után az elvetett, a {不如|bù rú} után a jobb lehetőség jön.',
+    ex: [['{与其|yǔ qí}{在|zài}{家|jiā}{等|děng}，{不如|bù rú}{出去|chū qù}{找|zhǎo}{找|zhao}。', 'Ahelyett, hogy otthon várnánk, inkább menjünk keresni.'], ['{哪怕|nǎ pà}{下|xià}{大|dà}{雨|yǔ}，{比赛|bǐ·sài}{也|yě}{照常|zhào cháng}{进行|jìn xíng}。', 'Még ha zuhog is, a meccset megtartják.']] },
+  { id: 'frame', key: 'Keret elöl', level: 5, title: 'Keret a mondat elején: 在 … 下, 随着 …, 就 … 而言, 自从 … 以来',
+    text: 'A körülményt, feltételt vagy nézőpontot megadó keret a mondat elejére, az alany elé kerül, és vessző választja el: {在大家的帮助下|zài dà jiā de bāng zhù xià}，{我完成了任务|wǒ wán chéng le rèn wu}. Az alany után, az ige előtt is állhat, de a mondat végére soha.',
+    ex: [['{在|zài}{大家|dà·jiā}{的|de}{帮助|bāng·zhù}{下|xià}，{我们|wǒ·men}{按时|àn shí}{完成|wán·chéng}{了|le}{项目|xiàng·mù}。', 'Mindenki segítségével időre befejeztük a projektet.'], ['{就|jiù}{价格|jià gé}{而言|ér yán}，{这|zhè}{家|jiā}{更|gèng}{便宜|pián·yi}。', 'Ami az árat illeti, ez a hely olcsóbb.']] },
+  { id: 'compare5', key: '与…相比 · 越是…越', level: 5, title: 'Összehasonlítás: 与 … 相比 és 越是 … 越',
+    text: 'A {与|yǔ} (vagy {跟|gēn}) … {相比|xiāng bǐ} keret a mondat elején áll, utána jön, ami más lett: {与去年相比|yǔ qù nián xiāng bǐ}，{今年冷多了|jīn nián lěng duō le}. A {越是|yuè shì} … {越|yuè} … mindkét fele az állítmány előtt áll, és a második tagba nem kerül {很|hěn} vagy {更|gèng}.',
+    ex: [['{与|yǔ}{去年|qù nián}{相比|xiāng bǐ}，{今年|jīn nián}{的|de}{游客|yóu kè}{增加|zēng jiā}{了|le}{一倍|yí bèi}。', 'Tavalyhoz képest idén kétszer annyi turista jött.'], ['{越|yuè}{是|shì}{着急|zháo jí}，{越|yuè}{容易|róng yì}{出|chū}{错|cuò}。', 'Minél jobban sietsz, annál könnyebben hibázol.']] },
+  { id: 'dneg', key: 'Kettős tagadás', level: 5, title: 'Kettős tagadás: 非 … 不可, 没有 … 不',
+    text: 'Két tagadás együtt nyomatékos állítás. {非|fēi} + ige (vagy alany + ige) + {不可|bù kě}, a {不可|bù kě} a mondat végén: {这件事非你去不可|zhè jiàn shì fēi nǐ qù bù kě} (ezt feltétlenül neked kell intézned). {没有|méi yǒu} + főnév + {不|bù} + ige: {没有人不喜欢她|méi yǒu rén bù xǐ huan tā} (nincs, aki ne kedvelné).',
+    ex: [['{这|zhè}{次|cì}{会议|huì·yì}{非|fēi}{你|nǐ}{参加|cān jiā}{不|bù}{可|kě}。', 'Ezen az értekezleten feltétlenül részt kell venned.'], ['{我们|wǒ·men}{班|bān}{没有|méi·yǒu}{人|rén}{不|bú}{认识|rèn·shi}{他|tā}。', 'Az osztályunkban nincs, aki ne ismerné.']] }
 ];
 
 const HANZIFLOW_SM_FORMULA = [
@@ -116,7 +135,11 @@ const HANZIFLOW_SM_PARTICLES = [
   { zh: '过', py: 'guo', level: 2, family: 'asp', rule: 'guo',   short: 'tapasztalat: csináltam már' },
   { zh: '着', py: 'zhe', level: 2, family: 'asp', rule: 'zhe',   short: 'tartós állapot' },
   { zh: '得', py: 'de',  level: 2, family: 'de',  rule: 'deg',   short: 'ige + 得 + milyen jól' },
-  { zh: '地', py: 'de',  level: 3, family: 'de',  rule: 'di',    short: 'hogyan + 地 + ige' }
+  { zh: '地', py: 'de',  level: 3, family: 'de',  rule: 'di',    short: 'hogyan + 地 + ige' },
+  { zh: '之', py: 'zhī', level: 5, family: 'lit', rule: 'lit',   short: 'a 的 írott párja: 之一, 之前, 之后' },
+  { zh: '所', py: 'suǒ', level: 5, family: 'lit', rule: 'lit',   short: '所 + ige: 被 … 所, 所 + ige + 的' },
+  { zh: '而', py: 'ér',  level: 5, family: 'lit', rule: 'lit',   short: 'összeköt, szembeállít: 而是, 而言' },
+  { zh: '以', py: 'yǐ',  level: 5, family: 'lit', rule: 'lit',   short: 'eszköz és cél: 以 … 为, 以免, 难以' }
 ];
 
 const HANZIFLOW_SM_BUILD = [
@@ -178,7 +201,25 @@ const HANZIFLOW_SM_BUILD = [
   ['Csak nem felejtetted el?', ['{你|nǐ}', '{难道|nán·dào}', '{忘|wàng}{了|le}', '{吗|ma}'], '？', 'rhet', 4, ['1 0 2 3']],
   ['Nem azt mondtad, hogy ma eljössz?', ['{你|nǐ}', '{不是|bú shì}', '{说|shuō}{今天|jīn·tiān}{来|lái}', '{吗|ma}'], '？', 'rhet', 4],
   ['A tanár szavai mindenkit meghatottak.', ['{老师|lǎo·shī}{的|de}{话|huà}', '{让|ràng}', '{大家|dà·jiā}', '{很|hěn}{感动|gǎn·dòng}'], '。', 'cause', 4],
-  ['A szelektív gyűjtés tisztábbá tette a várost.', ['{垃圾|lā·jī}{分类|fēn lèi}', '{使|shǐ}', '{城市|chéng·shì}', '{变|biàn}{得|de}{更|gèng}{干净|gān·jìng}{了|le}'], '。', 'cause', 4]
+  ['A szelektív gyűjtés tisztábbá tette a várost.', ['{垃圾|lā·jī}{分类|fēn lèi}', '{使|shǐ}', '{城市|chéng·shì}', '{变|biàn}{得|de}{更|gèng}{干净|gān·jìng}{了|le}'], '。', 'cause', 4],
+  /* HSK 5 */
+  ['Ezt a könyvet háromszor olvastam.', ['{这|zhè}{本|běn}{书|shū}', '{我|wǒ}', '{看|kàn}{过|guo}', '{三|sān}{遍|biàn}'], '。', 'topic', 5, ['1 2 0 3', '1 2 3 0']],
+  ['Ezt az ügyet már elmondtam neki.', ['{这|zhè}{件|jiàn}{事|shì}', '{我|wǒ}', '{已经|yǐ·jīng}', '{告诉|gào·su}{他|tā}{了|le}'], '。', 'topic', 5, ['1 0 2 3']],
+  ['Ahelyett, hogy otthon várnánk, inkább menjünk keresni.', ['{与其|yǔ qí}', '{在|zài}{家|jiā}{等|děng}', '{不如|bù rú}', '{出去|chū qù}{找|zhǎo}{找|zhao}'], '。', 'pair5', 5],
+  ['Inkább gyalogolok, mint hogy a buszon szorongjak.', ['{我|wǒ}', '{宁可|nìng kě}', '{走|zǒu}{路|lù}', '{也|yě}{不|bù}', '{挤|jǐ}{公共汽车|gōng·gòng·qì·chē}'], '。', 'pair5', 5],
+  ['Még ha zuhog is, a meccset megtartják.', ['{哪怕|nǎ pà}', '{下|xià}{大|dà}{雨|yǔ}', '{比赛|bǐ·sài}', '{也|yě}', '{照常|zhào cháng}{进行|jìn xíng}'], '。', 'pair5', 5, ['2 0 1 3 4']],
+  ['Csak ha beleegyezel, különben nem változtatunk a terven.', ['{除非|chú fēi}', '{你|nǐ}{同意|tóng yì}', '{否则|fǒu·zé}', '{我们|wǒ·men}', '{不|bú}{会|huì}{改变|gǎi biàn}{计划|jì·huà}'], '。', 'pair5', 5],
+  ['Mindenki segítségével időre befejeztük a projektet.', ['{在|zài}{大家|dà·jiā}{的|de}{帮助|bāng·zhù}{下|xià}', '{我们|wǒ·men}', '{按时|àn shí}', '{完成|wán·chéng}{了|le}{项目|xiàng·mù}'], '。', 'frame', 5, ['1 0 2 3']],
+  ['Ahogy telik az idő, egyre jobban szeretem ezt a várost.', ['{随着|suí·zhe}{时间|shí·jiān}{的|de}{推移|tuī yí}', '{我|wǒ}', '{越来越|yuè lái yuè}', '{喜欢|xǐ·huan}{这|zhè}{座|zuò}{城市|chéng·shì}'], '。', 'frame', 5, ['1 0 2 3']],
+  ['Ami az árat illeti, ez a hely olcsóbb.', ['{就|jiù}{价格|jià gé}{而言|ér yán}', '{这|zhè}{家|jiā}', '{更|gèng}', '{便宜|pián·yi}'], '。', 'frame', 5, ['1 0 2 3']],
+  ['Amióta Sanghajba költözött, minden nap biciklivel jár dolgozni.', ['{自从|zì cóng}{搬|bān}{到|dào}{上海|Shàng·hǎi}{以来|yǐ lái}', '{他|tā}', '{每天|měi tiān}', '{骑|qí}{车|chē}{上班|shàng bān}'], '。', 'frame', 5, ['1 0 2 3']],
+  ['Tavalyhoz képest idén kétszer annyi turista jött.', ['{与|yǔ}{去年|qù nián}{相比|xiāng bǐ}', '{今年|jīn nián}{的|de}{游客|yóu kè}', '{增加|zēng jiā}{了|le}', '{一倍|yí bèi}'], '。', 'compare5', 5, ['1 0 2 3']],
+  ['Minél jobban sietsz, annál könnyebben hibázol.', ['{越|yuè}{是|shì}', '{着急|zháo jí}', '{越|yuè}', '{容易|róng yì}{出|chū}{错|cuò}'], '。', 'compare5', 5],
+  ['Ezen az értekezleten feltétlenül részt kell venned.', ['{这|zhè}{次|cì}{会议|huì·yì}', '{非|fēi}', '{你|nǐ}{参加|cān jiā}', '{不|bù}{可|kě}'], '。', 'dneg', 5, ['1 2 0 3']],
+  ['Az osztályunkban nincs, aki ne ismerné.', ['{我们|wǒ·men}{班|bān}', '{没有|méi·yǒu}{人|rén}', '{不|bú}', '{认识|rèn·shi}{他|tā}'], '。', 'dneg', 5],
+  ['Ez Kína egyik legnagyobb városa.', ['{这|zhè}', '{是|shì}', '{中国|Zhōng·guó}{最|zuì}{大|dà}{的|de}{城市|chéng·shì}', '{之一|zhī yī}'], '。', 'lit', 5],
+  ['Ezt a történetet sokan ismerik.', ['{这|zhè}{个|ge}{故事|gù·shi}', '{被|bèi}', '{很|hěn}{多|duō}{人|rén}', '{所|suǒ}{熟悉|shú xī}'], '。', 'lit', 5],
+  ['Ez nem a vég, hanem egy új kezdet.', ['{这|zhè}', '{不|bú}{是|shì}{结束|jié shù}', '{而|ér}{是|shì}', '{新|xīn}{的|de}{开始|kāi·shǐ}'], '。', 'lit', 5]
 ];
 
 const HANZIFLOW_SM_FILL = [
@@ -231,5 +272,22 @@ const HANZIFLOW_SM_FILL = [
   ['{他|tā}{一下子|yí xià·zi}{就|jiù}{把|bǎ}{蛋糕|dàn gāo}{吃|chī}{完|wán}＿。', '了', 'Egy szempillantás alatt megette a tortát.', [], 'le', 4],
   ['{难道|nán·dào}{你|nǐ}{不|bù}{知道|zhī·dào}＿？', '吗', 'Csak nem tudod?', ['呢'], 'rhet', 4],
   ['{你|nǐ}{不是|bú shì}{说|shuō}{今天|jīn·tiān}{有|yǒu}{空|kòng}＿？', '吗', 'Nem azt mondtad, hogy ma ráérsz?', ['呢', '了'], 'rhet', 4],
-  ['{既然|jì·rán}{大家|dà·jiā}{都|dōu}{同意|tóng yì}{了|le}，{我们|wǒ·men}{就|jiù}{这么|zhè·me}{办|bàn}＿。', '吧', 'Ha már mindenki egyetért, csináljuk így.', ['了'], 'ba_', 4]
+  ['{既然|jì·rán}{大家|dà·jiā}{都|dōu}{同意|tóng yì}{了|le}，{我们|wǒ·men}{就|jiù}{这么|zhè·me}{办|bàn}＿。', '吧', 'Ha már mindenki egyetért, csináljuk így.', ['了'], 'ba_', 4],
+  /* HSK 5 */
+  ['{这|zhè}{是|shì}{中国|Zhōng·guó}{最|zuì}{大|dà}{的|de}{城市|chéng·shì}＿{一|yī}。', '之', 'Ez Kína egyik legnagyobb városa.', [], 'lit', 5],
+  ['{三|sān}{天|tiān}＿{后|hòu}，{他|tā}{终于|zhōng yú}{回来|huí·lái}{了|le}。', '之', 'Három nap múlva végre hazajött.', ['以'], 'lit', 5],
+  ['{这|zhè}{个|ge}{故事|gù·shi}{被|bèi}{很|hěn}{多|duō}{人|rén}＿{熟悉|shú xī}。', '所', 'Ezt a történetet sokan ismerik.', [], 'lit', 5],
+  ['{我|wǒ}＿{知道|zhī·dào}{的|de}{就|jiù}{这|zhè}{些|xiē}。', '所', 'Amit én tudok, az csak ennyi.', [], 'lit', 5],
+  ['{这|zhè}{不|bú}{是|shì}{结束|jié shù}，＿{是|shì}{新|xīn}{的|de}{开始|kāi·shǐ}。', '而', 'Ez nem a vég, hanem egy új kezdet.', [], 'lit', 5],
+  ['{对|duì}{我|wǒ}＿{言|yán}，{这|zhè}{件|jiàn}{事|shì}{并|bìng}{不|bù}{难|nán}。', '而', 'Számomra ez egyáltalán nem nehéz.', [], 'lit', 5],
+  ['{这|zhè}{次|cì}{会议|huì·yì}＿{环境|huán·jìng}{保护|bǎo hù}{为|wéi}{主题|zhǔ tí}。', '以', 'Az értekezlet témája a környezetvédelem.', [], 'lit', 5],
+  ['{这里|zhè·lǐ}{的|de}{变化|biàn huà}{大|dà}{得|de}{让|ràng}{人|rén}{难|nán}＿{想象|xiǎng xiàng}。', '以', 'Az itteni változás elképzelhetetlenül nagy.', [], 'lit', 5],
+  ['{出|chū}{门|mén}{前|qián}{检查|jiǎn chá}{一下|yí xià}{门|mén}{窗|chuāng}，＿{免|miǎn}{出|chū}{问题|wèn·tí}。', '以', 'Indulás előtt nézd meg az ajtót és az ablakot, nehogy baj legyen.', [], 'lit', 5],
+  ['{大家|dà·jiā}{担心|dān xīn}＿{无非|wú fēi}{是|shì}{时间|shí·jiān}{不|bú}{够|gòu}。', '的', 'Mindenki csupán amiatt aggódik, hogy nem lesz elég idő.', [], 'de', 5],
+  ['{他|tā}{不知不觉|bù zhī bù jué}＿{睡|shuì}{着|zháo}{了|le}。', '地', 'Észrevétlenül elaludt.', ['的'], 'di', 5],
+  ['{你|nǐ}{何必|hé bì}{为|wèi}{这|zhè}{点儿|diǎnr}{小|xiǎo}{事|shì}{生气|shēng qì}＿？', '呢', 'Minek mérgelődsz ilyen apróság miatt?', ['了'], 'ne', 5],
+  ['{这|zhè}{本|běn}{书|shū}{我|wǒ}{看|kàn}＿{三|sān}{遍|biàn}{了|le}。', '了', 'Ezt a könyvet már háromszor olvastam.', ['过'], 'topic', 5],
+  ['{桌子|zhuō·zi}{上|shang}{放|fàng}＿{一|yì}{盒|hé}{点心|diǎn·xin}，{是|shì}{谁|shéi}{送|sòng}{的|de}？', '着', 'Az asztalon egy doboz sütemény van — ki hozta?', ['了', '过'], 'zhe', 5],
+  ['{他|tā}{气|qì}＿{说|shuō}{不|bu}{出|chū}{话|huà}{来|lái}。', '得', 'Annyira dühös volt, hogy szólni sem tudott.', [], 'deg', 5],
+  ['{难道|nán·dào}{你|nǐ}{连|lián}{这|zhè}{个|ge}{都|dōu}{不|bù}{知道|zhī·dào}＿？', '吗', 'Csak nem tudod még ezt sem?', ['呢'], 'rhet', 5]
 ];

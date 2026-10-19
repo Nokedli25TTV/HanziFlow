@@ -16,7 +16,7 @@ mellette **gyakorló modulok**, **időzített ismétlés** és **statisztika**.
 - **Fiók:** ugyanaz a Firebase-projekt, mint a NihonCore-é (egy belépés mindkettőhöz). A HanziFlow a
   `users/{uid}/apps/hanziflow` dokumentumba ír — a Firestore-szabályokban ezt a helyet engedélyezni kell.
 - **A user nyelve magyar: válaszolj magyarul**, a felület magyar.
-- **Írás:** egyszerűsített (简体). **Cél:** HSK 1–5 kész (91 lecke, l0–l90, próbavizsga is); a Mérőszavak és a Mondat-Mester HSK 4-ig megy.
+- **Írás:** egyszerűsített (简体). **Cél:** HSK 1–5 kész (91 lecke, l0–l90, próbavizsga, Mérőszavak és Mondat-Mester is).
 
 ## 2. Munkaszabályok (user-döntések)
 
@@ -57,8 +57,8 @@ js/pinyin.js          HanziFlowPinyin — pinyin-motor (a pages/pinyin.html hasz
 js/data/core.js       HANZIFLOW_PATH + HANZIFLOW_PATH_UNITS (a tanulási út)
 js/data/course.js     HANZIFLOW_COURSE (a leckék; a séma a fájl elején)
 js/data/tones.js      a Tónus-tréner adatai
-js/data/measure.js    a Mérőszavak adatai (40 mérőszó HSK 1–4, főnevek, mondatok, szabályok; a séma a fájl elején)
-js/data/sentence.js   a Mondat-Mester adatai (27 szabály, 55 sorba rakós és 40 szócskás mondat, HSK 1–4; séma a fájl elején)
+js/data/measure.js    a Mérőszavak adatai (54 mérőszó HSK 1–5, főnevek, mondatok, szabályok; a séma a fájl elején)
+js/data/sentence.js   a Mondat-Mester adatai (33 szabály, 72 sorba rakós és 56 szócskás mondat, HSK 1–5; séma a fájl elején)
 js/data/numbers.js    a Dátum, idő, pénz alapelemei és szabályai; a kínai alakot az app.js generátora állítja elő
 js/data/exam.js       a próbavizsga részei szintenként és a saját feladatbank (356 feladat, 11 típus; séma a fájl elején)
 js/data/tests.js      a dolgozatok listája, részei és a jegyhatárok; a kérdések a course.js leckéiből jönnek
@@ -124,13 +124,18 @@ Színt csak tokenből; 12 px alatt nincs szöveg; érintési célpont ≥ 44 px;
 - [x] A dolgozatok és a próbavizsgák nem kötelező lépésként az úton (core.js, `optional: true`): 5 leckénként egy
   témazáró-fejezet, a szint végén szintzáró + próbavizsga. Nem állítják meg az utat, 60%-tól pipát kapnak; a lépésről
   nyitott oldalon csak a lépés saját dolgozata / szintje teljesíti a lépést (`skipPath`).
-- [x] A gyakorló modulok (Pinyin, Mérőszavak, Mondat-Mester, Dátum/idő/pénz) 24 nem kötelező lépéssel a leckék
+- [x] A gyakorló modulok (Pinyin, Mérőszavak, Mondat-Mester, Dátum/idő/pénz) 28 nem kötelező lépéssel a leckék
   fejezeteiben, előre beállított körrel (`preset.set`); a lépést csak a beállított mód teljesíti (onSession).
   A lecke-oldal „Gyakorlás" listája ezeket is mutatja.
 - Élő oldal: https://nokedli25ttv.github.io/HanziFlow/ (GitHub Pages, main ág, 2026-10-18 óta).
 - [x] Mérőszavak és Mondat-Mester HSK 4-es anyaga: 11 új mérőszó (座 层 场 棵 封 首 段 道 片 群 部), 14 mondat; 6 új szórend-szabály
   (kötőszó helye, 却/就/否则, határozók sorrendje, irány + tárgy, szónoki kérdés, 使/让), 14 sorba rakós és 12 szócskás mondat.
   A szintválasztóban a régi `all` azonosító maradt „HSK 1–3" (az út HSK 3-as lépései erre állnak), az új `hsk4` = „HSK 1–4".
+- [x] Mérőszavak és Mondat-Mester HSK 5-ös anyaga (`hsk5` = „HSK 1–5"): 14 új mérőszó (套 项 幅 颗 根 朵 阵 批 架 支 届 串 门 间),
+  21 mondat, 5 szabály (颗/棵, 根/条, 支/只, 套/间, 阵/场); a régi főnevek és mondatok „más jó" listái kiegészítve. 6 új szórend-szabály
+  (írott szócskák, téma elöl, kötőszó-párok, keret elöl, összehasonlítás, kettős tagadás), 17 sorba rakós és 16 szócskás mondat;
+  új szócska-család: `lit` (之 所 而 以) — ezek csak egymás rossz válaszai. Út: mw-pick-l78, sm-build-l80, sm-fill-l82, mw-sent-l84.
+  Próba (scratchpad): `mw5-pools.js` (mely mérőszó lehet rossz válasz), `mw5-cards.js`, `sm5-cards.js`, `sm5-rounds.js`.
 - [ ] A NihonCore `sw.js`-ében a cache-törlést a saját előtagra kell szűkíteni (különben a HanziFlow offline-tárát is törli).
 - [ ] Firestore-szabály a `users/{uid}/apps/{app}` helyre (a user Firebase-konzolján).
 - [ ] A kínai mondatokat és a pinyint anyanyelvi lektor nem látta; a hangot valódi telefonon kell kipróbálni.

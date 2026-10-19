@@ -7,8 +7,8 @@ Kínai (mandarin) nyelvtanuló webapp magyarul, kezdőknek.
 - **Pinyin a hanzi fölött**, ki- és bekapcsolható; minden kínai mondat meghallgatható.
 - **Tónus-tréner**: a négy tónus hallás után, az ékezetekből és kétszótagú szavakban.
 - **Pinyin-tábla**: minden szótag a négy tónussal, és a szavak pinyinjének beírása ellenőrzéssel (HSK 1–5).
-- **Mérőszavak**: 个, 本, 张, 条… (HSK 1–4) csoportonként, gyakorlás szókapcsolatban, mondatban és számolásban.
-- **Mondat-Mester**: a kínai szórend szabályai (HSK 1–4), a szavak sorba rakása és a szócskák (吗, 呢, 的, 了, 得…) kitöltése.
+- **Mérőszavak**: 个, 本, 张, 条… (HSK 1–5) csoportonként, gyakorlás szókapcsolatban, mondatban és számolásban.
+- **Mondat-Mester**: a kínai szórend szabályai (HSK 1–5), a szavak sorba rakása és a szócskák (吗, 呢, 的, 了, 得, 之, 所…) kitöltése.
 - **Dátum, idő, pénz**: számok, dátumok, időpontok és árak olvasása, kimondása és hallás utáni felismerése, minden körben új feladatokkal.
 - **HSK próbavizsga**: HSK 1–5 szintű próbavizsga időre (hallás, olvasás, írás), pontszámmal és a válaszok átnézésével.
 - **Dolgozatok**: témazáró öt-öt lecke után és szintzáró (HSK 1–5), iskolai jeggyel; a hibák bekerülnek a napi ismétlésbe.

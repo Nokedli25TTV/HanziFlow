@@ -4995,7 +4995,8 @@ function initMeasurePage() {
     { id: 'hsk1', name: 'HSK 1',   max: 1 },
     { id: 'hsk2', name: 'HSK 1–2', max: 2 },
     { id: 'all',  name: 'HSK 1–3', max: 3 },
-    { id: 'hsk4', name: 'HSK 1–4', max: 4 }
+    { id: 'hsk4', name: 'HSK 1–4', max: 4 },
+    { id: 'hsk5', name: 'HSK 1–5', max: 5 }
   ];
   const DEFAULT_PRE = ['一', '两', '三', '这', '那', '几'];
   const PRE = { '一': ['', 'egy'], '两': ['liǎng', 'két'], '三': ['sān', 'három'], '这': ['zhè', 'ez a'], '那': ['nà', 'az a'], '几': ['jǐ', 'hány'] };
@@ -5542,7 +5543,8 @@ function initSentencePage() {
     { id: 'hsk1', name: 'HSK 1',   max: 1 },
     { id: 'hsk2', name: 'HSK 1–2', max: 2 },
     { id: 'all',  name: 'HSK 1–3', max: 3 },
-    { id: 'hsk4', name: 'HSK 1–4', max: 4 }
+    { id: 'hsk4', name: 'HSK 1–4', max: 4 },
+    { id: 'hsk5', name: 'HSK 1–5', max: 5 }
   ];
   const RULE = {};
   RULES.forEach(r => { RULE[r.id] = r; });
@@ -5591,16 +5593,18 @@ function initSentencePage() {
     while (tries++ < 30 && answers.indexOf(bank.map(t => t.text).join('')) >= 0) bank = shuffle(tiles);
     return { kind: 'build', b: b, rule: b.rule, tiles: tiles, orders: orders, answers: answers, bank: bank, placed: [] };
   }
-  // Szócskák: előbb a „rokonok" (的 – 得 – 地, 了 – 过 – 着, 吗 – 呢 – 吧), aztán a többi
+  // Szócskák: előbb a „rokonok" (的 – 得 – 地, 了 – 过 – 着, 吗 – 呢 – 吧), aztán a többi.
+  // Az írott szócskák (之, 所, 而, 以) csak egymásnak rossz válaszai: a 之 sok helyen a 的 írott párja lehetne.
   function particleDistractors(f) {
     const block = {};
     block[f.p.zh] = true;
     f.also.forEach(x => { block[x] = true; });
     const lv = Math.max(levelMax(), f.level);
-    const pool = PARTS.filter(p => !block[p.zh] && p.level <= lv);
+    const fits = p => p.family !== 'lit' || f.p.family === 'lit';
+    const pool = PARTS.filter(p => !block[p.zh] && p.level <= lv && fits(p));
     const fam = shuffle(pool.filter(p => p.family === f.p.family));
     const out = fam.slice(0, 2).concat(shuffle(pool.filter(p => p.family !== f.p.family)), fam.slice(2)).slice(0, 3);
-    PARTS.forEach(p => { if (out.length < 3 && !block[p.zh] && out.indexOf(p) < 0) out.push(p); });
+    PARTS.forEach(p => { if (out.length < 3 && !block[p.zh] && fits(p) && out.indexOf(p) < 0) out.push(p); });
     return out;
   }
   function fillCard(f) {
@@ -5649,7 +5653,7 @@ function initSentencePage() {
     if (!el) return;
     const p = loadProfile();
     const formulaSay = FORMULA.map(f => reading(f[1])).join('');
-    const tabs = [1, 2, 3, 4].map(l => `<button class="py-tab${l === tab ? ' active' : ''}" type="button" data-tab="${l}" aria-pressed="${l === tab}">HSK ${l}</button>`).join('');
+    const tabs = [1, 2, 3, 4, 5].map(l => `<button class="py-tab${l === tab ? ' active' : ''}" type="button" data-tab="${l}" aria-pressed="${l === tab}">HSK ${l}</button>`).join('');
     const cards = RULES.filter(r => r.level === tab).map(r => {
       const st = p.ruleStats[r.key];
       const pct = st && st.attempts ? Math.round(st.correct / st.attempts * 100) : null;
@@ -6931,7 +6935,7 @@ function initExamPage() {
       </div>
       <div class="lobby-section">
         <div class="lobby-section-label">Szint</div>
-        <div class="cj-mode-row mw-level-row ex-level-row">${levels}</div>
+        <div class="cj-mode-row mw-level-row">${levels}</div>
       </div>
       <div class="lobby-section">
         <div class="lobby-section-label">Időmérő</div>
