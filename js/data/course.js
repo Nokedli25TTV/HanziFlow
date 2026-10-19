@@ -16058,6 +16058,323 @@ const HANZIFLOW_COURSE = [
     { q: 'Mit jelent a {软件|ruǎnjiàn}?', a: 'szoftver', wrong: ['hardver', 'kábel', 'képernyő'], why: '{翻译软件|fānyì ruǎnjiàn} „fordítóprogram".' },
     { q: 'Mit jelent: {说得好|shuō de hǎo}！', a: 'Jól mondod!', wrong: ['Beszélj hangosabban!', 'Ezt nem kellett volna!', 'Mondd még egyszer!'], why: 'Egyetértés, dicséret.' }
   ]
+},
+/* ════════════════════════════════════════════════════
+   HSK 5 · 19. LECKE — 未免, 不妨, 难以, 难得, 显得
+   ════════════════════════════════════════════════════ */
+{
+  id: 'l89', no: 89, badge: '19', kicker: 'HSK 5 · 19. lecke', label: 'HSK 5 · 19. lecke',
+  title: 'Vendégségben — egy üveg bor kicsit kevés',
+  lead: 'Vendégségbe készülsz: finoman jelzed, hogy valami kissé túlzás vagy kevés (未免), javaslatot teszel (不妨), elmondod, mi nehezen hihető (难以), mi ritka és értékes (难得), és milyennek látszik valami (显得).',
+  cando: [
+    'Finoman bírálsz: 未免…了点儿 / 未免太….',
+    'Udvariasan javasolsz: 你不妨….',
+    'Elmondod, mi nehezen lehetséges (难以 + ige), és mi ritka, értékes (难得).',
+    'Leírod, milyen hatást kelt valami: 显得….'
+  ],
+  intro: [
+    'Liu úr, a cég egyik legfontosabb ügyfele, vacsorára hívja Annát és Zhou Jie-t az otthonába. Anna előző este Zhou Jie-vel tanakodik: mit vigyen ajándékba, és hogyan illik viselkedni?',
+    'Ebben a leckében a kínai udvariasság finom nyelvi eszközeit tanulod: hogyan bírálsz és javasolsz tapintatosan, hogyan fogadsz bókot, és hogyan adsz át ajándékot.'
+  ],
+  dialogue: {
+    title: 'Mit vigyek?',
+    scene: 'Péntek este, telefonon, majd szombaton Liu úr otthonában. Anna, Zhou Jie és Liu úr.',
+    lines: [
+      { who: 'Anna', zh: '{明天|míng·tiān}{去|qù}{刘|Liú}{总|zǒng}{家|jiā}{做|zuò}{客|kè}，{我|wǒ}{想|xiǎng}{送|sòng}{一|yì}{瓶|píng}{匈牙利|Xiōng·yá·lì}{葡萄酒|pú·tao jiǔ}，{会|huì}{不|bu}{会|huì}{显得|xiǎn·de}{太|tài}{随便|suí biàn}？', hu: 'Holnap Liu úrhoz megyünk vendégségbe. Arra gondoltam, egy üveg magyar bort viszek — nem tűnik túl hétköznapinak?' },
+      { who: 'Zhou Jie', zh: '{不|bú}{会|huì}。{不过|bú·guò}{只|zhǐ}{送|sòng}{一|yì}{瓶|píng}{未免|wèi miǎn}{少|shǎo}{了|le}{点儿|diǎnr}，{你|nǐ}{不妨|bù fáng}{再|zài}{带|dài}{一|yì}{盒|hé}{点心|diǎn·xin}{给|gěi}{他|tā}{的|de}{孩子|hái·zi}。', hu: 'Nem. De egyetlen üveg azért kicsit kevés — nyugodtan vihetnél egy doboz süteményt is a gyerekeinek.' },
+      { who: 'Anna', zh: '{好|hǎo}{主意|zhǔ·yi}。{听|tīng}{说|shuō}{中国|Zhōng·guó}{人|rén}{收|shōu}{到|dào}{礼物|lǐ·wù}{一般|yì·bān}{不|bù}{当|dāng}{面|miàn}{打|dǎ}{开|kāi}？', hu: 'Jó ötlet. Azt hallottam, a kínaiak az ajándékot általában nem bontják ki a vendég előtt?' },
+      { who: 'Zhou Jie', zh: '{对|duì}，{一般|yì·bān}{会|huì}{先|xiān}{客气|kè·qi}{地|de}{说|shuō}“{您|nín}{太|tài}{客气|kè·qi}{了|le}”，{等|děng}{客人|kè·rén}{走|zǒu}{了|le}{再|zài}{打|dǎ}{开|kāi}。', hu: 'Így van. Előbb udvariasan azt mondják: „Nem kellett volna", és csak a vendég távozása után bontják ki.' },
+      { who: 'Liu úr', zh: '（{第二|dì èr}{天|tiān}）{安娜|Ān·nà}，{你|nǐ}{能|néng}{来|lái}{真|zhēn}{是|shì}{难得|nán dé}！{你|nǐ}{中文|Zhōng·wén}{说|shuō}{得|de}{这么|zhè·me}{好|hǎo}，{我|wǒ}{真|zhēn}{难以|nán yǐ}{相信|xiāng·xìn}{你|nǐ}{才|cái}{来|lái}{中国|Zhōng·guó}{四|sì}{年|nián}。', hu: '(Másnap) Anna, igazán ritka öröm, hogy eljöttél! Ilyen jól beszélsz kínaiul — alig hiszem el, hogy csak négy éve vagy Kínában.' },
+      { who: 'Anna', zh: '{您|nín}{过|guò}{奖|jiǎng}{了|le}。{这|zhè}{是|shì}{我|wǒ}{从|cóng}{匈牙利|Xiōng·yá·lì}{带|dài}{来|lái}{的|de}{葡萄酒|pú·tao jiǔ}，{一点儿|yì diǎnr}{小|xiǎo}{心意|xīn·yì}。', hu: 'Túlzásba esik. Ezt a bort Magyarországról hoztam, egy kis figyelmesség.' },
+      { who: 'Liu úr', zh: '{你|nǐ}{太|tài}{客气|kè·qi}{了|le}！{来|lái}，{快|kuài}{请|qǐng}{坐|zuò}，{菜|cài}{马上|mǎ·shàng}{就|jiù}{好|hǎo}。', hu: 'Nem kellett volna! Gyere, foglalj helyet, mindjárt kész a vacsora.' }
+    ],
+    notes: [
+      'A {刘总|Liú zǒng} „Liu vezérigazgató": a {总|zǒng} a {总经理|zǒngjīnglǐ} rövidítése, udvarias megszólítás.',
+      'A {做客|zuò kè} „vendégségbe megy", az {一点儿小心意|yìdiǎnr xiǎo xīnyì} „egy kis figyelmesség" — szerény fordulat ajándék átadásakor.',
+      'A {您过奖了|nín guòjiǎng le} „túlzásba esik (a dicséretben)" — a kínai udvariasság szerint a bókot szerényen hárítjuk.'
+    ]
+  },
+  points: [
+    {
+      title: '{未免|wèimiǎn}', sub: 'azért ez kissé túl … (enyhe bírálat)',
+      pattern: 'A + {未免|wèi miǎn} + ({太|tài}) + melléknév + ({了|le}{点儿|diǎnr})',
+      body: 'A {未免|wèimiǎn} tapintatos, <b>enyhe bírálat</b>: „azért ez már kissé…". {只送一瓶未免少了点儿|zhǐ sòng yì píng wèimiǎn shǎo le diǎnr} „egy üveg azért kicsit kevés", {你这样说未免太早了|nǐ zhèyàng shuō wèimiǎn tài zǎo le} „ezt azért kicsit korai így kijelenteni". Gyakran kíséri {太|tài}, {有点儿|yǒudiǎnr} vagy {了点儿|le diǎnr}, ami tovább tompítja.',
+      examples: [
+        { zh: '{只|zhǐ}{送|sòng}{一|yì}{瓶|píng}{酒|jiǔ}{未免|wèi miǎn}{少|shǎo}{了|le}{点儿|diǎnr}。', hu: 'Egyetlen üveg bor azért kicsit kevés.' },
+        { zh: '{才|cái}{见|jiàn}{一|yí}{次|cì}{面|miàn}{就|jiù}{说|shuō}{他|tā}{不|bù}{好|hǎo}，{未免|wèi miǎn}{太|tài}{早|zǎo}{了|le}。', hu: 'Egyetlen találkozás után rossznak tartani azért kissé korai.' }
+      ]
+    },
+    {
+      title: '{不妨|bùfáng}', sub: 'nyugodtan …; nem árt, ha …',
+      pattern: '(A) + {不妨|bù fáng} + ige',
+      body: 'A {不妨|bùfáng} szó szerint „nem árt": <b>udvarias, könnyed javaslat</b>. {你不妨再带一盒点心|nǐ bùfáng zài dài yì hé diǎnxin} „nyugodtan vihetnél egy doboz süteményt is", {这个方法你不妨试试|zhège fāngfǎ nǐ bùfáng shìshi} „ezt a módszert érdemes kipróbálnod". Szelídebb, mint a {应该|yīnggāi} vagy a {最好|zuìhǎo}.',
+      examples: [
+        { zh: '{你|nǐ}{不妨|bù fáng}{再|zài}{带|dài}{一|yì}{盒|hé}{点心|diǎn·xin}{给|gěi}{孩子|hái·zi}{们|men}。', hu: 'Nyugodtan vihetnél egy doboz süteményt is a gyerekeknek.' },
+        { zh: '{这|zhè}{个|ge}{办法|bàn·fǎ}{挺|tǐng}{好|hǎo}，{你|nǐ}{不妨|bù fáng}{试|shì}{试|shi}。', hu: 'Ez a módszer elég jó, érdemes kipróbálnod.' }
+      ]
+    },
+    {
+      title: '{难以|nányǐ}', sub: 'nehezen (lehet), alig',
+      pattern: 'A + {难以|nán yǐ} + (kétszótagú) ige',
+      body: 'A {难以|nányǐ} írott szó: azt jelenti, hogy valamit <b>nehéz, szinte lehetetlen</b> megtenni. Kétszótagú ige követi: {难以相信|nányǐ xiāngxìn} „alig hihető", {难以想象|nányǐ xiǎngxiàng} „elképzelhetetlen", {难以回答|nányǐ huídá} „nehezen megválaszolható". Ne keverd a {难|nán} + egyszótagú igével ({难看|nánkàn} „csúnya").',
+      examples: [
+        { zh: '{我|wǒ}{真|zhēn}{难以|nán yǐ}{相信|xiāng·xìn}{你|nǐ}{才|cái}{来|lái}{中国|Zhōng·guó}{四|sì}{年|nián}。', hu: 'Alig hiszem el, hogy csak négy éve vagy Kínában.' },
+        { zh: '{十|shí}{年|nián}{前|qián}，{这|zhè}{样|yàng}{的|de}{变化|biàn·huà}{是|shì}{难以|nán yǐ}{想象|xiǎng xiàng}{的|de}。', hu: 'Tíz éve ekkora változás elképzelhetetlen volt.' }
+      ]
+    },
+    {
+      title: '{难得|nándé}', sub: 'ritka, értékes; ritkán',
+      pattern: '{真|zhēn}{是|shì}{难得|nán dé} · {难得|nán dé}{的|de} + főnév · A + {难得|nán dé} + ige',
+      body: 'A {难得|nándé} „nehezen megszerezhető": valami <b>ritka, ezért értékes</b>. {你能来真是难得|nǐ néng lái zhēn shì nándé} „igazán ritka öröm, hogy eljöttél", {难得的机会|nándé de jīhuì} „ritka lehetőség". Határozóként „ritkán": {他难得休息一天|tā nándé xiūxi yì tiān} „ritkán pihen egy napot".',
+      examples: [
+        { zh: '{你|nǐ}{能|néng}{来|lái}{真|zhēn}{是|shì}{难得|nán dé}！', hu: 'Igazán ritka öröm, hogy eljöttél!' },
+        { zh: '{这|zhè}{是|shì}{一|yí}{个|ge}{难得|nán dé}{的|de}{机会|jī·huì}，{你|nǐ}{千万|qiān·wàn}{别|bié}{错过|cuò·guò}。', hu: 'Ez ritka lehetőség, semmiképp ne szalaszd el.' }
+      ]
+    },
+    {
+      title: '{显得|xiǎnde}', sub: '… -nak tűnik, … hatást kelt',
+      pattern: 'A + {显得|xiǎn·de} + melléknév',
+      body: 'A {显得|xiǎnde} azt írja le, milyen <b>hatást kelt</b> valami vagy valaki — kívülről nézve: {会不会显得太随便|huì bu huì xiǎnde tài suíbiàn} „nem tűnik túl hétköznapinak?", {穿上这件衣服，你显得更年轻了|chuān shang zhè jiàn yīfu, nǐ xiǎnde gèng niánqīng le} „ebben a ruhában fiatalabbnak látszol". A {好像|hǎoxiàng}-tól eltérően nem feltevés, hanem benyomás.',
+      examples: [
+        { zh: '{只|zhǐ}{送|sòng}{一|yì}{瓶|píng}{酒|jiǔ}，{会|huì}{不|bu}{会|huì}{显得|xiǎn·de}{太|tài}{随便|suí biàn}？', hu: 'Ha csak egy üveg bort viszek, nem tűnik túl hétköznapinak?' },
+        { zh: '{穿|chuān}{上|shang}{这|zhè}{件|jiàn}{大衣|dà·yī}，{你|nǐ}{显得|xiǎn·de}{更|gèng}{精神|jīng·shen}{了|le}。', hu: 'Ebben a kabátban sokkal frissebbnek látszol.' }
+      ]
+    }
+  ],
+  phrases: [
+    { zh: '{一点儿|yì diǎnr}{小|xiǎo}{心意|xīn·yì}。', hu: 'Egy kis figyelmesség.' },
+    { zh: '{您|nín}{太|tài}{客气|kè·qi}{了|le}！', hu: 'Nem kellett volna!' },
+    { zh: '{您|nín}{过|guò}{奖|jiǎng}{了|le}。', hu: 'Túlzásba esik (a dicséretben).' },
+    { zh: '{打扰|dǎ rǎo}{了|le}，{谢谢|xiè·xie}{您|nín}{的|de}{招待|zhāo·dài}。', hu: 'Elnézést a zavarásért, köszönjük a vendéglátást.' }
+  ],
+  words: [
+    { title: 'Szavak',
+      items: [
+        { zh: '{未免|wèi miǎn}', pinyin: 'wèimiǎn', hu: 'azért kissé túl' },
+        { zh: '{不妨|bù fáng}', pinyin: 'bùfáng', hu: 'nyugodtan, nem árt' },
+        { zh: '{难以|nán yǐ}', pinyin: 'nányǐ', hu: 'nehezen (lehet)' },
+        { zh: '{难得|nán dé}', pinyin: 'nándé', hu: 'ritka, értékes; ritkán' },
+        { zh: '{显得|xiǎn·de}', pinyin: 'xiǎnde', hu: '…-nak tűnik, látszik' },
+        { zh: '{做客|zuò kè}', pinyin: 'zuò kè', hu: 'vendégségbe megy' },
+        { zh: '{点心|diǎn·xin}', pinyin: 'diǎnxin', hu: 'sütemény, nasi' },
+        { zh: '{心意|xīn·yì}', pinyin: 'xīnyì', hu: 'jó szándék, figyelmesség' },
+        { zh: '{过奖|guò jiǎng}', pinyin: 'guòjiǎng', hu: 'túldicsér' },
+        { zh: '{随便|suí biàn}', pinyin: 'suíbiàn', hu: 'hanyag, hétköznapi; tetszés szerint' },
+        { zh: '{想象|xiǎng xiàng}', pinyin: 'xiǎngxiàng', hu: 'elképzel; képzelet' },
+        { zh: '{讲究|jiǎng·jiu}', pinyin: 'jiǎngjiu', hu: 'ad valamire; igényes' }
+      ] },
+    { title: 'Ráadás',
+      items: [
+        { zh: '{送礼|sòng lǐ}', pinyin: 'sòng lǐ', hu: 'ajándékot ad' },
+        { zh: '{回礼|huí lǐ}', pinyin: 'huí lǐ', hu: 'viszonozza az ajándékot' },
+        { zh: '{收下|shōu xia}', pinyin: 'shōu xia', hu: 'elfogad (ajándékot)' },
+        { zh: '{推辞|tuī cí}', pinyin: 'tuīcí', hu: '(udvariasan) elhárít' }
+      ] }
+  ],
+  culture: [
+    { title: 'Ajándék, amit ne adj', text: 'Bizonyos ajándékok hangzásuk miatt kerülendők: az órát ({钟|zhōng}) azért, mert a {送钟|sòng zhōng} „órát ajándékoz" úgy hangzik, mint a {送终|sòng zhōng} „a haldoklót elkíséri"; az esernyőt ({伞|sǎn}), mert a {散|sàn} „szétválni" szóra emlékeztet; a körtét ({梨|lí}) pedig a {离|lí} „elválni" miatt. A négyes szám ({四|sì} ~ {死|sǐ}) is szerencsétlen.' },
+    { title: 'Elhárítás és elfogadás', text: 'Kínában az ajándékot illik először udvariasan elhárítani ({推辞|tuīcí}): „Nem kellett volna, ez túl sok!" — és csak a második-harmadik kínálásra elfogadni. Az ajándékot két kézzel adják és veszik át, és általában nem bontják ki a vendég jelenlétében.' }
+  ],
+  reading: {
+    title: '{去|qù}{刘|Liú}{总|zǒng}{家|jiā}{做|zuò}{客|kè}', titleHu: 'Vendégségben Liu úrnál',
+    text: [
+      { zh: '{在|zài}{中国|Zhōng·guó}，{去|qù}{别人|bié·rén}{家|jiā}{做|zuò}{客|kè}{很|hěn}{讲究|jiǎng·jiu}{礼物|lǐ·wù}。', hu: 'Kínában, ha valaki vendégségbe megy, nagyon számít, mit visz ajándékba.' },
+      { zh: '{安娜|Ān·nà}{本来|běn·lái}{只|zhǐ}{想|xiǎng}{带|dài}{一|yì}{瓶|píng}{酒|jiǔ}，{周杰|Zhōu Jié}{觉得|jué·de}{未免|wèi miǎn}{太|tài}{少|shǎo}，{建议|jiàn yì}{她|tā}{不妨|bù fáng}{再|zài}{买|mǎi}{些|xiē}{点心|diǎn·xin}。', hu: 'Anna eredetileg csak egy üveg bort akart vinni; Zhou Jie azonban kicsit kevesellte, és azt javasolta, vegyen még süteményt is.' },
+      { zh: '{刘|Liú}{总|zǒng}{收|shōu}{到|dào}{礼物|lǐ·wù}{以后|yǐ·hòu}{先|xiān}{推辞|tuī cí}{了|le}{一|yí}{下|xià}，{然后|rán·hòu}{才|cái}{高兴|gāo·xìng}{地|de}{收|shōu}{下|xia}{了|le}。', hu: 'Liu úr az ajándékot előbb udvariasan elhárította, aztán örömmel elfogadta.', par: true },
+      { zh: '{吃|chī}{饭|fàn}{的|de}{时候|shí·hou}，{刘|Liú}{总|zǒng}{的|de}{太太|tài·tai}{不|bú}{停|tíng}{地|de}{给|gěi}{安娜|Ān·nà}{夹|jiā}{菜|cài}，{显得|xiǎn·de}{非常|fēi·cháng}{热情|rè qíng}。', hu: 'Vacsora közben Liu úr felesége folyton szedett Annának, nagyon szívélyesnek mutatkozott.' },
+      { zh: '{安娜|Ān·nà}{觉得|jué·de}，{能|néng}{这样|zhè·yàng}{了解|liǎo·jiě}{中国|Zhōng·guó}{家庭|jiā tíng}，{真|zhēn}{是|shì}{一|yí}{个|ge}{难得|nán dé}{的|de}{机会|jī·huì}。', hu: 'Anna úgy érezte, ritka lehetőség, hogy így megismerhet egy kínai családot.', par: true }
+    ],
+    words: [ { zh: '{夹菜|jiā cài}', hu: 'pálcikával ételt szed (másnak)' } ],
+    questions: [
+      { q: 'Mi számít sokat a kínai vendégségben?', a: 'az ajándék', wrong: ['a ruha színe', 'az érkezés ideje', 'a beszélgetés témája'], why: '{很讲究礼物|hěn jiǎngjiu lǐwù}.' },
+      { q: 'Mit javasolt Zhou Jie?', a: 'vegyen még süteményt is', wrong: ['ne vigyen semmit', 'vigyen virágot', 'vigyen két üveg bort'], why: '{不妨再买些点心|bùfáng zài mǎi xiē diǎnxin}.' },
+      { q: 'Hogyan fogadta Liu úr az ajándékot?', a: 'előbb elhárította, aztán elfogadta', wrong: ['azonnal kibontotta', 'visszaadta', 'meg sem nézte'], why: '{先推辞了一下，然后才高兴地收下了|xiān tuīcí le yíxià, ránhòu cái gāoxìng de shōu xia le}.' },
+      { q: 'Mit csinált Liu úr felesége vacsora közben?', a: 'folyton szedett Annának', wrong: ['egész este hallgatott', 'magyarul beszélt', 'korán lefeküdt'], why: '{不停地给安娜夹菜|bù tíng de gěi Ānnà jiā cài}.' }
+    ]
+  },
+  quiz: [
+    { q: '„Egy üveg bor azért kicsit kevés."', a: '{一|yì}{瓶|píng}{酒|jiǔ}{未免|wèi miǎn}{少|shǎo}{了|le}{点儿|diǎnr}。', wrong: ['{一|yì}{瓶|píng}{酒|jiǔ}{少|shǎo}{未免|wèi miǎn}{了|le}{点儿|diǎnr}。', '{未免|wèi miǎn}{一|yì}{瓶|píng}{点儿|diǎnr}{酒|jiǔ}{少|shǎo}{了|le}。', '{一|yì}{瓶|píng}{酒|jiǔ}{了|le}{点儿|diǎnr}{少|shǎo}{未免|wèi miǎn}。'], why: 'A + {未免|wèimiǎn} + melléknév + {了点儿|le diǎnr}.', point: 1 },
+    { q: 'Mit fejez ki a {未免|wèimiǎn}?', a: 'enyhe bírálatot', wrong: ['erős dicséretet', 'egy feltételt', 'egy időpontot'], why: '„Azért ez kissé túl…".', point: 1 },
+    { q: '„Ezt a módszert érdemes kipróbálnod."', a: '{这|zhè}{个|ge}{方法|fāng·fǎ}{你|nǐ}{不妨|bù fáng}{试|shì}{试|shi}。', wrong: ['{这|zhè}{个|ge}{方法|fāng·fǎ}{你|nǐ}{试|shì}{试|shi}{不妨|bù fáng}。', '{不妨|bù fáng}{这|zhè}{个|ge}{你|nǐ}{试|shì}{方法|fāng·fǎ}。', '{这|zhè}{个|ge}{方法|fāng·fǎ}{不妨|bù fáng}{你|nǐ}{不|bú}{试|shì}。'], why: '(A) + {不妨|bùfáng} + ige.', point: 2 },
+    { q: 'Milyen javaslat a {不妨|bùfáng}?', a: 'udvarias, könnyed', wrong: ['szigorú parancs', 'tiltás', 'fenyegetés'], why: '„Nem árt, ha…".', point: 2 },
+    { q: '„Alig hiszem el."', a: '{我|wǒ}{真|zhēn}{难以|nán yǐ}{相信|xiāng·xìn}。', wrong: ['{我|wǒ}{真|zhēn}{相信|xiāng·xìn}{难以|nán yǐ}。', '{难以|nán yǐ}{我|wǒ}{相信|xiāng·xìn}{真|zhēn}。', '{我|wǒ}{难|nán}{真|zhēn}{以|yǐ}{相信|xiāng·xìn}。'], why: 'A + {难以|nányǐ} + kétszótagú ige.', point: 3 },
+    { q: 'Mit jelent: {难以想象|nányǐ xiǎngxiàng}?', a: 'elképzelhetetlen', wrong: ['könnyen elképzelhető', 'szép álom', 'nehéz feladat'], why: '{难以|nányǐ} „nehezen lehet".', point: 3 },
+    { q: '„Igazán ritka öröm, hogy eljöttél!"', a: '{你|nǐ}{能|néng}{来|lái}{真|zhēn}{是|shì}{难得|nán dé}！', wrong: ['{你|nǐ}{能|néng}{来|lái}{真|zhēn}{是|shì}{难以|nán yǐ}！', '{难得|nán dé}{你|nǐ}{真|zhēn}{是|shì}{能|néng}{来|lái}！', '{你|nǐ}{难得|nán dé}{能|néng}{真|zhēn}{是|shì}{来|lái}！'], why: '{真是难得|zhēn shì nándé}.', point: 4 },
+    { q: 'Mit jelent: {他难得休息一天|tā nándé xiūxi yì tiān}。', a: 'Ritkán pihen egy napot.', wrong: ['Nehezen pihen.', 'Minden nap pihen.', 'Ma nem pihen.'], why: 'Határozóként „ritkán".', point: 4 },
+    { q: '„Ebben a kabátban fiatalabbnak látszol."', a: '{穿|chuān}{上|shang}{这|zhè}{件|jiàn}{大衣|dà·yī}，{你|nǐ}{显得|xiǎn·de}{更|gèng}{年轻|nián·qīng}{了|le}。', wrong: ['{穿|chuān}{上|shang}{这|zhè}{件|jiàn}{大衣|dà·yī}，{你|nǐ}{更|gèng}{年轻|nián·qīng}{显得|xiǎn·de}{了|le}。', '{显得|xiǎn·de}{穿|chuān}{上|shang}{你|nǐ}{这|zhè}{件|jiàn}{大衣|dà·yī}{年轻|nián·qīng}。', '{你|nǐ}{显得|xiǎn·de}{穿|chuān}{上|shang}{更|gèng}{这|zhè}{件|jiàn}{大衣|dà·yī}{年轻|nián·qīng}。'], why: 'A + {显得|xiǎnde} + melléknév.', point: 5 },
+    { q: 'Mit ír le a {显得|xiǎnde}?', a: 'a keltett hatást', wrong: ['egy biztos tényt', 'egy jövőbeli tervet', 'egy feltételt'], why: '„…-nak tűnik, látszik".', point: 5 },
+    { q: 'Mit mondunk szerényen ajándék átadásakor?', a: '{一点儿小心意|yìdiǎnr xiǎo xīnyì}', wrong: ['{这个很贵|zhège hěn guì}', '{快打开|kuài dǎkāi}', '{不客气|bú kèqi}'], why: '„Egy kis figyelmesség".' },
+    { q: 'Mit felelünk egy bókra?', a: '{您过奖了|nín guòjiǎng le}', wrong: ['{对，我很好|duì, wǒ hěn hǎo}', '{谢谢，我知道|xièxie, wǒ zhīdào}', '{没关系|méi guānxi}'], why: 'Szerény elhárítás.' },
+    { q: 'Mit jelent a {做客|zuò kè}?', a: 'vendégségbe megy', wrong: ['vendéget fogad', 'vendéglőt nyit', 'ételt rendel'], why: '{去刘总家做客|qù Liú zǒng jiā zuò kè}.' },
+    { q: 'Miért nem ajándékoznak órát Kínában?', a: 'a szó hangzása miatt', wrong: ['mert túl drága', 'mert régimódi', 'mert tilos'], why: '{送钟|sòng zhōng} ~ {送终|sòng zhōng}.' },
+    { q: 'Mit jelent a {点心|diǎnxin}?', a: 'sütemény, nasi', wrong: ['gyümölcs', 'ital', 'virág'], why: '{一盒点心|yì hé diǎnxin} „egy doboz sütemény".' },
+    { q: 'Mit jelent: {谢谢您的招待|xièxie nín de zhāodài}。', a: 'Köszönjük a vendéglátást.', wrong: ['Köszönjük a meghívót.', 'Köszönjük az ajándékot.', 'Köszönjük a segítséget.'], why: '{招待|zhāodài} „vendéglátás".' }
+  ]
+},
+
+/* ════════════════════════════════════════════════════
+   HSK 5 · 20. LECKE — 自从…以来, 不知不觉, 无非, 一辈子, 总而言之
+   ════════════════════════════════════════════════════ */
+{
+  id: 'l90', no: 90, badge: '20', kicker: 'HSK 5 · 20. lecke', label: 'HSK 5 · 20. lecke',
+  title: 'Búcsú Sanghajtól — egyszóval: köszönöm!',
+  lead: 'Elbúcsúzol: elmondod, mi minden történt azóta, hogy… (自从…以来), hogyan repült el észrevétlenül az idő (不知不觉), kicsinyíted a távolságot (无非), mit őrzöl meg egész életedre (一辈子), és összefoglalsz (总而言之).',
+  cando: [
+    'Elmondod, mi történt egy időpont óta: 自从…以来，….',
+    'Kifejezed, hogy az idő észrevétlenül telt el: 不知不觉….',
+    'Kicsinyítesz, megnyugtatsz: 无非….',
+    'Egész életre szóló dologról beszélsz (一辈子), és összefoglalsz (总而言之).'
+  ],
+  intro: [
+    'A magyar–kínai projekt sikeres lett, és a cég európai irodát nyit Budapesten — Annát kérik fel a vezetésére. Az utolsó sanghaji héten a kollégák és a barátok búcsúvacsorát rendeznek neki.',
+    'Ez a HSK 5 utolsó leckéje. A búcsú és a visszatekintés nyelvével zárul — és talán te is visszagondolsz arra, honnan indultál: a pinyintől és a négy tónustól idáig.'
+  ],
+  dialogue: {
+    title: 'Búcsúvacsora',
+    scene: 'Péntek este egy sanghaji étteremben. Chen igazgató, Anna, Zhou Jie és Lin Jing.',
+    lines: [
+      { who: 'Chen', zh: '{自从|zì cóng}{安娜|Ān·nà}{来|lái}{公司|gōng·sī}{以来|yǐ lái}，{我们|wǒ·men}{和|hé}{匈牙利|Xiōng·yá·lì}{的|de}{合作|hé zuò}{越来越|yuè lái yuè}{多|duō}。{下|xià}{个|ge}{月|yuè}{她|tā}{就|jiù}{要|yào}{去|qù}{布达佩斯|Bù·dá·pèi·sī}{负责|fù zé}{欧洲|Ōu·zhōu}{办公室|bàn gōng shì}{了|le}。', hu: 'Amióta Anna a céghez jött, egyre többet dolgozunk együtt Magyarországgal. Jövő hónaptól ő vezeti Budapesten az európai irodát.' },
+      { who: 'Anna', zh: '{不知不觉|bù zhī bù jué}，{我|wǒ}{在|zài}{中国|Zhōng·guó}{已经|yǐ·jīng}{四|sì}{年|nián}{了|le}。{说|shuō}{实话|shí huà}，{我|wǒ}{真|zhēn}{舍|shě}{不|bu}{得|de}{大家|dà·jiā}。', hu: 'Észre sem vettem, és már négy éve vagyok Kínában. Őszintén szólva nagyon nehéz itthagynom mindenkit.' },
+      { who: 'Zhou Jie', zh: '{我们|wǒ·men}{会|huì}{想|xiǎng}{你|nǐ}{的|de}！{你|nǐ}{走|zǒu}{了|le}{以后|yǐ·hòu}，{谁|shéi}{带|dài}{我们|wǒ·men}{骑|qí}{车|chē}{上|shàng}{班|bān}{啊|a}？', hu: 'Hiányozni fogsz! Ha elmész, ki visz minket biciklivel dolgozni?' },
+      { who: 'Lin Jing', zh: '{别|bié}{难过|nán guò}，{现在|xiàn·zài}{交通|jiāo·tōng}{这么|zhè·me}{方便|fāng·biàn}，{坐|zuò}{飞机|fēi·jī}{无非|wú fēi}{十|shí}{几|jǐ}{个|ge}{小时|xiǎo·shí}，{我们|wǒ·men}{随时|suí shí}{可以|kě·yǐ}{去|qù}{看|kàn}{你|nǐ}。', hu: 'Ne szomorkodj, ma már olyan könnyű utazni: repülővel mindössze tíz-egynéhány óra, bármikor meglátogathatunk.' },
+      { who: 'Anna', zh: '{对|duì}！{在|zài}{中国|Zhōng·guó}{的|de}{这|zhè}{四|sì}{年|nián}，{我|wǒ}{会|huì}{记|jì}{一辈子|yí bèi·zi}。', hu: 'Úgy van! Ezt a négy évet Kínában egész életemben nem felejtem el.' },
+      { who: 'Anna', zh: '{总而言之|zǒng ér yán zhī}，{谢谢|xiè·xie}{你们|nǐ·men}！{欢迎|huān·yíng}{你们|nǐ·men}{来|lái}{匈牙利|Xiōng·yá·lì}，{我|wǒ}{请|qǐng}{你们|nǐ·men}{吃|chī}{匈牙利|Xiōng·yá·lì}{菜|cài}！', hu: 'Egyszóval: köszönöm nektek! Gyertek el Magyarországra, meghívlak benneteket egy magyar vacsorára!' },
+      { who: 'Chen', zh: '{来|lái}，{大家|dà·jiā}{举|jǔ}{杯|bēi}！{祝|zhù}{安娜|Ān·nà}{一路|yí lù}{顺风|shùn fēng}，{前程|qián chéng}{似锦|sì jǐn}！', hu: 'Gyerünk, emeljük poharunkat! Jó utat Annának, és fényes jövőt!' }
+    ],
+    notes: [
+      'A {舍不得|shěbude} „nehezére esik megválni" a HSK 3 utolsó leckéjéből ismerős — Anna akkor Pekingtől búcsúzott.',
+      'Az {一路顺风|yílù shùnfēng} „jó utat (kedvező szelet)", a {前程似锦|qiánchéng sì jǐn} „fényes jövőt (mint a selyemhímzés)" — búcsúzáskor mondott jókívánságok.',
+      'A {举杯|jǔ bēi} „poharat emel", koccintás előtt.'
+    ]
+  },
+  points: [
+    {
+      title: '{自从|zìcóng} … {以来|yǐlái}', sub: 'amióta …, azóta',
+      pattern: '{自从|zì cóng} + esemény / időpont + ({以来|yǐ lái} / {以后|yǐ·hòu})，…',
+      body: 'Az {自从|zìcóng} egy múltbeli kiindulópontot ad meg, és a mondat azt mondja el, <b>mi történt azóta</b>: {自从安娜来公司以来，我们的合作越来越多|zìcóng Ānnà lái gōngsī yǐlái, wǒmen de hézuò yuè lái yuè duō} „amióta Anna a céghez jött, egyre többet dolgozunk együtt". Csak múltbeli kiindulópontra használjuk; a {以来|yǐlái} írottabb, a {以后|yǐhòu} beszéltebb.',
+      examples: [
+        { zh: '{自从|zì cóng}{安娜|Ān·nà}{来|lái}{公司|gōng·sī}{以来|yǐ lái}，{我们|wǒ·men}{的|de}{合作|hé zuò}{越来越|yuè lái yuè}{多|duō}。', hu: 'Amióta Anna a céghez jött, egyre többet dolgozunk együtt.' },
+        { zh: '{自从|zì cóng}{学|xué}{了|le}{书法|shū fǎ}{以后|yǐ·hòu}，{我|wǒ}{的|de}{字|zì}{好看|hǎo kàn}{多|duō}{了|le}。', hu: 'Amióta kalligráfiát tanulok, sokkal szebb az írásom.' }
+      ],
+      mistakes: [
+        { bad: '{自从|zì cóng}{明年|míng·nián}{以来|yǐ lái}，{我|wǒ}{要|yào}{在|zài}{布达佩斯|Bù·dá·pèi·sī}{工作|gōng·zuò}。', good: '{从|cóng}{明年|míng·nián}{起|qǐ}，{我|wǒ}{要|yào}{在|zài}{布达佩斯|Bù·dá·pèi·sī}{工作|gōng·zuò}。', why: 'Az {自从|zìcóng} csak múltbeli kiindulópontot jelöl; jövőre {从|cóng}…{起|qǐ} kell.' }
+      ]
+    },
+    {
+      title: '{不知不觉|bù zhī bù jué}', sub: 'észrevétlenül, mire észbe kapunk',
+      pattern: '{不知不觉|bù zhī bù jué}，… · A + {不知不觉|bù zhī bù jué}{地|de} + ige',
+      body: 'Szó szerint „nem tudva, nem érezve": valami <b>észrevétlenül</b> történik, és csak utólag döbbenünk rá: {不知不觉，我在中国已经四年了|bù zhī bù jué, wǒ zài Zhōngguó yǐjīng sì nián le} „észre sem vettem, és már négy éve vagyok Kínában", {聊着聊着，不知不觉天就黑了|liáozhe liáozhe, bù zhī bù jué tiān jiù hēi le} „beszélgettünk, és mire észbe kaptunk, besötétedett".',
+      examples: [
+        { zh: '{不知不觉|bù zhī bù jué}，{我|wǒ}{在|zài}{中国|Zhōng·guó}{已经|yǐ·jīng}{四|sì}{年|nián}{了|le}。', hu: 'Észre sem vettem, és már négy éve vagyok Kínában.' },
+        { zh: '{我们|wǒ·men}{聊|liáo}{着|zhe}{聊|liáo}{着|zhe}，{不知不觉|bù zhī bù jué}{天|tiān}{就|jiù}{黑|hēi}{了|le}。', hu: 'Beszélgettünk, és mire észbe kaptunk, besötétedett.' }
+      ]
+    },
+    {
+      title: '{无非|wúfēi}', sub: 'csupán, nem más, mint',
+      pattern: 'A + {无非|wú fēi} + ({是|shì}) + B',
+      body: 'A {无非|wúfēi} <b>kicsinyít</b>: „nem más, mint, csupán" — azt sugallja, hogy a dolog nem olyan nagy vagy bonyolult: {坐飞机无非十几个小时|zuò fēijī wúfēi shí jǐ ge xiǎoshí} „repülővel mindössze tíz-egynéhány óra", {他说的无非是这些|tā shuō de wúfēi shì zhèxiē} „amit mond, az csupán ennyi". Közel áll a HSK 5 10. leckéjében tanult {只不过|zhǐbúguò}-hoz, de írottabb.',
+      examples: [
+        { zh: '{坐|zuò}{飞机|fēi·jī}{无非|wú fēi}{十|shí}{几|jǐ}{个|ge}{小时|xiǎo·shí}，{我们|wǒ·men}{随时|suí shí}{可以|kě·yǐ}{去|qù}{看|kàn}{你|nǐ}。', hu: 'Repülővel mindössze tíz-egynéhány óra, bármikor meglátogathatunk.' },
+        { zh: '{大家|dà·jiā}{担心|dān xīn}{的|de}{无非|wú fēi}{是|shì}{时间|shí·jiān}{不|bú}{够|gòu}。', hu: 'Mindenki csupán amiatt aggódik, hogy nem lesz elég idő.' }
+      ]
+    },
+    {
+      title: '{一辈子|yíbèizi}', sub: 'egész életében, egy életen át',
+      pattern: 'A + ({会|huì}) + ige + {一辈子|yí bèi·zi} · {一辈子|yí bèi·zi} + {都|dōu} + …',
+      body: 'Az {一辈子|yíbèizi} „egy élet": időtartamként az ige után áll — {我会记一辈子|wǒ huì jì yíbèizi} „egész életemben emlékezni fogok rá" —, vagy az ige elé kerül {都|dōu}-val: {他一辈子都在农村当老师|tā yíbèizi dōu zài nóngcūn dāng lǎoshī} „egész életében falun tanított". Beszélt nyelvi; írott párja a {一生|yìshēng}.',
+      examples: [
+        { zh: '{在|zài}{中国|Zhōng·guó}{的|de}{这|zhè}{四|sì}{年|nián}，{我|wǒ}{会|huì}{记|jì}{一辈子|yí bèi·zi}。', hu: 'Ezt a négy évet Kínában egész életemben nem felejtem el.' },
+        { zh: '{我|wǒ}{爷爷|yé·ye}{一辈子|yí bèi·zi}{都|dōu}{住|zhù}{在|zài}{这|zhè}{个|ge}{小|xiǎo}{城|chéng}{里|li}。', hu: 'A nagyapám egész életében ebben a kisvárosban élt.' }
+      ]
+    },
+    {
+      title: '{总而言之|zǒng ér yán zhī}', sub: 'egyszóval, mindent összevetve',
+      pattern: '(felsorolás, érvek)，{总而言之|zǒng ér yán zhī}，+ összegzés',
+      body: 'Az {总而言之|zǒng ér yán zhī} szó szerint „összegezve és kimondva": egy beszéd, írás vagy felsorolás végén <b>összefoglal</b>. {总而言之，谢谢你们|zǒng ér yán zhī, xièxie nǐmen} „egyszóval: köszönöm nektek". Választékosabb, mint a HSK 4-ben tanult {总的来说|zǒng de lái shuō}; rövid párja a {总之|zǒngzhī}.',
+      tables: [
+        { caption: 'Összegezve',
+          head: ['', 'Stílus', 'Példa'],
+          rows: [
+            ['{总的来说|zǒng de lái shuō}', 'semleges, beszélt', '{总的来说|zǒng de lái shuō}，{很|hěn}{不错|bú cuò}'],
+            ['{总之|zǒng zhī}', 'rövid, tömör', '{总之|zǒng zhī}，{我|wǒ}{同意|tóng yì}'],
+            ['{总而言之|zǒng ér yán zhī}', 'választékos, ünnepélyes', '{总而言之|zǒng ér yán zhī}，{谢谢|xiè·xie}{大家|dà·jiā}']
+          ] }
+      ],
+      examples: [
+        { zh: '{总而言之|zǒng ér yán zhī}，{谢谢|xiè·xie}{你们|nǐ·men}{这|zhè}{四|sì}{年|nián}{的|de}{帮助|bāng·zhù}！', hu: 'Egyszóval: köszönöm nektek ezt a négy év segítséget!' },
+        { zh: '{总而言之|zǒng ér yán zhī}，{学|xué}{语言|yǔ yán}{没有|méi·yǒu}{捷径|jié jìng}，{只有|zhǐ yǒu}{坚持|jiān·chí}。', hu: 'Mindent összevetve: a nyelvtanulásnak nincs rövidebb útja, csak a kitartás.' }
+      ]
+    }
+  ],
+  phrases: [
+    { zh: '{一路|yí lù}{顺风|shùn fēng}！', hu: 'Jó utat!' },
+    { zh: '{前程|qián chéng}{似锦|sì jǐn}！', hu: 'Fényes jövőt!' },
+    { zh: '{后会有期|hòu huì yǒu qī}！', hu: 'Viszontlátásra, egyszer még találkozunk!' },
+    { zh: '{常|cháng}{联系|lián·xì}，{别|bié}{忘|wàng}{了|le}{我们|wǒ·men}！', hu: 'Tartsuk a kapcsolatot, ne felejts el minket!' }
+  ],
+  words: [
+    { title: 'Szavak',
+      items: [
+        { zh: '{自从|zì cóng}', pinyin: 'zìcóng', hu: 'amióta' },
+        { zh: '{以来|yǐ lái}', pinyin: 'yǐlái', hu: 'óta' },
+        { zh: '{不知不觉|bù zhī bù jué}', pinyin: 'bù zhī bù jué', hu: 'észrevétlenül' },
+        { zh: '{无非|wú fēi}', pinyin: 'wúfēi', hu: 'csupán, nem más, mint' },
+        { zh: '{总而言之|zǒng ér yán zhī}', pinyin: 'zǒng ér yán zhī', hu: 'egyszóval, összegezve' },
+        { zh: '{欢送|huān sòng}', pinyin: 'huānsòng', hu: 'búcsúztat (ünnepélyesen)' },
+        { zh: '{告别|gào bié}', pinyin: 'gàobié', hu: 'elbúcsúzik' },
+        { zh: '{留念|liú niàn}', pinyin: 'liúniàn', hu: 'emlékül megtart' },
+        { zh: '{珍惜|zhēn xī}', pinyin: 'zhēnxī', hu: 'megbecsül, nagyra tart' },
+        { zh: '{缘分|yuán·fèn}', pinyin: 'yuánfèn', hu: 'sorsszerű találkozás, „sors"' },
+        { zh: '{前程|qián chéng}', pinyin: 'qiánchéng', hu: 'jövő, pálya' },
+        { zh: '{举杯|jǔ bēi}', pinyin: 'jǔ bēi', hu: 'poharat emel' }
+      ] },
+    { title: 'Ráadás',
+      items: [
+        { zh: '{一路顺风|yí lù shùn fēng}', pinyin: 'yílù shùnfēng', hu: 'jó utat' },
+        { zh: '{前程似锦|qián chéng sì jǐn}', pinyin: 'qiánchéng sì jǐn', hu: 'fényes jövőt' },
+        { zh: '{后会有期|hòu huì yǒu qī}', pinyin: 'hòu huì yǒu qī', hu: 'még találkozunk' },
+        { zh: '{捷径|jié jìng}', pinyin: 'jiéjìng', hu: 'rövidebb út' }
+      ] }
+  ],
+  culture: [
+    { title: 'Búcsúvacsora', text: 'Kínában annak, aki hosszabb időre elutazik, búcsúvacsorát rendeznek ({饯行|jiànxíng}): a barátok, kollégák jókívánságokat mondanak, és többször is koccintanak. Az utolsó pohárnál gyakran elhangzik: {后会有期|hòu huì yǒu qī} „egyszer még találkozunk".' },
+    { title: 'Sors szőtte kapcsolat', text: 'A {缘分|yuánfèn} a kínai gondolkodás egyik kedves fogalma: az a megmagyarázhatatlan „sors", amely két embert összehoz. Ha egy barátság különösen szerencsés véletlenből született, azt mondják: {我们有缘分|wǒmen yǒu yuánfèn} „nekünk a sors rendelte, hogy találkozzunk".' }
+  ],
+  reading: {
+    title: '{安娜|Ān·nà}{的|de}{信|xìn}', titleHu: 'Anna levele',
+    text: [
+      { zh: '{亲爱|qīn ài}{的|de}{朋友|péng·you}{们|men}：{自从|zì cóng}{四|sì}{年|nián}{前|qián}{来|lái}{到|dào}{中国|Zhōng·guó}{以来|yǐ lái}，{我|wǒ}{的|de}{生活|shēng·huó}{发生|fā shēng}{了|le}{很|hěn}{大|dà}{的|de}{变化|biàn·huà}。', hu: 'Kedves barátaim! Amióta négy éve Kínába jöttem, nagyot változott az életem.' },
+      { zh: '{刚|gāng}{来|lái}{的|de}{时候|shí·hou}，{我|wǒ}{只|zhǐ}{会|huì}{说|shuō}“{你好|nǐ hǎo}”{和|hé}“{谢谢|xiè·xie}”；{不知不觉|bù zhī bù jué}，{我|wǒ}{已经|yǐ·jīng}{能|néng}{用|yòng}{中文|Zhōng·wén}{写|xiě}{这|zhè}{封|fēng}{信|xìn}{了|le}。', hu: 'Amikor megérkeztem, csak annyit tudtam mondani: „szia" és „köszönöm"; és észre sem vettem, már kínaiul írom ezt a levelet.', par: true },
+      { zh: '{学|xué}{汉语|Hàn·yǔ}{的|de}{秘诀|mì jué}{无非|wú fēi}{是|shì}{多|duō}{听|tīng}、{多|duō}{说|shuō}、{不|bú}{怕|pà}{犯|fàn}{错|cuò}。', hu: 'A kínaitanulás titka nem más, mint sokat hallgatni, sokat beszélni, és nem félni a hibáktól.' },
+      { zh: '{在|zài}{中国|Zhōng·guó}{认识|rèn·shi}{你们|nǐ·men}{是|shì}{我|wǒ}{的|de}{缘分|yuán·fèn}，{这|zhè}{份|fèn}{友谊|yǒu yì}{我|wǒ}{会|huì}{珍惜|zhēn xī}{一辈子|yí bèi·zi}。', hu: 'A sors ajándéka, hogy Kínában megismertelek benneteket; ezt a barátságot egész életemben becsben tartom.', par: true },
+      { zh: '{总而言之|zǒng ér yán zhī}，{这|zhè}{不|bú}{是|shì}{结束|jié shù}，{而|ér}{是|shì}{新|xīn}{的|de}{开始|kāi·shǐ}。{我们|wǒ·men}{布达佩斯|Bù·dá·pèi·sī}{见|jiàn}！', hu: 'Egyszóval: ez nem a vég, hanem egy új kezdet. Találkozunk Budapesten!', par: true }
+    ],
+    words: [ { zh: '{秘诀|mì jué}', hu: 'titok (a siker titka)' } ],
+    questions: [
+      { q: 'Mióta van Anna Kínában?', a: 'négy éve', wrong: ['egy éve', 'két éve', 'tíz éve'], why: '{自从四年前来到中国以来|zìcóng sì nián qián lái dào Zhōngguó yǐlái}.' },
+      { q: 'Mit tudott mondani Anna, amikor megérkezett?', a: 'csak „szia" és „köszönöm"', wrong: ['már folyékonyan beszélt', 'semmit', 'csak a nevét'], why: '{只会说“你好”和“谢谢”|zhǐ huì shuō „nǐ hǎo" hé „xièxie"}.' },
+      { q: 'Mi a kínaitanulás titka Anna szerint?', a: 'sokat hallgatni, beszélni, és nem félni a hibáktól', wrong: ['sok nyelvtant tanulni', 'csak írásjegyeket másolni', 'drága tanárt fogadni'], why: '{无非是多听、多说、不怕犯错|wúfēi shì duō tīng, duō shuō, bú pà fàn cuò}.' },
+      { q: 'Hogyan zárja Anna a levelét?', a: 'ez nem vég, hanem új kezdet', wrong: ['soha többé nem jön vissza', 'nem szeretett Kínában élni', 'most abbahagyja a tanulást'], why: '{这不是结束，而是新的开始|zhè bú shì jiéshù, ér shì xīn de kāishǐ}.' }
+    ]
+  },
+  quiz: [
+    { q: '„Amióta Anna a céghez jött, egyre többet dolgozunk együtt."', a: '{自从|zì cóng}{安娜|Ān·nà}{来|lái}{公司|gōng·sī}{以来|yǐ lái}，{我们|wǒ·men}{的|de}{合作|hé zuò}{越来越|yuè lái yuè}{多|duō}。', wrong: ['{以来|yǐ lái}{安娜|Ān·nà}{来|lái}{公司|gōng·sī}{自从|zì cóng}，{我们|wǒ·men}{的|de}{合作|hé zuò}{越来越|yuè lái yuè}{多|duō}。', '{自从|zì cóng}{以来|yǐ lái}{安娜|Ān·nà}{来|lái}{公司|gōng·sī}，{越来越|yuè lái yuè}{多|duō}{我们|wǒ·men}{的|de}{合作|hé zuò}。', '{安娜|Ān·nà}{自从|zì cóng}{公司|gōng·sī}{来|lái}，{以来|yǐ lái}{合作|hé zuò}{越来越|yuè lái yuè}{我们|wǒ·men}{多|duō}。'], why: '{自从|zìcóng} + esemény + {以来|yǐlái}, ….', point: 1 },
+    { q: 'Melyik mondat helyes?', a: '{从|cóng}{明年|míng·nián}{起|qǐ}，{我|wǒ}{要|yào}{在|zài}{布达佩斯|Bù·dá·pèi·sī}{工作|gōng·zuò}。', wrong: ['{自从|zì cóng}{明年|míng·nián}{以来|yǐ lái}，{我|wǒ}{要|yào}{在|zài}{布达佩斯|Bù·dá·pèi·sī}{工作|gōng·zuò}。', '{自从|zì cóng}{明年|míng·nián}{起|qǐ}，{我|wǒ}{要|yào}{在|zài}{布达佩斯|Bù·dá·pèi·sī}{工作|gōng·zuò}。', '{明年|míng·nián}{自从|zì cóng}，{我|wǒ}{在|zài}{布达佩斯|Bù·dá·pèi·sī}{要|yào}{工作|gōng·zuò}。'], why: 'Az {自从|zìcóng} csak múltra; jövőre {从|cóng}…{起|qǐ}.', point: 1 },
+    { q: '„Észre sem vettem, és már négy éve vagyok Kínában."', a: '{不知不觉|bù zhī bù jué}，{我|wǒ}{在|zài}{中国|Zhōng·guó}{已经|yǐ·jīng}{四|sì}{年|nián}{了|le}。', wrong: ['{我|wǒ}{在|zài}{中国|Zhōng·guó}{已经|yǐ·jīng}{不知不觉|bù zhī bù jué}{了|le}{四|sì}{年|nián}。', '{不知|bù zhī}{我|wǒ}{在|zài}{中国|Zhōng·guó}{不觉|bù jué}{已经|yǐ·jīng}{四|sì}{年|nián}。', '{我|wǒ}{不知不觉|bù zhī bù jué}{四|sì}{年|nián}{在|zài}{中国|Zhōng·guó}{已经|yǐ·jīng}{了|le}{吗|ma}。'], why: '{不知不觉|bù zhī bù jué}, ….', point: 2 },
+    { q: 'Mit jelent a {不知不觉|bù zhī bù jué}?', a: 'észrevétlenül', wrong: ['tudatosan', 'szándékosan', 'nagy nehezen'], why: '„Nem tudva, nem érezve".', point: 2 },
+    { q: '„Repülővel mindössze tíz-egynéhány óra."', a: '{坐|zuò}{飞机|fēi·jī}{无非|wú fēi}{十|shí}{几|jǐ}{个|ge}{小时|xiǎo·shí}。', wrong: ['{坐|zuò}{飞机|fēi·jī}{十|shí}{几|jǐ}{个|ge}{小时|xiǎo·shí}{无非|wú fēi}。', '{无非|wú fēi}{坐|zuò}{十|shí}{几|jǐ}{飞机|fēi·jī}{个|ge}{小时|xiǎo·shí}。', '{坐|zuò}{无非|wú fēi}{飞机|fēi·jī}{个|ge}{十|shí}{几|jǐ}{小时|xiǎo·shí}。'], why: 'A + {无非|wúfēi} + B.', point: 3 },
+    { q: 'Mit tesz az {无非|wúfēi}?', a: 'kicsinyít', wrong: ['nagyít', 'tagad', 'kérdez'], why: '„Csupán, nem más, mint".', point: 3 },
+    { q: '„Ezt a négy évet egész életemben nem felejtem el."', a: '{这|zhè}{四|sì}{年|nián}{我|wǒ}{会|huì}{记|jì}{一辈子|yí bèi·zi}。', wrong: ['{这|zhè}{四|sì}{年|nián}{我|wǒ}{一辈子|yí bèi·zi}{会|huì}{记|jì}{了|le}{吗|ma}。', '{一辈子|yí bèi·zi}{这|zhè}{四|sì}{年|nián}{我|wǒ}{记|jì}{会|huì}。', '{这|zhè}{四|sì}{年|nián}{我|wǒ}{记|jì}{会|huì}{一辈子|yí bèi·zi}。'], why: 'Ige + {一辈子|yíbèizi} (időtartam).', point: 4 },
+    { q: 'Melyik az {一辈子|yíbèizi} írott párja?', a: '{一生|yìshēng}', wrong: ['{一下子|yíxiàzi}', '{一会儿|yíhuìr}', '{一直|yìzhí}'], why: 'Mindkettő „egész élet".', point: 4 },
+    { q: '„Egyszóval: köszönöm nektek!" (ünnepélyes)', a: '{总而言之|zǒng ér yán zhī}，{谢谢|xiè·xie}{你们|nǐ·men}！', wrong: ['{总而言之|zǒng ér yán zhī}{你们|nǐ·men}，{谢谢|xiè·xie}{了|le}{吗|ma}！', '{谢谢|xiè·xie}{总而言之|zǒng ér yán zhī}{你们|nǐ·men}！', '{总|zǒng}{而|ér}{你们|nǐ·men}{言|yán}{之|zhī}{谢谢|xiè·xie}！'], why: '{总而言之|zǒng ér yán zhī}, + összegzés.', point: 5 },
+    { q: 'Melyik a legünnepélyesebb összegzés?', a: '{总而言之|zǒng ér yán zhī}', wrong: ['{总的来说|zǒng de lái shuō}', '{总之|zǒngzhī}', '{反正|fǎnzhèng}'], why: 'Választékos, ünnepélyes.', point: 5 },
+    { q: 'Mit jelent: {一路顺风|yílù shùnfēng}！', a: 'Jó utat!', wrong: ['Jó étvágyat!', 'Boldog új évet!', 'Gyógyulj meg!'], why: 'Búcsúzáskor mondjuk.' },
+    { q: 'Mit jelent a {缘分|yuánfèn}?', a: 'sorsszerű találkozás', wrong: ['rokonság', 'szerencsejáték', 'üzleti szerződés'], why: '{我们有缘分|wǒmen yǒu yuánfèn}.' },
+    { q: 'Mit jelent a {珍惜|zhēnxī}?', a: 'megbecsül', wrong: ['elfelejt', 'elveszít', 'elad'], why: '{珍惜友谊|zhēnxī yǒuyì} „becsben tartja a barátságot".' },
+    { q: 'Mit jelent: {后会有期|hòu huì yǒu qī}！', a: 'Egyszer még találkozunk!', wrong: ['Soha többé!', 'Siess vissza!', 'Késő van már!'], why: 'Búcsúzó jókívánság.' },
+    { q: 'Mit jelent a {告别|gàobié}?', a: 'elbúcsúzik', wrong: ['üdvözöl', 'meghív', 'bemutatkozik'], why: '{告别会|gàobié huì} „búcsúest".' },
+    { q: 'Mit jelent: {这不是结束，而是新的开始|zhè bú shì jiéshù, ér shì xīn de kāishǐ}。', a: 'Ez nem a vég, hanem egy új kezdet.', wrong: ['Ez a vég, nincs tovább.', 'Még nem kezdtük el.', 'Ez se nem vég, se nem kezdet.'], why: '{不是|bú shì}…{而是|ér shì}… (HSK 3).' }
+  ]
 }
 
 ];

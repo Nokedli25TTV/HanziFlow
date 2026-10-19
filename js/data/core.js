@@ -1144,7 +1144,29 @@ const HANZIFLOW_PATH = [
     module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l88&round=listen' },
   { id: 'l88-read', glyph: '读', title: 'Olvasás: Ember és gép',
     desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
-    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l88&round=read' }
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l88&round=read' },
+
+  // ── HSK 5 · 19. lecke ──
+  { id: 'l89-lesson', glyph: '礼', title: 'Magyarázat: 未免, 不妨, 难以, 难得, 显得',
+    desc: 'Vendégségben: azért kissé túl, nyugodtan, nehezen, ritka öröm, …-nak tűnik.',
+    module: 'lesson', href: 'pages/lesson.html?id=l89' },
+  { id: 'l89-listen', glyph: '听', title: 'Hallás: mit vigyek?',
+    desc: 'A lecke mondatai hang után: mit jelent, amit hallasz?',
+    module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l89&round=listen' },
+  { id: 'l89-read', glyph: '读', title: 'Olvasás: Vendégségben Liu úrnál',
+    desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l89&round=read' },
+
+  // ── HSK 5 · 20. lecke ──
+  { id: 'l90-lesson', glyph: '别', title: 'Magyarázat: 自从…以来, 不知不觉, 无非, 一辈子, 总而言之',
+    desc: 'Búcsú Sanghajtól: amióta, észrevétlenül, csupán, egész életemben, egyszóval.',
+    module: 'lesson', href: 'pages/lesson.html?id=l90' },
+  { id: 'l90-listen', glyph: '听', title: 'Hallás: búcsúvacsora',
+    desc: 'A lecke mondatai hang után: mit jelent, amit hallasz?',
+    module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l90&round=listen' },
+  { id: 'l90-read', glyph: '读', title: 'Olvasás: Anna levele',
+    desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l90&round=read' }
 ];
 
 const HANZIFLOW_PATH_UNITS = [
@@ -1361,5 +1383,9 @@ const HANZIFLOW_PATH_UNITS = [
   { id: 'u-l87', kicker: 'HSK 5 · 17. lecke', title: 'Egy írónő estje', sub: '依然, 早晚 · 迟早, 不免, 好在, 再也不 · 再也没',
     steps: ['l87-lesson', 'l87-listen', 'l87-read'] },
   { id: 'u-l88', kicker: 'HSK 5 · 18. lecke', title: 'Mesterséges intelligencia', sub: '越是…越, 与…相比, 不仅仅, 有利于, 在于',
-    steps: ['l88-lesson', 'l88-listen', 'l88-read'] }
+    steps: ['l88-lesson', 'l88-listen', 'l88-read'] },
+  { id: 'u-l89', kicker: 'HSK 5 · 19. lecke', title: 'Vendégségben', sub: '未免, 不妨, 难以, 难得, 显得',
+    steps: ['l89-lesson', 'l89-listen', 'l89-read'] },
+  { id: 'u-l90', kicker: 'HSK 5 · 20. lecke', title: 'Búcsú Sanghajtól', sub: '自从…以来, 不知不觉, 无非, 一辈子, 总而言之',
+    steps: ['l90-lesson', 'l90-listen', 'l90-read'] }
 ];
