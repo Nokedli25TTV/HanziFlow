@@ -1772,6 +1772,10 @@ html.lesson-steps.ls-round .hf-tabbar { display: none; }
 .sm-tile.is-ok { border-color: var(--ok); background: var(--ok-soft); }
 .sm-tile.is-bad { border-color: var(--err); background: var(--err-soft); }
 .sm-tile-slot { border: 1.5px dashed var(--line); color: transparent; }
+/* próbavizsga, HSK 4: mondatrészek sorba rakása — a hosszú kártya teljes szélességű, és tördelődik */
+.ex-sort { flex-direction: column; align-items: stretch; }
+.ex-sort .sm-tile, .ex-sort .sm-tile-slot { display: block; width: 100%; text-align: left; font-size: var(--fs-lg); line-height: 1.9; }
+.ex-sort .sm-punct { display: none; }
 .sm-tile-slot rt { color: transparent; }
 .sm-actions { display: grid; grid-template-columns: 1fr 2fr; gap: 8px; }
 .sm-actions .btn { min-height: 52px; }

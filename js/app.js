@@ -6761,10 +6761,11 @@ function initNumbersPage() {
    9c6. HSK PRÓBAVIZSGA (pages/exam.html)
    ----------------------------------------------------
    Adatok: js/data/exam.js (HANZIFLOW_EXAM_LEVELS, HANZIFLOW_EXAM_ITEMS).
-   Vizsgaszerű kör: a részek (Hallás, Olvasás, HSK 3-ban Írás) sorban jönnek, menet közben nincs
+   Vizsgaszerű kör: a részek (Hallás, Olvasás, HSK 3–4-ben Írás) sorban jönnek, menet közben nincs
    visszajelzés, előre-hátra lehet lépni, és a végén jön a pontszám (részenként 100 pont, 60% az átmenő)
    meg a válaszok átnézése. A hallás feladatai kétszer hallgathatók meg; ha a hang nem szól,
-   a szöveg megmutatható. A pinyin HSK 1–2-ben alapból látszik, HSK 3-ban rejtve van.
+   a szöveg megmutatható. A pinyin HSK 1–2-ben alapból látszik, HSK 3–4-ben rejtve van.
+   HSK 4-ben két további típus: hallás utáni igaz–hamis (hearJudge) és mondatrészek sorba rakása (sort).
    ==================================================== */
 function initExamPage() {
   const PROFILE_KEY  = 'hanziflow_exam_profile_v1';
@@ -6786,12 +6787,17 @@ function initExamPage() {
     judge:   'Igaz vagy hamis a ★ állítás a szöveg alapján?',
     passage: 'Olvasd el a szöveget, és válaszolj a kérdésre!',
     order:   'Rakd sorba a szavakat!',
-    hanzi:   'Melyik írásjegy illik a pinyinhez?'
+    hanzi:   'Melyik írásjegy illik a pinyinhez?',
+    hearJudge: 'Hallgasd meg! Igaz vagy hamis a ★ állítás?',
+    sort:    'Rakd sorba a mondatrészeket!'
   };
-  const isListen = it => it.t === 'hear' || it.t === 'hearHu';
+  const isListen = it => it.t === 'hear' || it.t === 'hearHu' || it.t === 'hearJudge';
+  const isOrder  = it => it.t === 'order' || it.t === 'sort';
+  const isJudge  = it => it.t === 'judge' || it.t === 'hearJudge';
   // a felolvasott szöveg: a párbeszéd sorai a „男：" / „女：" jel nélkül, a végén a kérdés
   function audioOf(it) {
     if (it.t === 'hearHu') return reading(it.zh);
+    if (it.t === 'hearJudge') return reading(it.text);
     return it.lines.map(l => reading(l).replace(/^[男女]：/, '')).join(' ') + ' 问：' + reading(it.q);
   }
   const tileText = t => reading(t);
@@ -6806,7 +6812,7 @@ function initExamPage() {
   const settings = {
     level: LEVELS[saved.level] ? saved.level : 'hsk1',
     timer: saved.timer !== false,
-    pinyin: Object.assign({ hsk1: true, hsk2: true, hsk3: false }, saved.pinyin || {})
+    pinyin: Object.assign({ hsk1: true, hsk2: true, hsk3: false, hsk4: false }, saved.pinyin || {})
   };
   if (window.HanziFlowPath) HanziFlowPath.apply('exam', settings);
   // a tanulási út lépéséről nyitva csak a lépés szintje teljesíti a lépést
@@ -6847,10 +6853,10 @@ function initExamPage() {
   }
   function makeQuestion(it, sec) {
     const q = { it: it, sec: sec, answer: null, plays: 0, shown: false };
-    if (it.t === 'judge') {
+    if (isJudge(it)) {
       q.options = [{ html: 'Igaz · <span lang="zh-CN">对</span>' }, { html: 'Hamis · <span lang="zh-CN">错</span>' }];
       q.right = it.ok ? 0 : 1;
-    } else if (it.t === 'order') {
+    } else if (isOrder(it)) {
       q.tiles = it.tiles.map((zh, k) => ({ k: k, zh: zh, text: tileText(zh) }));
       q.orders = [q.tiles.map(t => t.k)].concat((it.alts || []).map(a => a.split(' ').map(Number)));
       q.answers = q.orders.map(o => o.map(k => q.tiles[k].text).join(''));
@@ -6865,9 +6871,9 @@ function initExamPage() {
     }
     return q;
   }
-  function isAnswered(q) { return q.it.t === 'order' ? q.placed.length === q.tiles.length : q.answer !== null; }
+  function isAnswered(q) { return isOrder(q.it) ? q.placed.length === q.tiles.length : q.answer !== null; }
   function isCorrect(q) {
-    if (q.it.t === 'order') return isAnswered(q) && q.answers.indexOf(q.placed.map(t => t.text).join('')) >= 0;
+    if (isOrder(q.it)) return isAnswered(q) && q.answers.indexOf(q.placed.map(t => t.text).join('')) >= 0;
     return q.answer === q.right;
   }
 
@@ -6890,10 +6896,10 @@ function initExamPage() {
         <p class="tone-chart-sub">A feladattípusok a HSK vizsgát követik; a képes feladatok helyett itt szöveges változat áll. Ez gyakorlás, nem hivatalos vizsga.</p>
       </div>
       <dl class="py-tip-list">
-        <div class="py-tip"><dt>Részek</dt><dd>HSK 1 és 2: Hallás és Olvasás. HSK 3: Hallás, Olvasás és Írás (sorba rakás, a pinyinhez illő írásjegy).</dd></div>
+        <div class="py-tip"><dt>Részek</dt><dd>HSK 1 és 2: Hallás és Olvasás. HSK 3 és 4: Hallás, Olvasás és Írás (sorba rakás, a pinyinhez illő írásjegy). HSK 4-ben a hallásban igaz–hamis állítás, az olvasásban mondatrészek sorba rakása is van.</dd></div>
         <div class="py-tip"><dt>Hallás</dt><dd>Minden hanganyag kétszer hallgatható meg. Ha a hang nem szól, a szöveget meg tudod nézni — ezt a pontozás nem bünteti.</dd></div>
         <div class="py-tip"><dt>Menet közben</dt><dd>Nincs visszajelzés, mint a valódi vizsgán. Előre-hátra léphetsz, és a választ a beadásig megváltoztathatod.</dd></div>
-        <div class="py-tip"><dt>Pontozás</dt><dd>Minden rész 100 pontot ér. Átmenő: az összpontszám 60%-a (HSK 1–2: 120 / 200, HSK 3: 180 / 300). A végén minden választ átnézhetsz magyar fordítással.</dd></div>
+        <div class="py-tip"><dt>Pontozás</dt><dd>Minden rész 100 pontot ér. Átmenő: az összpontszám 60%-a (HSK 1–2: 120 / 200, HSK 3–4: 180 / 300). A végén minden választ átnézhetsz magyar fordítással.</dd></div>
       </dl>`;
   }
 
@@ -7012,6 +7018,7 @@ function initExamPage() {
 
   function transcriptHtml(it) {
     if (it.t === 'hearHu') return `<p class="ex-line">${rich(it.zh)}</p>`;
+    if (it.t === 'hearJudge') return `<p class="ex-line">${rich(it.text)}</p>`;
     return it.lines.map(l => `<p class="ex-line">${rich(l)}</p>`).join('');
   }
 
@@ -7033,6 +7040,7 @@ function initExamPage() {
         <p class="tone-noaudio hidden" id="exNoAudio">A hang most nem szól. <button class="btn btn-ghost ex-show" id="exShow" type="button">Mutasd a szöveget</button></p>
         <div class="ex-transcript${q.shown ? '' : ' hidden'}" id="exTranscript">${transcriptHtml(it)}</div>`;
       if (it.t === 'hear') body += `<div class="ex-q">${rich(it.q)}</div>`;
+      if (it.t === 'hearJudge') body += `<div class="ex-star">★ ${rich(it.s)}</div>`;
     } else if (it.t === 'reply') {
       body += `<div class="ex-q ex-q-big">${rich(it.q)}</div>`;
     } else if (it.t === 'blank' || it.t === 'hanzi') {
@@ -7050,13 +7058,13 @@ function initExamPage() {
     }
 
     let answer = '';
-    if (it.t === 'order') {
+    if (isOrder(it)) {
       answer = `
-        <div class="sm-answer" id="exAnswer" aria-live="polite"></div>
-        <div class="sm-bank" id="exBank"></div>
+        <div class="sm-answer${it.t === 'sort' ? ' ex-sort' : ''}" id="exAnswer" aria-live="polite"></div>
+        <div class="sm-bank${it.t === 'sort' ? ' ex-sort' : ''}" id="exBank"></div>
         <div class="sm-actions ex-order-actions"><button class="btn btn-outline sm-undo" id="exUndo" type="button">Vissza</button></div>`;
     } else {
-      answer = `<div class="cj-options ex-options${it.t === 'judge' ? ' ex-options-2' : ''}${it.t === 'hanzi' ? ' ex-options-4' : ''}">
+      answer = `<div class="cj-options ex-options${isJudge(it) ? ' ex-options-2' : ''}${it.t === 'hanzi' ? ' ex-options-4' : ''}">
         ${q.options.map((o, i) => `<button class="cj-option ex-option${q.answer === i ? ' is-selected' : ''}" type="button" data-idx="${i}" aria-pressed="${q.answer === i}"><span class="ex-letter">${LETTERS[i]}</span><span class="ex-opt-body">${o.html}</span></button>`).join('')}
       </div>`;
     }
@@ -7082,7 +7090,7 @@ function initExamPage() {
       updatePlayBtn(q);
       if (q.plays === 0) playQuestion(q, pb);
     }
-    if (it.t === 'order') drawOrder(q);
+    if (isOrder(it)) drawOrder(q);
     else document.querySelectorAll('#exCard .ex-option').forEach(btn => btn.addEventListener('click', () => {
       q.answer = parseInt(btn.dataset.idx, 10);
       document.querySelectorAll('#exCard .ex-option').forEach(b => {
@@ -7115,7 +7123,7 @@ function initExamPage() {
     const used = q.placed.map(t => t.k);
     ans.innerHTML = (q.placed.length
       ? q.placed.map((t, i) => `<button class="sm-tile is-placed" type="button" data-pos="${i}">${rich(t.zh)}</button>`).join('')
-      : '<span class="sm-answer-hint">Koppints a szavakra a helyes sorrendben.</span>') +
+      : `<span class="sm-answer-hint">Koppints a ${q.it.t === 'sort' ? 'mondatrészekre' : 'szavakra'} a helyes sorrendben.</span>`) +
       (q.placed.length ? `<span class="sm-punct" lang="zh-CN">${esc(q.it.punct)}</span>` : '');
     bank.innerHTML = q.bank.map(t => used.indexOf(t.k) >= 0
       ? `<span class="sm-tile-slot" aria-hidden="true">${rich(t.zh)}</span>`
@@ -7224,13 +7232,14 @@ function initExamPage() {
     return `<h3 class="ex-review-h">A válaszaid</h3>` + run.qs.map((q, n) => {
       const it = q.it, ok = isCorrect(q), answered = isAnswered(q);
       let task = '';
-      if (isListen(it)) task = transcriptHtml(it) + (it.t === 'hear' ? `<p class="ex-line"><strong lang="zh-CN">问：</strong>${rich(it.q)}</p>` : '');
+      if (isListen(it)) task = transcriptHtml(it) + (it.t === 'hear' ? `<p class="ex-line"><strong lang="zh-CN">问：</strong>${rich(it.q)}</p>` : '')
+        + (it.t === 'hearJudge' ? `<p class="ex-line">★ ${rich(it.s)}</p>` : '');
       else if (it.t === 'reply') task = `<p class="ex-line">${rich(it.q)}</p>`;
       else if (it.t === 'blank' || it.t === 'hanzi') task = `<p class="ex-line">${rich(it.zh)}${it.t === 'hanzi' ? ` <span class="ex-dim">(${esc(it.py)})</span>` : ''}</p>`;
       else if (it.t === 'judge') task = `<p class="ex-line">${rich(it.text)}</p><p class="ex-line">★ ${rich(it.s)}</p>`;
       else if (it.t === 'passage') task = `<p class="ex-line">${rich(it.text)}</p><p class="ex-line">${rich(it.q)}</p>`;
       let mine, right;
-      if (it.t === 'order') {
+      if (isOrder(it)) {
         mine = answered ? `<span class="mw-fb-zh">${rich(q.placed.map(t => t.zh).join('') + it.punct)}</span>` : '<em class="ex-none">nincs válasz</em>';
         right = `<span class="mw-fb-zh">${rich(it.tiles.join('') + it.punct)}</span>`;
       } else {
@@ -7238,7 +7247,7 @@ function initExamPage() {
         right = answerHtml(q, q.right);
       }
       const hu = it.t === 'hearHu' ? '' : it.hu ? `<p class="ex-hu">${esc(it.hu)}</p>` : '';
-      const say = isListen(it) ? audioOf(it) : it.t === 'order' ? reading(it.tiles.join(''))
+      const say = isListen(it) ? audioOf(it) : isOrder(it) ? reading(it.tiles.join(''))
         : (it.t === 'blank' || it.t === 'hanzi') ? reading(it.zh.replace('＿', it.a)) : reading(it.text || it.q || '');
       return `
         <details class="ex-ritem ${ok ? 'is-ok' : 'is-bad'}"${ok ? '' : ' open'}>

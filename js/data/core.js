@@ -647,6 +647,9 @@ const HANZIFLOW_PATH = [
   { id: 'test-h4z', glyph: '测', title: 'Szintzáró: HSK 4',
     desc: 'Nagyobb dolgozat a HSK 4 összes leckéjéből: szavak, mondatok, nyelvtan, olvasmány.',
     module: 'tests', href: 'pages/tests.html?test=h4z', optional: true, preset: { set: { level: 4 } } },
+  { id: 'exam-hsk4', glyph: '考', title: 'Próbavizsga: HSK 4',
+    desc: 'A HSK 4 vizsga mintájára: hallás, olvasás és írás, időre, a végén pontszámmal.',
+    module: 'exam', href: 'pages/exam.html', optional: true, preset: { set: { level: 'hsk4' } } },
 
   // ── Gyakorló modulok a leckék fejezeteiben: nem kötelező lépések ──
   { id: 'py-dictate', glyph: '拼', title: 'Diktálás: írd le, amit hallasz',
@@ -1111,6 +1114,6 @@ const HANZIFLOW_PATH_UNITS = [
     steps: ['l70-lesson', 'l70-listen', 'l70-read'] },
   { id: 'u-t-h4d', kicker: 'HSK 4 · Dolgozat', title: '4. témazáró', sub: 'A 16–20. lecke anyaga, jegyre — nem kötelező',
     steps: ['test-h4d'] },
-  { id: 'u-z-h4', kicker: 'HSK 4 · Szintzáró', title: 'A HSK 4 vége', sub: 'Szintzáró dolgozat és pinyin-beírás — nem kötelező',
-    steps: ['test-h4z', 'py-write-h4'] }
+  { id: 'u-z-h4', kicker: 'HSK 4 · Szintzáró', title: 'A HSK 4 vége', sub: 'Szintzáró dolgozat, pinyin-beírás és próbavizsga — nem kötelező',
+    steps: ['test-h4z', 'py-write-h4', 'exam-hsk4'] }
 ];

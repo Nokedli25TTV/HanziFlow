@@ -16,7 +16,7 @@ mellette **gyakorló modulok**, **időzített ismétlés** és **statisztika**.
 - **Fiók:** ugyanaz a Firebase-projekt, mint a NihonCore-é (egy belépés mindkettőhöz). A HanziFlow a
   `users/{uid}/apps/hanziflow` dokumentumba ír — a Firestore-szabályokban ezt a helyet engedélyezni kell.
 - **A user nyelve magyar: válaszolj magyarul**, a felület magyar.
-- **Írás:** egyszerűsített (简体). **Cél:** HSK 1–4 kész (71 lecke, l0–l70); a következő lehet a HSK 4 próbavizsga, a modulok HSK 4-es anyaga vagy a HSK 5.
+- **Írás:** egyszerűsített (简体). **Cél:** HSK 1–4 kész (71 lecke, l0–l70); a következő lehet a modulok HSK 4-es anyaga vagy a HSK 5.
 
 ## 2. Munkaszabályok (user-döntések)
 
@@ -45,7 +45,7 @@ pages/pinyin.html     Pinyin-tábla (a tábla a négy tónussal · beírás és 
 pages/measure.html    Mérőszavak (tábla csoportonként · párosítás · mondatban · számolás)
 pages/sentence.html   Mondat-Mester (szórend-szabályok szintenként · sorba rakás · szócskák)
 pages/numbers.html    Dátum, idő, pénz (tudnivalók + „Próbáld ki" · olvasás · kimondás · hallás után)
-pages/exam.html       HSK 1–3 próbavizsga (hallás · olvasás · HSK 3-ban írás; időre, a végén pontszám és átnézés)
+pages/exam.html       HSK 1–4 próbavizsga (hallás · olvasás · HSK 3–4-ben írás; időre, a végén pontszám és átnézés)
 pages/tests.html      Dolgozatok: 14 témazáró (öt-öt lecke) + 4 szintzáró (HSK 1–4), jegy 1–5, átnézés
 pages/modules.html    a modulok kártyái („Szabad gyakorlás")
 pages/stats.html      statisztika · login.html · register.html
@@ -60,7 +60,7 @@ js/data/tones.js      a Tónus-tréner adatai
 js/data/measure.js    a Mérőszavak adatai (29 mérőszó, főnevek, mondatok, szabályok; a séma a fájl elején)
 js/data/sentence.js   a Mondat-Mester adatai (21 szabály, 41 sorba rakós és 28 szócskás mondat; séma a fájl elején)
 js/data/numbers.js    a Dátum, idő, pénz alapelemei és szabályai; a kínai alakot az app.js generátora állítja elő
-js/data/exam.js       a próbavizsga részei szintenként és a saját feladatbank (182 feladat, 8 típus; séma a fájl elején)
+js/data/exam.js       a próbavizsga részei szintenként és a saját feladatbank (270 feladat, 10 típus; séma a fájl elején)
 js/data/tests.js      a dolgozatok listája, részei és a jegyhatárok; a kérdések a course.js leckéiből jönnek
 sw.js · manifest.webmanifest · img/ (ikonok)
 ```
@@ -100,7 +100,7 @@ Színt csak tokenből; 12 px alatt nincs szöveg; érintési célpont ≥ 44 px;
 - [x] HSK 3: mind a 20 lecke (l31–l50; kicker és jelvény „HSK 3 · N. lecke", kereszthivatkozás „HSK 3 N. lecke").
 - [x] HSK 4: mind a 20 lecke (l51–l70; Anna Sanghajban dolgozik, kollégák: Zhou Jie, Chen igazgató, Xiao Li; barátok: Wang Li,
   Lin Jing, Wang Ming). Kicker „HSK 4 · N. lecke". A dolgozatoknál h4a–h4d + h4z, a pinyin-táblán `hsk4` szint, az úton
-  témazáró-fejezetek és szintzáró (próbavizsga még nincs). A szavak `hu` mezőjében ne legyen `{汉字|pinyin}` jelölés
+  témazáró-fejezetek és szintzáró + próbavizsga. A szavak `hu` mezőjében ne legyen `{汉字|pinyin}` jelölés
   (a lecke szólistája, a pinyin-tábla és a dolgozat nyers szövegként írja ki) — írásjegy helyett pinyin.
 - [x] Pinyin-tábla modul (pages/pinyin.html): a szavak a leckék szólistáiból, a hangpélda az írásjegy leggyakoribb olvasata.
 - [x] Mérőszavak modul (pages/measure.html): a rossz válaszok közé nem kerül olyan mérőszó, amely az adott főnévvel
@@ -110,8 +110,9 @@ Színt csak tokenből; 12 px alatt nincs szöveg; érintési célpont ≥ 44 px;
 - [x] Dátum, idő, pénz (pages/numbers.html): a feladatokat generátor sorsolja (initNumbersPage → num, dateParts,
   timeParts, moneyParts); a rossz válaszok tipikus hibák (二/两, hiányzó 零, „fél négy", napszak, sorrend, 块/毛).
   Próba (scratchpad): `nm-test.js` (kényes értékek kiírása, 3000 kártya, minden pinyin érvényes-e).
-- [x] HSK 1–3 próbavizsga (pages/exam.html): részenként 100 pont, 60% az átmenő; a hallás kétszer hallgatható,
-  hang nélkül a szöveg megmutatható; HSK 3-ban a pinyin alapból rejtve. Szintenként 26–28 feladat jut egy
+- [x] HSK 1–4 próbavizsga (pages/exam.html): részenként 100 pont, 60% az átmenő; a hallás kétszer hallgatható,
+  hang nélkül a szöveg megmutatható; HSK 3–4-ben a pinyin alapból rejtve. HSK 4: 12 + 12 + 8 kérdés, 45 perc, két saját
+  típussal: `hearJudge` (hallás utáni igaz–hamis) és `sort` (mondatrészek sorba rakása, az `order` motorjával). Szintenként 26–28 feladat jut egy
   10 kérdéses részre; az előző vizsga kérdései (profil: recent) hátrébb kerülnek. Bővítés: új feladat a HANZIFLOW_EXAM_ITEMS-be.
 - [x] Dolgozatok (pages/tests.html): Szavak · Mondatok · Nyelvtan (a leckék quiz-kérdései) · Olvasás; a rossz nyelvtani
   válasz a HanziFlowSRS-be kerül (`lesson:<id>:<sorszám>`), újraíráskor az előző kérdések hátrébb kerülnek.
@@ -122,7 +123,7 @@ Színt csak tokenből; 12 px alatt nincs szöveg; érintési célpont ≥ 44 px;
   fejezeteiben, előre beállított körrel (`preset.set`); a lépést csak a beállított mód teljesíti (onSession).
   A lecke-oldal „Gyakorlás" listája ezeket is mutatja.
 - Élő oldal: https://nokedli25ttv.github.io/HanziFlow/ (GitHub Pages, main ág, 2026-10-18 óta).
-- [ ] HSK 4 próbavizsga (exam.js feladatbank és a `hsk4` szint az exam oldalon); a Mérőszavak és a Mondat-Mester HSK 4-es anyaga.
+- [ ] A Mérőszavak és a Mondat-Mester HSK 4-es anyaga.
 - [ ] A NihonCore `sw.js`-ében a cache-törlést a saját előtagra kell szűkíteni (különben a HanziFlow offline-tárát is törli).
 - [ ] Firestore-szabály a `users/{uid}/apps/{app}` helyre (a user Firebase-konzolján).
 - [ ] A kínai mondatokat és a pinyint anyanyelvi lektor nem látta; a hangot valódi telefonon kell kipróbálni.
