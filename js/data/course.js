@@ -14486,6 +14486,323 @@ const HANZIFLOW_COURSE = [
     { q: 'Mit jelent a {示范|shìfàn}?', a: 'bemutat (mintát ad)', wrong: ['kijavít', 'értékel', 'megtilt'], why: '{给你示范|gěi nǐ shìfàn} „megmutatja neked".' },
     { q: 'Mit jelent a {基本|jīběn}?', a: 'alapvető', wrong: ['bonyolult', 'különleges', 'új'], why: '{基本笔画|jīběn bǐhuà} „alapvonások".' }
   ]
+},
+/* ════════════════════════════════════════════════════
+   HSK 5 · 9. LECKE — 不至于, 何必, 说不定, 一旦, 哪怕…也
+   ════════════════════════════════════════════════════ */
+{
+  id: 'l79', no: 79, badge: '9', kicker: 'HSK 5 · 9. lecke', label: 'HSK 5 · 9. lecke',
+  title: 'Feszültség a csapatban — minek kellett ezt mindenki előtt?',
+  lead: 'Konfliktust simítasz el: enyhíted a helyzetet (不至于), szónokian kérdezed, mi szükség volt rá (何必), felveted, hogy talán másképp áll a dolog (说不定), figyelmeztetsz, mi kell, ha egyszer baj van (一旦…就…), és hangsúlyozod, hogy még a legkisebb dolog is számít (哪怕…也…).',
+  cando: [
+    'Enyhíted a helyzetet: 不至于… („azért nem olyan vészes").',
+    'Szónokian megkérdezed, mi szükség volt rá: 何必…呢？',
+    'Felveted, hogy talán másképp van: 说不定….',
+    'Feltételről beszélsz (一旦…就…), és nyomatékosítasz: 哪怕…也….'
+  ],
+  intro: [
+    'Egy csapatmegbeszélésen Zhou Jie mindenki előtt bírálta Xiao Li jelentését. Xiao Li megbántódott, és Annához fordul — Anna, a csapat vezetőjeként, mindkettőjükkel beszél.',
+    'Ebben a leckében a konfliktuskezelés nyelvét tanulod: hogyan enyhíted a helyzetet, hogyan kérdezel rá szelíden, és hogyan adsz tanácsot.'
+  ],
+  dialogue: {
+    title: 'Egy rossz pillanat',
+    scene: 'Kedd délután, Anna irodájában, előbb Xiao Livel, aztán Zhou Jie-vel.',
+    lines: [
+      { who: 'Xiao Li', zh: '{周杰|Zhōu Jié}{今天|jīn·tiān}{在|zài}{会|huì}{上|shang}{说|shuō}{我|wǒ}{的|de}{报告|bào gào}{有|yǒu}{问题|wèn·tí}，{当着|dāng zhe}{那么|nà·me}{多|duō}{人|rén}，{我|wǒ}{真|zhēn}{受|shòu}{不|bu}{了|liǎo}。', hu: 'Zhou Jie ma az értekezleten azt mondta, hogy hibás a jelentésem — ennyi ember előtt! Ezt nem bírom elviselni.' },
+      { who: 'Anna', zh: '{别|bié}{生气|shēng qì}。{他|tā}{说|shuō}{话|huà}{一向|yí xiàng}{比较|bǐ·jiào}{直|zhí}，{不至于|bú zhì yú}{是|shì}{故意|gù yì}{的|de}。', hu: 'Ne haragudj. Mindig is elég egyenesen beszél, azért szándékosan biztosan nem akart megbántani.' },
+      { who: 'Xiao Li', zh: '{可是|kě·shì}{他|tā}{何必|hé bì}{当着|dāng zhe}{大家|dà·jiā}{的|de}{面|miàn}{说|shuō}{呢|ne}？{私下|sī xià}{告诉|gào·su}{我|wǒ}{不|bù}{就|jiù}{行|xíng}{了|le}？', hu: 'De minek kellett ezt mindenki előtt mondania? Négyszemközt is megmondhatta volna, nem?' },
+      { who: 'Anna', zh: '{你|nǐ}{说|shuō}{得|de}{有|yǒu}{道理|dào·lǐ}。{说不定|shuō bu dìng}{他|tā}{根本|gēn běn}{没|méi}{想|xiǎng}{那么|nà·me}{多|duō}。{我|wǒ}{去|qù}{跟|gēn}{他|tā}{聊|liáo}{聊|liao}。', hu: 'Ebben igazad van. Lehet, hogy egyszerűen bele sem gondolt. Beszélek vele.' },
+      { who: 'Anna', zh: '{周杰|Zhōu Jié}，{同事|tóng·shì}{之间|zhī jiān}{一旦|yí dàn}{有|yǒu}{了|le}{误会|wù·huì}，{就|jiù}{要|yào}{早|zǎo}{点儿|diǎnr}{解决|jiě jué}。{哪怕|nǎ pà}{只|zhǐ}{是|shì}{一|yí}{句|jù}{话|huà}，{也|yě}{可能|kě·néng}{让|ràng}{人|rén}{难过|nán guò}。', hu: 'Zhou Jie, ha egyszer félreértés támad a kollégák között, minél hamarabb meg kell oldani. Akár egyetlen mondat is fájhat valakinek.' },
+      { who: 'Zhou Jie', zh: '{你|nǐ}{说|shuō}{得|de}{对|duì}，{是|shì}{我|wǒ}{考虑|kǎo lǜ}{得|de}{不|bù}{周到|zhōu·dao}。{我|wǒ}{现在|xiàn·zài}{就|jiù}{去|qù}{跟|gēn}{小|Xiǎo}{李|Lǐ}{道|dào}{个|ge}{歉|qiàn}。', hu: 'Igazad van, nem gondoltam végig. Most rögtön megyek, és bocsánatot kérek Xiao Litől.' },
+      { who: 'Anna', zh: '{好|hǎo}。{其实|qí shí}{他|tā}{的|de}{报告|bào gào}{写|xiě}{得|de}{不错|bú cuò}，{只|zhǐ}{是|shì}{有|yǒu}{几|jǐ}{个|ge}{数字|shù zì}{要|yào}{改|gǎi}。', hu: 'Jó. Egyébként a jelentése nem rossz, csak néhány számot kell javítani benne.' }
+    ],
+    notes: [
+      'Az {当着|dāngzhe}…{的面|de miàn} „valaki szeme láttára, nyilvánosan"; ellentéte a {私下|sīxià} „négyszemközt".',
+      'A {受不了|shòu bu liǎo} „nem bírja elviselni"; az {道个歉|dào ge qiàn} „bocsánatot kér" — a szétválasztható igébe {个|ge} ékelődik.',
+      'A {周到|zhōudao} „figyelmes, mindenre kiterjedő": {考虑得不周到|kǎolǜ de bù zhōudao} „nem gondolt mindenre".'
+    ]
+  },
+  points: [
+    {
+      title: '{不至于|búzhìyú}', sub: 'azért nem (olyan súlyos, hogy) …',
+      pattern: 'A + {不至于|bú zhì yú} + (túlzó) következmény · {不至于|bú zhì yú}{吧|ba}',
+      body: 'A {不至于|búzhìyú} azt mondja, hogy a dolog <b>nem jut el egy túlzó, súlyos fokig</b>: {不至于是故意的|búzhìyú shì gùyì de} „azért szándékosan biztosan nem csinálta", {这点儿小问题，不至于影响整个项目|zhè diǎnr xiǎo wèntí, búzhìyú yǐngxiǎng zhěnggè xiàngmù} „ez a kis hiba azért nem veszélyezteti az egész projektet". Önállóan: {不至于吧|búzhìyú ba} „azért nem olyan vészes".',
+      examples: [
+        { zh: '{他|tā}{说|shuō}{话|huà}{比较|bǐ·jiào}{直|zhí}，{不至于|bú zhì yú}{是|shì}{故意|gù yì}{的|de}。', hu: 'Elég egyenesen beszél, azért szándékosan biztosan nem csinálta.' },
+        { zh: '{这|zhè}{点儿|diǎnr}{小|xiǎo}{问题|wèn·tí}，{不至于|bú zhì yú}{影响|yǐng xiǎng}{整个|zhěng·gè}{项目|xiàng·mù}。', hu: 'Ez a kis gond azért nem befolyásolja az egész projektet.' }
+      ]
+    },
+    {
+      title: '{何必|hébì}', sub: 'minek …? nem kell …',
+      pattern: '(A) + {何必|hé bì} + ige + ({呢|ne})？',
+      body: 'A {何必|hébì} szónoki kérdés: „<b>mi szükség van rá?</b>" — azaz nem kellene. {他何必当着大家的面说呢|tā hébì dāngzhe dàjiā de miàn shuō ne} „minek kellett ezt mindenki előtt mondania?", {何必生气呢|hébì shēngqì ne} „minek mérgelődni?". A végén gyakran {呢|ne} áll; önállóan: {何必呢|hébì ne} „ugyan minek?".',
+      examples: [
+        { zh: '{他|tā}{何必|hé bì}{当着|dāng zhe}{大家|dà·jiā}{的|de}{面|miàn}{说|shuō}{呢|ne}？', hu: 'Minek kellett ezt mindenki előtt mondania?' },
+        { zh: '{只|zhǐ}{是|shì}{一|yí}{件|jiàn}{小|xiǎo}{事|shì}，{你|nǐ}{何必|hé bì}{这么|zhè·me}{生气|shēng qì}？', hu: 'Csak apróság, minek mérgelődsz ennyire?' }
+      ]
+    },
+    {
+      title: '{说不定|shuōbudìng}', sub: 'lehet, hogy; talán',
+      pattern: '{说不定|shuō bu dìng} + feltevés · A + {说不定|shuō bu dìng} + ige',
+      body: 'A {说不定|shuōbudìng} szó szerint „nem lehet biztosan megmondani": egy <b>lehetőséget</b> vet fel, amely talán igaz: {说不定他根本没想那么多|shuōbudìng tā gēnběn méi xiǎng nàme duō} „lehet, hogy egyszerűen bele sem gondolt", {说不定明天会下雨|shuōbudìng míngtiān huì xià yǔ} „lehet, hogy holnap esni fog". Beszélt nyelvi, a mondat elején vagy az alany után áll.',
+      examples: [
+        { zh: '{说不定|shuō bu dìng}{他|tā}{根本|gēn běn}{没|méi}{想|xiǎng}{那么|nà·me}{多|duō}。', hu: 'Lehet, hogy egyszerűen bele sem gondolt.' },
+        { zh: '{带|dài}{上|shang}{伞|sǎn}{吧|ba}，{下午|xià·wǔ}{说不定|shuō bu dìng}{会|huì}{下|xià}{雨|yǔ}。', hu: 'Vigyél esernyőt, lehet, hogy délután esni fog.' }
+      ]
+    },
+    {
+      title: '{一旦|yídàn} … {就|jiù} …', sub: 'ha egyszer …, akkor …',
+      pattern: '{一旦|yí dàn} + (bekövetkező) helyzet，(A) + {就|jiù} + következmény / teendő',
+      body: 'Az {一旦|yídàn} „ha egyszer, amint" olyan helyzetet vezet be, amely <b>bekövetkezhet</b>, és ha bekövetkezik, következménye van: {一旦有了误会，就要早点儿解决|yídàn yǒu le wùhuì, jiù yào zǎo diǎnr jiějué} „ha egyszer félreértés támad, minél hamarabb meg kell oldani", {一旦决定了，就不要后悔|yídàn juédìng le, jiù bú yào hòuhuǐ} „ha egyszer döntöttél, ne bánd meg".',
+      examples: [
+        { zh: '{同事|tóng·shì}{之间|zhī jiān}{一旦|yí dàn}{有|yǒu}{了|le}{误会|wù·huì}，{就|jiù}{要|yào}{早|zǎo}{点儿|diǎnr}{解决|jiě jué}。', hu: 'Ha egyszer félreértés támad a kollégák között, minél hamarabb meg kell oldani.' },
+        { zh: '{一旦|yí dàn}{决定|jué·dìng}{了|le}，{就|jiù}{不|bú}{要|yào}{后悔|hòu huǐ}。', hu: 'Ha egyszer döntöttél, ne bánd meg.' }
+      ]
+    },
+    {
+      title: '{哪怕|nǎpà} … {也|yě} …', sub: 'akár …, még ha … is',
+      pattern: '{哪怕|nǎ pà} + (szélsőséges) feltevés，(A) + {也|yě} + …',
+      body: 'A {哪怕|nǎpà} … {也|yě} … a HSK 4-ben tanult {即使|jíshǐ} … {也|yě} … beszéltebb, nyomatékosabb párja: még a <b>legszélsőségesebb</b> esetben is igaz marad valami. {哪怕只是一句话，也可能让人难过|nǎpà zhǐ shì yí jù huà, yě kěnéng ràng rén nánguò} „akár egyetlen mondat is fájhat", {哪怕再忙，也要吃早饭|nǎpà zài máng, yě yào chī zǎofàn} „akármilyen elfoglalt vagy, reggelizz".',
+      examples: [
+        { zh: '{哪怕|nǎ pà}{只|zhǐ}{是|shì}{一|yí}{句|jù}{话|huà}，{也|yě}{可能|kě·néng}{让|ràng}{人|rén}{难过|nán guò}。', hu: 'Akár egyetlen mondat is fájhat valakinek.' },
+        { zh: '{哪怕|nǎ pà}{明天|míng·tiān}{下|xià}{大|dà}{雨|yǔ}，{我|wǒ}{也|yě}{要|yào}{去|qù}。', hu: 'Még ha holnap zuhog is, akkor is elmegyek.' }
+      ],
+      mistakes: [
+        { bad: '{哪怕|nǎ pà}{很|hěn}{忙|máng}，{我|wǒ}{就|jiù}{来|lái}。', good: '{哪怕|nǎ pà}{很|hěn}{忙|máng}，{我|wǒ}{也|yě}{来|lái}。', why: 'A {哪怕|nǎpà} párja a {也|yě}, nem a {就|jiù}.' }
+      ]
+    }
+  ],
+  phrases: [
+    { zh: '{别|bié}{往|wǎng}{心|xīn}{里|li}{去|qù}。', hu: 'Ne vedd a szívedre.' },
+    { zh: '{有|yǒu}{话|huà}{好好|hǎo hǎo}{说|shuō}。', hu: 'Beszéljük meg nyugodtan.' },
+    { zh: '{是|shì}{我|wǒ}{考虑|kǎo lǜ}{得|de}{不|bù}{周到|zhōu·dao}。', hu: 'Nem gondoltam végig, az én hibám.' },
+    { zh: '{和|hé}{为|wéi}{贵|guì}。', hu: 'A békesség a legfontosabb.' }
+  ],
+  words: [
+    { title: 'Szavak',
+      items: [
+        { zh: '{不至于|bú zhì yú}', pinyin: 'búzhìyú', hu: 'azért nem (olyan súlyos)' },
+        { zh: '{何必|hé bì}', pinyin: 'hébì', hu: 'minek? nem kell' },
+        { zh: '{说不定|shuō bu dìng}', pinyin: 'shuōbudìng', hu: 'lehet, hogy' },
+        { zh: '{一旦|yí dàn}', pinyin: 'yídàn', hu: 'ha egyszer' },
+        { zh: '{哪怕|nǎ pà}', pinyin: 'nǎpà', hu: 'akár, még ha' },
+        { zh: '{报告|bào gào}', pinyin: 'bàogào', hu: 'jelentés, beszámoló' },
+        { zh: '{故意|gù yì}', pinyin: 'gùyì', hu: 'szándékosan' },
+        { zh: '{直|zhí}', pinyin: 'zhí', hu: 'egyenes, nyílt' },
+        { zh: '{私下|sī xià}', pinyin: 'sīxià', hu: 'négyszemközt' },
+        { zh: '{解决|jiě jué}', pinyin: 'jiějué', hu: 'megold' },
+        { zh: '{周到|zhōu·dao}', pinyin: 'zhōudao', hu: 'figyelmes, alapos' },
+        { zh: '{冲突|chōng tū}', pinyin: 'chōngtū', hu: 'konfliktus' }
+      ] },
+    { title: 'Ráadás',
+      items: [
+        { zh: '{当面|dāng miàn}', pinyin: 'dāngmiàn', hu: 'szemtől szemben' },
+        { zh: '{受不了|shòu bu liǎo}', pinyin: 'shòubuliǎo', hu: 'nem bírja elviselni' },
+        { zh: '{沟通|gōu tōng}', pinyin: 'gōutōng', hu: 'kommunikál; kommunikáció' },
+        { zh: '{面子|miàn·zi}', pinyin: 'miànzi', hu: 'arc, tekintély' }
+      ] }
+  ],
+  culture: [
+    { title: 'Ne nyilvánosan', text: 'A kínai munkahelyeken a bírálatot ritkán mondják el mindenki előtt, mert az a másik fél arcvesztését ({丢面子|diū miànzi}) okozhatja. Inkább négyszemközt ({私下|sīxià}) beszélnek, és a kritikát dicsérettel kezdik: „jó munka, csak néhány apróságot javítanék".' },
+    { title: 'A béke a legdrágább', text: 'A {和为贵|hé wéi guì} „a harmónia a legértékesebb" régi mondás, és a mai munkahelyi kultúrában is érvényes. A vezetőtől azt várják, hogy elsimítsa a konfliktusokat, mielőtt nyílt vitává válnának.' }
+  ],
+  reading: {
+    title: '{一|yí}{场|chǎng}{误会|wù·huì}', titleHu: 'Egy félreértés',
+    text: [
+      { zh: '{小|Xiǎo}{李|Lǐ}{写|xiě}{了|le}{一|yí}{份|fèn}{报告|bào gào}，{周杰|Zhōu Jié}{在|zài}{会|huì}{上|shang}{当着|dāng zhe}{大家|dà·jiā}{的|de}{面|miàn}{指|zhǐ}{出|chū}{了|le}{几|jǐ}{个|ge}{错误|cuò wù}。', hu: 'Xiao Li írt egy jelentést, Zhou Jie pedig az értekezleten mindenki előtt rámutatott néhány hibájára.' },
+      { zh: '{小|Xiǎo}{李|Lǐ}{觉得|jué·de}{很|hěn}{没|méi}{面子|miàn·zi}，{一|yí}{整|zhěng}{天|tiān}{都|dōu}{不|bù}{说|shuō}{话|huà}。', hu: 'Xiao Li nagyon megszégyenülve érezte magát, egész nap nem szólt egy szót sem.' },
+      { zh: '{安娜|Ān·nà}{知道|zhī·dào}，{同事|tóng·shì}{之间|zhī jiān}{一旦|yí dàn}{有|yǒu}{了|le}{冲突|chōng tū}，{就|jiù}{会|huì}{影响|yǐng xiǎng}{整个|zhěng·gè}{团队|tuán duì}。', hu: 'Anna tudta: ha egyszer konfliktus támad a kollégák között, az az egész csapatra kihat.', par: true },
+      { zh: '{她|tā}{分别|fēn bié}{跟|gēn}{两|liǎng}{个|ge}{人|rén}{聊|liáo}{了|le}{聊|liao}。{原来|yuán·lái}{周杰|Zhōu Jié}{根本|gēn běn}{不|bù}{是|shì}{故意|gù yì}{的|de}，{他|tā}{只|zhǐ}{是|shì}{想|xiǎng}{帮|bāng}{忙|máng}。', hu: 'Mindkettőjükkel külön beszélt. Kiderült, hogy Zhou Jie egyáltalán nem szándékosan tette, csak segíteni akart.' },
+      { zh: '{第二|dì èr}{天|tiān}，{周杰|Zhōu Jié}{请|qǐng}{小|Xiǎo}{李|Lǐ}{喝|hē}{了|le}{一|yì}{杯|bēi}{咖啡|kā·fēi}，{两|liǎng}{个|ge}{人|rén}{又|yòu}{有|yǒu}{说|shuō}{有|yǒu}{笑|xiào}{了|le}。', hu: 'Másnap Zhou Jie meghívta Xiao Lit egy kávéra, és újra jókedvűen beszélgettek.', par: true }
+    ],
+    words: [ { zh: '{分别|fēn bié}', hu: 'külön-külön' } ],
+    questions: [
+      { q: 'Miért érezte magát rosszul Xiao Li?', a: 'mindenki előtt bírálták', wrong: ['elvesztette az állását', 'beteg lett', 'elfelejtette a jelentést'], why: '{当着大家的面指出了几个错误|dāngzhe dàjiā de miàn zhǐchū le jǐ ge cuòwù}.' },
+      { q: 'Mit tudott Anna a konfliktusokról?', a: 'az egész csapatra kihatnak', wrong: ['mindig maguktól megoldódnak', 'csak a vezetőt érintik', 'nem fontosak'], why: '{就会影响整个团队|jiù huì yǐngxiǎng zhěnggè tuánduì}.' },
+      { q: 'Mi derült ki Zhou Jie-ről?', a: 'csak segíteni akart', wrong: ['haragudott Xiao Lire', 'ő akarta a projektet', 'nem olvasta el a jelentést'], why: '{他只是想帮忙|tā zhǐ shì xiǎng bāngmáng}.' },
+      { q: 'Hogyan végződött a történet?', a: 'kibékültek egy kávé mellett', wrong: ['Xiao Li felmondott', 'Anna megszidta Zhou Jie-t', 'Zhou Jie másik csapatba ment'], why: '{请小李喝了一杯咖啡，两个人又有说有笑了|qǐng Xiǎo Lǐ hē le yì bēi kāfēi, liǎng ge rén yòu yǒu shuō yǒu xiào le}.' }
+    ]
+  },
+  quiz: [
+    { q: '„Azért szándékosan biztosan nem csinálta."', a: '{他|tā}{不至于|bú zhì yú}{是|shì}{故意|gù yì}{的|de}。', wrong: ['{他|tā}{是|shì}{不至于|bú zhì yú}{故意|gù yì}{的|de}{吗|ma}。', '{不至于|bú zhì yú}{他|tā}{的|de}{是|shì}{故意|gù yì}。', '{他|tā}{故意|gù yì}{的|de}{是|shì}{不至于|bú zhì yú}。'], why: 'A + {不至于|búzhìyú} + túlzó következmény.', point: 1 },
+    { q: 'Mit jelent: {不至于吧|búzhìyú ba}？', a: 'Azért nem olyan vészes, nem?', wrong: ['Biztosan így van!', 'Ez nagyon súlyos.', 'Mikor lesz kész?'], why: 'Enyhítő válasz.', point: 1 },
+    { q: '„Minek kellett ezt mindenki előtt mondania?"', a: '{他|tā}{何必|hé bì}{当着|dāng zhe}{大家|dà·jiā}{的|de}{面|miàn}{说|shuō}{呢|ne}？', wrong: ['{他|tā}{必须|bì·xū}{当着|dāng zhe}{大家|dà·jiā}{的|de}{面|miàn}{说|shuō}{呢|ne}？', '{何必|hé bì}{他|tā}{说|shuō}{当着|dāng zhe}{的|de}{面|miàn}{大家|dà·jiā}？', '{他|tā}{当着|dāng zhe}{何必|hé bì}{大家|dà·jiā}{面|miàn}{的|de}{说|shuō}{呢|ne}？'], why: '{何必|hébì} + ige + {呢|ne}？', point: 2 },
+    { q: 'Mit jelent valójában: {你何必这么生气|nǐ hébì zhème shēngqì}？', a: 'Nem kell ennyire mérgelődnöd.', wrong: ['Miért nem mérgelődsz?', 'Mérgelődj csak nyugodtan!', 'Mikor lettél ilyen mérges?'], why: 'Szónoki kérdés: „minek?".', point: 2 },
+    { q: '„Lehet, hogy holnap esni fog."', a: '{说不定|shuō bu dìng}{明天|míng·tiān}{会|huì}{下|xià}{雨|yǔ}。', wrong: ['{明天|míng·tiān}{会|huì}{下|xià}{雨|yǔ}{说不定|shuō bu dìng}{了|le}{吗|ma}。', '{不定|bú dìng}{说|shuō}{明天|míng·tiān}{会|huì}{下|xià}{雨|yǔ}。', '{明天|míng·tiān}{说|shuō}{会|huì}{不|bu}{定|dìng}{下|xià}{雨|yǔ}。'], why: '{说不定|shuōbudìng} + feltevés.', point: 3 },
+    { q: 'Mit fejez ki a {说不定|shuōbudìng}?', a: 'egy lehetőséget', wrong: ['egy tiltást', 'biztos tudást', 'egy kérést'], why: '„Lehet, hogy, talán".', point: 3 },
+    { q: '„Ha egyszer döntöttél, ne bánd meg."', a: '{一旦|yí dàn}{决定|jué·dìng}{了|le}，{就|jiù}{不|bú}{要|yào}{后悔|hòu huǐ}。', wrong: ['{一旦|yí dàn}{决定|jué·dìng}{了|le}，{也|yě}{不|bú}{要|yào}{后悔|hòu huǐ}{吗|ma}。', '{决定|jué·dìng}{一旦|yí dàn}{就|jiù}{了|le}，{后悔|hòu huǐ}{不|bú}{要|yào}。', '{就|jiù}{决定|jué·dìng}{了|le}，{一旦|yí dàn}{不|bú}{要|yào}{后悔|hòu huǐ}。'], why: '{一旦|yídàn} …, {就|jiù} ….', point: 4 },
+    { q: 'Melyik illik? ___{有|yǒu}{了|le}{问题|wèn·tí}，{就|jiù}{马上|mǎ·shàng}{告诉|gào·su}{我|wǒ}。', a: '{一旦|yí dàn}', wrong: ['{何必|hé bì}', '{不至于|bú zhì yú}', '{哪怕|nǎ pà}'], why: '„Ha egyszer …, akkor": {一旦|yídàn} … {就|jiù}.', point: 4 },
+    { q: '„Akár egyetlen mondat is fájhat valakinek."', a: '{哪怕|nǎ pà}{只|zhǐ}{是|shì}{一|yí}{句|jù}{话|huà}，{也|yě}{可能|kě·néng}{让|ràng}{人|rén}{难过|nán guò}。', wrong: ['{哪怕|nǎ pà}{只|zhǐ}{是|shì}{一|yí}{句|jù}{话|huà}，{就|jiù}{可能|kě·néng}{让|ràng}{人|rén}{难过|nán guò}。', '{只|zhǐ}{是|shì}{哪怕|nǎ pà}{一|yí}{句|jù}{话|huà}，{让|ràng}{人|rén}{也|yě}{难过|nán guò}{可能|kě·néng}。', '{一|yí}{句|jù}{话|huà}{哪怕|nǎ pà}{也|yě}，{只|zhǐ}{是|shì}{让|ràng}{人|rén}{难过|nán guò}。'], why: '{哪怕|nǎpà} …, {也|yě} ….', point: 5 },
+    { q: 'Melyik HSK 4-es szerkezet rokona a {哪怕|nǎpà} … {也|yě}?', a: '{即使|jíshǐ} … {也|yě}', wrong: ['{因为|yīnwèi} … {所以|suǒyǐ}', '{一边|yìbiān} … {一边|yìbiān}', '{先|xiān} … {再|zài}'], why: 'Mindkettő „még ha … is".', point: 5 },
+    { q: 'Mit jelent a {故意|gùyì}?', a: 'szándékosan', wrong: ['véletlenül', 'gyorsan', 'csendben'], why: '{不是故意的|bú shì gùyì de} „nem szándékosan".' },
+    { q: 'Mit jelent a {私下|sīxià}?', a: 'négyszemközt', wrong: ['mindenki előtt', 'telefonon', 'írásban'], why: 'Ellentéte: {当面|dāngmiàn}, {当着大家的面|dāngzhe dàjiā de miàn}.' },
+    { q: 'Mit jelent: {别往心里去|bié wǎng xīn li qù}。', a: 'Ne vedd a szívedre.', wrong: ['Ne menj haza.', 'Ne felejtsd el.', 'Ne szólj senkinek.'], why: 'Vigasztaló fordulat.' },
+    { q: 'Mit jelent a {解决|jiějué}?', a: 'megold', wrong: ['elhalaszt', 'elfelejt', 'megbeszél'], why: '{早点儿解决|zǎo diǎnr jiějué}.' },
+    { q: 'Mit jelent a {冲突|chōngtū}?', a: 'konfliktus', wrong: ['megállapodás', 'értekezlet', 'beszámoló'], why: '{同事之间的冲突|tóngshì zhījiān de chōngtū}.' },
+    { q: 'Mit jelent: {和为贵|hé wéi guì}。', a: 'A békesség a legfontosabb.', wrong: ['A pénz a legfontosabb.', 'Az idő pénz.', 'A család az első.'], why: 'Régi mondás.' }
+  ]
+},
+
+/* ════════════════════════════════════════════════════
+   HSK 5 · 10. LECKE — 非…不可, kettős tagadás, 把…当作 · 看作, ige + 个 + kiegészítő, 只不过
+   ════════════════════════════════════════════════════ */
+{
+  id: 'l80', no: 80, badge: '10', kicker: 'HSK 5 · 10. lecke', label: 'HSK 5 · 10. lecke',
+  title: 'Hogyan tanuljunk nyelvet? — muszáj sokat beszélni',
+  lead: 'Nyelvtanulási tanácsokat adsz: kifejezed, hogy valami elengedhetetlen (非…不可), kettős tagadással nyomatékosítasz (不能不 · 没有…不), elmondod, minek tekintesz valamit (把…当作 · 看作), színesen mondod, hogy kedvedre csináltál valamit (玩儿个痛快), és szerényen kicsinyítesz (只不过).',
+  cando: [
+    'Elengedhetetlen dolgot vagy elszántságot fejezel ki: 非…不可.',
+    'Kettős tagadással nyomatékosítasz: 不能不…, 没有…不….',
+    'Elmondod, minek tekintesz valamit: 把 A 当作 / 看作 B.',
+    'Színesen beszélsz (ige + 个 + kiegészítő), és szerényen kicsinyítesz (只不过).'
+  ],
+  intro: [
+    'Xiao Li magyarul szeretne tanulni, és Annát kérdezi: hogyan tanult meg ő ilyen jól kínaiul? Anna megosztja a módszereit, és nyelvcserét ajánl.',
+    'Ebben a leckében a nyomatékos beszéd eszközeit tanulod: a kettős tagadást, a „muszáj" erős formáját és a színes, beszélt nyelvi szerkezeteket.'
+  ],
+  dialogue: {
+    title: 'Nyelvcsere',
+    scene: 'Péntek délben az iroda közelében, egy tésztázóban. Xiao Li és Anna.',
+    lines: [
+      { who: 'Xiao Li', zh: '{我|wǒ}{想|xiǎng}{学|xué}{匈牙利|Xiōng·yá·lì}{语|yǔ}，{可是|kě·shì}{听|tīng}{说|shuō}{非常|fēi·cháng}{难|nán}。', hu: 'Szeretnék magyarul tanulni, de azt hallottam, nagyon nehéz.' },
+      { who: 'Anna', zh: '{难|nán}{是|shì}{难|nán}，{只不过|zhǐ bú guò}{需要|xū·yào}{多|duō}{花|huā}{点儿|diǎnr}{时间|shí·jiān}。{想|xiǎng}{学|xué}{好|hǎo}{一|yì}{门|mén}{语言|yǔ yán}，{非|fēi}{多|duō}{听|tīng}{多|duō}{说|shuō}{不可|bù kě}。', hu: 'Nehéz, az igaz, csak több időt kell rászánni. Ha valaki jól meg akar tanulni egy nyelvet, annak muszáj sokat hallgatnia és beszélnie.' },
+      { who: 'Xiao Li', zh: '{你|nǐ}{当初|dāng chū}{是|shì}{怎么|zěn·me}{学|xué}{汉语|Hàn·yǔ}{的|de}？', hu: 'Te annak idején hogyan tanultál kínaiul?' },
+      { who: 'Anna', zh: '{我|wǒ}{把|bǎ}{每|měi}{个|ge}{中国|Zhōng·guó}{朋友|péng·you}{都|dōu}{当作|dàng zuò}{老师|lǎo·shī}，{每天|měi tiān}{跟|gēn}{他们|tā·men}{聊|liáo}{天儿|tiānr}。{我|wǒ}{不能不|bù néng bù}{说|shuō}，{这|zhè}{个|ge}{办法|bàn·fǎ}{真|zhēn}{有|yǒu}{用|yòng}。', hu: 'Minden kínai barátomat tanárnak tekintettem, és minden nap beszélgettem velük. El kell ismernem, ez a módszer tényleg működik.' },
+      { who: 'Xiao Li', zh: '{那|nà}{语法|yǔ fǎ}{呢|ne}？', hu: 'És a nyelvtan?' },
+      { who: 'Anna', zh: '{我|wǒ}{把|bǎ}{语法|yǔ fǎ}{看作|kàn zuò}{工具|gōng jù}，{用|yòng}{多|duō}{了|le}{自然|zì rán}{就|jiù}{会|huì}{了|le}。{没有|méi·yǒu}{人|rén}{不|bú}{会|huì}{犯|fàn}{错|cuò}{的|de}。', hu: 'A nyelvtant eszköznek tekintem: ha sokat használod, magától rögzül. Nincs ember, aki ne hibázna.' },
+      { who: 'Xiao Li', zh: '{那|nà}{从|cóng}{明天|míng·tiān}{起|qǐ}，{你|nǐ}{教|jiāo}{我|wǒ}{匈牙利|Xiōng·yá·lì}{语|yǔ}，{我|wǒ}{陪|péi}{你|nǐ}{练|liàn}{汉语|Hàn·yǔ}。{等|děng}{我|wǒ}{学|xué}{会|huì}{了|le}，{我们|wǒ·men}{去|qù}{布达佩斯|Bù·dá·pèi·sī}{玩儿|wánr}{个|ge}{痛快|tòng·kuai}！', hu: 'Akkor holnaptól te tanítasz magyarul, én pedig gyakorlok veled kínaiul. Ha megtanultam, elmegyünk Budapestre, és kiélvezzük!' }
+    ],
+    notes: [
+      'A {一门语言|yì mén yǔyán} „egy nyelv": a {门|mén} a tantárgyak, nyelvek, mesterségek mérőszava.',
+      'Az {难是难|nán shì nán} „nehéz, az igaz (de…)": az A {是|shì} A szerkezet elismer valamit, utána ellenvetés jön.',
+      'A {犯错|fàn cuò} „hibát vét", az {当初|dāngchū} „annak idején, kezdetben".'
+    ]
+  },
+  points: [
+    {
+      title: '{非|fēi} … {不可|bùkě}', sub: 'muszáj …; mindenképp …',
+      pattern: 'A + {非|fēi} + ige(kifejezés) + {不可|bù kě}',
+      body: 'Szó szerint „ha nem …, nem lehet": erős <b>szükségszerűség</b> vagy <b>elszántság</b>. {想学好一门语言，非多听多说不可|xiǎng xué hǎo yì mén yǔyán, fēi duō tīng duō shuō bùkě} „aki jól meg akar tanulni egy nyelvet, annak muszáj sokat hallgatnia és beszélnie", {这个电影我非看不可|zhège diànyǐng wǒ fēi kàn bùkě} „ezt a filmet mindenképp megnézem". Erősebb, mint a {必须|bìxū}.',
+      examples: [
+        { zh: '{想|xiǎng}{学|xué}{好|hǎo}{一|yì}{门|mén}{语言|yǔ yán}，{非|fēi}{多|duō}{听|tīng}{多|duō}{说|shuō}{不可|bù kě}。', hu: 'Aki jól meg akar tanulni egy nyelvet, annak muszáj sokat hallgatnia és beszélnie.' },
+        { zh: '{这|zhè}{个|ge}{电影|diàn·yǐng}{大家|dà·jiā}{都|dōu}{说|shuō}{好|hǎo}，{我|wǒ}{非|fēi}{看|kàn}{不可|bù kě}。', hu: 'Ezt a filmet mindenki dicséri, mindenképp megnézem.' }
+      ]
+    },
+    {
+      title: 'Kettős tagadás', sub: '{不能不|bù néng bù} · {没有|méi·yǒu}…{不|bù} · {不是不|bú shì bù}',
+      pattern: '{不能不|bù néng bù} + ige · {没有|méi·yǒu} + A + {不|bù} + ige · {不是|bú shì}{不|bù} + ige',
+      body: 'Két tagadás együtt <b>nyomatékos állítás</b>: {我不能不说，这个办法真有用|wǒ bù néng bù shuō, zhège bànfǎ zhēn yǒuyòng} „el kell ismernem (nem mondhatom, hogy nem), ez működik", {没有人不会犯错|méiyǒu rén bú huì fàn cuò} „nincs ember, aki ne hibázna" = mindenki hibázik. A {不是不|bú shì bù} viszont tompít: {我不是不想去|wǒ bú shì bù xiǎng qù} „nem arról van szó, hogy nem akarok menni (de…)".',
+      tables: [
+        { caption: 'Két tagadás, egy állítás',
+          head: ['Szerkezet', 'Jelentés', 'Példa'],
+          rows: [
+            ['{不能不|bù néng bù}', 'muszáj, el kell', '{不能不|bù néng bù}{承认|chéng rèn}'],
+            ['{没有|méi·yǒu}…{不|bù}…', 'mindenki, minden', '{没有|méi·yǒu}{人|rén}{不|bù}{喜欢|xǐ·huan}'],
+            ['{不是|bú shì}{不|bù}…', 'nem arról van szó, hogy nem', '{不是|bú shì}{不|bù}{想|xiǎng}{去|qù}']
+          ] }
+      ],
+      examples: [
+        { zh: '{我|wǒ}{不能不|bù néng bù}{说|shuō}，{这|zhè}{个|ge}{办法|bàn·fǎ}{真|zhēn}{有|yǒu}{用|yòng}。', hu: 'El kell ismernem, ez a módszer tényleg működik.' },
+        { zh: '{没有|méi·yǒu}{人|rén}{不|bù}{喜欢|xǐ·huan}{她|tā}{做|zuò}{的|de}{菜|cài}。', hu: 'Mindenki szereti a főztjét.' }
+      ]
+    },
+    {
+      title: '{把|bǎ} … {当作|dàngzuò} · {看作|kànzuò}', sub: '… -t … -nak tekint',
+      pattern: 'A + {把|bǎ} + B + {当作|dàng zuò} / {看作|kàn zuò} / {当成|dàng chéng} + C',
+      body: 'Azt mondja meg, hogy valaki <b>valamit valaminek tekint, valamiként kezel</b>: {我把每个中国朋友都当作老师|wǒ bǎ měi ge Zhōngguó péngyou dōu dàngzuò lǎoshī} „minden kínai barátomat tanárnak tekintettem", {我把语法看作工具|wǒ bǎ yǔfǎ kànzuò gōngjù} „a nyelvtant eszköznek tekintem". A {当作|dàngzuò} inkább „úgy bánik vele", a {看作|kànzuò} inkább „úgy látja"; a {当成|dàngchéng} beszéltebb. Figyelj: a {当|dàng} itt negyedik hangú.',
+      examples: [
+        { zh: '{我|wǒ}{把|bǎ}{每|měi}{个|ge}{中国|Zhōng·guó}{朋友|péng·you}{都|dōu}{当作|dàng zuò}{老师|lǎo·shī}。', hu: 'Minden kínai barátomat tanárnak tekintettem.' },
+        { zh: '{她|tā}{把|bǎ}{这|zhè}{份|fèn}{工作|gōng·zuò}{看作|kàn zuò}{一|yí}{次|cì}{学习|xué·xí}{的|de}{机会|jī·huì}。', hu: 'Ezt a munkát tanulási lehetőségnek tekinti.' }
+      ]
+    },
+    {
+      title: 'ige + {个|ge} + kiegészítő', sub: 'alaposan, kedvére (beszélt)',
+      pattern: 'ige + {个|ge} + melléknév / kiegészítő',
+      body: 'Beszélt nyelvben az ige és az eredményt kifejező szó közé {个|ge} ékelődhet, és ez a cselekvést <b>teljes, alapos, kiadós</b> színezetűvé teszi: {玩儿个痛快|wánr ge tòngkuai} „kiélvezi, kedvére szórakozik", {吃个饱|chī ge bǎo} „jóllakik rendesen", {问个清楚|wèn ge qīngchu} „pontosan megkérdezi", {睡个好觉|shuì ge hǎo jiào} „jól kialussza magát".',
+      examples: [
+        { zh: '{我们|wǒ·men}{去|qù}{布达佩斯|Bù·dá·pèi·sī}{玩儿|wánr}{个|ge}{痛快|tòng·kuai}！', hu: 'Elmegyünk Budapestre, és kiélvezzük!' },
+        { zh: '{这|zhè}{件|jiàn}{事|shì}{我|wǒ}{一定|yí dìng}{要|yào}{问|wèn}{个|ge}{清楚|qīng·chu}。', hu: 'Ezt mindenképp pontosan meg kell kérdeznem.' }
+      ]
+    },
+    {
+      title: '{只不过|zhǐbúguò}', sub: 'csak éppen, mindössze',
+      pattern: '…，{只不过|zhǐ bú guò} + (kisebb) megszorítás · A + {只不过|zhǐ bú guò} + ige',
+      body: 'Az {只不过|zhǐbúguò} <b>kicsinyít, tompít</b>: valami nem olyan nagy dolog, „csak éppen…". {难是难，只不过需要多花点儿时间|nán shì nán, zhǐbúguò xūyào duō huā diǎnr shíjiān} „nehéz, az igaz, csak több időt kell rászánni", {我只不过开个玩笑|wǒ zhǐbúguò kāi ge wánxiào} „csak vicceltem". Gyakran {而已|éryǐ} „és ennyi" zárja.',
+      examples: [
+        { zh: '{难|nán}{是|shì}{难|nán}，{只不过|zhǐ bú guò}{需要|xū·yào}{多|duō}{花|huā}{点儿|diǎnr}{时间|shí·jiān}。', hu: 'Nehéz, az igaz, csak több időt kell rászánni.' },
+        { zh: '{别|bié}{生气|shēng qì}，{我|wǒ}{只不过|zhǐ bú guò}{开|kāi}{个|ge}{玩笑|wán xiào}。', hu: 'Ne haragudj, csak vicceltem.' }
+      ]
+    }
+  ],
+  phrases: [
+    { zh: '{一言为定|yì yán wéi dìng}！', hu: 'Áll az alku!' },
+    { zh: '{活|huó}{到|dào}{老|lǎo}，{学|xué}{到|dào}{老|lǎo}。', hu: 'Tanulni sosem késő.' },
+    { zh: '{我|wǒ}{只不过|zhǐ bú guò}{开|kāi}{个|ge}{玩笑|wán xiào}。', hu: 'Csak vicceltem.' },
+    { zh: '{慢慢|màn màn}{就|jiù}{习惯|xí·guàn}{了|le}。', hu: 'Lassan megszokod.' }
+  ],
+  words: [
+    { title: 'Szavak',
+      items: [
+        { zh: '{只不过|zhǐ bú guò}', pinyin: 'zhǐbúguò', hu: 'csak éppen, mindössze' },
+        { zh: '{当作|dàng zuò}', pinyin: 'dàngzuò', hu: '…-nak tekint, …-ként kezel' },
+        { zh: '{看作|kàn zuò}', pinyin: 'kànzuò', hu: '…-nak tekint' },
+        { zh: '{痛快|tòng·kuai}', pinyin: 'tòngkuai', hu: 'kedvére való; felszabadult' },
+        { zh: '{语法|yǔ fǎ}', pinyin: 'yǔfǎ', hu: 'nyelvtan' },
+        { zh: '{工具|gōng jù}', pinyin: 'gōngjù', hu: 'eszköz' },
+        { zh: '{自然|zì rán}', pinyin: 'zìrán', hu: 'természetes(en)' },
+        { zh: '{当初|dāng chū}', pinyin: 'dāngchū', hu: 'annak idején, kezdetben' },
+        { zh: '{发音|fā yīn}', pinyin: 'fāyīn', hu: 'kiejtés' },
+        { zh: '{词汇|cí huì}', pinyin: 'cíhuì', hu: 'szókincs' },
+        { zh: '{掌握|zhǎng wò}', pinyin: 'zhǎngwò', hu: 'elsajátít, birtokol' },
+        { zh: '{母语|mǔ yǔ}', pinyin: 'mǔyǔ', hu: 'anyanyelv' }
+      ] },
+    { title: 'Ráadás',
+      items: [
+        { zh: '{一言为定|yì yán wéi dìng}', pinyin: 'yì yán wéi dìng', hu: 'áll az alku' },
+        { zh: '{外语|wài yǔ}', pinyin: 'wàiyǔ', hu: 'idegen nyelv' },
+        { zh: '{交换|jiāo huàn}', pinyin: 'jiāohuàn', hu: 'csere; kicserél' },
+        { zh: '{犯|fàn}', pinyin: 'fàn', hu: '(hibát) elkövet' }
+      ] }
+  ],
+  culture: [
+    { title: 'Nyelvcsere-partner', text: 'Kínában sok fiatal keres {语伴|yǔbàn} „nyelvpartnert": egy külföldivel váltott időben gyakorolják egymás anyanyelvét. A nagyvárosokban nyelvcsere-esteket is rendeznek kávézókban, ahol asztalonként más-más nyelven folyik a beszélgetés.' },
+    { title: 'Magyar a kínai szemével', text: 'A kínai anyanyelvűeknek a magyarban főleg a ragozás és a hosszú, toldalékos szavak nehezek, a kiejtés viszont meglepően könnyen megy. Fordítva: a magyaroknak a tónusok és az írásjegyek a legnagyobb kihívás — a nyelvtan viszont sok szempontból egyszerűbb.' }
+  ],
+  reading: {
+    title: '{我|wǒ}{的|de}{学习|xué·xí}{方法|fāng·fǎ}', titleHu: 'Az én tanulási módszerem',
+    text: [
+      { zh: '{安娜|Ān·nà}{刚|gāng}{来|lái}{中国|Zhōng·guó}{的|de}{时候|shí·hou}，{只|zhǐ}{会|huì}{说|shuō}{几|jǐ}{句|jù}{简单|jiǎn·dān}{的|de}{汉语|Hàn·yǔ}。', hu: 'Amikor Anna Kínába érkezett, csak néhány egyszerű mondatot tudott kínaiul.' },
+      { zh: '{她|tā}{发现|fā·xiàn}，{想|xiǎng}{提高|tí gāo}{口语|kǒu yǔ}，{非|fēi}{跟|gēn}{中国|Zhōng·guó}{人|rén}{多|duō}{交流|jiāo·liú}{不可|bù kě}。', hu: 'Rájött, hogy ha fejleszteni akarja a beszédkészségét, muszáj sokat beszélgetnie kínaiakkal.' },
+      { zh: '{于是|yú·shì}{她|tā}{把|bǎ}{每|měi}{一|yí}{次|cì}{聊|liáo}{天儿|tiānr}{都|dōu}{看作|kàn zuò}{一|yì}{节|jié}{课|kè}，{把|bǎ}{新|xīn}{学|xué}{的|de}{词|cí}{记|jì}{在|zài}{本子|běn·zi}{上|shang}。', hu: 'Ezért minden beszélgetést tanórának tekintett, és a tanult új szavakat felírta egy füzetbe.', par: true },
+      { zh: '{她|tā}{说|shuō}：“{没有|méi·yǒu}{一|yí}{个|ge}{人|rén}{学|xué}{外语|wài yǔ}{不|bú}{犯|fàn}{错|cuò}，{只不过|zhǐ bú guò}{有|yǒu}{的|de}{人|rén}{怕|pà}{说|shuō}，{有|yǒu}{的|de}{人|rén}{不|bú}{怕|pà}。”', hu: 'Azt mondja: „Nincs olyan nyelvtanuló, aki ne hibázna — csak van, aki fél megszólalni, és van, aki nem."' },
+      { zh: '{现在|xiàn·zài}{她|tā}{和|hé}{小|Xiǎo}{李|Lǐ}{每|měi}{周|zhōu}{见|jiàn}{两|liǎng}{次|cì}{面|miàn}，{一|yì}{个|ge}{学|xué}{匈牙利|Xiōng·yá·lì}{语|yǔ}，{一|yí}{个|ge}{练|liàn}{汉语|Hàn·yǔ}。', hu: 'Most Xiao Livel hetente kétszer találkoznak: egyikük magyarul tanul, a másik kínaiul gyakorol.', par: true }
+    ],
+    words: [ { zh: '{口语|kǒu yǔ}', hu: 'beszélt nyelv, beszédkészség' } ],
+    questions: [
+      { q: 'Mennyit tudott Anna kínaiul az elején?', a: 'csak néhány egyszerű mondatot', wrong: ['már folyékonyan beszélt', 'semmit', 'csak írni tudott'], why: '{只会说几句简单的汉语|zhǐ huì shuō jǐ jù jiǎndān de Hànyǔ}.' },
+      { q: 'Mire jött rá Anna?', a: 'muszáj sokat beszélgetnie kínaiakkal', wrong: ['elég könyvből tanulni', 'tanárra nincs szükség', 'a nyelvtan a legfontosabb'], why: '{非跟中国人多交流不可|fēi gēn Zhōngguó rén duō jiāoliú bùkě}.' },
+      { q: 'Minek tekintett minden beszélgetést?', a: 'tanórának', wrong: ['vizsgának', 'szórakozásnak', 'munkának'], why: '{把每一次聊天儿都看作一节课|bǎ měi yí cì liáo tiānr dōu kànzuò yì jié kè}.' },
+      { q: 'Mi a különbség Anna szerint a nyelvtanulók között?', a: 'van, aki fél megszólalni', wrong: ['van, aki sosem hibázik', 'van, aki tehetségtelen', 'van, aki nem tanul nyelvtant'], why: '{只不过有的人怕说，有的人不怕|zhǐbúguò yǒude rén pà shuō, yǒude rén bú pà}.' }
+    ]
+  },
+  quiz: [
+    { q: '„Aki jól meg akar tanulni egy nyelvet, annak muszáj sokat beszélnie."', a: '{想|xiǎng}{学|xué}{好|hǎo}{语言|yǔ yán}，{非|fēi}{多|duō}{说|shuō}{不可|bù kě}。', wrong: ['{想|xiǎng}{学|xué}{好|hǎo}{语言|yǔ yán}，{不可|bù kě}{多|duō}{说|shuō}{非|fēi}。', '{非|fēi}{想|xiǎng}{学|xué}{好|hǎo}{语言|yǔ yán}，{多|duō}{说|shuō}{不|bù}{可以|kě·yǐ}。', '{想|xiǎng}{学|xué}{好|hǎo}{语言|yǔ yán}，{多|duō}{非|fēi}{说|shuō}{可|kě}{不|bù}。'], why: '{非|fēi} + ige + {不可|bùkě}.', point: 1 },
+    { q: 'Mit jelent: {这个电影我非看不可|zhège diànyǐng wǒ fēi kàn bùkě}。', a: 'Ezt a filmet mindenképp megnézem.', wrong: ['Ezt a filmet nem szabad megnéznem.', 'Ezt a filmet nem tudom megnézni.', 'Ezt a filmet már láttam.'], why: '{非|fēi}…{不可|bùkě} „mindenképp".', point: 1 },
+    { q: 'Mit jelent: {没有人不会犯错|méiyǒu rén bú huì fàn cuò}。', a: 'Mindenki hibázik.', wrong: ['Senki sem hibázik.', 'Senki sem tudja, mi a hiba.', 'Nem szabad hibázni.'], why: 'Kettős tagadás = állítás.', point: 2 },
+    { q: '„El kell ismernem, ez a módszer működik."', a: '{我|wǒ}{不能不|bù néng bù}{说|shuō}，{这|zhè}{个|ge}{办法|bàn·fǎ}{有|yǒu}{用|yòng}。', wrong: ['{我|wǒ}{不能|bù néng}{说|shuō}，{这|zhè}{个|ge}{办法|bàn·fǎ}{有|yǒu}{用|yòng}。', '{我|wǒ}{不|bù}{说|shuō}{不能|bù néng}，{这|zhè}{个|ge}{办法|bàn·fǎ}{有|yǒu}{用|yòng}。', '{不能|bù néng}{我|wǒ}{不|bù}{说|shuō}{这|zhè}{个|ge}{有|yǒu}{用|yòng}{办法|bàn·fǎ}。'], why: '{不能不|bù néng bù} „muszáj".', point: 2 },
+    { q: 'Mit jelent: {我不是不想去|wǒ bú shì bù xiǎng qù}。', a: 'Nem az, hogy nem akarok menni.', wrong: ['Egyáltalán nem akarok elmenni.', 'Nagyon szeretnék elmenni oda.', 'Már tegnap elmentem oda.'], why: 'A {不是不|bú shì bù} tompít.', point: 2 },
+    { q: '„Minden barátomat tanárnak tekintettem."', a: '{我|wǒ}{把|bǎ}{每|měi}{个|ge}{朋友|péng·you}{都|dōu}{当作|dàng zuò}{老师|lǎo·shī}。', wrong: ['{我|wǒ}{当作|dàng zuò}{每|měi}{个|ge}{朋友|péng·you}{都|dōu}{把|bǎ}{老师|lǎo·shī}。', '{我|wǒ}{把|bǎ}{老师|lǎo·shī}{都|dōu}{当作|dàng zuò}{每|měi}{个|ge}{朋友|péng·you}{了|le}{吗|ma}。', '{把|bǎ}{我|wǒ}{每|měi}{个|ge}{朋友|péng·you}{老师|lǎo·shī}{都|dōu}{当作|dàng zuò}。'], why: 'A + {把|bǎ} B + {当作|dàngzuò} + C.', point: 3 },
+    { q: 'Hogyan ejtjük a {当作|dàngzuò} {当|dāng}-jét?', a: 'negyedik hangon: dàng', wrong: ['első hangon: dāng', 'harmadik hangon: dǎng', 'semleges hangon: dang'], why: '„…-nak tekint" jelentésben {当|dàng}.', point: 3 },
+    { q: '„Elmegyünk Budapestre, és kiélvezzük!"', a: '{我们|wǒ·men}{去|qù}{布达佩斯|Bù·dá·pèi·sī}{玩儿|wánr}{个|ge}{痛快|tòng·kuai}！', wrong: ['{我们|wǒ·men}{去|qù}{布达佩斯|Bù·dá·pèi·sī}{痛快|tòng·kuai}{个|ge}{玩儿|wánr}！', '{我们|wǒ·men}{个|ge}{去|qù}{布达佩斯|Bù·dá·pèi·sī}{玩儿|wánr}{痛快|tòng·kuai}！', '{我们|wǒ·men}{去|qù}{个|ge}{布达佩斯|Bù·dá·pèi·sī}{痛快|tòng·kuai}{玩儿|wánr}！'], why: 'Ige + {个|ge} + kiegészítő.', point: 4 },
+    { q: 'Mit jelent: {今天晚上我要睡个好觉|jīntiān wǎnshang wǒ yào shuì ge hǎo jiào}。', a: 'Ma este jól kialszom magam.', wrong: ['Ma este nem tudok aludni.', 'Ma este korán kelek.', 'Ma este egy órát alszom.'], why: '{睡个好觉|shuì ge hǎo jiào} „jót alszik".', point: 4 },
+    { q: '„Ne haragudj, csak vicceltem."', a: '{别|bié}{生气|shēng qì}，{我|wǒ}{只不过|zhǐ bú guò}{开|kāi}{个|ge}{玩笑|wán xiào}。', wrong: ['{别|bié}{生气|shēng qì}，{我|wǒ}{开|kāi}{个|ge}{玩笑|wán xiào}{只不过|zhǐ bú guò}{了|le}。', '{只不过|zhǐ bú guò}{别|bié}{生气|shēng qì}，{我|wǒ}{开|kāi}{玩笑|wán xiào}{个|ge}。', '{别|bié}{只不过|zhǐ bú guò}{生气|shēng qì}，{我|wǒ}{开|kāi}{个|ge}{玩笑|wán xiào}。'], why: 'A + {只不过|zhǐbúguò} + ige.', point: 5 },
+    { q: 'Mit fejez ki az {只不过|zhǐbúguò}?', a: 'kicsinyítést', wrong: ['fokozást', 'feltételt', 'tiltást'], why: '„Csak éppen, mindössze".', point: 5 },
+    { q: 'Mit jelent a {语法|yǔfǎ}?', a: 'nyelvtan', wrong: ['szókincs', 'kiejtés', 'helyesírás'], why: '{把语法看作工具|bǎ yǔfǎ kànzuò gōngjù}.' },
+    { q: 'Mit jelent a {母语|mǔyǔ}?', a: 'anyanyelv', wrong: ['idegen nyelv', 'nyelvjárás', 'írott nyelv'], why: '{母|mǔ} „anya" + {语|yǔ} „nyelv".' },
+    { q: 'Mit jelent: {一言为定|yì yán wéi dìng}！', a: 'Áll az alku!', wrong: ['Egy szót se!', 'Majd meglátjuk!', 'Nem értem!'], why: 'Megállapodás megerősítése.' },
+    { q: 'Mit jelent a {掌握|zhǎngwò}?', a: 'elsajátít', wrong: ['elfelejt', 'kiejt', 'lefordít'], why: '{掌握一门语言|zhǎngwò yì mén yǔyán} „elsajátít egy nyelvet".' },
+    { q: 'Mit jelent a {当初|dāngchū}?', a: 'annak idején', wrong: ['manapság', 'hamarosan', 'mindig'], why: '{你当初是怎么学的|nǐ dāngchū shì zěnme xué de}？' }
+  ]
 }
 
 ];

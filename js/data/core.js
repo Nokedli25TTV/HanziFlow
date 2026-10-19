@@ -1034,7 +1034,29 @@ const HANZIFLOW_PATH = [
     module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l78&round=listen' },
   { id: 'l78-read', glyph: '读', title: 'Olvasás: Kalligráfia a neten',
     desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
-    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l78&round=read' }
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l78&round=read' },
+
+  // ── HSK 5 · 9. lecke ──
+  { id: 'l79-lesson', glyph: '和', title: 'Magyarázat: 不至于, 何必, 说不定, 一旦, 哪怕…也',
+    desc: 'Feszültség a csapatban: azért nem, minek?, lehet, hogy, ha egyszer, akár.',
+    module: 'lesson', href: 'pages/lesson.html?id=l79' },
+  { id: 'l79-listen', glyph: '听', title: 'Hallás: egy rossz pillanat',
+    desc: 'A lecke mondatai hang után: mit jelent, amit hallasz?',
+    module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l79&round=listen' },
+  { id: 'l79-read', glyph: '读', title: 'Olvasás: Egy félreértés',
+    desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l79&round=read' },
+
+  // ── HSK 5 · 10. lecke ──
+  { id: 'l80-lesson', glyph: '语', title: 'Magyarázat: 非…不可, kettős tagadás, 把…当作, ige + 个 + kiegészítő, 只不过',
+    desc: 'Hogyan tanuljunk nyelvet? Muszáj, kettős tagadás, …-nak tekint, kiadósan, csak éppen.',
+    module: 'lesson', href: 'pages/lesson.html?id=l80' },
+  { id: 'l80-listen', glyph: '听', title: 'Hallás: nyelvcsere',
+    desc: 'A lecke mondatai hang után: mit jelent, amit hallasz?',
+    module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l80&round=listen' },
+  { id: 'l80-read', glyph: '读', title: 'Olvasás: Az én tanulási módszerem',
+    desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l80&round=read' }
 ];
 
 const HANZIFLOW_PATH_UNITS = [
@@ -1231,5 +1253,9 @@ const HANZIFLOW_PATH_UNITS = [
   { id: 'u-l77', kicker: 'HSK 5 · 7. lecke', title: 'A tavaszi ünnep', sub: '凡是…都, 所谓, 各自, 彼此, 纷纷',
     steps: ['l77-lesson', 'l77-listen', 'l77-read'] },
   { id: 'u-l78', kicker: 'HSK 5 · 8. lecke', title: 'Kalligráfia a neten', sub: '以便, 进而, 以及, 并且, 由此可见',
-    steps: ['l78-lesson', 'l78-listen', 'l78-read'] }
+    steps: ['l78-lesson', 'l78-listen', 'l78-read'] },
+  { id: 'u-l79', kicker: 'HSK 5 · 9. lecke', title: 'Feszültség a csapatban', sub: '不至于, 何必, 说不定, 一旦…就, 哪怕…也',
+    steps: ['l79-lesson', 'l79-listen', 'l79-read'] },
+  { id: 'u-l80', kicker: 'HSK 5 · 10. lecke', title: 'Hogyan tanuljunk nyelvet?', sub: '非…不可, 不能不 · 没有…不, 把…当作 · 看作, ige + 个 + kiegészítő, 只不过',
+    steps: ['l80-lesson', 'l80-listen', 'l80-read'] }
 ];
