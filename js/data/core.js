@@ -869,7 +869,29 @@ const HANZIFLOW_PATH = [
     module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l66&round=listen' },
   { id: 'l66-read', glyph: '读', title: 'Olvasás: Anna szülei Sanghajban',
     desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
-    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l66&round=read' }
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l66&round=read' },
+
+  // ── HSK 4 · 17. lecke ──
+  { id: 'l67-lesson', glyph: '囍', title: 'Magyarázat: 让人 + érzelem, 好不容易, 幸亏, 可惜, 正好',
+    desc: 'Esküvő: megható, nagy nehezen, szerencsére, kár, épp jókor.',
+    module: 'lesson', href: 'pages/lesson.html?id=l67' },
+  { id: 'l67-listen', glyph: '听', title: 'Hallás: a lakodalmon',
+    desc: 'A lecke mondatai hang után: mit jelent, amit hallasz?',
+    module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l67&round=listen' },
+  { id: 'l67-read', glyph: '读', title: 'Olvasás: Wang Li esküvője',
+    desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l67&round=read' },
+
+  // ── HSK 4 · 18. lecke ──
+  { id: 'l68-lesson', glyph: '升', title: 'Magyarázat: 将 · 将来, 该…了, 敢, 最好, 跟…比起来',
+    desc: 'Előléptetés: hivatalos jövő, ideje, hogy…, mer, a legjobb, ha…, …-hoz képest.',
+    module: 'lesson', href: 'pages/lesson.html?id=l68' },
+  { id: 'l68-listen', glyph: '听', title: 'Hallás: jó hír az irodában',
+    desc: 'A lecke mondatai hang után: mit jelent, amit hallasz?',
+    module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l68&round=listen' },
+  { id: 'l68-read', glyph: '读', title: 'Olvasás: Anna előléptetése',
+    desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l68&round=read' }
 ];
 
 const HANZIFLOW_PATH_UNITS = [
@@ -1032,5 +1054,9 @@ const HANZIFLOW_PATH_UNITS = [
   { id: 'u-l65', kicker: 'HSK 4 · 15. lecke', title: 'Mobilfizetés', sub: '看来 · 看样子, 估计, 大约 · 左右, 以上 · 以下 · 以内, 差不多',
     steps: ['l65-lesson', 'l65-listen', 'l65-read'] },
   { id: 'u-l66', kicker: 'HSK 4 · 16. lecke', title: 'A szülők látogatása', sub: '有的…有的, 各, 整个 · 全部, 一切, 我来 + ige',
-    steps: ['l66-lesson', 'l66-listen', 'l66-read'] }
+    steps: ['l66-lesson', 'l66-listen', 'l66-read'] },
+  { id: 'u-l67', kicker: 'HSK 4 · 17. lecke', title: 'Esküvő', sub: '让人 + érzelem, 好不容易, 幸亏, 可惜, 正好',
+    steps: ['l67-lesson', 'l67-listen', 'l67-read'] },
+  { id: 'u-l68', kicker: 'HSK 4 · 18. lecke', title: 'Előléptetés', sub: '将 · 将来, 该 + ige + 了, 敢, 最好, 跟…比起来',
+    steps: ['l68-lesson', 'l68-listen', 'l68-read'] }
 ];

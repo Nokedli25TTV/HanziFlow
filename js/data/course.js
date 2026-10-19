@@ -12526,6 +12526,323 @@ const HANZIFLOW_COURSE = [
     { q: 'Mit jelent: {很合你的口味|hěn hé nǐ de kǒuwèi}。', a: 'Nagyon ízlik neked.', wrong: ['Nagyon éhes vagy.', 'Nagyon jól főzöl.', 'Nagyon sokat eszel.'], why: '{合口味|hé kǒuwèi} „ízlik".' },
     { q: 'Mit jelent a {尝|cháng}?', a: 'megkóstol', wrong: ['megfőz', 'megrendel', 'kifizet'], why: '{尝一尝|cháng yi cháng} „megkóstol".' }
   ]
+},
+/* ════════════════════════════════════════════════════
+   HSK 4 · 17. LECKE — 让人 + érzelem, 好不容易, 幸亏, 可惜, 正好
+   ════════════════════════════════════════════════════ */
+{
+  id: 'l67', no: 67, badge: '17', kicker: 'HSK 4 · 17. lecke', label: 'HSK 4 · 17. lecke',
+  title: 'Esküvő — nagy nehezen, de épp időben',
+  lead: 'Esküvőn vagy: elmondod, mi milyen érzést kelt (让人感动), mi sikerült csak nagy nehezen (好不容易), mi volt szerencse (幸亏), mi kár (可惜), és mi jött épp jókor (正好).',
+  cando: [
+    'Elmondod, mi milyen érzést kelt: 让人 + érzelem (让人感动, 让人难忘).',
+    'Kifejezed, hogy valami csak nagy nehezen sikerült: 好不容易才….',
+    'Szerencsés körülményről beszélsz: 幸亏…，不然….',
+    'Sajnálkozol (可惜), és azt mondod, valami épp jókor, épp jó (正好).'
+  ],
+  intro: [
+    'Wang Li férjhez megy, és Annát is meghívja az esküvőre. Zhou Jie autóval viszi el, de a szombati forgalomban a szállodát is alig találják meg.',
+    'Ebben a leckében az érzelmek és a szerencse nyelvét tanulod: ami megható, ami kár, ami szerencsére sikerült, és ami épp kapóra jött.'
+  ],
+  dialogue: {
+    title: 'A lakodalmon',
+    scene: 'Szombat este egy sanghaji szálloda báltermében. Anna és Zhou Jie.',
+    lines: [
+      { who: 'Anna', zh: '{我们|wǒ·men}{好不容易|hǎo bù róng·yì}{才|cái}{找|zhǎo}{到|dào}{这|zhè}{家|jiā}{酒店|jiǔ diàn}！{幸亏|xìng·kuī}{你|nǐ}{开|kāi}{车|chē}{来|lái}{接|jiē}{我|wǒ}，{不然|bù rán}{我|wǒ}{肯定|kěn·dìng}{迟到|chí dào}{了|le}。', hu: 'Nagy nehezen megtaláltuk ezt a szállodát! Szerencse, hogy érte jöttél kocsival, különben biztosan elkéstem volna.' },
+      { who: 'Zhou Jie', zh: '{你|nǐ}{看|kàn}，{新娘|xīn niáng}{今天|jīn·tiān}{真|zhēn}{漂亮|piào·liang}！', hu: 'Nézd, milyen gyönyörű ma a menyasszony!' },
+      { who: 'Anna', zh: '{是|shì}{啊|a}。{可惜|kě·xī}{林静|Lín Jìng}{出差|chū chāi}{了|le}，{不|bù}{能|néng}{来|lái}。', hu: 'Igen. Kár, hogy Lin Jing kiküldetésben van, és nem tudott eljönni.' },
+      { who: 'Zhou Jie', zh: '{我们|wǒ·men}{的|de}{座位|zuò wèi}{在|zài}{这儿|zhèr}，{正好|zhèng hǎo}{在|zài}{新郎|xīn láng}{新娘|xīn niáng}{旁边|páng·biān}。', hu: 'Itt a helyünk, épp az ifjú pár mellett.' },
+      { who: 'Anna', zh: '{新郎|xīn láng}{的|de}{话|huà}{真|zhēn}{让|ràng}{人|rén}{感动|gǎn·dòng}，{我|wǒ}{都|dōu}{快|kuài}{哭|kū}{了|le}。', hu: 'A vőlegény beszéde nagyon megható volt, majdnem elsírtam magam.' },
+      { who: 'Zhou Jie', zh: '{他们|tā·men}{认识|rèn·shi}{十|shí}{年|nián}{了|le}，{好不容易|hǎo bù róng·yì}{才|cái}{走|zǒu}{到|dào}{今天|jīn·tiān}。', hu: 'Tíz éve ismerik egymást, nagy út vezetett idáig.' },
+      { who: 'Anna', zh: '{来|lái}，{现在|xiàn·zài}{正好|zhèng hǎo}{没|méi}{人|rén}，{我们|wǒ·men}{去|qù}{给|gěi}{他们|tā·men}{敬|jìng}{酒|jiǔ}{吧|ba}！', hu: 'Gyere, épp most nincs ott senki, menjünk koccintani velük!' }
+    ],
+    notes: [
+      'A {新郎|xīnláng} „vőlegény", a {新娘|xīnniáng} „menyasszony"; együtt {新人|xīnrén} „az ifjú pár".',
+      'A {不然|bùrán} „különben" (= {否则|fǒuzé}, csak beszéltebb): gyakran áll a {幸亏|xìngkuī} után.',
+      'A {敬酒|jìng jiǔ} „tisztelettel koccint valakivel": a lakodalmon az ifjú pár asztalról asztalra jár, a vendégek pedig hozzájuk is odamennek.'
+    ]
+  },
+  points: [
+    {
+      title: '{让人|ràng rén} + érzelem', sub: 'megható, felejthetetlen, irigylésre méltó …',
+      pattern: 'A + {让|ràng}{人|rén} + érzelmet kifejező szó',
+      body: 'A {让人|ràng rén} szó szerint „embert … tesz": azt mondja meg, milyen <b>érzést kelt</b> valami általában, bárkiben. {新郎的话真让人感动|xīnláng de huà zhēn ràng rén gǎndòng} „a vőlegény beszéde nagyon megható", {这样的天气让人不舒服|zhèyàng de tiānqì ràng rén bù shūfu} „ez az idő kellemetlen". Magyarul gyakran egyetlen melléknév felel meg neki: {让人难忘|ràng rén nánwàng} „felejthetetlen", {让人羡慕|ràng rén xiànmù} „irigylésre méltó".',
+      examples: [
+        { zh: '{新郎|xīn láng}{的|de}{话|huà}{真|zhēn}{让|ràng}{人|rén}{感动|gǎn·dòng}。', hu: 'A vőlegény beszéde nagyon megható.' },
+        { zh: '{这|zhè}{是|shì}{一|yí}{个|ge}{让|ràng}{人|rén}{难忘|nán wàng}{的|de}{晚上|wǎn·shang}。', hu: 'Ez egy felejthetetlen este volt.' }
+      ]
+    },
+    {
+      title: '{好不容易|hǎobù róngyì}', sub: 'nagy nehezen, nagy sokára',
+      pattern: 'A + {好不容易|hǎo bù róng·yì} / {好容易|hǎo róng·yì} + {才|cái} + ige',
+      body: 'A {好不容易|hǎobù róngyì} azt jelenti: valami <b>csak nagy nehezen</b> sikerült. Különlegessége, hogy a tagadás nélküli {好容易|hǎo róngyì} ugyanezt jelenti — mindkettő „nagy nehezen". Utána szinte mindig {才|cái} áll: {我们好不容易才找到这家酒店|wǒmen hǎobù róngyì cái zhǎodào zhè jiā jiǔdiàn} „nagy nehezen megtaláltuk ezt a szállodát".',
+      examples: [
+        { zh: '{我们|wǒ·men}{好不容易|hǎo bù róng·yì}{才|cái}{找|zhǎo}{到|dào}{这|zhè}{家|jiā}{酒店|jiǔ diàn}。', hu: 'Nagy nehezen megtaláltuk ezt a szállodát.' },
+        { zh: '{我|wǒ}{好|hǎo}{容易|róng·yì}{才|cái}{买|mǎi}{到|dào}{回|huí}{家|jiā}{的|de}{火车|huǒ·chē}{票|piào}。', hu: 'Nagy nehezen sikerült vonatjegyet vennem hazafelé.' }
+      ],
+      mistakes: [
+        { bad: '{我们|wǒ·men}{好不容易|hǎo bù róng·yì}{就|jiù}{找|zhǎo}{到|dào}{了|le}。', good: '{我们|wǒ·men}{好不容易|hǎo bù róng·yì}{才|cái}{找|zhǎo}{到|dào}。', why: 'A nehezen elért eredmény előtt {才|cái} áll, nem {就|jiù}.' }
+      ]
+    },
+    {
+      title: '{幸亏|xìngkuī}', sub: 'szerencsére, még jó, hogy',
+      pattern: '{幸亏|xìng·kuī} + szerencsés körülmény，({不然|bù rán} / {否则|fǒu·zé} + rossz következmény)',
+      body: 'A {幸亏|xìngkuī} olyan körülményt vezet be, amely <b>megakadályozott valami rosszat</b>: {幸亏你开车来接我，不然我肯定迟到了|xìngkuī nǐ kāi chē lái jiē wǒ, bùrán wǒ kěndìng chídào le} „szerencse, hogy érte jöttél kocsival, különben elkéstem volna". A második rész gyakran {不然|bùrán} vagy {否则|fǒuzé}, és azt mondja el, mi történt volna.',
+      examples: [
+        { zh: '{幸亏|xìng·kuī}{你|nǐ}{开|kāi}{车|chē}{来|lái}{接|jiē}{我|wǒ}，{不然|bù rán}{我|wǒ}{肯定|kěn·dìng}{迟到|chí dào}{了|le}。', hu: 'Szerencse, hogy érte jöttél kocsival, különben biztosan elkéstem volna.' },
+        { zh: '{幸亏|xìng·kuī}{带|dài}{了|le}{伞|sǎn}，{外面|wài·miàn}{下|xià}{大|dà}{雨|yǔ}{了|le}。', hu: 'Még jó, hogy hoztam esernyőt, odakint zuhog.' }
+      ]
+    },
+    {
+      title: '{可惜|kěxī}', sub: 'kár (hogy)',
+      pattern: '{可惜|kě·xī} + mondat · {太|tài} / {真|zhēn} + {可惜|kě·xī} + {了|le}',
+      body: 'A {可惜|kěxī} sajnálkozást fejez ki: „kár, hogy …". Mondat elején: {可惜林静不能来|kěxī Lín Jìng bù néng lái} „kár, hogy Lin Jing nem tud eljönni". Állítmányként: {太可惜了|tài kěxī le} „milyen kár!", {这么好的菜没吃完，真可惜|zhème hǎo de cài méi chī wán, zhēn kěxī} „ilyen jó étel, és nem ettük meg — kár érte".',
+      examples: [
+        { zh: '{可惜|kě·xī}{林静|Lín Jìng}{出差|chū chāi}{了|le}，{不|bù}{能|néng}{来|lái}。', hu: 'Kár, hogy Lin Jing kiküldetésben van, és nem tud eljönni.' },
+        { zh: '{这么|zhè·me}{好|hǎo}{的|de}{菜|cài}{没|méi}{吃|chī}{完|wán}，{太|tài}{可惜|kě·xī}{了|le}。', hu: 'Ilyen jó étel, és nem ettük meg — nagy kár.' }
+      ]
+    },
+    {
+      title: '{正好|zhènghǎo}', sub: 'épp, pont; épp jókor',
+      pattern: '{正好|zhèng hǎo} + ige / hely · ige + {得|de} + {正好|zhèng hǎo}',
+      body: 'A {正好|zhènghǎo} azt jelenti: valami <b>pont megfelel</b> — időben, helyben, mennyiségben: {我们的座位正好在新郎新娘旁边|wǒmen de zuòwèi zhènghǎo zài xīnláng xīnniáng pángbiān} „a helyünk épp az ifjú pár mellett van", {你来得正好|nǐ lái de zhènghǎo} „épp jókor jöttél", {这双鞋我穿正好|zhè shuāng xié wǒ chuān zhènghǎo} „ez a cipő pont jó rám". Alkalmat is jelent: {现在正好没人|xiànzài zhènghǎo méi rén} „épp most nincs ott senki".',
+      examples: [
+        { zh: '{我们|wǒ·men}{的|de}{座位|zuò wèi}{正好|zhèng hǎo}{在|zài}{新郎|xīn láng}{新娘|xīn niáng}{旁边|páng·biān}。', hu: 'A helyünk épp az ifjú pár mellett van.' },
+        { zh: '{你|nǐ}{来|lái}{得|de}{正好|zhèng hǎo}，{我们|wǒ·men}{正|zhèng}{要|yào}{吃|chī}{饭|fàn}。', hu: 'Épp jókor jöttél, éppen enni készülünk.' }
+      ]
+    }
+  ],
+  phrases: [
+    { zh: '{祝|zhù}{你们|nǐ·men}{白头|bái tóu}{到|dào}{老|lǎo}！', hu: 'Boldogságot együtt, míg meg nem öregedtek!' },
+    { zh: '{恭喜|gōng·xǐ}{恭喜|gōng·xǐ}！', hu: 'Gratulálok!' },
+    { zh: '{干杯|gān bēi}！', hu: 'Egészségedre!' },
+    { zh: '{太|tài}{可惜|kě·xī}{了|le}！', hu: 'De kár!' }
+  ],
+  words: [
+    { title: 'Szavak',
+      items: [
+        { zh: '{好不容易|hǎo bù róng·yì}', pinyin: 'hǎobù róngyì', hu: 'nagy nehezen' },
+        { zh: '{幸亏|xìng·kuī}', pinyin: 'xìngkuī', hu: 'szerencsére' },
+        { zh: '{可惜|kě·xī}', pinyin: 'kěxī', hu: 'kár (hogy)' },
+        { zh: '{不然|bù rán}', pinyin: 'bùrán', hu: 'különben' },
+        { zh: '{感动|gǎn·dòng}', pinyin: 'gǎndòng', hu: 'meghat; meghatódik' },
+        { zh: '{婚礼|hūn lǐ}', pinyin: 'hūnlǐ', hu: 'esküvő, lakodalom' },
+        { zh: '{新郎|xīn láng}', pinyin: 'xīnláng', hu: 'vőlegény' },
+        { zh: '{新娘|xīn niáng}', pinyin: 'xīnniáng', hu: 'menyasszony' },
+        { zh: '{祝福|zhù·fú}', pinyin: 'zhùfú', hu: 'jókívánság; jót kíván' },
+        { zh: '{难忘|nán wàng}', pinyin: 'nánwàng', hu: 'felejthetetlen' },
+        { zh: '{羡慕|xiàn·mù}', pinyin: 'xiànmù', hu: 'irigyel (jó értelemben)' },
+        { zh: '{座位|zuò wèi}', pinyin: 'zuòwèi', hu: 'ülőhely' }
+      ] },
+    { title: 'Ráadás',
+      items: [
+        { zh: '{敬酒|jìng jiǔ}', pinyin: 'jìng jiǔ', hu: 'koccint (tisztelettel)' },
+        { zh: '{红包|hóng bāo}', pinyin: 'hóngbāo', hu: 'piros boríték (pénzajándék)' },
+        { zh: '{喜糖|xǐ táng}', pinyin: 'xǐtáng', hu: 'lakodalmi cukorka' },
+        { zh: '{接|jiē}', pinyin: 'jiē', hu: 'érte megy, fogad' }
+      ] }
+  ],
+  culture: [
+    { title: 'Piros boríték', text: 'A kínai lakodalomra a vendégek nem tárgyat, hanem pénzt visznek piros borítékban ({红包|hóngbāo}). Az összeg a kapcsolattól függ; páros számot szokás adni, a 4-et (mert a {四|sì} hangzása a {死|sǐ} „meghal" szóra emlékeztet) kerülik, a 8-ast és a 6-ost szeretik.' },
+    { title: 'A kettős boldogság', text: 'A lakodalom jelképe a piros {囍|xǐ} „kettős boldogság" írásjegy: a {喜|xǐ} „öröm" kétszer egymás mellett. Ott van a meghívón, az ajtón, a terem falán; a vendégek pedig {喜糖|xǐtáng} „lakodalmi cukorkát" kapnak, hogy az ő életük is édes legyen.' }
+  ],
+  reading: {
+    title: '{王丽|Wáng Lì}{的|de}{婚礼|hūn lǐ}', titleHu: 'Wang Li esküvője',
+    text: [
+      { zh: '{上|shàng}{个|ge}{周末|zhōu·mò}，{安娜|Ān·nà}{参加|cān·jiā}{了|le}{王丽|Wáng Lì}{的|de}{婚礼|hūn lǐ}。{这|zhè}{是|shì}{她|tā}{第一|dì yī}{次|cì}{参加|cān·jiā}{中国|Zhōng·guó}{人|rén}{的|de}{婚礼|hūn lǐ}。', hu: 'Múlt hétvégén Anna részt vett Wang Li esküvőjén. Ez volt az első kínai esküvője.' },
+      { zh: '{那|nà}{天|tiān}{路|lù}{上|shang}{车|chē}{很|hěn}{多|duō}，{幸亏|xìng·kuī}{周杰|Zhōu Jié}{开|kāi}{车|chē}{来|lái}{接|jiē}{她|tā}，{他们|tā·men}{才|cái}{没|méi}{迟到|chí dào}。', hu: 'Aznap nagy volt a forgalom; szerencsére Zhou Jie érte ment kocsival, így nem késtek el.' },
+      { zh: '{新郎|xīn láng}{说|shuō}{的|de}{话|huà}{让|ràng}{人|rén}{很|hěn}{感动|gǎn·dòng}，{很|hěn}{多|duō}{客人|kè·rén}{都|dōu}{哭|kū}{了|le}。', hu: 'A vőlegény szavai nagyon meghatóak voltak, sok vendég elsírta magát.', par: true },
+      { zh: '{可惜|kě·xī}{林静|Lín Jìng}{出差|chū chāi}{了|le}，{没|méi}{能|néng}{来|lái}，{安娜|Ān·nà}{就|jiù}{拍|pāi}{了|le}{很|hěn}{多|duō}{照片|zhào·piàn}{发|fā}{给|gěi}{她|tā}。', hu: 'Kár, hogy Lin Jing kiküldetésben volt és nem jöhetett el, ezért Anna sok fényképet küldött neki.' },
+      { zh: '{这|zhè}{是|shì}{一|yí}{个|ge}{让|ràng}{人|rén}{难忘|nán wàng}{的|de}{晚上|wǎn·shang}。', hu: 'Felejthetetlen este volt.', par: true }
+    ],
+    words: [ { zh: '{参加|cān·jiā}', hu: 'részt vesz' } ],
+    questions: [
+      { q: 'Hányadik kínai esküvője volt ez Annának?', a: 'az első', wrong: ['a második', 'a harmadik', 'az ötödik'], why: '{第一次参加中国人的婚礼|dì yī cì cānjiā Zhōngguó rén de hūnlǐ}.' },
+      { q: 'Miért nem késtek el?', a: 'Zhou Jie autóval vitte', wrong: ['nagyon korán indultak', 'metróval mentek', 'közel volt a szálloda'], why: '{幸亏周杰开车来接她|xìngkuī Zhōu Jié kāi chē lái jiē tā}.' },
+      { q: 'Miért sírtak a vendégek?', a: 'meghatotta őket a vőlegény', wrong: ['szomorú volt a zene', 'elkésett az ifjú pár', 'nagyon csípős volt az étel'], why: '{新郎说的话让人很感动|xīnláng shuō de huà ràng rén hěn gǎndòng}.' },
+      { q: 'Mit csinált Anna Lin Jingért?', a: 'sok fényképet küldött neki', wrong: ['ajándékot vitt helyette', 'videón felhívta', 'helyet foglalt neki'], why: '{拍了很多照片发给她|pāi le hěn duō zhàopiàn fā gěi tā}.' }
+    ]
+  },
+  quiz: [
+    { q: '„A vőlegény beszéde nagyon megható."', a: '{新郎|xīn láng}{的|de}{话|huà}{真|zhēn}{让|ràng}{人|rén}{感动|gǎn·dòng}。', wrong: ['{新郎|xīn láng}{的|de}{话|huà}{真|zhēn}{感动|gǎn·dòng}{让|ràng}{人|rén}。', '{让|ràng}{人|rén}{新郎|xīn láng}{的|de}{话|huà}{真|zhēn}{感动|gǎn·dòng}。', '{新郎|xīn láng}{让|ràng}{的|de}{话|huà}{人|rén}{真|zhēn}{感动|gǎn·dòng}。'], why: 'A + {让人|ràng rén} + érzelem.', point: 1 },
+    { q: 'Mit jelent: {让人难忘|ràng rén nánwàng}?', a: 'felejthetetlen', wrong: ['könnyen elfelejthető', 'nehezen érthető', 'unalmas'], why: '{难忘|nánwàng} „nehéz elfelejteni".', point: 1 },
+    { q: '„Nagy nehezen megtaláltuk a szállodát."', a: '{我们|wǒ·men}{好不容易|hǎo bù róng·yì}{才|cái}{找|zhǎo}{到|dào}{酒店|jiǔ diàn}。', wrong: ['{我们|wǒ·men}{好不容易|hǎo bù róng·yì}{就|jiù}{找|zhǎo}{到|dào}{酒店|jiǔ diàn}。', '{我们|wǒ·men}{很|hěn}{容易|róng·yì}{才|cái}{找|zhǎo}{到|dào}{酒店|jiǔ diàn}。', '{好不容易|hǎo bù róng·yì}{我们|wǒ·men}{找|zhǎo}{才|cái}{到|dào}{酒店|jiǔ diàn}。'], why: '{好不容易|hǎobù róngyì} + {才|cái} + ige.', point: 2 },
+    { q: 'Mit jelent a {好容易才买到票|hǎo róngyì cái mǎidào piào}?', a: 'Nagy nehezen vettem jegyet.', wrong: ['Nagyon könnyen vettem jegyet.', 'Nem sikerült jegyet vennem.', 'Jegyet venni mindig könnyű.'], why: 'A {好容易|hǎo róngyì} = {好不容易|hǎobù róngyì} „nagy nehezen".', point: 2 },
+    { q: '„Szerencse, hogy hoztam esernyőt."', a: '{幸亏|xìng·kuī}{带|dài}{了|le}{伞|sǎn}。', wrong: ['{可惜|kě·xī}{带|dài}{了|le}{伞|sǎn}。', '{带|dài}{了|le}{幸亏|xìng·kuī}{伞|sǎn}。', '{幸亏|xìng·kuī}{伞|sǎn}{了|le}{带|dài}。'], why: '{幸亏|xìngkuī} + szerencsés körülmény.', point: 3 },
+    { q: 'Mi áll gyakran a {幸亏|xìngkuī}-s mondat második részében?', a: '{不然|bùrán} / {否则|fǒuzé}', wrong: ['{因为|yīnwèi}', '{虽然|suīrán}', '{如果|rúguǒ}'], why: 'Azt mondja el, mi történt volna.', point: 3 },
+    { q: '„Kár, hogy Lin Jing nem tud eljönni."', a: '{可惜|kě·xī}{林静|Lín Jìng}{不|bù}{能|néng}{来|lái}。', wrong: ['{幸亏|xìng·kuī}{林静|Lín Jìng}{不|bù}{能|néng}{来|lái}。', '{林静|Lín Jìng}{不|bù}{能|néng}{可惜|kě·xī}{来|lái}。', '{林静|Lín Jìng}{可惜|kě·xī}{来|lái}{不|bù}{能|néng}。'], why: '{可惜|kěxī} + mondat.', point: 4 },
+    { q: 'Mit jelent: {太可惜了|tài kěxī le}！', a: 'De kár!', wrong: ['De jó!', 'De drága!', 'De szerencse!'], why: '{可惜|kěxī} „kár".', point: 4 },
+    { q: '„Épp jókor jöttél."', a: '{你|nǐ}{来|lái}{得|de}{正好|zhèng hǎo}。', wrong: ['{你|nǐ}{正好|zhèng hǎo}{得|de}{来|lái}。', '{你|nǐ}{来|lái}{正好|zhèng hǎo}{得|de}。', '{正好|zhèng hǎo}{你|nǐ}{得|de}{来|lái}。'], why: 'Ige + {得|de} + {正好|zhènghǎo}.', point: 5 },
+    { q: 'Mit jelent: {这双鞋我穿正好|zhè shuāng xié wǒ chuān zhènghǎo}。', a: 'Ez a cipő pont jó rám.', wrong: ['Ez a cipő kicsi rám.', 'Ez a cipő túl nagy.', 'Ezt a cipőt épp most vettem fel.'], why: '{正好|zhènghǎo} „épp megfelelő".', point: 5 },
+    { q: 'Mit jelent a {新娘|xīnniáng}?', a: 'menyasszony', wrong: ['vőlegény', 'tanú', 'vendég'], why: 'A {新郎|xīnláng} a „vőlegény".' },
+    { q: 'Mit jelent a {羡慕|xiànmù}?', a: 'irigyel', wrong: ['megbán', 'megünnepel', 'megajándékoz'], why: '{让人羡慕|ràng rén xiànmù} „irigylésre méltó".' },
+    { q: 'Mit jelent: {恭喜恭喜|gōngxǐ gōngxǐ}！', a: 'Gratulálok!', wrong: ['Bocsánat!', 'Viszontlátásra!', 'Egészségedre!'], why: 'Jókívánság örömteli eseményre.' },
+    { q: 'Mit jelent a {婚礼|hūnlǐ}?', a: 'esküvő', wrong: ['születésnap', 'eljegyzés', 'temetés'], why: '{王丽的婚礼|Wáng Lì de hūnlǐ}.' },
+    { q: 'Mit jelent a {座位|zuòwèi}?', a: 'ülőhely', wrong: ['asztal', 'jegy', 'terem'], why: '{我们的座位在这儿|wǒmen de zuòwèi zài zhèr}.' },
+    { q: 'Mit jelent a {不然|bùrán}?', a: 'különben', wrong: ['mégis', 'tehát', 'például'], why: '= {否则|fǒuzé}, beszéltebb.' }
+  ]
+},
+
+/* ════════════════════════════════════════════════════
+   HSK 4 · 18. LECKE — 将 · 将来, 该 + ige + 了, 敢, 最好, 跟…比起来
+   ════════════════════════════════════════════════════ */
+{
+  id: 'l68', no: 68, badge: '18', kicker: 'HSK 4 · 18. lecke', label: 'HSK 4 · 18. lecke',
+  title: 'Előléptetés — alig merem elhinni',
+  lead: 'Előléptetnek: hivatalosan a jövőről beszélsz (将 · 将来), megmondod, minek jött el az ideje (该…了), mit mersz és mit nem (敢), tanácsot adsz (最好), és a régihez méred a mostanit (跟…比起来).',
+  cando: [
+    'Hivatalos stílusban beszélsz a jövőről (将 + ige), és a jövőbeli tervekről (将来).',
+    'Megmondod, minek jött el az ideje, ki következik: 该 + ige + 了 · 该你了.',
+    'Kifejezed, mit mersz és mit nem: 敢 · 不敢.',
+    'Tanácsot adsz (最好…), és összehasonlítasz: 跟…比起来，….'
+  ],
+  intro: [
+    'Anna egy éve dolgozik Sanghajban, és Chen igazgató behívja az irodájába. Jó hírt kap: jövő hónaptól ő vezeti az egész marketingosztályt — de meri-e vállalni?',
+    'Ebben a leckében a munkahelyi előrelépés és a tanácsadás nyelvét tanulod, néhány hivatalos szerkezettel együtt.'
+  ],
+  dialogue: {
+    title: 'Jó hír az irodában',
+    scene: 'Péntek délután Chen igazgató irodájában. Chen igazgató és Anna.',
+    lines: [
+      { who: 'Chen', zh: '{安娜|Ān·nà}，{有|yǒu}{个|ge}{好|hǎo}{消息|xiāo·xi}。{从|cóng}{下|xià}{个|ge}{月|yuè}{起|qǐ}，{你|nǐ}{将|jiāng}{负责|fù zé}{整个|zhěng·gè}{市场|shì·chǎng}{部|bù}。', hu: 'Anna, jó hírem van. Jövő hónaptól te fogod vezetni az egész marketingosztályt.' },
+      { who: 'Anna', zh: '{真|zhēn}{的|de}{吗|ma}？{我|wǒ}{简直|jiǎn·zhí}{不|bù}{敢|gǎn}{相信|xiāng·xìn}！', hu: 'Tényleg? Alig merem elhinni!' },
+      { who: 'Chen', zh: '{跟|gēn}{去年|qù·nián}{比|bǐ}{起来|qǐ·lai}，{你|nǐ}{的|de}{进步|jìn·bù}{非常|fēi·cháng}{大|dà}，{大家|dà·jiā}{都|dōu}{看|kàn}{到|dào}{了|le}。', hu: 'Tavalyhoz képest rengeteget fejlődtél, ezt mindenki látja.' },
+      { who: 'Anna', zh: '{谢谢|xiè·xie}{您|nín}{的|de}{信任|xìn·rèn}。{可是|kě·shì}{我|wǒ}{没|méi}{当|dāng}{过|guo}{领导|lǐng·dǎo}，{有点儿|yǒu diǎnr}{不|bù}{敢|gǎn}{接受|jiē·shòu}。', hu: 'Köszönöm a bizalmát. De még sosem voltam vezető, kicsit félek elvállalni.' },
+      { who: 'Chen', zh: '{别|bié}{担心|dān xīn}。{你|nǐ}{最好|zuì hǎo}{先|xiān}{跟|gēn}{每|měi}{个|ge}{同事|tóng·shì}{聊|liáo}{一|yi}{聊|liáo}，{了解|liǎo·jiě}{他们|tā·men}{的|de}{想法|xiǎng·fǎ}。', hu: 'Ne aggódj. A legjobb, ha előbb minden kollégával elbeszélgetsz, és megismered, mit gondolnak.' },
+      { who: 'Anna', zh: '{好|hǎo}，{我|wǒ}{一定|yí dìng}{努力|nǔ lì}。{将来|jiāng·lái}{我|wǒ}{也|yě}{想|xiǎng}{像|xiàng}{您|nín}{一样|yí yàng}{带|dài}{好|hǎo}{一|yí}{个|ge}{团队|tuán duì}。', hu: 'Rendben, mindent megteszek. A jövőben én is szeretnék úgy vezetni egy csapatot, mint ön.' },
+      { who: 'Chen', zh: '{哈哈|hā·hā}，{好|hǎo}。{时间|shí·jiān}{不|bù}{早|zǎo}{了|le}，{我们|wǒ·men}{该|gāi}{去|qù}{开|kāi}{会|huì}{了|le}。', hu: 'Haha, jó. Már nincs korán, ideje mennünk az értekezletre.' }
+    ],
+    notes: [
+      'A {市场部|shìchǎngbù} „marketingosztály": a {部|bù} „osztály" ({部门|bùmén}) rövidítése.',
+      'A {简直|jiǎnzhí} „egyenesen, szinte" nyomatékosít: {简直不敢相信|jiǎnzhí bù gǎn xiāngxìn} „alig merem elhinni".',
+      'Az {带团队|dài tuánduì} „csapatot vezet": a {带|dài} itt „vezet, irányít".'
+    ]
+  },
+  points: [
+    {
+      title: '{将|jiāng} · {将来|jiānglái}', sub: 'fog (hivatalos jövő) · a jövőben',
+      pattern: 'A + {将|jiāng} + ige · {将来|jiāng·lái} + …',
+      body: 'A {将|jiāng} az ige előtt a <b>jövőt</b> jelöli, írott, hivatalos stílusban (hírekben, közleményekben): {你将负责整个市场部|nǐ jiāng fùzé zhěnggè shìchǎngbù} „te fogod vezetni az egész marketingosztályt". A {将来|jiānglái} főnév, „a jövő, a jövőben": {将来我想…|jiānglái wǒ xiǎng …} „a jövőben szeretnék …". Hétköznapi beszédben inkább {以后|yǐhòu}, {要|yào}, {会|huì} áll.',
+      tables: [
+        { caption: 'A jövő kifejezése',
+          head: ['', 'Szófaj, stílus', 'Példa'],
+          rows: [
+            ['{将|jiāng}', 'határozószó, írott', '{新|xīn}{地铁|dì·tiě}{将|jiāng}{在|zài}{明年|míng·nián}{开通|kāi tōng}。'],
+            ['{将来|jiāng·lái}', 'főnév: a (távolabbi) jövő', '{将来|jiāng·lái}{我|wǒ}{想|xiǎng}{当|dāng}{老师|lǎo·shī}。'],
+            ['{以后|yǐ·hòu}', 'beszélt: később, ezután', '{以后|yǐ·hòu}{再|zài}{说|shuō}{吧|ba}。']
+          ] }
+      ],
+      examples: [
+        { zh: '{从|cóng}{下|xià}{个|ge}{月|yuè}{起|qǐ}，{你|nǐ}{将|jiāng}{负责|fù zé}{整个|zhěng·gè}{市场|shì·chǎng}{部|bù}。', hu: 'Jövő hónaptól te fogod vezetni az egész marketingosztályt.' },
+        { zh: '{将来|jiāng·lái}{我|wǒ}{也|yě}{想|xiǎng}{带|dài}{好|hǎo}{一|yí}{个|ge}{团队|tuán duì}。', hu: 'A jövőben én is jól szeretnék vezetni egy csapatot.' }
+      ]
+    },
+    {
+      title: '{该|gāi} + ige + {了|le}', sub: 'ideje, hogy …; … következik',
+      pattern: '(A) + {该|gāi} + ige + {了|le} · {该|gāi} + személy + {了|le}',
+      body: 'A {该|gāi} … {了|le} azt mondja: <b>eljött az ideje</b> valaminek: {我们该去开会了|wǒmen gāi qù kāi huì le} „ideje mennünk az értekezletre", {我该走了|wǒ gāi zǒu le} „mennem kell (ideje indulnom)". Személlyel: {该你了|gāi nǐ le} „te következel". A {该|gāi} önmagában „kell, illik" is ({你该休息|nǐ gāi xiūxi} „pihenned kellene").',
+      examples: [
+        { zh: '{时间|shí·jiān}{不|bù}{早|zǎo}{了|le}，{我们|wǒ·men}{该|gāi}{去|qù}{开|kāi}{会|huì}{了|le}。', hu: 'Már nincs korán, ideje mennünk az értekezletre.' },
+        { zh: '{我|wǒ}{唱|chàng}{完|wán}{了|le}，{该|gāi}{你|nǐ}{了|le}！', hu: 'Én befejeztem az éneklést, te jössz!' }
+      ]
+    },
+    {
+      title: '{敢|gǎn}', sub: 'mer',
+      pattern: 'A + ({不|bù}) + {敢|gǎn} + ige · {敢|gǎn}{不|bu}{敢|gǎn}…？',
+      body: 'A {敢|gǎn} „mer" segédige: {我不敢一个人走夜路|wǒ bù gǎn yí ge rén zǒu yèlù} „nem merek egyedül sétálni éjjel". Gyakori fordulatok: {不敢相信|bù gǎn xiāngxìn} „alig hiszem el", {不敢当|bù gǎn dāng} „ugyan, nem érdemlem meg" (dicséretre). Kérdésben: {你敢不敢|nǐ gǎn bu gǎn} … „mered-e …?".',
+      examples: [
+        { zh: '{我|wǒ}{简直|jiǎn·zhí}{不|bù}{敢|gǎn}{相信|xiāng·xìn}！', hu: 'Alig merem elhinni!' },
+        { zh: '{我|wǒ}{没|méi}{当|dāng}{过|guo}{领导|lǐng·dǎo}，{有点儿|yǒu diǎnr}{不|bù}{敢|gǎn}{接受|jiē·shòu}。', hu: 'Még sosem voltam vezető, kicsit félek elvállalni.' }
+      ]
+    },
+    {
+      title: '{最好|zuìhǎo}', sub: 'a legjobb, ha …; jobb lenne, ha …',
+      pattern: 'A + {最好|zuì hǎo} + ige · A + {最好|zuì hǎo} + {别|bié} + ige',
+      body: 'Az ige előtt a {最好|zuìhǎo} udvarias <b>tanács</b>: „a legjobb, ha …, jobb lenne, ha …". {你最好先跟每个同事聊一聊|nǐ zuìhǎo xiān gēn měi ge tóngshì liáo yi liáo} „a legjobb, ha előbb minden kollégával elbeszélgetsz". Tagadva {最好别|zuìhǎo bié}: {明天要下雨，你最好别骑车|míngtiān yào xià yǔ, nǐ zuìhǎo bié qí chē} „holnap esni fog, jobb, ha nem biciklizel".',
+      examples: [
+        { zh: '{你|nǐ}{最好|zuì hǎo}{先|xiān}{跟|gēn}{每|měi}{个|ge}{同事|tóng·shì}{聊|liáo}{一|yi}{聊|liáo}。', hu: 'A legjobb, ha előbb minden kollégával elbeszélgetsz.' },
+        { zh: '{明天|míng·tiān}{要|yào}{下|xià}{雨|yǔ}，{你|nǐ}{最好|zuì hǎo}{带|dài}{伞|sǎn}。', hu: 'Holnap esni fog, jobb, ha viszel esernyőt.' }
+      ]
+    },
+    {
+      title: '{跟|gēn} … {比起来|bǐ qǐlai}', sub: '… -hoz képest',
+      pattern: '{跟|gēn} / {和|hé} + B + {比|bǐ}{起来|qǐ·lai}，A + …',
+      body: 'Az összehasonlítás alapját adja meg, a mondat elején: {跟去年比起来，你的进步非常大|gēn qùnián bǐ qǐlai, nǐ de jìnbù fēicháng dà} „tavalyhoz képest rengeteget fejlődtél". A {跟|gēn} helyett {和|hé} is állhat. A második rész szabadon mondja el, miben más A: {跟北京比起来，上海的冬天不太冷|gēn Běijīng bǐ qǐlai, Shànghǎi de dōngtiān bú tài lěng}.',
+      examples: [
+        { zh: '{跟|gēn}{去年|qù·nián}{比|bǐ}{起来|qǐ·lai}，{你|nǐ}{的|de}{进步|jìn·bù}{非常|fēi·cháng}{大|dà}。', hu: 'Tavalyhoz képest rengeteget fejlődtél.' },
+        { zh: '{跟|gēn}{北京|Běi·jīng}{比|bǐ}{起来|qǐ·lai}，{上海|Shàng·hǎi}{的|de}{冬天|dōng·tiān}{不|bú}{太|tài}{冷|lěng}。', hu: 'Pekinghez képest Sanghajban nem túl hideg a tél.' }
+      ]
+    }
+  ],
+  phrases: [
+    { zh: '{恭喜|gōng·xǐ}{你|nǐ}{升职|shēng zhí}！', hu: 'Gratulálok az előléptetéshez!' },
+    { zh: '{不|bù}{敢|gǎn}{当|dāng}。', hu: 'Ugyan, nem érdemlem meg.' },
+    { zh: '{我|wǒ}{会|huì}{尽力|jìn lì}{的|de}。', hu: 'Mindent megteszek.' },
+    { zh: '{该|gāi}{你|nǐ}{了|le}！', hu: 'Te jössz!' }
+  ],
+  words: [
+    { title: 'Szavak',
+      items: [
+        { zh: '{将|jiāng}', pinyin: 'jiāng', hu: 'fog (hivatalos jövő)' },
+        { zh: '{将来|jiāng·lái}', pinyin: 'jiānglái', hu: 'jövő; a jövőben' },
+        { zh: '{该|gāi}', pinyin: 'gāi', hu: 'kell; ideje, hogy' },
+        { zh: '{敢|gǎn}', pinyin: 'gǎn', hu: 'mer' },
+        { zh: '{最好|zuì hǎo}', pinyin: 'zuìhǎo', hu: 'a legjobb (ha)' },
+        { zh: '{进步|jìn·bù}', pinyin: 'jìnbù', hu: 'fejlődés; fejlődik' },
+        { zh: '{信任|xìn·rèn}', pinyin: 'xìnrèn', hu: 'bizalom; megbízik' },
+        { zh: '{领导|lǐng·dǎo}', pinyin: 'lǐngdǎo', hu: 'vezető, főnök' },
+        { zh: '{团队|tuán duì}', pinyin: 'tuánduì', hu: 'csapat (munkahelyi)' },
+        { zh: '{市场|shì·chǎng}', pinyin: 'shìchǎng', hu: 'piac' },
+        { zh: '{升职|shēng zhí}', pinyin: 'shēng zhí', hu: 'előléptetik' },
+        { zh: '{简直|jiǎn·zhí}', pinyin: 'jiǎnzhí', hu: 'egyenesen, szinte' }
+      ] },
+    { title: 'Ráadás',
+      items: [
+        { zh: '{部门|bù mén}', pinyin: 'bùmén', hu: 'osztály, részleg' },
+        { zh: '{想法|xiǎng·fǎ}', pinyin: 'xiǎngfǎ', hu: 'gondolat, elképzelés' },
+        { zh: '{年终奖|nián zhōng jiǎng}', pinyin: 'niánzhōngjiǎng', hu: 'év végi jutalom' },
+        { zh: '{跳槽|tiào cáo}', pinyin: 'tiào cáo', hu: 'munkahelyet vált' }
+      ] }
+  ],
+  culture: [
+    { title: 'Vezetéknév és rang', text: 'A kínai munkahelyen a vezetőt a családnevével és a rangjával szólítják: {陈经理|Chén jīnglǐ} „Chen igazgató", {王总|Wáng zǒng} „Wang vezérigazgató" (a {总经理|zǒngjīnglǐ} rövidítése). A keresztnév használata a feljebbvalóval szemben ritka, még ha a viszony barátságos is.' },
+    { title: 'Év végi jutalom', text: 'Sok cégnél az év végi jutalom ({年终奖|niánzhōngjiǎng}) a jövedelem fontos része, amelyet a holdújév előtt fizetnek ki. Ezért a munkahelyváltás ({跳槽|tiào cáo}) tipikus időszaka a tavaszi ünnep utáni néhány hét.' }
+  ],
+  reading: {
+    title: '{安娜|Ān·nà}{升职|shēng zhí}{了|le}', titleHu: 'Anna előléptetése',
+    text: [
+      { zh: '{来|lái}{上海|Shàng·hǎi}{工作|gōng·zuò}{一|yì}{年|nián}{以后|yǐ·hòu}，{安娜|Ān·nà}{升职|shēng zhí}{了|le}。', hu: 'Egy évvel azután, hogy Sanghajba jött dolgozni, Annát előléptették.' },
+      { zh: '{从|cóng}{下|xià}{个|ge}{月|yuè}{起|qǐ}，{她|tā}{将|jiāng}{负责|fù zé}{一|yí}{个|ge}{十|shí}{人|rén}{的|de}{团队|tuán duì}。', hu: 'Jövő hónaptól egy tízfős csapatot fog vezetni.' },
+      { zh: '{跟|gēn}{刚|gāng}{来|lái}{的|de}{时候|shí·hou}{比|bǐ}{起来|qǐ·lai}，{她|tā}{的|de}{汉语|Hàn·yǔ}{和|hé}{工作|gōng·zuò}{能力|néng·lì}{都|dōu}{进步|jìn·bù}{了|le}{很|hěn}{多|duō}。', hu: 'Ahhoz képest, amikor ideérkezett, a kínaija és a munkája is sokat fejlődött.', par: true },
+      { zh: '{开始|kāi·shǐ}{她|tā}{有点儿|yǒu diǎnr}{不|bù}{敢|gǎn}{当|dāng}{领导|lǐng·dǎo}，{陈|Chén}{经理|jīng·lǐ}{说|shuō}{她|tā}{最好|zuì hǎo}{先|xiān}{了解|liǎo·jiě}{每|měi}{个|ge}{同事|tóng·shì}。', hu: 'Eleinte kicsit nem merte vállalni a vezetést; Chen igazgató azt tanácsolta, hogy előbb ismerje meg a kollégáit.' },
+      { zh: '{安娜|Ān·nà}{想|xiǎng}：“{以前|yǐ·qián}{别人|bié·rén}{帮|bāng}{我|wǒ}，{现在|xiàn·zài}{该|gāi}{我|wǒ}{帮|bāng}{别人|bié·rén}{了|le}。”', hu: 'Anna arra gondolt: „Eddig mások segítettek nekem, most rajtam a sor, hogy segítsek másoknak."', par: true }
+    ],
+    words: [ { zh: '{能力|néng·lì}', hu: 'képesség' } ],
+    questions: [
+      { q: 'Mennyi idő után léptették elő Annát?', a: 'egy év után', wrong: ['egy hónap után', 'öt év után', 'fél év után'], why: '{来上海工作一年以后|lái Shànghǎi gōngzuò yì nián yǐhòu}.' },
+      { q: 'Hány fős csapatot fog vezetni?', a: 'tízfőset', wrong: ['háromfőset', 'húszfőset', 'ötvenfőset'], why: '{一个十人的团队|yí ge shí rén de tuánduì}.' },
+      { q: 'Miben fejlődött Anna?', a: 'a kínaiban és a munkában is', wrong: ['csak a kínaiban', 'csak a sportban', 'a főzésben'], why: '{她的汉语和工作能力都进步了很多|tā de Hànyǔ hé gōngzuò nénglì dōu jìnbù le hěn duō}.' },
+      { q: 'Mit tanácsolt Chen igazgató?', a: 'ismerje meg előbb a kollégákat', wrong: ['járjon vezetői tanfolyamra', 'vegyen fel új embereket', 'dolgozzon többet otthonról'], why: '{最好先了解每个同事|zuìhǎo xiān liǎojiě měi ge tóngshì}.' }
+    ]
+  },
+  quiz: [
+    { q: '„Jövő hónaptól te fogod vezetni az osztályt." (hivatalos)', a: '{从|cóng}{下|xià}{个|ge}{月|yuè}{起|qǐ}，{你|nǐ}{将|jiāng}{负责|fù zé}{这个|zhè·ge}{部门|bù mén}。', wrong: ['{从|cóng}{下|xià}{个|ge}{月|yuè}{起|qǐ}，{你|nǐ}{负责|fù zé}{将|jiāng}{这个|zhè·ge}{部门|bù mén}。', '{将|jiāng}{从|cóng}{下|xià}{个|ge}{月|yuè}{你|nǐ}{起|qǐ}{负责|fù zé}{这个|zhè·ge}{部门|bù mén}。', '{从|cóng}{下|xià}{个|ge}{月|yuè}{起|qǐ}，{你|nǐ}{这个|zhè·ge}{部门|bù mén}{负责|fù zé}{将|jiāng}。'], why: 'A + {将|jiāng} + ige.', point: 1 },
+    { q: 'Milyen szófajú a {将来|jiānglái}?', a: 'főnév („a jövő")', wrong: ['ige', 'kötőszó', 'mérőszó'], why: '{将来我想当老师|jiānglái wǒ xiǎng dāng lǎoshī}.', point: 1 },
+    { q: '„Ideje mennünk az értekezletre."', a: '{我们|wǒ·men}{该|gāi}{去|qù}{开|kāi}{会|huì}{了|le}。', wrong: ['{我们|wǒ·men}{去|qù}{开|kāi}{会|huì}{该|gāi}{了|le}。', '{该|gāi}{我们|wǒ·men}{开|kāi}{会|huì}{去|qù}{吗|ma}。', '{我们|wǒ·men}{该|gāi}{了|le}{去|qù}{开|kāi}{会|huì}。'], why: '{该|gāi} + ige + {了|le}.', point: 2 },
+    { q: 'Mit jelent: {该你了|gāi nǐ le}！', a: 'Te jössz!', wrong: ['Ez a tiéd!', 'Ez a te hibád!', 'Neked kellene!'], why: '{该|gāi} + személy + {了|le} „… következik".', point: 2 },
+    { q: '„Nem merek egyedül sétálni éjjel."', a: '{我|wǒ}{不|bù}{敢|gǎn}{一|yí}{个|ge}{人|rén}{走|zǒu}{夜|yè}{路|lù}。', wrong: ['{我|wǒ}{敢|gǎn}{不|bù}{一|yí}{个|ge}{人|rén}{走|zǒu}{夜|yè}{路|lù}。', '{我|wǒ}{一|yí}{个|ge}{人|rén}{走|zǒu}{夜|yè}{路|lù}{不|bù}{敢|gǎn}。', '{不|bù}{敢|gǎn}{我|wǒ}{走|zǒu}{一|yí}{个|ge}{人|rén}{夜|yè}{路|lù}。'], why: 'A + {不敢|bù gǎn} + ige.', point: 3 },
+    { q: 'Mit felelünk szerényen egy dicséretre?', a: '{不敢当|bù gǎn dāng}', wrong: ['{不敢信|bù gǎn xìn}', '{该你了|gāi nǐ le}', '{最好了|zuìhǎo le}'], why: '„Ugyan, nem érdemlem meg".', point: 3 },
+    { q: '„A legjobb, ha előbb beszélsz a kollégákkal."', a: '{你|nǐ}{最好|zuì hǎo}{先|xiān}{跟|gēn}{同事|tóng·shì}{聊|liáo}{一|yi}{聊|liáo}。', wrong: ['{你|nǐ}{先|xiān}{跟|gēn}{同事|tóng·shì}{聊|liáo}{一|yi}{聊|liáo}{最好|zuì hǎo}{的|de}。', '{最好|zuì hǎo}{的|de}{你|nǐ}{先|xiān}{同事|tóng·shì}{聊|liáo}{一|yi}{聊|liáo}。', '{你|nǐ}{跟|gēn}{最好|zuì hǎo}{同事|tóng·shì}{先|xiān}{聊|liáo}{一|yi}{聊|liáo}。'], why: 'A + {最好|zuìhǎo} + ige.', point: 4 },
+    { q: 'Mit jelent: {你最好别骑车|nǐ zuìhǎo bié qí chē}。', a: 'Jobb, ha nem biciklizel.', wrong: ['Te biciklizel a legjobban.', 'A legjobb bicikli a tiéd.', 'Biciklizz minél többet.'], why: '{最好别|zuìhǎo bié} „jobb, ha nem".', point: 4 },
+    { q: '„Tavalyhoz képest rengeteget fejlődtél."', a: '{跟|gēn}{去年|qù·nián}{比|bǐ}{起来|qǐ·lai}，{你|nǐ}{的|de}{进步|jìn·bù}{很|hěn}{大|dà}。', wrong: ['{跟|gēn}{去年|qù·nián}{起来|qǐ·lai}{比|bǐ}，{你|nǐ}{的|de}{进步|jìn·bù}{很|hěn}{大|dà}。', '{你|nǐ}{的|de}{进步|jìn·bù}{跟|gēn}{很|hěn}{大|dà}{去年|qù·nián}{比|bǐ}{起来|qǐ·lai}。', '{比|bǐ}{起来|qǐ·lai}{去年|qù·nián}{跟|gēn}，{你|nǐ}{很|hěn}{大|dà}{进步|jìn·bù}。'], why: '{跟|gēn} B {比起来|bǐ qǐlai}, A ….', point: 5 },
+    { q: 'Mit jelent: {跟北京比起来，上海的冬天不太冷|gēn Běijīng bǐ qǐlai, Shànghǎi de dōngtiān bú tài lěng}。', a: 'Pekinghez képest Sanghajban nem túl hideg a tél.', wrong: ['Pekingben és Sanghajban egyformán hideg a tél.', 'Sanghajban hidegebb a tél, mint Pekingben.', 'Pekingben egyáltalán nincs tél.'], why: '{跟…比起来|gēn … bǐ qǐlai} „…-hoz képest".', point: 5 },
+    { q: 'Mit jelent a {进步|jìnbù}?', a: 'fejlődés', wrong: ['siker', 'jutalom', 'tapasztalat'], why: '{你的进步非常大|nǐ de jìnbù fēicháng dà}.' },
+    { q: 'Mit jelent a {领导|lǐngdǎo}?', a: 'vezető, főnök', wrong: ['kolléga', 'ügyfél', 'gyakornok'], why: '{我没当过领导|wǒ méi dāng guo lǐngdǎo}.' },
+    { q: 'Mit jelent: {恭喜你升职|gōngxǐ nǐ shēng zhí}！', a: 'Gratulálok az előléptetéshez!', wrong: ['Gratulálok az új lakáshoz!', 'Sok sikert az interjúhoz!', 'Jó utat a kiküldetéshez!'], why: '{升职|shēng zhí} „előléptetik".' },
+    { q: 'Mit jelent a {信任|xìnrèn}?', a: 'bizalom', wrong: ['segítség', 'tisztelet', 'figyelem'], why: '{谢谢您的信任|xièxie nín de xìnrèn}.' },
+    { q: 'Mit jelent a {团队|tuánduì}?', a: 'csapat', wrong: ['cég', 'osztályvezető', 'értekezlet'], why: '{带好一个团队|dài hǎo yí ge tuánduì}.' },
+    { q: 'Mit jelent a {跳槽|tiào cáo}?', a: 'munkahelyet vált', wrong: ['fizetésemelést kér', 'felmond és pihen', 'túlórázik'], why: 'Szó szerint „átugrik egy másik etetővályúhoz".' }
+  ]
 }
 
 ];
