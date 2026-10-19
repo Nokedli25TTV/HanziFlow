@@ -968,7 +968,29 @@ const HANZIFLOW_PATH = [
     module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l72&round=listen' },
   { id: 'l72-read', glyph: '读', title: 'Olvasás: Maradni vagy menni?',
     desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
-    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l72&round=read' }
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l72&round=read' },
+
+  // ── HSK 5 · 3. lecke ──
+  { id: 'l73-lesson', glyph: '医', title: 'Magyarázat: 似乎, 仿佛, 难免, 以免 · 免得, 尽量',
+    desc: 'A kínai orvosnál: úgy tűnik, mintha, óhatatlanul, nehogy, amennyire lehet.',
+    module: 'lesson', href: 'pages/lesson.html?id=l73' },
+  { id: 'l73-listen', glyph: '听', title: 'Hallás: Sun doktor rendelőjében',
+    desc: 'A lecke mondatai hang után: mit jelent, amit hallasz?',
+    module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l73&round=listen' },
+  { id: 'l73-read', glyph: '读', title: 'Olvasás: A kínai orvosnál',
+    desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l73&round=read' },
+
+  // ── HSK 5 · 4. lecke ──
+  { id: 'l74-lesson', glyph: '巧', title: 'Magyarázat: 果然, 居然, 偏偏, 恰好, 总算',
+    desc: 'Váratlan vendég: ahogy vártuk, képzeld, pont most, szerencsére épp, végre.',
+    module: 'lesson', href: 'pages/lesson.html?id=l74' },
+  { id: 'l74-listen', glyph: '听', title: 'Hallás: valaki keres lent',
+    desc: 'A lecke mondatai hang után: mit jelent, amit hallasz?',
+    module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l74&round=listen' },
+  { id: 'l74-read', glyph: '读', title: 'Olvasás: A báty meglepetése',
+    desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l74&round=read' }
 ];
 
 const HANZIFLOW_PATH_UNITS = [
@@ -1153,5 +1175,9 @@ const HANZIFLOW_PATH_UNITS = [
   { id: 'u-l71', kicker: 'HSK 5 · 1. lecke', title: 'Második év, új projekt', sub: '以…为…, 在…下, 由…组成, 其中, 之所以…是因为',
     steps: ['l71-lesson', 'l71-listen', 'l71-read'] },
   { id: 'u-l72', kicker: 'HSK 5 · 2. lecke', title: 'Maradjak vagy menjek?', sub: '与其…不如, 宁可…也不, 何况, 毕竟, 未必 · 不见得',
-    steps: ['l72-lesson', 'l72-listen', 'l72-read'] }
+    steps: ['l72-lesson', 'l72-listen', 'l72-read'] },
+  { id: 'u-l73', kicker: 'HSK 5 · 3. lecke', title: 'A kínai orvosnál', sub: '似乎, 仿佛, 难免, 以免 · 免得, 尽量',
+    steps: ['l73-lesson', 'l73-listen', 'l73-read'] },
+  { id: 'u-l74', kicker: 'HSK 5 · 4. lecke', title: 'Váratlan vendég', sub: '果然, 居然, 偏偏, 恰好, 总算',
+    steps: ['l74-lesson', 'l74-listen', 'l74-read'] }
 ];
