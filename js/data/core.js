@@ -946,7 +946,29 @@ const HANZIFLOW_PATH = [
     module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l70&round=listen' },
   { id: 'l70-read', glyph: '读', title: 'Olvasás: Egy évem Sanghajban',
     desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
-    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l70&round=read' }
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l70&round=read' },
+
+  // ── HSK 5 · 1. lecke ──
+  { id: 'l71-lesson', glyph: '项', title: 'Magyarázat: 以…为…, 在…下, 由…组成, 其中, 之所以…是因为',
+    desc: 'Új projekt: a fő szempont, a feltétel, miből áll, közülük, azért…, mert….',
+    module: 'lesson', href: 'pages/lesson.html?id=l71' },
+  { id: 'l71-listen', glyph: '听', title: 'Hallás: az év első értekezlete',
+    desc: 'A lecke mondatai hang után: mit jelent, amit hallasz?',
+    module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l71&round=listen' },
+  { id: 'l71-read', glyph: '读', title: 'Olvasás: Az új projekt',
+    desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l71&round=read' },
+
+  // ── HSK 5 · 2. lecke ──
+  { id: 'l72-lesson', glyph: '留', title: 'Magyarázat: 与其…不如, 宁可…也不, 何况, 毕竟, 未必 · 不见得',
+    desc: 'Maradjak vagy menjek? Mérlegelés, vállalt áldozat, nyomós érv, végül is, nem feltétlenül.',
+    module: 'lesson', href: 'pages/lesson.html?id=l72' },
+  { id: 'l72-listen', glyph: '听', title: 'Hallás: egy csábító ajánlat',
+    desc: 'A lecke mondatai hang után: mit jelent, amit hallasz?',
+    module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l72&round=listen' },
+  { id: 'l72-read', glyph: '读', title: 'Olvasás: Maradni vagy menni?',
+    desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l72&round=read' }
 ];
 
 const HANZIFLOW_PATH_UNITS = [
@@ -1127,5 +1149,9 @@ const HANZIFLOW_PATH_UNITS = [
   { id: 'u-t-h4d', kicker: 'HSK 4 · Dolgozat', title: '4. témazáró', sub: 'A 16–20. lecke anyaga, jegyre — nem kötelező',
     steps: ['test-h4d'] },
   { id: 'u-z-h4', kicker: 'HSK 4 · Szintzáró', title: 'A HSK 4 vége', sub: 'Szintzáró dolgozat, pinyin-beírás és próbavizsga — nem kötelező',
-    steps: ['test-h4z', 'py-write-h4', 'exam-hsk4'] }
+    steps: ['test-h4z', 'py-write-h4', 'exam-hsk4'] },
+  { id: 'u-l71', kicker: 'HSK 5 · 1. lecke', title: 'Második év, új projekt', sub: '以…为…, 在…下, 由…组成, 其中, 之所以…是因为',
+    steps: ['l71-lesson', 'l71-listen', 'l71-read'] },
+  { id: 'u-l72', kicker: 'HSK 5 · 2. lecke', title: 'Maradjak vagy menjek?', sub: '与其…不如, 宁可…也不, 何况, 毕竟, 未必 · 不见得',
+    steps: ['l72-lesson', 'l72-listen', 'l72-read'] }
 ];
