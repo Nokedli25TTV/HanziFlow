@@ -1265,7 +1265,29 @@ const HANZIFLOW_PATH = [
     module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l96&round=listen' },
   { id: 'l96-read', glyph: '读', title: 'Olvasás: Anna előadása',
     desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
-    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l96&round=read' }
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l96&round=read' },
+
+  // ── HSK 6 · 7. lecke ──
+  { id: 'l97-lesson', glyph: '统', title: 'Magyarázat: 历来, 不惜, 不顾, 一概, 动不动就',
+    desc: 'Hagyomány és modern élet: mindig is, nem sajnálja, nem törődve, kivétel nélkül, minden apróságra.',
+    module: 'lesson', href: 'pages/lesson.html?id=l97' },
+  { id: 'l97-listen', glyph: '听', title: 'Hallás: megint telefonált anyám',
+    desc: 'A lecke mondatai hang után: mit jelent, amit hallasz?',
+    module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l97&round=listen' },
+  { id: 'l97-read', glyph: '读', title: 'Olvasás: A társkereső sarok a parkban',
+    desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l97&round=read' },
+
+  // ── HSK 6 · 8. lecke ──
+  { id: 'l98-lesson', glyph: '累', title: 'Magyarázat: 不堪, 迫不得已, 何苦, 免不了, 时不时',
+    desc: 'Túl sok munka: nem bírja, kényszerűségből, minek gyötrődni, elkerülhetetlen, időnként.',
+    module: 'lesson', href: 'pages/lesson.html?id=l98' },
+  { id: 'l98-listen', glyph: '听', title: 'Hallás: este tízkor az irodában',
+    desc: 'A lecke mondatai hang után: mit jelent, amit hallasz?',
+    module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l98&round=listen' },
+  { id: 'l98-read', glyph: '读', title: 'Olvasás: A túlhajszolt fiatalok',
+    desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l98&round=read' }
 ];
 
 const HANZIFLOW_PATH_UNITS = [
@@ -1508,5 +1530,9 @@ const HANZIFLOW_PATH_UNITS = [
   { id: 'u-l95', kicker: 'HSK 6 · 5. lecke', title: 'Újévi est Budapesten', sub: '毫不, 毫无, 丝毫, 再三, 一度',
     steps: ['l95-lesson', 'l95-listen', 'l95-read'] },
   { id: 'u-l96', kicker: 'HSK 6 · 6. lecke', title: 'Előadás az egyetemen', sub: '以…为例, 乃至, 亦, 相对而言, 归根到底',
-    steps: ['l96-lesson', 'l96-listen', 'l96-read'] }
+    steps: ['l96-lesson', 'l96-listen', 'l96-read'] },
+  { id: 'u-l97', kicker: 'HSK 6 · 7. lecke', title: 'Hagyomány és modern élet', sub: '历来, 不惜, 不顾, 一概, 动不动就',
+    steps: ['l97-lesson', 'l97-listen', 'l97-read'] },
+  { id: 'u-l98', kicker: 'HSK 6 · 8. lecke', title: 'Túl sok munka', sub: '不堪, 迫不得已, 何苦, 免不了, 时不时',
+    steps: ['l98-lesson', 'l98-listen', 'l98-read'] }
 ];

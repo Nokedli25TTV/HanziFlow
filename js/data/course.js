@@ -17305,6 +17305,311 @@ const HANZIFLOW_COURSE = [
     { q: 'Mit mondasz egy előadás végén?', a: '{谢谢大家的聆听|xièxie dàjiā de língtīng}', wrong: ['{一路顺风|yílù shùnfēng}', '{慢走|màn zǒu}', '{请多多指教|qǐng duōduō zhǐjiào}'], why: '„Köszönöm, hogy meghallgattak."' },
     { q: 'Mit jelent a {差异|chāyì}?', a: 'különbség', wrong: ['hasonlóság', 'kapcsolat', 'egyezés'], why: '{文化差异|wénhuà chāyì} „kulturális különbség".' }
   ]
+},
+/* ════════════════════════════════════════════════════
+   HSK 6 · 7. LECKE — 历来, 不惜, 不顾, 一概, 动不动就
+   ════════════════════════════════════════════════════ */
+{
+  id: 'l97', no: 97, badge: '7', kicker: 'HSK 6 · 7. lecke', label: 'HSK 6 · 7. lecke',
+  title: 'Hagyomány és modern élet — mindig is így volt?',
+  lead: 'Hagyományról és változásról vitatkozol: ami mindig is így volt (历来), amiért nem sajnálsz áldozatot (不惜), amivel nem törődsz (不顾), amit kivétel nélkül elutasítasz (一概), és ami folyton megtörténik (动不动就).',
+  cando: [
+    'Hosszú hagyományra hivatkozol: 历来….',
+    'Elmondod, hogy valaki áldozatot is hoz (不惜), vagy valamit figyelmen kívül hagy (不顾).',
+    'Egyöntetű elutasítást fejezel ki: 一概 + (不) + ige; 不能一概而论.',
+    'Rosszallóan mondod, hogy valami túl gyakran történik: 动不动就….'
+  ],
+  intro: [
+    'Zhou Jie anyja Sanghajból gyakran telefonál — és mindig ugyanarról: ideje volna megnősülni. Ebédnél Péter és Anna is szóba hozza a témát.',
+    'Ebben a leckében a hagyományról, a családi elvárásokról és a változásról szóló vita kifejezéseit tanulod.'
+  ],
+  dialogue: {
+    title: 'Megint telefonált anyám',
+    scene: 'Ebédszünet az irodában. Péter, Zhou Jie és Anna.',
+    lines: [
+      { who: 'Péter', zh: '{周杰|Zhōu Jié}，{你|nǐ}{妈妈|mā·ma}{怎么|zěn·me}{又|yòu}{给|gěi}{你|nǐ}{打|dǎ}{电话|diàn·huà}{了|le}？', hu: 'Zhou Jie, anyukád már megint felhívott?' },
+      { who: 'Zhou Jie', zh: '{还|hái}{不|bú}{是|shì}{催|cuī}{我|wǒ}{结婚|jié hūn}！{她|tā}{动不动|dòng bu dòng}{就|jiù}{说|shuō}：“{你|nǐ}{都|dōu}{三十|sān shí}{了|le}，{还|hái}{不|bù}{找|zhǎo}{对象|duì xiàng}？”', hu: 'Hát persze, hogy nősülésre sürget! Minden alkalommal azzal jön: „Már harminc vagy, és még mindig nem keresel párt?"' },
+      { who: 'Anna', zh: '{中国|Zhōng·guó}{人|rén}{历来|lì lái}{重视|zhòng shì}{家庭|jiā tíng}，{父母|fù mǔ}{着急|zháo jí}{也|yě}{可以|kě·yǐ}{理解|lǐ jiě}。', hu: 'A kínaiak mindig is nagy becsben tartották a családot, érthető, hogy a szülők türelmetlenek.' },
+      { who: 'Zhou Jie', zh: '{理解|lǐ jiě}{是|shì}{理解|lǐ jiě}，{可是|kě·shì}{她|tā}{给|gěi}{我|wǒ}{介绍|jiè·shào}{的|de}{对象|duì xiàng}，{我|wǒ}{一概|yí gài}{拒绝|jù jué}{了|le}。', hu: 'Érteni értem, de akiket bemutatott nekem, azokat kivétel nélkül visszautasítottam.' },
+      { who: 'Péter', zh: '{我|wǒ}{有|yǒu}{个|ge}{同学|tóng xué}{不顾|bú gù}{家|jiā}{里|li}{反对|fǎn duì}，{娶|qǔ}{了|le}{一|yí}{个|ge}{中国|Zhōng·guó}{姑娘|gū·niang}，{现在|xiàn·zài}{过|guò}{得|de}{很|hěn}{幸福|xìng fú}。', hu: 'Van egy évfolyamtársam, aki a családja ellenzése ellenére feleségül vett egy kínai lányt, és most nagyon boldog.' },
+      { who: 'Zhou Jie', zh: '{我|wǒ}{爸妈|bà mā}{倒|dào}{不|bú}{是|shì}{反对|fǎn duì}{外国|wài guó}{人|rén}。{他们|tā·men}{为了|wèi·le}{让|ràng}{我|wǒ}{早|zǎo}{点儿|diǎnr}{成家|chéng jiā}，{不惜|bù xī}{花|huā}{钱|qián}{请|qǐng}{婚姻|hūn yīn}{介绍所|jiè shào suǒ}{帮忙|bāng máng}。', hu: 'A szüleim nem a külföldiek ellen vannak. Csak hogy minél előbb családot alapítsak, még a pénzt sem sajnálják: házasságközvetítőt fizettek.' },
+      { who: 'Anna', zh: '{看来|kàn lái}，{传统|chuán tǒng}{和|hé}{现代|xiàn dài}{之间|zhī jiān}{的|de}{矛盾|máo dùn}，{在|zài}{哪儿|nǎr}{都|dōu}{一样|yí yàng}。', hu: 'Úgy látszik, a hagyomány és a modern élet közti ellentét mindenhol ugyanaz.' }
+    ],
+    notes: [
+      'A {对象|duìxiàng} itt „(lehetséges) pár, partner": {找对象|zhǎo duìxiàng} „párt keres".',
+      'A {娶|qǔ} „feleségül vesz" (férfi nőt), párja a {嫁|jià} „férjhez megy" (nő férfihoz).',
+      'A {理解是理解|lǐjiě shì lǐjiě}，{可是|kěshì} … szerkezet: „érteni értem, de …" — az ige megismétlésével elismerünk valamit, aztán ellenvetünk.'
+    ]
+  },
+  points: [
+    {
+      title: '{历来|lìlái}', sub: 'mindig is, régóta',
+      pattern: 'A + {历来|lì lái} + állítmány',
+      body: 'A {历来|lìlái} írott határozószó: <b>„mindig is, régóta, időtlen idők óta"</b> — a múlttól a jelenig tartó, hagyományos állapotot jelöl. A HSK 5 6. leckéjében tanult {一向|yíxiàng} / {向来|xiànglái}-hoz hasonló, de a {历来|lìlái} inkább hosszú, történelmi időre, közösségekre, intézményekre utal.',
+      examples: [
+        { zh: '{中国|Zhōng·guó}{人|rén}{历来|lì lái}{重视|zhòng shì}{教育|jiào yù}。', hu: 'A kínaiak mindig is nagy becsben tartották a tanulást.' },
+        { zh: '{这|zhè}{家|jiā}{饭馆|fàn guǎn}{的|de}{菜|cài}{历来|lì lái}{以|yǐ}{辣|là}{出名|chū míng}。', hu: 'Ennek az étteremnek az ételei mindig is a csípősségükről voltak híresek.' }
+      ]
+    },
+    {
+      title: '{不惜|bùxī}', sub: 'nem sajnálja, akár … árán is',
+      pattern: 'A + {不惜|bù xī} + áldozat (ige / főnév)',
+      body: 'A {不惜|bùxī} jelentése „nem sajnálja": valaki egy célért <b>áldozatot is hajlandó hozni</b>, akár nagy árat is fizet. Ige vagy főnév követi: {不惜一切代价|bùxī yíqiè dàijià} „bármi áron", {不惜花大钱|bùxī huā dà qián} „nem sajnálja rá a sok pénzt". Lehet dicsérő és bíráló is.',
+      examples: [
+        { zh: '{为了|wèi·le}{治|zhì}{好|hǎo}{孩子|hái·zi}{的|de}{病|bìng}，{他们|tā·men}{不惜|bù xī}{一切|yí qiè}{代价|dài jià}。', hu: 'Hogy meggyógyítsák a gyereket, minden áldozatra készek voltak.' },
+        { zh: '{有些|yǒu xiē}{人|rén}{为了|wèi·le}{买|mǎi}{名牌|míng pái}，{不惜|bù xī}{借|jiè}{钱|qián}。', hu: 'Vannak, akik márkás holmiért még kölcsönt is felvesznek.' }
+      ]
+    },
+    {
+      title: '{不顾|búgù}', sub: 'nem törődve …-val, … ellenére',
+      pattern: 'A + {不顾|bú gù} + (vélemény, veszély, érdek) + cselekvés',
+      body: 'A {不顾|búgù} „nem törődik vele": valaki <b>valamit figyelmen kívül hagyva</b> cselekszik — mások véleményét, a veszélyt vagy a saját érdekét. {不顾父母反对|búgù fùmǔ fǎnduì} „a szülei ellenzése ellenére", {不顾一切|búgù yíqiè} „mindenre fittyet hányva".',
+      examples: [
+        { zh: '{他|tā}{不顾|bú gù}{医生|yī·shēng}{的|de}{劝告|quàn gào}，{又|yòu}{开始|kāi·shǐ}{抽烟|chōu yān}{了|le}。', hu: 'Az orvos tanácsa ellenére újra rágyújtott.' },
+        { zh: '{妈妈|mā·ma}{不顾|bú gù}{自己|zì jǐ}{的|de}{身体|shēn·tǐ}，{每天|měi tiān}{照顾|zhào gù}{生病|shēng bìng}{的|de}{奶奶|nǎi·nai}。', hu: 'Anya a saját egészségével nem törődve minden nap ápolja a beteg nagymamát.' }
+      ]
+    },
+    {
+      title: '{一概|yígài}', sub: 'kivétel nélkül, mind',
+      pattern: 'A + {一概|yí gài} + ({不|bù}) + ige · {不|bù}{能|néng}{一概|yí gài}{而|ér}{论|lùn}',
+      body: 'Az {一概|yígài} „mind, kivétel nélkül": <b>egy egész csoportra</b> vonatkozó, egyöntetű elutasítást vagy elfogadást fejez ki, gyakran tagadással: {一概拒绝|yígài jùjué} „mindet elutasítja", {一概不知|yígài bù zhī} „semmiről sem tud". Állandó fordulat: {不能一概而论|bù néng yígài ér lùn} „nem lehet általánosítani". A {一律|yílǜ} (HSK 5 5. lecke) inkább szabályokra, előírásokra jellemző.',
+      examples: [
+        { zh: '{过期|guò qī}{的|de}{食品|shí pǐn}，{我们|wǒ·men}{一概|yí gài}{不|bú}{卖|mài}。', hu: 'A lejárt élelmiszert kivétel nélkül nem áruljuk.' },
+        { zh: '{每|měi}{个|ge}{人|rén}{情况|qíng·kuàng}{不|bù}{同|tóng}，{不|bù}{能|néng}{一概|yí gài}{而|ér}{论|lùn}。', hu: 'Mindenkinek más a helyzete, nem lehet egy kalap alá venni.' }
+      ]
+    },
+    {
+      title: '{动不动就|dòng bu dòng jiù}', sub: 'minden apróságra, folyton',
+      pattern: 'A + {动不动|dòng bu dòng} + {就|jiù} + (kellemetlen) cselekvés',
+      body: 'A {动不动就|dòng bu dòng jiù} „minden apróságra, folyton": valami <b>túl könnyen, túl gyakran</b> történik — szinte mindig rosszalló hangvételű. Utána többnyire kellemetlen cselekvés áll: {动不动就生气|dòng bu dòng jiù shēngqì} „minden apróságon megsértődik".',
+      examples: [
+        { zh: '{他|tā}{脾气|pí·qi}{不|bù}{好|hǎo}，{动不动|dòng bu dòng}{就|jiù}{生气|shēng qì}。', hu: 'Rossz természetű: minden apróságon felkapja a vizet.' },
+        { zh: '{孩子|hái·zi}{动不动|dòng bu dòng}{就|jiù}{哭|kū}，{父母|fù mǔ}{也|yě}{没|méi}{办法|bàn·fǎ}。', hu: 'A gyerek minden apróságra sírni kezd, a szülők sem tudnak mit tenni.' }
+      ]
+    }
+  ],
+  phrases: [
+    { zh: '{你|nǐ}{有|yǒu}{对象|duì xiàng}{了|le}{吗|ma}？', hu: 'Van már párod?' },
+    { zh: '{缘分|yuán·fèn}{到|dào}{了|le}{自然|zì rán}{就|jiù}{来|lái}{了|le}。', hu: 'Ha eljön az ideje, magától megjön.' },
+    { zh: '{各|gè}{有|yǒu}{各|gè}{的|de}{想法|xiǎng fǎ}。', hu: 'Mindenkinek megvan a maga véleménye.' },
+    { zh: '{这|zhè}{种|zhǒng}{事|shì}{急|jí}{不|bu}{得|de}。', hu: 'Az ilyesmit nem lehet siettetni.' }
+  ],
+  words: [
+    { title: 'Szavak',
+      items: [
+        { zh: '{历来|lì lái}', pinyin: 'lìlái', hu: 'mindig is, régóta' },
+        { zh: '{不惜|bù xī}', pinyin: 'bùxī', hu: 'nem sajnálja (az áldozatot)' },
+        { zh: '{不顾|bú gù}', pinyin: 'búgù', hu: 'nem törődve vele' },
+        { zh: '{一概|yí gài}', pinyin: 'yígài', hu: 'kivétel nélkül' },
+        { zh: '{动不动|dòng bu dòng}', pinyin: 'dòng bu dòng', hu: 'minden apróságra' },
+        { zh: '{催|cuī}', pinyin: 'cuī', hu: 'sürget, siettet' },
+        { zh: '{对象|duì xiàng}', pinyin: 'duìxiàng', hu: 'pár, partner; célpont' },
+        { zh: '{相亲|xiāng qīn}', pinyin: 'xiāngqīn', hu: 'vakrandi, ismerkedés' },
+        { zh: '{成家|chéng jiā}', pinyin: 'chéngjiā', hu: 'családot alapít' },
+        { zh: '{娶|qǔ}', pinyin: 'qǔ', hu: 'feleségül vesz' },
+        { zh: '{矛盾|máo dùn}', pinyin: 'máodùn', hu: 'ellentmondás, ellentét' },
+        { zh: '{代价|dài jià}', pinyin: 'dàijià', hu: 'ár, áldozat' }
+      ] },
+    { title: 'Ráadás',
+      items: [
+        { zh: '{催婚|cuī hūn}', pinyin: 'cuīhūn', hu: 'házasságra sürget' },
+        { zh: '{一概而论|yí gài ér lùn}', pinyin: 'yígài ér lùn', hu: 'általánosít, egy kalap alá vesz' },
+        { zh: '{名牌|míng pái}', pinyin: 'míngpái', hu: 'márkás termék, márka' },
+        { zh: '{劝告|quàn gào}', pinyin: 'quàngào', hu: 'tanács, intelem' }
+      ] }
+  ],
+  culture: [
+    { title: 'Házasságra sürgetés', text: 'Kínában sok harmincas éveiben járó fiatal ismeri a {催婚|cuīhūn} jelenséget: a tavaszi ünnepen a rokonok első kérdése, van-e már párja. Egyes nagyvárosi parkokban „társkereső sarkok" is működnek, ahol a szülők a gyerekük adataival keresnek neki párt.' },
+    { title: 'Szülőtisztelet', text: 'A {孝顺|xiàoshùn} „szülőtisztelet, engedelmesség a szülőknek" a konfuciánus hagyomány egyik alapértéke. Ma is sokan érzik kötelességüknek, hogy a szüleik kívánságait figyelembe vegyék — még akkor is, ha a saját életükről mást gondolnak.' }
+  ],
+  reading: {
+    title: '{公园|gōng yuán}{里|li}{的|de}{相亲角|xiāng qīn jiǎo}', titleHu: 'A társkereső sarok a parkban',
+    text: [
+      { zh: '{在|zài}{上海|Shàng·hǎi}{的|de}{人民|rén mín}{公园|gōng yuán}，{有|yǒu}{一|yí}{个|ge}{有名|yǒu míng}{的|de}“{相亲角|xiāng qīn jiǎo}”。', hu: 'A sanghaji Népparkban van egy híres „társkereső sarok".' },
+      { zh: '{每|měi}{个|ge}{周末|zhōu·mò}，{很|hěn}{多|duō}{父母|fù mǔ}{不顾|bú gù}{风|fēng}{吹|chuī}{日|rì}{晒|shài}，{拿|ná}{着|zhe}{孩子|hái·zi}{的|de}{照片|zhào·piàn}{和|hé}{资料|zī liào}{来|lái}{这里|zhè·lǐ}。', hu: 'Minden hétvégén sok szülő széllel-nappal nem törődve jön ide a gyereke fényképével és adataival.' },
+      { zh: '{中国|Zhōng·guó}{人|rén}{历来|lì lái}{重视|zhòng shì}{家庭|jiā tíng}，{有些|yǒu xiē}{父母|fù mǔ}{为|wèi}{此|cǐ}{不惜|bù xī}{花|huā}{很|hěn}{多|duō}{时间|shí·jiān}{和|hé}{精力|jīng lì}。', hu: 'A kínaiak mindig is nagy becsben tartották a családot; egyes szülők ezért sok időt és energiát sem sajnálnak.', par: true },
+      { zh: '{不过|bú·guò}，{很|hěn}{多|duō}{年轻|nián qīng}{人|rén}{对|duì}{这种|zhè zhǒng}{方式|fāng shì}{一概|yí gài}{不|bù}{接受|jiē shòu}，{觉得|jué·de}{父母|fù mǔ}{动不动|dòng bu dòng}{就|jiù}{安排|ān·pái}{相亲|xiāng qīn}{太|tài}{烦|fán}{了|le}。', hu: 'Sok fiatal azonban egyáltalán nem fogadja el ezt a módszert, és idegesítőnek tartja, hogy a szülők minden adandó alkalommal randevút szerveznek nekik.' },
+      { zh: '{看来|kàn lái}，{这个|zhè ge}{问题|wèn·tí}{不|bù}{能|néng}{一概|yí gài}{而|ér}{论|lùn}——{每|měi}{个|ge}{家庭|jiā tíng}{都|dōu}{有|yǒu}{自己|zì jǐ}{的|de}{答案|dá àn}。', hu: 'Úgy tűnik, ezt a kérdést nem lehet egy kalap alá venni — minden családnak megvan a maga válasza.', par: true }
+    ],
+    words: [ { zh: '{相亲角|xiāng qīn jiǎo}', hu: 'társkereső sarok (a parkban)' } ],
+    questions: [
+      { q: 'Mi van a sanghaji Népparkban?', a: 'társkereső sarok', wrong: ['virágpiac', 'szabadtéri mozi', 'teaház'], why: '{有一个有名的“相亲角”|yǒu yí ge yǒumíng de „xiāngqīn jiǎo"}.' },
+      { q: 'Mit visznek magukkal a szülők?', a: 'a gyerekük fényképét', wrong: ['ételt és italt', 'régi könyveket', 'virágokat'], why: '{拿着孩子的照片和资料|ná zhe háizi de zhàopiàn hé zīliào}.' },
+      { q: 'Mit gondol sok fiatal erről a módszerről?', a: 'idegesítőnek tartja', wrong: ['nagyszerűnek tartja', 'túl drágának tartja', 'nagyon kényelmesnek tartja'], why: '{太烦了|tài fán le}.' },
+      { q: 'Mi a szöveg végkövetkeztetése?', a: 'nem lehet általánosítani', wrong: ['a szülőknek igazuk van', 'a fiataloknak igazuk van', 'a sarkot be kell zárni'], why: '{不能一概而论|bù néng yígài ér lùn}.' }
+    ]
+  },
+  quiz: [
+    { q: '„A kínaiak mindig is nagy becsben tartották a tanulást."', a: '{中国|Zhōng·guó}{人|rén}{历来|lì lái}{重视|zhòng shì}{教育|jiào yù}。', wrong: ['{中国|Zhōng·guó}{人|rén}{重视|zhòng shì}{教育|jiào yù}{历来|lì lái}。', '{历来|lì lái}{重视|zhòng shì}{中国|Zhōng·guó}{人|rén}{教育|jiào yù}。', '{中国|Zhōng·guó}{人|rén}{重视|zhòng shì}{历来|lì lái}{教育|jiào yù}。'], why: 'A + {历来|lìlái} + állítmány.', point: 1 },
+    { q: 'Mire utal leginkább a {历来|lìlái}?', a: 'hosszú, történelmi időre', wrong: ['a holnapi napra', 'egyetlen pillanatra', 'egy jövőbeli tervre'], why: '„Mindig is, időtlen idők óta".', point: 1 },
+    { q: '„Bármi áron meg akarják csinálni."', a: '{他们|tā·men}{不惜|bù xī}{一切|yí qiè}{代价|dài jià}{要|yào}{做|zuò}{成|chéng}。', wrong: ['{他们|tā·men}{一切|yí qiè}{代价|dài jià}{不惜|bù xī}{要|yào}{做|zuò}{成|chéng}。', '{不惜|bù xī}{他们|tā·men}{要|yào}{一切|yí qiè}{做|zuò}{成|chéng}{代价|dài jià}。', '{他们|tā·men}{要|yào}{做|zuò}{成|chéng}{代价|dài jià}{一切|yí qiè}{不惜|bù xī}。'], why: 'A + {不惜|bùxī} + {一切代价|yíqiè dàijià}.', point: 2 },
+    { q: 'Mit jelent a {不惜|bùxī}?', a: 'áldozatot is hoz', wrong: ['nem törődik vele', 'nem érti meg', 'nem tudja'], why: '{惜|xī} „sajnál, kímél".', point: 2 },
+    { q: '„Az orvos tanácsa ellenére újra rágyújtott."', a: '{他|tā}{不顾|bú gù}{医生|yī·shēng}{的|de}{劝告|quàn gào}，{又|yòu}{抽烟|chōu yān}{了|le}。', wrong: ['{他|tā}{医生|yī·shēng}{的|de}{劝告|quàn gào}{不顾|bú gù}，{又|yòu}{抽烟|chōu yān}{了|le}。', '{不顾|bú gù}{他|tā}{又|yòu}{医生|yī·shēng}{的|de}{劝告|quàn gào}{抽烟|chōu yān}{了|le}。', '{他|tā}{又|yòu}{抽烟|chōu yān}{了|le}{医生|yī·shēng}{不顾|bú gù}{的|de}{劝告|quàn gào}。'], why: 'A + {不顾|búgù} + amit figyelmen kívül hagy + cselekvés.', point: 3 },
+    { q: 'Mit jelent: {不顾一切|búgù yíqiè}', a: 'mindenre fittyet hányva', wrong: ['mindent megfontolva', 'mindenkitől kérdezve', 'semmit sem csinálva'], why: '{顾|gù} „figyel rá, törődik vele".', point: 3 },
+    { q: '„A lejárt élelmiszert kivétel nélkül nem áruljuk."', a: '{过期|guò qī}{的|de}{食品|shí pǐn}{我们|wǒ·men}{一概|yí gài}{不|bú}{卖|mài}。', wrong: ['{过期|guò qī}{的|de}{食品|shí pǐn}{我们|wǒ·men}{不|bú}{卖|mài}{一概|yí gài}。', '{一概|yí gài}{过期|guò qī}{我们|wǒ·men}{的|de}{食品|shí pǐn}{不|bú}{卖|mài}。', '{过期|guò qī}{的|de}{一概|yí gài}{食品|shí pǐn}{我们|wǒ·men}{卖|mài}{不|bù}。'], why: 'A + {一概|yígài} + {不|bù} + ige.', point: 4 },
+    { q: 'Mit jelent: {不能一概而论|bù néng yígài ér lùn}', a: 'nem lehet általánosítani', wrong: ['nem lehet beszélni róla', 'nem szabad vitatkozni', 'nem lehet megérteni'], why: '„Nem lehet mindent egyformán megítélni".', point: 4 },
+    { q: '„Minden apróságon megsértődik."', a: '{他|tā}{动不动|dòng bu dòng}{就|jiù}{生气|shēng qì}。', wrong: ['{他|tā}{动不动|dòng bu dòng}{生气|shēng qì}{就|jiù}。', '{动不动|dòng bu dòng}{他|tā}{生气|shēng qì}{就|jiù}{了|le}。', '{他|tā}{生气|shēng qì}{动不动|dòng bu dòng}{就|jiù}。'], why: 'A + {动不动|dòng bu dòng} + {就|jiù} + ige.', point: 5 },
+    { q: 'Milyen hangvételű a {动不动就|dòng bu dòng jiù}?', a: 'rosszalló', wrong: ['dicsérő', 'semleges', 'tréfás'], why: '„Túl könnyen, túl gyakran".', point: 5 },
+    { q: 'Mit jelent a {催|cuī}?', a: 'sürget', wrong: ['segít', 'dicsér', 'megtilt'], why: '{催我结婚|cuī wǒ jiéhūn}.' },
+    { q: 'Mit jelent a {找对象|zhǎo duìxiàng}?', a: 'párt keres', wrong: ['munkát keres', 'lakást keres', 'tárgyat keres'], why: '{对象|duìxiàng} itt „lehetséges pár".' },
+    { q: 'Mit jelent a {相亲|xiāngqīn}?', a: 'vakrandi', wrong: ['esküvő', 'válás', 'eljegyzés'], why: 'Családtagok, ismerősök által szervezett ismerkedés.' },
+    { q: 'Mit jelent a {成家|chéngjiā}?', a: 'családot alapít', wrong: ['házat épít', 'hazamegy', 'elköltözik'], why: '{早点儿成家|zǎo diǎnr chéngjiā}.' },
+    { q: 'Mit jelent: {各有各的想法|gè yǒu gè de xiǎngfǎ}', a: 'Mindenkinek más a véleménye.', wrong: ['Mindenki egyetért.', 'Senkinek sincs ötlete.', 'Mindenki hazament.'], why: '{各|gè} „mindegyik, külön-külön".' },
+    { q: 'Mit jelent a {代价|dàijià}?', a: 'ár, áldozat', wrong: ['ajándék', 'jutalom', 'kedvezmény'], why: '{不惜一切代价|bùxī yíqiè dàijià}.' }
+  ]
+},
+
+/* ════════════════════════════════════════════════════
+   HSK 6 · 8. LECKE — 不堪, 迫不得已, 何苦, 免不了, 时不时
+   ════════════════════════════════════════════════════ */
+{
+  id: 'l98', no: 98, badge: '8', kicker: 'HSK 6 · 8. lecke', label: 'HSK 6 · 8. lecke',
+  title: 'Túl sok munka — minek gyötröd magad?',
+  lead: 'A túlhajszoltságról beszélsz: amit már nem bírsz (不堪), amit kényszerből teszel (迫不得已), amivel fölöslegesen gyötröd magad (何苦), ami elkerülhetetlen (免不了), és ami időnként előfordul (时不时).',
+  cando: [
+    'Elmondod, hogy valamit nem bírsz, vagy valami elviselhetetlen: 不堪重负, 疲惫不堪.',
+    'Kényszerű döntést írsz le: 迫不得已….',
+    'Szónoki kérdéssel lebeszélsz valakit a kínlódásról: 何苦…呢？',
+    'Elkerülhetetlen (免不了) és időnként előforduló (时不时) dolgokról beszélsz.'
+  ],
+  intro: [
+    'Anna hetek óta késő estig dolgozik: új részleg, pekingi értekezletre készülő anyagok. Egy este Zhou Jie még az irodában találja.',
+    'Ebben a leckében a fáradtság, a kényszer és az elkerülhetetlenség kifejezéseit tanulod — és azt, hogyan beszéljünk le valakit a túlhajszoltságról.'
+  ],
+  dialogue: {
+    title: 'Este tízkor az irodában',
+    scene: 'Csütörtök este, az üres irodában. Zhou Jie és Anna.',
+    lines: [
+      { who: 'Zhou Jie', zh: '{安娜|Ān·nà}，{都|dōu}{晚上|wǎn·shang}{十|shí}{点|diǎn}{了|le}，{你|nǐ}{怎么|zěn·me}{还|hái}{在|zài}{加班|jiā bān}？', hu: 'Anna, már este tíz óra van, miért dolgozol még mindig?' },
+      { who: 'Anna', zh: '{下|xià}{周|zhōu}{要|yào}{去|qù}{北京|Běi·jīng}{开|kāi}{会|huì}，{材料|cái·liào}{还|hái}{没|méi}{准备|zhǔn·bèi}{好|hǎo}，{迫不得已|pò bù dé yǐ}{只|zhǐ}{能|néng}{加班|jiā bān}。', hu: 'Jövő héten Pekingbe megyek értekezletre, és még nincsenek kész az anyagok — kénytelen vagyok túlórázni.' },
+      { who: 'Zhou Jie', zh: '{你|nǐ}{最近|zuì jìn}{脸色|liǎn sè}{很|hěn}{差|chà}，{还|hái}{时不时|shí bù shí}{咳嗽|ké·sou}，{何苦|hé kǔ}{把|bǎ}{自己|zì jǐ}{累|lèi}{成|chéng}{这样|zhè yàng}？', hu: 'Mostanában rosszul nézel ki, és időnként köhögsz is — minek hajszolod így magad?' },
+      { who: 'Anna', zh: '{刚|gāng}{开始|kāi·shǐ}{管|guǎn}{一|yí}{个|ge}{新|xīn}{部门|bù mén}，{免不了|miǎn bu liǎo}{要|yào}{忙|máng}{一阵子|yí zhèn·zi}。', hu: 'Most kezdtem vezetni egy új részleget, elkerülhetetlen, hogy egy ideig sok legyen a munka.' },
+      { who: 'Zhou Jie', zh: '{可是|kě·shì}{你|nǐ}{这样|zhè yàng}{下去|xià·qù}，{身体|shēn·tǐ}{早晚|zǎo wǎn}{会|huì}{不堪|bù kān}{重负|zhòng fù}{的|de}。', hu: 'De ha így folytatod, a tested előbb-utóbb nem fogja bírni a terhet.' },
+      { who: 'Anna', zh: '{你|nǐ}{说|shuō}{得|de}{对|duì}。{明天|míng·tiān}{我|wǒ}{把|bǎ}{一|yí}{部分|bù·fen}{工作|gōng·zuò}{交|jiāo}{给|gěi}{彼得|Bǐ·dé}，{周末|zhōu·mò}{好好儿|hǎo hāor}{休息|xiū·xi}。', hu: 'Igazad van. Holnap átadok egy részt a munkából Péternek, és hétvégén rendesen kipihenem magam.' },
+      { who: 'Zhou Jie', zh: '{这|zhè}{才|cái}{对|duì}{嘛|ma}！{走|zǒu}，{我|wǒ}{送|sòng}{你|nǐ}{回|huí}{家|jiā}。', hu: 'Így már jó! Gyere, hazakísérlek.' }
+    ],
+    notes: [
+      'Az {累成这样|lèi chéng zhèyàng} „ennyire kifárasztja magát": ige + {成|chéng} + eredmény, mint a {把|bǎ}-szerkezetben (HSK 3 19. lecke).',
+      'A {一阵子|yízhènzi} „egy ideig" beszélt nyelvi időtartam — a HSK 5-ös {阵|zhèn} mérőszóból.',
+      'A {这才对嘛|zhè cái duì ma} „na, így már jó!" — helyeslés, amikor a másik végre megfogadja a tanácsot.'
+    ]
+  },
+  points: [
+    {
+      title: '{不堪|bùkān}', sub: 'nem bírja; elviselhetetlenül',
+      pattern: '{不堪|bù kān} + ige / főnév · melléknév + {不堪|bù kān}',
+      body: 'A {不堪|bùkān} „nem bír el" kétféleképpen áll: <b>ige vagy főnév előtt</b> = „nem bírja": {不堪重负|bùkān zhòngfù} „roskadozik a teher alatt"; <b>melléknév után</b> = „elviselhetetlenül, borzasztóan": {疲惫不堪|píbèi bùkān} „holtfáradt", {混乱不堪|hùnluàn bùkān} „teljes a káosz". Mindig kellemetlen dologra mondjuk.',
+      examples: [
+        { zh: '{连续|lián xù}{加班|jiā bān}{一|yí}{个|ge}{月|yuè}，{大家|dà·jiā}{都|dōu}{疲惫|pí bèi}{不堪|bù kān}。', hu: 'Egy hónapnyi folyamatos túlóra után mindenki holtfáradt.' },
+        { zh: '{下|xià}{了|le}{一|yí}{夜|yè}{的|de}{雨|yǔ}，{路|lù}{上|shang}{泥泞|ní nìng}{不堪|bù kān}。', hu: 'Egész éjjel esett, az út borzasztóan sáros.' }
+      ]
+    },
+    {
+      title: '{迫不得已|pò bù dé yǐ}', sub: 'kényszerűségből, nem tehet mást',
+      pattern: '{迫不得已|pò bù dé yǐ} + cselekvés · {迫不得已|pò bù dé yǐ}{的|de} + főnév',
+      body: 'A {迫不得已|pò bù dé yǐ} négy írásjegyes kifejezés: <b>„kényszerűségből, nem tehet mást"</b> — a körülmények kényszerítenek valamire, amit magunktól nem tennénk. Határozóként ({迫不得已只能加班|pò bù dé yǐ zhǐ néng jiābān}) vagy jelzőként ({迫不得已的选择|pò bù dé yǐ de xuǎnzé} „kényszerű döntés") áll. Rokona a HSK 4-ben tanult {不得不|bù dé bù}.',
+      examples: [
+        { zh: '{航班|háng bān}{取消|qǔ xiāo}{了|le}，{我们|wǒ·men}{迫不得已|pò bù dé yǐ}{在|zài}{机场|jī chǎng}{住|zhù}{了|le}{一|yí}{夜|yè}。', hu: 'A járatot törölték, kénytelenek voltunk a reptéren éjszakázni.' },
+        { zh: '{不|bú}{到|dào}{迫不得已|pò bù dé yǐ}，{他|tā}{是|shì}{不|bú}{会|huì}{向|xiàng}{别人|bié·rén}{借|jiè}{钱|qián}{的|de}。', hu: 'Hacsak nem muszáj, nem kér kölcsön senkitől.' }
+      ]
+    },
+    {
+      title: '{何苦|hékǔ}', sub: 'minek gyötröd magad? — szónoki kérdés',
+      pattern: 'A + {何苦|hé kǔ} + cselekvés + ({呢|ne})？',
+      body: 'A {何苦|hékǔ} szó szerint „minek a szenvedés": szónoki kérdés, amellyel azt mondjuk, hogy valaki <b>fölöslegesen gyötri magát</b>. Közel áll a {何必|hébì}-hez (HSK 5 9. lecke), de a {何苦|hékǔ} jobban hangsúlyozza a kínlódást. A végén gyakran {呢|ne} áll; önállóan is mondható: {何苦呢|hékǔ ne}？',
+      examples: [
+        { zh: '{你|nǐ}{何苦|hé kǔ}{为|wèi}{这|zhè}{点儿|diǎnr}{钱|qián}{跟|gēn}{他|tā}{吵架|chǎo jià}{呢|ne}？', hu: 'Minek veszekszel vele ennyi pénzért?' },
+        { zh: '{他|tā}{又|yòu}{不|bù}{领|lǐng}{情|qíng}，{你|nǐ}{这|zhè}{又|yòu}{是|shì}{何苦|hé kǔ}{呢|ne}？', hu: 'Ő úgysem értékeli — minek gyötröd magad?' }
+      ]
+    },
+    {
+      title: '{免不了|miǎnbuliǎo}', sub: 'elkerülhetetlen, óhatatlanul',
+      pattern: 'A + {免不了|miǎn bu liǎo} + (ige / kifejezés)',
+      body: 'A {免不了|miǎnbuliǎo} „nem kerülhető el": egy helyzetben <b>természetes, elkerülhetetlen</b>, hogy valami (többnyire kellemetlen) megtörténjen. Jelentése közel áll a HSK 5-ben tanult {难免|nánmiǎn}-hez, de beszéltebb. Ige vagy egész kifejezés követi.',
+      examples: [
+        { zh: '{第一|dì yī}{次|cì}{上|shàng}{台|tái}{演讲|yǎn jiǎng}，{免不了|miǎn bu liǎo}{有|yǒu}{点儿|diǎnr}{紧张|jǐn zhāng}。', hu: 'Az első szónoklatkor az ember óhatatlanul izgul egy kicsit.' },
+        { zh: '{刚|gāng}{搬|bān}{到|dào}{国外|guó wài}，{免不了|miǎn bu liǎo}{会|huì}{遇到|yù dào}{一些|yì xiē}{困难|kùn·nan}。', hu: 'Ha az ember épp külföldre költözött, elkerülhetetlenül adódnak nehézségek.' }
+      ]
+    },
+    {
+      title: '{时不时|shíbùshí}', sub: 'időnként, hébe-hóba',
+      pattern: 'A + {时不时|shí bù shí} + ige',
+      body: 'A {时不时|shíbùshí} beszélt nyelvi: <b>„időnként, hébe-hóba, újra meg újra"</b> — rendszertelenül, de ismétlődően. Az ige elé kerül. Gyakoribb, mint az {偶尔|ǒu·ěr} (HSK 4 7. lecke), de ritkább, mint a {常常|chángcháng}.',
+      examples: [
+        { zh: '{他|tā}{时不时|shí bù shí}{给|gěi}{我|wǒ}{发|fā}{几|jǐ}{张|zhāng}{照片|zhào·piàn}。', hu: 'Időnként küld nekem néhány fényképet.' },
+        { zh: '{窗|chuāng}{外|wài}{时不时|shí bù shí}{传|chuán}{来|lái}{几|jǐ}{声|shēng}{鸟|niǎo}{叫|jiào}。', hu: 'Az ablakon túlról időnként madárcsicsergés hallatszik.' }
+      ]
+    }
+  ],
+  phrases: [
+    { zh: '{别|bié}{太|tài}{拼|pīn}{了|le}！', hu: 'Ne hajtsd túl magad!' },
+    { zh: '{身体|shēn·tǐ}{是|shì}{革命|gé mìng}{的|de}{本钱|běn·qián}。', hu: 'Az egészség a legfőbb tőke. (szólás)' },
+    { zh: '{该|gāi}{休息|xiū·xi}{就|jiù}{休息|xiū·xi}。', hu: 'Ha pihenni kell, pihenj.' },
+    { zh: '{我|wǒ}{送|sòng}{你|nǐ}{回|huí}{家|jiā}。', hu: 'Hazakísérlek.' }
+  ],
+  words: [
+    { title: 'Szavak',
+      items: [
+        { zh: '{不堪|bù kān}', pinyin: 'bùkān', hu: 'nem bírja; elviselhetetlenül' },
+        { zh: '{迫不得已|pò bù dé yǐ}', pinyin: 'pò bù dé yǐ', hu: 'kényszerűségből' },
+        { zh: '{何苦|hé kǔ}', pinyin: 'hékǔ', hu: 'minek (gyötrődni)?' },
+        { zh: '{免不了|miǎn bu liǎo}', pinyin: 'miǎnbuliǎo', hu: 'elkerülhetetlen' },
+        { zh: '{时不时|shí bù shí}', pinyin: 'shíbùshí', hu: 'időnként' },
+        { zh: '{脸色|liǎn sè}', pinyin: 'liǎnsè', hu: 'arcszín' },
+        { zh: '{疲惫|pí bèi}', pinyin: 'píbèi', hu: 'kimerült, fáradt' },
+        { zh: '{重负|zhòng fù}', pinyin: 'zhòngfù', hu: 'nagy teher' },
+        { zh: '{拼|pīn}', pinyin: 'pīn', hu: 'hajt, mindent belead' },
+        { zh: '{演讲|yǎn jiǎng}', pinyin: 'yǎnjiǎng', hu: 'beszéd, szónoklat' },
+        { zh: '{失眠|shī mián}', pinyin: 'shīmián', hu: 'álmatlanság' },
+        { zh: '{本钱|běn·qián}', pinyin: 'běnqián', hu: 'tőke, alap' }
+      ] },
+    { title: 'Ráadás',
+      items: [
+        { zh: '{吵架|chǎo jià}', pinyin: 'chǎojià', hu: 'veszekszik' },
+        { zh: '{精力|jīng lì}', pinyin: 'jīnglì', hu: 'energia, erő' },
+        { zh: '{熬夜|áo yè}', pinyin: 'áoyè', hu: 'éjszakázik, virraszt' },
+        { zh: '{休假|xiū jià}', pinyin: 'xiūjià', hu: 'szabadságra megy' }
+      ] }
+  ],
+  culture: [
+    { title: 'A „996"', text: 'Kínában a „996" kifejezés olyan munkarendet jelent, amelyben reggel 9-től este 9-ig, heti hat napot dolgoznak. Főleg technológiai cégeknél terjedt el, és sok vitát váltott ki: egyesek a siker árának tartják, mások a {过劳|guòláo} „túlhajszoltság" okának.' },
+    { title: 'Egészségmegőrzés', text: 'A {养生|yǎngshēng} „életmegőrzés, egészségápolás" régi kínai hagyomány: meleg víz ivása, korai lefekvés, tajcsi, évszakhoz illő étkezés. Az idősebbek gyakran figyelmeztetik a fiatalokat: {身体是革命的本钱|shēntǐ shì gémìng de běnqián} — „az egészség a legfőbb tőke".' }
+  ],
+  reading: {
+    title: '{过劳|guò láo}{的|de}{年轻|nián qīng}{人|rén}', titleHu: 'A túlhajszolt fiatalok',
+    text: [
+      { zh: '{在|zài}{大|dà}{城市|chéng shì}，{很|hěn}{多|duō}{年轻|nián qīng}{人|rén}{每天|měi tiān}{工作|gōng·zuò}{十|shí}{几|jǐ}{个|ge}{小时|xiǎo·shí}，{疲惫|pí bèi}{不堪|bù kān}。', hu: 'A nagyvárosokban sok fiatal napi tíz-egynéhány órát dolgozik, és teljesen kimerült.' },
+      { zh: '{有|yǒu}{人|rén}{说|shuō}，{这|zhè}{是|shì}{迫不得已|pò bù dé yǐ}：{房价|fáng jià}{那么|nà·me}{高|gāo}，{不|bù}{努力|nǔ lì}{就|jiù}{买|mǎi}{不|bu}{起|qǐ}{房|fáng}。', hu: 'Vannak, akik szerint ez kényszerűség: olyan magasak a lakásárak, hogy aki nem hajt, nem tud lakást venni.' },
+      { zh: '{但|dàn}{医生|yī·shēng}{提醒|tí xǐng}，{长期|cháng qī}{过劳|guò láo}{免不了|miǎn bu liǎo}{会|huì}{带来|dài lái}{各种|gè zhǒng}{健康|jiàn kāng}{问题|wèn·tí}。', hu: 'Az orvosok azonban figyelmeztetnek: a tartós túlhajszoltság elkerülhetetlenül mindenféle egészségügyi gondot okoz.', par: true },
+      { zh: '{很|hěn}{多|duō}{人|rén}{时不时|shí bù shí}{头疼|tóu téng}、{失眠|shī mián}，{却|què}{不|bú}{愿意|yuàn·yì}{去|qù}{看|kàn}{病|bìng}。', hu: 'Sokan időnként fejfájással, álmatlansággal küzdenek, mégsem akarnak orvoshoz menni.' },
+      { zh: '{一|yí}{位|wèi}{医生|yī·shēng}{说|shuō}：“{为了|wèi·le}{工作|gōng·zuò}{把|bǎ}{身体|shēn·tǐ}{累|lèi}{坏|huài}，{又|yòu}{是|shì}{何苦|hé kǔ}{呢|ne}？”', hu: 'Egy orvos így fogalmazott: „Minek tönkretenni az egészségünket a munka miatt?"', par: true }
+    ],
+    words: [ { zh: '{过劳|guò láo}', hu: 'túlhajszoltság, túlmunka' } ],
+    questions: [
+      { q: 'Hány órát dolgozik sok fiatal a nagyvárosokban?', a: 'tíz-egynéhány órát', wrong: ['hat órát', 'négy órát', 'nyolc órát'], why: '{每天工作十几个小时|měi tiān gōngzuò shí jǐ ge xiǎoshí}.' },
+      { q: 'Miért mondják egyesek, hogy ez kényszerűség?', a: 'a magas lakásárak miatt', wrong: ['a kevés munka miatt', 'a szüleik miatt', 'a hideg idő miatt'], why: '{房价那么高|fángjià nàme gāo}.' },
+      { q: 'Mire figyelmeztetnek az orvosok?', a: 'egészségügyi gondokra', wrong: ['közlekedési balesetekre', 'pénzügyi válságra', 'a rossz időjárásra'], why: '{免不了会带来各种健康问题|miǎnbuliǎo huì dàilái gè zhǒng jiànkāng wèntí}.' },
+      { q: 'Mit nem akar sok fiatal, akinek fáj a feje?', a: 'orvoshoz menni', wrong: ['pihenni', 'teát inni', 'sportolni'], why: '{却不愿意去看病|què bú yuànyì qù kàn bìng}.' }
+    ]
+  },
+  quiz: [
+    { q: '„Mindenki holtfáradt."', a: '{大家|dà·jiā}{都|dōu}{疲惫|pí bèi}{不堪|bù kān}。', wrong: ['{大家|dà·jiā}{都|dōu}{不堪|bù kān}{疲惫|pí bèi}{吗|ma}。', '{不堪|bù kān}{大家|dà·jiā}{都|dōu}{疲惫|pí bèi}。', '{大家|dà·jiā}{疲惫|pí bèi}{都|dōu}{不堪|bù kān}{了|le}。'], why: 'Melléknév + {不堪|bùkān} „elviselhetetlenül".', point: 1 },
+    { q: 'Mit jelent: {不堪重负|bùkān zhòngfù}', a: 'nem bírja a terhet', wrong: ['könnyen viseli', 'segítséget kér', 'terhet vállal'], why: '{不堪|bùkān} + főnév: „nem bírja".', point: 1 },
+    { q: '„Kénytelenek voltunk a reptéren éjszakázni."', a: '{我们|wǒ·men}{迫不得已|pò bù dé yǐ}{在|zài}{机场|jī chǎng}{住|zhù}{了|le}{一|yí}{夜|yè}。', wrong: ['{我们|wǒ·men}{在|zài}{机场|jī chǎng}{住|zhù}{了|le}{一|yí}{夜|yè}{迫不得已|pò bù dé yǐ}{的|de}。', '{我们|wǒ·men}{住|zhù}{在|zài}{了|le}{迫不得已|pò bù dé yǐ}{机场|jī chǎng}{一|yí}{夜|yè}。', '{我们|wǒ·men}{住|zhù}{迫不得已|pò bù dé yǐ}{了|le}{在|zài}{机场|jī chǎng}{一|yí}{夜|yè}。'], why: 'A + {迫不得已|pò bù dé yǐ} + cselekvés.', point: 2 },
+    { q: 'Melyik szerkezet rokona a {迫不得已|pò bù dé yǐ}?', a: '{不得不|bù dé bù}', wrong: ['{不至于|bú zhìyú}', '{不一定|bù yídìng}', '{不见得|bú jiànde}'], why: 'Mindkettő kényszert fejez ki.', point: 2 },
+    { q: '„Minek veszekszel vele ennyi pénzért?"', a: '{你|nǐ}{何苦|hé kǔ}{为|wèi}{这|zhè}{点儿|diǎnr}{钱|qián}{跟|gēn}{他|tā}{吵架|chǎo jià}{呢|ne}？', wrong: ['{你|nǐ}{为|wèi}{这|zhè}{点儿|diǎnr}{钱|qián}{何苦|hé kǔ}{呢|ne}{跟|gēn}{他|tā}{吵架|chǎo jià}？', '{何苦|hé kǔ}{你|nǐ}{为|wèi}{跟|gēn}{他|tā}{这|zhè}{点儿|diǎnr}{钱|qián}{吵架|chǎo jià}{吗|ma}？', '{你|nǐ}{跟|gēn}{他|tā}{吵架|chǎo jià}{何苦|hé kǔ}{为|wèi}{钱|qián}{这|zhè}{点儿|diǎnr}{呢|ne}？'], why: 'A + {何苦|hékǔ} + cselekvés + {呢|ne}?', point: 3 },
+    { q: 'Melyik HSK 5-ös szó közeli párja a {何苦|hékǔ}?', a: '{何必|hébì}', wrong: ['{何况|hékuàng}', '{何时|héshí}', '{如何|rúhé}'], why: 'Mindkettő: „minek?"', point: 3 },
+    { q: '„Az első szónoklatnál óhatatlanul izgul az ember."', a: '{第一|dì yī}{次|cì}{演讲|yǎn jiǎng}{免不了|miǎn bu liǎo}{紧张|jǐn zhāng}。', wrong: ['{第一|dì yī}{次|cì}{演讲|yǎn jiǎng}{紧张|jǐn zhāng}{免不了|miǎn bu liǎo}{吗|ma}。', '{免不了|miǎn bu liǎo}{第一|dì yī}{次|cì}{紧张|jǐn zhāng}{演讲|yǎn jiǎng}。', '{第一|dì yī}{次|cì}{免不了|miǎn bu liǎo}{紧张|jǐn zhāng}{演讲|yǎn jiǎng}{的|de}。'], why: 'Helyzet + {免不了|miǎnbuliǎo} + következmény.', point: 4 },
+    { q: 'Melyik szóhoz áll közel a {免不了|miǎnbuliǎo}?', a: '{难免|nánmiǎn}', wrong: ['{难得|nándé}', '{难道|nándào}', '{难怪|nánguài}'], why: 'Mindkettő: „elkerülhetetlen".', point: 4 },
+    { q: '„Időnként küld nekem fényképeket."', a: '{他|tā}{时不时|shí bù shí}{给|gěi}{我|wǒ}{发|fā}{照片|zhào·piàn}。', wrong: ['{他|tā}{给|gěi}{我|wǒ}{发|fā}{照片|zhào·piàn}{时不时|shí bù shí}。', '{时不时|shí bù shí}{给|gěi}{他|tā}{我|wǒ}{发|fā}{照片|zhào·piàn}。', '{他|tā}{给|gěi}{时不时|shí bù shí}{我|wǒ}{照片|zhào·piàn}{发|fā}。'], why: 'A + {时不时|shíbùshí} + ige.', point: 5 },
+    { q: 'Mit jelent a {时不时|shíbùshí}?', a: 'időnként', wrong: ['soha', 'mindig', 'azonnal'], why: '„Hébe-hóba, újra meg újra".', point: 5 },
+    { q: 'Mit jelent: {别太拼了|bié tài pīn le}！', a: 'Ne hajtsd túl magad!', wrong: ['Ne késs el!', 'Ne ess el!', 'Ne félj!'], why: '{拼|pīn} „mindent belead".' },
+    { q: 'Mit jelent a {脸色|liǎnsè}?', a: 'arcszín', wrong: ['hajszín', 'hangulat', 'ruhaszín'], why: '{脸色很差|liǎnsè hěn chà} „rosszul néz ki".' },
+    { q: 'Mit jelent a {疲惫|píbèi}?', a: 'kimerült', wrong: ['vidám', 'éhes', 'kíváncsi'], why: '{疲惫不堪|píbèi bùkān} „holtfáradt".' },
+    { q: 'Mit jelent: {身体是革命的本钱|shēntǐ shì gémìng de běnqián}', a: 'Az egészség a legfőbb tőke.', wrong: ['A forradalom drága.', 'Sportolni unalmas.', 'A pénz mindennél fontosabb.'], why: 'Régi szólás, ma tréfásan is mondják.' },
+    { q: 'Mi a „996" munkarend?', a: '9-től 9-ig, heti hat nap', wrong: ['heti négy nap, napi 8 óra', 'csak éjszakai műszak', 'részmunkaidő otthonról'], why: 'Reggel 9-től este 9-ig, heti hat napon át.' },
+    { q: 'Mit jelent a {失眠|shīmián}?', a: 'álmatlanság', wrong: ['fejfájás', 'láz', 'hányinger'], why: '{失|shī} „elveszít", {眠|mián} „alvás".' }
+  ]
 }
 
 ];
