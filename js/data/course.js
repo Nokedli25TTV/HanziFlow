@@ -10849,6 +10849,344 @@ const HANZIFLOW_COURSE = [
     { q: 'Mit jelent a {突然|tūrán}?', a: 'hirtelen', wrong: ['lassan', 'mindig', 'végre'], why: '{突然下起雨来|tūrán xià qǐ yǔ lái}.' },
     { q: 'Mit jelent: {真巧|zhēn qiǎo}！', a: 'Micsoda véletlen!', wrong: ['Milyen kár!', 'Nagyon fáradt vagyok!', 'Nagyon olcsó!'], why: 'A {巧|qiǎo} itt „szerencsés egybeesés".' }
   ]
+},
+/* ════════════════════════════════════════════════════
+   HSK 4 · 7. LECKE — 由于…因此, 是否, 往往 · 常常, 偶尔, 什么的 · 等
+   ════════════════════════════════════════════════════ */
+{
+  id: 'l57', no: 57, badge: '7', kicker: 'HSK 4 · 7. lecke', label: 'HSK 4 · 7. lecke',
+  title: 'Rendelés a neten — vajon visszaküldhető?',
+  lead: 'Netes vásárlásról beszélsz: hivatalos okot és következményt mondasz (由于…，因此…), udvariasan kérdezel (是否), általános tapasztalatot fogalmazol meg (往往), elmondod, mit csinálsz csak néha (偶尔), és felsorolást zársz le (什么的 · 等).',
+  cando: [
+    'Hivatalos stílusban mondasz okot és következményt: 由于…，因此….',
+    'Udvarias, választékos kérdést teszel fel: 是否….',
+    'Megkülönbözteted a 往往 („általában, rendszerint") és a 常常 („gyakran") használatát.',
+    'Elmondod, mit csinálsz néha (偶尔), és lezársz egy felsorolást (什么的 · 等).'
+  ],
+  intro: [
+    'Wang Li meglátogatja Annát, és az ajtó előtt három csomagot talál. Anna szinte mindent a neten vesz — de az új cipő kicsi lett, ezért írnia kell az ügyfélszolgálatnak.',
+    'Ebben a leckében a hivatalos és a hétköznapi stílus közti különbséget is gyakorolod: {由于|yóuyú} és {因为|yīnwèi}, {是否|shìfǒu} és {是不是|shì bu shì}, {等|děng} és {什么的|shénme de}.'
+  ],
+  dialogue: {
+    title: 'Három csomag az ajtó előtt',
+    scene: 'Szombat délután Anna lakásában. Anna és Wang Li.',
+    lines: [
+      { who: 'Wang Li', zh: '{你|nǐ}{又|yòu}{在|zài}{网上|wǎng shàng}{买|mǎi}{东西|dōng·xi}{了|le}？{门口|mén kǒu}{有|yǒu}{三|sān}{个|ge}{快递|kuài·dì}。', hu: 'Megint a neten vásároltál? Három csomag van az ajtó előtt.' },
+      { who: 'Anna', zh: '{是|shì}{啊|a}，{衣服|yī·fu}、{鞋|xié}、{书|shū}{什么的|shén·me de}。{网上|wǎng shàng}{的|de}{东西|dōng·xi}{往往|wǎng·wǎng}{比|bǐ}{商店|shāng·diàn}{里|li}{便宜|pián·yi}。', hu: 'Igen, ruha, cipő, könyv, ilyesmi. A neten a dolgok általában olcsóbbak, mint a boltban.' },
+      { who: 'Wang Li', zh: '{我|wǒ}{只|zhǐ}{偶尔|ǒu·ěr}{在|zài}{网上|wǎng shàng}{买|mǎi}{衣服|yī·fu}，{因为|yīn·wèi}{不|bù}{能|néng}{先|xiān}{试|shì}{一|yí}{试|shì}。', hu: 'Én csak néha veszek ruhát a neten, mert nem lehet előbb felpróbálni.' },
+      { who: 'Anna', zh: '{你|nǐ}{说|shuō}{得|de}{对|duì}，{这|zhè}{双|shuāng}{鞋|xié}{就|jiù}{小|xiǎo}{了|le}。{不|bù}{知道|zhī·dào}{是否|shì·fǒu}{可以|kě·yǐ}{退|tuì}。', hu: 'Igazad van, ez a cipő éppen kicsi lett. Nem tudom, vissza lehet-e küldeni.' },
+      { who: 'Wang Li', zh: '{七|qī}{天|tiān}{之内|zhī nèi}{一般|yì·bān}{都|dōu}{可以|kě·yǐ}{退|tuì}。{你|nǐ}{问问|wèn·wen}{客服|kè·fú}{吧|ba}。', hu: 'Hét napon belül általában vissza lehet küldeni. Kérdezd meg az ügyfélszolgálatot.' },
+      { who: 'Anna', zh: '{客服|kè·fú}{回|huí}{了|le}：“{由于|yóu·yú}{最近|zuì·jìn}{订单|dìng·dān}{太|tài}{多|duō}，{因此|yīn·cǐ}{退货|tuì huò}{要|yào}{等|děng}{三|sān}{天|tiān}。”', hu: 'Az ügyfélszolgálat válaszolt: „Mivel mostanában túl sok a rendelés, a visszaküldésre három napot kell várni."' },
+      { who: 'Wang Li', zh: '{三|sān}{天|tiān}{不|bù}{算|suàn}{久|jiǔ}。{下|xià}{次|cì}{买|mǎi}{鞋|xié}{以前|yǐ·qián}，{先|xiān}{看看|kàn·kan}{尺寸|chǐ·cùn}{吧|ba}！', hu: 'Három nap nem sok. Legközelebb cipővásárlás előtt előbb nézd meg a méretet!' }
+    ],
+    notes: [
+      'A {快递|kuàidì} „gyorsposta, futárszolgálat", de magát a csomagot is jelenti: {三个快递|sān ge kuàidì} „három csomag".',
+      'A {退货|tuì huò} „árut visszaküld, visszavisz", a {客服|kèfú} „ügyfélszolgálat" (a {客户服务|kèhù fúwù} rövidítése).',
+      'A {不算|bú suàn} „nem számít (annak)": {三天不算久|sān tiān bú suàn jiǔ} „három nap nem számít soknak".'
+    ]
+  },
+  points: [
+    {
+      title: '{由于|yóuyú} … {因此|yīncǐ} …', sub: 'mivel …, ezért … (hivatalos)',
+      pattern: '{由于|yóu·yú} + ok，{因此|yīn·cǐ} / {所以|suǒ·yǐ} + következmény',
+      body: 'A {由于|yóuyú} „mivel, … miatt" és a {因此|yīncǐ} „ezért" a {因为|yīnwèi} … {所以|suǒyǐ} … választékos, írott párja: hivatalos levélben, hírben, közleményben gyakori. {由于最近订单太多，因此退货要等三天|yóuyú zuìjìn dìngdān tài duō, yīncǐ tuì huò yào děng sān tiān} „mivel mostanában túl sok a rendelés, a visszaküldésre három napot kell várni". Mindkettő állhat egyedül is.',
+      tables: [
+        { caption: 'Beszélt és írott stílus',
+          head: ['', 'Ok', 'Következmény'],
+          rows: [
+            ['beszélt', '{因为|yīn·wèi}', '{所以|suǒ·yǐ}'],
+            ['írott', '{由于|yóu·yú}', '{因此|yīn·cǐ}']
+          ] }
+      ],
+      examples: [
+        { zh: '{由于|yóu·yú}{最近|zuì·jìn}{订单|dìng·dān}{太|tài}{多|duō}，{因此|yīn·cǐ}{退货|tuì huò}{要|yào}{等|děng}{三|sān}{天|tiān}。', hu: 'Mivel mostanában túl sok a rendelés, a visszaküldésre három napot kell várni.' },
+        { zh: '{由于|yóu·yú}{天气|tiān·qì}{不|bù}{好|hǎo}，{飞机|fēi·jī}{晚|wǎn}{到|dào}{了|le}{两|liǎng}{个|ge}{小时|xiǎo·shí}。', hu: 'A rossz idő miatt a gép két órát késett.' }
+      ]
+    },
+    {
+      title: '{是否|shìfǒu}', sub: '-e, vajon (választékos)',
+      pattern: 'A + {是否|shì·fǒu} + ige / melléknév',
+      body: 'A {是否|shìfǒu} a {是不是|shì bu shì} írott, udvarias párja: eldöntendő kérdést vagy „-e" mellékmondatot alkot. {请问您是否需要发票|qǐngwèn nín shìfǒu xūyào fāpiào} „szüksége van-e számlára?", {不知道是否可以退|bù zhīdào shìfǒu kěyǐ tuì} „nem tudom, vissza lehet-e küldeni". Mivel maga is kérdést alkot, a mondat végére nem kell {吗|ma}.',
+      examples: [
+        { zh: '{我|wǒ}{不|bù}{知道|zhī·dào}{这|zhè}{双|shuāng}{鞋|xié}{是否|shì·fǒu}{可以|kě·yǐ}{退|tuì}。', hu: 'Nem tudom, vissza lehet-e küldeni ezt a cipőt.' },
+        { zh: '{请问|qǐng wèn}{您|nín}{是否|shì·fǒu}{需要|xū·yào}{发票|fā·piào}？', hu: 'Elnézést, szüksége van számlára?' }
+      ],
+      mistakes: [
+        { bad: '{您|nín}{是否|shì·fǒu}{需要|xū·yào}{发票|fā·piào}{吗|ma}？', good: '{您|nín}{是否|shì·fǒu}{需要|xū·yào}{发票|fā·piào}？', why: 'A {是否|shìfǒu} már kérdést alkot, mellé nem kell {吗|ma}.' }
+      ]
+    },
+    {
+      title: '{往往|wǎngwǎng} · {常常|chángcháng}', sub: 'rendszerint · gyakran',
+      pattern: '(körülmény) + {往往|wǎng·wǎng} + ige · {常常|cháng·cháng} + ige',
+      body: 'A {往往|wǎngwǎng} tapasztalaton alapuló <b>szabályszerűséget</b> fejez ki: bizonyos helyzetben a dolog rendszerint így alakul. {网上的东西往往比商店里便宜|wǎng shàng de dōngxi wǎngwǎng bǐ shāngdiàn li piányi} „a neten a dolgok rendszerint olcsóbbak". A {常常|chángcháng} egyszerűen <b>gyakoriság</b>, és a jövőről, kérésben is állhat: {以后常常来玩儿|yǐhòu chángcháng lái wánr} „gyere gyakran!". A {往往|wǎngwǎng} kérésben, jövőről nem használható.',
+      tables: [
+        { caption: 'Mikor melyik?',
+          head: ['', 'Mit fejez ki?', 'Kérés, jövő?'],
+          rows: [
+            ['{往往|wǎng·wǎng}', 'szabályszerűség, tapasztalat', 'nem'],
+            ['{常常|cháng·cháng}', 'gyakoriság', 'igen']
+          ] }
+      ],
+      examples: [
+        { zh: '{网上|wǎng shàng}{的|de}{东西|dōng·xi}{往往|wǎng·wǎng}{比|bǐ}{商店|shāng·diàn}{里|li}{便宜|pián·yi}。', hu: 'A neten a dolgok rendszerint olcsóbbak, mint a boltban.' },
+        { zh: '{周末|zhōu·mò}{的|de}{时候|shí·hou}，{他|tā}{往往|wǎng·wǎng}{睡|shuì}{到|dào}{十|shí}{点|diǎn}。', hu: 'Hétvégén rendszerint tízig alszik.' }
+      ],
+      mistakes: [
+        { bad: '{你|nǐ}{以后|yǐ·hòu}{要|yào}{往往|wǎng·wǎng}{来|lái}{玩儿|wánr}。', good: '{你|nǐ}{以后|yǐ·hòu}{要|yào}{常常|cháng·cháng}{来|lái}{玩儿|wánr}。', why: 'Kérésben, a jövőről {常常|chángcháng} áll, nem {往往|wǎngwǎng}.' }
+      ]
+    },
+    {
+      title: '{偶尔|ǒu\'ěr}', sub: 'néha, alkalmanként',
+      pattern: 'A + {偶尔|ǒu·ěr} + ige',
+      body: 'A {偶尔|ǒu\'ěr} „néha, ritkán, alkalmanként" a {经常|jīngcháng} „gyakran" ellentéte: {我只偶尔在网上买衣服|wǒ zhǐ ǒu\'ěr zài wǎng shàng mǎi yīfu} „csak néha veszek ruhát a neten". Az ige előtt áll; gyakran kíséri a {只|zhǐ} „csak" vagy a {也|yě}: {他不常喝酒，只是偶尔喝一点儿|tā bù cháng hē jiǔ, zhǐshì ǒu\'ěr hē yìdiǎnr} „nem szokott inni, csak néha egy keveset".',
+      examples: [
+        { zh: '{我|wǒ}{只|zhǐ}{偶尔|ǒu·ěr}{在|zài}{网上|wǎng shàng}{买|mǎi}{衣服|yī·fu}。', hu: 'Csak néha veszek ruhát a neten.' },
+        { zh: '{他|tā}{不|bù}{常|cháng}{喝|hē}{酒|jiǔ}，{只是|zhǐ·shì}{偶尔|ǒu·ěr}{喝|hē}{一点儿|yì diǎnr}。', hu: 'Nem szokott inni, csak néha egy keveset.' }
+      ]
+    },
+    {
+      title: '{什么的|shénme de} · {等|děng}', sub: 'meg ilyesmi · stb.',
+      pattern: 'A、B、C + {什么的|shén·me de} · A、B、C + {等|děng}',
+      body: 'Mindkettő felsorolást zár le: „és a többi, meg ilyesmi". A {什么的|shénme de} hétköznapi, beszélt: {衣服、鞋、书什么的|yīfu, xié, shū shénme de} „ruha, cipő, könyv, ilyesmi". Az {等|děng} írott, hivatalos: {这家网店卖水果、蔬菜、牛奶等|zhè jiā wǎngdiàn mài shuǐguǒ, shūcài, niúnǎi děng} „ez a webbolt gyümölcsöt, zöldséget, tejet stb. árul". A felsorolás tagjai közé kínai felsorolásjel (、) kerül.',
+      examples: [
+        { zh: '{我|wǒ}{买|mǎi}{了|le}{衣服|yī·fu}、{鞋|xié}、{书|shū}{什么的|shén·me de}。', hu: 'Vettem ruhát, cipőt, könyvet, ilyesmit.' },
+        { zh: '{这|zhè}{家|jiā}{网店|wǎng diàn}{卖|mài}{水果|shuǐ·guǒ}、{蔬菜|shū·cài}、{牛奶|niú·nǎi}{等|děng}。', hu: 'Ez a webbolt gyümölcsöt, zöldséget, tejet stb. árul.' }
+      ]
+    }
+  ],
+  phrases: [
+    { zh: '{我|wǒ}{想|xiǎng}{退货|tuì huò}。', hu: 'Vissza szeretném küldeni az árut.' },
+    { zh: '{快递|kuài·dì}{到|dào}{了|le}{吗|ma}？', hu: 'Megjött a csomag?' },
+    { zh: '{现在|xiàn·zài}{打|dǎ}{八|bā}{折|zhé}。', hu: 'Most húsz százalék kedvezmény van.' },
+    { zh: '{这|zhè}{个|ge}{质量|zhì·liàng}{怎么样|zěn·me·yàng}？', hu: 'Milyen ennek a minősége?' }
+  ],
+  words: [
+    { title: 'Szavak',
+      items: [
+        { zh: '{由于|yóu·yú}', pinyin: 'yóuyú', hu: 'mivel, … miatt' },
+        { zh: '{因此|yīn·cǐ}', pinyin: 'yīncǐ', hu: 'ezért' },
+        { zh: '{是否|shì·fǒu}', pinyin: 'shìfǒu', hu: '-e, vajon' },
+        { zh: '{往往|wǎng·wǎng}', pinyin: 'wǎngwǎng', hu: 'rendszerint' },
+        { zh: '{偶尔|ǒu·ěr}', pinyin: 'ǒu\'ěr', hu: 'néha, alkalmanként' },
+        { zh: '{什么的|shén·me de}', pinyin: 'shénme de', hu: 'meg ilyesmi, stb.' },
+        { zh: '{快递|kuài·dì}', pinyin: 'kuàidì', hu: 'futárszolgálat; csomag' },
+        { zh: '{退|tuì}', pinyin: 'tuì', hu: 'visszaküld, visszavisz' },
+        { zh: '{购物|gòu wù}', pinyin: 'gòuwù', hu: 'vásárlás; vásárol' },
+        { zh: '{质量|zhì·liàng}', pinyin: 'zhìliàng', hu: 'minőség' },
+        { zh: '{客服|kè·fú}', pinyin: 'kèfú', hu: 'ügyfélszolgálat' },
+        { zh: '{打折|dǎ zhé}', pinyin: 'dǎ zhé', hu: 'árengedményt ad' }
+      ] },
+    { title: 'Ráadás',
+      items: [
+        { zh: '{订单|dìng·dān}', pinyin: 'dìngdān', hu: 'rendelés' },
+        { zh: '{网店|wǎng diàn}', pinyin: 'wǎngdiàn', hu: 'webbolt' },
+        { zh: '{发票|fā·piào}', pinyin: 'fāpiào', hu: 'számla' },
+        { zh: '{尺寸|chǐ·cùn}', pinyin: 'chǐcùn', hu: 'méret' }
+      ] }
+  ],
+  culture: [
+    { title: 'Szinglik napja', text: 'November 11. ({十一月十一日|shíyī yuè shíyī rì}) a négy egyes miatt eredetileg tréfás „szinglinap" volt, ma a világ legnagyobb online vásárlási napja: a {双十一|Shuāng Shíyī} idején a webboltok nagy kedvezményeket adnak, a futárok pedig napokig dolgoznak a csomagok tömegén.' },
+    { title: 'Hét nap indoklás nélkül', text: 'Kínában a legtöbb netes árut hét napon belül indoklás nélkül vissza lehet küldeni ({七天无理由退货|qī tiān wú lǐyóu tuì huò}). A csomagokat gyakran nem a lakásba, hanem csomagautomatába ({快递柜|kuàidì guì}) vagy a lakópark portájára viszik.' }
+  ],
+  reading: {
+    title: '{安娜|Ān·nà}{在|zài}{网上|wǎng shàng}{购物|gòu wù}', titleHu: 'Anna a neten vásárol',
+    text: [
+      { zh: '{安娜|Ān·nà}{来|lái}{中国|Zhōng·guó}{以后|yǐ·hòu}，{发现|fā·xiàn}{在|zài}{网上|wǎng shàng}{买|mǎi}{东西|dōng·xi}{非常|fēi·cháng}{方便|fāng·biàn}。', hu: 'Anna, amióta Kínába jött, rájött, hogy a neten vásárolni nagyon kényelmes.' },
+      { zh: '{衣服|yī·fu}、{书|shū}、{水果|shuǐ·guǒ}{什么的|shén·me de}，{她|tā}{都|dōu}{在|zài}{网上|wǎng shàng}{买|mǎi}，{只|zhǐ}{偶尔|ǒu·ěr}{去|qù}{商店|shāng·diàn}。', hu: 'Ruhát, könyvet, gyümölcsöt, mindent a neten vesz, boltba csak néha megy.' },
+      { zh: '{网上|wǎng shàng}{的|de}{东西|dōng·xi}{往往|wǎng·wǎng}{比较|bǐ·jiào}{便宜|pián·yi}，{但是|dàn·shì}{质量|zhì·liàng}{不|bù}{一定|yí dìng}{好|hǎo}。', hu: 'A neten a dolgok rendszerint olcsóbbak, de a minőség nem mindig jó.', par: true },
+      { zh: '{上|shàng}{个|ge}{月|yuè}{她|tā}{买|mǎi}{的|de}{鞋|xié}{小|xiǎo}{了|le}。{由于|yóu·yú}{订单|dìng·dān}{太|tài}{多|duō}，{退货|tuì huò}{等|děng}{了|le}{三|sān}{天|tiān}。', hu: 'Múlt hónapban a cipő, amit vett, kicsi lett. Mivel túl sok volt a rendelés, a visszaküldésre három napot várt.' },
+      { zh: '{现在|xiàn·zài}{她|tā}{买|mǎi}{东西|dōng·xi}{以前|yǐ·qián}，{总是|zǒng·shì}{先|xiān}{看|kàn}{别人|bié·rén}{的|de}{评价|píng·jià}，{再|zài}{决定|jué·dìng}{是否|shì·fǒu}{买|mǎi}。', hu: 'Most vásárlás előtt mindig elolvassa mások értékelését, és csak aztán dönti el, megveszi-e.', par: true }
+    ],
+    words: [ { zh: '{评价|píng·jià}', hu: 'értékelés, vélemény' } ],
+    questions: [
+      { q: 'Mit vesz Anna a neten?', a: 'ruhát, könyvet, gyümölcsöt', wrong: ['csak könyvet és újságot', 'bútort és elektronikát', 'csak élelmiszert'], why: '{衣服、书、水果什么的|yīfu, shū, shuǐguǒ shénme de}.' },
+      { q: 'Milyenek általában a netes árak?', a: 'olcsóbbak', wrong: ['drágábbak', 'ugyanannyiak', 'kiszámíthatatlanok'], why: '{往往比较便宜|wǎngwǎng bǐjiào piányi}.' },
+      { q: 'Miért kellett három napot várni a visszaküldésre?', a: 'túl sok volt a rendelés', wrong: ['Anna nem volt otthon', 'ünnepnap volt', 'elveszett a csomag'], why: '{由于订单太多|yóuyú dìngdān tài duō}.' },
+      { q: 'Mit csinál most Anna vásárlás előtt?', a: 'elolvassa mások értékelését', wrong: ['felhívja Wang Lit', 'elmegy a boltba megnézni', 'megkérdezi a futárt'], why: '{先看别人的评价|xiān kàn biérén de píngjià}.' }
+    ]
+  },
+  quiz: [
+    { q: '„Mivel túl sok a rendelés, ezért három napot kell várni."', a: '{由于|yóu·yú}{订单|dìng·dān}{太|tài}{多|duō}，{因此|yīn·cǐ}{要|yào}{等|děng}{三|sān}{天|tiān}。', wrong: ['{因此|yīn·cǐ}{订单|dìng·dān}{太|tài}{多|duō}，{由于|yóu·yú}{要|yào}{等|děng}{三|sān}{天|tiān}。', '{订单|dìng·dān}{由于|yóu·yú}{太|tài}{多|duō}{因此|yīn·cǐ}，{三|sān}{天|tiān}{要|yào}{等|děng}。', '{由于|yóu·yú}{要|yào}{等|děng}{三|sān}{天|tiān}，{因此|yīn·cǐ}{订单|dìng·dān}{太|tài}{多|duō}。'], why: '{由于|yóuyú} + ok, {因此|yīncǐ} + következmény.', point: 1 },
+    { q: 'Melyik a {因为|yīnwèi} … {所以|suǒyǐ} … írott, hivatalos párja?', a: '{由于|yóuyú} … {因此|yīncǐ} …', wrong: ['{既然|jìrán} … {就|jiù} …', '{虽然|suīrán} … {但是|dànshì} …', '{不但|búdàn} … {而且|érqiě} …'], why: 'Ok és következmény, írott stílus.', point: 1 },
+    { q: 'Mit jelent: {由于天气不好，飞机晚到了|yóuyú tiānqì bù hǎo, fēijī wǎn dào le}。', a: 'A rossz idő miatt késett a gép.', wrong: ['A gép késése miatt rossz lett az idő.', 'Rossz idő volt, de a gép időben jött.', 'Ha rossz az idő, a gép késik.'], why: '{由于|yóuyú} „… miatt".', point: 1 },
+    { q: '„Nem tudom, vissza lehet-e küldeni."', a: '{我|wǒ}{不|bù}{知道|zhī·dào}{是否|shì·fǒu}{可以|kě·yǐ}{退|tuì}。', wrong: ['{我|wǒ}{不|bù}{知道|zhī·dào}{可以|kě·yǐ}{是否|shì·fǒu}{退|tuì}{吗|ma}。', '{是否|shì·fǒu}{我|wǒ}{不|bù}{知道|zhī·dào}{退|tuì}{可以|kě·yǐ}。', '{我|wǒ}{是否|shì·fǒu}{不|bù}{知道|zhī·dào}{可以|kě·yǐ}{退|tuì}。'], why: '{是否|shìfǒu} + segédige + ige.', point: 2 },
+    { q: 'Melyik mondat helyes?', a: '{您|nín}{是否|shì·fǒu}{需要|xū·yào}{发票|fā·piào}？', wrong: ['{您|nín}{是否|shì·fǒu}{需要|xū·yào}{发票|fā·piào}{吗|ma}？', '{您|nín}{需要|xū·yào}{是否|shì·fǒu}{发票|fā·piào}{吗|ma}？', '{是否|shì·fǒu}{您|nín}{发票|fā·piào}{需要|xū·yào}{吗|ma}？'], why: 'A {是否|shìfǒu} mellé nem kell {吗|ma}.', point: 2 },
+    { q: '„A neten a dolgok rendszerint olcsóbbak."', a: '{网上|wǎng shàng}{的|de}{东西|dōng·xi}{往往|wǎng·wǎng}{比较|bǐ·jiào}{便宜|pián·yi}。', wrong: ['{网上|wǎng shàng}{往往|wǎng·wǎng}{的|de}{东西|dōng·xi}{便宜|pián·yi}{比较|bǐ·jiào}。', '{往往|wǎng·wǎng}{的|de}{东西|dōng·xi}{网上|wǎng shàng}{比较|bǐ·jiào}{便宜|pián·yi}。', '{网上|wǎng shàng}{的|de}{东西|dōng·xi}{比较|bǐ·jiào}{便宜|pián·yi}{往往|wǎng·wǎng}。'], why: 'A {往往|wǎngwǎng} az ige vagy a melléknév elé kerül.', point: 3 },
+    { q: 'Melyik illik? {你|nǐ}{以后|yǐ·hòu}{要|yào}___{来|lái}{玩儿|wánr}。', a: '{常常|cháng·cháng}', wrong: ['{往往|wǎng·wǎng}', '{偶尔|ǒu·ěr}', '{是否|shì·fǒu}'], why: 'Kérésben, a jövőről {常常|chángcháng} áll.', point: 3 },
+    { q: 'Mit fejez ki a {往往|wǎngwǎng}?', a: 'szabályszerűséget', wrong: ['kérést', 'jövőbeli tervet', 'egyszeri eseményt'], why: 'Tapasztalaton alapuló „rendszerint".', point: 3 },
+    { q: '„Csak néha veszek ruhát a neten."', a: '{我|wǒ}{只|zhǐ}{偶尔|ǒu·ěr}{在|zài}{网上|wǎng shàng}{买|mǎi}{衣服|yī·fu}。', wrong: ['{我|wǒ}{在|zài}{网上|wǎng shàng}{买|mǎi}{衣服|yī·fu}{只|zhǐ}{偶尔|ǒu·ěr}。', '{偶尔|ǒu·ěr}{只|zhǐ}{我|wǒ}{衣服|yī·fu}{在|zài}{网上|wǎng shàng}{买|mǎi}。', '{我|wǒ}{只|zhǐ}{在|zài}{网上|wǎng shàng}{偶尔|ǒu·ěr}{衣服|yī·fu}{买|mǎi}。'], why: 'A + {只偶尔|zhǐ ǒu\'ěr} + ige.', point: 4 },
+    { q: 'Mi a {偶尔|ǒu\'ěr} ellentéte?', a: '{经常|jīngcháng}', wrong: ['{往往|wǎngwǎng}', '{也许|yěxǔ}', '{终于|zhōngyú}'], why: '{偶尔|ǒu\'ěr} „néha" ↔ {经常|jīngcháng} „gyakran".', point: 4 },
+    { q: '„Vettem ruhát, cipőt, könyvet, ilyesmit." (hétköznapi)', a: '{我|wǒ}{买|mǎi}{了|le}{衣服|yī·fu}、{鞋|xié}、{书|shū}{什么的|shén·me de}。', wrong: ['{我|wǒ}{买|mǎi}{了|le}{什么的|shén·me de}{衣服|yī·fu}、{鞋|xié}、{书|shū}。', '{我|wǒ}{买|mǎi}{了|le}{什么|shén·me}{衣服|yī·fu}、{鞋|xié}、{书|shū}{的|de}？', '{什么的|shén·me de}{我|wǒ}{买|mǎi}{了|le}{衣服|yī·fu}、{鞋|xié}、{书|shū}。'], why: 'A felsorolás végén {什么的|shénme de}.', point: 5 },
+    { q: 'Melyik illik hivatalos szövegbe a felsorolás végére?', a: '{等|děng}', wrong: ['{什么的|shénme de}', '{吧|ba}', '{呢|ne}'], why: 'Az {等|děng} írott, a {什么的|shénme de} beszélt.', point: 5 },
+    { q: 'Mit jelent a {快递|kuàidì}?', a: 'gyorsposta, csomag', wrong: ['webbolt', 'számla', 'árengedmény'], why: '{三个快递|sān ge kuàidì} „három csomag".' },
+    { q: 'Mit jelent: {我想退货|wǒ xiǎng tuì huò}。', a: 'Vissza szeretném küldeni az árut.', wrong: ['Szeretnék még egyet rendelni.', 'Szeretném kifizetni az árut.', 'Szeretném kicsomagolni.'], why: '{退货|tuì huò} „árut visszaküld".' },
+    { q: 'Mit jelent a {质量|zhìliàng}?', a: 'minőség', wrong: ['mennyiség', 'méret', 'szín'], why: '{质量不一定好|zhìliàng bù yídìng hǎo}.' },
+    { q: 'Mit jelent a {客服|kèfú}?', a: 'ügyfélszolgálat', wrong: ['vendég', 'futár', 'pénztár'], why: 'A {客户服务|kèhù fúwù} rövidítése.' }
+  ]
+},
+
+/* ════════════════════════════════════════════════════
+   HSK 4 · 8. LECKE — 首先…其次, 一方面…另一方面, 按时 · 准时, 从…起, 提前 · 推迟
+   ════════════════════════════════════════════════════ */
+{
+  id: 'l58', no: 58, badge: '8', kicker: 'HSK 4 · 8. lecke', label: 'HSK 4 · 8. lecke',
+  title: 'Időbeosztás — először, másodszor, végül',
+  lead: 'Munkát tervezel: sorba veszed a lépéseket (首先…其次…最后), két szempontot mérlegelsz (一方面…另一方面), határidőről és pontosságról beszélsz (按时 · 准时), megmondod, mikortól érvényes valami (从…起), és időpontot hozol előre vagy halasztasz el (提前 · 推迟).',
+  cando: [
+    'Sorrendbe állítod a teendőket: 首先…，其次…，最后….',
+    'Két szempontot mérlegelsz: 一方面…，另一方面….',
+    'Megkülönbözteted a 按时 („határidőre, előírás szerint") és a 准时 („pontosan") jelentését.',
+    'Kezdőidőpontot adsz meg (从…起), előrehozol és elhalasztasz (提前 · 推迟).'
+  ],
+  intro: [
+    'A cég jövő hónapban kiállításon vesz részt, a szervezés Annára vár. Chen igazgató azt kérdezi, hogyan halad — és rossz hírt hoz: az ügyfél három nappal előbbre szeretné hozni a kezdést.',
+    'Ebben a leckében az időbeosztás nyelvét tanulod: a lépések sorrendjét ({首先|shǒuxiān}, {其次|qícì}), a szempontokat ({一方面|yì fāngmiàn}), a pontosságot ({准时|zhǔnshí}) és az időpontok mozgatását ({提前|tíqián}, {推迟|tuīchí}).'
+  ],
+  dialogue: {
+    title: 'Három nappal korábban',
+    scene: 'Csütörtök délelőtt Chen igazgató irodájában. Chen igazgató és Anna.',
+    lines: [
+      { who: 'Chen', zh: '{安娜|Ān·nà}，{下|xià}{个|ge}{月|yuè}{的|de}{展览|zhǎn·lǎn}{准备|zhǔn·bèi}{得|de}{怎么样|zěn·me·yàng}{了|le}？', hu: 'Anna, hogy áll a jövő havi kiállítás előkészítése?' },
+      { who: 'Anna', zh: '{我|wǒ}{做|zuò}{了|le}{一|yì}{张|zhāng}{时间表|shí·jiān·biǎo}。{首先|shǒu·xiān}{联系|lián·xì}{客户|kè·hù}，{其次|qí·cì}{准备|zhǔn·bèi}{材料|cái·liào}，{最后|zuì·hòu}{布置|bù·zhì}{会场|huì·chǎng}。', hu: 'Készítettem egy időbeosztást. Először felveszem a kapcsolatot az ügyfelekkel, másodszor előkészítem az anyagokat, végül berendezzük a termet.' },
+      { who: 'Chen', zh: '{很|hěn}{好|hǎo}。{不过|bú·guò}{客户|kè·hù}{希望|xī·wàng}{展览|zhǎn·lǎn}{提前|tí·qián}{三|sān}{天|tiān}{开始|kāi·shǐ}，{你|nǐ}{能|néng}{按时|àn shí}{完成|wán·chéng}{吗|ma}？', hu: 'Nagyon jó. De az ügyfél szeretné, ha a kiállítás három nappal korábban kezdődne. Határidőre el tudsz készülni?' },
+      { who: 'Anna', zh: '{一方面|yì fāng·miàn}{时间|shí·jiān}{比较|bǐ·jiào}{紧|jǐn}，{另一方面|lìng yì fāng·miàn}{我们|wǒ·men}{人|rén}{也|yě}{不|bú}{够|gòu}……', hu: 'Egyrészt elég szoros az idő, másrészt kevesen is vagyunk…' },
+      { who: 'Chen', zh: '{从|cóng}{明天|míng·tiān}{起|qǐ}，{周杰|Zhōu Jié}{也|yě}{来|lái}{帮|bāng}{你|nǐ}。', hu: 'Holnaptól Zhou Jie is segít neked.' },
+      { who: 'Anna', zh: '{太|tài}{好|hǎo}{了|le}！{那|nà}{展览|zhǎn·lǎn}{一定|yí dìng}{能|néng}{准时|zhǔn shí}{开始|kāi·shǐ}。', hu: 'Nagyszerű! Akkor a kiállítás biztosan pontosan kezdődhet.' },
+      { who: 'Chen', zh: '{对|duì}{了|le}，{今天|jīn·tiān}{的|de}{会|huì}{推迟|tuī·chí}{到|dào}{下午|xià·wǔ}{三|sān}{点|diǎn}{了|le}，{别|bié}{忘|wàng}{了|le}。', hu: 'Ja, és a mai értekezletet délután háromra halasztottuk, el ne felejtsd.' }
+    ],
+    notes: [
+      'A {时间表|shíjiānbiǎo} „időbeosztás, menetrend", a {布置|bùzhì} „berendez, feldíszít", a {会场|huìchǎng} „rendezvény helyszíne, terem".',
+      'A {紧|jǐn} „szoros, feszes": {时间很紧|shíjiān hěn jǐn} „szoros az idő", {这双鞋有点儿紧|zhè shuāng xié yǒudiǎnr jǐn} „ez a cipő kicsit szorít".',
+      'Az {对了|duì le} beszélgetésben „ja, és még valami": új témát vezet be.'
+    ]
+  },
+  points: [
+    {
+      title: '{首先|shǒuxiān} … {其次|qícì} …', sub: 'először …, másodszor …',
+      pattern: '{首先|shǒu·xiān} …，{其次|qí·cì} …，{最后|zuì·hòu} …',
+      body: 'A {首先|shǒuxiān} „először, mindenekelőtt" és a {其次|qícì} „másodszor, továbbá" lépéseket vagy érveket sorol. Utánuk jöhet a {最后|zuìhòu} „végül": {首先联系客户，其次准备材料，最后布置会场|shǒuxiān liánxì kèhù, qícì zhǔnbèi cáiliào, zuìhòu bùzhì huìchǎng}. A {首先|shǒuxiān} egyedül is állhat: {学汉语，首先要学好发音|xué Hànyǔ, shǒuxiān yào xué hǎo fāyīn} „a kínaitanulásban mindenekelőtt a kiejtést kell jól megtanulni".',
+      examples: [
+        { zh: '{首先|shǒu·xiān}{联系|lián·xì}{客户|kè·hù}，{其次|qí·cì}{准备|zhǔn·bèi}{材料|cái·liào}，{最后|zuì·hòu}{布置|bù·zhì}{会场|huì·chǎng}。', hu: 'Először felvesszük a kapcsolatot az ügyfelekkel, másodszor előkészítjük az anyagokat, végül berendezzük a termet.' },
+        { zh: '{学|xué}{汉语|Hàn·yǔ}，{首先|shǒu·xiān}{要|yào}{学|xué}{好|hǎo}{发音|fā yīn}。', hu: 'A kínaitanulásban mindenekelőtt a kiejtést kell jól megtanulni.' }
+      ]
+    },
+    {
+      title: '{一方面|yì fāngmiàn} … {另一方面|lìng yì fāngmiàn} …', sub: 'egyrészt …, másrészt …',
+      pattern: '{一方面|yì fāng·miàn} + A，{另一方面|lìng yì fāng·miàn} + B',
+      body: 'Két szempontot, két okot vagy egy dolog két oldalát állítja egymás mellé: {一方面时间比较紧，另一方面我们人也不够|yì fāngmiàn shíjiān bǐjiào jǐn, lìng yì fāngmiàn wǒmen rén yě bú gòu} „egyrészt szoros az idő, másrészt kevesen is vagyunk". A második részben gyakran ott a {也|yě} vagy a {又|yòu}.',
+      examples: [
+        { zh: '{一方面|yì fāng·miàn}{时间|shí·jiān}{比较|bǐ·jiào}{紧|jǐn}，{另一方面|lìng yì fāng·miàn}{我们|wǒ·men}{人|rén}{也|yě}{不|bú}{够|gòu}。', hu: 'Egyrészt elég szoros az idő, másrészt kevesen is vagyunk.' },
+        { zh: '{我|wǒ}{来|lái}{中国|Zhōng·guó}，{一方面|yì fāng·miàn}{是|shì}{为了|wèi·le}{工作|gōng·zuò}，{另一方面|lìng yì fāng·miàn}{是|shì}{想|xiǎng}{学|xué}{汉语|Hàn·yǔ}。', hu: 'Egyrészt a munka miatt jöttem Kínába, másrészt kínaiul szeretnék tanulni.' }
+      ]
+    },
+    {
+      title: '{按时|ànshí} · {准时|zhǔnshí}', sub: 'határidőre, előírás szerint · pontosan',
+      pattern: '{按时|àn shí} + ige · {准时|zhǔn shí} + ige · A + {很|hěn} + {准时|zhǔn shí}',
+      body: 'A {按时|ànshí} azt jelenti: a <b>megszabott idő szerint</b> — határidőre, rendszeresen: {按时完成|ànshí wánchéng} „határidőre elkészül", {按时吃药|ànshí chī yào} „rendszeresen szedi a gyógyszert". A {准时|zhǔnshí} „pontosan, se nem előbb, se nem később": {准时开始|zhǔnshí kāishǐ} „pontosan kezdődik". A {准时|zhǔnshí} melléknév is lehet: {他很准时|tā hěn zhǔnshí} „nagyon pontos ember"; a {按时|ànshí} nem.',
+      tables: [
+        { caption: 'Mikor melyik?',
+          head: ['', 'Jelentés', 'Példa'],
+          rows: [
+            ['{按时|àn shí}', 'határidőre, rendszeresen', '{按时|àn shí}{完成|wán·chéng} · {按时|àn shí}{吃|chī}{药|yào}'],
+            ['{准时|zhǔn shí}', 'pontosan (időpontra)', '{准时|zhǔn shí}{开始|kāi·shǐ} · {他|tā}{很|hěn}{准时|zhǔn shí}']
+          ] }
+      ],
+      examples: [
+        { zh: '{你|nǐ}{能|néng}{按时|àn shí}{完成|wán·chéng}{吗|ma}？', hu: 'Határidőre el tudsz készülni?' },
+        { zh: '{展览|zhǎn·lǎn}{早上|zǎo·shang}{九|jiǔ}{点|diǎn}{准时|zhǔn shí}{开始|kāi·shǐ}。', hu: 'A kiállítás reggel pontban kilenckor kezdődik.' }
+      ],
+      mistakes: [
+        { bad: '{他|tā}{这个|zhè·ge}{人|rén}{很|hěn}{按时|àn shí}。', good: '{他|tā}{这个|zhè·ge}{人|rén}{很|hěn}{准时|zhǔn shí}。', why: 'Melléknévként („pontos ember") csak a {准时|zhǔnshí} áll.' }
+      ]
+    },
+    {
+      title: '{从|cóng} … {起|qǐ}', sub: '…-tól/-től kezdve',
+      pattern: '{从|cóng} + időpont + {起|qǐ}，…',
+      body: 'A {从|cóng} + időpont + {起|qǐ} azt mondja meg, <b>mikortól</b> érvényes valami: {从明天起，周杰也来帮你|cóng míngtiān qǐ, Zhōu Jié yě lái bāng nǐ} „holnaptól Zhou Jie is segít neked". Jelentése azonos a {从…开始|cóng … kāishǐ} szerkezetével, de rövidebb, kissé választékosabb. Hivatalos közleményekben nagyon gyakori.',
+      examples: [
+        { zh: '{从|cóng}{明天|míng·tiān}{起|qǐ}，{周杰|Zhōu Jié}{也|yě}{来|lái}{帮|bāng}{你|nǐ}。', hu: 'Holnaptól Zhou Jie is segít neked.' },
+        { zh: '{从|cóng}{下|xià}{个|ge}{月|yuè}{起|qǐ}，{公司|gōng·sī}{九|jiǔ}{点|diǎn}{上班|shàng bān}。', hu: 'Jövő hónaptól a cégnél kilenckor kezdődik a munka.' }
+      ]
+    },
+    {
+      title: '{提前|tíqián} · {推迟|tuīchí}', sub: 'előrehoz · elhalaszt',
+      pattern: '{提前|tí·qián} + (időtartam) + ige · {推迟|tuī·chí} + {到|dào} + időpont',
+      body: 'A {提前|tíqián} „előrehoz, korábban tesz": {提前三天开始|tíqián sān tiān kāishǐ} „három nappal korábban kezdődik", {请提前十分钟到|qǐng tíqián shí fēnzhōng dào} „kérjük, tíz perccel korábban érkezzen". A {推迟|tuīchí} „elhalaszt, későbbre tesz": {会推迟到下午三点了|huì tuīchí dào xiàwǔ sān diǎn le} „az értekezletet délután háromra halasztották". Az új időpontot a {到|dào}, a különbséget az időtartam adja meg.',
+      examples: [
+        { zh: '{客户|kè·hù}{希望|xī·wàng}{展览|zhǎn·lǎn}{提前|tí·qián}{三|sān}{天|tiān}{开始|kāi·shǐ}。', hu: 'Az ügyfél szeretné, ha a kiállítás három nappal korábban kezdődne.' },
+        { zh: '{今天|jīn·tiān}{的|de}{会|huì}{推迟|tuī·chí}{到|dào}{下午|xià·wǔ}{三|sān}{点|diǎn}{了|le}。', hu: 'A mai értekezletet délután háromra halasztották.' }
+      ]
+    }
+  ],
+  phrases: [
+    { zh: '{时间|shí·jiān}{太|tài}{紧|jǐn}{了|le}。', hu: 'Túl szoros az idő.' },
+    { zh: '{我们|wǒ·men}{分|fēn}{一下|yí xià}{工|gōng}{吧|ba}。', hu: 'Osszuk el a munkát.' },
+    { zh: '{请|qǐng}{提前|tí·qián}{十|shí}{分钟|fēn·zhōng}{到|dào}。', hu: 'Kérjük, tíz perccel korábban érkezz.' },
+    { zh: '{对|duì}{了|le}，{还|hái}{有|yǒu}{一|yí}{件|jiàn}{事|shì}。', hu: 'Ja, és még valami.' }
+  ],
+  words: [
+    { title: 'Szavak',
+      items: [
+        { zh: '{首先|shǒu·xiān}', pinyin: 'shǒuxiān', hu: 'először, mindenekelőtt' },
+        { zh: '{其次|qí·cì}', pinyin: 'qícì', hu: 'másodszor, továbbá' },
+        { zh: '{一方面|yì fāng·miàn}', pinyin: 'yì fāngmiàn', hu: 'egyrészt' },
+        { zh: '{准时|zhǔn shí}', pinyin: 'zhǔnshí', hu: 'pontos; pontosan' },
+        { zh: '{提前|tí·qián}', pinyin: 'tíqián', hu: 'előrehoz, korábban' },
+        { zh: '{推迟|tuī·chí}', pinyin: 'tuīchí', hu: 'elhalaszt' },
+        { zh: '{起|qǐ}', pinyin: 'qǐ', hu: '({从|cóng}…{起|qǐ}) …-tól kezdve' },
+        { zh: '{展览|zhǎn·lǎn}', pinyin: 'zhǎnlǎn', hu: 'kiállítás' },
+        { zh: '{紧|jǐn}', pinyin: 'jǐn', hu: 'szoros, feszes' },
+        { zh: '{完成|wán·chéng}', pinyin: 'wánchéng', hu: 'befejez, elkészít' },
+        { zh: '{效率|xiào·lǜ}', pinyin: 'xiàolǜ', hu: 'hatékonyság' },
+        { zh: '{时间表|shí·jiān·biǎo}', pinyin: 'shíjiānbiǎo', hu: 'időbeosztás, menetrend' }
+      ] },
+    { title: 'Ráadás',
+      items: [
+        { zh: '{布置|bù·zhì}', pinyin: 'bùzhì', hu: 'berendez, feldíszít' },
+        { zh: '{会场|huì·chǎng}', pinyin: 'huìchǎng', hu: 'rendezvény helyszíne' },
+        { zh: '{日程|rì·chéng}', pinyin: 'rìchéng', hu: 'napirend, program' },
+        { zh: '{守时|shǒu shí}', pinyin: 'shǒushí', hu: 'pontos (tartja az időt)' }
+      ] }
+  ],
+  culture: [
+    { title: 'Pontosság és rugalmasság', text: 'Kínai üzleti találkozókra illik pontosan, sőt néhány perccel korábban érkezni ({守时|shǒushí}). Közben a tervek gyakran az utolsó pillanatban változnak ({临时|línshí} „ideiglenes, rögtönzött"): az időpontot előrehozzák vagy elhalasztják, ezért a rugalmasság legalább olyan fontos, mint a pontosság.' },
+    { title: 'Kilenc-kilenc-hat', text: 'A 996 (kiejtve: jiǔ jiǔ liù) kifejezés a technológiai cégek egykori munkarendjét jelöli: reggel kilenctől este kilencig, heti hat napon át. Sokat vitatták, a hatóságok 2021-ben törvénysértőnek nevezték; a fiatalok körében ma a munka és a magánélet egyensúlya is fontos téma.' }
+  ],
+  reading: {
+    title: '{安娜|Ān·nà}{的|de}{时间表|shí·jiān·biǎo}', titleHu: 'Anna időbeosztása',
+    text: [
+      { zh: '{因为|yīn·wèi}{展览|zhǎn·lǎn}{提前|tí·qián}{了|le}{三|sān}{天|tiān}，{安娜|Ān·nà}{这|zhè}{几|jǐ}{天|tiān}{特别|tè·bié}{忙|máng}。', hu: 'Mivel a kiállítást három nappal előrehozták, Anna ezekben a napokban különösen elfoglalt.' },
+      { zh: '{她|tā}{做|zuò}{了|le}{一|yì}{张|zhāng}{时间表|shí·jiān·biǎo}：{首先|shǒu·xiān}{联系|lián·xì}{客户|kè·hù}，{其次|qí·cì}{准备|zhǔn·bèi}{材料|cái·liào}。', hu: 'Készített egy időbeosztást: először felveszi a kapcsolatot az ügyfelekkel, aztán előkészíti az anyagokat.' },
+      { zh: '{从|cóng}{星期一|xīng·qī·yī}{起|qǐ}，{周杰|Zhōu Jié}{也|yě}{来|lái}{帮|bāng}{她|tā}。{一方面|yì fāng·miàn}{他|tā}{很|hěn}{有|yǒu}{经验|jīng·yàn}，{另一方面|lìng yì fāng·miàn}{他|tā}{认识|rèn·shi}{很|hěn}{多|duō}{客户|kè·hù}。', hu: 'Hétfőtől Zhou Jie is segít neki. Egyrészt nagy a tapasztalata, másrészt sok ügyfelet ismer.', par: true },
+      { zh: '{他们|tā·men}{每天|měi tiān}{都|dōu}{按时|àn shí}{完成|wán·chéng}{时间表|shí·jiān·biǎo}{上|shang}{的|de}{事|shì}，{效率|xiào·lǜ}{很|hěn}{高|gāo}。', hu: 'Minden nap határidőre elvégzik, ami az időbeosztásban áll; nagyon hatékonyan dolgoznak.' },
+      { zh: '{星期五|xīng·qī·wǔ}{早上|zǎo·shang}{九|jiǔ}{点|diǎn}，{展览|zhǎn·lǎn}{准时|zhǔn shí}{开始|kāi·shǐ}{了|le}，{陈|Chén}{经理|jīng·lǐ}{非常|fēi·cháng}{满意|mǎn·yì}。', hu: 'Pénteken reggel pontban kilenckor megkezdődött a kiállítás, Chen igazgató nagyon elégedett volt.', par: true }
+    ],
+    words: [ { zh: '{经验|jīng·yàn}', hu: 'tapasztalat' } ],
+    questions: [
+      { q: 'Miért volt Anna különösen elfoglalt?', a: 'előrehozták a kiállítást', wrong: ['elhalasztották a kiállítást', 'beteg lett a kollégája', 'új lakásba költözött'], why: '{展览提前了三天|zhǎnlǎn tíqián le sān tiān}.' },
+      { q: 'Mi volt az első teendő az időbeosztásban?', a: 'kapcsolatba lépni az ügyfelekkel', wrong: ['előkészíteni az anyagokat', 'berendezni a termet', 'megírni a meghívókat'], why: '{首先联系客户|shǒuxiān liánxì kèhù}.' },
+      { q: 'Miért jó, hogy Zhou Jie segít?', a: 'tapasztalt, és sok ügyfelet ismer', wrong: ['ő dönt mindenben a cégnél', 'jól beszél magyarul és angolul', 'közel lakik a kiállítóhelyhez'], why: '{一方面他很有经验，另一方面他认识很多客户|yì fāngmiàn tā hěn yǒu jīngyàn, lìng yì fāngmiàn tā rènshi hěn duō kèhù}.' },
+      { q: 'Mikor kezdődött a kiállítás?', a: 'pénteken pontban kilenckor', wrong: ['pénteken tízkor, késéssel', 'hétfőn reggel kilenckor', 'csütörtökön délután háromkor'], why: '{星期五早上九点，展览准时开始了|xīngqīwǔ zǎoshang jiǔ diǎn, zhǎnlǎn zhǔnshí kāishǐ le}.' }
+    ]
+  },
+  quiz: [
+    { q: '„Először felvesszük a kapcsolatot az ügyfelekkel, másodszor előkészítjük az anyagokat."', a: '{首先|shǒu·xiān}{联系|lián·xì}{客户|kè·hù}，{其次|qí·cì}{准备|zhǔn·bèi}{材料|cái·liào}。', wrong: ['{其次|qí·cì}{联系|lián·xì}{客户|kè·hù}，{首先|shǒu·xiān}{准备|zhǔn·bèi}{材料|cái·liào}。', '{联系|lián·xì}{首先|shǒu·xiān}{客户|kè·hù}，{准备|zhǔn·bèi}{其次|qí·cì}{材料|cái·liào}。', '{首先|shǒu·xiān}{客户|kè·hù}{联系|lián·xì}，{材料|cái·liào}{其次|qí·cì}{准备|zhǔn·bèi}。'], why: '{首先|shǒuxiān} …, {其次|qícì} ….', point: 1 },
+    { q: 'Mit jelent a {其次|qícì}?', a: 'másodszor, továbbá', wrong: ['végül', 'mindenekelőtt', 'ezért'], why: '{首先|shǒuxiān} „először" → {其次|qícì} „másodszor".', point: 1 },
+    { q: '„Egyrészt szoros az idő, másrészt kevesen is vagyunk."', a: '{一方面|yì fāng·miàn}{时间|shí·jiān}{很|hěn}{紧|jǐn}，{另一方面|lìng yì fāng·miàn}{人|rén}{也|yě}{不|bú}{够|gòu}。', wrong: ['{一方面|yì fāng·miàn}{时间|shí·jiān}{很|hěn}{紧|jǐn}，{一方面|yì fāng·miàn}{人|rén}{也|yě}{另|lìng}{不|bú}{够|gòu}。', '{另一方面|lìng yì fāng·miàn}{时间|shí·jiān}{很|hěn}{紧|jǐn}{一方面|yì fāng·miàn}，{人|rén}{也|yě}{不|bú}{够|gòu}。', '{时间|shí·jiān}{一方面|yì fāng·miàn}{紧|jǐn}{很|hěn}，{人|rén}{另一方面|lìng yì fāng·miàn}{够|gòu}{不|bú}。'], why: '{一方面|yì fāngmiàn} A, {另一方面|lìng yì fāngmiàn} B.', point: 2 },
+    { q: 'Mit jelent: {我来中国，一方面是为了工作，另一方面是想学汉语|wǒ lái Zhōngguó, yì fāngmiàn shì wèile gōngzuò, lìng yì fāngmiàn shì xiǎng xué Hànyǔ}。', a: 'Egyrészt a munka miatt jöttem, másrészt kínaiul akarok tanulni.', wrong: ['Csak a munka miatt jöttem, nem tanulni.', 'Előbb dolgozom, aztán kínaiul tanulok.', 'A munkám miatt nincs időm kínaiul tanulni.'], why: 'Két ok egymás mellett.', point: 2 },
+    { q: 'Melyik illik? {他|tā}{这个|zhè·ge}{人|rén}{很|hěn}___。', a: '{准时|zhǔn shí}', wrong: ['{按时|àn shí}', '{提前|tí·qián}', '{首先|shǒu·xiān}'], why: 'Melléknévként csak a {准时|zhǔnshí} áll.', point: 3 },
+    { q: 'Melyik illik? {医生|yī·shēng}{说|shuō}{要|yào}___{吃|chī}{药|yào}。', a: '{按时|àn shí}', wrong: ['{准时|zhǔn shí}', '{推迟|tuī·chí}', '{其次|qí·cì}'], why: 'Előírás szerint, rendszeresen: {按时吃药|ànshí chī yào}.', point: 3 },
+    { q: '„Határidőre el tudsz készülni?"', a: '{你|nǐ}{能|néng}{按时|àn shí}{完成|wán·chéng}{吗|ma}？', wrong: ['{你|nǐ}{能|néng}{完成|wán·chéng}{按时|àn shí}{吗|ma}？', '{你|nǐ}{按时|àn shí}{完成|wán·chéng}{能|néng}{不|bu}{吗|ma}？', '{按时|àn shí}{你|nǐ}{完成|wán·chéng}{能|néng}{吗|ma}？'], why: '{按时|ànshí} + ige.', point: 3 },
+    { q: '„Holnaptól Zhou Jie is segít neked."', a: '{从|cóng}{明天|míng·tiān}{起|qǐ}，{周杰|Zhōu Jié}{也|yě}{来|lái}{帮|bāng}{你|nǐ}。', wrong: ['{起|qǐ}{明天|míng·tiān}{从|cóng}，{周杰|Zhōu Jié}{也|yě}{来|lái}{帮|bāng}{你|nǐ}。', '{从|cóng}{起|qǐ}{明天|míng·tiān}，{周杰|Zhōu Jié}{也|yě}{来|lái}{帮|bāng}{你|nǐ}。', '{周杰|Zhōu Jié}{从|cóng}{也|yě}{明天|míng·tiān}{来|lái}{起|qǐ}{帮|bāng}{你|nǐ}。'], why: '{从|cóng} + időpont + {起|qǐ}.', point: 4 },
+    { q: 'Mivel egyezik a {从|cóng}…{起|qǐ} jelentése?', a: '{从|cóng}…{开始|kāishǐ}', wrong: ['{到|dào}…{为止|wéizhǐ}', '{一|yī}…{就|jiù}', '{先|xiān}…{再|zài}'], why: '„…-tól kezdve".', point: 4 },
+    { q: '„Az ügyfél három nappal korábban szeretné kezdeni."', a: '{客户|kè·hù}{希望|xī·wàng}{提前|tí·qián}{三|sān}{天|tiān}{开始|kāi·shǐ}。', wrong: ['{客户|kè·hù}{希望|xī·wàng}{推迟|tuī·chí}{三|sān}{天|tiān}{开始|kāi·shǐ}。', '{客户|kè·hù}{希望|xī·wàng}{开始|kāi·shǐ}{三|sān}{天|tiān}{提前|tí·qián}。', '{客户|kè·hù}{提前|tí·qián}{希望|xī·wàng}{开始|kāi·shǐ}{三|sān}{天|tiān}。'], why: '{提前|tíqián} + időtartam + ige.', point: 5 },
+    { q: 'Mit jelent: {会推迟到下午三点了|huì tuīchí dào xiàwǔ sān diǎn le}。', a: 'Az értekezletet délután háromra halasztották.', wrong: ['Az értekezletet délután háromra hozták előre.', 'Az értekezlet délután háromig tart.', 'Az értekezlet délután háromkor véget ért.'], why: '{推迟|tuīchí} „elhalaszt".', point: 5 },
+    { q: 'Mi a {提前|tíqián} ellentéte?', a: '{推迟|tuīchí}', wrong: ['{准时|zhǔnshí}', '{按时|ànshí}', '{首先|shǒuxiān}'], why: 'Előrehoz ↔ elhalaszt.', point: 5 },
+    { q: 'Mit jelent a {展览|zhǎnlǎn}?', a: 'kiállítás', wrong: ['értekezlet', 'ügyfél', 'szerződés'], why: '{下个月的展览|xià ge yuè de zhǎnlǎn}.' },
+    { q: 'Mit jelent: {时间太紧了|shíjiān tài jǐn le}。', a: 'Túl szoros az idő.', wrong: ['Rengeteg időnk van.', 'Lejárt az idő.', 'Rossz az időpont.'], why: '{紧|jǐn} „szoros".' },
+    { q: 'Mit jelent a {效率|xiàolǜ}?', a: 'hatékonyság', wrong: ['tapasztalat', 'minőség', 'határidő'], why: '{效率很高|xiàolǜ hěn gāo} „nagyon hatékony".' },
+    { q: 'Mit jelent: {对了，还有一件事|duì le, hái yǒu yí jiàn shì}。', a: 'Ja, és még valami.', wrong: ['Igen, ez így helyes.', 'Nem, ez nem igaz.', 'Rendben, akkor ennyi.'], why: 'Az {对了|duì le} új témát vezet be.' }
+  ]
 }
 
 ];

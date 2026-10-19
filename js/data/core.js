@@ -759,7 +759,29 @@ const HANZIFLOW_PATH = [
     module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l56&round=listen' },
   { id: 'l56-read', glyph: '读', title: 'Olvasás: Kirándulás a vízi városba',
     desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
-    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l56&round=read' }
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l56&round=read' },
+
+  // ── HSK 4 · 7. lecke ──
+  { id: 'l57-lesson', glyph: '购', title: 'Magyarázat: 由于…因此, 是否, 往往 · 常常, 偶尔, 什么的 · 等',
+    desc: 'Rendelés a neten: hivatalos ok és következmény, udvarias -e kérdés, rendszerint és gyakran, néha, felsorolás.',
+    module: 'lesson', href: 'pages/lesson.html?id=l57' },
+  { id: 'l57-listen', glyph: '听', title: 'Hallás: három csomag',
+    desc: 'A lecke mondatai hang után: mit jelent, amit hallasz?',
+    module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l57&round=listen' },
+  { id: 'l57-read', glyph: '读', title: 'Olvasás: Anna a neten vásárol',
+    desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l57&round=read' },
+
+  // ── HSK 4 · 8. lecke ──
+  { id: 'l58-lesson', glyph: '准', title: 'Magyarázat: 首先…其次, 一方面…另一方面, 按时 · 准时, 从…起, 提前 · 推迟',
+    desc: 'Időbeosztás: lépések sorrendje, két szempont, határidő és pontosság, mikortól, előrehozás és halasztás.',
+    module: 'lesson', href: 'pages/lesson.html?id=l58' },
+  { id: 'l58-listen', glyph: '听', title: 'Hallás: három nappal korábban',
+    desc: 'A lecke mondatai hang után: mit jelent, amit hallasz?',
+    module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l58&round=listen' },
+  { id: 'l58-read', glyph: '读', title: 'Olvasás: Anna időbeosztása',
+    desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l58&round=read' }
 ];
 
 const HANZIFLOW_PATH_UNITS = [
@@ -902,5 +924,9 @@ const HANZIFLOW_PATH_UNITS = [
   { id: 'u-l55', kicker: 'HSK 4 · 5. lecke', title: 'Megfáztam', sub: '恐怕, 千万 (别), 必须 · 不必, 不得不, 否则',
     steps: ['l55-lesson', 'l55-listen', 'l55-read'] },
   { id: 'u-l56', kicker: 'HSK 4 · 6. lecke', title: 'Kirándulás a vízi városba', sub: '既然…就, 于是, 竟然, 结果, 当…的时候',
-    steps: ['l56-lesson', 'l56-listen', 'l56-read'] }
+    steps: ['l56-lesson', 'l56-listen', 'l56-read'] },
+  { id: 'u-l57', kicker: 'HSK 4 · 7. lecke', title: 'Rendelés a neten', sub: '由于…因此, 是否, 往往 · 常常, 偶尔, 什么的 · 等',
+    steps: ['l57-lesson', 'l57-listen', 'l57-read'] },
+  { id: 'u-l58', kicker: 'HSK 4 · 8. lecke', title: 'Időbeosztás', sub: '首先…其次, 一方面…另一方面, 按时 · 准时, 从…起, 提前 · 推迟',
+    steps: ['l58-lesson', 'l58-listen', 'l58-read'] }
 ];
