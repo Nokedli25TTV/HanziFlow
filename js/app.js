@@ -4993,7 +4993,8 @@ function initMeasurePage() {
   const LEVELS = [
     { id: 'hsk1', name: 'HSK 1',   max: 1 },
     { id: 'hsk2', name: 'HSK 1–2', max: 2 },
-    { id: 'all',  name: 'HSK 1–3', max: 3 }
+    { id: 'all',  name: 'HSK 1–3', max: 3 },
+    { id: 'hsk4', name: 'HSK 1–4', max: 4 }
   ];
   const DEFAULT_PRE = ['一', '两', '三', '这', '那', '几'];
   const PRE = { '一': ['', 'egy'], '两': ['liǎng', 'két'], '三': ['sān', 'három'], '这': ['zhè', 'ez a'], '那': ['nà', 'az a'], '几': ['jǐ', 'hány'] };
@@ -5539,7 +5540,8 @@ function initSentencePage() {
   const LEVELS = [
     { id: 'hsk1', name: 'HSK 1',   max: 1 },
     { id: 'hsk2', name: 'HSK 1–2', max: 2 },
-    { id: 'all',  name: 'HSK 1–3', max: 3 }
+    { id: 'all',  name: 'HSK 1–3', max: 3 },
+    { id: 'hsk4', name: 'HSK 1–4', max: 4 }
   ];
   const RULE = {};
   RULES.forEach(r => { RULE[r.id] = r; });
@@ -5646,7 +5648,7 @@ function initSentencePage() {
     if (!el) return;
     const p = loadProfile();
     const formulaSay = FORMULA.map(f => reading(f[1])).join('');
-    const tabs = [1, 2, 3].map(l => `<button class="py-tab${l === tab ? ' active' : ''}" type="button" data-tab="${l}" aria-pressed="${l === tab}">HSK ${l}</button>`).join('');
+    const tabs = [1, 2, 3, 4].map(l => `<button class="py-tab${l === tab ? ' active' : ''}" type="button" data-tab="${l}" aria-pressed="${l === tab}">HSK ${l}</button>`).join('');
     const cards = RULES.filter(r => r.level === tab).map(r => {
       const st = p.ruleStats[r.key];
       const pct = st && st.attempts ? Math.round(st.correct / st.attempts * 100) : null;

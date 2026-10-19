@@ -80,7 +80,26 @@ const HANZIFLOW_SM_RULES = [
     ex: [['{我|wǒ}{的|de}{自行车|zì·xíng·chē}{被|bèi}{朋友|péng·you}{骑|qí}{走|zǒu}{了|le}。', 'A biciklimet elvitte a barátom.']] },
   { id: 'di', key: '地', level: 3, title: '地: hogyan csinálja?',
     text: 'Ha egy melléknév azt írja le, hogyan történik a cselekvés, {地|de} köti az igéhez, és az ige elé kerül: {高兴地说|gāo·xìng de shuō} (örömmel mondta).',
-    ex: [['{我们|wǒ·men}{慢慢|màn màn}{地|de}{走|zǒu}{回|huí}{家|jiā}。', 'Lassan sétáltunk haza.']] }
+    ex: [['{我们|wǒ·men}{慢慢|màn màn}{地|de}{走|zǒu}{回|huí}{家|jiā}。', 'Lassan sétáltunk haza.']] },
+  /* HSK 4 */
+  { id: 'conjpos', key: 'Kötőszó helye', level: 4, title: 'Kötőszó-párok: az alany előtt vagy után?',
+    text: 'Ha a két tagmondat alanya ugyanaz, az első kötőszó ({不仅|bù jǐn}, {虽然|suī·rán}, {即使|jí·shǐ}, {既然|jì·rán}) általában az alany után áll: {他不仅会说|tā bù jǐn huì shuō}，{而且会写|ér·qiě huì xiě}. Ha az alanyok különböznek, az alany elé kerül: {不仅他去|bù jǐn tā qù}，{我也去|wǒ yě qù}.',
+    ex: [['{他|tā}{不仅|bù jǐn}{会|huì}{说|shuō}{汉语|Hàn·yǔ}，{而且|ér·qiě}{会|huì}{写|xiě}{汉字|Hàn·zì}。', 'Nemcsak beszél kínaiul, hanem írni is tud.'], ['{即使|jí·shǐ}{下|xià}{雨|yǔ}，{我们|wǒ·men}{也|yě}{要|yào}{去|qù}。', 'Még ha esik is, elmegyünk.']] },
+  { id: 'advconj', key: '却 · 就 · 否则', level: 4, title: 'Határozószó az alany után, kötőszó a tagmondat elején',
+    text: 'A {却|què}, {就|jiù}, {也|yě}, {还|hái} határozószó: mindig az alany után, közvetlenül az állítmány előtt áll — a {他却不知道|tā què bù zhī·dào} jó, a {却他不知道|què tā bù zhī·dào} hibás. A {但是|dàn·shì}, {而且|ér·qiě}, {所以|suǒ·yǐ}, {否则|fǒu·zé} kötőszó: a tagmondat elejére kerül.',
+    ex: [['{天气|tiān·qì}{很|hěn}{冷|lěng}，{他|tā}{却|què}{只|zhǐ}{穿|chuān}{了|le}{一|yí}{件|jiàn}{衬衫|chèn·shān}。', 'Hideg van, ő mégis csak egy inget vett fel.'], ['{快|kuài}{走|zǒu}{吧|ba}，{否则|fǒu·zé}{就|jiù}{要|yào}{迟到|chí dào}{了|le}。', 'Siessünk, különben elkésünk.']] },
+  { id: 'advorder', key: 'Határozók sorrendje', level: 4, title: 'Több határozó az ige előtt: idő → határozószó → segédige → kivel, hol',
+    text: 'Ha sok minden áll az ige előtt, a szokásos sorrend: idő ({明天|míng·tiān}) → határozószó ({也|yě}, {都|dōu}, {已经|yǐ·jīng}) → segédige ({要|yào}, {想|xiǎng}, {能|néng}) → társ vagy hely ({跟他|gēn tā}, {在家|zài jiā}) → ige.',
+    ex: [['{我|wǒ}{明天|míng·tiān}{也|yě}{想|xiǎng}{跟|gēn}{他|tā}{一起|yì·qǐ}{去|qù}。', 'Holnap én is el akarok menni vele.']] },
+  { id: 'dircompl', key: 'Irány + tárgy', level: 4, title: 'Irányhatározó és tárgy: a tárgy a 来 / 去 elé kerül',
+    text: 'Ha az összetett irányhatározós igének ({下起来|xià qǐ·lai}, {拿出来|ná chū·lai}, {走进去|zǒu jìn·qu}) tárgya vagy helyhatározója van, az a {来|lái} / {去|qù} elé ékelődik: {下起雨来|xià qǐ yǔ lái} (eleredt az eső), {走进教室去|zǒu jìn jiào·shì qù} (bement a tanterembe). Helyhatározó után a {来|lái} / {去|qù} csak a végén állhat.',
+    ex: [['{突然|tū·rán}{下|xià}{起|qǐ}{雨|yǔ}{来|lái}{了|le}。', 'Hirtelen eleredt az eső.'], ['{他|tā}{从|cóng}{包|bāo}{里|li}{拿|ná}{出|chū}{一|yì}{本|běn}{书|shū}{来|lái}。', 'Elővett egy könyvet a táskájából.']] },
+  { id: 'rhet', key: 'Szónoki kérdés', level: 4, title: 'Szónoki kérdés: 难道 … 吗？ · 不是 … 吗？',
+    text: 'A {难道|nán·dào} az alany elé vagy mögé kerül, a mondat végére {吗|ma}: {难道你忘了吗|nán·dào nǐ wàng le ma}？ A {不是|bú shì} az alany után áll, és a végén szintén {吗|ma}: {你不是说今天来吗|nǐ bú shì shuō jīn·tiān lái ma}？',
+    ex: [['{难道|nán·dào}{你|nǐ}{不|bù}{知道|zhī·dào}{吗|ma}？', 'Csak nem tudod?'], ['{你|nǐ}{不是|bú shì}{去|qù}{过|guo}{北京|Běi·jīng}{吗|ma}？', 'Hát nem jártál már Pekingben?']] },
+  { id: 'cause', key: '使 · 让', level: 4, title: '使 / 让: ami hat, akire hat, és ami történik vele',
+    text: 'A + {使|shǐ} / {让|ràng} + B + ige vagy melléknév: előbb az ok, aztán akire hat, végül a hatás. {这件事让我很感动|zhè jiàn shì ràng wǒ hěn gǎn·dòng} (ez nagyon meghatott). A B nem maradhat el.',
+    ex: [['{老师|lǎo·shī}{的|de}{话|huà}{让|ràng}{大家|dà·jiā}{很|hěn}{感动|gǎn·dòng}。', 'A tanár szavai mindenkit meghatottak.']] }
 ];
 
 const HANZIFLOW_SM_FORMULA = [
@@ -144,7 +163,22 @@ const HANZIFLOW_SM_BUILD = [
   ['Zenét hallgat, és közben a házi feladatát írja.', ['{他|tā}', '{一边|yì·biān}', '{听|tīng}{音乐|yīn·yuè}', '{一边|yì·biān}', '{写|xiě}{作业|zuò·yè}'], '。', 'pair', 3, ['0 1 4 3 2']],
   ['Egyre melegebb az idő.', ['{天气|tiān·qì}', '{越来越|yuè lái yuè}', '{热|rè}', '{了|le}'], '。', 'pair', 3],
   ['Ha holnap esik, nem megyek.', ['{如果|rú·guǒ}', '{明天|míng·tiān}{下雨|xià yǔ}', '{我|wǒ}', '{就|jiù}', '{不|bú}{去|qù}{了|le}'], '。', 'pair', 3],
-  ['Még a nevét sem tudom.', ['{我|wǒ}', '{连|lián}', '{他|tā}{的|de}{名字|míng·zi}', '{都|dōu}', '{不|bù}{知道|zhī·dào}'], '。', 'pair', 3, ['1 2 0 3 4']]
+  ['Még a nevét sem tudom.', ['{我|wǒ}', '{连|lián}', '{他|tā}{的|de}{名字|míng·zi}', '{都|dōu}', '{不|bù}{知道|zhī·dào}'], '。', 'pair', 3, ['1 2 0 3 4']],
+  /* HSK 4 */
+  ['Nemcsak kínaiul beszél, hanem írni is tud.', ['{他|tā}', '{不仅|bù jǐn}', '{会|huì}{说|shuō}{汉语|Hàn·yǔ}', '{而且|ér·qiě}', '{会|huì}{写|xiě}{汉字|Hàn·zì}'], '。', 'conjpos', 4],
+  ['Még ha esik is, elmegyünk.', ['{即使|jí·shǐ}', '{下|xià}{雨|yǔ}', '{我们|wǒ·men}', '{也|yě}', '{要|yào}{去|qù}'], '。', 'conjpos', 4],
+  ['Hideg van, ő mégis csak egy inget vett fel.', ['{天气|tiān·qì}{很|hěn}{冷|lěng}', '{他|tā}', '{却|què}', '{只|zhǐ}{穿|chuān}{了|le}{一|yí}{件|jiàn}{衬衫|chèn·shān}'], '。', 'advconj', 4],
+  ['Siess, különben elkésel.', ['{你|nǐ}{快|kuài}{点儿|diǎnr}{走|zǒu}', '{否则|fǒu·zé}', '{就|jiù}', '{要|yào}{迟到|chí dào}{了|le}'], '。', 'advconj', 4],
+  ['Ha már eljöttél, vacsorázz itt, és csak aztán menj.', ['{既然|jì·rán}', '{来|lái}{了|le}', '{就|jiù}', '{吃|chī}{了|le}{晚饭|wǎn fàn}', '{再|zài}{走|zǒu}{吧|ba}'], '。', 'advconj', 4],
+  ['Holnap én is el akarok menni vele.', ['{我|wǒ}', '{明天|míng·tiān}', '{也|yě}', '{想|xiǎng}', '{跟|gēn}{他|tā}{一起|yì·qǐ}{去|qù}'], '。', 'advorder', 4, ['1 0 2 3 4']],
+  ['Már mindannyian megérkeztek a tárgyalóba.', ['{他们|tā·men}', '{都|dōu}', '{已经|yǐ·jīng}', '{到|dào}{会议室|huì yì shì}{了|le}'], '。', 'advorder', 4, ['0 2 1 3']],
+  ['Holnap nem tudok veled moziba menni.', ['{我|wǒ}', '{明天|míng·tiān}', '{不|bù}{能|néng}', '{跟|gēn}{你|nǐ}', '{去|qù}{看|kàn}{电影|diàn·yǐng}'], '。', 'advorder', 4, ['1 0 2 3 4']],
+  ['Hirtelen eleredt az eső.', ['{突然|tū·rán}', '{下|xià}{起|qǐ}', '{雨|yǔ}', '{来|lái}{了|le}'], '。', 'dircompl', 4],
+  ['Elővett egy könyvet a táskájából.', ['{他|tā}', '{从|cóng}{包|bāo}{里|li}', '{拿|ná}{出|chū}', '{一|yì}{本|běn}{书|shū}', '{来|lái}'], '。', 'dircompl', 4, ['0 1 2 4 3']],
+  ['Csak nem felejtetted el?', ['{你|nǐ}', '{难道|nán·dào}', '{忘|wàng}{了|le}', '{吗|ma}'], '？', 'rhet', 4, ['1 0 2 3']],
+  ['Nem azt mondtad, hogy ma eljössz?', ['{你|nǐ}', '{不是|bú shì}', '{说|shuō}{今天|jīn·tiān}{来|lái}', '{吗|ma}'], '？', 'rhet', 4],
+  ['A tanár szavai mindenkit meghatottak.', ['{老师|lǎo·shī}{的|de}{话|huà}', '{让|ràng}', '{大家|dà·jiā}', '{很|hěn}{感动|gǎn·dòng}'], '。', 'cause', 4],
+  ['A szelektív gyűjtés tisztábbá tette a várost.', ['{垃圾|lā·jī}{分类|fēn lèi}', '{使|shǐ}', '{城市|chéng·shì}', '{变|biàn}{得|de}{更|gèng}{干净|gān·jìng}{了|le}'], '。', 'cause', 4]
 ];
 
 const HANZIFLOW_SM_FILL = [
@@ -184,5 +218,18 @@ const HANZIFLOW_SM_FILL = [
   /* 地 */
   ['{他|tā}{高兴|gāo·xìng}＿{说|shuō}：“{太|tài}{好|hǎo}{了|le}！”', '地', 'Örömmel mondta: „Nagyszerű!"', [], 'di', 3],
   ['{请|qǐng}{你|nǐ}{慢慢|màn màn}＿{说|shuō}。', '地', 'Kérlek, mondd lassan.', [], 'di', 3],
-  ['{孩子们|hái·zi·men}{认真|rèn·zhēn}＿{听|tīng}{老师|lǎo·shī}{讲|jiǎng}{故事|gù·shi}。', '地', 'A gyerekek figyelmesen hallgatják a tanár meséjét.', [], 'di', 3]
+  ['{孩子们|hái·zi·men}{认真|rèn·zhēn}＿{听|tīng}{老师|lǎo·shī}{讲|jiǎng}{故事|gù·shi}。', '地', 'A gyerekek figyelmesen hallgatják a tanár meséjét.', [], 'di', 3],
+  /* HSK 4 */
+  ['{他|tā}{认真|rèn·zhēn}＿{检查|jiǎn chá}{了|le}{一|yí}{遍|biàn}。', '地', 'Alaposan átnézte még egyszer.', [], 'di', 4],
+  ['{孩子们|hái·zi·men}{高高兴兴|gāo gāo xìng xìng}＿{回|huí}{家|jiā}{了|le}。', '地', 'A gyerekek vidáman hazamentek.', ['的'], 'di', 4],
+  ['{他|tā}{累|lèi}＿{一|yí}{句|jù}{话|huà}{也|yě}{不|bù}{想|xiǎng}{说|shuō}。', '得', 'Annyira fáradt, hogy egy szót sem akar szólni.', ['了'], 'deg', 4],
+  ['{这|zhè}{是|shì}{我|wǒ}{在|zài}{上海|Shàng·hǎi}{工作|gōng·zuò}{时|shí}{认识|rèn·shi}＿{朋友|péng·you}。', '的', 'Ő egy barátom, akit a sanghaji munkám idején ismertem meg.', [], 'de', 4],
+  ['{你|nǐ}{去|qù}＿{西安|Xī·ān}{吗|ma}？{那儿|nàr}{的|de}{小吃|xiǎo chī}{怎么样|zěn·me·yàng}？', '过', 'Jártál már Hszianban? Milyenek ott a harapnivalók?', ['了'], 'guo', 4],
+  ['{我|wǒ}{从来|cóng·lái}{没|méi}{见|jiàn}＿{这么|zhè·me}{漂亮|piào·liang}{的|de}{地方|dì·fang}。', '过', 'Ilyen szép helyet még sosem láttam.', [], 'guo', 4],
+  ['{他|tā}{穿|chuān}＿{一|yí}{件|jiàn}{白|bái}{衬衫|chèn·shān}{去|qù}{面试|miàn shì}{了|le}。', '着', 'Fehér ingben ment el az interjúra.', ['了'], 'zhe', 4],
+  ['{窗户|chuāng·hu}{一直|yì zhí}{开|kāi}＿，{难怪|nán·guài}{这么|zhè·me}{冷|lěng}。', '着', 'Végig nyitva volt az ablak, nem csoda, hogy ilyen hideg van.', ['了'], 'zhe', 4],
+  ['{他|tā}{一下子|yí xià·zi}{就|jiù}{把|bǎ}{蛋糕|dàn gāo}{吃|chī}{完|wán}＿。', '了', 'Egy szempillantás alatt megette a tortát.', [], 'le', 4],
+  ['{难道|nán·dào}{你|nǐ}{不|bù}{知道|zhī·dào}＿？', '吗', 'Csak nem tudod?', ['呢'], 'rhet', 4],
+  ['{你|nǐ}{不是|bú shì}{说|shuō}{今天|jīn·tiān}{有|yǒu}{空|kòng}＿？', '吗', 'Nem azt mondtad, hogy ma ráérsz?', ['呢', '了'], 'rhet', 4],
+  ['{既然|jì·rán}{大家|dà·jiā}{都|dōu}{同意|tóng yì}{了|le}，{我们|wǒ·men}{就|jiù}{这么|zhè·me}{办|bàn}＿。', '吧', 'Ha már mindenki egyetért, csináljuk így.', ['了'], 'ba_', 4]
 ];

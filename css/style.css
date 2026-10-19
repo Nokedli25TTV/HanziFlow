@@ -1690,7 +1690,8 @@ html.lesson-steps.ls-round .hf-tabbar { display: none; }
 /* ═══ 8c. MÉRŐSZAVAK (pages/measure.html) ══════════════ */
 #measureMain rt { font-size: max(0.5em, 12px); }
 .zh-pyi { font-weight: 700; color: var(--brand-deep); }   /* sorközi pinyin (HanziFlowZh.prose) — a Mondat-Mester is használja */
-.mw-level-row { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.mw-level-row { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (min-width: 600px) { .mw-level-row { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
 
 /* tábla */
 .mw-group-sub { margin: 0 0 12px; font-size: var(--fs-sm); line-height: 1.55; color: var(--ink-soft); }

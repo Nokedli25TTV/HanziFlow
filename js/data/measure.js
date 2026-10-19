@@ -7,7 +7,7 @@
    HANZIFLOW_MEASURES    mérőszavak:
      mw, py          az írásjegy és a pinyinje (szótárban)
      pyIn            ha szókapcsolatban másképp ejtjük (个 → ge)
-     level           1 = HSK 1, 2 = HSK 2, 3 = HSK 3
+     level           1 = HSK 1, 2 = HSK 2, 3 = HSK 3, 4 = HSK 4
      group           HANZIFLOW_MW_GROUPS id
      short, rule     rövid címke és magyarázat (a rule-ban lehet jelölés)
      nouns           [írásjegy, pinyin, magyar egység, más jó mérőszavak?]
@@ -25,13 +25,13 @@
 
 const HANZIFLOW_MW_GROUPS = [
   { id: 'gen',    title: 'Általános',       sub: 'Ezek a legtöbb főnévvel összeállnak.' },
-  { id: 'people', title: 'Emberek',         sub: 'A 个 mellett van udvariasabb és családi mérőszó is.' },
-  { id: 'shape',  title: 'Forma szerint',   sub: 'A tárgy alakja dönt: lapos, hosszú, fogós vagy egy darab.' },
-  { id: 'living', title: 'Állat, ruha, pár', sub: 'Kisebb állatok, felsőruhák és a párban járó dolgok.' },
-  { id: 'text',   title: 'Könyv és szöveg', sub: 'Könyvek, írások, mondatok és példányok.' },
+  { id: 'people', title: 'Emberek',         sub: 'A 个 mellett van udvariasabb, családi és csoportos mérőszó is.' },
+  { id: 'shape',  title: 'Forma szerint',   sub: 'A tárgy alakja dönt: lapos, hosszú, vékony szelet, fogós vagy egy darab.' },
+  { id: 'living', title: 'Állat, ruha, pár', sub: 'Kisebb állatok, növények, felsőruhák és a párban járó dolgok.' },
+  { id: 'text',   title: 'Könyv és szöveg', sub: 'Könyvek, írások, levelek, dalok, feladatok és példányok.' },
   { id: 'vessel', title: 'Edények',         sub: 'Az edény maga a mértékegység: egy csésze tea, egy tál rizs.' },
-  { id: 'place',  title: 'Gépek és helyek', sub: 'Gépek, járművek, üzletek és intézmények.' },
-  { id: 'action', title: 'Alkalmak',        sub: 'Hányszor? Az igei mérőszó az ige után áll.' }
+  { id: 'place',  title: 'Gépek és helyek', sub: 'Gépek, járművek, üzletek, intézmények, hegyek és épületek.' },
+  { id: 'action', title: 'Alkalmak',        sub: 'Hányszor? Az igei mérőszó az ige után áll. Ide tartozik az étkezés, a tanóra és az esemény is.' }
 ];
 
 const HANZIFLOW_MEASURES = [
@@ -142,7 +142,41 @@ const HANZIFLOW_MEASURES = [
     nouns: [['饭', 'fàn', 'étkezés', ['碗', '盒', '份']]] },
   { mw: '节', py: 'jié', level: 3, group: 'action', short: 'tanóra', pre: ['一', '两', '三', '这', '几'],
     rule: 'Tanórák: {一节课|yì jié kè} (egy tanóra), {今天有四节课|jīn tiān yǒu sì jié kè} (ma négy órám van).',
-    nouns: [['课', 'kè', 'tanóra']] }
+    nouns: [['课', 'kè', 'tanóra']] },
+  /* ── HSK 4 ── */
+  { mw: '座', py: 'zuò', level: 4, group: 'place', short: 'hegy, híd, város',
+    rule: 'Nagy, szilárdan álló dolgok: hegy, híd, város, nagy épület. {一座山|yí zuò shān} (egy hegy), {这座城市|zhè zuò chéng shì} (ez a város).',
+    nouns: [['山', 'shān', 'hegy'], ['桥', 'qiáo', 'híd'], ['城市', 'chéng·shì', 'város', ['个']], ['楼', 'lóu', 'épület', ['个', '所']]] },
+  { mw: '层', py: 'céng', level: 4, group: 'place', short: 'emelet, réteg',
+    rule: 'Emeletek és rétegek: {我住在八层|wǒ zhù zài bā céng} (a nyolcadikon lakom), {这座楼有三十层|zhè zuò lóu yǒu sān shí céng} (az épület harmincemeletes).',
+    nouns: [['楼', 'lóu', 'emelet']] },
+  { mw: '场', py: 'chǎng', level: 4, group: 'action', short: 'esemény, meccs, eső',
+    rule: 'Egészében lezajló események: meccs, előadás, filmvetítés, eső, havazás. {一场比赛|yì chǎng bǐ sài} (egy meccs), {下了一场大雨|xià le yì chǎng dà yǔ} (nagy eső esett).',
+    nouns: [['比赛', 'bǐ·sài', 'meccs', ['次', '个', '节']], ['电影', 'diàn·yǐng', 'filmvetítés', ['部', '个', '段']], ['雨', 'yǔ', 'eső'], ['雪', 'xuě', 'havazás']] },
+  { mw: '棵', py: 'kē', level: 4, group: 'living', short: 'fa, növény',
+    rule: 'Fák és növények: {一棵树|yì kē shù} (egy fa), {两棵白菜|liǎng kē bái cài} (két fej kínai kel).',
+    nouns: [['树', 'shù', 'fa'], ['白菜', 'bái·cài', 'fej kínai kel', ['个']]] },
+  { mw: '封', py: 'fēng', level: 4, group: 'text', short: 'levél',
+    rule: 'Levelek és e-mailek: {一封信|yì fēng xìn} (egy levél), {三封邮件|sān fēng yóu jiàn} (három e-mail).',
+    nouns: [['信', 'xìn', 'levél'], ['邮件', 'yóu·jiàn', 'e-mail', ['个', '份']]] },
+  { mw: '首', py: 'shǒu', level: 4, group: 'text', short: 'dal, vers',
+    rule: 'Dalok és versek: {一首歌|yì shǒu gē} (egy dal), {这首诗|zhè shǒu shī} (ez a vers).',
+    nouns: [['歌', 'gē', 'dal', ['个', '段']], ['诗', 'shī', 'vers', ['篇', '段']]] },
+  { mw: '段', py: 'duàn', level: 4, group: 'text', short: 'szakasz, időszak',
+    rule: 'Egy darab abból, ami folyik vagy tart: idő, út, szöveg, élmény. {一段时间|yí duàn shí jiān} (egy ideig), {这段路|zhè duàn lù} (ez az útszakasz).',
+    nouns: [['时间', 'shí·jiān', 'időszak'], ['路', 'lù', 'útszakasz', ['条']], ['经历', 'jīng·lì', 'élmény', ['次', '个', '场']]] },
+  { mw: '道', py: 'dào', level: 4, group: 'text', short: 'feladat, fogás',
+    rule: 'Feladatok, kérdések és az étkezés fogásai: {一道题|yí dào tí} (egy feladat), {十道菜|shí dào cài} (tíz fogás).',
+    nouns: [['题', 'tí', 'feladat', ['个', '份']], ['菜', 'cài', 'fogás', ['个', '份']]] },
+  { mw: '片', py: 'piàn', level: 4, group: 'shape', short: 'szelet, lapka',
+    rule: 'Vékony, lapos darabok: szelet kenyér, tabletta, falevél. {一片面包|yí piàn miàn bāo} (egy szelet kenyér), {两片药|liǎng piàn yào} (két tabletta).',
+    nouns: [['面包', 'miàn·bāo', 'szelet kenyér', ['块', '个', '条']], ['药', 'yào', 'tabletta', ['种', '个']], ['叶子', 'yè·zi', 'falevél', ['把', '个']]] },
+  { mw: '群', py: 'qún', level: 4, group: 'people', short: 'csoport, csapat',
+    rule: 'Együtt lévő emberek vagy állatok csoportja: {一群孩子|yì qún hái zi} (egy csapat gyerek), {一群鸟|yì qún niǎo} (egy madárraj).',
+    nouns: [['孩子', 'hái·zi', 'csapat gyerek', ['个']], ['人', 'rén', 'csoport ember', ['个', '口', '家']], ['鸟', 'niǎo', 'madárraj', ['只']]] },
+  { mw: '部', py: 'bù', level: 4, group: 'text', short: 'film, nagyobb mű',
+    rule: 'Nagyobb művek: film, regény, sorozat; beszédben a telefonhoz is: {一部电影|yí bù diàn yǐng} (egy film), {一部手机|yí bù shǒu jī} (egy telefon).',
+    nouns: [['电影', 'diàn·yǐng', 'film', ['个', '场', '段']], ['小说', 'xiǎo·shuō', 'regény', ['本', '篇', '段', '个']], ['手机', 'shǒu·jī', 'telefon', ['个', '台', '只']]] }
 ];
 
 const HANZIFLOW_MW_SENTENCES = [
@@ -195,7 +229,22 @@ const HANZIFLOW_MW_SENTENCES = [
   ['{这|zhè}{家|jiā}{商店|shāng·diàn}{有|yǒu}{很多|hěn duō}＿{茶|chá}。', '种', 'Ebben a boltban sokféle tea van.', ['杯', '盒', '瓶']],
   ['{我|wǒ}{钓|diào}{到|dào}{了|le}{一|yì}＿{大|dà}{鱼|yú}。', '条', 'Fogtam egy nagy halat.', null, 3],
   ['{我|wǒ}{吃|chī}{了|le}{一|yí}＿{蛋糕|dàn·gāo}。', '块', 'Ettem egy szelet tortát.', ['个', '份'], 2],
-  ['{出门|chū·mén}{别|bié}{忘|wàng}{了|le}{带|dài}{一|yì}＿{伞|sǎn}。', '把', 'Ha elindulsz, ne felejts el esernyőt vinni!', ['个'], 3]
+  ['{出门|chū·mén}{别|bié}{忘|wàng}{了|le}{带|dài}{一|yì}＿{伞|sǎn}。', '把', 'Ha elindulsz, ne felejts el esernyőt vinni!', ['个'], 3],
+  /* HSK 4 */
+  ['{我们|wǒ·men}{明天|míng·tiān}{去|qù}{爬|pá}{那|nà}＿{山|shān}。', '座', 'Holnap megmásszuk azt a hegyet.', ['个']],
+  ['{上海|Shàng·hǎi}{是|shì}{一|yí}＿{很|hěn}{现代|xiàn·dài}{的|de}{城市|chéng·shì}。', '座', 'Sanghaj nagyon modern város.', ['个']],
+  ['{他|tā}{家|jiā}{住|zhù}{在|zài}{十八|shí·bā}＿。', '层', 'A tizennyolcadik emeleten laknak.'],
+  ['{昨天|zuó·tiān}{下|xià}{了|le}{一|yì}＿{大|dà}{雪|xuě}。', '场', 'Tegnap nagy havazás volt.', ['次']],
+  ['{这|zhè}＿{比赛|bǐ·sài}{太|tài}{精彩|jīng·cǎi}{了|le}！', '场', 'Ez a meccs fantasztikus volt!', ['次', '个', '节']],
+  ['{院子|yuàn·zi}{里|li}{有|yǒu}{两|liǎng}＿{大|dà}{树|shù}。', '棵', 'Az udvaron két nagy fa áll.'],
+  ['{我|wǒ}{给|gěi}{妈妈|mā·ma}{写|xiě}{了|le}{一|yì}＿{信|xìn}。', '封', 'Írtam egy levelet anyának.', ['篇']],
+  ['{这|zhè}＿{歌|gē}{我|wǒ}{听|tīng}{了|le}{很|hěn}{多|duō}{遍|biàn}。', '首', 'Ezt a dalt már sokszor meghallgattam.', ['个', '段']],
+  ['{我|wǒ}{在|zài}{上海|Shàng·hǎi}{住|zhù}{过|guo}{一|yí}＿{时间|shí·jiān}。', '段', 'Egy ideig Sanghajban éltem.'],
+  ['{今天|jīn·tiān}{的|de}{考试|kǎo shì}{有|yǒu}{一|yí}＿{题|tí}{我|wǒ}{不|bú}{会|huì}。', '道', 'A mai vizsgán volt egy feladat, amit nem tudtam megoldani.', ['个']],
+  ['{奶奶|nǎi·nai}{今天|jīn·tiān}{做|zuò}{了|le}{十|shí}＿{菜|cài}。', '道', 'Nagymama ma tíz fogást főzött.', ['个', '种', '份']],
+  ['{医生|yī·shēng}{让|ràng}{我|wǒ}{每|měi}{次|cì}{吃|chī}{两|liǎng}＿{药|yào}。', '片', 'Az orvos azt mondta, egyszerre két tablettát vegyek be.', ['种', '个']],
+  ['{公园|gōng·yuán}{里|li}{有|yǒu}{一|yì}＿{孩子|hái·zi}{在|zài}{踢|tī}{足球|zú qiú}。', '群', 'A parkban egy csapat gyerek focizik.', ['些', '个']],
+  ['{我|wǒ}{看|kàn}{过|guo}{这|zhè}＿{电影|diàn·yǐng}。', '部', 'Ezt a filmet már láttam.', ['个', '场', '段']]
 ];
 
 const HANZIFLOW_MW_RULES = [
@@ -216,5 +265,9 @@ const HANZIFLOW_MW_RULES = [
   ['Ha már tudjuk, miről van szó',
    'A főnév elmaradhat, a mérőszó marad: {你要几个|nǐ yào jǐ ge}？ — {我要两个|wǒ yào liǎng ge}。 (Hányat kérsz? — Kettőt.)'],
   ['Igei mérőszó az ige után',
-   '{我去过两次|wǒ qù guo liǎng cì}。 (Kétszer jártam már ott.) A {遍|biàn} az egész alkalmat számolja az elejétől a végéig: {再说一遍|zài shuō yí biàn} (mondd el még egyszer).']
+   '{我去过两次|wǒ qù guo liǎng cì}。 (Kétszer jártam már ott.) A {遍|biàn} az egész alkalmat számolja az elejétől a végéig: {再说一遍|zài shuō yí biàn} (mondd el még egyszer).'],
+  ['Kettőzve: „mind, egytől egyig"',
+   'A kettőzött mérőszó azt jelenti: kivétel nélkül mind. Utána gyakran {都|dōu} áll: {他们个个都很高|tā men gè gè dōu hěn gāo} (mind magasak), {这些衣服件件都很漂亮|zhè xiē yī fu jiàn jiàn dōu hěn piào liang} (ezek a ruhák kivétel nélkül szépek).'],
+  ['Esemény: 场 vagy 次?',
+   'A {次|cì} az alkalmak számát mondja ({去过两次|qù guo liǎng cì}), a {场|chǎng} egy egészében lezajló eseményt ({一场比赛|yì chǎng bǐ sài}, {一场大雨|yì chǎng dà yǔ}). Meccsnél mindkettő jó: {这次比赛|zhè cì bǐ sài} · {这场比赛|zhè chǎng bǐ sài}.']
 ];
