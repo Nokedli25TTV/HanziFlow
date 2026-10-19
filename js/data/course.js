@@ -12843,6 +12843,335 @@ const HANZIFLOW_COURSE = [
     { q: 'Mit jelent a {团队|tuánduì}?', a: 'csapat', wrong: ['cég', 'osztályvezető', 'értekezlet'], why: '{带好一个团队|dài hǎo yí ge tuánduì}.' },
     { q: 'Mit jelent a {跳槽|tiào cáo}?', a: 'munkahelyet vált', wrong: ['fizetésemelést kér', 'felmond és pihen', 'túlórázik'], why: 'Szó szerint „átugrik egy másik etetővályúhoz".' }
   ]
+},
+/* ════════════════════════════════════════════════════
+   HSK 4 · 19. LECKE — 比如 · 例如 · 拿…来说, 再说, 与, 之间, 真正
+   ════════════════════════════════════════════════════ */
+{
+  id: 'l69', no: 69, badge: '19', kicker: 'HSK 4 · 19. lecke', label: 'HSK 4 · 19. lecke',
+  title: 'Vita egy cikkről — vegyük például engem',
+  lead: 'Értekezleten vitatkozol: példát hozol (比如 · 例如 · 拿…来说), újabb érvet teszel hozzá (再说), írott stílusban kapcsolsz össze (与), viszonyokról beszélsz (之间), és rámutatsz, mi az igazi kérdés (真正).',
+  cando: [
+    'Példával támasztod alá a véleményed: 比如 · 例如 · 拿…来说.',
+    'Újabb érvet teszel hozzá: …，再说….',
+    'Írott stílusban kapcsolsz össze (与), és viszonyról beszélsz (A 和 B 之间).',
+    'Kiemeled a lényeget: 真正的问题是….'
+  ],
+  intro: [
+    'Anna most már csapatot vezet. Az első csapatmegbeszélésén egy újságcikket vitatnak meg arról, jó-e otthonról dolgozni. Zhou Jie lelkes, az új kolléga, Xiao Li kételkedik.',
+    'Ebben a leckében a vita és az érvelés nyelvét tanulod: hogyan hozol példát, hogyan teszel hozzá újabb érvet, és hogyan foglalod össze a lényeget.'
+  ],
+  dialogue: {
+    title: 'Csapatmegbeszélés',
+    scene: 'Hétfő reggel a tárgyalóban. Anna, Zhou Jie és Xiao Li.',
+    lines: [
+      { who: 'Anna', zh: '{今天|jīn·tiān}{我们|wǒ·men}{讨论|tǎo·lùn}{一|yì}{篇|piān}{文章|wén·zhāng}：《{在|zài}{家|jiā}{办公|bàn gōng}{好|hǎo}{不|bu}{好|hǎo}》。{大家|dà·jiā}{怎么|zěn·me}{看|kàn}？', hu: 'Ma egy cikket beszélünk meg: „Jó-e otthonról dolgozni?" Mit gondoltok?' },
+      { who: 'Zhou Jie', zh: '{我|wǒ}{觉得|jué·de}{好处|hǎo·chù}{很|hěn}{多|duō}。{比如|bǐ·rú}，{不|bú}{用|yòng}{挤|jǐ}{地铁|dì·tiě}，{时间|shí·jiān}{也|yě}{更|gèng}{自由|zì·yóu}。{再说|zài shuō}，{家|jiā}{里|li}{也|yě}{比较|bǐ·jiào}{安静|ān·jìng}。', hu: 'Szerintem sok előnye van. Például nem kell a metrón tolongani, és szabadabban osztod be az időt. Ráadásul otthon csendesebb is.' },
+      { who: 'Xiao Li', zh: '{可是|kě·shì}{同事|tóng·shì}{之间|zhī jiān}{的|de}{交流|jiāo·liú}{会|huì}{变|biàn}{少|shǎo}。{拿|ná}{我|wǒ}{来|lái}{说|shuō}，{我|wǒ}{是|shì}{新|xīn}{来|lái}{的|de}，{在|zài}{家|jiā}{遇到|yù·dào}{问题|wèn·tí}{不|bù}{知道|zhī·dào}{问|wèn}{谁|shéi}。', hu: 'De a kollégák közti kommunikáció kevesebb lesz. Vegyük például engem: új vagyok, és ha otthon elakadok, nem tudom, kit kérdezzek.' },
+      { who: 'Anna', zh: '{你|nǐ}{说|shuō}{得|de}{有|yǒu}{道理|dào·lǐ}。{文章|wén·zhāng}{里|li}{也|yě}{说|shuō}，{在|zài}{家|jiā}{办公|bàn gōng}{与|yǔ}{工作|gōng·zuò}{效率|xiào·lǜ}{有|yǒu}{很|hěn}{大|dà}{的|de}{关系|guān·xi}。', hu: 'Ebben van igazság. A cikk is azt írja, hogy az otthoni munka nagyban összefügg a hatékonysággal.' },
+      { who: 'Zhou Jie', zh: '{那|nà}{真正|zhēn zhèng}{的|de}{问题|wèn·tí}{是|shì}{什么|shén·me}{呢|ne}？', hu: 'Akkor mi az igazi kérdés?' },
+      { who: 'Anna', zh: '{我|wǒ}{看|kàn}，{真正|zhēn zhèng}{的|de}{问题|wèn·tí}{不|bú}{是|shì}{在|zài}{哪儿|nǎr}{工作|gōng·zuò}，{而|ér}{是|shì}{怎么|zěn·me}{在|zài}{工作|gōng·zuò}{与|yǔ}{生活|shēng·huó}{之间|zhī jiān}{找|zhǎo}{到|dào}{平衡|píng·héng}。', hu: 'Szerintem az igazi kérdés nem az, hol dolgozunk, hanem hogy hogyan találunk egyensúlyt a munka és a magánélet között.' },
+      { who: 'Xiao Li', zh: '{我|wǒ}{同意|tóng yì}。{比如|bǐ·rú}{每|měi}{周|zhōu}{在|zài}{家|jiā}{两|liǎng}{天|tiān}，{来|lái}{公司|gōng·sī}{三|sān}{天|tiān}，{怎么样|zěn·me·yàng}？', hu: 'Egyetértek. Mondjuk heti két nap otthon, három nap az irodában — mit szóltok?' }
+    ],
+    notes: [
+      'A 《 》 a kínai idézőjel könyv- és cikkcímekhez: 《{在家办公好不好|zài jiā bàngōng hǎo bu hǎo}》.',
+      'A {挤|jǐ} „tolong, zsúfolt": {挤地铁|jǐ dìtiě} „a zsúfolt metrón utazik".',
+      'A {有道理|yǒu dàolǐ} „van benne igazság, észszerű": {你说得有道理|nǐ shuō de yǒu dàolǐ} „igazad van".'
+    ]
+  },
+  points: [
+    {
+      title: '{比如|bǐrú} · {例如|lìrú} · {拿|ná} … {来说|lái shuō}', sub: 'például · vegyük például …',
+      pattern: '…，{比如|bǐ·rú} / {例如|lì·rú} + példa · {拿|ná} + példa + {来|lái}{说|shuō}，…',
+      body: 'Példát hozol: a {比如|bǐrú} „például" beszélt és írott nyelvben is gyakori: {好处很多，比如不用挤地铁|hǎochù hěn duō, bǐrú bú yòng jǐ dìtiě}. Az {例如|lìrú} ugyanezt jelenti, de írottabb. A {拿|ná} … {来说|lái shuō} „vegyük például …-t" egy konkrét esetet állít a középpontba: {拿我来说，我是新来的|ná wǒ lái shuō, wǒ shì xīn lái de}.',
+      tables: [
+        { caption: 'Példát hozni',
+          head: ['', 'Stílus', 'Példa'],
+          rows: [
+            ['{比如|bǐ·rú}', 'beszélt és írott', '{比如|bǐ·rú}{不|bú}{用|yòng}{挤|jǐ}{地铁|dì·tiě}'],
+            ['{例如|lì·rú}', 'írott', '{例如|lì·rú}{北京|Běi·jīng}、{上海|Shàng·hǎi}'],
+            ['{拿|ná} … {来|lái}{说|shuō}', 'egy eset kiemelése', '{拿|ná}{我|wǒ}{来|lái}{说|shuō}']
+          ] }
+      ],
+      examples: [
+        { zh: '{好处|hǎo·chù}{很|hěn}{多|duō}，{比如|bǐ·rú}{不|bú}{用|yòng}{挤|jǐ}{地铁|dì·tiě}。', hu: 'Sok előnye van, például nem kell a metrón tolongani.' },
+        { zh: '{拿|ná}{我|wǒ}{来|lái}{说|shuō}，{我|wǒ}{是|shì}{新|xīn}{来|lái}{的|de}，{遇到|yù·dào}{问题|wèn·tí}{不|bù}{知道|zhī·dào}{问|wèn}{谁|shéi}。', hu: 'Vegyük például engem: új vagyok, és ha elakadok, nem tudom, kit kérdezzek.' }
+      ]
+    },
+    {
+      title: '{再说|zàishuō}', sub: 'ráadásul, különben is',
+      pattern: 'érv 1，{再说|zài shuō}，+ érv 2',
+      body: 'A {再说|zàishuō} egy <b>újabb érvet</b> tesz hozzá az előzőhöz, beszélt nyelvben: {不用挤地铁，再说家里也比较安静|bú yòng jǐ dìtiě, zàishuō jiā li yě bǐjiào ānjìng} „nem kell tolongani, ráadásul otthon csendesebb is". A második érv mellett gyakran {也|yě} vagy {还|hái} áll. Igeként „majd később megbeszéljük": {这件事以后再说吧|zhè jiàn shì yǐhòu zàishuō ba} „ezt majd később".',
+      examples: [
+        { zh: '{今天|jīn·tiān}{太|tài}{晚|wǎn}{了|le}，{再说|zài shuō}{外面|wài·miàn}{还|hái}{在|zài}{下|xià}{雨|yǔ}，{明天|míng·tiān}{再|zài}{去|qù}{吧|ba}。', hu: 'Ma már túl késő van, ráadásul még esik is, menjünk inkább holnap.' },
+        { zh: '{不|bú}{用|yòng}{挤|jǐ}{地铁|dì·tiě}，{再说|zài shuō}{家|jiā}{里|li}{也|yě}{比较|bǐ·jiào}{安静|ān·jìng}。', hu: 'Nem kell a metrón tolongani, ráadásul otthon csendesebb is.' }
+      ]
+    },
+    {
+      title: '{与|yǔ}', sub: 'és; -val, -vel (írott)',
+      pattern: 'A + {与|yǔ} + B · {与|yǔ} + B + {有关系|yǒu guānxi} / {相比|xiāngbǐ}',
+      body: 'A {与|yǔ} a {和|hé} és a {跟|gēn} írott, hivatalos párja: címekben, cikkekben, közleményekben gyakori. {工作与生活|gōngzuò yǔ shēnghuó} „munka és magánélet", {在家办公与工作效率有很大的关系|zài jiā bàngōng yǔ gōngzuò xiàolǜ yǒu hěn dà de guānxi} „az otthoni munka nagyban összefügg a hatékonysággal". Állandó kapcsolatok: {与…有关|yǔ … yǒuguān} „…-val kapcsolatos", {与…相比|yǔ … xiāngbǐ} „…-hoz képest".',
+      examples: [
+        { zh: '{在|zài}{家|jiā}{办公|bàn gōng}{与|yǔ}{工作|gōng·zuò}{效率|xiào·lǜ}{有|yǒu}{很|hěn}{大|dà}{的|de}{关系|guān·xi}。', hu: 'Az otthoni munka nagyban összefügg a hatékonysággal.' },
+        { zh: '{这|zhè}{篇|piān}{文章|wén·zhāng}{的|de}{题目|tí·mù}{是|shì}《{工作|gōng·zuò}{与|yǔ}{生活|shēng·huó}》。', hu: 'A cikk címe: „Munka és magánélet".' }
+      ]
+    },
+    {
+      title: '{之间|zhījiān}', sub: 'között',
+      pattern: 'A + {和|hé} / {与|yǔ} + B + {之间|zhī jiān} · személyek + {之间|zhī jiān}',
+      body: 'Az {之间|zhījiān} „között" két vagy több dolog, ember, időpont <b>közti</b> viszonyt jelöl: {同事之间的交流|tóngshì zhījiān de jiāoliú} „a kollégák közti kommunikáció", {工作与生活之间|gōngzuò yǔ shēnghuó zhījiān} „a munka és a magánélet között", {三点到四点之间|sān diǎn dào sì diǎn zhījiān} „három és négy óra között". A {中间|zhōngjiān} „közép" inkább térbeli helyet jelöl.',
+      examples: [
+        { zh: '{同事|tóng·shì}{之间|zhī jiān}{的|de}{交流|jiāo·liú}{会|huì}{变|biàn}{少|shǎo}。', hu: 'A kollégák közti kommunikáció kevesebb lesz.' },
+        { zh: '{我们|wǒ·men}{要|yào}{在|zài}{工作|gōng·zuò}{与|yǔ}{生活|shēng·huó}{之间|zhī jiān}{找|zhǎo}{到|dào}{平衡|píng·héng}。', hu: 'Egyensúlyt kell találnunk a munka és a magánélet között.' }
+      ]
+    },
+    {
+      title: '{真正|zhēnzhèng}', sub: 'igazi, valódi; igazán',
+      pattern: '{真正|zhēn zhèng} + ({的|de}) + főnév · {真正|zhēn zhèng} + ige',
+      body: 'A {真正|zhēnzhèng} főnév előtt „igazi, valódi": {真正的问题|zhēnzhèng de wèntí} „az igazi kérdés", {真正的朋友|zhēnzhèng de péngyou} „igaz barát"; ige előtt „igazán, valójában": {你真正了解他吗|nǐ zhēnzhèng liǎojiě tā ma} „tényleg ismered őt?". Melléknév fokozására nem használjuk — arra a {真|zhēn} „nagyon" való.',
+      tables: [
+        { caption: '{真|zhēn} vagy {真正|zhēn zhèng}?',
+          head: ['', 'Mi előtt áll?', 'Példa'],
+          rows: [
+            ['{真|zhēn}', 'melléknév (fokozás)', '{今天|jīn·tiān}{真|zhēn}{冷|lěng}'],
+            ['{真正|zhēn zhèng}', 'főnév; ige', '{真正|zhēn zhèng}{的|de}{问题|wèn·tí} · {真正|zhēn zhèng}{了解|liǎo·jiě}']
+          ] }
+      ],
+      examples: [
+        { zh: '{真正|zhēn zhèng}{的|de}{问题|wèn·tí}{不|bú}{是|shì}{在|zài}{哪儿|nǎr}{工作|gōng·zuò}。', hu: 'Az igazi kérdés nem az, hol dolgozunk.' },
+        { zh: '{这|zhè}{次|cì}{讨论|tǎo·lùn}{让|ràng}{我|wǒ}{真正|zhēn zhèng}{了解|liǎo·jiě}{了|le}{大家|dà·jiā}{的|de}{想法|xiǎng·fǎ}。', hu: 'Ebből a megbeszélésből igazán megértettem, mit gondol mindenki.' }
+      ],
+      mistakes: [
+        { bad: '{今天|jīn·tiān}{真正|zhēn zhèng}{冷|lěng}。', good: '{今天|jīn·tiān}{真|zhēn}{冷|lěng}。', why: 'Melléknév fokozására a {真|zhēn} való, nem a {真正|zhēnzhèng}.' }
+      ]
+    }
+  ],
+  phrases: [
+    { zh: '{你|nǐ}{说|shuō}{得|de}{有|yǒu}{道理|dào·lǐ}。', hu: 'Ebben van igazság.' },
+    { zh: '{我|wǒ}{不|bù}{太|tài}{同意|tóng yì}。', hu: 'Nem egészen értek egyet.' },
+    { zh: '{你|nǐ}{的|de}{看法|kàn·fǎ}{呢|ne}？', hu: 'És te mit gondolsz?' },
+    { zh: '{这|zhè}{件|jiàn}{事|shì}{以后|yǐ·hòu}{再|zài}{说|shuō}{吧|ba}。', hu: 'Ezt majd később megbeszéljük.' }
+  ],
+  words: [
+    { title: 'Szavak',
+      items: [
+        { zh: '{比如|bǐ·rú}', pinyin: 'bǐrú', hu: 'például' },
+        { zh: '{例如|lì·rú}', pinyin: 'lìrú', hu: 'például (írott)' },
+        { zh: '{再说|zài shuō}', pinyin: 'zàishuō', hu: 'ráadásul; majd később' },
+        { zh: '{与|yǔ}', pinyin: 'yǔ', hu: 'és; -val, -vel (írott)' },
+        { zh: '{之间|zhī jiān}', pinyin: 'zhījiān', hu: 'között' },
+        { zh: '{真正|zhēn zhèng}', pinyin: 'zhēnzhèng', hu: 'igazi; igazán' },
+        { zh: '{交流|jiāo·liú}', pinyin: 'jiāoliú', hu: 'kommunikáció; eszmét cserél' },
+        { zh: '{道理|dào·lǐ}', pinyin: 'dàolǐ', hu: 'ésszerűség, igazság' },
+        { zh: '{同意|tóng yì}', pinyin: 'tóngyì', hu: 'egyetért' },
+        { zh: '{自由|zì·yóu}', pinyin: 'zìyóu', hu: 'szabad; szabadság' },
+        { zh: '{观点|guān·diǎn}', pinyin: 'guāndiǎn', hu: 'nézőpont, álláspont' },
+        { zh: '{平衡|píng·héng}', pinyin: 'pínghéng', hu: 'egyensúly' }
+      ] },
+    { title: 'Ráadás',
+      items: [
+        { zh: '{办公|bàn gōng}', pinyin: 'bàngōng', hu: 'irodai munkát végez' },
+        { zh: '{挤|jǐ}', pinyin: 'jǐ', hu: 'tolong; zsúfolt' },
+        { zh: '{看法|kàn·fǎ}', pinyin: 'kànfǎ', hu: 'vélemény' },
+        { zh: '{篇|piān}', pinyin: 'piān', hu: '(mérőszó cikkre, írásra)' }
+      ] }
+  ],
+  culture: [
+    { title: 'Közös nevező', text: 'A kínai munkahelyi megbeszélések inkább az egyetértés keresésére épülnek, mint a nyílt vitára. Gyakori elv a {求同存异|qiú tóng cún yì} „keresd a közöset, a különbségeket hagyd meg": a felek először azt rögzítik, miben értenek egyet, és a vitás kérdéseket gyakran négyszemközt beszélik meg.' },
+    { title: 'Otthonról vagy az irodából?', text: 'Kínában 2020 után sok cég kipróbálta az otthoni munkát, de a legtöbb helyen hamar visszatértek az irodába, mert a munkahelyi kapcsolatok és a személyes jelenlét fontos. Egyes technológiai cégeknél ma vegyes megoldás működik: néhány nap otthon, néhány az irodában.' }
+  ],
+  reading: {
+    title: '{一|yí}{次|cì}{讨论|tǎo·lùn}', titleHu: 'Egy megbeszélés',
+    text: [
+      { zh: '{这|zhè}{周|zhōu}{安娜|Ān·nà}{的|de}{团队|tuán duì}{讨论|tǎo·lùn}{了|le}{在|zài}{家|jiā}{办公|bàn gōng}{的|de}{问题|wèn·tí}。', hu: 'Ezen a héten Anna csapata az otthoni munkáról tartott megbeszélést.' },
+      { zh: '{大家|dà·jiā}{的|de}{看法|kàn·fǎ}{不|bù}{一样|yí yàng}：{有|yǒu}{的|de}{人|rén}{觉得|jué·de}{很|hěn}{自由|zì·yóu}，{有|yǒu}{的|de}{人|rén}{觉得|jué·de}{同事|tóng·shì}{之间|zhī jiān}{的|de}{交流|jiāo·liú}{太|tài}{少|shǎo}。', hu: 'Mindenki másképp látta: volt, aki szerint így szabadabb, és volt, aki szerint túl kevés a kollégák közti kommunikáció.' },
+      { zh: '{拿|ná}{小李|Xiǎo Lǐ}{来|lái}{说|shuō}，{他|tā}{刚|gāng}{来|lái}{公司|gōng·sī}，{更|gèng}{需要|xū·yào}{同事|tóng·shì}{的|de}{帮助|bāng·zhù}。', hu: 'Vegyük például Xiao Lit: most került a céghez, neki még nagyobb szüksége van a kollégák segítségére.', par: true },
+      { zh: '{最后|zuì·hòu}{大家|dà·jiā}{决定|jué·dìng}：{每|měi}{周|zhōu}{在|zài}{家|jiā}{两|liǎng}{天|tiān}，{来|lái}{公司|gōng·sī}{三|sān}{天|tiān}。', hu: 'Végül úgy döntöttek: hetente két nap otthon, három nap az irodában.' },
+      { zh: '{安娜|Ān·nà}{觉得|jué·de}，{这|zhè}{次|cì}{讨论|tǎo·lùn}{让|ràng}{她|tā}{真正|zhēn zhèng}{了解|liǎo·jiě}{了|le}{每|měi}{个|ge}{同事|tóng·shì}{的|de}{想法|xiǎng·fǎ}。', hu: 'Anna úgy érezte, ebből a megbeszélésből igazán megismerte minden kollégája gondolatait.', par: true }
+    ],
+    words: [ { zh: '{看法|kàn·fǎ}', hu: 'vélemény' } ],
+    questions: [
+      { q: 'Miről volt a megbeszélés?', a: 'az otthoni munkáról', wrong: ['a fizetésekről', 'egy új termékről', 'a céges kirándulásról'], why: '{讨论了在家办公的问题|tǎolùn le zài jiā bàngōng de wèntí}.' },
+      { q: 'Miért kell Xiao Linek több segítség?', a: 'mert új a cégnél', wrong: ['mert beteg', 'mert messze lakik', 'mert nem beszél angolul'], why: '{他刚来公司|tā gāng lái gōngsī}.' },
+      { q: 'Mit döntöttek?', a: 'heti két nap otthon, három az irodában', wrong: ['mindenki otthonról dolgozik', 'mindenki mindig az irodában dolgozik', 'heti egy nap otthon, négy az irodában'], why: '{每周在家两天，来公司三天|měi zhōu zài jiā liǎng tiān, lái gōngsī sān tiān}.' },
+      { q: 'Mit értett meg Anna a megbeszélésből?', a: 'mit gondolnak a kollégái', wrong: ['hogyan kell cikket írni', 'miért késnek a kollégák', 'mennyit keresnek mások'], why: '{真正了解了每个同事的想法|zhēnzhèng liǎojiě le měi ge tóngshì de xiǎngfǎ}.' }
+    ]
+  },
+  quiz: [
+    { q: '„Sok előnye van, például nem kell tolongani a metrón."', a: '{好处|hǎo·chù}{很|hěn}{多|duō}，{比如|bǐ·rú}{不|bú}{用|yòng}{挤|jǐ}{地铁|dì·tiě}。', wrong: ['{比如|bǐ·rú}{好处|hǎo·chù}{很|hěn}{多|duō}，{不|bú}{用|yòng}{挤|jǐ}{地铁|dì·tiě}{比如|bǐ·rú}。', '{好处|hǎo·chù}{比如|bǐ·rú}{多|duō}{很|hěn}，{地铁|dì·tiě}{不|bú}{用|yòng}{挤|jǐ}。', '{好处|hǎo·chù}{很|hěn}{多|duō}，{不|bú}{用|yòng}{比如|bǐ·rú}{挤|jǐ}{地铁|dì·tiě}。'], why: '…, {比如|bǐrú} + példa.', point: 1 },
+    { q: '„Vegyük például engem: új vagyok."', a: '{拿|ná}{我|wǒ}{来|lái}{说|shuō}，{我|wǒ}{是|shì}{新|xīn}{来|lái}{的|de}。', wrong: ['{拿|ná}{来|lái}{我|wǒ}{说|shuō}，{我|wǒ}{是|shì}{新|xīn}{来|lái}{的|de}。', '{我|wǒ}{拿|ná}{说|shuō}{来|lái}，{我|wǒ}{是|shì}{新|xīn}{来|lái}{的|de}。', '{说|shuō}{拿|ná}{我|wǒ}{来|lái}，{新|xīn}{来|lái}{的|de}{是|shì}{我|wǒ}。'], why: '{拿|ná} + példa + {来说|lái shuō}.', point: 1 },
+    { q: 'Miben más az {例如|lìrú}, mint a {比如|bǐrú}?', a: 'írottabb', wrong: ['tagadó jelentésű', 'csak kérdésben áll', 'csak a mondat végén állhat'], why: 'Jelentésük azonos.', point: 1 },
+    { q: '„Késő van, ráadásul esik is."', a: '{太|tài}{晚|wǎn}{了|le}，{再说|zài shuō}{外面|wài·miàn}{还|hái}{在|zài}{下|xià}{雨|yǔ}。', wrong: ['{再说|zài shuō}{太|tài}{晚|wǎn}{了|le}，{外面|wài·miàn}{还|hái}{在|zài}{下|xià}{雨|yǔ}{再说|zài shuō}。', '{太|tài}{晚|wǎn}{了|le}，{外面|wài·miàn}{再说|zài shuō}{下|xià}{雨|yǔ}{还|hái}{在|zài}。', '{太|tài}{晚|wǎn}{再说|zài shuō}{了|le}，{还|hái}{在|zài}{外面|wài·miàn}{下|xià}{雨|yǔ}。'], why: 'Érv 1, {再说|zàishuō} + érv 2.', point: 2 },
+    { q: 'Mit jelent: {这件事以后再说吧|zhè jiàn shì yǐhòu zàishuō ba}。', a: 'Ezt majd később megbeszéljük.', wrong: ['Ezt mondd el még egyszer.', 'Ezt már megbeszéltük.', 'Erről többet ne beszéljünk.'], why: 'Igeként „majd később".', point: 2 },
+    { q: 'Melyik szó a {和|hé} írott, hivatalos párja?', a: '{与|yǔ}', wrong: ['{再说|zàishuō}', '{之间|zhījiān}', '{比如|bǐrú}'], why: '{工作与生活|gōngzuò yǔ shēnghuó}.', point: 3 },
+    { q: 'Mit jelent: {这与你没有关系|zhè yǔ nǐ méiyǒu guānxi}。', a: 'Ennek nincs köze hozzád.', wrong: ['Ez a te kapcsolatod.', 'Veled nincs kapcsolatom.', 'Ezt neked kell elintézned.'], why: '{与…有关系|yǔ … yǒu guānxi} „összefügg valamivel".', point: 3 },
+    { q: '„A kollégák közti kommunikáció kevesebb lesz."', a: '{同事|tóng·shì}{之间|zhī jiān}{的|de}{交流|jiāo·liú}{会|huì}{变|biàn}{少|shǎo}。', wrong: ['{之间|zhī jiān}{同事|tóng·shì}{的|de}{交流|jiāo·liú}{会|huì}{变|biàn}{少|shǎo}。', '{同事|tóng·shì}{的|de}{交流|jiāo·liú}{之间|zhī jiān}{少|shǎo}{会|huì}{变|biàn}。', '{交流|jiāo·liú}{同事|tóng·shì}{之间|zhī jiān}{会|huì}{少|shǎo}{的|de}{变|biàn}。'], why: 'Személyek + {之间|zhījiān}.', point: 4 },
+    { q: 'Melyik illik? {三|sān}{点|diǎn}{到|dào}{四|sì}{点|diǎn}___{我|wǒ}{都|dōu}{在|zài}{办公室|bàn gōng shì}。', a: '{之间|zhī jiān}', wrong: ['{中间|zhōng jiān}', '{以内|yǐ nèi}', '{左右|zuǒ yòu}'], why: 'Két időpont között: {之间|zhījiān}.', point: 4 },
+    { q: '„Az igazi kérdés nem az, hol dolgozunk."', a: '{真正|zhēn zhèng}{的|de}{问题|wèn·tí}{不|bú}{是|shì}{在|zài}{哪儿|nǎr}{工作|gōng·zuò}。', wrong: ['{真|zhēn}{的|de}{问题|wèn·tí}{正|zhèng}{不|bú}{是|shì}{在|zài}{哪儿|nǎr}{工作|gōng·zuò}。', '{问题|wèn·tí}{真正|zhēn zhèng}{的|de}{不|bú}{是|shì}{哪儿|nǎr}{在|zài}{工作|gōng·zuò}。', '{不|bú}{是|shì}{真正|zhēn zhèng}{的|de}{在|zài}{哪儿|nǎr}{问题|wèn·tí}{工作|gōng·zuò}。'], why: '{真正的|zhēnzhèng de} + főnév.', point: 5 },
+    { q: 'Melyik mondat helyes?', a: '{今天|jīn·tiān}{真|zhēn}{冷|lěng}。', wrong: ['{今天|jīn·tiān}{真正|zhēn zhèng}{冷|lěng}。', '{今天|jīn·tiān}{真正|zhēn zhèng}{的|de}{冷|lěng}。', '{今天|jīn·tiān}{冷|lěng}{真正|zhēn zhèng}。'], why: 'Melléknév fokozására {真|zhēn}.', point: 5 },
+    { q: 'Mit jelent a {交流|jiāoliú}?', a: 'eszmecsere', wrong: ['közlekedés', 'kereskedelem', 'utazás'], why: '{同事之间的交流|tóngshì zhījiān de jiāoliú}.' },
+    { q: 'Mit jelent: {你说得有道理|nǐ shuō de yǒu dàolǐ}。', a: 'Ebben van igazság.', wrong: ['Túl gyorsan beszélsz.', 'Ezt nem értem.', 'Ez nem igaz.'], why: '{有道理|yǒu dàolǐ} „észszerű, igaz".' },
+    { q: 'Mit jelent a {平衡|pínghéng}?', a: 'egyensúly', wrong: ['különbség', 'eredmény', 'szabály'], why: '{工作与生活之间的平衡|gōngzuò yǔ shēnghuó zhījiān de pínghéng}.' },
+    { q: 'Mit jelent: {我不太同意|wǒ bú tài tóngyì}。', a: 'Nem egészen értek egyet.', wrong: ['Nem egészen értem.', 'Nem nagyon szeretem.', 'Nem egészen biztos.'], why: '{同意|tóngyì} „egyetért".' },
+    { q: 'Mit jelent a {自由|zìyóu}?', a: 'szabad', wrong: ['csendes', 'kényelmes', 'gyors'], why: '{时间更自由|shíjiān gèng zìyóu} „szabadabb az időbeosztás".' }
+  ]
+},
+
+/* ════════════════════════════════════════════════════
+   HSK 4 · 20. LECKE — 为…感到, 无论如何, 一下子, 不光, 总的来说
+   ════════════════════════════════════════════════════ */
+{
+  id: 'l70', no: 70, badge: '20', kicker: 'HSK 4 · 20. lecke', label: 'HSK 4 · 20. lecke',
+  title: 'Egy év Sanghajban — összességében',
+  lead: 'Visszatekintesz egy évre: kifejezed, mi miatt mit érzel (为…感到…), mit teszel meg mindenképpen (无论如何), mi történt egy csapásra (一下子), mi nemcsak így volt, hanem úgy is (不光…还…), és összefoglalsz (总的来说).',
+  cando: [
+    'Kifejezed, mi miatt mit érzel: 为 + valaki / valami + 感到 + érzelem.',
+    'Elszántságot fejezel ki: 无论如何都要….',
+    'Elmondod, mi történt egy csapásra, hirtelen: 一下子….',
+    'Bővíted az állítást (不光…，还…), és összefoglalsz (总的来说，…).'
+  ],
+  intro: [
+    'Anna egy éve dolgozik Sanghajban. A cég belső hírlevelének szerkesztője, Xiao Wang interjút készít vele: milyen volt az év, mit tanult, és mit tervez.',
+    'Ez a HSK 4 utolsó leckéje. A visszatekintés és az összefoglalás nyelvét tanulod — és közben te is végiggondolhatod, mennyit fejlődtél a pinyintől idáig.'
+  ],
+  dialogue: {
+    title: 'Interjú a hírlevélnek',
+    scene: 'December végén a cég kávézójában. Xiao Wang és Anna.',
+    lines: [
+      { who: 'Xiao Wang', zh: '{安娜|Ān·nà}，{你|nǐ}{来|lái}{上海|Shàng·hǎi}{已经|yǐ·jīng}{一|yì}{年|nián}{了|le}。{有|yǒu}{什么|shén·me}{感想|gǎn xiǎng}？', hu: 'Anna, már egy éve vagy Sanghajban. Milyen érzések vannak benned?' },
+      { who: 'Anna', zh: '{时间|shí·jiān}{过|guò}{得|de}{真|zhēn}{快|kuài}，{一|yì}{年|nián}{一下子|yí xià·zi}{就|jiù}{过去|guò·qù}{了|le}。', hu: 'Nagyon gyorsan telt az idő, egy év egy szempillantás alatt elszállt.' },
+      { who: 'Xiao Wang', zh: '{这|zhè}{一|yì}{年|nián}{里|li}，{你|nǐ}{最|zuì}{大|dà}{的|de}{收获|shōu·huò}{是|shì}{什么|shén·me}？', hu: 'Mi volt az év legnagyobb nyeresége?' },
+      { who: 'Anna', zh: '{不光|bù guāng}{是|shì}{工作|gōng·zuò}{上|shang}{的|de}{进步|jìn·bù}，{我|wǒ}{还|hái}{交|jiāo}{了|le}{很|hěn}{多|duō}{好|hǎo}{朋友|péng·you}。', hu: 'Nemcsak a munkában fejlődtem, hanem sok jó barátot is szereztem.' },
+      { who: 'Xiao Wang', zh: '{听说|tīng·shuō}{你|nǐ}{刚|gāng}{升职|shēng zhí}，{大家|dà·jiā}{都|dōu}{为|wèi}{你|nǐ}{感到|gǎn·dào}{高兴|gāo·xìng}。', hu: 'Úgy hallom, most léptettek elő — mindenki örül neked.' },
+      { who: 'Anna', zh: '{谢谢|xiè·xie}！{总的来说|zǒng de lái shuō}，{这|zhè}{一|yì}{年|nián}{虽然|suī·rán}{很|hěn}{忙|máng}，{但是|dàn·shì}{很|hěn}{有|yǒu}{意思|yì·si}。', hu: 'Köszönöm! Összességében ez az év nagyon zsúfolt volt, de nagyon érdekes.' },
+      { who: 'Xiao Wang', zh: '{明年|míng·nián}{呢|ne}？', hu: 'És jövőre?' },
+      { who: 'Anna', zh: '{明年|míng·nián}{我|wǒ}{无论如何|wú lùn rú hé}{都|dōu}{要|yào}{考|kǎo}{过|guò}{汉语|Hàn·yǔ}{五|wǔ}{级|jí}！', hu: 'Jövőre mindenképpen le akarom tenni a kínai nyelvvizsga ötödik szintjét!' }
+    ],
+    notes: [
+      'A {感想|gǎnxiǎng} „benyomás, gondolatok (valamiről)", a {收获|shōuhuò} „termés; nyereség, haszon".',
+      'A {交朋友|jiāo péngyou} „barátot szerez, barátkozik": a {交|jiāo} itt „kapcsolatot köt".',
+      'A {考过|kǎo guò} „leteszi (a vizsgát)": a {过|guò} itt eredményhatározó („átjut").'
+    ]
+  },
+  points: [
+    {
+      title: '{为|wèi} … {感到|gǎndào} …', sub: '… miatt érez valamit',
+      pattern: 'A + {为|wèi} + B + {感到|gǎn·dào} + érzelem',
+      body: 'Ez a szerkezet azt mondja meg, <b>ki vagy mi miatt</b> érez valaki valamit: {大家都为你感到高兴|dàjiā dōu wèi nǐ gǎndào gāoxìng} „mindenki örül neked (a sikerednek)", {我为自己感到骄傲|wǒ wèi zìjǐ gǎndào jiāo\'ào} „büszke vagyok magamra". A {感到|gǎndào} „érez" után melléknév áll; a {为|wèi} itt „miatt, -ért".',
+      examples: [
+        { zh: '{大家|dà·jiā}{都|dōu}{为|wèi}{你|nǐ}{感到|gǎn·dào}{高兴|gāo·xìng}。', hu: 'Mindenki örül neked.' },
+        { zh: '{父母|fù·mǔ}{常常|cháng·cháng}{为|wèi}{孩子|hái·zi}{感到|gǎn·dào}{担心|dān xīn}。', hu: 'A szülők gyakran aggódnak a gyerekükért.' }
+      ],
+      mistakes: [
+        { bad: '{大家|dà·jiā}{感到|gǎn·dào}{为|wèi}{你|nǐ}{高兴|gāo·xìng}。', good: '{大家|dà·jiā}{为|wèi}{你|nǐ}{感到|gǎn·dào}{高兴|gāo·xìng}。', why: 'A {为|wèi} + B a {感到|gǎndào} elé kerül.' }
+      ]
+    },
+    {
+      title: '{无论如何|wúlùn rúhé}', sub: 'mindenképpen, bármi történjék',
+      pattern: 'A + {无论如何|wú lùn rú hé} + ({都|dōu} / {也|yě}) + ige',
+      body: 'Az {无论如何|wúlùn rúhé} szó szerint „akárhogy is legyen": erős <b>elszántságot</b> vagy nyomatékos kérést fejez ki. {明年我无论如何都要考过汉语五级|míngnián wǒ wúlùn rúhé dōu yào kǎo guò Hànyǔ wǔ jí} „jövőre mindenképpen leteszem az ötödik szintet", {你无论如何也要来|nǐ wúlùn rúhé yě yào lái} „mindenképp gyere el!". A HSK 4 2. leckéjében tanult {无论…都|wúlùn … dōu} szerkezet állandósult alakja.',
+      examples: [
+        { zh: '{明年|míng·nián}{我|wǒ}{无论如何|wú lùn rú hé}{都|dōu}{要|yào}{考|kǎo}{过|guò}{汉语|Hàn·yǔ}{五|wǔ}{级|jí}。', hu: 'Jövőre mindenképpen leteszem a kínai nyelvvizsga ötödik szintjét.' },
+        { zh: '{明天|míng·tiān}{的|de}{会|huì}{很|hěn}{重要|zhòng·yào}，{你|nǐ}{无论如何|wú lùn rú hé}{也|yě}{要|yào}{来|lái}。', hu: 'A holnapi értekezlet nagyon fontos, mindenképp gyere el.' }
+      ]
+    },
+    {
+      title: '{一下子|yíxiàzi}', sub: 'egy csapásra, egyszerre csak',
+      pattern: 'A + {一下子|yí xià·zi} + ({就|jiù}) + ige',
+      body: 'Az {一下子|yíxiàzi} azt fejezi ki, hogy valami <b>nagyon gyorsan, hirtelen</b> történt: {一年一下子就过去了|yì nián yíxiàzi jiù guòqu le} „egy év egy szempillantás alatt elszállt", {他一下子就明白了|tā yíxiàzi jiù míngbai le} „egy csapásra megértette". Az ige előtt áll, gyakran {就|jiù} kíséri. Ne keverd az ige utáni {一下|yíxià}-val, amely „egy kicsit, egy pillanatra" ({等一下|děng yíxià} „várj egy kicsit").',
+      examples: [
+        { zh: '{时间|shí·jiān}{过|guò}{得|de}{真|zhēn}{快|kuài}，{一|yì}{年|nián}{一下子|yí xià·zi}{就|jiù}{过去|guò·qù}{了|le}。', hu: 'Nagyon gyorsan telt az idő, egy év egy szempillantás alatt elszállt.' },
+        { zh: '{听|tīng}{了|le}{老师|lǎo·shī}{的|de}{话|huà}，{我|wǒ}{一下子|yí xià·zi}{就|jiù}{明白|míng·bai}{了|le}。', hu: 'A tanár szavai után egy csapásra megértettem.' }
+      ]
+    },
+    {
+      title: '{不光|bùguāng} … {还|hái} / {也|yě} …', sub: 'nemcsak …, hanem … is',
+      pattern: '{不光|bù guāng} + A，{还|hái} / {也|yě} + B',
+      body: 'A {不光|bùguāng} a HSK 4 1. leckéjében tanult {不仅|bùjǐn} beszéltebb párja: „nemcsak …, hanem … is". {不光是工作上的进步，我还交了很多好朋友|bùguāng shì gōngzuò shang de jìnbù, wǒ hái jiāo le hěn duō hǎo péngyou}. A {光|guāng} önmagában „csak" (HSK 4 2. lecke), a {不光|bùguāng} tehát szó szerint „nem csak".',
+      examples: [
+        { zh: '{不光|bù guāng}{是|shì}{工作|gōng·zuò}{上|shang}{的|de}{进步|jìn·bù}，{我|wǒ}{还|hái}{交|jiāo}{了|le}{很|hěn}{多|duō}{好|hǎo}{朋友|péng·you}。', hu: 'Nemcsak a munkában fejlődtem, hanem sok jó barátot is szereztem.' },
+        { zh: '{他|tā}{不光|bù guāng}{会|huì}{说|shuō}{汉语|Hàn·yǔ}，{还|hái}{会|huì}{写|xiě}{很|hěn}{多|duō}{汉字|Hàn·zì}。', hu: 'Nemcsak beszél kínaiul, hanem sok írásjegyet is le tud írni.' }
+      ]
+    },
+    {
+      title: '{总的来说|zǒng de lái shuō}', sub: 'összességében, mindent egybevetve',
+      pattern: '{总的来说|zǒng de lái shuō}，+ összefoglalás',
+      body: 'A {总的来说|zǒng de lái shuō} az elmondottak <b>összefoglalását</b> vezeti be, a mondat elején: {总的来说，这一年虽然很忙，但是很有意思|zǒng de lái shuō, zhè yì nián suīrán hěn máng, dànshì hěn yǒu yìsi} „összességében ez az év zsúfolt volt, de nagyon érdekes". Rövidebb, írottabb párja a {总之|zǒngzhī} „egyszóval, röviden".',
+      examples: [
+        { zh: '{总的来说|zǒng de lái shuō}，{这|zhè}{一|yì}{年|nián}{虽然|suī·rán}{很|hěn}{忙|máng}，{但是|dàn·shì}{很|hěn}{有|yǒu}{意思|yì·si}。', hu: 'Összességében ez az év zsúfolt volt, de nagyon érdekes.' },
+        { zh: '{总的来说|zǒng de lái shuō}，{在|zài}{上海|Shàng·hǎi}{生活|shēng·huó}{很|hěn}{方便|fāng·biàn}。', hu: 'Mindent egybevetve Sanghajban kényelmes élni.' }
+      ]
+    }
+  ],
+  phrases: [
+    { zh: '{时间|shí·jiān}{过|guò}{得|de}{真|zhēn}{快|kuài}！', hu: 'De gyorsan telik az idő!' },
+    { zh: '{我|wǒ}{为|wèi}{你|nǐ}{感到|gǎn·dào}{骄傲|jiāo·ào}。', hu: 'Büszke vagyok rád.' },
+    { zh: '{新年|xīn nián}{快乐|kuài·lè}，{万事如意|wàn shì rú yì}！', hu: 'Boldog új évet, minden jót!' },
+    { zh: '{我们|wǒ·men}{明年|míng·nián}{见|jiàn}！', hu: 'Jövőre találkozunk!' }
+  ],
+  words: [
+    { title: 'Szavak',
+      items: [
+        { zh: '{感到|gǎn·dào}', pinyin: 'gǎndào', hu: 'érez' },
+        { zh: '{无论如何|wú lùn rú hé}', pinyin: 'wúlùn rúhé', hu: 'mindenképpen' },
+        { zh: '{不光|bù guāng}', pinyin: 'bùguāng', hu: 'nemcsak' },
+        { zh: '{总的来说|zǒng de lái shuō}', pinyin: 'zǒng de lái shuō', hu: 'összességében' },
+        { zh: '{总之|zǒng zhī}', pinyin: 'zǒngzhī', hu: 'egyszóval, röviden' },
+        { zh: '{感想|gǎn xiǎng}', pinyin: 'gǎnxiǎng', hu: 'benyomás, gondolatok' },
+        { zh: '{收获|shōu·huò}', pinyin: 'shōuhuò', hu: 'nyereség, haszon' },
+        { zh: '{骄傲|jiāo·ào}', pinyin: 'jiāo\'ào', hu: 'büszke' },
+        { zh: '{经历|jīng·lì}', pinyin: 'jīnglì', hu: 'élmény, tapasztalat; átél' },
+        { zh: '{回忆|huí·yì}', pinyin: 'huíyì', hu: 'emlék; visszaemlékszik' },
+        { zh: '{成长|chéng·zhǎng}', pinyin: 'chéngzhǎng', hu: 'felnő, fejlődik' },
+        { zh: '{幸福|xìng·fú}', pinyin: 'xìngfú', hu: 'boldog; boldogság' }
+      ] },
+    { title: 'Ráadás',
+      items: [
+        { zh: '{记者|jì·zhě}', pinyin: 'jìzhě', hu: 'újságíró' },
+        { zh: '{交|jiāo}', pinyin: 'jiāo', hu: '(barátot) szerez' },
+        { zh: '{级|jí}', pinyin: 'jí', hu: 'szint, fokozat' },
+        { zh: '{座|zuò}', pinyin: 'zuò', hu: '(mérőszó városra, épületre)' }
+      ] }
+  ],
+  culture: [
+    { title: 'A HSK', text: 'A HSK ({汉语水平考试|Hànyǔ Shuǐpíng Kǎoshì}) a hivatalos kínai nyelvvizsga külföldieknek. A negyedik szint után már a mindennapi témák többségéről folyékonyan tudsz beszélni és olvasni; a felsőbb szintek az egyetemi tanulmányokhoz és a szakmai munkához kellenek. Az utóbbi években új, kilencszintes rendszert is bevezettek.' },
+    { title: 'Év végi összegzés', text: 'Kínai munkahelyeken december végén szokás megírni az év végi összegzést ({年终总结|niánzhōng zǒngjié}): mit értél el, mi nem sikerült, mit tervezel jövőre. Sok fiatal a közösségi oldalán is közzéteszi a maga „éves összegzését".' }
+  ],
+  reading: {
+    title: '{我|wǒ}{在|zài}{上海|Shàng·hǎi}{的|de}{一|yì}{年|nián}', titleHu: 'Egy évem Sanghajban',
+    text: [
+      { zh: '{一|yì}{年|nián}{前|qián}，{我|wǒ}{一|yí}{个|ge}{人|rén}{从|cóng}{北京|Běi·jīng}{来|lái}{到|dào}{上海|Shàng·hǎi}{工作|gōng·zuò}。', hu: 'Egy éve egyedül jöttem Pekingből Sanghajba dolgozni.' },
+      { zh: '{刚|gāng}{来|lái}{的|de}{时候|shí·hou}，{我|wǒ}{一下子|yí xià·zi}{遇到|yù·dào}{了|le}{很|hěn}{多|duō}{问题|wèn·tí}，{什么|shén·me}{都|dōu}{不|bù}{习惯|xí·guàn}。', hu: 'Amikor megérkeztem, egyszerre rengeteg gonddal szembesültem, semmihez sem voltam hozzászokva.' },
+      { zh: '{后来|hòu·lái}，{我|wǒ}{不光|bù guāng}{习惯|xí·guàn}{了|le}{这里|zhè·lǐ}{的|de}{生活|shēng·huó}，{还|hái}{爱|ài}{上|shang}{了|le}{这|zhè}{座|zuò}{城市|chéng·shì}。', hu: 'Később nemcsak megszoktam az itteni életet, hanem meg is szerettem ezt a várost.', par: true },
+      { zh: '{同事|tóng·shì}{和|hé}{朋友|péng·you}{们|men}{给|gěi}{了|le}{我|wǒ}{很|hěn}{多|duō}{帮助|bāng·zhù}，{我|wǒ}{为|wèi}{认识|rèn·shi}{他们|tā·men}{感到|gǎn·dào}{幸福|xìng·fú}。', hu: 'A kollégáim és a barátaim rengeteget segítettek, boldog vagyok, hogy megismertem őket.' },
+      { zh: '{总的来说|zǒng de lái shuō}，{这|zhè}{是|shì}{我|wǒ}{最|zuì}{难忘|nán wàng}{的|de}{一|yì}{年|nián}。{无论如何|wú lùn rú hé}，{我|wǒ}{都|dōu}{会|huì}{继续|jì·xù}{学|xué}{好|hǎo}{汉语|Hàn·yǔ}。', hu: 'Összességében ez volt a legemlékezetesebb évem. Bármi történjék, folytatom a kínaitanulást.', par: true }
+    ],
+    words: [ { zh: '{继续|jì·xù}', hu: 'folytat' } ],
+    questions: [
+      { q: 'Hogyan érkezett Anna Sanghajba?', a: 'egyedül, Pekingből', wrong: ['a családjával, Budapestről', 'Wang Minggel, Pekingből', 'a kollégáival, Hangzhouból'], why: '{我一个人从北京来到上海|wǒ yí ge rén cóng Běijīng lái dào Shànghǎi}.' },
+      { q: 'Milyen volt az eleje?', a: 'nehéz, sok gonddal', wrong: ['könnyű és unalmas', 'vidám és gondtalan', 'nyugodt és csendes'], why: '{一下子遇到了很多问题|yíxiàzi yùdào le hěn duō wèntí}.' },
+      { q: 'Mit szeretett meg Anna?', a: 'a várost', wrong: ['a csípős ételeket', 'a teaházakat', 'az éjszakai műszakot'], why: '{爱上了这座城市|ài shang le zhè zuò chéngshì}.' },
+      { q: 'Mit folytat mindenképpen?', a: 'a kínaitanulást', wrong: ['a futást', 'a blogírást', 'az utazást'], why: '{无论如何，我都会继续学好汉语|wúlùn rúhé, wǒ dōu huì jìxù xué hǎo Hànyǔ}.' }
+    ]
+  },
+  quiz: [
+    { q: '„Mindenki örül neked."', a: '{大家|dà·jiā}{都|dōu}{为|wèi}{你|nǐ}{感到|gǎn·dào}{高兴|gāo·xìng}。', wrong: ['{大家|dà·jiā}{都|dōu}{感到|gǎn·dào}{为|wèi}{你|nǐ}{高兴|gāo·xìng}。', '{大家|dà·jiā}{为|wèi}{感到|gǎn·dào}{你|nǐ}{都|dōu}{高兴|gāo·xìng}。', '{为|wèi}{你|nǐ}{大家|dà·jiā}{高兴|gāo·xìng}{感到|gǎn·dào}{都|dōu}。'], why: 'A + {为|wèi} B + {感到|gǎndào} + érzelem.', point: 1 },
+    { q: 'Mit jelent: {我为自己感到骄傲|wǒ wèi zìjǐ gǎndào jiāo\'ào}。', a: 'Büszke vagyok magamra.', wrong: ['Szégyellem magam.', 'Magamért teszem.', 'Magam is meglepődtem.'], why: '{骄傲|jiāo\'ào} „büszke".', point: 1 },
+    { q: '„Jövőre mindenképpen leteszem a vizsgát."', a: '{明年|míng·nián}{我|wǒ}{无论如何|wú lùn rú hé}{都|dōu}{要|yào}{考|kǎo}{过|guò}。', wrong: ['{明年|míng·nián}{我|wǒ}{都|dōu}{要|yào}{考|kǎo}{过|guò}{无论如何|wú lùn rú hé}。', '{无论如何|wú lùn rú hé}{明年|míng·nián}{我|wǒ}{考|kǎo}{过|guò}{都|dōu}{要|yào}。', '{明年|míng·nián}{无论|wú lùn}{我|wǒ}{如何|rú hé}{要|yào}{考|kǎo}{过|guò}。'], why: 'A + {无论如何|wúlùn rúhé} + {都|dōu} + ige.', point: 2 },
+    { q: 'Mit fejez ki az {无论如何|wúlùn rúhé}?', a: 'erős elszántságot', wrong: ['bizonytalanságot', 'sajnálkozást', 'meglepetést'], why: '„Bármi történjék".', point: 2 },
+    { q: '„Egy év egy szempillantás alatt elszállt."', a: '{一|yì}{年|nián}{一下子|yí xià·zi}{就|jiù}{过去|guò·qù}{了|le}。', wrong: ['{一|yì}{年|nián}{过去|guò·qù}{一下子|yí xià·zi}{就|jiù}{了|le}。', '{一下子|yí xià·zi}{一|yì}{年|nián}{过去|guò·qù}{就|jiù}{了|le}。', '{一|yì}{年|nián}{就|jiù}{过去|guò·qù}{了|le}{一下|yí xià}。'], why: 'A + {一下子|yíxiàzi} + {就|jiù} + ige.', point: 3 },
+    { q: 'Melyik illik? {请|qǐng}{等|děng}___，{我|wǒ}{马上|mǎ·shàng}{来|lái}。', a: '{一下|yí xià}', wrong: ['{一下子|yí xià·zi}', '{总之|zǒng zhī}', '{不光|bù guāng}'], why: 'Ige után {一下|yíxià} „egy kicsit".', point: 3 },
+    { q: '„Nemcsak beszél kínaiul, hanem írni is tud."', a: '{他|tā}{不光|bù guāng}{会|huì}{说|shuō}{汉语|Hàn·yǔ}，{还|hái}{会|huì}{写|xiě}。', wrong: ['{他|tā}{光|guāng}{不|bù}{会|huì}{说|shuō}{汉语|Hàn·yǔ}，{还|hái}{会|huì}{写|xiě}。', '{不光|bù guāng}{他|tā}{会|huì}{说|shuō}{汉语|Hàn·yǔ}，{会|huì}{写|xiě}{还|hái}。', '{他|tā}{会|huì}{说|shuō}{不光|bù guāng}{汉语|Hàn·yǔ}，{也|yě}{还|hái}{写|xiě}。'], why: '{不光|bùguāng} A, {还|hái} B.', point: 4 },
+    { q: 'Melyik a {不光|bùguāng} választékosabb párja?', a: '{不仅|bùjǐn}', wrong: ['{不过|búguò}', '{不然|bùrán}', '{不必|búbì}'], why: '{不仅…而且|bùjǐn … érqiě} „nemcsak…, hanem…".', point: 4 },
+    { q: '„Összességében ez az év nagyon érdekes volt."', a: '{总的来说|zǒng de lái shuō}，{这|zhè}{一|yì}{年|nián}{很|hěn}{有|yǒu}{意思|yì·si}。', wrong: ['{这|zhè}{一|yì}{年|nián}{总的来说|zǒng de lái shuō}{有|yǒu}{意思|yì·si}{很|hěn}。', '{总|zǒng}{来|lái}{的|de}{说|shuō}，{这|zhè}{一|yì}{年|nián}{很|hěn}{有|yǒu}{意思|yì·si}。', '{来说|lái shuō}{总的|zǒng de}，{很|hěn}{有|yǒu}{意思|yì·si}{这|zhè}{一|yì}{年|nián}。'], why: '{总的来说|zǒng de lái shuō} a mondat elején.', point: 5 },
+    { q: 'Melyik szó jelent szintén „egyszóval, röviden"?', a: '{总之|zǒngzhī}', wrong: ['{比如|bǐrú}', '{再说|zàishuō}', '{于是|yúshì}'], why: 'A {总之|zǒngzhī} rövidebb, írottabb.', point: 5 },
+    { q: 'Mit jelent a {收获|shōuhuò}?', a: 'nyereség, haszon', wrong: ['veszteség', 'ajándék', 'fizetés'], why: '{最大的收获|zuì dà de shōuhuò} „a legnagyobb nyereség".' },
+    { q: 'Mit jelent a {感想|gǎnxiǎng}?', a: 'benyomás, gondolatok', wrong: ['érzékenység', 'emlékkönyv', 'tervezet'], why: '{有什么感想|yǒu shénme gǎnxiǎng}？' },
+    { q: 'Mit jelent: {时间过得真快|shíjiān guò de zhēn kuài}！', a: 'De gyorsan telik az idő!', wrong: ['Nincs időm!', 'Siess, mert késő van!', 'Lassan telik az idő.'], why: '{过|guò} „telik".' },
+    { q: 'Mit jelent a {幸福|xìngfú}?', a: 'boldog; boldogság', wrong: ['szerencsés véletlen', 'gazdag', 'egészséges'], why: '{感到幸福|gǎndào xìngfú} „boldognak érzi magát".' },
+    { q: 'Mit jelent: {新年快乐|xīnnián kuàilè}！', a: 'Boldog új évet!', wrong: ['Boldog Holdünnepet!', 'Jó utat!', 'Boldog születésnapot!'], why: '{新年|xīnnián} „új év".' },
+    { q: 'Mit jelent a {继续|jìxù}?', a: 'folytat', wrong: ['abbahagy', 'elkezd', 'megismétel'], why: '{继续学好汉语|jìxù xué hǎo Hànyǔ}.' }
+  ]
 }
 
 ];

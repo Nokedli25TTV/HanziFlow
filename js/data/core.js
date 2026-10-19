@@ -891,7 +891,29 @@ const HANZIFLOW_PATH = [
     module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l68&round=listen' },
   { id: 'l68-read', glyph: '读', title: 'Olvasás: Anna előléptetése',
     desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
-    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l68&round=read' }
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l68&round=read' },
+
+  // ── HSK 4 · 19. lecke ──
+  { id: 'l69-lesson', glyph: '论', title: 'Magyarázat: 比如 · 例如 · 拿…来说, 再说, 与, 之间, 真正',
+    desc: 'Vita egy cikkről: példát hoz, ráadásul, írott és, között, az igazi kérdés.',
+    module: 'lesson', href: 'pages/lesson.html?id=l69' },
+  { id: 'l69-listen', glyph: '听', title: 'Hallás: csapatmegbeszélés',
+    desc: 'A lecke mondatai hang után: mit jelent, amit hallasz?',
+    module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l69&round=listen' },
+  { id: 'l69-read', glyph: '读', title: 'Olvasás: Egy megbeszélés',
+    desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l69&round=read' },
+
+  // ── HSK 4 · 20. lecke ──
+  { id: 'l70-lesson', glyph: '年', title: 'Magyarázat: 为…感到, 无论如何, 一下子, 不光, 总的来说',
+    desc: 'Egy év Sanghajban: … miatt érez, mindenképpen, egy csapásra, nemcsak, összességében.',
+    module: 'lesson', href: 'pages/lesson.html?id=l70' },
+  { id: 'l70-listen', glyph: '听', title: 'Hallás: interjú a hírlevélnek',
+    desc: 'A lecke mondatai hang után: mit jelent, amit hallasz?',
+    module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l70&round=listen' },
+  { id: 'l70-read', glyph: '读', title: 'Olvasás: Egy évem Sanghajban',
+    desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l70&round=read' }
 ];
 
 const HANZIFLOW_PATH_UNITS = [
@@ -1058,5 +1080,9 @@ const HANZIFLOW_PATH_UNITS = [
   { id: 'u-l67', kicker: 'HSK 4 · 17. lecke', title: 'Esküvő', sub: '让人 + érzelem, 好不容易, 幸亏, 可惜, 正好',
     steps: ['l67-lesson', 'l67-listen', 'l67-read'] },
   { id: 'u-l68', kicker: 'HSK 4 · 18. lecke', title: 'Előléptetés', sub: '将 · 将来, 该 + ige + 了, 敢, 最好, 跟…比起来',
-    steps: ['l68-lesson', 'l68-listen', 'l68-read'] }
+    steps: ['l68-lesson', 'l68-listen', 'l68-read'] },
+  { id: 'u-l69', kicker: 'HSK 4 · 19. lecke', title: 'Vita egy cikkről', sub: '比如 · 例如 · 拿…来说, 再说, 与, 之间, 真正',
+    steps: ['l69-lesson', 'l69-listen', 'l69-read'] },
+  { id: 'u-l70', kicker: 'HSK 4 · 20. lecke', title: 'Egy év Sanghajban', sub: '为…感到, 无论如何, 一下子, 不光…还, 总的来说',
+    steps: ['l70-lesson', 'l70-listen', 'l70-read'] }
 ];
