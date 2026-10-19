@@ -1012,7 +1012,29 @@ const HANZIFLOW_PATH = [
     module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l76&round=listen' },
   { id: 'l76-read', glyph: '读', title: 'Olvasás: Nagymama nyolcvanadik születésnapja',
     desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
-    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l76&round=read' }
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l76&round=read' },
+
+  // ── HSK 5 · 7. lecke ──
+  { id: 'l77-lesson', glyph: '福', title: 'Magyarázat: 凡是, 所谓, 各自, 彼此, 纷纷',
+    desc: 'A tavaszi ünnep: minden, ami…, az úgynevezett…, ki-ki a maga, egymás, sorra.',
+    module: 'lesson', href: 'pages/lesson.html?id=l77' },
+  { id: 'l77-listen', glyph: '听', title: 'Hallás: szilveszteri lakoma',
+    desc: 'A lecke mondatai hang után: mit jelent, amit hallasz?',
+    module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l77&round=listen' },
+  { id: 'l77-read', glyph: '读', title: 'Olvasás: Ünnep Suzhouban',
+    desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l77&round=read' },
+
+  // ── HSK 5 · 8. lecke ──
+  { id: 'l78-lesson', glyph: '书', title: 'Magyarázat: 以便, 进而, 以及, 并且, 由此可见',
+    desc: 'Kalligráfia a neten: hogy…, erre építve, valamint, és ráadásul, ebből látható.',
+    module: 'lesson', href: 'pages/lesson.html?id=l78' },
+  { id: 'l78-listen', glyph: '听', title: 'Hallás: ecset és képernyő',
+    desc: 'A lecke mondatai hang után: mit jelent, amit hallasz?',
+    module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l78&round=listen' },
+  { id: 'l78-read', glyph: '读', title: 'Olvasás: Kalligráfia a neten',
+    desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l78&round=read' }
 ];
 
 const HANZIFLOW_PATH_UNITS = [
@@ -1205,5 +1227,9 @@ const HANZIFLOW_PATH_UNITS = [
   { id: 'u-l75', kicker: 'HSK 5 · 5. lecke', title: 'Egy város változik', sub: '逐渐, 不断, 始终, 一律, 从而',
     steps: ['l75-lesson', 'l75-listen', 'l75-read'] },
   { id: 'u-l76', kicker: 'HSK 5 · 6. lecke', title: 'Nagymama nyolcvanéves', sub: '一向 · 向来, 照样, 至今, 从此, 万一',
-    steps: ['l76-lesson', 'l76-listen', 'l76-read'] }
+    steps: ['l76-lesson', 'l76-listen', 'l76-read'] },
+  { id: 'u-l77', kicker: 'HSK 5 · 7. lecke', title: 'A tavaszi ünnep', sub: '凡是…都, 所谓, 各自, 彼此, 纷纷',
+    steps: ['l77-lesson', 'l77-listen', 'l77-read'] },
+  { id: 'u-l78', kicker: 'HSK 5 · 8. lecke', title: 'Kalligráfia a neten', sub: '以便, 进而, 以及, 并且, 由此可见',
+    steps: ['l78-lesson', 'l78-listen', 'l78-read'] }
 ];

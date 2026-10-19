@@ -14147,6 +14147,345 @@ const HANZIFLOW_COURSE = [
     { q: 'Mit jelent a {记得|jìde}?', a: 'emlékszik', wrong: ['elfelejt', 'feljegyez', 'megtanul'], why: '{我至今还记得|wǒ zhìjīn hái jìde}.' },
     { q: 'Mit jelent: {长寿面|chángshòumiàn}?', a: 'hosszú élet tésztája', wrong: ['születésnapi torta', 'rizsgombóc', 'holdsütemény'], why: 'A szálat nem szabad elvágni.' }
   ]
+},
+/* ════════════════════════════════════════════════════
+   HSK 5 · 7. LECKE — 凡是, 所谓, 各自, 彼此, 纷纷
+   ════════════════════════════════════════════════════ */
+{
+  id: 'l77', no: 77, badge: '7', kicker: 'HSK 5 · 7. lecke', label: 'HSK 5 · 7. lecke',
+  title: 'A tavaszi ünnep — mindenki, aki betér hozzánk…',
+  lead: 'Kínai családnál ünnepled a holdújévet: kivétel nélküli szabályt mondasz (凡是…都…), megmagyarázol egy fogalmat (所谓…就是…), elmondod, ki-ki mit csinál (各自), mit tesznek egymásért (彼此), és mi történik sokfelől, egymás után (纷纷).',
+  cando: [
+    'Mindenkire érvényes szabályt mondasz: 凡是…，都….',
+    'Megmagyarázol egy kifejezést: 所谓 A，就是 B.',
+    'Elmondod, ki-ki mit csinál (各自), és mit tesznek egymással (彼此).',
+    'Leírod, hogy sokan, egymás után tesznek valamit: 纷纷….'
+  ],
+  intro: [
+    'Lin Jing meghívja Annát a szüleihez Suzhouba a tavaszi ünnepre. Szilveszter este a nagy családi vacsora, a „szilveszteri lakoma" mellett Lin Jing apja és Lin Jing magyarázza el a szokásokat.',
+    'Ebben a leckében a szokások és fogalmak magyarázatának nyelvét tanulod: hogyan mondod el, mi mindenkire érvényes, mit jelent egy kifejezés, és mit tesznek az emberek egymásért.'
+  ],
+  dialogue: {
+    title: 'Szilveszteri lakoma',
+    scene: 'A holdújév előestéje Lin Jing szüleinél, Suzhouban. Lin Jing apja, Lin Jing és Anna.',
+    lines: [
+      { who: 'Lin apuka', zh: '{安娜|Ān·nà}，{欢迎|huān·yíng}{你|nǐ}{来|lái}{我们|wǒ·men}{家|jiā}{过|guò}{年|nián}！{凡是|fán shì}{来|lái}{我|wǒ}{家|jiā}{的|de}{客人|kè·rén}，{都|dōu}{要|yào}{先|xiān}{喝|hē}{一|yì}{杯|bēi}{我们|wǒ·men}{自己|zì·jǐ}{做|zuò}{的|de}{米酒|mǐ jiǔ}。', hu: 'Anna, isten hozott nálunk az ünnepre! Aki csak betér hozzánk, először megiszik egy pohár házi rizsbort.' },
+      { who: 'Anna', zh: '{谢谢|xiè·xie}{叔叔|shū·shu}！{我|wǒ}{早|zǎo}{就|jiù}{听|tīng}{说|shuō}{过|guo}“{年夜饭|nián yè fàn}”，{今天|jīn·tiān}{终于|zhōng·yú}{吃|chī}{到|dào}{了|le}。', hu: 'Köszönöm, bácsi! Régóta hallok a „szilveszteri lakomáról", ma végre megkóstolhatom.' },
+      { who: 'Lin Jing', zh: '{所谓|suǒ wèi}“{年夜饭|nián yè fàn}”，{就|jiù}{是|shì}{除夕|chú xī}{晚上|wǎn·shang}{全|quán}{家|jiā}{人|rén}{一起|yì·qǐ}{吃|chī}{的|de}{饭|fàn}。', hu: 'A „szilveszteri lakoma" az a vacsora, amit szilveszter este az egész család együtt eszik.' },
+      { who: 'Anna', zh: '{这|zhè}{条|tiáo}{鱼|yú}{为什么|wèi shén·me}{不|bù}{吃|chī}{完|wán}？', hu: 'Ezt a halat miért nem esszük meg egészen?' },
+      { who: 'Lin Jing', zh: '“{鱼|yú}”{和|hé}“{余|yú}”{同|tóng}{音|yīn}，{留|liú}{一点儿|yì diǎnr}{代表|dài biǎo}“{年年|nián nián}{有|yǒu}{余|yú}”。{吃|chī}{完|wán}{饭|fàn}，{大家|dà·jiā}{还|hái}{要|yào}{彼此|bǐ cǐ}{说|shuō}{几|jǐ}{句|jù}{吉利|jí lì}{话|huà}。', hu: 'A „hal" és a „többlet" szó ugyanúgy hangzik; ha hagyunk belőle, az azt jelenti: „minden évben jusson bőven". Vacsora után pedig egymásnak mondunk néhány jókívánságot.' },
+      { who: 'Lin apuka', zh: '{然后|rán·hòu}{大家|dà·jiā}{各自|gè zì}{给|gěi}{孩子|hái·zi}{们|men}{发|fā}{红包|hóng bāo}。{安娜|Ān·nà}，{这|zhè}{个|ge}{是|shì}{给|gěi}{你|nǐ}{的|de}！', hu: 'Aztán ki-ki piros borítékot ad a gyerekeknek. Anna, ez a tiéd!' },
+      { who: 'Lin Jing', zh: '{你|nǐ}{听|tīng}，{十二|shí èr}{点|diǎn}{了|le}！{邻居|lín·jū}{们|men}{纷纷|fēn fēn}{走|zǒu}{出|chū}{门|mén}{去|qù}{看|kàn}{烟花|yān huā}{了|le}。', hu: 'Hallod? Éjfél van! A szomszédok sorra kijönnek tűzijátékot nézni.' }
+    ],
+    notes: [
+      'A {除夕|chúxī} a holdújév előestéje („óévbúcsúztató"), a {年夜饭|niányèfàn} az aznap esti családi lakoma.',
+      'Az {年年有余|niánnián yǒu yú} „minden évben jusson bőven" jókívánság: a {鱼|yú} „hal" és a {余|yú} „többlet" egyforma kiejtésű.',
+      'A {吉利话|jílì huà} „szerencsét hozó szavak, jókívánságok".'
+    ]
+  },
+  points: [
+    {
+      title: '{凡是|fánshì} … {都|dōu} …', sub: 'minden, ami / aki … (kivétel nélkül)',
+      pattern: '{凡是|fán shì} + (jelző +) főnév，{都|dōu} + ige',
+      body: 'A {凡是|fánshì} egy egész csoportot fog át, és kijelenti, hogy <b>mindegyik tagjára</b> igaz valami: {凡是来我家的客人，都要先喝一杯米酒|fánshì lái wǒ jiā de kèrén, dōu yào xiān hē yì bēi mǐjiǔ} „aki csak betér hozzánk, először megiszik egy pohár rizsbort". A második részben szinte mindig ott a {都|dōu}.',
+      examples: [
+        { zh: '{凡是|fán shì}{来|lái}{我|wǒ}{家|jiā}{的|de}{客人|kè·rén}，{都|dōu}{要|yào}{喝|hē}{一|yì}{杯|bēi}{米酒|mǐ jiǔ}。', hu: 'Aki csak betér hozzánk, megiszik egy pohár rizsbort.' },
+        { zh: '{凡是|fán shì}{学|xué}{过|guo}{汉语|Hàn·yǔ}{的|de}{人|rén}，{都|dōu}{知道|zhī·dào}{声调|shēng diào}{很|hěn}{重要|zhòng·yào}。', hu: 'Aki valaha tanult kínaiul, mind tudja, hogy a tónusok nagyon fontosak.' }
+      ],
+      mistakes: [
+        { bad: '{凡是|fán shì}{来|lái}{的|de}{人|rén}{要|yào}{签|qiān}{名|míng}。', good: '{凡是|fán shì}{来|lái}{的|de}{人|rén}{都|dōu}{要|yào}{签|qiān}{名|míng}。', why: 'A {凡是|fánshì} után a második részben {都|dōu} kell.' }
+      ]
+    },
+    {
+      title: '{所谓|suǒwèi}', sub: 'az úgynevezett …; amit … -nak hívnak',
+      pattern: '{所谓|suǒ wèi} + A，{就|jiù}{是|shì} + magyarázat · {所谓|suǒ wèi}{的|de} + A',
+      body: '<b>1. Fogalom magyarázata:</b> {所谓“年夜饭”，就是除夕晚上全家人一起吃的饭|suǒwèi „niányèfàn", jiù shì chúxī wǎnshang quán jiā rén yìqǐ chī de fàn} „a szilveszteri lakoma az a vacsora, amit…". <b>2. Kétkedés:</b> {所谓的专家|suǒwèi de zhuānjiā} „az úgynevezett szakértő" — azt jelzi, hogy a beszélő nem hiszi el egészen a címkét.',
+      examples: [
+        { zh: '{所谓|suǒ wèi}“{年夜饭|nián yè fàn}”，{就|jiù}{是|shì}{除夕|chú xī}{晚上|wǎn·shang}{全|quán}{家|jiā}{人|rén}{一起|yì·qǐ}{吃|chī}{的|de}{饭|fàn}。', hu: 'A „szilveszteri lakoma" az a vacsora, amit szilveszter este az egész család együtt eszik.' },
+        { zh: '{他|tā}{这|zhè}{个|ge}{所谓|suǒ wèi}{的|de}{好|hǎo}{办法|bàn·fǎ}，{其实|qí shí}{一点儿|yì diǎnr}{用|yòng}{也|yě}{没有|méi·yǒu}。', hu: 'Ez az úgynevezett jó módszere valójában semmit sem ér.' }
+      ]
+    },
+    {
+      title: '{各自|gèzì}', sub: 'ki-ki a maga …; külön-külön',
+      pattern: '(többes alany) + {各自|gè zì} + ige',
+      body: 'Az {各自|gèzì} azt mondja, hogy egy csoport tagjai <b>külön-külön, mindegyik a sajátját</b> csinálja: {大家各自给孩子们发红包|dàjiā gèzì gěi háizimen fā hóngbāo} „ki-ki piros borítékot ad a gyerekeknek", {吃完饭，大家各自回家了|chī wán fàn, dàjiā gèzì huí jiā le} „vacsora után mindenki hazament a maga útján". Főnév előtt is állhat: {各自的想法|gèzì de xiǎngfǎ} „ki-ki saját elképzelése".',
+      examples: [
+        { zh: '{吃|chī}{完|wán}{饭|fàn}，{大家|dà·jiā}{各自|gè zì}{给|gěi}{孩子|hái·zi}{们|men}{发|fā}{红包|hóng bāo}。', hu: 'Vacsora után ki-ki piros borítékot ad a gyerekeknek.' },
+        { zh: '{会|huì}{后|hòu}{大家|dà·jiā}{各自|gè zì}{回|huí}{到|dào}{了|le}{办公室|bàn gōng shì}。', hu: 'Az értekezlet után mindenki visszament a saját irodájába.' }
+      ]
+    },
+    {
+      title: '{彼此|bǐcǐ}', sub: 'egymás; kölcsönösen',
+      pattern: '(többes alany) + {彼此|bǐ cǐ} + ige · {彼此|bǐ cǐ}{的|de} + főnév',
+      body: 'A {彼此|bǐcǐ} „ez és az", azaz <b>egymás</b>: {大家彼此说几句吉利话|dàjiā bǐcǐ shuō jǐ jù jílì huà} „egymásnak mondunk jókívánságokat", {我们彼此很了解|wǒmen bǐcǐ hěn liǎojiě} „jól ismerjük egymást". A HSK 3-ban tanult {互相|hùxiāng} csak határozószó, a {彼此|bǐcǐ} névmásként is állhat: {彼此的关系|bǐcǐ de guānxi} „egymáshoz való viszonyuk". A {彼此彼此|bǐcǐ bǐcǐ} „ugyanúgy, kölcsönösen" — szerény válasz bókra.',
+      tables: [
+        { caption: 'Egymás',
+          head: ['', 'Szófaj', 'Példa'],
+          rows: [
+            ['{互相|hù xiāng}', 'csak határozószó', '{互相|hù xiāng}{帮助|bāng·zhù}'],
+            ['{彼此|bǐ cǐ}', 'határozó és névmás', '{彼此|bǐ cǐ}{帮助|bāng·zhù} · {彼此|bǐ cǐ}{的|de}{关系|guān·xi}']
+          ] }
+      ],
+      examples: [
+        { zh: '{大家|dà·jiā}{彼此|bǐ cǐ}{说|shuō}{几|jǐ}{句|jù}{吉利|jí lì}{话|huà}。', hu: 'Mindenki mond egymásnak néhány jókívánságot.' },
+        { zh: '{我们|wǒ·men}{认识|rèn·shi}{很|hěn}{多|duō}{年|nián}{了|le}，{彼此|bǐ cǐ}{都|dōu}{很|hěn}{了解|liǎo·jiě}。', hu: 'Sok éve ismerjük egymást, jól ismerjük egymást.' }
+      ]
+    },
+    {
+      title: '{纷纷|fēnfēn}', sub: 'sorra, egymás után, sokfelől',
+      pattern: '(többes alany) + {纷纷|fēn fēn} + ige',
+      body: 'A {纷纷|fēnfēn} azt írja le, hogy <b>sokan, egymás után</b> tesznek valamit, vagy sok dolog sorra történik: {邻居们纷纷走出门去看烟花|línjūmen fēnfēn zǒu chū mén qù kàn yānhuā} „a szomszédok sorra kijönnek tűzijátékot nézni", {树叶纷纷落下|shùyè fēnfēn luò xià} „hullanak a falevelek". Az alany mindig többes: egyetlen személyről nem mondjuk.',
+      examples: [
+        { zh: '{十二|shí èr}{点|diǎn}{了|le}，{邻居|lín·jū}{们|men}{纷纷|fēn fēn}{走|zǒu}{出|chū}{门|mén}{去|qù}{看|kàn}{烟花|yān huā}。', hu: 'Éjfél van, a szomszédok sorra kijönnek tűzijátékot nézni.' },
+        { zh: '{听|tīng}{了|le}{这|zhè}{个|ge}{消息|xiāo·xi}，{大家|dà·jiā}{纷纷|fēn fēn}{给|gěi}{她|tā}{发|fā}{短信|duǎn·xìn}。', hu: 'A hír hallatán sorra írtak neki üzenetet.' }
+      ],
+      mistakes: [
+        { bad: '{他|tā}{纷纷|fēn fēn}{走|zǒu}{出|chū}{了|le}{门|mén}。', good: '{大家|dà·jiā}{纷纷|fēn fēn}{走|zǒu}{出|chū}{了|le}{门|mén}。', why: 'A {纷纷|fēnfēn} többes alanyt kíván.' }
+      ]
+    }
+  ],
+  phrases: [
+    { zh: '{过|guò}{年|nián}{好|hǎo}！', hu: 'Boldog ünnepeket!' },
+    { zh: '{恭喜|gōng·xǐ}{发财|fā cái}！', hu: 'Bőséget, gazdagságot!' },
+    { zh: '{年年|nián nián}{有|yǒu}{余|yú}！', hu: 'Minden évben jusson bőven!' },
+    { zh: '{身体|shēn·tǐ}{健康|jiàn kāng}，{万事|wàn shì}{如意|rú yì}！', hu: 'Jó egészséget, minden jót!' }
+  ],
+  words: [
+    { title: 'Szavak',
+      items: [
+        { zh: '{凡是|fán shì}', pinyin: 'fánshì', hu: 'minden (ami, aki)' },
+        { zh: '{所谓|suǒ wèi}', pinyin: 'suǒwèi', hu: 'úgynevezett' },
+        { zh: '{各自|gè zì}', pinyin: 'gèzì', hu: 'ki-ki a maga' },
+        { zh: '{彼此|bǐ cǐ}', pinyin: 'bǐcǐ', hu: 'egymás' },
+        { zh: '{纷纷|fēn fēn}', pinyin: 'fēnfēn', hu: 'sorra, egymás után' },
+        { zh: '{除夕|chú xī}', pinyin: 'chúxī', hu: 'a holdújév előestéje' },
+        { zh: '{年夜饭|nián yè fàn}', pinyin: 'niányèfàn', hu: 'szilveszteri lakoma' },
+        { zh: '{烟花|yān huā}', pinyin: 'yānhuā', hu: 'tűzijáték' },
+        { zh: '{吉利|jí lì}', pinyin: 'jílì', hu: 'szerencsés, szerencsét hozó' },
+        { zh: '{代表|dài biǎo}', pinyin: 'dàibiǎo', hu: 'jelképez; képviselő' },
+        { zh: '{邻居|lín·jū}', pinyin: 'línjū', hu: 'szomszéd' },
+        { zh: '{米酒|mǐ jiǔ}', pinyin: 'mǐjiǔ', hu: 'rizsbor' }
+      ] },
+    { title: 'Ráadás',
+      items: [
+        { zh: '{春联|chūn lián}', pinyin: 'chūnlián', hu: 'tavaszi szerencsefelirat (ajtón)' },
+        { zh: '{守岁|shǒu suì}', pinyin: 'shǒu suì', hu: 'virraszt szilveszter éjjel' },
+        { zh: '{拜年|bài nián}', pinyin: 'bài nián', hu: 'újévi jókívánságot mond' },
+        { zh: '{同音|tóng yīn}', pinyin: 'tóngyīn', hu: 'azonos hangzású' }
+      ] }
+  ],
+  culture: [
+    { title: 'A legnagyobb hazautazás', text: 'A tavaszi ünnep előtti hetekben százmilliók utaznak haza a családjukhoz: ez a {春运|chūnyùn} „tavaszi utazási időszak", a világ legnagyobb éves népmozgása. A vonatjegyekért hetekkel előre versenyt futnak, mert a szilveszteri lakomáról senki sem akar lemaradni.' },
+    { title: 'Fejjel lefelé a szerencse', text: 'Az ajtókra piros papíron jókívánságpárok ({春联|chūnlián}) kerülnek, és gyakran a {福|fú} „szerencse" írásjegy is — sokszor fejjel lefelé. A „fordítva van" ({倒|dào}) ugyanis úgy hangzik, mint a „megérkezett" ({到|dào}): {福到了|fú dào le} „megérkezett a szerencse".' }
+  ],
+  reading: {
+    title: '{在|zài}{苏州|Sū·zhōu}{过|guò}{年|nián}', titleHu: 'Ünnep Suzhouban',
+    text: [
+      { zh: '{今年|jīn·nián}{春节|chūn jié}，{安娜|Ān·nà}{跟|gēn}{林静|Lín Jìng}{回|huí}{了|le}{她|tā}{的|de}{老家|lǎo jiā}{苏州|Sū·zhōu}。', hu: 'Idén a tavaszi ünnepre Anna Lin Jinggel hazautazott Lin Jing szülővárosába, Suzhouba.' },
+      { zh: '{凡是|fán shì}{林|Lín}{家|jiā}{的|de}{亲戚|qīn·qi}，{除夕|chú xī}{那|nà}{天|tiān}{都|dōu}{从|cóng}{各|gè}{地|dì}{回|huí}{来|lái}{吃|chī}{年夜饭|nián yè fàn}。', hu: 'Lin Jing családjának minden tagja hazajött szilveszterkor a lakomára, az ország minden részéből.' },
+      { zh: '{饭|fàn}{桌|zhuō}{上|shang}{有|yǒu}{十|shí}{几|jǐ}{道|dào}{菜|cài}，{每|měi}{道|dào}{菜|cài}{都|dōu}{有|yǒu}{一|yí}{个|ge}{吉利|jí lì}{的|de}{名字|míng·zi}。', hu: 'Az asztalon több mint tíz fogás volt, mindegyiknek szerencsét hozó neve.', par: true },
+      { zh: '{吃|chī}{完|wán}{饭|fàn}，{大家|dà·jiā}{彼此|bǐ cǐ}{拜|bài}{年|nián}，{长辈|zhǎng bèi}{们|men}{各自|gè zì}{给|gěi}{孩子|hái·zi}{们|men}{红包|hóng bāo}。', hu: 'Vacsora után egymásnak kívántak boldog új évet, az idősebbek pedig ki-ki piros borítékot adtak a gyerekeknek.' },
+      { zh: '{半夜|bàn yè}{十二|shí èr}{点|diǎn}，{人们|rén·men}{纷纷|fēn fēn}{走|zǒu}{到|dào}{河|hé}{边|biān}{看|kàn}{烟花|yān huā}。{安娜|Ān·nà}{说|shuō}，{这|zhè}{是|shì}{她|tā}{过|guò}{得|de}{最|zuì}{热闹|rè·nao}{的|de}{一|yí}{个|ge}{新年|xīn nián}。', hu: 'Éjfélkor az emberek sorra kimentek a folyópartra tűzijátékot nézni. Anna azt mondta, ez volt élete legvidámabb újéve.', par: true }
+    ],
+    words: [ { zh: '{长辈|zhǎng bèi}', hu: 'idősebb rokon' } ],
+    questions: [
+      { q: 'Hol töltötte Anna a tavaszi ünnepet?', a: 'Suzhouban, Lin Jing családjánál', wrong: ['Sanghajban, egyedül', 'Pekingben, Wang Mingnél', 'Budapesten, a családjánál'], why: '{回了她的老家苏州|huí le tā de lǎojiā Sūzhōu}.' },
+      { q: 'Kik jöttek haza a lakomára?', a: 'a család minden tagja', wrong: ['csak a szülők', 'csak a gyerekek', 'a szomszédok'], why: '{凡是林家的亲戚|fánshì Lín jiā de qīnqi}…{都|dōu}…{回来|huílai}.' },
+      { q: 'Mi volt különleges a fogásokban?', a: 'mindegyiknek szerencsét hozó neve volt', wrong: ['mind nagyon csípős volt', 'mind hal volt', 'mind Annának készült'], why: '{每道菜都有一个吉利的名字|měi dào cài dōu yǒu yí ge jílì de míngzi}.' },
+      { q: 'Mit csináltak éjfélkor?', a: 'kimentek tűzijátékot nézni', wrong: ['lefeküdtek aludni', 'gombócot főztek', 'elutaztak'], why: '{人们纷纷走到河边看烟花|rénmen fēnfēn zǒu dào hé biān kàn yānhuā}.' }
+    ]
+  },
+  quiz: [
+    { q: '„Aki csak betér hozzánk, megiszik egy pohár rizsbort."', a: '{凡是|fán shì}{来|lái}{我|wǒ}{家|jiā}{的|de}{客人|kè·rén}，{都|dōu}{要|yào}{喝|hē}{一|yì}{杯|bēi}{米酒|mǐ jiǔ}。', wrong: ['{凡是|fán shì}{来|lái}{我|wǒ}{家|jiā}{的|de}{客人|kè·rén}，{要|yào}{喝|hē}{都|dōu}{一|yì}{杯|bēi}{米酒|mǐ jiǔ}。', '{来|lái}{我|wǒ}{家|jiā}{凡是|fán shì}{的|de}{客人|kè·rén}，{一|yì}{杯|bēi}{都|dōu}{喝|hē}{米酒|mǐ jiǔ}。', '{都|dōu}{来|lái}{我|wǒ}{家|jiā}{的|de}{客人|kè·rén}，{凡是|fán shì}{喝|hē}{一|yì}{杯|bēi}{米酒|mǐ jiǔ}。'], why: '{凡是|fánshì} …, {都|dōu} ….', point: 1 },
+    { q: 'Mi kell a {凡是|fánshì} mondatának második részébe?', a: '{都|dōu}', wrong: ['{才|cái}', '{却|què}', '{吗|ma}'], why: '„Mind, kivétel nélkül".', point: 1 },
+    { q: '„A szilveszteri lakoma az a vacsora, amit az egész család együtt eszik."', a: '{所谓|suǒ wèi}“{年夜饭|nián yè fàn}”，{就|jiù}{是|shì}{全|quán}{家|jiā}{人|rén}{一起|yì·qǐ}{吃|chī}{的|de}{饭|fàn}。', wrong: ['“{年夜饭|nián yè fàn}”{所谓|suǒ wèi}，{是|shì}{就|jiù}{全|quán}{家|jiā}{人|rén}{一起|yì·qǐ}{吃|chī}{的|de}{饭|fàn}。', '{所谓|suǒ wèi}{全|quán}{家|jiā}{人|rén}{一起|yì·qǐ}{吃|chī}{的|de}{饭|fàn}{就|jiù}{是|shì}“{年夜饭|nián yè fàn}”{吗|ma}。', '“{年夜饭|nián yè fàn}”{就|jiù}{所谓|suǒ wèi}{全|quán}{家|jiā}{人|rén}{一起|yì·qǐ}{吃|chī}{饭|fàn}{的|de}。'], why: '{所谓|suǒwèi} A, {就是|jiù shì} B.', point: 2 },
+    { q: 'Mit sugall: {他所谓的好办法|tā suǒwèi de hǎo bànfǎ}?', a: 'kétkedést', wrong: ['őszinte dicséretet', 'pontos meghatározást', 'udvarias kérést'], why: '„Az úgynevezett…".', point: 2 },
+    { q: '„Vacsora után ki-ki piros borítékot ad a gyerekeknek."', a: '{吃|chī}{完|wán}{饭|fàn}，{大家|dà·jiā}{各自|gè zì}{给|gěi}{孩子|hái·zi}{们|men}{发|fā}{红包|hóng bāo}。', wrong: ['{吃|chī}{完|wán}{饭|fàn}，{各自|gè zì}{大家|dà·jiā}{发|fā}{孩子|hái·zi}{们|men}{给|gěi}{红包|hóng bāo}。', '{吃|chī}{完|wán}{饭|fàn}，{大家|dà·jiā}{给|gěi}{孩子|hái·zi}{们|men}{各自|gè zì}{的|de}{发|fā}{红包|hóng bāo}{了|le}{吗|ma}。', '{各自|gè zì}{吃|chī}{完|wán}{饭|fàn}{大家|dà·jiā}，{红包|hóng bāo}{给|gěi}{发|fā}{孩子|hái·zi}{们|men}。'], why: 'Többes alany + {各自|gèzì} + ige.', point: 3 },
+    { q: 'Mit jelent az {各自|gèzì}?', a: 'ki-ki a maga', wrong: ['mind együtt', 'senki sem', 'egymásnak'], why: '{各自回家|gèzì huí jiā} „mindenki hazament a maga útján".', point: 3 },
+    { q: '„Jól ismerjük egymást."', a: '{我们|wǒ·men}{彼此|bǐ cǐ}{很|hěn}{了解|liǎo·jiě}。', wrong: ['{我们|wǒ·men}{很|hěn}{了解|liǎo·jiě}{彼此|bǐ cǐ}{了|le}{吗|ma}。', '{彼此|bǐ cǐ}{我们|wǒ·men}{了解|liǎo·jiě}{很|hěn}。', '{我们|wǒ·men}{了解|liǎo·jiě}{很|hěn}{彼此|bǐ cǐ}。'], why: 'Többes alany + {彼此|bǐcǐ} + állítmány.', point: 4 },
+    { q: 'Miben más a {彼此|bǐcǐ}, mint a {互相|hùxiāng}?', a: 'névmásként is állhat', wrong: ['csak egy emberre vonatkozik', 'csak kérdésben áll', 'csak tagadásban áll'], why: '{彼此的关系|bǐcǐ de guānxi} — {互相|hùxiāng}-gal nem megy.', point: 4 },
+    { q: '„Éjfélkor a szomszédok sorra kijöttek tűzijátékot nézni."', a: '{半夜|bàn yè}{十二|shí èr}{点|diǎn}，{邻居|lín·jū}{们|men}{纷纷|fēn fēn}{出|chū}{来|lái}{看|kàn}{烟花|yān huā}。', wrong: ['{半夜|bàn yè}{十二|shí èr}{点|diǎn}，{邻居|lín·jū}{们|men}{出|chū}{来|lái}{纷纷|fēn fēn}{看|kàn}{烟花|yān huā}{吗|ma}。', '{纷纷|fēn fēn}{半夜|bàn yè}{十二|shí èr}{点|diǎn}，{烟花|yān huā}{看|kàn}{邻居|lín·jū}{们|men}{出|chū}{来|lái}。', '{半夜|bàn yè}{十二|shí èr}{点|diǎn}，{他|tā}{纷纷|fēn fēn}{出|chū}{来|lái}{看|kàn}{烟花|yān huā}{了|le}{吗|ma}。'], why: 'Többes alany + {纷纷|fēnfēn} + ige.', point: 5 },
+    { q: 'Melyik mondat helyes?', a: '{大家|dà·jiā}{纷纷|fēn fēn}{表示|biǎo shì}{同意|tóng yì}。', wrong: ['{他|tā}{纷纷|fēn fēn}{表示|biǎo shì}{同意|tóng yì}。', '{纷纷|fēn fēn}{我|wǒ}{表示|biǎo shì}{同意|tóng yì}。', '{她|tā}{一|yí}{个|ge}{人|rén}{纷纷|fēn fēn}{同意|tóng yì}{了|le}。'], why: 'A {纷纷|fēnfēn} többes alanyt kíván.', point: 5 },
+    { q: 'Mit jelent a {除夕|chúxī}?', a: 'a holdújév előestéje', wrong: ['a holdújév első napja', 'a Holdünnep', 'a lampionünnep'], why: '{除夕晚上|chúxī wǎnshang} „szilveszter este".' },
+    { q: 'Miért hagynak meg a halból egy kicsit?', a: 'a hangzása miatt', wrong: ['mert túl sok volt', 'mert nem finom', 'a gyerekeknek marad'], why: '{鱼|yú} = {余|yú}: {年年有余|niánnián yǒu yú}.' },
+    { q: 'Mit jelent a {烟花|yānhuā}?', a: 'tűzijáték', wrong: ['lampion', 'virágcsokor', 'gyertya'], why: '{看烟花|kàn yānhuā} „tűzijátékot néz".' },
+    { q: 'Mit jelent: {过年好|guò nián hǎo}！', a: 'Boldog ünnepeket!', wrong: ['Jó éjszakát!', 'Jó étvágyat!', 'Jó utat!'], why: 'Holdújévi köszöntés.' },
+    { q: 'Mit jelent a {邻居|línjū}?', a: 'szomszéd', wrong: ['rokon', 'vendég', 'kolléga'], why: '{邻居们|línjūmen} „a szomszédok".' },
+    { q: 'Mit jelent a {吉利|jílì}?', a: 'szerencsés', wrong: ['drága', 'hagyományos', 'régi'], why: '{吉利话|jílì huà} „jókívánság".' }
+  ]
+},
+
+/* ════════════════════════════════════════════════════
+   HSK 5 · 8. LECKE — 以便, 进而, 以及, 并且, 由此可见
+   ════════════════════════════════════════════════════ */
+{
+  id: 'l78', no: 78, badge: '8', kicker: 'HSK 5 · 8. lecke', label: 'HSK 5 · 8. lecke',
+  title: 'Kalligráfia a neten — ebből látható, hogy…',
+  lead: 'Online tanulásról beszélsz: célt adsz meg (以便), lépésről lépésre haladsz tovább (进而), írott stílusban sorolsz (以及), cselekvéseket kapcsolsz össze (并且), és következtetést vonsz le (由此可见).',
+  cando: [
+    'Célt adsz meg írott stílusban: …，以便….',
+    'Továbblépést fejezel ki: 先…，进而….',
+    'Megkülönbözteted a 和, 以及 és 并且 használatát.',
+    'Következtetést vonsz le: 由此可见，….'
+  ],
+  intro: [
+    'Anna munka után online kalligráfiaórákra jár: a tanár videón tanít, a házi feladatot pedig fényképen kell elküldeni. Xiao Li kíváncsian kérdezi, hogy lehet ecsettel írni tanulni a képernyő előtt.',
+    'Ebben a leckében az írott, érvelő szövegek kötőszavait tanulod: célhatározás, felsorolás, továbblépés és következtetés.'
+  ],
+  dialogue: {
+    title: 'Ecset és képernyő',
+    scene: 'Csütörtök este, munkaidő vége az irodában. Xiao Li és Anna.',
+    lines: [
+      { who: 'Xiao Li', zh: '{安娜|Ān·nà}，{你|nǐ}{最近|zuì·jìn}{下|xià}{班|bān}{后|hòu}{总是|zǒng·shì}{急|jí}{着|zhe}{回|huí}{家|jiā}，{做|zuò}{什么|shén·me}{呢|ne}？', hu: 'Anna, mostanában munka után mindig sietsz haza. Mit csinálsz?' },
+      { who: 'Anna', zh: '{我|wǒ}{在|zài}{网上|wǎng shàng}{学|xué}{书法|shū fǎ}。{老师|lǎo·shī}{把|bǎ}{课|kè}{都|dōu}{录|lù}{成|chéng}{视频|shì pín}，{以便|yǐ biàn}{学生|xué·sheng}{随时|suí shí}{复习|fù·xí}。', hu: 'Online kalligráfiát tanulok. A tanár minden órát videóra vesz, hogy a diákok bármikor ismételhessenek.' },
+      { who: 'Xiao Li', zh: '{在|zài}{网上|wǎng shàng}{学|xué}{得|de}{会|huì}{吗|ma}？{写|xiě}{字|zì}{不|bú}{是|shì}{需要|xū·yào}{老师|lǎo·shī}{在|zài}{旁边|páng·biān}{看|kàn}{吗|ma}？', hu: 'Lehet ezt neten megtanulni? Írástanuláshoz nem kell, hogy a tanár ott álljon melletted?' },
+      { who: 'Anna', zh: '{可以|kě·yǐ}{把|bǎ}{作业|zuò·yè}{拍|pāi}{照|zhào}{发|fā}{给|gěi}{老师|lǎo·shī}，{老师|lǎo·shī}{会|huì}{指|zhǐ}{出|chū}{问题|wèn·tí}，{并且|bìng qiě}{给|gěi}{你|nǐ}{示范|shì fàn}。', hu: 'A házi feladatot lefényképezve elküldöd a tanárnak, ő megmutatja a hibákat, és be is mutatja, hogyan kell.' },
+      { who: 'Xiao Li', zh: '{听|tīng}{起|qǐ}{来|lai}{不错|bú cuò}。{你|nǐ}{学|xué}{了|le}{多|duō}{久|jiǔ}{了|le}？', hu: 'Jól hangzik. Mióta tanulod?' },
+      { who: 'Anna', zh: '{三|sān}{个|ge}{月|yuè}。{我|wǒ}{先|xiān}{学|xué}{了|le}{基本|jī běn}{笔画|bǐ huà}，{进而|jìn ér}{学|xué}{写|xiě}{简单|jiǎn·dān}{的|de}{字|zì}。{现在|xiàn·zài}{能|néng}{写|xiě}“{春|chūn}”“{福|fú}”{以及|yǐ jí}{自己|zì·jǐ}{的|de}{中文|Zhōng·wén}{名字|míng·zi}{了|le}。', hu: 'Három hónapja. Először az alapvonásokat tanultam, aztán erre építve egyszerű írásjegyeket. Most már le tudom írni a „tavasz", a „szerencse" jegyet, valamint a saját kínai nevemet.' },
+      { who: 'Xiao Li', zh: '{由此可见|yóu cǐ kě jiàn}，{只要|zhǐ yào}{方法|fāng·fǎ}{对|duì}，{在|zài}{网上|wǎng shàng}{也|yě}{能|néng}{学|xué}{好|hǎo}。', hu: 'Ebből látszik, hogy ha jó a módszer, a neten is jól meg lehet tanulni.' }
+    ],
+    notes: [
+      'A {书法|shūfǎ} „kalligráfia, szépírás", a {笔画|bǐhuà} „vonás" (az írásjegy egy-egy tolltörlése).',
+      'A {示范|shìfàn} „bemutat (mintát ad)", az {指出|zhǐchū} „rámutat, megmutat (hibát)".',
+      'Az {急着回家|jízhe huí jiā} „siet haza": az ige + {着|zhe} + ige szerkezetben az első ige a módot adja meg.'
+    ]
+  },
+  points: [
+    {
+      title: '{以便|yǐbiàn}', sub: 'azért, hogy (könnyebben); hogy … tudjon',
+      pattern: 'teendő，{以便|yǐ biàn} + elérendő cél',
+      body: 'Az {以便|yǐbiàn} a második tagmondat elején a <b>célt</b> adja meg, amit az első rész lehetővé tesz: {老师把课录成视频，以便学生随时复习|lǎoshī bǎ kè lù chéng shìpín, yǐbiàn xuésheng suíshí fùxí} „…, hogy a diákok bármikor ismételhessenek". Írott stílusú. Az előző leckékben tanult {以免|yǐmiǎn} épp az ellenkezője: azt adja meg, amit el akarunk kerülni.',
+      tables: [
+        { caption: 'Cél vagy elkerülés?',
+          head: ['', 'Mit vezet be?', 'Példa'],
+          rows: [
+            ['{以便|yǐ biàn}', 'az elérendő célt', '{以便|yǐ biàn}{复习|fù·xí}'],
+            ['{以免|yǐ miǎn}', 'az elkerülendő bajt', '{以免|yǐ miǎn}{忘|wàng}{了|le}']
+          ] }
+      ],
+      examples: [
+        { zh: '{老师|lǎo·shī}{把|bǎ}{课|kè}{录|lù}{成|chéng}{视频|shì pín}，{以便|yǐ biàn}{学生|xué·sheng}{随时|suí shí}{复习|fù·xí}。', hu: 'A tanár videóra veszi az órákat, hogy a diákok bármikor ismételhessenek.' },
+        { zh: '{请|qǐng}{留|liú}{下|xià}{您|nín}{的|de}{电话|diàn·huà}，{以便|yǐ biàn}{我们|wǒ·men}{联系|lián·xì}{您|nín}。', hu: 'Kérjük, hagyja meg a telefonszámát, hogy kapcsolatba léphessünk önnel.' }
+      ]
+    },
+    {
+      title: '{进而|jìn\'ér}', sub: 'majd erre építve, ezután továbblépve',
+      pattern: '(elsőként) A，{进而|jìn ér} + B (a következő, magasabb lépés)',
+      body: 'Az {进而|jìn\'ér} a <b>következő, magasabb lépést</b> vezeti be, amely az előzőre épül: {先学了基本笔画，进而学写简单的字|xiān xué le jīběn bǐhuà, jìn\'ér xué xiě jiǎndān de zì} „előbb az alapvonásokat tanultam, aztán erre építve egyszerű jegyeket", {了解中国文化，进而爱上中国|liǎojiě Zhōngguó wénhuà, jìn\'ér ài shang Zhōngguó} „megismeri a kínai kultúrát, majd meg is szereti Kínát". Írott, érvelő szövegekben gyakori.',
+      examples: [
+        { zh: '{我|wǒ}{先|xiān}{学|xué}{了|le}{基本|jī běn}{笔画|bǐ huà}，{进而|jìn ér}{学|xué}{写|xiě}{简单|jiǎn·dān}{的|de}{字|zì}。', hu: 'Előbb az alapvonásokat tanultam, aztán erre építve egyszerű írásjegyeket.' },
+        { zh: '{很|hěn}{多|duō}{人|rén}{先|xiān}{了解|liǎo·jiě}{中国|Zhōng·guó}{文化|wén·huà}，{进而|jìn ér}{开始|kāi·shǐ}{学|xué}{汉语|Hàn·yǔ}。', hu: 'Sokan előbb a kínai kultúrát ismerik meg, aztán ebből kiindulva elkezdenek kínaiul tanulni.' }
+      ]
+    },
+    {
+      title: '{以及|yǐjí}', sub: 'valamint, és (írott felsorolás)',
+      pattern: 'A、B {以及|yǐ jí} C',
+      body: 'Az {以及|yǐjí} a felsorolás utolsó tagja elé kerül, írott stílusban: {能写“春”“福”以及自己的名字|néng xiě „chūn" „fú" yǐjí zìjǐ de míngzi} „a tavasz és a szerencse jegyét, valamint a nevemet". Gyakran kissé elkülöníti az utolsó tagot, mint egy új csoportot: {时间、地点以及参加的人|shíjiān, dìdiǎn yǐjí cānjiā de rén} „az idő, a hely, valamint a résztvevők".',
+      examples: [
+        { zh: '{我|wǒ}{能|néng}{写|xiě}“{春|chūn}”“{福|fú}”{以及|yǐ jí}{自己|zì·jǐ}{的|de}{名字|míng·zi}。', hu: 'Le tudom írni a „tavasz" és a „szerencse" jegyet, valamint a saját nevemet.' },
+        { zh: '{请|qǐng}{写|xiě}{清楚|qīng·chu}{时间|shí·jiān}、{地点|dì diǎn}{以及|yǐ jí}{参加|cān·jiā}{的|de}{人|rén}。', hu: 'Kérjük, írja le pontosan az időt, a helyet, valamint a résztvevőket.' }
+      ]
+    },
+    {
+      title: '{并且|bìngqiě}', sub: 'és (ráadásul) — igék, mondatok között',
+      pattern: 'ige 1 / tagmondat 1，{并且|bìng qiě} + ige 2 / tagmondat 2',
+      body: 'A {并且|bìngqiě} <b>cselekvéseket, tagmondatokat</b> kapcsol össze, gyakran fokozással: {老师会指出问题，并且给你示范|lǎoshī huì zhǐchū wèntí, bìngqiě gěi nǐ shìfàn} „a tanár rámutat a hibákra, és be is mutatja, hogyan kell". Főneveket nem köt össze: azokhoz {和|hé} vagy írottan {以及|yǐjí} kell.',
+      tables: [
+        { caption: '„És" háromféleképpen',
+          head: ['', 'Mit köt össze?', 'Példa'],
+          rows: [
+            ['{和|hé}', 'főneveket', '{苹果|píng·guǒ}{和|hé}{香蕉|xiāng jiāo}'],
+            ['{以及|yǐ jí}', 'főneveket (írott, felsorolás vége)', 'A、B{以及|yǐ jí}C'],
+            ['{并且|bìng qiě}', 'igéket, tagmondatokat', '{指出|zhǐ chū}{问题|wèn·tí}，{并且|bìng qiě}{示范|shì fàn}']
+          ] }
+      ],
+      examples: [
+        { zh: '{老师|lǎo·shī}{会|huì}{指|zhǐ}{出|chū}{问题|wèn·tí}，{并且|bìng qiě}{给|gěi}{你|nǐ}{示范|shì fàn}。', hu: 'A tanár rámutat a hibákra, és be is mutatja, hogyan kell.' },
+        { zh: '{他|tā}{同意|tóng yì}{了|le}{我们|wǒ·men}{的|de}{计划|jì·huà}，{并且|bìng qiě}{马上|mǎ·shàng}{开始|kāi·shǐ}{准备|zhǔn·bèi}。', hu: 'Jóváhagyta a tervünket, és azonnal hozzá is látott az előkészítéshez.' }
+      ],
+      mistakes: [
+        { bad: '{我|wǒ}{买|mǎi}{了|le}{苹果|píng·guǒ}{并且|bìng qiě}{香蕉|xiāng jiāo}。', good: '{我|wǒ}{买|mǎi}{了|le}{苹果|píng·guǒ}{和|hé}{香蕉|xiāng jiāo}。', why: 'Főneveket {和|hé} köt össze, nem {并且|bìngqiě}.' }
+      ]
+    },
+    {
+      title: '{由此可见|yóucǐ kějiàn}', sub: 'ebből látható, hogy …',
+      pattern: '(tények)，{由此可见|yóu cǐ kě jiàn}，+ következtetés',
+      body: 'Az {由此可见|yóucǐ kějiàn} szó szerint „ebből látható": az előbb felsorolt tényekből <b>következtetést</b> von le: {由此可见，只要方法对，在网上也能学好|yóucǐ kějiàn, zhǐyào fāngfǎ duì, zài wǎng shang yě néng xué hǎo} „ebből látszik, hogy ha jó a módszer, a neten is meg lehet tanulni". Fogalmazásokban, beszámolókban kedvelt fordulat; rövidebb párja a {可见|kějiàn}.',
+      examples: [
+        { zh: '{由此可见|yóu cǐ kě jiàn}，{只要|zhǐ yào}{方法|fāng·fǎ}{对|duì}，{在|zài}{网上|wǎng shàng}{也|yě}{能|néng}{学|xué}{好|hǎo}。', hu: 'Ebből látszik, hogy ha jó a módszer, a neten is jól meg lehet tanulni.' },
+        { zh: '{这|zhè}{家|jiā}{店|diàn}{每天|měi tiān}{都|dōu}{有|yǒu}{很|hěn}{多|duō}{人|rén}{排|pái}{队|duì}，{由此可见|yóu cǐ kě jiàn}{他们|tā·men}{的|de}{菜|cài}{很|hěn}{受|shòu}{欢迎|huān·yíng}。', hu: 'Ennél az étteremnél minden nap sorban állnak, ebből látható, hogy az ételeik nagyon népszerűek.' }
+      ]
+    }
+  ],
+  phrases: [
+    { zh: '{熟能生巧|shú néng shēng qiǎo}。', hu: 'Gyakorlat teszi a mestert.' },
+    { zh: '{请|qǐng}{您|nín}{指|zhǐ}{点|diǎn}{一下|yí xià}。', hu: 'Kérem, adjon tanácsot.' },
+    { zh: '{这|zhè}{个|ge}{字|zì}{写|xiě}{得|de}{很|hěn}{漂亮|piào·liang}！', hu: 'Ez az írásjegy nagyon szépen sikerült!' },
+    { zh: '{慢慢|màn màn}{来|lái}，{别|bié}{着急|zháo jí}。', hu: 'Csak lassan, ne siess.' }
+  ],
+  words: [
+    { title: 'Szavak',
+      items: [
+        { zh: '{以便|yǐ biàn}', pinyin: 'yǐbiàn', hu: 'azért, hogy (könnyebben)' },
+        { zh: '{进而|jìn ér}', pinyin: 'jìn\'ér', hu: 'ezután, erre építve' },
+        { zh: '{以及|yǐ jí}', pinyin: 'yǐjí', hu: 'valamint' },
+        { zh: '{并且|bìng qiě}', pinyin: 'bìngqiě', hu: 'és (ráadásul)' },
+        { zh: '{由此可见|yóu cǐ kě jiàn}', pinyin: 'yóucǐ kějiàn', hu: 'ebből látható' },
+        { zh: '{书法|shū fǎ}', pinyin: 'shūfǎ', hu: 'kalligráfia' },
+        { zh: '{视频|shì pín}', pinyin: 'shìpín', hu: 'videó' },
+        { zh: '{录|lù}', pinyin: 'lù', hu: 'rögzít, felvesz' },
+        { zh: '{示范|shì fàn}', pinyin: 'shìfàn', hu: 'bemutat (mintát ad)' },
+        { zh: '{指出|zhǐ chū}', pinyin: 'zhǐchū', hu: 'rámutat' },
+        { zh: '{笔画|bǐ huà}', pinyin: 'bǐhuà', hu: 'vonás (írásjegyben)' },
+        { zh: '{基本|jī běn}', pinyin: 'jīběn', hu: 'alapvető, alap-' }
+      ] },
+    { title: 'Ráadás',
+      items: [
+        { zh: '{网课|wǎng kè}', pinyin: 'wǎngkè', hu: 'online óra' },
+        { zh: '{毛笔|máo bǐ}', pinyin: 'máobǐ', hu: 'ecset (íráshoz)' },
+        { zh: '{墨|mò}', pinyin: 'mò', hu: 'tus' },
+        { zh: '{字帖|zì tiè}', pinyin: 'zìtiè', hu: 'írásminta-füzet' }
+      ] }
+  ],
+  culture: [
+    { title: 'A dolgozószoba négy kincse', text: 'A kalligráfia eszközeit {文房四宝|wénfáng sìbǎo} „a dolgozószoba négy kincse" néven ismerik: ecset ({笔|bǐ}), tus ({墨|mò}), papír ({纸|zhǐ}) és dörzskő ({砚|yàn}). A kínai kalligráfia nemcsak szép írás, hanem önálló művészet: a vonások ereje és ritmusa az író jellemét is tükrözi.' },
+    { title: 'Tanulás a képernyőn', text: 'Kínában rendkívül népszerűek az online kurzusok ({网课|wǎngkè}): diákok, dolgozók és nyugdíjasok is tanulnak esténként nyelvet, programozást, festést vagy kalligráfiát. A tanárok gyakran élőben közvetítik az órát, a diákok pedig közben kérdezhetnek.' }
+  ],
+  reading: {
+    title: '{在|zài}{网上|wǎng shàng}{学|xué}{书法|shū fǎ}', titleHu: 'Kalligráfia a neten',
+    text: [
+      { zh: '{安娜|Ān·nà}{一直|yì zhí}{想|xiǎng}{学|xué}{书法|shū fǎ}，{可是|kě·shì}{工作|gōng·zuò}{太|tài}{忙|máng}，{没|méi}{时间|shí·jiān}{去|qù}{上|shàng}{课|kè}。', hu: 'Anna régóta szeretett volna kalligráfiát tanulni, de túl sok volt a munkája, nem volt ideje órákra járni.' },
+      { zh: '{后来|hòu·lái}{她|tā}{找|zhǎo}{到|dào}{了|le}{一|yí}{个|ge}{网课|wǎng kè}，{老师|lǎo·shī}{每|měi}{周|zhōu}{上|shàng}{两|liǎng}{次|cì}{课|kè}，{并且|bìng qiě}{把|bǎ}{课|kè}{录|lù}{下|xià}{来|lái}，{以便|yǐ biàn}{学生|xué·sheng}{复习|fù·xí}。', hu: 'Aztán talált egy online kurzust: a tanár hetente kétszer tart órát, és fel is veszi, hogy a diákok ismételhessenek.' },
+      { zh: '{她|tā}{先|xiān}{练|liàn}{了|le}{一|yí}{个|ge}{月|yuè}{笔画|bǐ huà}，{进而|jìn ér}{开始|kāi·shǐ}{写|xiě}{完整|wán zhěng}{的|de}{字|zì}。', hu: 'Egy hónapig a vonásokat gyakorolta, aztán erre építve teljes írásjegyeket kezdett írni.', par: true },
+      { zh: '{现在|xiàn·zài}{她|tā}{能|néng}{写|xiě}“{春|chūn}”“{福|fú}”“{和|hé}”{以及|yǐ jí}{十|shí}{几|jǐ}{个|ge}{常用|cháng yòng}{的|de}{字|zì}。', hu: 'Most már le tudja írni a „tavasz", a „szerencse", a „harmónia" jegyet, valamint még tucatnyi gyakori írásjegyet.' },
+      { zh: '{春节|chūn jié}{的|de}{时候|shí·hou}，{她|tā}{把|bǎ}{自己|zì·jǐ}{写|xiě}{的|de}“{福|fú}”{送|sòng}{给|gěi}{了|le}{林静|Lín Jìng}{的|de}{父母|fù·mǔ}。{由此可见|yóu cǐ kě jiàn}，{坚持|jiān·chí}{就|jiù}{会|huì}{有|yǒu}{收获|shōu·huò}。', hu: 'A tavaszi ünnepen a saját kezűleg írt „szerencse" jegyet ajándékozta Lin Jing szüleinek. Ebből látszik: aki kitart, az eredményt ér el.', par: true }
+    ],
+    words: [ { zh: '{完整|wán zhěng}', hu: 'teljes, egész' } ],
+    questions: [
+      { q: 'Miért nem járt Anna kalligráfiaórára?', a: 'túl sok volt a munkája', wrong: ['nem érdekelte', 'túl drága volt', 'nem talált tanárt'], why: '{工作太忙，没时间去上课|gōngzuò tài máng, méi shíjiān qù shàng kè}.' },
+      { q: 'Miért veszi fel a tanár az órákat?', a: 'hogy a diákok ismételhessenek', wrong: ['hogy eladja őket', 'mert nem tud élőben tanítani', 'hogy a szülők lássák'], why: '{以便学生复习|yǐbiàn xuésheng fùxí}.' },
+      { q: 'Mit gyakorolt Anna az első hónapban?', a: 'a vonásokat', wrong: ['a nevét', 'a „szerencse" jegyet', 'a tónusokat'], why: '{先练了一个月笔画|xiān liàn le yí ge yuè bǐhuà}.' },
+      { q: 'Mit ajándékozott Anna Lin Jing szüleinek?', a: 'egy saját kezűleg írt „szerencse" jegyet', wrong: ['egy ecsetkészletet', 'egy könyvet', 'egy piros borítékot'], why: '{把自己写的“福”送给了林静的父母|bǎ zìjǐ xiě de „fú" sòng gěi le Lín Jìng de fùmǔ}.' }
+    ]
+  },
+  quiz: [
+    { q: '„A tanár videóra veszi az órákat, hogy a diákok ismételhessenek."', a: '{老师|lǎo·shī}{把|bǎ}{课|kè}{录|lù}{成|chéng}{视频|shì pín}，{以便|yǐ biàn}{学生|xué·sheng}{复习|fù·xí}。', wrong: ['{老师|lǎo·shī}{把|bǎ}{课|kè}{录|lù}{成|chéng}{视频|shì pín}，{以免|yǐ miǎn}{学生|xué·sheng}{复习|fù·xí}。', '{以便|yǐ biàn}{老师|lǎo·shī}{把|bǎ}{课|kè}{录|lù}{成|chéng}{视频|shì pín}，{学生|xué·sheng}{复习|fù·xí}{了|le}。', '{老师|lǎo·shī}{以便|yǐ biàn}{把|bǎ}{课|kè}{视频|shì pín}{录|lù}{成|chéng}，{学生|xué·sheng}{复习|fù·xí}。'], why: 'Teendő, {以便|yǐbiàn} + cél.', point: 1 },
+    { q: 'Mi a különbség az {以便|yǐbiàn} és az {以免|yǐmiǎn} között?', a: 'az egyik célt, a másik elkerülendőt vezet be', wrong: ['semmi, szinonimák', 'az egyik múlt, a másik jövő', 'az egyik kérdés, a másik felelet'], why: '{以便|yǐbiàn} „hogy", {以免|yǐmiǎn} „nehogy".', point: 1 },
+    { q: '„Előbb az alapvonásokat tanultam, aztán erre építve egyszerű jegyeket."', a: '{我|wǒ}{先|xiān}{学|xué}{了|le}{基本|jī běn}{笔画|bǐ huà}，{进而|jìn ér}{学|xué}{写|xiě}{简单|jiǎn·dān}{的|de}{字|zì}。', wrong: ['{我|wǒ}{进而|jìn ér}{学|xué}{了|le}{基本|jī běn}{笔画|bǐ huà}，{先|xiān}{学|xué}{写|xiě}{简单|jiǎn·dān}{的|de}{字|zì}。', '{进而|jìn ér}{我|wǒ}{先|xiān}{基本|jī běn}{笔画|bǐ huà}，{简单|jiǎn·dān}{的|de}{字|zì}{学|xué}{写|xiě}。', '{我|wǒ}{先|xiān}{学|xué}{了|le}{基本|jī běn}{笔画|bǐ huà}，{以免|yǐ miǎn}{学|xué}{写|xiě}{简单|jiǎn·dān}{的|de}{字|zì}。'], why: '{先|xiān} A, {进而|jìn\'ér} B.', point: 2 },
+    { q: 'Mit vezet be az {进而|jìn\'ér}?', a: 'a következő lépést', wrong: ['a cselekvés okát', 'egy ellentétet', 'egy feltételt'], why: '„Erre építve, továbblépve".', point: 2 },
+    { q: '„Az idő, a hely, valamint a résztvevők." (írott)', a: '{时间|shí·jiān}、{地点|dì diǎn}{以及|yǐ jí}{参加|cān·jiā}{的|de}{人|rén}', wrong: ['{时间|shí·jiān}、{地点|dì diǎn}{并且|bìng qiě}{参加|cān·jiā}{的|de}{人|rén}', '{以及|yǐ jí}{时间|shí·jiān}、{地点|dì diǎn}{参加|cān·jiā}{的|de}{人|rén}', '{时间|shí·jiān}{以及|yǐ jí}、{地点|dì diǎn}{参加|cān·jiā}{以及|yǐ jí}{的|de}{人|rén}'], why: 'A、B {以及|yǐjí} C.', point: 3 },
+    { q: 'Hová kerül az {以及|yǐjí} a felsorolásban?', a: 'az utolsó tag elé', wrong: ['az első tag elé', 'minden tag közé', 'a felsorolás végére'], why: 'A、B {以及|yǐjí} C.', point: 3 },
+    { q: 'Melyik mondat helyes?', a: '{我|wǒ}{买|mǎi}{了|le}{苹果|píng·guǒ}{和|hé}{香蕉|xiāng jiāo}。', wrong: ['{我|wǒ}{买|mǎi}{了|le}{苹果|píng·guǒ}{并且|bìng qiě}{香蕉|xiāng jiāo}。', '{我|wǒ}{买|mǎi}{了|le}{并且|bìng qiě}{苹果|píng·guǒ}{香蕉|xiāng jiāo}。', '{并且|bìng qiě}{我|wǒ}{苹果|píng·guǒ}{买|mǎi}{了|le}{香蕉|xiāng jiāo}。'], why: 'Főneveket {和|hé} köt össze.', point: 4 },
+    { q: '„Rámutat a hibákra, és be is mutatja, hogyan kell."', a: '{他|tā}{指|zhǐ}{出|chū}{问题|wèn·tí}，{并且|bìng qiě}{给|gěi}{你|nǐ}{示范|shì fàn}。', wrong: ['{他|tā}{指|zhǐ}{出|chū}{问题|wèn·tí}，{以及|yǐ jí}{给|gěi}{你|nǐ}{示范|shì fàn}{了|le}{吗|ma}。', '{并且|bìng qiě}{他|tā}{问题|wèn·tí}{指|zhǐ}{出|chū}，{示范|shì fàn}{给|gěi}{你|nǐ}。', '{他|tā}{并且|bìng qiě}{指|zhǐ}{出|chū}{给|gěi}{你|nǐ}{问题|wèn·tí}{示范|shì fàn}。'], why: 'Cselekvések között {并且|bìngqiě}.', point: 4 },
+    { q: '„Ebből látszik, hogy ha jó a módszer, a neten is meg lehet tanulni."', a: '{由此可见|yóu cǐ kě jiàn}，{只要|zhǐ yào}{方法|fāng·fǎ}{对|duì}，{在|zài}{网上|wǎng shàng}{也|yě}{能|néng}{学|xué}{好|hǎo}。', wrong: ['{只要|zhǐ yào}{由此可见|yóu cǐ kě jiàn}{方法|fāng·fǎ}{对|duì}，{在|zài}{网上|wǎng shàng}{也|yě}{能|néng}{学|xué}{好|hǎo}。', '{由此可见|yóu cǐ kě jiàn}{方法|fāng·fǎ}，{在|zài}{网上|wǎng shàng}{只要|zhǐ yào}{对|duì}{学|xué}{好|hǎo}{能|néng}。', '{在|zài}{网上|wǎng shàng}{由此|yóu cǐ}{学|xué}{好|hǎo}，{可见|kě jiàn}{方法|fāng·fǎ}{只要|zhǐ yào}{对|duì}{能|néng}。'], why: '{由此可见|yóucǐ kějiàn}, + következtetés.', point: 5 },
+    { q: 'Mit jelent az {由此可见|yóucǐ kějiàn}?', a: 'ebből látható', wrong: ['ennek ellenére', 'ettől kezdve', 'emiatt nem'], why: 'Következtetést vezet be.', point: 5 },
+    { q: 'Mit jelent a {书法|shūfǎ}?', a: 'kalligráfia', wrong: ['könyvtár', 'helyesírás', 'nyomtatás'], why: '{在网上学书法|zài wǎng shang xué shūfǎ}.' },
+    { q: 'Mit jelent a {笔画|bǐhuà}?', a: 'vonás (írásjegyben)', wrong: ['festmény', 'ceruza', 'kézírás'], why: '{基本笔画|jīběn bǐhuà} „alapvonások".' },
+    { q: 'Mit jelent a {视频|shìpín}?', a: 'videó', wrong: ['fénykép', 'hangfelvétel', 'üzenet'], why: '{录成视频|lù chéng shìpín} „videóra vesz".' },
+    { q: 'Mit jelent: {熟能生巧|shú néng shēng qiǎo}。', a: 'Gyakorlat teszi a mestert.', wrong: ['Lassan járj, tovább érsz.', 'Minden kezdet nehéz.', 'Aki keres, talál.'], why: 'Szó szerint „a jártasságból ügyesség születik".' },
+    { q: 'Mit jelent a {示范|shìfàn}?', a: 'bemutat (mintát ad)', wrong: ['kijavít', 'értékel', 'megtilt'], why: '{给你示范|gěi nǐ shìfàn} „megmutatja neked".' },
+    { q: 'Mit jelent a {基本|jīběn}?', a: 'alapvető', wrong: ['bonyolult', 'különleges', 'új'], why: '{基本笔画|jīběn bǐhuà} „alapvonások".' }
+  ]
 }
 
 ];
