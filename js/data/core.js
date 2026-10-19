@@ -715,7 +715,29 @@ const HANZIFLOW_PATH = [
     module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l52&round=listen' },
   { id: 'l52-read', glyph: '读', title: 'Olvasás: Lakáskeresés',
     desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
-    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l52&round=read' }
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l52&round=read' },
+
+  // ── HSK 4 · 3. lecke ──
+  { id: 'l53-lesson', glyph: '按', title: 'Magyarázat: 按照, 根据, 通过, 进行, 由',
+    desc: 'Értekezlet a cégnél: terv szerint, adatok alapján, valami révén; hivatalos stílus és felelős.',
+    module: 'lesson', href: 'pages/lesson.html?id=l53' },
+  { id: 'l53-listen', glyph: '听', title: 'Hallás: hétfői értekezlet',
+    desc: 'A lecke mondatai hang után: mit jelent, amit hallasz?',
+    module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l53&round=listen' },
+  { id: 'l53-read', glyph: '读', title: 'Olvasás: Az első értekezlet',
+    desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l53&round=read' },
+
+  // ── HSK 4 · 4. lecke ──
+  { id: 'l54-lesson', glyph: '辣', title: 'Magyarázat: 尽管…还是, 却, 而, 并不, 实在',
+    desc: 'Vacsora a kollégákkal: bár…, mégis…; váratlan ellentét; szembeállítás; cáfolat; nyomaték.',
+    module: 'lesson', href: 'pages/lesson.html?id=l54' },
+  { id: 'l54-listen', glyph: '听', title: 'Hallás: szecsuáni vacsora',
+    desc: 'A lecke mondatai hang után: mit jelent, amit hallasz?',
+    module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l54&round=listen' },
+  { id: 'l54-read', glyph: '读', title: 'Olvasás: A pénteki vacsora',
+    desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l54&round=read' }
 ];
 
 const HANZIFLOW_PATH_UNITS = [
@@ -850,5 +872,9 @@ const HANZIFLOW_PATH_UNITS = [
   { id: 'u-l51', kicker: 'HSK 4 · 1. lecke', title: 'Új város, új munka', sub: '不仅…而且, 既…又, 尤其, 挺…的, …之一',
     steps: ['l51-lesson', 'l51-listen', 'l51-read'] },
   { id: 'u-l52', kicker: 'HSK 4 · 2. lecke', title: 'Lakást bérelek', sub: '无论 / 不管…都, 合适 · 适合, 稍微…一点儿, 光, 任何 · 所有',
-    steps: ['l52-lesson', 'l52-listen', 'l52-read'] }
+    steps: ['l52-lesson', 'l52-listen', 'l52-read'] },
+  { id: 'u-l53', kicker: 'HSK 4 · 3. lecke', title: 'Az első értekezlet', sub: '按照, 根据, 通过, 进行, 由 + valaki + ige',
+    steps: ['l53-lesson', 'l53-listen', 'l53-read'] },
+  { id: 'u-l54', kicker: 'HSK 4 · 4. lecke', title: 'Vacsora a kollégákkal', sub: '尽管…还是 / 可是, 却, 而, 并不 · 并没有, 实在',
+    steps: ['l54-lesson', 'l54-listen', 'l54-read'] }
 ];

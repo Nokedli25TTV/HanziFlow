@@ -10190,6 +10190,331 @@ const HANZIFLOW_COURSE = [
     { q: 'Mit jelent a {租|zū}?', a: 'bérel', wrong: ['elad', 'épít', 'kifest'], why: '{租房子|zū fángzi} „lakást bérel".' },
     { q: 'Mit jelent a {家具|jiājù}?', a: 'bútor', wrong: ['háztartási gép', 'szerszám', 'függöny'], why: '{所有的家具都是新的|suǒyǒu de jiājù dōu shì xīn de}.' }
   ]
+},
+/* ════════════════════════════════════════════════════
+   HSK 4 · 3. LECKE — 按照, 根据, 通过, 进行, 由
+   ════════════════════════════════════════════════════ */
+{
+  id: 'l53', no: 53, badge: '3', kicker: 'HSK 4 · 3. lecke', label: 'HSK 4 · 3. lecke',
+  title: 'Az első értekezlet — a terv szerint',
+  lead: 'Értekezleten veszel részt: a terv szerint haladtok (按照计划), adatokra hivatkozol (根据去年的数据), megmondod, minek a révén (通过电子邮件), hivatalos cselekvést említesz (进行讨论), és kiosztod a felelősséget (由安娜负责).',
+  cando: [
+    'Szabály vagy terv szerint cselekszel: 按照….',
+    'Adatra, tényre hivatkozol: 根据….',
+    'Megmondod, minek a révén történik valami: 通过….',
+    'Hivatalos stílusban beszélsz (进行 + cselekvésnév), és megnevezed a felelőst: 由 + valaki + ige.'
+  ],
+  intro: [
+    'Anna első hetén Chen igazgató értekezletet tart: a cég egy magyar partnerrel kezd közös munkát, és ki kell osztani a feladatokat.',
+    'A munkahelyi beszédben gyakoriak a választékos elöljárók: {按照|ànzhào} „szerint (szabály, terv)", {根据|gēnjù} „alapján (adat, tény)", {通过|tōngguò} „révén, útján". A {进行|jìnxíng} és a {由|yóu} a hivatalos stílus jelei.'
+  ],
+  dialogue: {
+    title: 'Hétfői értekezlet',
+    scene: 'Hétfő reggel kilenc óra a tárgyalóban: Chen igazgató, Zhou Jie és Anna.',
+    lines: [
+      { who: 'Chen igazgató', zh: '{今天|jīn·tiān}{我们|wǒ·men}{讨论|tǎo·lùn}{一下|yí xià}{和|hé}{匈牙利|Xiōng·yá·lì}{公司|gōng·sī}{的|de}{合作|hé·zuò}。', hu: 'Ma megbeszéljük az együttműködést a magyar céggel.' },
+      { who: 'Zhou Jie', zh: '{根据|gēn·jù}{去年|qù·nián}{的|de}{数据|shù·jù}，{匈牙利|Xiōng·yá·lì}{客户|kè·hù}{最|zuì}{喜欢|xǐ·huan}{我们|wǒ·men}{的|de}{茶叶|chá·yè}。', hu: 'A tavalyi adatok alapján a magyar ügyfelek a teánkat szeretik a legjobban.' },
+      { who: 'Chen igazgató', zh: '{很|hěn}{好|hǎo}。{按照|àn·zhào}{计划|jì·huà}，{下|xià}{个|ge}{月|yuè}{我们|wǒ·men}{要|yào}{和|hé}{他们|tā·men}{进行|jìn·xíng}{第一|dì·yī}{次|cì}{讨论|tǎo·lùn}。', hu: 'Rendben. A terv szerint jövő hónapban tartjuk velük az első megbeszélést.' },
+      { who: 'Anna', zh: '{我|wǒ}{可以|kě·yǐ}{先|xiān}{通过|tōng·guò}{电子邮件|diàn zǐ yóu jiàn}{跟|gēn}{他们|tā·men}{联系|lián·xì}。', hu: 'Előbb e-mailben felvehetem velük a kapcsolatot.' },
+      { who: 'Chen igazgató', zh: '{太|tài}{好|hǎo}{了|le}。{那|nà}{翻译|fān·yì}{的|de}{工作|gōng·zuò}{就|jiù}{由|yóu}{你|nǐ}{负责|fù·zé}{吧|ba}。', hu: 'Nagyszerű. Akkor a fordítás a te feladatod lesz.' },
+      { who: 'Zhou Jie', zh: '{会议|huì·yì}{的|de}{时间|shí·jiān}{和|hé}{地点|dì·diǎn}{由|yóu}{我|wǒ}{来|lái}{安排|ān·pái}。', hu: 'Az időpontot és a helyszínt én intézem.' },
+      { who: 'Chen igazgató', zh: '{好|hǎo}。{大家|dà·jiā}{按照|àn·zhào}{这|zhè}{个|ge}{计划|jì·huà}{做|zuò}，{有|yǒu}{问题|wèn·tí}{马上|mǎ·shàng}{告诉|gào·su}{我|wǒ}。', hu: 'Jó. Mindenki e szerint a terv szerint dolgozik; ha gond van, azonnal szóljatok.' }
+    ],
+    notes: [
+      'A {讨论|tǎolùn} „megbeszél, megvitat", a {合作|hézuò} „együttműködés", a {客户|kèhù} „ügyfél".',
+      'A {负责|fùzé} „felel valamiért": {谁负责|shéi fùzé}？ „Ki a felelős?"',
+      'Az {安排|ānpái} „megszervez, beoszt; program": {时间由我来安排|shíjiān yóu wǒ lái ānpái} „az időpontot én intézem".'
+    ]
+  },
+  points: [
+    {
+      title: '{按照|ànzhào}', sub: '(szabály, terv) szerint',
+      pattern: '{按照|àn·zhào} + szabály / terv / szokás + …',
+      body: 'Az {按照|ànzhào} azt mondja meg, mihez igazodik a cselekvés: szabályhoz, tervhez, szokáshoz, utasításhoz. {按照计划，下个月进行第一次讨论|ànzhào jìhuà, xià ge yuè jìnxíng dì yī cì tǎolùn} „a terv szerint jövő hónapban tartjuk az első megbeszélést", {请按照规定做|qǐng ànzhào guīdìng zuò} „kérem, a szabály szerint járjon el". Állhat a mondat elején vagy az alany után.',
+      examples: [
+        { zh: '{按照|àn·zhào}{计划|jì·huà}，{下|xià}{个|ge}{月|yuè}{我们|wǒ·men}{要|yào}{和|hé}{他们|tā·men}{见面|jiàn miàn}。', hu: 'A terv szerint jövő hónapban találkozunk velük.' },
+        { zh: '{大家|dà·jiā}{按照|àn·zhào}{这|zhè}{个|ge}{计划|jì·huà}{做|zuò}。', hu: 'Mindenki e szerint a terv szerint dolgozik.' }
+      ]
+    },
+    {
+      title: '{根据|gēnjù}', sub: '(adat, tény) alapján',
+      pattern: '{根据|gēn·jù} + adat / tény / tapasztalat，…',
+      body: 'A {根据|gēnjù} arra utal, amiből következtetünk: adatra, hírre, tapasztalatra. {根据去年的数据|gēnjù qùnián de shùjù} „a tavalyi adatok alapján", {根据天气预报，明天会下雨|gēnjù tiānqì yùbào, míngtiān huì xià yǔ} „az előrejelzés alapján holnap esni fog". Az {按照|ànzhào} szabályt követ, a {根据|gēnjù} forrásra támaszkodik; a „terv szerint" inkább {按照|ànzhào}, az „adatok alapján" inkább {根据|gēnjù}.',
+      tables: [
+        { caption: 'Szabály vagy forrás?',
+          head: ['Szó', 'Mire utal?', 'Példa'],
+          rows: [
+            ['{按照|àn·zhào}', 'szabály, terv, utasítás', '{按照|àn·zhào}{规定|guī·dìng}'],
+            ['{根据|gēn·jù}', 'adat, tény, forrás', '{根据|gēn·jù}{调查|diào·chá}']
+          ] }
+      ],
+      examples: [
+        { zh: '{根据|gēn·jù}{去年|qù·nián}{的|de}{数据|shù·jù}，{客户|kè·hù}{最|zuì}{喜欢|xǐ·huan}{我们|wǒ·men}{的|de}{茶叶|chá·yè}。', hu: 'A tavalyi adatok alapján az ügyfelek a teánkat szeretik a legjobban.' },
+        { zh: '{根据|gēn·jù}{天气|tiān·qì}{预报|yù·bào}，{明天|míng·tiān}{会|huì}{下|xià}{雨|yǔ}。', hu: 'Az előrejelzés alapján holnap esni fog.' }
+      ]
+    },
+    {
+      title: '{通过|tōngguò}', sub: 'révén, útján; átmegy (vizsgán)',
+      pattern: '{通过|tōng·guò} + eszköz / módszer，… · {通过|tōng·guò} + vizsga',
+      body: 'Elöljáróként azt mondja meg, minek a révén történik valami: {通过电子邮件跟他们联系|tōngguò diànzǐ yóujiàn gēn tāmen liánxì} „e-mailen keresztül veszem fel velük a kapcsolatot", {通过朋友，我认识了她|tōngguò péngyou, wǒ rènshi le tā} „egy barátom révén ismertem meg". Igeként „átmegy, sikeresen teljesít": {他通过了考试|tā tōngguò le kǎoshì} „átment a vizsgán".',
+      examples: [
+        { zh: '{我|wǒ}{可以|kě·yǐ}{先|xiān}{通过|tōng·guò}{电子邮件|diàn zǐ yóu jiàn}{跟|gēn}{他们|tā·men}{联系|lián·xì}。', hu: 'Előbb e-mailben felvehetem velük a kapcsolatot.' },
+        { zh: '{她|tā}{通过|tōng·guò}{了|le}{这|zhè}{次|cì}{考试|kǎo shì}。', hu: 'Átment ezen a vizsgán.' }
+      ]
+    },
+    {
+      title: '{进行|jìnxíng}', sub: '(hivatalos) végez, tart',
+      pattern: '{进行|jìn·xíng} + kétszótagú cselekvésnév',
+      body: 'A {进行|jìnxíng} hivatalos stílusban „végrehajt, lefolytat"; utána <b>kétszótagú</b> cselekvést jelentő szó áll, tárgy nélkül: {进行讨论|jìnxíng tǎolùn} „megbeszélést tart", {进行调查|jìnxíng diàochá} „felmérést végez", {进行比赛|jìnxíng bǐsài} „versenyt rendez". Egyszótagú igével nem áll: *{进行看|jìnxíng kàn}. Hétköznapi beszédben egyszerűen az igét mondjuk: {我们讨论一下|wǒmen tǎolùn yíxià}.',
+      examples: [
+        { zh: '{下|xià}{个|ge}{月|yuè}{我们|wǒ·men}{要|yào}{和|hé}{他们|tā·men}{进行|jìn·xíng}{第一|dì·yī}{次|cì}{讨论|tǎo·lùn}。', hu: 'Jövő hónapban tartjuk velük az első megbeszélést.' },
+        { zh: '{学校|xué·xiào}{对|duì}{学生|xué·sheng}{进行|jìn·xíng}{了|le}{一|yí}{次|cì}{调查|diào·chá}。', hu: 'Az iskola felmérést végzett a diákok között.' }
+      ],
+      mistakes: [
+        { bad: '{我们|wǒ·men}{进行|jìn·xíng}{看|kàn}{一下|yí xià}。', good: '{我们|wǒ·men}{看|kàn}{一下|yí xià}。', why: 'A {进行|jìnxíng} után kétszótagú cselekvésnév áll; egyszerű igével nem használjuk.' }
+      ]
+    },
+    {
+      title: '{由|yóu} + valaki + ige', sub: 'valaki által (a felelős)',
+      pattern: 'feladat + {由|yóu} + személy + ({来|lái}) + ige',
+      body: 'A {由|yóu} megnevezi, <b>ki a felelős</b> valamiért: {翻译的工作由你负责|fānyì de gōngzuò yóu nǐ fùzé} „a fordítás a te feladatod", {时间由我来安排|shíjiān yóu wǒ lái ānpái} „az időpontot én intézem". A feladat áll elöl, a végző a {由|yóu} után. Nem szenvedő szerkezet, mint a {被|bèi}: nincs benne kellemetlen történés, csak a munka elosztása.',
+      examples: [
+        { zh: '{翻译|fān·yì}{的|de}{工作|gōng·zuò}{就|jiù}{由|yóu}{你|nǐ}{负责|fù·zé}{吧|ba}。', hu: 'A fordítás akkor a te feladatod lesz.' },
+        { zh: '{会议|huì·yì}{的|de}{时间|shí·jiān}{和|hé}{地点|dì·diǎn}{由|yóu}{我|wǒ}{来|lái}{安排|ān·pái}。', hu: 'Az értekezlet időpontját és helyét én intézem.' }
+      ]
+    }
+  ],
+  phrases: [
+    { zh: '{我们|wǒ·men}{讨论|tǎo·lùn}{一下|yí xià}。', hu: 'Beszéljük meg.' },
+    { zh: '{这|zhè}{件|jiàn}{事|shì}{由|yóu}{我|wǒ}{负责|fù·zé}。', hu: 'Ezért én felelek.' },
+    { zh: '{有|yǒu}{问题|wèn·tí}{马上|mǎ·shàng}{告诉|gào·su}{我|wǒ}。', hu: 'Ha gond van, azonnal szólj.' },
+    { zh: '{一切|yí qiè}{按|àn}{计划|jì·huà}{进行|jìn·xíng}。', hu: 'Minden a terv szerint halad.' }
+  ],
+  words: [
+    { title: 'Szavak',
+      items: [
+        { zh: '{按照|àn·zhào}', pinyin: 'ànzhào', hu: 'szerint (szabály, terv)' },
+        { zh: '{根据|gēn·jù}', pinyin: 'gēnjù', hu: 'alapján; alap' },
+        { zh: '{通过|tōng·guò}', pinyin: 'tōngguò', hu: 'révén; átmegy (vizsgán)' },
+        { zh: '{进行|jìn·xíng}', pinyin: 'jìnxíng', hu: 'végez, tart (hivatalos)' },
+        { zh: '{由|yóu}', pinyin: 'yóu', hu: 'által (a felelős)' },
+        { zh: '{负责|fù·zé}', pinyin: 'fùzé', hu: 'felel valamiért' },
+        { zh: '{讨论|tǎo·lùn}', pinyin: 'tǎolùn', hu: 'megbeszél, megvitat' },
+        { zh: '{合作|hé·zuò}', pinyin: 'hézuò', hu: 'együttműködés' },
+        { zh: '{联系|lián·xì}', pinyin: 'liánxì', hu: 'kapcsolatba lép; kapcsolat' },
+        { zh: '{安排|ān·pái}', pinyin: 'ānpái', hu: 'megszervez; program' },
+        { zh: '{翻译|fān·yì}', pinyin: 'fānyì', hu: 'fordít; fordító' },
+        { zh: '{地点|dì·diǎn}', pinyin: 'dìdiǎn', hu: 'helyszín' }
+      ] },
+    { title: 'Ráadás',
+      items: [
+        { zh: '{客户|kè·hù}', pinyin: 'kèhù', hu: 'ügyfél' },
+        { zh: '{数据|shù·jù}', pinyin: 'shùjù', hu: 'adat' },
+        { zh: '{匈牙利|Xiōng·yá·lì}', pinyin: 'Xiōngyálì', hu: 'Magyarország' },
+        { zh: '{会议|huì·yì}', pinyin: 'huìyì', hu: 'értekezlet' }
+      ] }
+  ],
+  culture: [
+    { title: 'Értekezlet kínai módra', text: 'A kínai cégeknél az értekezleten ({开会|kāihuì}) általában a rangidős vezető beszél elsőként és utolsóként. A fiatalabb kollégák ritkán mondanak nyíltan ellent a főnöknek a többiek előtt; a kifogásokat inkább utána, négyszemközt hozzák szóba.' },
+    { title: 'WeChat a munkában', text: 'Kínában a munkahelyi kapcsolattartás nagy része nem e-mailen, hanem a {微信|Wēixìn} (WeChat) csoportjaiban zajlik. Külföldi partnerekkel viszont az e-mail ({电子邮件|diànzǐ yóujiàn}) a megszokott, hivatalosabb út.' }
+  ],
+  reading: {
+    title: '{第一|dì·yī}{次|cì}{开会|kāi huì}', titleHu: 'Az első értekezlet',
+    text: [
+      { zh: '{星期一|xīng·qī·yī}{上午|shàng·wǔ}，{陈|Chén}{经理|jīng·lǐ}{开|kāi}{了|le}{一|yí}{个|ge}{会|huì}，{讨论|tǎo·lùn}{和|hé}{匈牙利|Xiōng·yá·lì}{公司|gōng·sī}{的|de}{合作|hé·zuò}。', hu: 'Hétfő délelőtt Chen igazgató értekezletet tartott, megbeszélték az együttműködést a magyar céggel.' },
+      { zh: '{根据|gēn·jù}{去年|qù·nián}{的|de}{数据|shù·jù}，{匈牙利|Xiōng·yá·lì}{客户|kè·hù}{最|zuì}{喜欢|xǐ·huan}{他们|tā·men}{的|de}{茶叶|chá·yè}。', hu: 'A tavalyi adatok alapján a magyar ügyfelek a teájukat szeretik a legjobban.' },
+      { zh: '{按照|àn·zhào}{计划|jì·huà}，{下|xià}{个|ge}{月|yuè}{两|liǎng}{家|jiā}{公司|gōng·sī}{要|yào}{进行|jìn·xíng}{第一|dì·yī}{次|cì}{讨论|tǎo·lùn}。', hu: 'A terv szerint jövő hónapban a két cég először ül le tárgyalni.', par: true },
+      { zh: '{翻译|fān·yì}{的|de}{工作|gōng·zuò}{由|yóu}{安娜|Ān·nà}{负责|fù·zé}，{时间|shí·jiān}{和|hé}{地点|dì·diǎn}{由|yóu}{周杰|Zhōu Jié}{安排|ān·pái}。', hu: 'A fordításért Anna felel, az időpontot és a helyszínt Zhou Jie intézi.' },
+      { zh: '{安娜|Ān·nà}{很|hěn}{高兴|gāo·xìng}，{因为|yīn·wèi}{她|tā}{可以|kě·yǐ}{通过|tōng·guò}{这|zhè}{个|ge}{工作|gōng·zuò}{认识|rèn·shi}{很|hěn}{多|duō}{人|rén}。', hu: 'Anna örül, mert ezen a munkán keresztül sok emberrel megismerkedhet.', par: true }
+    ],
+    words: [ { zh: '{开会|kāi huì}', hu: 'értekezletet tart' } ],
+    questions: [
+      { q: 'Miről szólt az értekezlet?', a: 'a magyar céggel való együttműködésről', wrong: ['egy új iroda megnyitásáról', 'a dolgozók fizetéséről', 'a nyári szabadságokról'], why: '{讨论和匈牙利公司的合作|tǎolùn hé Xiōngyálì gōngsī de hézuò}.' },
+      { q: 'Mit szeretnek a magyar ügyfelek a legjobban?', a: 'a cég teáját', wrong: ['a cég porcelánját', 'a cég selymét', 'a cég kávéját'], why: '{最喜欢他们的茶叶|zuì xǐhuan tāmen de cháyè}.' },
+      { q: 'Ki felel a fordításért?', a: 'Anna', wrong: ['Zhou Jie', 'Chen igazgató', 'egy magyar kolléga'], why: '{翻译的工作由安娜负责|fānyì de gōngzuò yóu Ānnà fùzé}.' },
+      { q: 'Miért örül Anna?', a: 'mert sok emberrel megismerkedhet', wrong: ['mert kevesebb lesz a munkája', 'mert hazautazhat Magyarországra', 'mert előléptették'], why: '{可以通过这个工作认识很多人|kěyǐ tōngguò zhège gōngzuò rènshi hěn duō rén}.' }
+    ]
+  },
+  quiz: [
+    { q: '„A terv szerint jövő hónapban találkozunk velük."', a: '{按照|àn·zhào}{计划|jì·huà}，{下|xià}{个|ge}{月|yuè}{我们|wǒ·men}{和|hé}{他们|tā·men}{见面|jiàn miàn}。', wrong: ['{计划|jì·huà}{按照|àn·zhào}，{下|xià}{个|ge}{月|yuè}{我们|wǒ·men}{和|hé}{他们|tā·men}{见面|jiàn miàn}。', '{按照|àn·zhào}{下|xià}{个|ge}{月|yuè}，{我们|wǒ·men}{和|hé}{计划|jì·huà}{见面|jiàn miàn}{他们|tā·men}。', '{我们|wǒ·men}{见面|jiàn miàn}{和|hé}{他们|tā·men}{按照|àn·zhào}，{计划|jì·huà}{下|xià}{个|ge}{月|yuè}。'], why: '{按照|ànzhào} + terv, ….', point: 1 },
+    { q: 'Mihez igazodik a cselekvés az {按照|ànzhào} után?', a: 'szabályhoz, tervhez, utasításhoz', wrong: ['egy pontos időponthoz', 'egy helyszínhez', 'egy tárgy színéhez'], why: '{按照计划|ànzhào jìhuà}, {按照规定|ànzhào guīdìng}.', point: 1 },
+    { q: '„Az előrejelzés alapján holnap esni fog."', a: '{根据|gēn·jù}{天气|tiān·qì}{预报|yù·bào}，{明天|míng·tiān}{会|huì}{下|xià}{雨|yǔ}。', wrong: ['{天气|tiān·qì}{预报|yù·bào}{根据|gēn·jù}，{明天|míng·tiān}{下|xià}{雨|yǔ}{会|huì}。', '{根据|gēn·jù}{明天|míng·tiān}，{天气|tiān·qì}{预报|yù·bào}{会|huì}{下|xià}{雨|yǔ}。', '{明天|míng·tiān}{根据|gēn·jù}{会|huì}{下|xià}{雨|yǔ}{天气|tiān·qì}{预报|yù·bào}。'], why: '{根据|gēnjù} + forrás, ….', point: 2 },
+    { q: 'Melyik illik a hiányzó helyre? ___{去年|qù·nián}{的|de}{数据|shù·jù}，{客户|kè·hù}{最|zuì}{喜欢|xǐ·huan}{茶叶|chá·yè}。', a: '{根据|gēn·jù}', wrong: ['{由|yóu}', '{进行|jìn·xíng}', '{对|duì}'], why: 'Adatra hivatkozunk: {根据|gēnjù}.', point: 2 },
+    { q: '„E-mailben veszem fel velük a kapcsolatot."', a: '{我|wǒ}{通过|tōng·guò}{电子邮件|diàn zǐ yóu jiàn}{跟|gēn}{他们|tā·men}{联系|lián·xì}。', wrong: ['{通过|tōng·guò}{我|wǒ}{联系|lián·xì}{电子邮件|diàn zǐ yóu jiàn}{跟|gēn}{他们|tā·men}。', '{我|wǒ}{电子邮件|diàn zǐ yóu jiàn}{通过|tōng·guò}{他们|tā·men}{跟|gēn}{联系|lián·xì}。', '{我|wǒ}{跟|gēn}{通过|tōng·guò}{他们|tā·men}{联系|lián·xì}{电子邮件|diàn zǐ yóu jiàn}。'], why: '{通过|tōngguò} + eszköz + ige.', point: 3 },
+    { q: 'Mit jelent: {他通过了考试|tā tōngguò le kǎoshì}。', a: 'Átment a vizsgán.', wrong: ['Megbukott a vizsgán.', 'Elhalasztotta a vizsgát.', 'Most tanul a vizsgára.'], why: 'Igeként {通过|tōngguò} „átmegy".', point: 3 },
+    { q: 'Mit jelent: {通过朋友，我认识了她|tōngguò péngyou, wǒ rènshi le tā}。', a: 'Egy barátom révén ismertem meg.', wrong: ['A barátommal együtt ismertem meg.', 'Nem ismerem a barátját.', 'Ő mutatta be nekem a barátját.'], why: '{通过|tōngguò} „révén".', point: 3 },
+    { q: 'Melyik helyes?', a: '{我们|wǒ·men}{进行|jìn·xíng}{讨论|tǎo·lùn}。', wrong: ['{我们|wǒ·men}{进行|jìn·xíng}{看|kàn}。', '{我们|wǒ·men}{进行|jìn·xíng}{吃|chī}{饭|fàn}。', '{我们|wǒ·men}{讨论|tǎo·lùn}{进行|jìn·xíng}{了|le}{吗|ma}。'], why: '{进行|jìnxíng} + kétszótagú cselekvésnév.', point: 4 },
+    { q: 'Mi áll a {进行|jìnxíng} után?', a: 'kétszótagú cselekvésnév, pl. {讨论|tǎolùn}', wrong: ['egyszótagú ige, pl. {看|kàn}', 'személy, pl. {老师|lǎoshī}', 'helyszín, pl. {教室|jiàoshì}'], why: '{进行讨论|jìnxíng tǎolùn}, {进行调查|jìnxíng diàochá}.', point: 4 },
+    { q: '„A fordítás a te feladatod (te felelsz érte)."', a: '{翻译|fān·yì}{的|de}{工作|gōng·zuò}{由|yóu}{你|nǐ}{负责|fù·zé}。', wrong: ['{翻译|fān·yì}{的|de}{工作|gōng·zuò}{被|bèi}{你|nǐ}{负责|fù·zé}{了|le}。', '{由|yóu}{翻译|fān·yì}{的|de}{工作|gōng·zuò}{你|nǐ}{负责|fù·zé}。', '{你|nǐ}{负责|fù·zé}{由|yóu}{翻译|fān·yì}{的|de}{工作|gōng·zuò}。'], why: 'Feladat + {由|yóu} + személy + ige.', point: 5 },
+    { q: 'Mit jelent: {时间由我来安排|shíjiān yóu wǒ lái ānpái}。', a: 'Az időpontot én intézem.', wrong: ['Nincs időm intézkedni.', 'Az időpontot te intézed.', 'Az időpontot elhalasztom.'], why: '{由我来安排|yóu wǒ lái ānpái}.', point: 5 },
+    { q: 'Miben más a {由|yóu}, mint a {被|bèi}?', a: 'a feladat felelősét nevezi meg', wrong: ['ugyanazt jelenti, csak régies', 'csak múlt időben használható', 'csak tárgyak után állhat'], why: 'A {由|yóu} munkaelosztás, nem kellemetlen történés.', point: 5 },
+    { q: 'Mit jelent a {负责|fùzé}?', a: 'felel valamiért', wrong: ['lemond valamiről', 'elfelejt valamit', 'fizet valamiért'], why: '{由你负责|yóu nǐ fùzé} „te felelsz érte".' },
+    { q: 'Mit jelent a {讨论|tǎolùn}?', a: 'megbeszél, megvitat', wrong: ['veszekszik', 'beszédet mond', 'eltitkol'], why: '{我们讨论一下|wǒmen tǎolùn yíxià}.' },
+    { q: 'Mit jelent a {合作|hézuò}?', a: 'együttműködés', wrong: ['verseny', 'szerződésbontás', 'kirándulás'], why: '{和匈牙利公司的合作|hé Xiōngyálì gōngsī de hézuò}.' },
+    { q: 'Mit jelent a {联系|liánxì}?', a: 'kapcsolatba lép', wrong: ['elköltözik', 'elbúcsúzik', 'tanácsot ad'], why: '{跟他们联系|gēn tāmen liánxì}.' }
+  ]
+},
+
+/* ════════════════════════════════════════════════════
+   HSK 4 · 4. LECKE — 尽管…还是 / 可是, 却, 而, 并不 · 并没有, 实在
+   ════════════════════════════════════════════════════ */
+{
+  id: 'l54', no: 54, badge: '4', kicker: 'HSK 4 · 4. lecke', label: 'HSK 4 · 4. lecke',
+  title: 'Vacsora a kollégákkal — bár…, mégis…',
+  lead: 'Vacsorázol a kollégákkal: elmondod, mi történt valami ellenére (尽管很辣，她还是吃了很多), váratlan ellentétet jelzel (他却…), szembeállítasz (而), cáfolsz (我并不怕辣), és nyomatékosítasz (实在太好吃了).',
+  cando: [
+    'Megengedő mondatot alkotsz: 尽管…，还是 / 可是….',
+    'Váratlan ellentétet fejezel ki a 却 szóval (az alany után).',
+    'Két dolgot szembeállítasz a 而 szóval.',
+    'Cáfolsz egy feltevést (并不 / 并没有), és nyomatékosítasz (实在).'
+  ],
+  intro: [
+    'Péntek este a csapat egy szecsuáni étterembe megy vacsorázni. Anna még nem szokott hozzá a csípős ételekhez — de nem akar kimaradni semmiből.',
+    'Ebben a leckében ellentéteket fejezel ki: „bár…, mégis…" ({尽管|jǐnguǎn} … {还是|háishi}), „mégis, viszont" ({却|què}), „míg…, addig…" ({而|ér}), és cáfolsz: „egyáltalán nem" ({并不|bìng bù}).'
+  ],
+  dialogue: {
+    title: 'Szecsuáni vacsora',
+    scene: 'Péntek este egy szecsuáni étteremben: Anna, Zhou Jie és Wang Li.',
+    lines: [
+      { who: 'Wang Li', zh: '{安娜|Ān·nà}，{这|zhè}{个|ge}{菜|cài}{很|hěn}{辣|là}，{你|nǐ}{能|néng}{吃|chī}{吗|ma}？', hu: 'Anna, ez az étel nagyon csípős, bírod?' },
+      { who: 'Anna', zh: '{我|wǒ}{并|bìng}{不|bú}{怕|pà}{辣|là}，{只是|zhǐ·shì}{还|hái}{不|bú}{太|tài}{习惯|xí·guàn}。', hu: 'Egyáltalán nem félek a csípőstől, csak még nem nagyon szoktam meg.' },
+      { who: 'Zhou Jie', zh: '{尽管|jǐn·guǎn}{很|hěn}{辣|là}，{她|tā}{还是|hái·shi}{吃|chī}{了|le}{很|hěn}{多|duō}，{真|zhēn}{厉害|lì·hai}！', hu: 'Bár nagyon csípős, mégis sokat evett — ügyes!' },
+      { who: 'Anna', zh: '{这|zhè}{家|jiā}{的|de}{菜|cài}{实在|shí·zài}{太|tài}{好吃|hǎo·chī}{了|le}。{不过|bú·guò}{周杰|Zhōu Jié}，{你|nǐ}{怎么|zěn·me}{不|bù}{吃|chī}{呢|ne}？', hu: 'Ennek az étteremnek tényleg isteni a konyhája. De Zhou Jie, te miért nem eszel?' },
+      { who: 'Wang Li', zh: '{他|tā}{是|shì}{四川|Sì·chuān}{人|rén}，{却|què}{一点儿|yì diǎnr}{辣|là}{也|yě}{不|bù}{能|néng}{吃|chī}！', hu: 'Szecsuáni, mégsem bírja a csípőset egy cseppet sem!' },
+      { who: 'Zhou Jie', zh: '{我们|wǒ·men}{家|jiā}{的|de}{菜|cài}{都|dōu}{很|hěn}{清淡|qīng·dàn}，{而|ér}{我|wǒ}{同学|tóng·xué}{家|jiā}{天天|tiān·tiān}{吃|chī}{辣|là}。', hu: 'Nálunk otthon enyhe ételeket főztek, az osztálytársaim családjában viszont minden nap csípőset ettek.' },
+      { who: 'Anna', zh: '{原来|yuán·lái}{是|shì}{这样|zhè·yàng}！{那|nà}{我|wǒ}{帮|bāng}{你|nǐ}{吃|chī}{吧|ba}！', hu: 'Szóval így áll a dolog! Akkor megeszem helyetted!' }
+    ],
+    notes: [
+      'A {辣|là} „csípős", a {辣椒|làjiāo} „chili, csípős paprika".',
+      'A {厉害|lìhai} dicséretként „ügyes, nagyszerű", máskor „erős, heves": {疼得厉害|téng de lìhai} „nagyon fáj".',
+      'A {清淡|qīngdàn} „könnyű, enyhe (étel)": kevés olaj, kevés fűszer.'
+    ]
+  },
+  points: [
+    {
+      title: '{尽管|jǐnguǎn} … {还是|háishi} / {可是|kěshì} …', sub: 'bár …, mégis …',
+      pattern: '{尽管|jǐn·guǎn} + ellenkező tény，(A) + {还是|hái·shi} / {可是|kě·shì} / {但是|dàn·shì} + …',
+      body: 'A {尽管|jǐnguǎn} „bár, noha" egy tényt enged meg, amely ellenére mégis más történik: {尽管很辣，她还是吃了很多|jǐnguǎn hěn là, tā háishi chī le hěn duō} „bár nagyon csípős, mégis sokat evett". Hasonlít a {虽然|suīrán} … {但是|dànshì}-hoz; a {尽管|jǐnguǎn} kicsit erősebb, választékosabb. A második részben {还是|háishi} „mégis", {可是|kěshì} vagy {但是|dànshì} „de" áll.',
+      examples: [
+        { zh: '{尽管|jǐn·guǎn}{很|hěn}{辣|là}，{她|tā}{还是|hái·shi}{吃|chī}{了|le}{很|hěn}{多|duō}。', hu: 'Bár nagyon csípős, mégis sokat evett.' },
+        { zh: '{尽管|jǐn·guǎn}{工作|gōng·zuò}{很|hěn}{累|lèi}，{可是|kě·shì}{他|tā}{很|hěn}{开心|kāi·xīn}。', hu: 'Bár fárasztó a munka, mégis boldog.' }
+      ],
+      mistakes: [
+        { bad: '{尽管|jǐn·guǎn}{很|hěn}{辣|là}，{所以|suǒ·yǐ}{她|tā}{吃|chī}{了|le}{很|hěn}{多|duō}。', good: '{尽管|jǐn·guǎn}{很|hěn}{辣|là}，{她|tā}{还是|hái·shi}{吃|chī}{了|le}{很|hěn}{多|duō}。', why: 'A {尽管|jǐnguǎn} megengedés, nem ok: a párja {还是|háishi} / {可是|kěshì}, nem {所以|suǒyǐ}.' }
+      ]
+    },
+    {
+      title: '{却|què}', sub: 'mégis, viszont (váratlan ellentét)',
+      pattern: 'A + {却|què} + állítmány',
+      body: 'A {却|què} váratlan, a várakozással ellentétes fordulatot jelez: {他是四川人，却一点儿辣也不能吃|tā shì Sìchuān rén, què yìdiǎnr là yě bù néng chī} „szecsuáni, mégsem bírja a csípőset". Határozószó, ezért az alany <b>után</b>, az ige előtt áll — nem a tagmondat elején, mint a {但是|dànshì}. Gyakran együtt is járnak: {但是他却……|dànshì tā què …}.',
+      examples: [
+        { zh: '{他|tā}{是|shì}{四川|Sì·chuān}{人|rén}，{却|què}{一点儿|yì diǎnr}{辣|là}{也|yě}{不|bù}{能|néng}{吃|chī}。', hu: 'Szecsuáni, mégsem bírja a csípőset egy cseppet sem.' },
+        { zh: '{外面|wài·miàn}{很|hěn}{冷|lěng}，{房间|fáng·jiān}{里|li}{却|què}{很|hěn}{暖和|nuǎn·huo}。', hu: 'Kint hideg van, a szobában viszont meleg.' }
+      ],
+      mistakes: [
+        { bad: '{外面|wài·miàn}{很|hěn}{冷|lěng}，{却|què}{房间|fáng·jiān}{里|li}{很|hěn}{暖和|nuǎn·huo}。', good: '{外面|wài·miàn}{很|hěn}{冷|lěng}，{房间|fáng·jiān}{里|li}{却|què}{很|hěn}{暖和|nuǎn·huo}。', why: 'A {却|què} az alany után áll.' }
+      ]
+    },
+    {
+      title: '{而|ér}', sub: 'míg, viszont (szembeállítás)',
+      pattern: 'A …，{而|ér} B …',
+      body: 'A {而|ér} két dolgot állít szembe, választékos stílusban: {北方人爱吃面，而南方人爱吃米饭|běifāngrén ài chī miàn, ér nánfāngrén ài chī mǐfàn} „az északiak a tésztát szeretik, a déliek viszont a rizst". A tagmondat elején áll. (A {而|ér}-t más jelentésben már láttad: {不是…而是|bú shì ér shì}, {而且|érqiě}.)',
+      examples: [
+        { zh: '{我们|wǒ·men}{家|jiā}{的|de}{菜|cài}{都|dōu}{很|hěn}{清淡|qīng·dàn}，{而|ér}{我|wǒ}{同学|tóng·xué}{家|jiā}{天天|tiān·tiān}{吃|chī}{辣|là}。', hu: 'Nálunk enyhe ételeket főztek, az osztálytársam családja viszont minden nap csípőset evett.' },
+        { zh: '{北方|běi·fāng}{人|rén}{爱|ài}{吃|chī}{面|miàn}，{而|ér}{南方|nán·fāng}{人|rén}{爱|ài}{吃|chī}{米饭|mǐ·fàn}。', hu: 'Az északiak a tésztát szeretik, a déliek viszont a rizst.' }
+      ]
+    },
+    {
+      title: '{并不|bìng bù} · {并没有|bìng méiyǒu}', sub: 'egyáltalán nem, valójában nem',
+      pattern: 'A + {并|bìng} + {不|bù} / {没|méi}({有|yǒu}) + …',
+      body: 'A {并|bìng} a tagadás elé kerül, és egy feltevést cáfol: „nem úgy van, ahogy gondolod". {我并不怕辣|wǒ bìng bú pà là} „egyáltalán nem félek a csípőstől", {他并没有生气|tā bìng méiyǒu shēngqì} „valójában nem haragudott meg". Csak tagadással áll.',
+      examples: [
+        { zh: '{我|wǒ}{并|bìng}{不|bú}{怕|pà}{辣|là}，{只是|zhǐ·shì}{还|hái}{不|bú}{太|tài}{习惯|xí·guàn}。', hu: 'Egyáltalán nem félek a csípőstől, csak még nem szoktam meg.' },
+        { zh: '{这|zhè}{个|ge}{问题|wèn·tí}{并|bìng}{没有|méi·yǒu}{你|nǐ}{想|xiǎng}{的|de}{那么|nà·me}{难|nán}。', hu: 'Ez a kérdés egyáltalán nem olyan nehéz, mint gondolod.' }
+      ],
+      mistakes: [
+        { bad: '{我|wǒ}{并|bìng}{怕|pà}{辣|là}。', good: '{我|wǒ}{并|bìng}{不|bú}{怕|pà}{辣|là}。', why: 'A {并|bìng} csak tagadással áll: {并不|bìng bù}, {并没有|bìng méiyǒu}.' }
+      ]
+    },
+    {
+      title: '{实在|shízài}', sub: 'tényleg, igazán',
+      pattern: '{实在|shí·zài} + ({太|tài}) + mn. / ige …',
+      body: 'A {实在|shízài} őszinte nyomatékot ad: {这家的菜实在太好吃了|zhè jiā de cài shízài tài hǎochī le} „ennek az étteremnek tényleg isteni a konyhája", {我实在吃不下了|wǒ shízài chī bu xià le} „tényleg nem bírok többet enni". Bocsánatkérésben is gyakori: {实在对不起|shízài duìbuqǐ} „igazán sajnálom".',
+      examples: [
+        { zh: '{这|zhè}{家|jiā}{的|de}{菜|cài}{实在|shí·zài}{太|tài}{好吃|hǎo·chī}{了|le}。', hu: 'Ennek az étteremnek tényleg isteni a konyhája.' },
+        { zh: '{实在|shí·zài}{对不起|duì·bu·qǐ}，{我|wǒ}{来|lái}{晚|wǎn}{了|le}。', hu: 'Igazán sajnálom, hogy elkéstem.' }
+      ]
+    }
+  ],
+  phrases: [
+    { zh: '{你|nǐ}{能|néng}{吃|chī}{辣|là}{吗|ma}？', hu: 'Bírod a csípőset?' },
+    { zh: '{少|shǎo}{放|fàng}{点儿|diǎnr}{辣椒|là·jiāo}。', hu: 'Kevesebb chilit kérek bele.' },
+    { zh: '{我|wǒ}{吃|chī}{饱|bǎo}{了|le}。', hu: 'Jóllaktam.' },
+    { zh: '{干杯|gān bēi}！', hu: 'Egészségedre!' }
+  ],
+  words: [
+    { title: 'Szavak',
+      items: [
+        { zh: '{尽管|jǐn·guǎn}', pinyin: 'jǐnguǎn', hu: 'bár, noha' },
+        { zh: '{却|què}', pinyin: 'què', hu: 'mégis, viszont' },
+        { zh: '{而|ér}', pinyin: 'ér', hu: 'míg, viszont; és' },
+        { zh: '{并|bìng}', pinyin: 'bìng', hu: '(tagadás előtt) egyáltalán, valójában' },
+        { zh: '{实在|shí·zài}', pinyin: 'shízài', hu: 'tényleg, igazán' },
+        { zh: '{辣|là}', pinyin: 'là', hu: 'csípős' },
+        { zh: '{辣椒|là·jiāo}', pinyin: 'làjiāo', hu: 'chili, csípős paprika' },
+        { zh: '{只是|zhǐ·shì}', pinyin: 'zhǐshì', hu: 'csak (éppen)' },
+        { zh: '{厉害|lì·hai}', pinyin: 'lìhai', hu: 'ügyes; erős, heves' },
+        { zh: '{暖和|nuǎn·huo}', pinyin: 'nuǎnhuo', hu: 'meleg, kellemes' },
+        { zh: '{北方|běi·fāng}', pinyin: 'běifāng', hu: 'észak (az ország része)' },
+        { zh: '{南方|nán·fāng}', pinyin: 'nánfāng', hu: 'dél (az ország része)' }
+      ] },
+    { title: 'Ráadás',
+      items: [
+        { zh: '{清淡|qīng·dàn}', pinyin: 'qīngdàn', hu: 'könnyű, enyhe (étel)' },
+        { zh: '{干杯|gān bēi}', pinyin: 'gān bēi', hu: 'egészségedre (koccintás)' },
+        { zh: '{饱|bǎo}', pinyin: 'bǎo', hu: 'jóllakott' },
+        { zh: '{奇怪|qí·guài}', pinyin: 'qíguài', hu: 'furcsa' }
+      ] }
+  ],
+  culture: [
+    { title: 'Szecsuáni ízek', text: 'A szecsuáni konyha jellegzetes íze a {麻辣|má là}: a {花椒|huā jiāo} (szecsuáni bors) zsibbasztó érzése és a chili csípőssége együtt. Híres fogásai a {麻婆豆腐|má pó dòu fu} és a {火锅|huǒ guō}, a forró leves, amelyben az asztalnál főzik meg a hozzávalókat.' },
+    { title: 'Koccintás', text: 'Kínai vacsorán gyakran koccintanak: a {干杯|gān bēi} szó szerint „szárazra a poharat". Aki fiatalabb vagy alacsonyabb rangú, az a poharát koccintáskor kicsit lejjebb tartja, mint a másik — ezzel fejezi ki a tiszteletét.' }
+  ],
+  reading: {
+    title: '{周五|zhōu·wǔ}{的|de}{晚饭|wǎn·fàn}', titleHu: 'A pénteki vacsora',
+    text: [
+      { zh: '{星期五|xīng·qī·wǔ}{晚上|wǎn·shang}，{安娜|Ān·nà}{和|hé}{同事们|tóng·shì·men}{去|qù}{了|le}{一|yì}{家|jiā}{四川|Sì·chuān}{饭馆|fàn·guǎn}。', hu: 'Péntek este Anna a kollégáival elment egy szecsuáni étterembe.' },
+      { zh: '{这|zhè}{家|jiā}{的|de}{菜|cài}{很|hěn}{辣|là}，{尽管|jǐn·guǎn}{安娜|Ān·nà}{还|hái}{不|bú}{太|tài}{习惯|xí·guàn}，{她|tā}{还是|hái·shi}{吃|chī}{了|le}{很|hěn}{多|duō}。', hu: 'Az ételek nagyon csípősek voltak; bár Anna még nem szokott hozzá, mégis sokat evett.' },
+      { zh: '{周杰|Zhōu Jié}{是|shì}{四川|Sì·chuān}{人|rén}，{却|què}{一点儿|yì diǎnr}{辣|là}{也|yě}{不|bù}{能|néng}{吃|chī}，{大家|dà·jiā}{都|dōu}{觉得|jué·de}{很|hěn}{奇怪|qí·guài}。', hu: 'Zhou Jie szecsuáni, mégsem bírja a csípőset — mindenki furcsállta.', par: true },
+      { zh: '{原来|yuán·lái}{他|tā}{家|jiā}{做|zuò}{的|de}{菜|cài}{都|dōu}{很|hěn}{清淡|qīng·dàn}，{而|ér}{他|tā}{同学|tóng·xué}{家|jiā}{天天|tiān·tiān}{吃|chī}{辣|là}。', hu: 'Kiderült, hogy náluk otthon enyhe ételeket főztek, az osztálytársai családjában viszont minden nap csípőset ettek.' },
+      { zh: '{最后|zuì·hòu}{安娜|Ān·nà}{说|shuō}：“{这|zhè}{家|jiā}{的|de}{菜|cài}{实在|shí·zài}{太|tài}{好吃|hǎo·chī}{了|le}，{下|xià}{次|cì}{我们|wǒ·men}{还|hái}{来|lái}！”', hu: 'Végül Anna azt mondta: „Ez a hely tényleg isteni, legközelebb is jövünk!"', par: true }
+    ],
+    words: [ { zh: '{奇怪|qí·guài}', hu: 'furcsa' } ],
+    questions: [
+      { q: 'Hová mentek pénteken este?', a: 'egy szecsuáni étterembe', wrong: ['egy kantoni étterembe', 'Zhou Jie lakására', 'egy pekingi kacsás étterembe'], why: '{去了一家四川饭馆|qù le yì jiā Sìchuān fànguǎn}.' },
+      { q: 'Hogyan evett Anna?', a: 'bár nem szokott hozzá, sokat evett', wrong: ['alig evett, mert túl csípős volt', 'csak rizst evett', 'nem evett, mert nem volt éhes'], why: '{尽管还不太习惯，她还是吃了很多|jǐnguǎn hái bú tài xíguàn, tā háishi chī le hěn duō}.' },
+      { q: 'Min csodálkozott mindenki?', a: 'hogy a szecsuáni Zhou Jie nem bírja a csípőset', wrong: ['hogy Anna szereti a csípőset', 'hogy az étterem olcsó', 'hogy Wang Li nem jött el'], why: '{周杰是四川人，却一点儿辣也不能吃|Zhōu Jié shì Sìchuān rén, què yìdiǎnr là yě bù néng chī}.' },
+      { q: 'Mit mondott Anna a végén?', a: 'legközelebb is eljönnek', wrong: ['soha többé nem jön ide', 'legközelebb kantoni étterembe mennek', 'túl drága volt a vacsora'], why: '{下次我们还来|xià cì wǒmen hái lái}.' }
+    ]
+  },
+  quiz: [
+    { q: '„Bár nagyon csípős, mégis sokat evett."', a: '{尽管|jǐn·guǎn}{很|hěn}{辣|là}，{她|tā}{还是|hái·shi}{吃|chī}{了|le}{很|hěn}{多|duō}。', wrong: ['{尽管|jǐn·guǎn}{很|hěn}{辣|là}，{所以|suǒ·yǐ}{她|tā}{吃|chī}{了|le}{很|hěn}{多|duō}。', '{她|tā}{还是|hái·shi}{很|hěn}{辣|là}，{尽管|jǐn·guǎn}{吃|chī}{了|le}{很|hěn}{多|duō}。', '{尽管|jǐn·guǎn}{她|tā}{吃|chī}{了|le}{很|hěn}{多|duō}，{还是|hái·shi}{很|hěn}{辣|là}{吗|ma}。'], why: '{尽管|jǐnguǎn} …，{还是|háishi} ….', point: 1 },
+    { q: 'Melyik szó NEM lehet a {尽管|jǐnguǎn} párja?', a: '{所以|suǒ·yǐ}', wrong: ['{还是|hái·shi}', '{可是|kě·shì}', '{但是|dàn·shì}'], why: 'A {尽管|jǐnguǎn} megengedés, nem ok.', point: 1 },
+    { q: 'Mit jelent: {尽管工作很累，可是他很开心|jǐnguǎn gōngzuò hěn lèi, kěshì tā hěn kāixīn}。', a: 'Bár fárasztó a munka, mégis boldog.', wrong: ['Mivel fárasztó a munka, szomorú.', 'Ha fárasztó a munka, nem boldog.', 'Boldog, ezért nem fárad el a munkában.'], why: '{尽管|jǐnguǎn} „bár".', point: 1 },
+    { q: '„Szecsuáni, mégsem bírja a csípőset."', a: '{他|tā}{是|shì}{四川|Sì·chuān}{人|rén}，{却|què}{不|bù}{能|néng}{吃|chī}{辣|là}。', wrong: ['{他|tā}{是|shì}{四川|Sì·chuān}{人|rén}，{所以|suǒ·yǐ}{却|què}{能|néng}{吃|chī}{辣|là}。', '{却|què}{他|tā}{是|shì}{四川|Sì·chuān}{人|rén}，{不|bù}{能|néng}{吃|chī}{辣|là}。', '{他|tā}{却|què}{是|shì}{四川|Sì·chuān}{人|rén}{吃|chī}{辣|là}{不|bù}{能|néng}。'], why: '{却|què} az ige előtt: váratlan ellentét.', point: 2 },
+    { q: 'Hová kerül a {却|què}?', a: 'az alany után, az ige elé', wrong: ['a tagmondat legelejére, az alany elé', 'a mondat legvégére', 'mindig a {但是|dànshì} helyére, egyedül'], why: 'A {却|què} határozószó.', point: 2 },
+    { q: 'Mit jelent: {外面很冷，房间里却很暖和|wàimiàn hěn lěng, fángjiān li què hěn nuǎnhuo}。', a: 'Kint hideg van, a szobában viszont meleg.', wrong: ['Kint is, bent is hideg van.', 'Mivel kint hideg van, a szoba is hideg.', 'A szobában hidegebb van, mint kint.'], why: '{却|què} „viszont".', point: 2 },
+    { q: '„Az északiak a tésztát szeretik, a déliek viszont a rizst."', a: '{北方|běi·fāng}{人|rén}{爱|ài}{吃|chī}{面|miàn}，{而|ér}{南方|nán·fāng}{人|rén}{爱|ài}{吃|chī}{米饭|mǐ·fàn}。', wrong: ['{北方|běi·fāng}{人|rén}{爱|ài}{吃|chī}{面|miàn}，{南方|nán·fāng}{人|rén}{而|ér}{爱|ài}{米饭|mǐ·fàn}{吃|chī}。', '{而|ér}{北方|běi·fāng}{人|rén}{爱|ài}{吃|chī}{面|miàn}，{南方|nán·fāng}{人|rén}{爱|ài}{吃|chī}{米饭|mǐ·fàn}{而|ér}。', '{北方|běi·fāng}{人|rén}{而|ér}{南方|nán·fāng}{人|rén}{爱|ài}{吃|chī}{面|miàn}{米饭|mǐ·fàn}。'], why: 'A {而|ér} a második tagmondat elején áll.', point: 3 },
+    { q: 'Mit fejez ki itt a {而|ér}? {我喜欢安静，而她喜欢热闹|wǒ xǐhuan ānjìng, ér tā xǐhuan rènao}。', a: 'szembeállítást („viszont")', wrong: ['okot („mert")', 'célt („azért, hogy")', 'időt („amikor")'], why: '{而|ér} „míg, viszont".', point: 3 },
+    { q: '„Egyáltalán nem félek a csípőstől." (cáfolat)', a: '{我|wǒ}{并|bìng}{不|bú}{怕|pà}{辣|là}。', wrong: ['{我|wǒ}{并|bìng}{怕|pà}{辣|là}。', '{我|wǒ}{不|bú}{并|bìng}{怕|pà}{辣|là}。', '{并|bìng}{我|wǒ}{怕|pà}{不|bú}{辣|là}。'], why: '{并|bìng} + {不|bù} + ige.', point: 4 },
+    { q: 'Mit jelent: {他并没有生气|tā bìng méiyǒu shēngqì}。', a: 'Valójában nem haragudott meg.', wrong: ['Nagyon megharagudott.', 'Még mindig haragszik.', 'Holnap biztosan megharagszik.'], why: '{并没有|bìng méiyǒu} cáfolat.', point: 4 },
+    { q: 'Mivel áll együtt a {并|bìng}?', a: 'csak tagadással ({不|bù}, {没有|méiyǒu})', wrong: ['csak kérdéssel ({吗|ma})', 'csak múlt idővel ({了|le})', 'csak melléknévvel, tagadás nélkül'], why: '{并不|bìng bù}, {并没有|bìng méiyǒu}.', point: 4 },
+    { q: 'Mit jelent: {这家的菜实在太好吃了|zhè jiā de cài shízài tài hǎochī le}。', a: 'Ennek az étteremnek tényleg isteni a konyhája.', wrong: ['Ennek az étteremnek nem túl jó a konyhája.', 'Ez az étterem túl drága.', 'Ebben az étteremben még nem ettem.'], why: '{实在|shízài} „tényleg".', point: 5 },
+    { q: '„Igazán sajnálom, hogy elkéstem."', a: '{实在|shí·zài}{对不起|duì·bu·qǐ}，{我|wǒ}{来|lái}{晚|wǎn}{了|le}。', wrong: ['{对不起|duì·bu·qǐ}{实在|shí·zài}，{来|lái}{我|wǒ}{晚|wǎn}{了|le}。', '{我|wǒ}{实在|shí·zài}{来|lái}{对不起|duì·bu·qǐ}{晚|wǎn}{了|le}。', '{实在|shí·zài}{我|wǒ}{晚|wǎn}{来|lái}{对不起|duì·bu·qǐ}{了|le}。'], why: '{实在对不起|shízài duìbuqǐ}.', point: 5 },
+    { q: 'Mit jelent a {辣|là}?', a: 'csípős', wrong: ['savanyú', 'édes', 'sós'], why: '{这个菜很辣|zhège cài hěn là}.' },
+    { q: 'Mit jelent a {厉害|lìhai} dicséretként?', a: 'ügyes, nagyszerű', wrong: ['udvariatlan', 'szégyenlős', 'lusta'], why: '{真厉害|zhēn lìhai}！ „De ügyes!"' },
+    { q: 'Mit jelent: {干杯|gān bēi}！', a: 'Egészségedre! (koccintás)', wrong: ['Jó étvágyat!', 'Én fizetek!', 'Kérek még egy pohárral!'], why: 'Szó szerint „szárazra a poharat".' }
+  ]
 }
 
 ];
