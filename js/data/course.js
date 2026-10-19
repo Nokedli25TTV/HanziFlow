@@ -11509,6 +11509,343 @@ const HANZIFLOW_COURSE = [
     { q: 'Mit jelent a {熟悉|shúxī}?', a: 'jól ismer, ismerős', wrong: ['idegen', 'kíváncsi', 'elfoglalt'], why: '{我对这里很熟悉|wǒ duì zhèlǐ hěn shúxī} „jól ismerem ezt a helyet".' },
     { q: 'Mit jelent a {印象|yìnxiàng}?', a: 'benyomás', wrong: ['emlék', 'vélemény', 'élmény'], why: '{印象很深|yìnxiàng hěn shēn} „mély benyomást tett".' }
   ]
+},
+/* ════════════════════════════════════════════════════
+   HSK 4 · 11. LECKE — 对于, 使, 对…有好处, 在…方面, 值得
+   ════════════════════════════════════════════════════ */
+{
+  id: 'l61', no: 61, badge: '11', kicker: 'HSK 4 · 11. lecke', label: 'HSK 4 · 11. lecke',
+  title: 'Milyen szemét vagy? — szelektív gyűjtés',
+  lead: 'Környezetvédelemről beszélsz: megnevezed a témát (对于…), elmondod, mi mit idéz elő (使), mi mire jó vagy rossz (对…有好处 · 坏处), melyik területről van szó (在…方面), és mit érdemes megtenni (值得).',
+  cando: [
+    'Bevezeted a témát: 对于…，….',
+    'Hatást, okozást fejezel ki írott stílusban: A 使 B + ige / melléknév.',
+    'Elmondod, mi mire jó vagy rossz: A 对 B 有好处 / 有坏处.',
+    'Megnevezed a területet (在…方面), és ajánlasz valamit (值得 + ige).'
+  ],
+  intro: [
+    'Sanghajban szigorú szabályok szerint kell szétválogatni a szemetet. Anna reggel munkába menet ki akarja dobni a szemetet, de a gyűjtőpontnál Zhang néni, a lakópark önkéntese megállítja.',
+    'Ebben a leckében a közügyek, a környezet nyelvét tanulod. Sok szerkezete írott, hivatalos stílusú ({对于|duìyú}, {使|shǐ}) — hírekben, közleményekben, fogalmazásokban gyakran találkozol velük.'
+  ],
+  dialogue: {
+    title: 'A gyűjtőpontnál',
+    scene: 'Hétfő reggel a lakópark szemétgyűjtő pontjánál. Anna és Zhang néni.',
+    lines: [
+      { who: 'Zhang néni', zh: '{小|xiǎo}{姑娘|gū·niang}，{等|děng}{一下|yí xià}！{这个|zhè·ge}{瓶子|píng·zi}{不|bù}{能|néng}{扔|rēng}{在|zài}{这儿|zhèr}。', hu: 'Kislány, várj csak! Ezt az üveget nem dobhatod ide.' },
+      { who: 'Anna', zh: '{对不起|duì·bu·qǐ}，{阿姨|ā·yí}。{对于|duì·yú}{垃圾|lā·jī}{分类|fēn lèi}，{我|wǒ}{还|hái}{不|bú}{太|tài}{了解|liǎo·jiě}。', hu: 'Elnézést, néni. A szelektív gyűjtésről még nem sokat tudok.' },
+      { who: 'Zhang néni', zh: '{没|méi}{关系|guān·xi}。{上海|Shàng·hǎi}{的|de}{垃圾|lā·jī}{分|fēn}{四|sì}{种|zhǒng}：{可|kě}{回收|huí shōu}{物|wù}、{有害|yǒu hài}{垃圾|lā·jī}、{湿|shī}{垃圾|lā·jī}{和|hé}{干|gān}{垃圾|lā·jī}。{塑料|sù·liào}{瓶|píng}{是|shì}{可|kě}{回收|huí shōu}{物|wù}。', hu: 'Semmi baj. Sanghajban négyféle szemét van: újrahasznosítható, veszélyes, nedves és száraz. A műanyag palack újrahasznosítható.' },
+      { who: 'Anna', zh: '{这么|zhè·me}{麻烦|má·fan}{啊|a}！{分|fēn}{得|de}{这么|zhè·me}{细|xì}，{真|zhēn}{的|de}{有|yǒu}{用|yòng}{吗|ma}？', hu: 'Ez aztán macerás! Ilyen alapos válogatásnak tényleg van értelme?' },
+      { who: 'Zhang néni', zh: '{当然|dāng·rán}{有|yǒu}{用|yòng}。{垃圾|lā·jī}{分类|fēn lèi}{对|duì}{环境|huán·jìng}{很|hěn}{有|yǒu}{好处|hǎo·chù}，{也|yě}{使|shǐ}{小区|xiǎo qū}{干净|gān·jìng}{了|le}{很|hěn}{多|duō}。', hu: 'Persze hogy van. A szelektív gyűjtés nagyon jót tesz a környezetnek, és a lakópark is sokkal tisztább lett tőle.' },
+      { who: 'Anna', zh: '{说|shuō}{得|de}{也|yě}{是|shì}。{在|zài}{环保|huán bǎo}{方面|fāng·miàn}，{每|měi}{个|ge}{人|rén}{都|dōu}{能|néng}{做|zuò}{点儿|diǎnr}{什么|shén·me}。', hu: 'Ez igaz. A környezetvédelemben mindenki tehet valamit.' },
+      { who: 'Zhang néni', zh: '{对|duì}！{你|nǐ}{这么|zhè·me}{快|kuài}{就|jiù}{明白|míng·bai}{了|le}，{值得|zhí·de}{表扬|biǎo·yáng}！', hu: 'Úgy van! Ilyen gyorsan megértetted — ez dicséretet érdemel!' }
+    ],
+    notes: [
+      'Az {阿姨|āyí} nemcsak „nagynéni": így szólítják a középkorú nőket is, a {小姑娘|xiǎo gūniang} „kislány" pedig fiatal nőnek is szólhat, kedves, kissé leereszkedő hangon.',
+      'A {小区|xiǎoqū} „lakópark": kerítéssel, kapuval, portával körülvett lakóházcsoport.',
+      'A {环保|huánbǎo} a {环境保护|huánjìng bǎohù} „környezetvédelem" rövidítése.'
+    ]
+  },
+  points: [
+    {
+      title: '{对于|duìyú}', sub: '… -ról, … tekintetében',
+      pattern: '{对于|duì·yú} + téma，A + állítás · {对于|duì·yú} + A + {来说|lái shuō}',
+      body: 'A {对于|duìyú} megnevezi a témát, amelyről a mondat szól: {对于垃圾分类，我还不太了解|duìyú lājī fēnlèi, wǒ hái bú tài liǎojiě} „a szelektív gyűjtésről még nem sokat tudok". A {对于…来说|duìyú … lái shuō} „… számára": {对于很多人来说，这很麻烦|duìyú hěn duō rén lái shuō, zhè hěn máfan}. A {对|duì} sokszor helyettesítheti, fordítva nem mindig: emberek iránti viselkedésnél csak {对|duì} áll.',
+      examples: [
+        { zh: '{对于|duì·yú}{垃圾|lā·jī}{分类|fēn lèi}，{我|wǒ}{还|hái}{不|bú}{太|tài}{了解|liǎo·jiě}。', hu: 'A szelektív gyűjtésről még nem sokat tudok.' },
+        { zh: '{对于|duì·yú}{这个|zhè·ge}{问题|wèn·tí}，{大家|dà·jiā}{的|de}{看法|kàn·fǎ}{不|bù}{一样|yí yàng}。', hu: 'Erről a kérdésről mindenki másképp gondolkodik.' }
+      ],
+      mistakes: [
+        { bad: '{他|tā}{对于|duì·yú}{我|wǒ}{很|hěn}{好|hǎo}。', good: '{他|tā}{对|duì}{我|wǒ}{很|hěn}{好|hǎo}。', why: 'Emberek iránti viselkedésnél csak {对|duì} áll.' }
+      ]
+    },
+    {
+      title: '{使|shǐ}', sub: 'tesz valamivé, előidéz (írott)',
+      pattern: 'A + {使|shǐ} + B + ige / melléknév',
+      body: 'A {使|shǐ} okozást fejez ki: A hatására B olyanná válik vagy úgy tesz. {垃圾分类使小区干净了很多|lājī fēnlèi shǐ xiǎoqū gānjìng le hěn duō} „a szelektív gyűjtés sokkal tisztábbá tette a lakóparkot". Jelentése közel áll a {让|ràng}-hoz, de írottabb, és nem jelent kérést vagy engedélyt. A {使|shǐ} után mindig ott a B: kire vagy mire hat.',
+      tables: [
+        { caption: 'Okozás három szóval',
+          head: ['', 'Stílus', 'Példa'],
+          rows: [
+            ['{让|ràng}', 'beszélt; okozás, kérés, engedély', '{妈妈|mā·ma}{让|ràng}{我|wǒ}{早|zǎo}{点儿|diǎnr}{回|huí}{家|jiā}。'],
+            ['{叫|jiào}', 'beszélt; utasítás', '{老师|lǎo·shī}{叫|jiào}{你|nǐ}{过去|guò·qù}。'],
+            ['{使|shǐ}', 'írott; csak okozás', '{这|zhè}{件|jiàn}{事|shì}{使|shǐ}{我|wǒ}{很|hěn}{感动|gǎn·dòng}。']
+          ] }
+      ],
+      examples: [
+        { zh: '{垃圾|lā·jī}{分类|fēn lèi}{使|shǐ}{小区|xiǎo qū}{干净|gān·jìng}{了|le}{很|hěn}{多|duō}。', hu: 'A szelektív gyűjtés sokkal tisztábbá tette a lakóparkot.' },
+        { zh: '{这|zhè}{次|cì}{旅行|lǚ·xíng}{使|shǐ}{我|wǒ}{更|gèng}{了解|liǎo·jiě}{中国|Zhōng·guó}{了|le}。', hu: 'Ez az utazás közelebb hozta hozzám Kínát.' }
+      ],
+      mistakes: [
+        { bad: '{这个|zhè·ge}{消息|xiāo·xi}{使|shǐ}{很|hěn}{高兴|gāo·xìng}。', good: '{这个|zhè·ge}{消息|xiāo·xi}{使|shǐ}{大家|dà·jiā}{很|hěn}{高兴|gāo·xìng}。', why: 'A {使|shǐ} után meg kell nevezni, kire vagy mire hat.' }
+      ]
+    },
+    {
+      title: '{对|duì} … {有好处|yǒu hǎochù}', sub: 'jót tesz …-nak/-nek',
+      pattern: 'A + {对|duì} + B + {有|yǒu}{好处|hǎo·chù} / {有|yǒu}{坏处|huài·chù}',
+      body: 'Így mondod, hogy valami mire jó vagy rossz: {垃圾分类对环境很有好处|lājī fēnlèi duì huánjìng hěn yǒu hǎochù} „a szelektív gyűjtés nagyon jót tesz a környezetnek", {睡得太晚对身体有坏处|shuì de tài wǎn duì shēntǐ yǒu huàichù} „a késői lefekvés árt az egészségnek". Ugyanígy: {对…有帮助|duì … yǒu bāngzhù} „segít valamiben", {对…有影响|duì … yǒu yǐngxiǎng} „hatással van valamire". A fokozó {很|hěn} a {有|yǒu} elé kerül.',
+      examples: [
+        { zh: '{垃圾|lā·jī}{分类|fēn lèi}{对|duì}{环境|huán·jìng}{很|hěn}{有|yǒu}{好处|hǎo·chù}。', hu: 'A szelektív gyűjtés nagyon jót tesz a környezetnek.' },
+        { zh: '{每|měi}{天|tiān}{睡|shuì}{得|de}{太|tài}{晚|wǎn}{对|duì}{身体|shēn·tǐ}{有|yǒu}{坏处|huài·chù}。', hu: 'Ha minden nap későn fekszel, az árt az egészségednek.' }
+      ],
+      mistakes: [
+        { bad: '{运动|yùn·dòng}{有|yǒu}{好处|hǎo·chù}{对|duì}{身体|shēn·tǐ}。', good: '{运动|yùn·dòng}{对|duì}{身体|shēn·tǐ}{有|yǒu}{好处|hǎo·chù}。', why: 'Az {对|duì} + B a {有好处|yǒu hǎochù} elé kerül.' }
+      ]
+    },
+    {
+      title: '{在|zài} … {方面|fāngmiàn}', sub: '… terén, … szempontjából',
+      pattern: '{在|zài} + terület + {方面|fāng·miàn}，…',
+      body: 'Az {在…方面|zài … fāngmiàn} megmondja, <b>melyik területről</b> szól az állítás: {在环保方面，每个人都能做点儿什么|zài huánbǎo fāngmiàn, měi ge rén dōu néng zuò diǎnr shénme} „a környezetvédelemben mindenki tehet valamit". Jól használható két terület szembeállítására: {在工作方面他很有经验，在生活方面他什么都不会|zài gōngzuò fāngmiàn tā hěn yǒu jīngyàn, zài shēnghuó fāngmiàn tā shénme dōu bú huì}.',
+      examples: [
+        { zh: '{在|zài}{环保|huán bǎo}{方面|fāng·miàn}，{每|měi}{个|ge}{人|rén}{都|dōu}{能|néng}{做|zuò}{点儿|diǎnr}{什么|shén·me}。', hu: 'A környezetvédelemben mindenki tehet valamit.' },
+        { zh: '{在|zài}{工作|gōng·zuò}{方面|fāng·miàn}{他|tā}{很|hěn}{有|yǒu}{经验|jīng·yàn}，{在|zài}{生活|shēng·huó}{方面|fāng·miàn}{他|tā}{什么|shén·me}{都|dōu}{不|bú}{会|huì}。', hu: 'A munkában nagy a tapasztalata, a hétköznapi életben viszont semmihez sem ért.' }
+      ]
+    },
+    {
+      title: '{值得|zhíde}', sub: 'érdemes, megéri',
+      pattern: 'A + {值得|zhí·de} + ige · A + {不|bù}{值得|zhí·de} + ige',
+      body: 'A {值得|zhíde} „érdemes, megéri" után ige áll: {这个办法值得学习|zhège bànfǎ zhíde xuéxí} „ebből a módszerből érdemes tanulni", {值得表扬|zhíde biǎoyáng} „dicséretet érdemel", {这个电影不值得看|zhège diànyǐng bù zhíde kàn} „ezt a filmet nem érdemes megnézni". Egyszótagú ige elé gyakran {一|yì} kerül: {值得一看|zhíde yí kàn} „megér egy pillantást".',
+      examples: [
+        { zh: '{这个|zhè·ge}{办法|bàn·fǎ}{值得|zhí·de}{我们|wǒ·men}{学习|xué·xí}。', hu: 'Ebből a módszerből érdemes tanulnunk.' },
+        { zh: '{这个|zhè·ge}{电影|diàn·yǐng}{不|bù}{值得|zhí·de}{看|kàn}。', hu: 'Ezt a filmet nem érdemes megnézni.' }
+      ]
+    }
+  ],
+  phrases: [
+    { zh: '{这个|zhè·ge}{扔|rēng}{在|zài}{哪儿|nǎr}？', hu: 'Ezt hová dobjam?' },
+    { zh: '{这|zhè}{是|shì}{什么|shén·me}{垃圾|lā·jī}？', hu: 'Ez milyen szemét?' },
+    { zh: '{说|shuō}{得|de}{也|yě}{是|shì}。', hu: 'Ez igaz.' },
+    { zh: '{保护|bǎo·hù}{环境|huán·jìng}，{从|cóng}{我|wǒ}{做|zuò}{起|qǐ}。', hu: 'A környezetvédelem nálam kezdődik.' }
+  ],
+  words: [
+    { title: 'Szavak',
+      items: [
+        { zh: '{对于|duì·yú}', pinyin: 'duìyú', hu: '… -ról, … tekintetében' },
+        { zh: '{使|shǐ}', pinyin: 'shǐ', hu: 'tesz valamivé, előidéz' },
+        { zh: '{好处|hǎo·chù}', pinyin: 'hǎochù', hu: 'előny, haszon' },
+        { zh: '{坏处|huài·chù}', pinyin: 'huàichù', hu: 'hátrány, kár' },
+        { zh: '{值得|zhí·de}', pinyin: 'zhíde', hu: 'érdemes, megéri' },
+        { zh: '{分类|fēn lèi}', pinyin: 'fēnlèi', hu: 'osztályoz, szétválogat' },
+        { zh: '{塑料|sù·liào}', pinyin: 'sùliào', hu: 'műanyag' },
+        { zh: '{瓶子|píng·zi}', pinyin: 'píngzi', hu: 'üveg, palack' },
+        { zh: '{扔|rēng}', pinyin: 'rēng', hu: 'eldob, kidob' },
+        { zh: '{回收|huí shōu}', pinyin: 'huíshōu', hu: 'újrahasznosít, begyűjt' },
+        { zh: '{保护|bǎo·hù}', pinyin: 'bǎohù', hu: 'véd; védelem' },
+        { zh: '{污染|wū·rǎn}', pinyin: 'wūrǎn', hu: 'szennyez; szennyezés' }
+      ] },
+    { title: 'Ráadás',
+      items: [
+        { zh: '{小区|xiǎo qū}', pinyin: 'xiǎoqū', hu: 'lakópark' },
+        { zh: '{环保|huán bǎo}', pinyin: 'huánbǎo', hu: 'környezetvédelem' },
+        { zh: '{规定|guī·dìng}', pinyin: 'guīdìng', hu: 'szabály, előírás' },
+        { zh: '{表扬|biǎo·yáng}', pinyin: 'biǎoyáng', hu: 'dicsér; dicséret' }
+      ] }
+  ],
+  culture: [
+    { title: '„Milyen szemét vagy?"', text: 'Sanghajban 2019 nyarától kötelező a szemét szétválogatása. Sok lakóparkban csak reggel és este, megadott időben lehet kidobni, a gyűjtőpontnál önkéntesek segítenek. A szabály annyira beszédtéma lett, hogy tréfás köszönés is született belőle: {你是什么垃圾|nǐ shì shénme lājī} „te milyen szemét vagy?".' },
+    { title: 'Üres tányér', text: 'A {光盘行动|guāngpán xíngdòng} „üres tányér akció" az ételpazarlás ellen indult: arra biztat, hogy az étteremben csak annyit rendelj, amennyit megeszel, a maradékot pedig vidd haza ({打包|dǎbāo} „becsomagoltat").' }
+  ],
+  reading: {
+    title: '{上海|Shàng·hǎi}{的|de}{垃圾|lā·jī}{分类|fēn lèi}', titleHu: 'Szelektív gyűjtés Sanghajban',
+    text: [
+      { zh: '{从|cóng}{几|jǐ}{年|nián}{前|qián}{起|qǐ}，{上海|Shàng·hǎi}{开始|kāi·shǐ}{实行|shí xíng}{垃圾|lā·jī}{分类|fēn lèi}。', hu: 'Néhány éve Sanghajban bevezették a szelektív hulladékgyűjtést.' },
+      { zh: '{对于|duì·yú}{很|hěn}{多|duō}{人|rén}{来|lái}{说|shuō}，{开始|kāi·shǐ}{的|de}{时候|shí·hou}{这|zhè}{件|jiàn}{事|shì}{很|hěn}{麻烦|má·fan}。', hu: 'Sokaknak eleinte ez nagyon macerás volt.' },
+      { zh: '{后来|hòu·lái}{大家|dà·jiā}{渐渐|jiàn·jiàn}{习惯|xí·guàn}{了|le}，{垃圾|lā·jī}{分类|fēn lèi}{也|yě}{使|shǐ}{城市|chéng·shì}{变|biàn}{得|de}{更|gèng}{干净|gān·jìng}{了|le}。', hu: 'Aztán mindenki lassan megszokta, és a szelektív gyűjtés tisztábbá is tette a várost.', par: true },
+      { zh: '{安娜|Ān·nà}{觉得|jué·de}{这|zhè}{对|duì}{环境|huán·jìng}{很|hěn}{有|yǒu}{好处|hǎo·chù}，{在|zài}{这|zhè}{方面|fāng·miàn}{很|hěn}{多|duō}{城市|chéng·shì}{都|dōu}{可以|kě·yǐ}{向|xiàng}{上海|Shàng·hǎi}{学习|xué·xí}。', hu: 'Anna szerint ez nagyon jót tesz a környezetnek, és ezen a téren sok város tanulhatna Sanghajtól.' },
+      { zh: '{她|tā}{给|gěi}{布达佩斯|Bù·dá·pèi·sī}{的|de}{妈妈|mā·ma}{打|dǎ}{电话|diàn·huà}{说|shuō}：“{这个|zhè·ge}{办法|bàn·fǎ}{值得|zhí·de}{我们|wǒ·men}{学习|xué·xí}！”', hu: 'Felhívta az édesanyját Budapesten: „Ebből a módszerből érdemes tanulnunk!"', par: true }
+    ],
+    words: [ { zh: '{实行|shí xíng}', hu: 'bevezet, megvalósít' } ],
+    questions: [
+      { q: 'Mióta van szelektív gyűjtés Sanghajban?', a: 'néhány éve', wrong: ['múlt hónap óta', 'húsz éve', 'még nincs'], why: '{从几年前起|cóng jǐ nián qián qǐ}.' },
+      { q: 'Milyen volt sokaknak eleinte?', a: 'macerás', wrong: ['nagyon könnyű', 'olcsó', 'mulatságos'], why: '{这件事很麻烦|zhè jiàn shì hěn máfan}.' },
+      { q: 'Mi lett az eredménye?', a: 'tisztább lett a város', wrong: ['drágább lett a lakbér', 'kevesebb lett a turista', 'nőtt a forgalom'], why: '{使城市变得更干净了|shǐ chéngshì biàn de gèng gānjìng le}.' },
+      { q: 'Mit mondott Anna az édesanyjának?', a: 'érdemes tanulni ebből a módszerből', wrong: ['Sanghajban túl sok a szemét', 'haza akar költözni Budapestre', 'a kínai szabályok túl szigorúak'], why: '{这个办法值得我们学习|zhège bànfǎ zhíde wǒmen xuéxí}.' }
+    ]
+  },
+  quiz: [
+    { q: '„A szelektív gyűjtésről még nem sokat tudok."', a: '{对于|duì·yú}{垃圾|lā·jī}{分类|fēn lèi}，{我|wǒ}{还|hái}{不|bú}{太|tài}{了解|liǎo·jiě}。', wrong: ['{我|wǒ}{还|hái}{不|bú}{太|tài}{了解|liǎo·jiě}{对于|duì·yú}，{垃圾|lā·jī}{分类|fēn lèi}。', '{垃圾|lā·jī}{分类|fēn lèi}{对于|duì·yú}，{我|wǒ}{了解|liǎo·jiě}{还|hái}{不|bú}{太|tài}。', '{对于|duì·yú}{我|wǒ}{还|hái}{垃圾|lā·jī}{分类|fēn lèi}，{不|bú}{太|tài}{了解|liǎo·jiě}。'], why: '{对于|duìyú} + téma, állítás.', point: 1 },
+    { q: 'Melyik mondat helyes?', a: '{他|tā}{对|duì}{我|wǒ}{很|hěn}{好|hǎo}。', wrong: ['{他|tā}{对于|duì·yú}{我|wǒ}{很|hěn}{好|hǎo}。', '{他|tā}{很|hěn}{好|hǎo}{对于|duì·yú}{我|wǒ}。', '{对于|duì·yú}{他|tā}{我|wǒ}{很|hěn}{好|hǎo}。'], why: 'Emberek iránti viselkedésnél csak {对|duì}.', point: 1 },
+    { q: 'Mit jelent: {对于很多人来说，这很麻烦|duìyú hěn duō rén lái shuō, zhè hěn máfan}。', a: 'Sokaknak ez nagyon macerás.', wrong: ['Sok embernek ez nagyon könnyű.', 'Sokan beszélnek erről a gondról.', 'Ez a gond sok embert érdekel.'], why: '{对于…来说|duìyú … lái shuō} „… számára".', point: 1 },
+    { q: '„A szelektív gyűjtés sokkal tisztábbá tette a lakóparkot."', a: '{垃圾|lā·jī}{分类|fēn lèi}{使|shǐ}{小区|xiǎo qū}{干净|gān·jìng}{了|le}{很|hěn}{多|duō}。', wrong: ['{垃圾|lā·jī}{分类|fēn lèi}{使|shǐ}{干净|gān·jìng}{了|le}{小区|xiǎo qū}{很|hěn}{多|duō}。', '{小区|xiǎo qū}{使|shǐ}{垃圾|lā·jī}{分类|fēn lèi}{干净|gān·jìng}{很|hěn}{多|duō}{了|le}。', '{使|shǐ}{垃圾|lā·jī}{分类|fēn lèi}{小区|xiǎo qū}{很|hěn}{多|duō}{干净|gān·jìng}{了|le}。'], why: 'A + {使|shǐ} + B + melléknév.', point: 2 },
+    { q: 'Miben más a {使|shǐ}, mint a {让|ràng}?', a: 'írott, és csak okozást jelent', wrong: ['csak kérést jelent', 'csak tagadó mondatban áll', 'csak a jövőről szól'], why: 'A {让|ràng} kérést, engedélyt is jelenthet.', point: 2 },
+    { q: 'Melyik mondat helyes?', a: '{这个|zhè·ge}{消息|xiāo·xi}{使|shǐ}{大家|dà·jiā}{很|hěn}{高兴|gāo·xìng}。', wrong: ['{这个|zhè·ge}{消息|xiāo·xi}{使|shǐ}{很|hěn}{高兴|gāo·xìng}。', '{这个|zhè·ge}{消息|xiāo·xi}{很|hěn}{使|shǐ}{高兴|gāo·xìng}{大家|dà·jiā}。', '{大家|dà·jiā}{使|shǐ}{这个|zhè·ge}{消息|xiāo·xi}{高兴|gāo·xìng}。'], why: 'A {使|shǐ} után ott a B.', point: 2 },
+    { q: '„A sport jót tesz az egészségnek."', a: '{运动|yùn·dòng}{对|duì}{身体|shēn·tǐ}{有|yǒu}{好处|hǎo·chù}。', wrong: ['{运动|yùn·dòng}{有|yǒu}{好处|hǎo·chù}{对|duì}{身体|shēn·tǐ}。', '{对|duì}{运动|yùn·dòng}{身体|shēn·tǐ}{好处|hǎo·chù}{有|yǒu}。', '{身体|shēn·tǐ}{对|duì}{好处|hǎo·chù}{有|yǒu}{运动|yùn·dòng}。'], why: 'A + {对|duì} + B + {有好处|yǒu hǎochù}.', point: 3 },
+    { q: 'Mit jelent: {睡得太晚对身体有坏处|shuì de tài wǎn duì shēntǐ yǒu huàichù}。', a: 'A késői lefekvés árt az egészségnek.', wrong: ['A késői lefekvés jót tesz az egészségnek.', 'Ha beteg vagy, feküdj le korán.', 'Késő van, menj aludni.'], why: '{有坏处|yǒu huàichù} „árt".', point: 3 },
+    { q: '„A környezetvédelemben mindenki tehet valamit."', a: '{在|zài}{环保|huán bǎo}{方面|fāng·miàn}，{每|měi}{个|ge}{人|rén}{都|dōu}{能|néng}{做|zuò}{点儿|diǎnr}{什么|shén·me}。', wrong: ['{在|zài}{方面|fāng·miàn}{环保|huán bǎo}，{每|měi}{个|ge}{人|rén}{都|dōu}{能|néng}{做|zuò}{点儿|diǎnr}{什么|shén·me}。', '{环保|huán bǎo}{在|zài}{每|měi}{个|ge}{人|rén}{方面|fāng·miàn}，{都|dōu}{能|néng}{做|zuò}{什么|shén·me}{点儿|diǎnr}。', '{每|měi}{个|ge}{人|rén}{方面|fāng·miàn}{在|zài}{环保|huán bǎo}{都|dōu}{能|néng}{做|zuò}{点儿|diǎnr}{什么|shén·me}。'], why: '{在|zài} + terület + {方面|fāngmiàn}.', point: 4 },
+    { q: 'Mit jelent az {在…方面|zài … fāngmiàn}?', a: '… terén', wrong: ['… helyett', '… előtt', '… nélkül'], why: '{在工作方面|zài gōngzuò fāngmiàn} „a munka terén".', point: 4 },
+    { q: '„Ebből a módszerből érdemes tanulnunk."', a: '{这个|zhè·ge}{办法|bàn·fǎ}{值得|zhí·de}{我们|wǒ·men}{学习|xué·xí}。', wrong: ['{这个|zhè·ge}{办法|bàn·fǎ}{我们|wǒ·men}{学习|xué·xí}{值得|zhí·de}{吗|ma}。', '{值得|zhí·de}{这个|zhè·ge}{办法|bàn·fǎ}{学习|xué·xí}{我们|wǒ·men}。', '{我们|wǒ·men}{值得|zhí·de}{学习|xué·xí}{办法|bàn·fǎ}{这个|zhè·ge}{了|le}。'], why: 'A + {值得|zhíde} + ige.', point: 5 },
+    { q: 'Mit jelent: {这个电影不值得看|zhège diànyǐng bù zhíde kàn}。', a: 'Ezt a filmet nem érdemes megnézni.', wrong: ['Ezt a filmet még nem láttam.', 'Ez a film nagyon drága.', 'Ezt a filmet mindenképp nézd meg.'], why: '{不值得|bù zhíde} „nem érdemes".', point: 5 },
+    { q: 'Mit jelent a {扔|rēng}?', a: 'kidob', wrong: ['felvesz', 'elmos', 'összeszed'], why: '{不能扔在这儿|bù néng rēng zài zhèr} „ide nem dobhatod".' },
+    { q: 'Mit jelent a {塑料|sùliào}?', a: 'műanyag', wrong: ['papír', 'üveg', 'fém'], why: '{塑料瓶|sùliào píng} „műanyag palack".' },
+    { q: 'Mit jelent a {污染|wūrǎn}?', a: 'szennyezés', wrong: ['védelem', 'tisztaság', 'szabály'], why: '{环境污染|huánjìng wūrǎn} „környezetszennyezés".' },
+    { q: 'Mit jelent: {说得也是|shuō de yě shì}。', a: 'Ez igaz.', wrong: ['Mondd még egyszer!', 'Ezt nem mondhatod.', 'Ki mondta ezt?'], why: 'Egyetértés kifejezése.' }
+  ]
+},
+
+/* ════════════════════════════════════════════════════
+   HSK 4 · 12. LECKE — 即使…也, 不是…就是, 甚至, 的确 · 确实, 再…也
+   ════════════════════════════════════════════════════ */
+{
+  id: 'l62', no: 62, badge: '12', kicker: 'HSK 4 · 12. lecke', label: 'HSK 4 · 12. lecke',
+  title: 'Állásinterjú — még ha kevesebb is a fizetés',
+  lead: 'Állásinterjúra készülsz: feltételezett akadályról beszélsz (即使…也…), két lehetőség egyikét mondod (不是…就是…), fokozol (甚至), megerősítesz (的确 · 确实), és kifejezed, hogy valami semmiképp nem változik (再…也…).',
+  cando: [
+    'Feltételezett akadályt mondasz: 即使…，也….',
+    'Két lehetőségről mondod, hogy az egyik biztosan igaz: 不是…，就是….',
+    'Fokozod az állítást: …，甚至….',
+    'Megerősítesz (的确 · 确实), és azt mondod: akármennyire …, akkor is (再…也…).'
+  ],
+  intro: [
+    'Lin Jing elege lett az éjszakai műszakból, és jelentkezett Anna cégéhez. Holnap lesz az interjú, ezért este Anna „kérdezőbiztosnak" áll, és otthon végigjátsszák a beszélgetést.',
+    'Ebben a leckében a meggyőzés és a nyomaték nyelvét tanulod: feltételezett nehézségeket, fokozást és megerősítést.'
+  ],
+  dialogue: {
+    title: 'Próbainterjú',
+    scene: 'Kedd este Anna és Lin Jing lakásában.',
+    lines: [
+      { who: 'Anna', zh: '{好|hǎo}，{现在|xiàn·zài}{我|wǒ}{是|shì}{面试官|miàn shì guān}。{林|Lín}{小姐|xiǎo·jiě}，{你|nǐ}{为什么|wèi shén·me}{想|xiǎng}{换|huàn}{工作|gōng·zuò}？', hu: 'Jó, most én vagyok a kérdező. Lin kisasszony, miért szeretne munkahelyet váltani?' },
+      { who: 'Lin Jing', zh: '{夜班|yè bān}{的确|dí·què}{太|tài}{累|lèi}{了|le}。{我|wǒ}{以前|yǐ·qián}{不是|bú shì}{在|zài}{上班|shàng bān}，{就是|jiù shì}{在|zài}{睡觉|shuì jiào}，{连|lián}{朋友|péng·you}{都|dōu}{没|méi}{时间|shí·jiān}{见|jiàn}。', hu: 'Az éjszakai műszak valóban túl fárasztó. Eddig vagy dolgoztam, vagy aludtam, még a barátaimmal sem volt időm találkozni.' },
+      { who: 'Anna', zh: '{这个|zhè·ge}{职位|zhí wèi}{常常|cháng·cháng}{要|yào}{出差|chū chāi}，{甚至|shèn·zhì}{周末|zhōu·mò}{也|yě}{要|yào}{工作|gōng·zuò}。{你|nǐ}{能|néng}{接受|jiē·shòu}{吗|ma}？', hu: 'Ez a munkakör gyakori utazással jár, sőt néha hétvégén is dolgozni kell. El tudja fogadni?' },
+      { who: 'Lin Jing', zh: '{没|méi}{问题|wèn·tí}。{即使|jí·shǐ}{工资|gōng·zī}{低|dī}{一点儿|yì diǎnr}，{我|wǒ}{也|yě}{愿意|yuàn·yì}{试|shì}{一|yi}{试|shì}。', hu: 'Semmi gond. Még ha kicsit kevesebb is a fizetés, szívesen kipróbálnám.' },
+      { who: 'Anna', zh: '{停|tíng}！{面试|miàn shì}{的|de}{时候|shí·hou}{千万|qiān·wàn}{别|bié}{说|shuō}“{工资|gōng·zī}{低|dī}{也|yě}{行|xíng}”！{要|yào}{有|yǒu}{自信|zì xìn}。', hu: 'Állj! Interjún semmiképp ne mondd, hogy „kevesebb fizetés is jó"! Legyél magabiztos.' },
+      { who: 'Lin Jing', zh: '{好|hǎo}{吧|ba}……{我|wǒ}{确实|què·shí}{有点儿|yǒu diǎnr}{紧张|jǐn·zhāng}。', hu: 'Jó… tényleg izgulok egy kicsit.' },
+      { who: 'Anna', zh: '{你|nǐ}{英语|Yīng·yǔ}{好|hǎo}，{又|yòu}{有|yǒu}{经验|jīng·yàn}。{再|zài}{紧张|jǐn·zhāng}{也|yě}{要|yào}{微笑|wēi xiào}！', hu: 'Jól beszélsz angolul, és tapasztalatod is van. Akármennyire izgulsz, mosolyogj!' }
+    ],
+    notes: [
+      'A {面试官|miànshìguān} „kérdező, interjúztató", a {职位|zhíwèi} „munkakör, állás".',
+      'A {试一试|shì yi shì} „kipróbál": egyszótagú ige kettőzése, közben semleges {一|yi}.',
+      'A {小姐|xiǎojiě} hivatalos helyzetben (interjú, ügyintézés) udvarias megszólítás: {林小姐|Lín xiǎojiě} „Lin kisasszony".'
+    ]
+  },
+  points: [
+    {
+      title: '{即使|jíshǐ} … {也|yě} …', sub: 'még ha … is, …',
+      pattern: '{即使|jí·shǐ} + feltételezett helyzet，A + {也|yě} + ige',
+      body: 'A {即使|jíshǐ} … {也|yě} … feltételezett, akár szélsőséges helyzetet állít fel, és kijelenti, hogy az eredmény akkor sem változik: {即使工资低一点儿，我也愿意试一试|jíshǐ gōngzī dī yìdiǎnr, wǒ yě yuànyì shì yi shì} „még ha kicsit kevesebb is a fizetés, szívesen kipróbálom". A {虽然|suīrán} <b>tényt</b> enged meg („bár"), a {即使|jíshǐ} <b>feltevést</b> („még ha").',
+      tables: [
+        { caption: 'Tény vagy feltevés?',
+          head: ['', 'Mire épít?', 'Példa'],
+          rows: [
+            ['{虽然|suī·rán} … {但是|dàn·shì}', 'tény', '{虽然|suī·rán}{下|xià}{雨|yǔ}{了|le}，{但是|dàn·shì}{我|wǒ}{去|qù}{了|le}。'],
+            ['{即使|jí·shǐ} … {也|yě}', 'feltevés', '{即使|jí·shǐ}{下|xià}{雨|yǔ}，{我|wǒ}{也|yě}{去|qù}。']
+          ] }
+      ],
+      examples: [
+        { zh: '{即使|jí·shǐ}{工资|gōng·zī}{低|dī}{一点儿|yì diǎnr}，{我|wǒ}{也|yě}{愿意|yuàn·yì}{试|shì}{一|yi}{试|shì}。', hu: 'Még ha kicsit kevesebb is a fizetés, szívesen kipróbálom.' },
+        { zh: '{即使|jí·shǐ}{明天|míng·tiān}{下|xià}{雨|yǔ}，{面试|miàn shì}{也|yě}{不|bú}{会|huì}{推迟|tuī·chí}。', hu: 'Még ha holnap esik is, az interjút nem halasztják el.' }
+      ],
+      mistakes: [
+        { bad: '{即使|jí·shǐ}{工资|gōng·zī}{低|dī}，{我|wǒ}{就|jiù}{愿意|yuàn·yì}。', good: '{即使|jí·shǐ}{工资|gōng·zī}{低|dī}，{我|wǒ}{也|yě}{愿意|yuàn·yì}。', why: 'A {即使|jíshǐ} párja a {也|yě}, nem a {就|jiù}.' }
+      ]
+    },
+    {
+      title: '{不是|bú shì} … {就是|jiù shì} …', sub: 'vagy …, vagy … (más nincs)',
+      pattern: '{不是|bú shì} + A，{就是|jiù shì} + B',
+      body: 'A {不是|bú shì} … {就是|jiù shì} … két lehetőséget sorol, és azt mondja: a kettő közül <b>valamelyik biztosan</b> igaz, harmadik nincs. {我以前不是在上班，就是在睡觉|wǒ yǐqián bú shì zài shàngbān, jiù shì zài shuìjiào} „eddig vagy dolgoztam, vagy aludtam". Ne keverd a {不是|bú shì} … {而是|ér shì} … „nem A, hanem B" szerkezettel (HSK 3 16. lecke).',
+      examples: [
+        { zh: '{我|wǒ}{以前|yǐ·qián}{不是|bú shì}{在|zài}{上班|shàng bān}，{就是|jiù shì}{在|zài}{睡觉|shuì jiào}。', hu: 'Eddig vagy dolgoztam, vagy aludtam.' },
+        { zh: '{周末|zhōu·mò}{他|tā}{不是|bú shì}{看|kàn}{书|shū}，{就是|jiù shì}{去|qù}{跑|pǎo}{步|bù}。', hu: 'Hétvégén vagy olvas, vagy futni megy.' }
+      ]
+    },
+    {
+      title: '{甚至|shènzhì}', sub: 'sőt, még … is',
+      pattern: '…，{甚至|shèn·zhì} + (A) + {也|yě} / {都|dōu} + ige',
+      body: 'A {甚至|shènzhì} a legerősebb, legmeglepőbb elemet emeli ki: {常常要出差，甚至周末也要工作|chángcháng yào chūchāi, shènzhì zhōumò yě yào gōngzuò} „gyakran kell utazni, sőt néha hétvégén is dolgozni". Gyakran kíséri {也|yě} vagy {都|dōu}; állhat főnév előtt is: {甚至小孩都知道|shènzhì xiǎohái dōu zhīdào} „még a gyerekek is tudják".',
+      examples: [
+        { zh: '{这个|zhè·ge}{职位|zhí wèi}{常常|cháng·cháng}{要|yào}{出差|chū chāi}，{甚至|shèn·zhì}{周末|zhōu·mò}{也|yě}{要|yào}{工作|gōng·zuò}。', hu: 'Ez a munkakör gyakori utazással jár, sőt hétvégén is dolgozni kell.' },
+        { zh: '{这个|zhè·ge}{问题|wèn·tí}{太|tài}{简单|jiǎn·dān}{了|le}，{甚至|shèn·zhì}{小孩|xiǎo hái}{都|dōu}{知道|zhī·dào}。', hu: 'Ez a kérdés túl könnyű, még a gyerekek is tudják.' }
+      ]
+    },
+    {
+      title: '{的确|díquè} · {确实|quèshí}', sub: 'valóban, tényleg',
+      pattern: 'A + {的确|dí·què} / {确实|què·shí} + ige / melléknév',
+      body: 'Mindkettő megerősít: „valóban, tényleg, ez így van". {夜班的确太累了|yèbān díquè tài lèi le} „az éjszakai műszak valóban túl fárasztó", {我确实有点儿紧张|wǒ quèshí yǒudiǎnr jǐnzhāng} „tényleg izgulok egy kicsit". A {确实|quèshí} melléknév is lehet: {这个消息很确实|zhège xiāoxi hěn quèshí} „ez a hír biztos, megbízható"; a {的确|díquè} csak határozószó.',
+      examples: [
+        { zh: '{夜班|yè bān}{的确|dí·què}{太|tài}{累|lèi}{了|le}。', hu: 'Az éjszakai műszak valóban túl fárasztó.' },
+        { zh: '{我|wǒ}{确实|què·shí}{有点儿|yǒu diǎnr}{紧张|jǐn·zhāng}。', hu: 'Tényleg izgulok egy kicsit.' }
+      ],
+      mistakes: [
+        { bad: '{这个|zhè·ge}{消息|xiāo·xi}{很|hěn}{的确|dí·què}。', good: '{这个|zhè·ge}{消息|xiāo·xi}{很|hěn}{确实|què·shí}。', why: 'Melléknévként („biztos") csak a {确实|quèshí} áll.' }
+      ]
+    },
+    {
+      title: '{再|zài} … {也|yě} …', sub: 'akármennyire …, akkor is …',
+      pattern: '(A) + {再|zài} + melléknév / ige，(B) + {也|yě} + …',
+      body: 'Ebben a szerkezetben a {再|zài} nem „újra", hanem „akármennyire is": {再紧张也要微笑|zài jǐnzhāng yě yào wēixiào} „akármennyire izgulsz, mosolyogj", {再忙也要吃饭|zài máng yě yào chī fàn} „akármilyen elfoglalt vagy, enni kell". A második rész azt mondja, mi marad változatlan.',
+      examples: [
+        { zh: '{再|zài}{紧张|jǐn·zhāng}{也|yě}{要|yào}{微笑|wēi xiào}！', hu: 'Akármennyire izgulsz, mosolyogj!' },
+        { zh: '{工作|gōng·zuò}{再|zài}{忙|máng}，{你|nǐ}{也|yě}{要|yào}{按时|àn shí}{吃|chī}{饭|fàn}。', hu: 'Akármilyen elfoglalt vagy, időben enned kell.' }
+      ]
+    }
+  ],
+  phrases: [
+    { zh: '{请|qǐng}{简单|jiǎn·dān}{介绍|jiè·shào}{一下|yí xià}{自己|zì·jǐ}。', hu: 'Kérem, mutatkozzon be röviden.' },
+    { zh: '{你|nǐ}{有|yǒu}{什么|shén·me}{优点|yōu·diǎn}？', hu: 'Mik az erősségei?' },
+    { zh: '{我们|wǒ·men}{会|huì}{尽快|jǐn kuài}{通知|tōng·zhī}{你|nǐ}。', hu: 'Hamarosan értesítjük.' },
+    { zh: '{祝|zhù}{你|nǐ}{成功|chéng·gōng}！', hu: 'Sok sikert!' }
+  ],
+  words: [
+    { title: 'Szavak',
+      items: [
+        { zh: '{即使|jí·shǐ}', pinyin: 'jíshǐ', hu: 'még ha … is' },
+        { zh: '{甚至|shèn·zhì}', pinyin: 'shènzhì', hu: 'sőt, még … is' },
+        { zh: '{的确|dí·què}', pinyin: 'díquè', hu: 'valóban' },
+        { zh: '{确实|què·shí}', pinyin: 'quèshí', hu: 'valóban; biztos' },
+        { zh: '{能力|néng·lì}', pinyin: 'nénglì', hu: 'képesség' },
+        { zh: '{优点|yōu·diǎn}', pinyin: 'yōudiǎn', hu: 'erősség, előny' },
+        { zh: '{缺点|quē·diǎn}', pinyin: 'quēdiǎn', hu: 'gyengeség, hiba' },
+        { zh: '{专业|zhuān·yè}', pinyin: 'zhuānyè', hu: 'szak; szakmai' },
+        { zh: '{自信|zì xìn}', pinyin: 'zìxìn', hu: 'magabiztos; önbizalom' },
+        { zh: '{紧张|jǐn·zhāng}', pinyin: 'jǐnzhāng', hu: 'izgul, ideges' },
+        { zh: '{压力|yā·lì}', pinyin: 'yālì', hu: 'nyomás, stressz' },
+        { zh: '{接受|jiē·shòu}', pinyin: 'jiēshòu', hu: 'elfogad' }
+      ] },
+    { title: 'Ráadás',
+      items: [
+        { zh: '{面试官|miàn shì guān}', pinyin: 'miànshìguān', hu: 'kérdező (interjún)' },
+        { zh: '{职位|zhí wèi}', pinyin: 'zhíwèi', hu: 'munkakör, állás' },
+        { zh: '{应聘|yìng pìn}', pinyin: 'yìngpìn', hu: 'állásra jelentkezik' },
+        { zh: '{微笑|wēi xiào}', pinyin: 'wēixiào', hu: 'mosolyog' }
+      ] }
+  ],
+  culture: [
+    { title: 'Vasrizses tál', text: 'A {铁饭碗|tiě fànwǎn} „vas rizsestál" a biztos, életre szóló állás jelképe — régen az állami munkahelyeké. Ma is sokan vágynak rá: évről évre milliók jelentkeznek a köztisztviselői vizsgára ({考公务员|kǎo gōngwùyuán}), mert a biztonságot többre tartják a magasabb fizetésnél.' },
+    { title: 'Szerénység az interjún', text: 'A kínai neveltetés a szerénységet ({谦虚|qiānxū}) becsüli, az interjú viszont az önbemutatásról szól. A jelöltek ezért gyakran „mi" formában beszélnek az eredményeikről, és a gyengeségüket úgy mondják el, hogy közben erősséget mutassanak („túl alapos vagyok").' }
+  ],
+  reading: {
+    title: '{林静|Lín Jìng}{的|de}{面试|miàn shì}', titleHu: 'Lin Jing interjúja',
+    text: [
+      { zh: '{林静|Lín Jìng}{上|shàng}{了|le}{两|liǎng}{年|nián}{夜班|yè bān}，{生活|shēng·huó}{很|hěn}{简单|jiǎn·dān}：{不是|bú shì}{工作|gōng·zuò}，{就是|jiù shì}{睡觉|shuì jiào}。', hu: 'Lin Jing két évig éjszakás volt, és az élete egyszerű volt: vagy dolgozott, vagy aludt.' },
+      { zh: '{她|tā}{决定|jué·dìng}{换|huàn}{工作|gōng·zuò}，{即使|jí·shǐ}{工资|gōng·zī}{少|shǎo}{一点儿|yì diǎnr}{也|yě}{没|méi}{关系|guān·xi}。', hu: 'Elhatározta, hogy munkahelyet vált, még ha kicsit kevesebb is lesz a fizetése.' },
+      { zh: '{面试|miàn shì}{前|qián}{一|yì}{天|tiān}{晚上|wǎn·shang}，{她|tā}{紧张|jǐn·zhāng}{得|de}{睡|shuì}{不|bu}{着|zháo}，{甚至|shèn·zhì}{连|lián}{饭|fàn}{都|dōu}{吃|chī}{不|bu}{下|xià}。', hu: 'Az interjú előtti estén annyira izgult, hogy nem tudott aludni, sőt enni sem bírt.', par: true },
+      { zh: '{安娜|Ān·nà}{帮|bāng}{她|tā}{练习|liàn·xí}{了|le}{很|hěn}{多|duō}{次|cì}，{告诉|gào·su}{她|tā}：“{再|zài}{紧张|jǐn·zhāng}{也|yě}{要|yào}{有|yǒu}{自信|zì xìn}。”', hu: 'Anna sokszor gyakorolt vele, és azt mondta neki: „Akármennyire izgulsz, legyél magabiztos."' },
+      { zh: '{结果|jié·guǒ}{面试|miàn shì}{很|hěn}{顺利|shùn·lì}，{林静|Lín Jìng}{下|xià}{个|ge}{月|yuè}{就|jiù}{要|yào}{去|qù}{新|xīn}{公司|gōng·sī}{上班|shàng bān}{了|le}。', hu: 'Az interjú végül simán ment, Lin Jing jövő hónaptól az új cégnél dolgozik.', par: true }
+    ],
+    words: [ { zh: '{顺利|shùn·lì}', hu: 'zökkenőmentes, sikeres' } ],
+    questions: [
+      { q: 'Milyen volt Lin Jing élete éjszakásként?', a: 'vagy dolgozott, vagy aludt', wrong: ['sokat utazott', 'minden este bulizott', 'nappal egyetemre járt'], why: '{不是工作，就是睡觉|bú shì gōngzuò, jiù shì shuìjiào}.' },
+      { q: 'Mit gondolt a fizetésről?', a: 'lehet kevesebb is', wrong: ['több kell neki', 'csak az számít', 'nem akar beszélni róla'], why: '{即使工资少一点儿也没关系|jíshǐ gōngzī shǎo yìdiǎnr yě méi guānxi}.' },
+      { q: 'Mi történt az interjú előtti estén?', a: 'nem tudott aludni', wrong: ['sokáig dolgozott', 'moziba ment', 'korán lefeküdt'], why: '{紧张得睡不着|jǐnzhāng de shuì bu zháo}.' },
+      { q: 'Hogyan sikerült az interjú?', a: 'jól, felvették', wrong: ['rosszul, nem vették fel', 'elhalasztották', 'nem ment el rá'], why: '{面试很顺利|miànshì hěn shùnlì}, {下个月就要去新公司上班了|xià ge yuè jiù yào qù xīn gōngsī shàngbān le}.' }
+    ]
+  },
+  quiz: [
+    { q: '„Még ha kevesebb is a fizetés, szívesen kipróbálom."', a: '{即使|jí·shǐ}{工资|gōng·zī}{低|dī}，{我|wǒ}{也|yě}{愿意|yuàn·yì}{试|shì}{一|yi}{试|shì}。', wrong: ['{即使|jí·shǐ}{工资|gōng·zī}{低|dī}，{我|wǒ}{就|jiù}{愿意|yuàn·yì}{试|shì}{一|yi}{试|shì}。', '{我|wǒ}{也|yě}{即使|jí·shǐ}{工资|gōng·zī}{低|dī}，{愿意|yuàn·yì}{试|shì}{一|yi}{试|shì}。', '{工资|gōng·zī}{即使|jí·shǐ}{低|dī}{也|yě}，{我|wǒ}{试|shì}{一|yi}{试|shì}{愿意|yuàn·yì}。'], why: '{即使|jíshǐ} …, A + {也|yě} ….', point: 1 },
+    { q: 'Miben más a {即使|jíshǐ}, mint a {虽然|suīrán}?', a: 'feltevésre épít, nem tényre', wrong: ['csak a múltról szól', 'okot fejez ki', 'ugyanaz, csak régies'], why: '{即使|jíshǐ} „még ha", {虽然|suīrán} „bár".', point: 1 },
+    { q: 'Melyik illik? ___{明天|míng·tiān}{下|xià}{雨|yǔ}，{面试|miàn shì}{也|yě}{不|bú}{会|huì}{推迟|tuī·chí}。', a: '{即使|jí·shǐ}', wrong: ['{虽然|suī·rán}', '{因为|yīn·wèi}', '{既然|jì·rán}'], why: 'Feltevés + {也|yě}: {即使|jíshǐ}.', point: 1 },
+    { q: '„Eddig vagy dolgoztam, vagy aludtam."', a: '{我|wǒ}{以前|yǐ·qián}{不是|bú shì}{在|zài}{上班|shàng bān}，{就是|jiù shì}{在|zài}{睡觉|shuì jiào}。', wrong: ['{我|wǒ}{以前|yǐ·qián}{不是|bú shì}{在|zài}{上班|shàng bān}，{而是|ér shì}{在|zài}{睡觉|shuì jiào}。', '{我|wǒ}{以前|yǐ·qián}{就是|jiù shì}{在|zài}{上班|shàng bān}，{不是|bú shì}{睡觉|shuì jiào}{在|zài}。', '{不是|bú shì}{我|wǒ}{以前|yǐ·qián}{上班|shàng bān}{在|zài}，{睡觉|shuì jiào}{就是|jiù shì}。'], why: '{不是|bú shì} A, {就是|jiù shì} B.', point: 2 },
+    { q: 'Mit jelent: {周末他不是看书，就是跑步|zhōumò tā bú shì kàn shū, jiù shì pǎobù}。', a: 'Hétvégén vagy olvas, vagy fut.', wrong: ['Hétvégén nem olvas, hanem fut.', 'Hétvégén se nem olvas, se nem fut.', 'Hétvégén olvas és fut is.'], why: '„Vagy A, vagy B".', point: 2 },
+    { q: '„Gyakran kell utazni, sőt hétvégén is dolgozni."', a: '{常常|cháng·cháng}{要|yào}{出差|chū chāi}，{甚至|shèn·zhì}{周末|zhōu·mò}{也|yě}{要|yào}{工作|gōng·zuò}。', wrong: ['{常常|cháng·cháng}{要|yào}{出差|chū chāi}，{周末|zhōu·mò}{也|yě}{甚至|shèn·zhì}{工作|gōng·zuò}{要|yào}。', '{甚至|shèn·zhì}{常常|cháng·cháng}{出差|chū chāi}{要|yào}，{周末|zhōu·mò}{工作|gōng·zuò}{也|yě}。', '{常常|cháng·cháng}{甚至|shèn·zhì}{要|yào}{出差|chū chāi}{也|yě}，{周末|zhōu·mò}{要|yào}{工作|gōng·zuò}。'], why: '…, {甚至|shènzhì} + … {也|yě} ….', point: 3 },
+    { q: 'Mit jelent: {甚至小孩都知道|shènzhì xiǎohái dōu zhīdào}。', a: 'Még a gyerekek is tudják.', wrong: ['Csak a gyerekek tudják.', 'A gyerekek sem tudják.', 'A gyerekek majd megtudják.'], why: '{甚至|shènzhì} „még … is".', point: 3 },
+    { q: '„Az éjszakai műszak valóban túl fárasztó."', a: '{夜班|yè bān}{的确|dí·què}{太|tài}{累|lèi}{了|le}。', wrong: ['{夜班|yè bān}{太|tài}{累|lèi}{的确|dí·què}{了|le}。', '{的确|dí·què}{太|tài}{夜班|yè bān}{累|lèi}{了|le}。', '{夜班|yè bān}{太|tài}{的确|dí·què}{了|le}{累|lèi}。'], why: 'A + {的确|díquè} + állítmány.', point: 4 },
+    { q: 'Melyik mondat helyes?', a: '{这个|zhè·ge}{消息|xiāo·xi}{很|hěn}{确实|què·shí}。', wrong: ['{这个|zhè·ge}{消息|xiāo·xi}{很|hěn}{的确|dí·què}。', '{这个|zhè·ge}{消息|xiāo·xi}{的确|dí·què}{很|hěn}{的|de}。', '{这个|zhè·ge}{很|hěn}{的确|dí·què}{消息|xiāo·xi}。'], why: 'Melléknévként csak a {确实|quèshí} áll.', point: 4 },
+    { q: '„Akármennyire izgulsz, mosolyogj!"', a: '{再|zài}{紧张|jǐn·zhāng}{也|yě}{要|yào}{微笑|wēi xiào}！', wrong: ['{再|zài}{紧张|jǐn·zhāng}{就|jiù}{要|yào}{微笑|wēi xiào}！', '{紧张|jǐn·zhāng}{再|zài}{微笑|wēi xiào}{也|yě}{要|yào}！', '{也|yě}{紧张|jǐn·zhāng}{再|zài}{要|yào}{微笑|wēi xiào}！'], why: '{再|zài} + melléknév, {也|yě} + ….', point: 5 },
+    { q: 'Mit jelent itt a {再|zài}: {再忙也要吃饭|zài máng yě yào chī fàn}?', a: 'akármennyire', wrong: ['újra', 'aztán', 'még egyszer'], why: '„Akármilyen elfoglalt vagy, enni kell".', point: 5 },
+    { q: 'Mit jelent a {紧张|jǐnzhāng}?', a: 'izgul, ideges', wrong: ['fáradt', 'boldog', 'unatkozik'], why: '{我有点儿紧张|wǒ yǒudiǎnr jǐnzhāng}.' },
+    { q: 'Mit jelent a {优点|yōudiǎn}?', a: 'erősség', wrong: ['gyengeség', 'fizetés', 'munkakör'], why: 'Ellentéte: {缺点|quēdiǎn} „gyengeség".' },
+    { q: 'Mit jelent a {压力|yālì}?', a: 'nyomás, stressz', wrong: ['erő', 'fizetés', 'tapasztalat'], why: '{工作压力很大|gōngzuò yālì hěn dà} „nagy a munkahelyi stressz".' },
+    { q: 'Mit jelent: {祝你成功|zhù nǐ chénggōng}！', a: 'Sok sikert!', wrong: ['Gratulálok!', 'Jobbulást!', 'Jó utat!'], why: '{成功|chénggōng} „siker".' },
+    { q: 'Mit jelent a {接受|jiēshòu}?', a: 'elfogad', wrong: ['elutasít', 'megkérdez', 'befejez'], why: '{你能接受吗|nǐ néng jiēshòu ma} „el tudod fogadni?".' }
+  ]
 }
 
 ];

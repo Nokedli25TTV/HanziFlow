@@ -803,7 +803,29 @@ const HANZIFLOW_PATH = [
     module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l60&round=listen' },
   { id: 'l60-read', glyph: '读', title: 'Olvasás: Régi barát',
     desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
-    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l60&round=read' }
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l60&round=read' },
+
+  // ── HSK 4 · 11. lecke ──
+  { id: 'l61-lesson', glyph: '环', title: 'Magyarázat: 对于, 使, 对…有好处, 在…方面, 值得',
+    desc: 'Szelektív gyűjtés: téma megnevezése, okozás, mire jó vagy rossz, melyik terület, mit érdemes.',
+    module: 'lesson', href: 'pages/lesson.html?id=l61' },
+  { id: 'l61-listen', glyph: '听', title: 'Hallás: a gyűjtőpontnál',
+    desc: 'A lecke mondatai hang után: mit jelent, amit hallasz?',
+    module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l61&round=listen' },
+  { id: 'l61-read', glyph: '读', title: 'Olvasás: Szelektív gyűjtés Sanghajban',
+    desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l61&round=read' },
+
+  // ── HSK 4 · 12. lecke ──
+  { id: 'l62-lesson', glyph: '试', title: 'Magyarázat: 即使…也, 不是…就是, 甚至, 的确 · 确实, 再…也',
+    desc: 'Állásinterjú: még ha…, vagy…vagy…, sőt, valóban, akármennyire…is.',
+    module: 'lesson', href: 'pages/lesson.html?id=l62' },
+  { id: 'l62-listen', glyph: '听', title: 'Hallás: próbainterjú',
+    desc: 'A lecke mondatai hang után: mit jelent, amit hallasz?',
+    module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l62&round=listen' },
+  { id: 'l62-read', glyph: '读', title: 'Olvasás: Lin Jing interjúja',
+    desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l62&round=read' }
 ];
 
 const HANZIFLOW_PATH_UNITS = [
@@ -954,5 +976,9 @@ const HANZIFLOW_PATH_UNITS = [
   { id: 'u-l59', kicker: 'HSK 4 · 9. lecke', title: 'Vita a lakótárssal', sub: '难道, 到底 · 究竟, 怪不得 · 难怪, 不是…吗, 可',
     steps: ['l59-lesson', 'l59-listen', 'l59-read'] },
   { id: 'u-l60', kicker: 'HSK 4 · 10. lecke', title: 'Régi barát érkezik', sub: '随着, 渐渐, 仍然, 从来不 · 从来没…过, 曾经',
-    steps: ['l60-lesson', 'l60-listen', 'l60-read'] }
+    steps: ['l60-lesson', 'l60-listen', 'l60-read'] },
+  { id: 'u-l61', kicker: 'HSK 4 · 11. lecke', title: 'Szelektív gyűjtés', sub: '对于, 使, 对…有好处 · 坏处, 在…方面, 值得',
+    steps: ['l61-lesson', 'l61-listen', 'l61-read'] },
+  { id: 'u-l62', kicker: 'HSK 4 · 12. lecke', title: 'Állásinterjú', sub: '即使…也, 不是…就是, 甚至, 的确 · 确实, 再…也',
+    steps: ['l62-lesson', 'l62-listen', 'l62-read'] }
 ];
