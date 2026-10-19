@@ -16375,6 +16375,317 @@ const HANZIFLOW_COURSE = [
     { q: 'Mit jelent a {告别|gàobié}?', a: 'elbúcsúzik', wrong: ['üdvözöl', 'meghív', 'bemutatkozik'], why: '{告别会|gàobié huì} „búcsúest".' },
     { q: 'Mit jelent: {这不是结束，而是新的开始|zhè bú shì jiéshù, ér shì xīn de kāishǐ}。', a: 'Ez nem a vég, hanem egy új kezdet.', wrong: ['Ez a vég, nincs tovább.', 'Még nem kezdtük el.', 'Ez se nem vég, se nem kezdet.'], why: '{不是|bú shì}…{而是|ér shì}… (HSK 3).' }
   ]
+},
+/* ════════════════════════════════════════════════════
+   HSK 6 · 1. LECKE — 鉴于, 本着, 凭 · 凭借, 一经…就, 务必
+   ════════════════════════════════════════════════════ */
+{
+  id: 'l91', no: 91, badge: '1', kicker: 'HSK 6 · 1. lecke', label: 'HSK 6 · 1. lecke',
+  title: 'Az európai iroda — feltétlenül huszonnégy órán belül',
+  lead: 'Új vezetőként hivatalos nyelven indokolsz (鉴于), elvekre hivatkozol (本着), megmondod, mire támaszkodsz (凭), mi történik, amint valami megvalósul (一经…就), és nyomatékosan kérsz (务必).',
+  cando: [
+    'Hivatalos döntést indokolsz: 鉴于…，决定….',
+    'Elvre, hozzáállásra hivatkozol: 本着…的原则.',
+    'Megmondod, mire támaszkodva sikerül valami: 凭 / 凭借….',
+    'Szabályt és nyomatékos kérést fogalmazol: 一经…就…, 务必….'
+  ],
+  intro: [
+    'Anna hazatért Budapestre, és átvette a cég európai irodájának vezetését. Az első héten videóhívásban beszél Chen igazgatóval Sanghajból, mellette ül Péter, az iroda magyar munkatársa.',
+    'A HSK 6 a hivatalos, írott kínai felé visz: értekezletek, levelek, közlemények nyelve. Ebben a leckében a munkahelyi hivatalos fordulatokkal kezdünk.'
+  ],
+  dialogue: {
+    title: 'Videóhívás Sanghajjal',
+    scene: 'Hétfő reggel, a budapesti irodában. Anna, Péter és — a képernyőn — Chen igazgató.',
+    lines: [
+      { who: 'Chen', zh: '{安娜|Ān·nà}，{鉴于|jiàn yú}{你|nǐ}{在|zài}{中国|Zhōng·guó}{工作|gōng·zuò}{过|guo}{四|sì}{年|nián}，{总部|zǒng bù}{决定|jué·dìng}{由|yóu}{你|nǐ}{全面|quán miàn}{负责|fù zé}{欧洲|Ōu·zhōu}{市场|shì chǎng}。', hu: 'Anna, tekintettel arra, hogy négy évig dolgoztál Kínában, a központ úgy döntött, hogy te felelsz teljes körűen az európai piacért.' },
+      { who: 'Anna', zh: '{谢谢|xiè·xie}{您|nín}{的|de}{信任|xìn rèn}。{我|wǒ}{会|huì}{本着|běn·zhe}{互相|hù xiāng}{尊重|zūn zhòng}{的|de}{原则|yuán zé}，{和|hé}{中|Zhōng}{欧|Ōu}{两|liǎng}{边|biān}{的|de}{同事|tóng shì}{好好|hǎo hǎo}{合作|hé zuò}。', hu: 'Köszönöm a bizalmat. A kölcsönös tisztelet elve alapján fogok együttműködni a kínai és az európai kollégákkal.' },
+      { who: 'Chen', zh: '{凭|píng}{你|nǐ}{的|de}{经验|jīng yàn}{和|hé}{语言|yǔ yán}{能力|néng lì}，{我|wǒ}{相信|xiāng·xìn}{一定|yí dìng}{没|méi}{问题|wèn·tí}。{下|xià}{个|ge}{月|yuè}{周杰|Zhōu Jié}{也|yě}{会|huì}{来|lái}{布达佩斯|Bù·dá·pèi·sī}{帮|bāng}{你|nǐ}。', hu: 'A tapasztalatod és a nyelvtudásod mellett biztos vagyok benne, hogy menni fog. Jövő hónapban Zhou Jie is jön Budapestre segíteni.' },
+      { who: 'Péter', zh: '{太|tài}{好|hǎo}{了|le}！{不过|bú·guò}{我们|wǒ·men}{的|de}{中文|Zhōng·wén}{网站|wǎng zhàn}{一经|yì jīng}{上线|shàng xiàn}，{就|jiù}{会|huì}{有|yǒu}{很|hěn}{多|duō}{中国|Zhōng·guó}{客户|kè hù}{来|lái}{咨询|zī xún}。', hu: 'Nagyszerű! Csakhogy amint elindul a kínai nyelvű honlapunk, rengeteg kínai ügyfél fog érdeklődni.' },
+      { who: 'Anna', zh: '{所以|suǒ·yǐ}{客服|kè fú}{人员|rén yuán}{务必|wù bì}{在|zài}{二十四|èr shí sì}{小时|xiǎo·shí}{之内|zhī nèi}{回复|huí fù}{每|měi}{一|yì}{封|fēng}{邮件|yóu·jiàn}。', hu: 'Ezért az ügyfélszolgálatnak minden e-mailre feltétlenül huszonnégy órán belül válaszolnia kell.' },
+      { who: 'Chen', zh: '{对|duì}，{客户|kè hù}{的|de}{第一|dì yī}{印象|yìn·xiàng}{非常|fēi·cháng}{重要|zhòng yào}。{有|yǒu}{什么|shén·me}{困难|kùn·nan}，{随时|suí shí}{跟|gēn}{我|wǒ}{联系|lián·xì}。', hu: 'Igen, az ügyfél első benyomása nagyon fontos. Ha bármi nehézség adódik, bármikor keress meg.' },
+      { who: 'Anna', zh: '{好|hǎo}{的|de}。{彼得|Bǐ·dé}，{明天|míng·tiān}{上午|shàng·wǔ}{九|jiǔ}{点|diǎn}{开|kāi}{会|huì}，{我们|wǒ·men}{把|bǎ}{下|xià}{个|ge}{月|yuè}{的|de}{计划|jì·huà}{定|dìng}{下来|xià·lái}。', hu: 'Rendben. Péter, holnap délelőtt kilenckor megbeszélés, véglegesítjük a jövő havi tervet.' }
+    ],
+    notes: [
+      'A {总部|zǒngbù} „központ, anyavállalat", ellentéte a {分公司|fēngōngsī} „leányvállalat, fiókiroda".',
+      'A {彼得|Bǐdé} a „Péter" név bevett kínai alakja: a magyar neveket hangzás szerint írják át.',
+      'A {定下来|dìng xiàlái} „véglegesít": a {下来|xiàlái} itt a rögzülést jelzi (HSK 4 13. lecke).'
+    ]
+  },
+  points: [
+    {
+      title: '{鉴于|jiànyú}', sub: 'tekintettel arra, hogy …',
+      pattern: '{鉴于|jiàn yú} + helyzet，(alany) + döntés / javaslat',
+      body: 'A {鉴于|jiànyú} írott, hivatalos kötőszó: egy ismert tényre hivatkozva vezeti be a <b>döntést vagy javaslatot</b>. {鉴于你在中国工作过四年|jiànyú nǐ zài Zhōngguó gōngzuò guo sì nián}，{总部决定|zǒngbù juédìng} …. Közel áll a {由于|yóuyú}-hoz (HSK 4 7. lecke), de a {鉴于|jiànyú} után mérlegelés, döntés jön, nem egyszerű következmény.',
+      examples: [
+        { zh: '{鉴于|jiàn yú}{天气|tiān·qì}{原因|yuán yīn}，{今天|jīn·tiān}{的|de}{航班|háng bān}{全部|quán bù}{取消|qǔ xiāo}。', hu: 'Az időjárásra való tekintettel a mai járatokat mind törölték.' },
+        { zh: '{鉴于|jiàn yú}{他|tā}{的|de}{表现|biǎo xiàn}，{公司|gōng·sī}{决定|jué·dìng}{给|gěi}{他|tā}{加|jiā}{薪|xīn}。', hu: 'A teljesítményére való tekintettel a cég úgy döntött, hogy emeli a fizetését.' }
+      ]
+    },
+    {
+      title: '{本着|běnzhe}', sub: '… szellemében, … elve alapján',
+      pattern: '{本着|běn·zhe} + … {的|de} + {原则|yuán zé} / {精神|jīng shén} / {态度|tài·dù}，+ cselekvés',
+      body: 'A {本着|běnzhe} azt mondja meg, <b>milyen elv, szellem vagy hozzáállás</b> szerint cselekszünk. Szinte mindig ezek a főnevek követik: {原则|yuánzé} „elv", {精神|jīngshén} „szellem", {态度|tàidù} „hozzáállás". {本着互相尊重的原则|běnzhe hùxiāng zūnzhòng de yuánzé} „a kölcsönös tisztelet elve alapján".',
+      examples: [
+        { zh: '{我们|wǒ·men}{本着|běn·zhe}{公平|gōng píng}{的|de}{原则|yuán zé}{选择|xuǎn zé}{合作|hé zuò}{伙伴|huǒ bàn}。', hu: 'A méltányosság elve alapján választunk partnert.' },
+        { zh: '{本着|běn·zhe}{认真|rèn·zhēn}{负责|fù zé}{的|de}{态度|tài·dù}，{他|tā}{又|yòu}{检查|jiǎn chá}{了|le}{一|yí}{遍|biàn}。', hu: 'Felelősségteljes hozzáállással még egyszer átnézte.' }
+      ]
+    },
+    {
+      title: '{凭|píng} · {凭借|píngjiè}', sub: '…-ra támaszkodva, … révén',
+      pattern: '{凭|píng} / {凭借|píng jiè} + képesség, eszköz + ige',
+      body: 'A {凭|píng} (írottan {凭借|píngjiè}) azt mondja meg, <b>mire támaszkodva</b> sikerül vagy történik valami: {凭你的经验|píng nǐ de jīngyàn} „a tapasztalatod révén". Hivatalos szövegben feltételt is jelöl: {凭票入场|píng piào rù chǎng} „belépés jeggyel". Kérdésben számonkérés: {你凭什么这么说|nǐ píng shénme zhème shuō}？ „Mi alapján mondod ezt?"',
+      examples: [
+        { zh: '{她|tā}{凭|píng}{自己|zì jǐ}{的|de}{努力|nǔ lì}{考|kǎo}{上|shàng}{了|le}{北京|Běi·jīng}{大学|dà xué}。', hu: 'A saját erejéből jutott be a Pekingi Egyetemre.' },
+        { zh: '{凭借|píng jiè}{这|zhè}{部|bù}{电影|diàn·yǐng}，{他|tā}{获得|huò dé}{了|le}{最|zuì}{佳|jiā}{导演|dǎo yǎn}{奖|jiǎng}。', hu: 'Ezzel a filmmel elnyerte a legjobb rendezőnek járó díjat.' }
+      ],
+      mistakes: [
+        { bad: '{凭|píng}{他|tā}{很|hěn}{努力|nǔ lì}，{他|tā}{成功|chéng gōng}{了|le}。', good: '{凭|píng}{着|zhe}{自己|zì jǐ}{的|de}{努力|nǔ lì}，{他|tā}{成功|chéng gōng}{了|le}。', why: 'A {凭|píng} után főnévi kifejezés áll (ami segít), nem egész mondat.' }
+      ]
+    },
+    {
+      title: '{一经|yìjīng} … {就|jiù}', sub: 'amint egyszer …, (máris) …',
+      pattern: '{一经|yì jīng} + ige，{就|jiù} / {便|biàn} / {立即|lì jí} + következmény',
+      body: 'Az {一经|yìjīng} azt jelenti: ha valami <b>egyszer megtörténik</b>, annak rögtön meglesz a következménye. Írott, hivatalos fordulat, szabályzatokban és közleményekben gyakori: {一经发现|yìjīng fāxiàn}，{立即处理|lìjí chǔlǐ} „ha kiderül, azonnal intézkedünk".',
+      examples: [
+        { zh: '{商品|shāng pǐn}{一经|yì jīng}{售出|shòu chū}，{概|gài}{不|bú}{退|tuì}{换|huàn}。', hu: 'Az eladott árut nem cseréljük vissza.' },
+        { zh: '{我们|wǒ·men}{的|de}{网站|wǎng zhàn}{一经|yì jīng}{上线|shàng xiàn}，{就|jiù}{受到|shòu dào}{了|le}{客户|kè hù}{的|de}{欢迎|huān·yíng}。', hu: 'A honlapunk, amint elindult, rögtön népszerű lett az ügyfelek körében.' }
+      ]
+    },
+    {
+      title: '{务必|wùbì}', sub: 'feltétlenül, mindenképpen',
+      pattern: '({请|qǐng}) + A + {务必|wù bì} + ige',
+      body: 'A {务必|wùbì} nyomatékos <b>kérés vagy előírás</b>: „ezt feltétlenül meg kell tenni". Hivatalos hangvételű; a beszélt nyelvben az {一定要|yídìng yào} felel meg neki. Tagadva: {务必不要|wùbì bú yào} „semmiképp ne".',
+      examples: [
+        { zh: '{请|qǐng}{各位|gè wèi}{务必|wù bì}{在|zài}{周五|zhōu wǔ}{以前|yǐ qián}{提交|tí jiāo}{报告|bào gào}。', hu: 'Kérem, hogy mindenki feltétlenül péntek előtt adja le a jelentését.' },
+        { zh: '{这|zhè}{件|jiàn}{事|shì}{非常|fēi·cháng}{重要|zhòng yào}，{你|nǐ}{务必|wù bì}{亲自|qīn zì}{去|qù}{一|yí}{趟|tàng}。', hu: 'Ez nagyon fontos, mindenképp menj el személyesen.' }
+      ]
+    }
+  ],
+  phrases: [
+    { zh: '{请|qǐng}{多|duō}{多|duō}{指教|zhǐ jiào}。', hu: 'Kérem, segítsenek a tanácsaikkal. (bemutatkozáskor)' },
+    { zh: '{我|wǒ}{会|huì}{尽|jìn}{全力|quán lì}。', hu: 'Minden tőlem telhetőt megteszek.' },
+    { zh: '{有|yǒu}{问题|wèn·tí}{随时|suí shí}{联系|lián·xì}。', hu: 'Ha gond van, bármikor keress.' },
+    { zh: '{合作|hé zuò}{愉快|yú kuài}！', hu: 'Jó együttműködést!' }
+  ],
+  words: [
+    { title: 'Szavak',
+      items: [
+        { zh: '{鉴于|jiàn yú}', pinyin: 'jiànyú', hu: 'tekintettel arra, hogy' },
+        { zh: '{本着|běn·zhe}', pinyin: 'běnzhe', hu: '… szellemében, alapján' },
+        { zh: '{凭借|píng jiè}', pinyin: 'píngjiè', hu: '…-ra támaszkodva' },
+        { zh: '{一经|yì jīng}', pinyin: 'yìjīng', hu: 'amint egyszer' },
+        { zh: '{务必|wù bì}', pinyin: 'wùbì', hu: 'feltétlenül' },
+        { zh: '{总部|zǒng bù}', pinyin: 'zǒngbù', hu: 'központ, anyavállalat' },
+        { zh: '{原则|yuán zé}', pinyin: 'yuánzé', hu: 'elv' },
+        { zh: '{全面|quán miàn}', pinyin: 'quánmiàn', hu: 'teljes körű, átfogó' },
+        { zh: '{上线|shàng xiàn}', pinyin: 'shàngxiàn', hu: 'elindul (online)' },
+        { zh: '{咨询|zī xún}', pinyin: 'zīxún', hu: 'érdeklődik, tanácsot kér' },
+        { zh: '{回复|huí fù}', pinyin: 'huífù', hu: 'válaszol (levélre)' },
+        { zh: '{尊重|zūn zhòng}', pinyin: 'zūnzhòng', hu: 'tisztel, tiszteletben tart' }
+      ] },
+    { title: 'Ráadás',
+      items: [
+        { zh: '{分公司|fēn gōng sī}', pinyin: 'fēngōngsī', hu: 'leányvállalat, fiók' },
+        { zh: '{视频会议|shì pín huì yì}', pinyin: 'shìpín huìyì', hu: 'videókonferencia' },
+        { zh: '{上任|shàng rèn}', pinyin: 'shàngrèn', hu: 'hivatalba lép' },
+        { zh: '{指教|zhǐ jiào}', pinyin: 'zhǐjiào', hu: 'útmutatás, tanács' }
+      ] }
+  ],
+  culture: [
+    { title: 'Megszólítás a munkahelyen', text: 'Kínai cégeknél a feletteseket a beosztásukkal szólítják: {陈经理|Chén jīnglǐ}, {刘总|Liú zǒng}. Az egyenrangú kollégák között a {小王|Xiǎo Wáng} (fiatalabbnak) és a {老李|Lǎo Lǐ} (idősebbnek) a szokásos. Új munkahelyen a bemutatkozás végén elhangzik: {请多多指教|qǐng duōduō zhǐjiào}.' },
+    { title: 'Központ és fiók', text: 'A kínai vállalatok erősen központosítottak: a nagy döntéseket a {总部|zǒngbù} hozza, a fiókok vezetői {请示|qǐngshì} „engedélyt kérnek" és {汇报|huìbào} „beszámolnak". Egy külföldi iroda vezetője ezért gyakran két munkakultúra között közvetít.' }
+  ],
+  reading: {
+    title: '{安娜|Ān·nà}{的|de}{新|xīn}{工作|gōng·zuò}', titleHu: 'Anna új munkája',
+    text: [
+      { zh: '{回|huí}{到|dào}{布达佩斯|Bù·dá·pèi·sī}{以后|yǐ·hòu}，{安娜|Ān·nà}{成|chéng}{了|le}{公司|gōng·sī}{欧洲|Ōu·zhōu}{办公室|bàn gōng shì}{的|de}{负责人|fù zé rén}。', hu: 'Budapestre visszatérve Anna lett a cég európai irodájának vezetője.' },
+      { zh: '{凭|píng}{着|zhe}{在|zài}{中国|Zhōng·guó}{积累|jī lěi}{的|de}{经验|jīng yàn}，{她|tā}{很|hěn}{快|kuài}{就|jiù}{适应|shì yìng}{了|le}{新|xīn}{的|de}{角色|jué sè}。', hu: 'A Kínában szerzett tapasztalatára támaszkodva hamar beletanult az új szerepébe.' },
+      { zh: '{她|tā}{本着|běn·zhe}“{客户|kè hù}{第一|dì yī}”{的|de}{原则|yuán zé}，{要求|yāo qiú}{大家|dà·jiā}{务必|wù bì}{当天|dàng tiān}{回复|huí fù}{客户|kè hù}{的|de}{邮件|yóu·jiàn}。', hu: 'Az „ügyfél az első" elve alapján megkövetelte, hogy mindenki még aznap válaszoljon az ügyfelek e-mailjeire.', par: true },
+      { zh: '{鉴于|jiàn yú}{中国|Zhōng·guó}{客户|kè hù}{越来越|yuè lái yuè}{多|duō}，{她|tā}{还|hái}{决定|jué·dìng}{开|kāi}{一|yí}{个|ge}{中文|Zhōng·wén}{网站|wǎng zhàn}。', hu: 'Mivel egyre több a kínai ügyfél, úgy döntött, kínai nyelvű honlapot is indít.' },
+      { zh: '{网站|wǎng zhàn}{一经|yì jīng}{上线|shàng xiàn}，{第一|dì yī}{个|ge}{星期|xīng·qī}{就|jiù}{收到|shōu dào}{了|le}{两百|liǎng bǎi}{多|duō}{封|fēng}{咨询|zī xún}{邮件|yóu·jiàn}。', hu: 'A honlap, amint elindult, már az első héten több mint kétszáz érdeklődő e-mailt kapott.', par: true }
+    ],
+    words: [ { zh: '{积累|jī lěi}', hu: 'felhalmoz, összegyűjt (tapasztalatot)' } ],
+    questions: [
+      { q: 'Mi lett Anna Budapesten?', a: 'az európai iroda vezetője', wrong: ['a cég tolmácsa', 'egyetemi tanár', 'ügyfélszolgálatos'], why: '{办公室的负责人|bàngōngshì de fùzérén}.' },
+      { q: 'Mire támaszkodva tanult bele gyorsan a szerepébe?', a: 'a kínai tapasztalatára', wrong: ['a kollégái segítségére', 'egy tanfolyamra', 'a főnöke tanácsaira'], why: '{凭着在中国积累的经验|píngzhe zài Zhōngguó jīlěi de jīngyàn}.' },
+      { q: 'Mit kért Anna a munkatársaktól?', a: 'aznap válaszoljanak a levelekre', wrong: ['dolgozzanak hétvégén is', 'tanuljanak meg kínaiul', 'utazzanak el Kínába'], why: '{务必当天回复客户的邮件|wùbì dàngtiān huífù kèhù de yóujiàn}.' },
+      { q: 'Mi történt a honlap indulása után?', a: 'sok érdeklődő levél jött', wrong: ['leállt a honlap', 'kevés ügyfél jelentkezett', 'Anna hazautazott'], why: '{收到了两百多封咨询邮件|shōudào le liǎngbǎi duō fēng zīxún yóujiàn}.' }
+    ]
+  },
+  quiz: [
+    { q: '„Az időjárásra való tekintettel a járatot törölték."', a: '{鉴于|jiàn yú}{天气|tiān·qì}{原因|yuán yīn}，{航班|háng bān}{取消|qǔ xiāo}{了|le}。', wrong: ['{天气|tiān·qì}{原因|yuán yīn}{鉴于|jiàn yú}，{航班|háng bān}{取消|qǔ xiāo}{了|le}。', '{航班|háng bān}{鉴于|jiàn yú}{取消|qǔ xiāo}{了|le}{天气|tiān·qì}{原因|yuán yīn}。', '{鉴于|jiàn yú}{航班|háng bān}{取消|qǔ xiāo}，{天气|tiān·qì}{原因|yuán yīn}{了|le}。'], why: '{鉴于|jiànyú} + helyzet, + döntés.', point: 1 },
+    { q: 'Mit vezet be a {鉴于|jiànyú}?', a: 'egy döntés indoklását', wrong: ['egy kérdést', 'egy időpontot', 'egy ellentétet'], why: 'Tényre hivatkozik, utána döntés jön.', point: 1 },
+    { q: '„A kölcsönös tisztelet elve alapján működünk együtt."', a: '{我们|wǒ·men}{本着|běn·zhe}{互相|hù xiāng}{尊重|zūn zhòng}{的|de}{原则|yuán zé}{合作|hé zuò}。', wrong: ['{我们|wǒ·men}{合作|hé zuò}{本着|běn·zhe}{互相|hù xiāng}{尊重|zūn zhòng}{原则|yuán zé}{的|de}。', '{本着|běn·zhe}{我们|wǒ·men}{原则|yuán zé}{互相|hù xiāng}{合作|hé zuò}{尊重|zūn zhòng}。', '{我们|wǒ·men}{本着|běn·zhe}{合作|hé zuò}{的|de}{互相|hù xiāng}{尊重|zūn zhòng}{原则|yuán zé}{了|le}。'], why: '{本着|běnzhe} + … {的原则|de yuánzé} + cselekvés.', point: 2 },
+    { q: 'Melyik szó áll leggyakrabban a {本着|běnzhe} szerkezet végén?', a: '{原则|yuánzé}', wrong: ['{问题|wèntí}', '{时候|shíhou}', '{地方|dìfang}'], why: '… {的原则|de yuánzé} / {精神|jīngshén} / {态度|tàidù}.', point: 2 },
+    { q: '„A saját erejéből jutott be az egyetemre."', a: '{她|tā}{凭|píng}{自己|zì jǐ}{的|de}{努力|nǔ lì}{考|kǎo}{上|shàng}{了|le}{大学|dà xué}。', wrong: ['{她|tā}{自己|zì jǐ}{的|de}{努力|nǔ lì}{凭|píng}{考|kǎo}{上|shàng}{了|le}{大学|dà xué}。', '{凭|píng}{她|tā}{考|kǎo}{上|shàng}{了|le}{自己|zì jǐ}{的|de}{努力|nǔ lì}{大学|dà xué}。', '{她|tā}{考|kǎo}{上|shàng}{了|le}{凭|píng}{大学|dà xué}{自己|zì jǐ}{的|de}{努力|nǔ lì}。'], why: '{凭|píng} + amire támaszkodik + ige.', point: 3 },
+    { q: 'Mit jelent: {凭票入场|píng piào rù chǎng}', a: 'Belépés jeggyel.', wrong: ['A jegy ingyenes.', 'Jegyet itt lehet venni.', 'Elfogyott a jegy.'], why: '{凭|píng} „…-ra támaszkodva, …-val".', point: 3 },
+    { q: '„Amint elindult a honlap, rögtön népszerű lett."', a: '{网站|wǎng zhàn}{一经|yì jīng}{上线|shàng xiàn}，{就|jiù}{很|hěn}{受|shòu}{欢迎|huān·yíng}。', wrong: ['{网站|wǎng zhàn}{上线|shàng xiàn}{一经|yì jīng}，{就|jiù}{很|hěn}{受|shòu}{欢迎|huān·yíng}。', '{一经|yì jīng}{网站|wǎng zhàn}{就|jiù}{上线|shàng xiàn}，{很|hěn}{受|shòu}{欢迎|huān·yíng}。', '{网站|wǎng zhàn}{就|jiù}{上线|shàng xiàn}，{一经|yì jīng}{很|hěn}{受|shòu}{欢迎|huān·yíng}。'], why: '{一经|yìjīng} + ige, {就|jiù} + következmény.', point: 4 },
+    { q: 'Milyen hangvételű az {一经|yìjīng}?', a: 'írott, hivatalos', wrong: ['bizalmas, baráti', 'gyermeteg', 'tréfás'], why: 'Szabályzatokban, közleményekben gyakori.', point: 4 },
+    { q: '„Kérem, feltétlenül péntek előtt adja le."', a: '{请|qǐng}{务必|wù bì}{在|zài}{周五|zhōu wǔ}{以前|yǐ qián}{交|jiāo}。', wrong: ['{请|qǐng}{在|zài}{周五|zhōu wǔ}{务必|wù bì}{以前|yǐ qián}{交|jiāo}。', '{务必|wù bì}{请|qǐng}{交|jiāo}{在|zài}{周五|zhōu wǔ}{以前|yǐ qián}。', '{请|qǐng}{交|jiāo}{在|zài}{周五|zhōu wǔ}{以前|yǐ qián}{务必|wù bì}。'], why: '({请|qǐng}) + {务必|wùbì} + (idő) + ige.', point: 5 },
+    { q: 'Melyik a {务必|wùbì} beszélt nyelvi megfelelője?', a: '{一定要|yídìng yào}', wrong: ['{不一定|bù yídìng}', '{可能|kěnéng}', '{差不多|chàbuduō}'], why: 'Mindkettő nyomatékos „feltétlenül kell".', point: 5 },
+    { q: 'Mit jelent a {总部|zǒngbù}?', a: 'központ, anyavállalat', wrong: ['fiókiroda', 'raktárépület', 'kisbolt'], why: 'Ellentéte a {分公司|fēngōngsī}.' },
+    { q: 'Mit jelent a {咨询|zīxún}?', a: 'érdeklődik', wrong: ['panaszt tesz', 'rendel', 'fizet'], why: '{来咨询|lái zīxún} „érdeklődni jön".' },
+    { q: 'Mit mondasz bemutatkozáskor az új kollégáknak?', a: '{请多多指教|qǐng duōduō zhǐjiào}', wrong: ['{请多吃点儿|qǐng duō chī diǎnr}', '{别客气|bié kèqi}', '{慢走|màn zǒu}'], why: '„Kérem, segítsenek a tanácsaikkal."' },
+    { q: 'Mit jelent: {合作愉快|hézuò yúkuài}！', a: 'Jó együttműködést!', wrong: ['Jó étvágyat!', 'Jó utat!', 'Boldog születésnapot!'], why: '{合作|hézuò} „együttműködés", {愉快|yúkuài} „kellemes".' },
+    { q: 'Mit jelent a {回复|huífù}?', a: 'válaszol (levélre)', wrong: ['továbbít', 'töröl', 'kinyomtat'], why: '{回复邮件|huífù yóujiàn} „e-mailre válaszol".' },
+    { q: 'Mit jelent a {上线|shàngxiàn}?', a: 'elindul (online)', wrong: ['leáll', 'megdrágul', 'bezár'], why: '{网站上线|wǎngzhàn shàngxiàn} „elindul a honlap".' }
+  ]
+},
+
+/* ════════════════════════════════════════════════════
+   HSK 6 · 2. LECKE — 不料, 不由得, 不禁, 从未, 一时
+   ════════════════════════════════════════════════════ */
+{
+  id: 'l92', no: 92, badge: '2', kicker: 'HSK 6 · 2. lecke', label: 'HSK 6 · 2. lecke',
+  title: 'Zhou Jie Budapesten — ilyet még sosem láttam!',
+  lead: 'Meglepetést mesélsz el: ami váratlanul történt (不料), ami önkéntelenül előtört belőled (不由得, 不禁), amit még sosem tapasztaltál (从未), és ami hirtelenjében nem jut eszedbe (一时).',
+  cando: [
+    'Elmondod, hogy a várakozásod ellenére más történt: 本来以为…，不料….',
+    'Önkéntelen reakciót írsz le: 不由得 / 不禁 + ige.',
+    'Írott nyelven mondod, hogy még sosem: 从未 + ige + 过.',
+    'Elmondod, hogy hirtelenjében nem megy valami: 一时 + ige + 不 + kiegészítő.'
+  ],
+  intro: [
+    'Zhou Jie egy évre Budapestre jön, hogy segítse az európai iroda munkáját. Anna a reptéren várja, és első útjuk egy budapesti termálfürdőbe vezet.',
+    'Ebben a leckében a meglepetés, a váratlan fordulat és az önkéntelen érzések írottabb kifejezéseit tanulod.'
+  ],
+  dialogue: {
+    title: 'Hópelyhek a termálvízen',
+    scene: 'Januári délután, a reptérről a fürdőbe. Anna és Zhou Jie.',
+    lines: [
+      { who: 'Anna', zh: '{周杰|Zhōu Jié}，{欢迎|huān·yíng}{来|lái}{布达佩斯|Bù·dá·pèi·sī}！{路上|lù shang}{还|hái}{顺利|shùn lì}{吗|ma}？', hu: 'Zhou Jie, isten hozott Budapesten! Jól utaztál?' },
+      { who: 'Zhou Jie', zh: '{挺|tǐng}{顺利|shùn lì}{的|de}。{本来|běn·lái}{以为|yǐ wéi}{欧洲|Ōu·zhōu}{的|de}{冬天|dōng·tiān}{又|yòu}{冷|lěng}{又|yòu}{阴|yīn}，{不料|bú liào}{一|yí}{下|xià}{飞机|fēi·jī}，{阳光|yáng guāng}{这么|zhè·me}{好|hǎo}。', hu: 'Elég simán. Azt hittem, az európai tél hideg és borús, erre leszállok, és ilyen napsütés fogad.' },
+      { who: 'Anna', zh: '{你|nǐ}{运气|yùn·qi}{好|hǎo}。{走|zǒu}，{我|wǒ}{先|xiān}{带|dài}{你|nǐ}{去|qù}{泡|pào}{温泉|wēn quán}。', hu: 'Szerencséd van. Gyere, először elviszlek a termálfürdőbe.' },
+      { who: 'Zhou Jie', zh: '{冬天|dōng·tiān}{在|zài}{室外|shì wài}{泡|pào}{温泉|wēn quán}？{这样|zhè yàng}{的|de}{事|shì}{我|wǒ}{从未|cóng wèi}{听|tīng}{说|shuō}{过|guo}！', hu: 'Télen a szabadban fürdeni a termálvízben? Ilyenről még sosem hallottam!' },
+      { who: 'Zhou Jie', zh: '（{在|zài}{温泉|wēn quán}{里|li}）{雪花|xuě huā}{落|luò}{在|zài}{热|rè}{水|shuǐ}{上|shang}，{旁边|páng biān}{还|hái}{有|yǒu}{人|rén}{在|zài}{下|xià}{国际象棋|guó jì xiàng qí}……{这|zhè}{种|zhǒng}{感觉|gǎn jué}，{我|wǒ}{一时|yì shí}{说|shuō}{不|bu}{出来|chū·lái}。', hu: '(A fürdőben) A hópelyhek a forró vízre hullanak, mellettünk sakkoznak… ezt az érzést hirtelenjében el sem tudom mondani.' },
+      { who: 'Anna', zh: '{你|nǐ}{看|kàn}{你|nǐ}，{都|dōu}{不由得|bù yóu·de}{笑|xiào}{起来|qǐ·lái}{了|le}。{我|wǒ}{第一|dì yī}{次|cì}{在|zài}{北京|Běi·jīng}{吃|chī}{火锅|huǒ guō}{的|de}{时候|shí·hou}，{也|yě}{是|shì}{这样|zhè yàng}。', hu: 'Nézd csak, önkéntelenül is elmosolyodtál. Amikor először ettem forró üstöt Pekingben, én is így voltam vele.' },
+      { who: 'Zhou Jie', zh: '{想|xiǎng}{到|dào}{要|yào}{在|zài}{这里|zhè·lǐ}{住|zhù}{一|yì}{年|nián}，{我|wǒ}{不禁|bù jīn}{有|yǒu}{点儿|diǎnr}{激动|jī dòng}。', hu: 'Ha arra gondolok, hogy egy évig itt fogok élni, nem tudom leplezni az izgatottságomat.' }
+    ],
+    notes: [
+      'A {泡温泉|pào wēnquán} „termálvízben áztatja magát" — a {泡|pào} szó szerint „ázik", a teánál is ezt mondjuk: {泡茶|pào chá} „teát főz (forráz)".',
+      'Az {本来以为|běnlái yǐwéi} … {不料|búliào} … gyakori pár: előbb a várakozás, aztán ami ehelyett történt.',
+      'A {国际象棋|guójì xiàngqí} a nyugati sakk; a {象棋|xiàngqí} magában a kínai sakkot jelenti.'
+    ]
+  },
+  points: [
+    {
+      title: '{不料|búliào}', sub: 'váratlanul; nem gondoltam volna, hogy …',
+      pattern: '({本来|běn·lái}) {以为|yǐ wéi} …，{不料|bú liào} + ami helyette történt',
+      body: 'A {不料|búliào} a második tagmondat elején áll, és azt jelzi, hogy <b>a várakozással ellentétes</b> dolog történt. Írott nyelvi; beszédben a {没想到|méi xiǎngdào} felel meg neki. Gyakran előzi meg az {本来以为|běnlái yǐwéi} „azt hittem".',
+      examples: [
+        { zh: '{我|wǒ}{本来|běn·lái}{以为|yǐ wéi}{他|tā}{不|bú}{会|huì}{来|lái}，{不料|bú liào}{他|tā}{第一|dì yī}{个|ge}{到|dào}{了|le}。', hu: 'Azt hittem, nem jön el, erre elsőként érkezett.' },
+        { zh: '{刚|gāng}{出|chū}{门|mén}，{不料|bú liào}{下|xià}{起|qǐ}{了|le}{大|dà}{雨|yǔ}。', hu: 'Épp hogy kiléptem az ajtón, váratlanul eleredt az eső.' }
+      ]
+    },
+    {
+      title: '{不由得|bùyóude}', sub: 'önkéntelenül, akaratlanul is',
+      pattern: 'A + {不由得|bù yóu·de} + ige',
+      body: 'A {不由得|bùyóude} azt fejezi ki, hogy egy érzés vagy reakció <b>magától, akaratunk ellenére</b> tör elő: {我不由得笑了起来|wǒ bùyóude xiào le qǐlái} „önkéntelenül elnevettem magam". A tagmondat elején jelentése „nem lehet nem…": {他说得这么认真|tā shuō de zhème rènzhēn}，{不由得你不信|bùyóude nǐ bú xìn} „olyan komolyan mondta, hogy nem lehetett nem hinni neki".',
+      examples: [
+        { zh: '{听|tīng}{到|dào}{这|zhè}{首|shǒu}{老|lǎo}{歌|gē}，{她|tā}{不由得|bù yóu·de}{想|xiǎng}{起|qǐ}{了|le}{大学|dà xué}{时代|shí dài}。', hu: 'Ezt a régi dalt hallva önkéntelenül is az egyetemi évei jutottak eszébe.' },
+        { zh: '{看|kàn}{到|dào}{孩子|hái·zi}{们|men}{开心|kāi xīn}{的|de}{样子|yàng·zi}，{我|wǒ}{不由得|bù yóu·de}{笑|xiào}{了|le}。', hu: 'A gyerekek vidámságát látva önkéntelenül elmosolyodtam.' }
+      ]
+    },
+    {
+      title: '{不禁|bùjīn}', sub: 'nem tudja visszatartani, önkéntelenül',
+      pattern: 'A + {不禁|bù jīn} + ige / melléknév',
+      body: 'A {不禁|bùjīn} jelentése közel áll a {不由得|bùyóude}-hez, de <b>írottabb, irodalmibb</b>: az érzés olyan erős, hogy nem lehet visszatartani. Gyakori párjai: {不禁感到|bùjīn gǎndào} „önkéntelenül érzi", {不禁流下了眼泪|bùjīn liú xià le yǎnlèi} „kicsordult a könnye". A {不由得|bùyóude} „nem lehet nem…" jelentése a {不禁|bùjīn}-nek nincs meg.',
+      examples: [
+        { zh: '{想|xiǎng}{到|dào}{明天|míng·tiān}{就|jiù}{要|yào}{离开|lí kāi}，{她|tā}{不禁|bù jīn}{流|liú}{下|xià}{了|le}{眼泪|yǎn lèi}。', hu: 'Arra gondolva, hogy holnap el kell mennie, kicsordult a könnye.' },
+        { zh: '{站|zhàn}{在|zài}{山顶|shān dǐng}{上|shang}，{大家|dà·jiā}{不禁|bù jīn}{感叹|gǎn tàn}{大|dà}{自然|zì rán}{的|de}{美|měi}。', hu: 'A hegytetőn állva mindenki önkéntelenül ámult a természet szépségén.' }
+      ]
+    },
+    {
+      title: '{从未|cóngwèi}', sub: 'még soha (nem)',
+      pattern: 'A + {从未|cóng wèi} + ige + {过|guo}',
+      body: 'A {从未|cóngwèi} a {从来没(有)|cónglái méi(yǒu)} írott, tömörebb alakja (HSK 4 10. lecke): „még soha nem". Az ige után itt is ott áll a {过|guo}: {我从未见过|wǒ cóngwèi jiàn guo}. A {未|wèi} önmagában is „még nem": {未来|wèilái} „jövő" — ami még nem jött el.',
+      examples: [
+        { zh: '{这样|zhè yàng}{的|de}{事|shì}{我|wǒ}{从未|cóng wèi}{听|tīng}{说|shuō}{过|guo}。', hu: 'Ilyesmiről még sosem hallottam.' },
+        { zh: '{他|tā}{工作|gōng·zuò}{二十|èr shí}{年|nián}，{从未|cóng wèi}{迟到|chí dào}{过|guo}{一|yí}{次|cì}。', hu: 'Húsz év munka alatt egyszer sem késett el.' }
+      ],
+      mistakes: [
+        { bad: '{我|wǒ}{从未|cóng wèi}{去|qù}{过|guo}{了|le}{北京|Běi·jīng}。', good: '{我|wǒ}{从未|cóng wèi}{去|qù}{过|guo}{北京|Běi·jīng}。', why: 'A {从未|cóngwèi} + ige + {过|guo} mellé nem kerül {了|le}.' }
+      ]
+    },
+    {
+      title: '{一时|yìshí}', sub: 'hirtelenjében; átmenetileg',
+      pattern: 'A + {一时|yì shí} + ige + {不|bu} + kiegészítő',
+      body: 'Az {一时|yìshí} rövid időt jelöl: <b>„hirtelenjében, abban a pillanatban"</b> — {我一时想不起来他的名字|wǒ yìshí xiǎng bu qǐlái tā de míngzi} „hirtelen nem jut eszembe a neve". Jelzőként „átmeneti, pillanatnyi": {一时的困难|yìshí de kùnnan} „átmeneti nehézség".',
+      examples: [
+        { zh: '{这|zhè}{种|zhǒng}{感觉|gǎn jué}，{我|wǒ}{一时|yì shí}{说|shuō}{不|bu}{出来|chū·lái}。', hu: 'Ezt az érzést hirtelenjében el sem tudom mondani.' },
+        { zh: '{这|zhè}{只|zhǐ}{是|shì}{一时|yì shí}{的|de}{困难|kùn·nan}，{很|hěn}{快|kuài}{就|jiù}{会|huì}{过去|guò·qù}{的|de}。', hu: 'Ez csak átmeneti nehézség, hamar elmúlik.' }
+      ]
+    }
+  ],
+  phrases: [
+    { zh: '{一路|yí lù}{辛苦|xīn kǔ}{了|le}！', hu: 'Fárasztó utad lehetett! (érkezéskor)' },
+    { zh: '{真|zhēn}{是|shì}{大开眼界|dà kāi yǎn jiè}！', hu: 'Ez aztán új világ!' },
+    { zh: '{我|wǒ}{得|děi}{慢慢|màn màn}{适应|shì yìng}。', hu: 'Lassan meg kell szoknom.' },
+    { zh: '{入乡随俗|rù xiāng suí sú}{嘛|ma}。', hu: 'Ahol vagy, az ottani szokás szerint élj.' }
+  ],
+  words: [
+    { title: 'Szavak',
+      items: [
+        { zh: '{不料|bú liào}', pinyin: 'búliào', hu: 'váratlanul, nem gondolta volna' },
+        { zh: '{不由得|bù yóu·de}', pinyin: 'bùyóude', hu: 'önkéntelenül' },
+        { zh: '{不禁|bù jīn}', pinyin: 'bùjīn', hu: 'nem tudja visszatartani' },
+        { zh: '{从未|cóng wèi}', pinyin: 'cóngwèi', hu: 'még soha' },
+        { zh: '{一时|yì shí}', pinyin: 'yìshí', hu: 'hirtelenjében; átmeneti' },
+        { zh: '{温泉|wēn quán}', pinyin: 'wēnquán', hu: 'hőforrás, termálfürdő' },
+        { zh: '{室外|shì wài}', pinyin: 'shìwài', hu: 'szabadtéri, kint' },
+        { zh: '{雪花|xuě huā}', pinyin: 'xuěhuā', hu: 'hópehely' },
+        { zh: '{阴|yīn}', pinyin: 'yīn', hu: 'borús, felhős' },
+        { zh: '{泡|pào}', pinyin: 'pào', hu: 'áztat, ázik' },
+        { zh: '{感叹|gǎn tàn}', pinyin: 'gǎntàn', hu: 'felsóhajt, ámul' },
+        { zh: '{时代|shí dài}', pinyin: 'shídài', hu: 'kor, korszak' }
+      ] },
+    { title: 'Ráadás',
+      items: [
+        { zh: '{大开眼界|dà kāi yǎn jiè}', pinyin: 'dà kāi yǎnjiè', hu: 'új világ tárul fel' },
+        { zh: '{国际象棋|guó jì xiàng qí}', pinyin: 'guójì xiàngqí', hu: 'sakk' },
+        { zh: '{澡堂|zǎo táng}', pinyin: 'zǎotáng', hu: 'közfürdő' },
+        { zh: '{山顶|shān dǐng}', pinyin: 'shāndǐng', hu: 'hegycsúcs' }
+      ] }
+  ],
+  culture: [
+    { title: 'Fürdőkultúra Kínában', text: 'Kínában is régi hagyománya van a hőforrásoknak: a Hszian melletti {华清池|Huáqīng chí} már a Tang-korban a császári udvar fürdője volt. Északon ma is kedveltek a közfürdők ({澡堂|zǎotáng}), ahol fürdés után teázni, beszélgetni és pihenni is lehet.' },
+    { title: 'Kínaiak Budapesten', text: 'Budapesten nagy kínai közösség él, és van magyar–kínai két tanítási nyelvű iskola is. A kínai turisták kedvelt célpontjai a termálfürdők és a Duna-part — a kínai útikönyvek Budapestet gyakran a „fürdők városaként" ({温泉之都|wēnquán zhī dū}) emlegetik.' }
+  ],
+  reading: {
+    title: '{周杰|Zhōu Jié}{的|de}{日记|rì jì}', titleHu: 'Zhou Jie naplója',
+    text: [
+      { zh: '{来|lái}{布达佩斯|Bù·dá·pèi·sī}{之前|zhī qián}，{我|wǒ}{从未|cóng wèi}{去|qù}{过|guo}{欧洲|Ōu·zhōu}。', hu: 'Mielőtt Budapestre jöttem, még sosem jártam Európában.' },
+      { zh: '{我|wǒ}{本来|běn·lái}{担心|dān xīn}{自己|zì jǐ}{会|huì}{不|bù}{习惯|xí·guàn}，{不料|bú liào}{第一|dì yī}{天|tiān}{就|jiù}{爱|ài}{上|shang}{了|le}{这|zhè}{座|zuò}{城市|chéng shì}。', hu: 'Attól tartottam, hogy nem fogom megszokni, erre már az első napon beleszerettem a városba.' },
+      { zh: '{晚上|wǎn·shang}{走|zǒu}{在|zài}{多瑙河|Duō nǎo hé}{边|biān}，{看|kàn}{着|zhe}{灯光|dēng guāng}{下|xià}{的|de}{链桥|liàn qiáo}，{我|wǒ}{不禁|bù jīn}{停|tíng}{下|xià}{了|le}{脚步|jiǎo bù}。', hu: 'Este a Duna-parton sétálva, a kivilágított Lánchidat nézve önkéntelenül megálltam.', par: true },
+      { zh: '{安娜|Ān·nà}{问|wèn}{我|wǒ}{最|zuì}{喜欢|xǐ·huan}{哪儿|nǎr}，{我|wǒ}{一时|yì shí}{回答|huí dá}{不|bu}{上来|shàng·lái}——{每|měi}{个|ge}{地方|dì·fang}{都|dōu}{有|yǒu}{自己|zì jǐ}{的|de}{味道|wèi·dao}。', hu: 'Anna megkérdezte, hol tetszik a legjobban; hirtelenjében nem is tudtam felelni — minden helynek megvan a maga hangulata.' },
+      { zh: '{想|xiǎng}{到|dào}{这|zhè}{一|yì}{年|nián}{的|de}{生活|shēng·huó}，{我|wǒ}{不由得|bù yóu·de}{充满|chōng mǎn}{了|le}{期待|qī dài}。', hu: 'Ha erre az egy évre gondolok, önkéntelenül is tele vagyok várakozással.', par: true }
+    ],
+    words: [ { zh: '{多瑙河|Duō nǎo hé}', hu: 'a Duna' } ],
+    questions: [
+      { q: 'Járt-e Zhou Jie korábban Európában?', a: 'nem, még soha', wrong: ['igen, sokszor', 'csak egyszer', 'csak Párizsban'], why: '{从未去过欧洲|cóngwèi qù guo Ōuzhōu}.' },
+      { q: 'Mitől tartott Zhou Jie?', a: 'hogy nem szokja meg', wrong: ['hogy elkésik', 'hogy fázni fog', 'hogy eltéved'], why: '{担心自己会不习惯|dānxīn zìjǐ huì bù xíguàn}.' },
+      { q: 'Mit csinált a Lánchidat nézve?', a: 'önkéntelenül megállt', wrong: ['lefényképezte', 'átsétált rajta', 'felhívta Annát'], why: '{不禁停下了脚步|bùjīn tíng xià le jiǎobù}.' },
+      { q: 'Miért nem tudott hirtelenjében felelni?', a: 'minden hely tetszett neki', wrong: ['nem értette a kérdést', 'nagyon fáradt volt', 'még sehol sem járt'], why: '{每个地方都有自己的味道|měi ge dìfang dōu yǒu zìjǐ de wèidao}.' }
+    ]
+  },
+  quiz: [
+    { q: '„Azt hittem, nem jön el, erre elsőként érkezett."', a: '{我|wǒ}{以为|yǐ wéi}{他|tā}{不|bù}{来|lái}，{不料|bú liào}{他|tā}{第一|dì yī}{个|ge}{到|dào}。', wrong: ['{不料|bú liào}{我|wǒ}{以为|yǐ wéi}{他|tā}{不|bù}{来|lái}，{他|tā}{第一|dì yī}{个|ge}{到|dào}。', '{我|wǒ}{以为|yǐ wéi}{他|tā}{不料|bú liào}{不|bù}{来|lái}，{他|tā}{第一|dì yī}{个|ge}{到|dào}。', '{我|wǒ}{以为|yǐ wéi}{他|tā}{不|bù}{来|lái}，{他|tā}{第一|dì yī}{个|ge}{不料|bú liào}{到|dào}。'], why: 'A {不料|búliào} a második tagmondat elején áll.', point: 1 },
+    { q: 'Melyik a {不料|búliào} beszélt nyelvi megfelelője?', a: '{没想到|méi xiǎngdào}', wrong: ['{不得不|bù dé bù}', '{不一定|bù yídìng}', '{不用说|búyòng shuō}'], why: 'Mindkettő: „nem gondoltam volna".', point: 1 },
+    { q: '„Önkéntelenül elnevettem magam."', a: '{我|wǒ}{不由得|bù yóu·de}{笑|xiào}{了|le}{起来|qǐ·lái}。', wrong: ['{我|wǒ}{笑|xiào}{了|le}{不由得|bù yóu·de}{起来|qǐ·lái}。', '{不由得|bù yóu·de}{笑|xiào}{我|wǒ}{起来|qǐ·lái}{了|le}。', '{我|wǒ}{笑|xiào}{起来|qǐ·lái}{了|le}{不由得|bù yóu·de}。'], why: 'A + {不由得|bùyóude} + ige.', point: 2 },
+    { q: 'Mit jelent: {不由得你不信|bùyóude nǐ bú xìn}', a: 'nem lehet nem hinni neki', wrong: ['nem szabad hinned', 'te nem hiszel neki', 'senki sem hisz neked'], why: 'A tagmondat elején: „nem lehet nem…".', point: 2 },
+    { q: '„Kicsordult a könnye."', a: '{她|tā}{不禁|bù jīn}{流|liú}{下|xià}{了|le}{眼泪|yǎn lèi}。', wrong: ['{她|tā}{流|liú}{下|xià}{了|le}{不禁|bù jīn}{眼泪|yǎn lèi}。', '{不禁|bù jīn}{她|tā}{眼泪|yǎn lèi}{流|liú}{下|xià}{了|le}。', '{她|tā}{眼泪|yǎn lèi}{流|liú}{不禁|bù jīn}{下|xià}{了|le}。'], why: 'A + {不禁|bùjīn} + ige.', point: 3 },
+    { q: 'Miben különbözik a {不禁|bùjīn} a {不由得|bùyóude}-től?', a: 'írottabb, irodalmibb', wrong: ['csak a jövőről szól', 'tagadó a jelentése', 'csak kérdésben áll'], why: 'Jelentésük közel azonos.', point: 3 },
+    { q: '„Ilyesmiről még sosem hallottam."', a: '{这|zhè}{种|zhǒng}{事|shì}{我|wǒ}{从未|cóng wèi}{听|tīng}{说|shuō}{过|guo}。', wrong: ['{这|zhè}{种|zhǒng}{事|shì}{我|wǒ}{听|tīng}{说|shuō}{过|guo}{从未|cóng wèi}。', '{这|zhè}{种|zhǒng}{事|shì}{从未|cóng wèi}{我|wǒ}{听|tīng}{说|shuō}{了|le}。', '{我|wǒ}{从未|cóng wèi}{这|zhè}{种|zhǒng}{事|shì}{听|tīng}{说|shuō}{了|le}{过|guo}。'], why: 'A + {从未|cóngwèi} + ige + {过|guo}.', point: 4 },
+    { q: 'Melyik szerkezet írott párja a {从未|cóngwèi}?', a: '{从来没有|cónglái méiyǒu}', wrong: ['{从来不|cónglái bù}', '{一直都|yìzhí dōu}', '{还没有|hái méiyǒu}'], why: 'Múltbeli tapasztalat tagadása: {从来没(有)|cónglái méi(yǒu)}…{过|guo}.', point: 4 },
+    { q: '„Hirtelenjében nem jut eszembe a neve."', a: '{他|tā}{的|de}{名字|míng·zi}{我|wǒ}{一时|yì shí}{想|xiǎng}{不|bu}{起来|qǐ·lái}。', wrong: ['{他|tā}{的|de}{名字|míng·zi}{我|wǒ}{想|xiǎng}{不|bu}{起来|qǐ·lái}{一时|yì shí}。', '{一时|yì shí}{他|tā}{的|de}{名字|míng·zi}{想|xiǎng}{我|wǒ}{不|bu}{起来|qǐ·lái}。', '{他|tā}{的|de}{名字|míng·zi}{我|wǒ}{想|xiǎng}{一时|yì shí}{不|bu}{起来|qǐ·lái}。'], why: 'A + {一时|yìshí} + ige + {不|bu} + kiegészítő.', point: 5 },
+    { q: 'Mit jelent: {一时的困难|yìshí de kùnnan}', a: 'átmeneti nehézség', wrong: ['állandó gond', 'nagy siker', 'régi barátság'], why: 'Jelzőként „pillanatnyi, átmeneti".', point: 5 },
+    { q: 'Mit jelent a {泡温泉|pào wēnquán}?', a: 'termálvízben fürdik', wrong: ['teát forráz', 'úszóversenyen indul', 'zuhanyozik'], why: '{泡|pào} „áztat, ázik".' },
+    { q: 'Mit mondunk annak, aki hosszú útról érkezik?', a: '{一路辛苦了|yílù xīnkǔ le}', wrong: ['{一路顺风|yílù shùnfēng}', '{慢走|màn zǒu}', '{下次再来|xià cì zài lái}'], why: '„Fárasztó utad lehetett."' },
+    { q: 'Mit jelent a {室外|shìwài}?', a: 'a szabadban', wrong: ['a szobában', 'az irodában', 'a pincében'], why: 'Ellentéte a {室内|shìnèi} „bent".' },
+    { q: 'Mit jelent a {大开眼界|dà kāi yǎnjiè}?', a: 'sok újat lát', wrong: ['becsukja a szemét', 'rosszul lát', 'nagyon elfárad'], why: 'Szó szerint: „tágra nyílik a látóhatár".' },
+    { q: 'Mit jelent a {阴|yīn} az időjárásban?', a: 'borús', wrong: ['napos', 'szeles', 'havas'], why: '{阴天|yīntiān} „borús idő".' },
+    { q: 'Hol lehet Budapesten télen a szabadban fürdeni?', a: 'a termálfürdőben', wrong: ['a Dunában', 'a Balatonban', 'egy jeges tóban'], why: '{在室外泡温泉|zài shìwài pào wēnquán}.' }
+  ]
 }
 
 ];

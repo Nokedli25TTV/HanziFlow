@@ -1199,7 +1199,29 @@ const HANZIFLOW_PATH = [
     module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l90&round=listen' },
   { id: 'l90-read', glyph: '读', title: 'Olvasás: Anna levele',
     desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
-    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l90&round=read' }
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l90&round=read' },
+
+  // ── HSK 6 · 1. lecke ──
+  { id: 'l91-lesson', glyph: '鉴', title: 'Magyarázat: 鉴于, 本着, 凭 · 凭借, 一经…就, 务必',
+    desc: 'Az európai iroda: tekintettel arra, … szellemében, …-ra támaszkodva, amint egyszer, feltétlenül.',
+    module: 'lesson', href: 'pages/lesson.html?id=l91' },
+  { id: 'l91-listen', glyph: '听', title: 'Hallás: videóhívás Sanghajjal',
+    desc: 'A lecke mondatai hang után: mit jelent, amit hallasz?',
+    module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l91&round=listen' },
+  { id: 'l91-read', glyph: '读', title: 'Olvasás: Anna új munkája',
+    desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l91&round=read' },
+
+  // ── HSK 6 · 2. lecke ──
+  { id: 'l92-lesson', glyph: '禁', title: 'Magyarázat: 不料, 不由得, 不禁, 从未, 一时',
+    desc: 'Zhou Jie Budapesten: váratlanul, önkéntelenül, még soha, hirtelenjében.',
+    module: 'lesson', href: 'pages/lesson.html?id=l92' },
+  { id: 'l92-listen', glyph: '听', title: 'Hallás: hópelyhek a termálvízen',
+    desc: 'A lecke mondatai hang után: mit jelent, amit hallasz?',
+    module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l92&round=listen' },
+  { id: 'l92-read', glyph: '读', title: 'Olvasás: Zhou Jie naplója',
+    desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l92&round=read' }
 ];
 
 const HANZIFLOW_PATH_UNITS = [
@@ -1430,5 +1452,9 @@ const HANZIFLOW_PATH_UNITS = [
   { id: 'u-t-h5d', kicker: 'HSK 5 · Dolgozat', title: '4. témazáró', sub: 'A 16–20. lecke anyaga, jegyre — nem kötelező',
     steps: ['test-h5d'] },
   { id: 'u-z-h5', kicker: 'HSK 5 · Szintzáró', title: 'A HSK 5 vége', sub: 'Szintzáró dolgozat, pinyin-beírás és próbavizsga — nem kötelező',
-    steps: ['test-h5z', 'py-write-h5', 'exam-hsk5'] }
+    steps: ['test-h5z', 'py-write-h5', 'exam-hsk5'] },
+  { id: 'u-l91', kicker: 'HSK 6 · 1. lecke', title: 'Az európai iroda', sub: '鉴于, 本着, 凭 · 凭借, 一经…就, 务必',
+    steps: ['l91-lesson', 'l91-listen', 'l91-read'] },
+  { id: 'u-l92', kicker: 'HSK 6 · 2. lecke', title: 'Zhou Jie Budapesten', sub: '不料, 不由得, 不禁, 从未, 一时',
+    steps: ['l92-lesson', 'l92-listen', 'l92-read'] }
 ];
