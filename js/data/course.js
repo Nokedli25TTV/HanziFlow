@@ -12184,6 +12184,348 @@ const HANZIFLOW_COURSE = [
     { q: 'Mit jelent: {别放弃|bié fàngqì}！', a: 'Ne add fel!', wrong: ['Ne siess!', 'Ne félj!', 'Ne nézz hátra!'], why: '{放弃|fàngqì} „feladja".' },
     { q: 'Mit jelent a {坚持|jiānchí}?', a: 'kitart', wrong: ['feladja', 'elkezdi', 'megáll'], why: '{坚持跑步|jiānchí pǎobù} „kitartóan fut".' }
   ]
+},
+/* ════════════════════════════════════════════════════
+   HSK 4 · 15. LECKE — 看来 · 看样子, 估计, 大约 · 左右, 以上 · 以下 · 以内, 差不多
+   ════════════════════════════════════════════════════ */
+{
+  id: 'l65', no: 65, badge: '15', kicker: 'HSK 4 · 15. lecke', label: 'HSK 4 · 15. lecke',
+  title: 'Egy százalék akku — mobilfizetés',
+  lead: 'Becslésekről és következtetésekről beszélsz: abból, amit látsz, következtetsz (看来 · 看样子), becsülsz (估计), körülbelüli számot mondasz (大约 · 左右), határt adsz meg (以上 · 以下 · 以内), és azt mondod, „majdnem" vagy „nagyjából ugyanaz" (差不多).',
+  cando: [
+    'Következtetést vonsz le abból, amit látsz vagy tudsz: 看来 · 看样子….',
+    'Becsülsz és sejtést mondasz: 我估计….',
+    'Körülbelüli számot mondasz: 大约 + szám · szám + 左右.',
+    'Határt adsz meg (以上 · 以下 · 以内), és a 差不多 jelentéseit használod.'
+  ],
+  intro: [
+    'Anna és Lin Jing esti piacra mennek, ahol mindenki telefonnal fizet. Csakhogy Anna telefonján egy százalék az akku — és kiderül, hogy készpénzzel ma már nem is olyan egyszerű.',
+    'Ebben a leckében a becslés és a következtetés nyelvét tanulod, számokkal és határokkal együtt: „körülbelül száz jüan", „húsz jüan alatt", „ötven méteren belül".'
+  ],
+  dialogue: {
+    title: 'Az esti piacon',
+    scene: 'Péntek este egy sanghaji esti piacon. Anna és Lin Jing.',
+    lines: [
+      { who: 'Anna', zh: '{哎呀|āi·yā}，{我|wǒ}{的|de}{手机|shǒu·jī}{只|zhǐ}{剩|shèng}{百分之一|bǎi fēn zhī yī}{的|de}{电|diàn}{了|le}！', hu: 'Jaj, a telefonomon már csak egy százalék az akku!' },
+      { who: 'Lin Jing', zh: '{看样子|kàn yàng·zi}{今天|jīn·tiān}{得|děi}{我|wǒ}{请客|qǐng kè}{了|le}。{现在|xiàn·zài}{买|mǎi}{东西|dōng·xi}{差不多|chà·bu·duō}{都|dōu}{用|yòng}{手机|shǒu·jī}{支付|zhī·fù}。', hu: 'Úgy néz ki, ma én fizetek. Ma már szinte mindent telefonnal fizetünk.' },
+      { who: 'Anna', zh: '{我|wǒ}{带|dài}{了|le}{一些|yì xiē}{现金|xiàn·jīn}，{大约|dà·yuē}{一百|yì bǎi}{块|kuài}。{够|gòu}{不|bu}{够|gòu}？', hu: 'Hoztam egy kis készpénzt, nagyjából száz jüant. Elég lesz?' },
+      { who: 'Lin Jing', zh: '{估计|gū·jì}{够|gòu}{了|le}，{这里|zhè·lǐ}{的|de}{小吃|xiǎo chī}{都|dōu}{在|zài}{二十|èr·shí}{块|kuài}{以下|yǐ xià}。{不过|bú·guò}{你|nǐ}{看|kàn}，{这|zhè}{家|jiā}{只|zhǐ}{能|néng}{扫|sǎo}{码|mǎ}。', hu: 'Szerintem elég, itt minden harapnivaló húsz jüan alatt van. De nézd, itt csak QR-kóddal lehet fizetni.' },
+      { who: 'Anna', zh: '{什么|shén·me}？{连|lián}{现金|xiàn·jīn}{都|dōu}{不|bù}{收|shōu}{了|le}？', hu: 'Micsoda? Már készpénzt sem fogadnak el?' },
+      { who: 'Lin Jing', zh: '{别|bié}{着急|zháo jí}，{前面|qián·miàn}{五十|wǔ·shí}{米|mǐ}{以内|yǐ nèi}{就|jiù}{有|yǒu}{充电宝|chōng diàn bǎo}，{借|jiè}{一|yí}{个|ge}{小时|xiǎo·shí}{左右|zuǒ yòu}{只|zhǐ}{要|yào}{三|sān}{块|kuài}{钱|qián}。', hu: 'Nyugi, ötven méteren belül van külső akkumulátor bérlésre, nagyjából egy órára csak három jüan.' },
+      { who: 'Anna', zh: '{太|tài}{好|hǎo}{了|le}！{看来|kàn·lái}{在|zài}{中国|Zhōng·guó}，{手机|shǒu·jī}{比|bǐ}{钱包|qián·bāo}{还|hái}{重要|zhòng·yào}。', hu: 'Nagyszerű! Úgy látszik, Kínában a telefon fontosabb, mint a pénztárca.' }
+    ],
+    notes: [
+      'A {百分之一|bǎi fēn zhī yī} „egy százalék": a {百分之|bǎi fēn zhī} után jön a szám ({百分之五十|bǎi fēn zhī wǔshí} „50%").',
+      'Az {扫码|sǎo mǎ} „beolvassa a (QR-)kódot", a {充电宝|chōngdiànbǎo} „külső akkumulátor, powerbank" — utcai automatákból bérelhető.',
+      'A {请客|qǐng kè} „vendégül lát, ő fizet": {今天我请客|jīntiān wǒ qǐng kè} „ma én fizetek".'
+    ]
+  },
+  points: [
+    {
+      title: '{看来|kànlái} · {看样子|kàn yàngzi}', sub: 'úgy látszik, úgy tűnik',
+      pattern: '{看来|kàn·lái} / {看样子|kàn yàng·zi}，+ következtetés',
+      body: 'Mindkettő azt jelzi, hogy a beszélő abból <b>következtet</b>, amit lát vagy tud: {看样子要下雨了|kàn yàngzi yào xià yǔ le} „úgy néz ki, esni fog" (látja a felhőket). A {看样子|kàn yàngzi} inkább a látható jelekre épít, és beszéltebb; a {看来|kànlái} a helyzetből, a hallott információból von le következtetést: {看来手机比钱包还重要|kànlái shǒujī bǐ qiánbāo hái zhòngyào}.',
+      examples: [
+        { zh: '{看样子|kàn yàng·zi}{今天|jīn·tiān}{得|děi}{我|wǒ}{请客|qǐng kè}{了|le}。', hu: 'Úgy néz ki, ma én fizetek.' },
+        { zh: '{看来|kàn·lái}{在|zài}{中国|Zhōng·guó}，{手机|shǒu·jī}{比|bǐ}{钱包|qián·bāo}{还|hái}{重要|zhòng·yào}。', hu: 'Úgy látszik, Kínában a telefon fontosabb, mint a pénztárca.' }
+      ]
+    },
+    {
+      title: '{估计|gūjì}', sub: 'becsül, úgy sejti',
+      pattern: '({我|wǒ}) {估计|gū·jì} + sejtés',
+      body: 'A {估计|gūjì} „becsül, saccol" igeként sejtést vezet be: {我估计够了|wǒ gūjì gòu le} „szerintem elég lesz", {估计他今天不会来了|gūjì tā jīntiān bú huì lái le} „úgy sejtem, ma már nem jön". Az alany gyakran elmarad. Főnévként „becslés": {这只是我的估计|zhè zhǐ shì wǒ de gūjì} „ez csak az én becslésem".',
+      examples: [
+        { zh: '{估计|gū·jì}{够|gòu}{了|le}，{这里|zhè·lǐ}{的|de}{小吃|xiǎo chī}{都|dōu}{很|hěn}{便宜|pián·yi}。', hu: 'Szerintem elég lesz, itt minden harapnivaló olcsó.' },
+        { zh: '{已经|yǐ·jīng}{十|shí}{点|diǎn}{了|le}，{我|wǒ}{估计|gū·jì}{他|tā}{不|bú}{会|huì}{来|lái}{了|le}。', hu: 'Már tíz óra, úgy sejtem, nem jön el.' }
+      ]
+    },
+    {
+      title: '{大约|dàyuē} · {左右|zuǒyòu}', sub: 'körülbelül',
+      pattern: '{大约|dà·yuē} + szám · szám + {左右|zuǒ yòu}',
+      body: 'Mindkettő „körülbelül, nagyjából", de más a helyük: a {大约|dàyuē} a szám <b>elé</b> kerül ({大约一百块|dàyuē yì bǎi kuài}), a {左右|zuǒyòu} a szám (és a mértékegység) <b>után</b> ({一个小时左右|yí ge xiǎoshí zuǒyòu}). A kettőt egy mondatban nem használjuk együtt, mert ugyanazt jelentik.',
+      tables: [
+        { caption: 'Hová kerül?',
+          head: ['', 'Helye', 'Példa'],
+          rows: [
+            ['{大约|dà·yuē}', 'a szám előtt', '{大约|dà·yuē}{一百|yì bǎi}{块|kuài}'],
+            ['{左右|zuǒ yòu}', 'a szám után', '{一百|yì bǎi}{块|kuài}{左右|zuǒ yòu}']
+          ] }
+      ],
+      examples: [
+        { zh: '{我|wǒ}{带|dài}{了|le}{一些|yì xiē}{现金|xiàn·jīn}，{大约|dà·yuē}{一百|yì bǎi}{块|kuài}。', hu: 'Hoztam egy kis készpénzt, nagyjából száz jüant.' },
+        { zh: '{借|jiè}{一|yí}{个|ge}{小时|xiǎo·shí}{左右|zuǒ yòu}{只|zhǐ}{要|yào}{三|sān}{块|kuài}{钱|qián}。', hu: 'Nagyjából egy órára csak három jüan.' }
+      ],
+      mistakes: [
+        { bad: '{大约|dà·yuē}{一百|yì bǎi}{块|kuài}{左右|zuǒ yòu}。', good: '{大约|dà·yuē}{一百|yì bǎi}{块|kuài}。 / {一百|yì bǎi}{块|kuài}{左右|zuǒ yòu}。', why: 'A kettő ugyanazt jelenti, egyszerre nem kell mindkettő.' }
+      ]
+    },
+    {
+      title: '{以上|yǐshàng} · {以下|yǐxià} · {以内|yǐnèi}', sub: 'felett · alatt · belül',
+      pattern: 'szám + mértékegység + {以上|yǐ shàng} / {以下|yǐ xià} / {以内|yǐ nèi}',
+      body: 'Határt adnak meg egy szám után: {一百人以上|yì bǎi rén yǐshàng} „száz főnél több", {二十块以下|èrshí kuài yǐxià} „húsz jüan alatt", {五十米以内|wǔshí mǐ yǐnèi} „ötven méteren belül", {三天以内|sān tiān yǐnèi} „három napon belül". Hivatalos szövegben gyakran magát a határt is beleértik. Az {以上|yǐshàng} önállóan „a fentiek, az előbbiek" is lehet.',
+      tables: [
+        { caption: 'Határok',
+          head: ['', 'Jelentés', 'Példa'],
+          rows: [
+            ['{以上|yǐ shàng}', 'felett, több mint', '{十八|shí·bā}{岁|suì}{以上|yǐ shàng}'],
+            ['{以下|yǐ xià}', 'alatt, kevesebb mint', '{二十|èr·shí}{块|kuài}{以下|yǐ xià}'],
+            ['{以内|yǐ nèi}', 'belül', '{五十|wǔ·shí}{米|mǐ}{以内|yǐ nèi}']
+          ] }
+      ],
+      examples: [
+        { zh: '{这里|zhè·lǐ}{的|de}{小吃|xiǎo chī}{都|dōu}{在|zài}{二十|èr·shí}{块|kuài}{以下|yǐ xià}。', hu: 'Itt minden harapnivaló húsz jüan alatt van.' },
+        { zh: '{前面|qián·miàn}{五十|wǔ·shí}{米|mǐ}{以内|yǐ nèi}{就|jiù}{有|yǒu}{充电宝|chōng diàn bǎo}。', hu: 'Ötven méteren belül van külső akkumulátor.' }
+      ]
+    },
+    {
+      title: '{差不多|chàbuduō}', sub: 'majdnem; nagyjából ugyanaz',
+      pattern: '{差不多|chà·bu·duō} + szám / {都|dōu} · A {和|hé} B {差不多|chà·bu·duō} · {差不多|chà·bu·duō}{了|le}',
+      body: 'Három gyakori jelentés: <b>1. majdnem, közel</b> — {差不多十点了|chàbuduō shí diǎn le} „majdnem tíz óra", {差不多都用手机支付|chàbuduō dōu yòng shǒujī zhīfù} „szinte mindent telefonnal fizetnek". <b>2. hasonló, nagyjából ugyanaz</b> — {这两件衣服差不多|zhè liǎng jiàn yīfu chàbuduō} „ez a két ruha nagyjából egyforma". <b>3. nagyjából kész, elég</b> — {差不多了|chàbuduō le} „nagyjából kész, ennyi elég".',
+      examples: [
+        { zh: '{现在|xiàn·zài}{买|mǎi}{东西|dōng·xi}{差不多|chà·bu·duō}{都|dōu}{用|yòng}{手机|shǒu·jī}{支付|zhī·fù}。', hu: 'Ma már szinte mindent telefonnal fizetünk.' },
+        { zh: '{这|zhè}{两|liǎng}{家|jiā}{的|de}{价格|jià·gé}{差不多|chà·bu·duō}。', hu: 'A két helyen nagyjából ugyanannyiba kerül.' }
+      ]
+    }
+  ],
+  phrases: [
+    { zh: '{可以|kě·yǐ}{扫|sǎo}{码|mǎ}{吗|ma}？', hu: 'Fizethetek QR-kóddal?' },
+    { zh: '{我|wǒ}{的|de}{手机|shǒu·jī}{没|méi}{电|diàn}{了|le}。', hu: 'Lemerült a telefonom.' },
+    { zh: '{今天|jīn·tiān}{我|wǒ}{请客|qǐng kè}。', hu: 'Ma én fizetek.' },
+    { zh: '{收|shōu}{现金|xiàn·jīn}{吗|ma}？', hu: 'Elfogadnak készpénzt?' }
+  ],
+  words: [
+    { title: 'Szavak',
+      items: [
+        { zh: '{看来|kàn·lái}', pinyin: 'kànlái', hu: 'úgy látszik' },
+        { zh: '{看样子|kàn yàng·zi}', pinyin: 'kàn yàngzi', hu: 'úgy néz ki' },
+        { zh: '{估计|gū·jì}', pinyin: 'gūjì', hu: 'becsül; becslés' },
+        { zh: '{大约|dà·yuē}', pinyin: 'dàyuē', hu: 'körülbelül' },
+        { zh: '{以上|yǐ shàng}', pinyin: 'yǐshàng', hu: 'felett, több mint' },
+        { zh: '{以下|yǐ xià}', pinyin: 'yǐxià', hu: 'alatt, kevesebb mint' },
+        { zh: '{以内|yǐ nèi}', pinyin: 'yǐnèi', hu: 'belül' },
+        { zh: '{现金|xiàn·jīn}', pinyin: 'xiànjīn', hu: 'készpénz' },
+        { zh: '{支付|zhī·fù}', pinyin: 'zhīfù', hu: 'fizet; fizetés' },
+        { zh: '{剩|shèng}', pinyin: 'shèng', hu: 'marad, megmarad' },
+        { zh: '{电|diàn}', pinyin: 'diàn', hu: 'áram; akkumulátor töltöttsége' },
+        { zh: '{夜市|yè shì}', pinyin: 'yèshì', hu: 'esti piac' }
+      ] },
+    { title: 'Ráadás',
+      items: [
+        { zh: '{扫码|sǎo mǎ}', pinyin: 'sǎo mǎ', hu: 'QR-kódot beolvas' },
+        { zh: '{充电宝|chōng diàn bǎo}', pinyin: 'chōngdiànbǎo', hu: 'külső akkumulátor' },
+        { zh: '{小摊|xiǎo tān}', pinyin: 'xiǎotān', hu: 'árusbódé, stand' },
+        { zh: '{小吃|xiǎo chī}', pinyin: 'xiǎochī', hu: 'harapnivaló, utcai étel' }
+      ] }
+  ],
+  culture: [
+    { title: 'Fizetés egy kóddal', text: 'Kínában a mobilfizetés ({移动支付|yídòng zhīfù}) mindennapos: két nagy alkalmazással szinte mindenhol lehet fizetni, a bevásárlóközponttól az utcai zöldségesig. Az eladó kitesz egy QR-kódot, a vevő beolvassa és beírja az összeget. Sok fiatal hónapokig nem tart a kezében készpénzt.' },
+    { title: 'Esti piacok', text: 'Az esti piacokon ({夜市|yèshì}) sötétedés után nyitnak a standok: grillezett nyársak, sült tészta, gyümölcslé, olcsó ruhák és apróságok. Ide nem vásárolni, hanem sétálni, kóstolgatni és beszélgetni járnak az emberek.' }
+  ],
+  reading: {
+    title: '{没有|méi·yǒu}{现金|xiàn·jīn}{的|de}{生活|shēng·huó}', titleHu: 'Élet készpénz nélkül',
+    text: [
+      { zh: '{在|zài}{中国|Zhōng·guó}{的|de}{大|dà}{城市|chéng·shì}，{差不多|chà·bu·duō}{人人|rén rén}{都|dōu}{用|yòng}{手机|shǒu·jī}{支付|zhī·fù}。', hu: 'Kína nagyvárosaiban szinte mindenki telefonnal fizet.' },
+      { zh: '{安娜|Ān·nà}{估计|gū·jì}，{她|tā}{一|yí}{个|ge}{月|yuè}{用|yòng}{的|de}{现金|xiàn·jīn}{在|zài}{一百|yì bǎi}{块|kuài}{以下|yǐ xià}。', hu: 'Anna becslése szerint havonta száz jüannál kevesebb készpénzt használ.' },
+      { zh: '{有|yǒu}{一|yí}{次|cì}{她|tā}{的|de}{手机|shǒu·jī}{没|méi}{电|diàn}{了|le}，{在|zài}{夜市|yè shì}{上|shang}{差点儿|chà diǎnr}{什么|shén·me}{都|dōu}{买|mǎi}{不|bu}{了|liǎo}。', hu: 'Egyszer lemerült a telefonja, és az esti piacon kis híján semmit sem tudott venni.', par: true },
+      { zh: '{后来|hòu·lái}{她|tā}{在|zài}{旁边|páng·biān}{借|jiè}{了|le}{一|yí}{个|ge}{充电宝|chōng diàn bǎo}，{等|děng}{了|le}{十|shí}{分钟|fēn·zhōng}{左右|zuǒ yòu}{就|jiù}{能|néng}{用|yòng}{了|le}。', hu: 'Aztán a közelben bérelt egy külső akkumulátort, és nagyjából tíz perc múlva már használhatta a telefonját.' },
+      { zh: '{从|cóng}{那|nà}{以后|yǐ·hòu}，{她|tā}{出|chū}{门|mén}{一定|yí dìng}{带|dài}{充电宝|chōng diàn bǎo}。{看来|kàn·lái}{手机|shǒu·jī}{真|zhēn}{的|de}{离|lí}{不|bu}{开|kāi}{了|le}。', hu: 'Azóta mindig visz magával külső akkumulátort. Úgy látszik, a telefon nélkül tényleg nem megy.', par: true }
+    ],
+    words: [ { zh: '{离不开|lí bu kāi}', hu: 'nem tud meglenni nélküle' } ],
+    questions: [
+      { q: 'Mivel fizet szinte mindenki?', a: 'telefonnal', wrong: ['bankkártyával', 'készpénzzel', 'csekkel'], why: '{差不多人人都用手机支付|chàbuduō rénrén dōu yòng shǒujī zhīfù}.' },
+      { q: 'Mennyi készpénzt használ Anna havonta?', a: 'kevesebbet száz jüannál', wrong: ['több mint ezer jüant', 'pontosan ötszáz jüant', 'körülbelül háromszáz jüant'], why: '{一百块以下|yì bǎi kuài yǐxià}.' },
+      { q: 'Mi történt az esti piacon?', a: 'lemerült a telefonja', wrong: ['elvesztette a pénztárcáját', 'elfelejtette a jelszavát', 'bezárt a piac'], why: '{她的手机没电了|tā de shǒujī méi diàn le}.' },
+      { q: 'Mit visz magával azóta?', a: 'külső akkumulátort', wrong: ['sok készpénzt', 'két telefont', 'bankkártyát'], why: '{出门一定带充电宝|chū mén yídìng dài chōngdiànbǎo}.' }
+    ]
+  },
+  quiz: [
+    { q: '„Úgy néz ki, esni fog."', a: '{看样子|kàn yàng·zi}{要|yào}{下|xià}{雨|yǔ}{了|le}。', wrong: ['{样子|yàng·zi}{看|kàn}{要|yào}{下|xià}{雨|yǔ}{了|le}。', '{要|yào}{下|xià}{雨|yǔ}{看样子|kàn yàng·zi}{吗|ma}。', '{看|kàn}{要|yào}{样子|yàng·zi}{下|xià}{雨|yǔ}{了|le}。'], why: '{看样子|kàn yàngzi} + következtetés.', point: 1 },
+    { q: 'Mit fejez ki a {看来|kànlái}?', a: 'következtetést', wrong: ['parancsot', 'kérdést', 'tagadást'], why: '{看来|kànlái} „úgy látszik".', point: 1 },
+    { q: '„Úgy sejtem, ma már nem jön el."', a: '{我|wǒ}{估计|gū·jì}{他|tā}{今天|jīn·tiān}{不|bú}{会|huì}{来|lái}{了|le}。', wrong: ['{我|wǒ}{他|tā}{估计|gū·jì}{今天|jīn·tiān}{不|bú}{会|huì}{来|lái}{了|le}。', '{估计|gū·jì}{我|wǒ}{今天|jīn·tiān}{他|tā}{来|lái}{不|bú}{会|huì}{了|le}。', '{我|wǒ}{今天|jīn·tiān}{不|bú}{会|huì}{估计|gū·jì}{他|tā}{来|lái}{了|le}。'], why: '({我|wǒ}) {估计|gūjì} + sejtés.', point: 2 },
+    { q: 'Mit jelent: {这只是我的估计|zhè zhǐ shì wǒ de gūjì}。', a: 'Ez csak az én becslésem.', wrong: ['Ez csak az én pénzem.', 'Ez csak az én hibám.', 'Ez csak az én ötletem.'], why: 'Főnévként {估计|gūjì} „becslés".', point: 2 },
+    { q: '„Nagyjából egy óra."', a: '{一|yí}{个|ge}{小时|xiǎo·shí}{左右|zuǒ yòu}。', wrong: ['{左右|zuǒ yòu}{一|yí}{个|ge}{小时|xiǎo·shí}。', '{大约|dà·yuē}{一|yí}{个|ge}{小时|xiǎo·shí}{左右|zuǒ yòu}。', '{一|yí}{个|ge}{左右|zuǒ yòu}{小时|xiǎo·shí}。'], why: 'A {左右|zuǒyòu} a szám és a mértékegység után áll.', point: 3 },
+    { q: 'Hová kerül a {大约|dàyuē}?', a: 'a szám elé', wrong: ['a szám után', 'a mondat végére', 'a mértékegység után'], why: '{大约一百块|dàyuē yì bǎi kuài}.', point: 3 },
+    { q: '„Itt minden húsz jüan alatt van."', a: '{这里|zhè·lǐ}{的|de}{东西|dōng·xi}{都|dōu}{在|zài}{二十|èr·shí}{块|kuài}{以下|yǐ xià}。', wrong: ['{这里|zhè·lǐ}{的|de}{东西|dōng·xi}{都|dōu}{在|zài}{以下|yǐ xià}{二十|èr·shí}{块|kuài}。', '{这里|zhè·lǐ}{的|de}{东西|dōng·xi}{都|dōu}{在|zài}{二十|èr·shí}{块|kuài}{以上|yǐ shàng}。', '{以下|yǐ xià}{这里|zhè·lǐ}{的|de}{东西|dōng·xi}{二十|èr·shí}{块|kuài}{都|dōu}{在|zài}。'], why: 'Szám + {以下|yǐxià} „alatt".', point: 4 },
+    { q: 'Mit jelent: {三天以内|sān tiān yǐnèi}?', a: 'három napon belül', wrong: ['három nap múlva', 'több mint három nap', 'három napja'], why: '{以内|yǐnèi} „belül".', point: 4 },
+    { q: 'Melyik illik? {十八|shí·bā}{岁|suì}___{的|de}{人|rén}{才|cái}{能|néng}{参加|cān·jiā}。 („csak a 18 év felettiek")', a: '{以上|yǐ shàng}', wrong: ['{以下|yǐ xià}', '{以内|yǐ nèi}', '{左右|zuǒ yòu}'], why: '„Felett": {以上|yǐshàng}.', point: 4 },
+    { q: '„Ma már szinte mindent telefonnal fizetünk."', a: '{现在|xiàn·zài}{差不多|chà·bu·duō}{都|dōu}{用|yòng}{手机|shǒu·jī}{支付|zhī·fù}。', wrong: ['{现在|xiàn·zài}{都|dōu}{用|yòng}{手机|shǒu·jī}{差不多|chà·bu·duō}{支付|zhī·fù}。', '{差不多|chà·bu·duō}{现在|xiàn·zài}{手机|shǒu·jī}{支付|zhī·fù}{都|dōu}{用|yòng}。', '{现在|xiàn·zài}{用|yòng}{手机|shǒu·jī}{都|dōu}{支付|zhī·fù}{差不多|chà·bu·duō}。'], why: '{差不多|chàbuduō} + {都|dōu} + ige.', point: 5 },
+    { q: 'Mit jelent: {这两件衣服差不多|zhè liǎng jiàn yīfu chàbuduō}。', a: 'Ez a két ruha nagyjából egyforma.', wrong: ['Ez a két ruha nagyon különböző.', 'Ez a két ruha majdnem elfogyott.', 'Ez a két ruha túl drága.'], why: '{差不多|chàbuduō} „hasonló".', point: 5 },
+    { q: 'Mit jelent a {现金|xiànjīn}?', a: 'készpénz', wrong: ['bankkártya', 'pénztárca', 'számla'], why: '{收现金吗|shōu xiànjīn ma} „elfogadnak készpénzt?".' },
+    { q: 'Mit jelent: {我的手机没电了|wǒ de shǒujī méi diàn le}。', a: 'Lemerült a telefonom.', wrong: ['Elveszett a telefonom.', 'Elromlott a telefonom.', 'Nincs térerő.'], why: '{没电|méi diàn} „nincs áram".' },
+    { q: 'Mit jelent: {今天我请客|jīntiān wǒ qǐng kè}。', a: 'Ma én fizetek.', wrong: ['Ma vendégeket hívok.', 'Ma én vagyok a vendég.', 'Ma nem megyek sehová.'], why: '{请客|qǐng kè} „vendégül lát".' },
+    { q: 'Mit jelent a {剩|shèng}?', a: 'marad', wrong: ['fogy', 'tölt', 'fizet'], why: '{只剩百分之一|zhǐ shèng bǎi fēn zhī yī} „csak egy százalék maradt".' },
+    { q: 'Mit jelent az {扫码|sǎo mǎ}?', a: 'kódot beolvas', wrong: ['jelszót ír', 'számlát kér', 'pénzt vált'], why: 'QR-kódos fizetés.' }
+  ]
+},
+
+/* ════════════════════════════════════════════════════
+   HSK 4 · 16. LECKE — 有的…有的, 各, 整个 · 全部, 一切, 我来 + ige
+   ════════════════════════════════════════════════════ */
+{
+  id: 'l66', no: 66, badge: '16', kicker: 'HSK 4 · 16. lecke', label: 'HSK 4 · 16. lecke',
+  title: 'A szülők látogatása — majd én fizetek!',
+  lead: 'Vendégeket látsz vendégül: csoportot osztasz részekre (有的…有的…), mindenféle dologról beszélsz (各), egy egész vagy az összes részről (整个 · 全部), mindenről (一切), és felajánlod, hogy valamit te csinálsz (我来…).',
+  cando: [
+    'Csoportot bontasz részekre: 有的…，有的….',
+    'A 各 segítségével mondod: minden egyes, mindenféle (各种, 各位).',
+    'Megkülönbözteted a 整个 („egész") és a 全部 („összes") használatát, és helyesen használod az 一切 szót.',
+    'Felajánlod, hogy valamit te csinálsz: 我来 + ige.'
+  ],
+  intro: [
+    'Anna szülei egy hétre Sanghajba látogattak. Zhou Jie vacsorára hívja őket egy hagyományos étterembe; a szülők nem beszélnek kínaiul, ezért Anna tolmácsol — a végén pedig kitör a jól ismert kínai „vita": ki fizessen?',
+    'Ebben a leckében az egész és a rész nyelvét tanulod (némelyik, minden egyes, az egész, az összes, minden), és a vendéglátás kifejezéseit.'
+  ],
+  dialogue: {
+    title: 'Vacsora a szülőkkel',
+    scene: 'Szombat este egy sanghaji étteremben. Zhou Jie, Anna és Anna szülei.',
+    lines: [
+      { who: 'Zhou Jie', zh: '{叔叔|shū·shu}、{阿姨|ā·yí}，{欢迎|huān·yíng}{你们|nǐ·men}{来|lái}{上海|Shàng·hǎi}！{今天|jīn·tiān}{我|wǒ}{来|lái}{点|diǎn}{菜|cài}{吧|ba}。', hu: 'Bácsi, néni, üdvözlöm önöket Sanghajban! Ma én rendelek, jó?' },
+      { who: 'Anna', zh: '{好|hǎo}{啊|a}。{我|wǒ}{爸爸|bà·ba}{妈妈|mā·ma}{对|duì}{中国|Zhōng·guó}{菜|cài}{不|bú}{太|tài}{了解|liǎo·jiě}，{各|gè}{种|zhǒng}{菜|cài}{都|dōu}{想|xiǎng}{尝|cháng}{一|yi}{尝|cháng}。', hu: 'Jó. A szüleim nem nagyon ismerik a kínai konyhát, mindenféle ételt szeretnének megkóstolni.' },
+      { who: 'Zhou Jie', zh: '{那|nà}{我们|wǒ·men}{点|diǎn}{几|jǐ}{个|ge}{地道|dì·dao}{的|de}{上海|Shàng·hǎi}{菜|cài}，{有|yǒu}{的|de}{甜|tián}，{有|yǒu}{的|de}{咸|xián}，{再|zài}{来|lái}{一|yí}{个|ge}{辣|là}{的|de}。', hu: 'Akkor rendelünk néhány igazi sanghaji ételt — van, ami édes, van, ami sós —, meg egy csípőset is.' },
+      { who: 'Anna', zh: '{我|wǒ}{妈妈|mā·ma}{说|shuō}，{她|tā}{整个|zhěng·gè}{上午|shàng·wǔ}{都|dōu}{在|zài}{外滩|Wài·tān}{拍|pāi}{照|zhào}，{现在|xiàn·zài}{饿|è}{极|jí}{了|le}！', hu: 'Anyu azt mondja, egész délelőtt a Bundon fényképezett, és most farkaséhes!' },
+      { who: 'Zhou Jie', zh: '{你|nǐ}{看|kàn}，{菜|cài}{全部|quán·bù}{吃|chī}{完|wán}{了|le}，{看来|kàn·lái}{很|hěn}{合|hé}{叔叔|shū·shu}{阿姨|ā·yí}{的|de}{口味|kǒu·wèi}！', hu: 'Nézd, minden elfogyott — úgy látszik, ízlett a szüleidnek!' },
+      { who: 'Anna', zh: '{他们|tā·men}{说|shuō}{一切|yí qiè}{都|dōu}{很|hěn}{好|hǎo}，{谢谢|xiè·xie}{你|nǐ}{的|de}{招待|zhāo·dài}。{服务员|fú·wù·yuán}，{买单|mǎi dān}！{今天|jīn·tiān}{我|wǒ}{来|lái}{付|fù}！', hu: 'Azt mondják, minden nagyon jó volt, köszönik a vendéglátást. Pincér, fizetünk! Ma én állom!' },
+      { who: 'Zhou Jie', zh: '{那|nà}{怎么|zěn·me}{行|xíng}！{你们|nǐ·men}{是|shì}{客人|kè·rén}，{我|wǒ}{来|lái}！', hu: 'Szó sem lehet róla! Ti vagytok a vendégek, majd én!' }
+    ],
+    notes: [
+      'A {叔叔|shūshu} „bácsi" és az {阿姨|āyí} „néni": így szólítják a barátok szüleit és a szülők korosztályát.',
+      'A {外滩|Wàitān} „a Bund": Sanghaj híres folyóparti sétánya régi európai stílusú épületekkel.',
+      'A {合口味|hé kǒuwèi} „ízlik (valakinek)", a {买单|mǎi dān} „fizetünk (étteremben)", a {那怎么行|nà zěnme xíng} „szó sem lehet róla".'
+    ]
+  },
+  points: [
+    {
+      title: '{有的|yǒude} … {有的|yǒude} …', sub: 'némelyik …, némelyik …',
+      pattern: '{有的|yǒu·de} + (főnév) …，{有的|yǒu·de} + (főnév) …',
+      body: 'Egy csoportot bont részekre: {有的甜，有的咸|yǒude tián, yǒude xián} „van, ami édes, van, ami sós". Az {有的|yǒude} után állhat főnév: {有的人喜欢，有的人不喜欢|yǒude rén xǐhuan, yǒude rén bù xǐhuan} „egyesek szeretik, mások nem". Állhat egyedül is: {有的同事是上海人|yǒude tóngshì shì Shànghǎi rén} „néhány kolléga sanghaji". Mindig az alany helyén, az ige előtt áll.',
+      examples: [
+        { zh: '{我们|wǒ·men}{点|diǎn}{几|jǐ}{个|ge}{菜|cài}，{有|yǒu}{的|de}{甜|tián}，{有|yǒu}{的|de}{咸|xián}。', hu: 'Rendelünk néhány ételt, van, ami édes, van, ami sós.' },
+        { zh: '{我|wǒ}{的|de}{同事|tóng·shì}{有|yǒu}{的|de}{是|shì}{上海|Shàng·hǎi}{人|rén}，{有|yǒu}{的|de}{是|shì}{外地|wài dì}{人|rén}。', hu: 'A kollégáim közül van, aki sanghaji, van, aki máshonnan jött.' }
+      ],
+      mistakes: [
+        { bad: '{我|wǒ}{喜欢|xǐ·huan}{有|yǒu}{的|de}{菜|cài}，{不|bù}{喜欢|xǐ·huan}{有|yǒu}{的|de}{菜|cài}。', good: '{有|yǒu}{的|de}{菜|cài}{我|wǒ}{喜欢|xǐ·huan}，{有|yǒu}{的|de}{我|wǒ}{不|bù}{喜欢|xǐ·huan}。', why: 'Az {有的|yǒude} a mondat elejére, az ige elé kerül.' }
+      ]
+    },
+    {
+      title: '{各|gè}', sub: 'minden egyes; mindenféle',
+      pattern: '{各|gè} + (mérőszó) + főnév · {各种|gè zhǒng} · {各位|gè wèi}',
+      body: 'A {各|gè} „minden egyes, az egyes … mind" a csoport tagjait külön-külön veszi: {各种菜|gè zhǒng cài} „mindenféle étel", {各个国家|gè ge guójiā} „az egyes országok", {各地|gè dì} „mindenütt, az ország minden részén". Udvarias megszólításban: {各位|gè wèi} „hölgyeim és uraim, kedves mindenki". Állandó kifejezés: {各种各样|gè zhǒng gè yàng} „sokféle, mindenféle".',
+      examples: [
+        { zh: '{我|wǒ}{爸爸|bà·ba}{妈妈|mā·ma}{各|gè}{种|zhǒng}{菜|cài}{都|dōu}{想|xiǎng}{尝|cháng}{一|yi}{尝|cháng}。', hu: 'A szüleim mindenféle ételt meg akarnak kóstolni.' },
+        { zh: '{各|gè}{位|wèi}，{欢迎|huān·yíng}{来|lái}{到|dào}{上海|Shàng·hǎi}！', hu: 'Kedves mindenki, üdvözlünk Sanghajban!' }
+      ]
+    },
+    {
+      title: '{整个|zhěnggè} · {全部|quánbù}', sub: 'egész · összes',
+      pattern: '{整个|zhěng·gè} + főnév · {全部|quán·bù} (+ {的|de}) + főnév · {全部|quán·bù} + ige',
+      body: 'A {整个|zhěnggè} egy dolog <b>egészét</b> jelenti: {整个上午|zhěnggè shàngwǔ} „az egész délelőtt", {整个城市|zhěnggè chéngshì} „az egész város". A {全部|quánbù} részekből álló csoport <b>összes</b> tagját: {全部的钱|quánbù de qián} „az összes pénz". A {全部|quánbù} határozószó is lehet: {菜全部吃完了|cài quánbù chī wán le} „az ételek mind elfogytak".',
+      tables: [
+        { caption: 'Egész vagy összes?',
+          head: ['', 'Jelentés', 'Példa'],
+          rows: [
+            ['{整个|zhěng·gè}', 'egy dolog egésze', '{整个|zhěng·gè}{上午|shàng·wǔ} · {整个|zhěng·gè}{城市|chéng·shì}'],
+            ['{全部|quán·bù}', 'a részek összessége', '{全部|quán·bù}{的|de}{钱|qián} · {全部|quán·bù}{吃|chī}{完|wán}']
+          ] }
+      ],
+      examples: [
+        { zh: '{她|tā}{整个|zhěng·gè}{上午|shàng·wǔ}{都|dōu}{在|zài}{外滩|Wài·tān}{拍|pāi}{照|zhào}。', hu: 'Egész délelőtt a Bundon fényképezett.' },
+        { zh: '{菜|cài}{全部|quán·bù}{吃|chī}{完|wán}{了|le}。', hu: 'Minden étel elfogyott.' }
+      ],
+      mistakes: [
+        { bad: '{我|wǒ}{全部|quán·bù}{上午|shàng·wǔ}{都|dōu}{在|zài}{家|jiā}。', good: '{我|wǒ}{整个|zhěng·gè}{上午|shàng·wǔ}{都|dōu}{在|zài}{家|jiā}。', why: 'Egy időszak egésze: {整个|zhěnggè}.' }
+      ]
+    },
+    {
+      title: '{一切|yíqiè}', sub: 'minden (ami csak van)',
+      pattern: '{一切|yí qiè} + {都|dōu} + … · {一切|yí qiè} + elvont főnév',
+      body: 'Az {一切|yíqiè} „minden, az egész" elvont, összefoglaló szó: {一切都很好|yíqiè dōu hěn hǎo} „minden nagyon jó", {祝你一切顺利|zhù nǐ yíqiè shùnlì} „minden jót, sok sikert!". Megszámlálható, konkrét dolgok elé nem tesszük: nem *{一切学生|yíqiè xuésheng}, hanem {所有的学生|suǒyǒu de xuésheng} „az összes diák" (HSK 4 2. lecke). Mérőszó sem kapcsolódik hozzá.',
+      examples: [
+        { zh: '{他们|tā·men}{说|shuō}{一切|yí qiè}{都|dōu}{很|hěn}{好|hǎo}。', hu: 'Azt mondják, minden nagyon jó volt.' },
+        { zh: '{祝|zhù}{你|nǐ}{一切|yí qiè}{顺利|shùn·lì}！', hu: 'Minden jót, sok sikert!' }
+      ],
+      mistakes: [
+        { bad: '{一切|yí qiè}{学生|xué·sheng}{都|dōu}{来|lái}{了|le}。', good: '{所有|suǒ yǒu}{的|de}{学生|xué·sheng}{都|dōu}{来|lái}{了|le}。', why: 'Konkrét, megszámlálható csoport előtt {所有|suǒyǒu} áll.' }
+      ]
+    },
+    {
+      title: '{我来|wǒ lái} + ige', sub: 'majd én …',
+      pattern: '{我|wǒ}{来|lái} + ige · {我|wǒ}{来|lái}！',
+      body: 'A {来|lái} ige előtt azt jelenti: valaki <b>vállal</b> egy feladatot. {我来点菜吧|wǒ lái diǎn cài ba} „majd én rendelek", {今天我来付|jīntiān wǒ lái fù} „ma én fizetek", {我来介绍一下|wǒ lái jièshào yíxià} „hadd mutassam be". Önállóan is: {我来|wǒ lái}! „majd én!". Mások felé: {你来|nǐ lái} „most te jössz, csináld te".',
+      examples: [
+        { zh: '{今天|jīn·tiān}{我|wǒ}{来|lái}{点|diǎn}{菜|cài}{吧|ba}。', hu: 'Ma majd én rendelek.' },
+        { zh: '{你们|nǐ·men}{是|shì}{客人|kè·rén}，{我|wǒ}{来|lái}！', hu: 'Ti vagytok a vendégek, majd én!' }
+      ]
+    }
+  ],
+  phrases: [
+    { zh: '{服务员|fú·wù·yuán}，{买单|mǎi dān}！', hu: 'Pincér, fizetünk!' },
+    { zh: '{别|bié}{客气|kè·qi}，{多|duō}{吃|chī}{点儿|diǎnr}！', hu: 'Ne szerénykedj, egyél még!' },
+    { zh: '{我|wǒ}{敬|jìng}{你们|nǐ·men}{一|yì}{杯|bēi}。', hu: 'Egészségükre!' },
+    { zh: '{欢迎|huān·yíng}{下|xià}{次|cì}{再|zài}{来|lái}！', hu: 'Szeretettel várunk máskor is!' }
+  ],
+  words: [
+    { title: 'Szavak',
+      items: [
+        { zh: '{有的|yǒu·de}', pinyin: 'yǒude', hu: 'némelyik, egyes' },
+        { zh: '{各|gè}', pinyin: 'gè', hu: 'minden egyes' },
+        { zh: '{整个|zhěng·gè}', pinyin: 'zhěnggè', hu: 'egész' },
+        { zh: '{全部|quán·bù}', pinyin: 'quánbù', hu: 'összes; mind' },
+        { zh: '{叔叔|shū·shu}', pinyin: 'shūshu', hu: 'nagybácsi; bácsi' },
+        { zh: '{口味|kǒu·wèi}', pinyin: 'kǒuwèi', hu: 'ízlés, íz' },
+        { zh: '{咸|xián}', pinyin: 'xián', hu: 'sós' },
+        { zh: '{尝|cháng}', pinyin: 'cháng', hu: 'megkóstol' },
+        { zh: '{点菜|diǎn cài}', pinyin: 'diǎn cài', hu: 'ételt rendel' },
+        { zh: '{客人|kè·rén}', pinyin: 'kèrén', hu: 'vendég' },
+        { zh: '{买单|mǎi dān}', pinyin: 'mǎi dān', hu: 'fizet (étteremben)' },
+        { zh: '{地道|dì·dao}', pinyin: 'dìdao', hu: 'eredeti, igazi' }
+      ] },
+    { title: 'Ráadás',
+      items: [
+        { zh: '{外滩|Wài·tān}', pinyin: 'Wàitān', hu: 'a Bund (Sanghaj)' },
+        { zh: '{招待|zhāo·dài}', pinyin: 'zhāodài', hu: 'vendégül lát' },
+        { zh: '{各种各样|gè zhǒng gè yàng}', pinyin: 'gè zhǒng gè yàng', hu: 'mindenféle' },
+        { zh: '{外地|wài dì}', pinyin: 'wàidì', hu: 'más vidék, vidéki' }
+      ] }
+  ],
+  culture: [
+    { title: 'Ki fizet?', text: 'Kínában közös étkezésnél ritkán fizet mindenki a magáét: általában a vendéglátó vagy a rangidős állja a számlát. Gyakori jelenet, hogy ketten is a kasszához sietnek, és udvariasan „veszekednek", ki fizessen ({抢着买单|qiǎngzhe mǎi dān}) — aki vesztes, legközelebb ő hív meg.' },
+    { title: 'Kerek asztal, közös tálak', text: 'Az ételeket közös tálakban teszik az asztal közepére, gyakran forgatható üveglapra, és mindenki onnan vesz. A vendéglátó illik, hogy a vendég tányérjára is tegyen ({夹菜|jiā cài}), a legjobb falatokat neki kínálva.' }
+  ],
+  reading: {
+    title: '{爸爸|bà·ba}{妈妈|mā·ma}{来|lái}{上海|Shàng·hǎi}', titleHu: 'Anna szülei Sanghajban',
+    text: [
+      { zh: '{上|shàng}{个|ge}{星期|xīng·qī}，{安娜|Ān·nà}{的|de}{爸爸|bà·ba}{妈妈|mā·ma}{从|cóng}{布达佩斯|Bù·dá·pèi·sī}{来|lái}{上海|Shàng·hǎi}{看|kàn}{她|tā}。', hu: 'Múlt héten Anna szülei Budapestről Sanghajba jöttek meglátogatni őt.' },
+      { zh: '{安娜|Ān·nà}{带|dài}{他们|tā·men}{去|qù}{了|le}{很|hěn}{多|duō}{地方|dì·fang}，{有|yǒu}{的|de}{很|hěn}{古老|gǔ lǎo}，{有|yǒu}{的|de}{很|hěn}{现代|xiàn·dài}。', hu: 'Anna sok helyre elvitte őket: némelyik nagyon régi volt, némelyik nagyon modern.' },
+      { zh: '{妈妈|mā·ma}{最|zuì}{喜欢|xǐ·huan}{外滩|Wài·tān}，{整个|zhěng·gè}{上午|shàng·wǔ}{都|dōu}{在|zài}{那儿|nàr}{拍|pāi}{照|zhào}。', hu: 'Az édesanyja a Bundot szerette a legjobban, egész délelőtt ott fényképezett.', par: true },
+      { zh: '{周杰|Zhōu Jié}{请|qǐng}{他们|tā·men}{吃|chī}{了|le}{各|gè}{种|zhǒng}{上海|Shàng·hǎi}{菜|cài}，{爸爸|bà·ba}{把|bǎ}{全部|quán·bù}{的|de}{菜|cài}{都|dōu}{尝|cháng}{了|le}{一|yí}{遍|biàn}。', hu: 'Zhou Jie mindenféle sanghaji étellel vendégelte meg őket, az édesapja minden ételt végigkóstolt.' },
+      { zh: '{走|zǒu}{的|de}{时候|shí·hou}，{妈妈|mā·ma}{说|shuō}：“{看到|kàn dào}{你|nǐ}{在|zài}{这儿|zhèr}{一切|yí qiè}{都|dōu}{好|hǎo}，{我们|wǒ·men}{就|jiù}{放心|fàng xīn}{了|le}。”', hu: 'Indulás előtt az édesanyja azt mondta: „Most, hogy látjuk, hogy itt minden rendben van, megnyugodtunk."', par: true }
+    ],
+    words: [ { zh: '{现代|xiàn·dài}', hu: 'modern' } ],
+    questions: [
+      { q: 'Honnan jöttek Anna szülei?', a: 'Budapestről', wrong: ['Pekingből', 'Bécsből', 'Debrecenből'], why: '{从布达佩斯来|cóng Bùdápèisī lái}.' },
+      { q: 'Milyen helyekre vitte el őket Anna?', a: 'régiekre és modernekre is', wrong: ['csak bevásárlóközpontokba', 'csak múzeumokba', 'csak éttermekbe'], why: '{有的很古老，有的很现代|yǒude hěn gǔlǎo, yǒude hěn xiàndài}.' },
+      { q: 'Mit csinált az édesanyja egész délelőtt?', a: 'fényképezett a Bundon', wrong: ['vásárolt', 'pihent a szállodában', 'kínaiul tanult'], why: '{整个上午都在那儿拍照|zhěnggè shàngwǔ dōu zài nàr pāi zhào}.' },
+      { q: 'Miért nyugodtak meg a szülők?', a: 'mert Annának minden rendben van', wrong: ['mert Anna hazaköltözik', 'mert olcsó volt az út', 'mert Zhou Jie fizetett'], why: '{看到你在这儿一切都好|kàn dào nǐ zài zhèr yíqiè dōu hǎo}.' }
+    ]
+  },
+  quiz: [
+    { q: '„Van, ami édes, van, ami sós."', a: '{有|yǒu}{的|de}{甜|tián}，{有|yǒu}{的|de}{咸|xián}。', wrong: ['{甜|tián}{有|yǒu}{的|de}，{咸|xián}{有|yǒu}{的|de}。', '{有|yǒu}{甜|tián}{的|de}，{有|yǒu}{咸|xián}{的|de}{有|yǒu}。', '{的|de}{有|yǒu}{甜|tián}，{的|de}{有|yǒu}{咸|xián}。'], why: '{有的|yǒude} …, {有的|yǒude} ….', point: 1 },
+    { q: 'Melyik mondat helyes?', a: '{有|yǒu}{的|de}{人|rén}{喜欢|xǐ·huan}，{有|yǒu}{的|de}{人|rén}{不|bù}{喜欢|xǐ·huan}。', wrong: ['{人|rén}{有|yǒu}{的|de}{喜欢|xǐ·huan}，{人|rén}{有|yǒu}{的|de}{不|bù}{喜欢|xǐ·huan}。', '{我|wǒ}{喜欢|xǐ·huan}{有|yǒu}{的|de}{人|rén}，{不|bù}{喜欢|xǐ·huan}{有|yǒu}{的|de}{人|rén}。', '{有|yǒu}{的|de}{喜欢|xǐ·huan}{人|rén}，{有|yǒu}{的|de}{不|bù}{喜欢|xǐ·huan}{人|rén}。'], why: 'Az {有的|yǒude} + főnév az ige előtt áll.', point: 1 },
+    { q: '„Mindenféle ételt meg akarnak kóstolni."', a: '{各|gè}{种|zhǒng}{菜|cài}{都|dōu}{想|xiǎng}{尝|cháng}{一|yi}{尝|cháng}。', wrong: ['{种|zhǒng}{各|gè}{菜|cài}{都|dōu}{想|xiǎng}{尝|cháng}{一|yi}{尝|cháng}。', '{各|gè}{菜|cài}{种|zhǒng}{想|xiǎng}{都|dōu}{尝|cháng}{一|yi}{尝|cháng}。', '{都|dōu}{各|gè}{种|zhǒng}{菜|cài}{尝|cháng}{想|xiǎng}{一|yi}{尝|cháng}。'], why: '{各种|gè zhǒng} + főnév.', point: 2 },
+    { q: 'Mit jelent: {各位|gè wèi}?', a: 'kedves mindenki', wrong: ['minden hely', 'mindenféle', 'egy személy'], why: 'Udvarias megszólítás.', point: 2 },
+    { q: '„Egész délelőtt a Bundon fényképezett."', a: '{她|tā}{整个|zhěng·gè}{上午|shàng·wǔ}{都|dōu}{在|zài}{外滩|Wài·tān}{拍|pāi}{照|zhào}。', wrong: ['{她|tā}{全部|quán·bù}{上午|shàng·wǔ}{都|dōu}{在|zài}{外滩|Wài·tān}{拍|pāi}{照|zhào}。', '{她|tā}{上午|shàng·wǔ}{整个|zhěng·gè}{在|zài}{外滩|Wài·tān}{都|dōu}{拍|pāi}{照|zhào}。', '{整个|zhěng·gè}{她|tā}{都|dōu}{上午|shàng·wǔ}{在|zài}{外滩|Wài·tān}{拍|pāi}{照|zhào}。'], why: 'Egy időszak egésze: {整个|zhěnggè}.', point: 3 },
+    { q: 'Melyik illik? {菜|cài}___{吃|chī}{完|wán}{了|le}。 („Minden étel elfogyott.")', a: '{全部|quán·bù}', wrong: ['{整个|zhěng·gè}', '{一切|yí qiè}', '{各|gè}'], why: 'Határozószóként: {全部吃完了|quánbù chī wán le}.', point: 3 },
+    { q: '„Minden nagyon jó volt."', a: '{一切|yí qiè}{都|dōu}{很|hěn}{好|hǎo}。', wrong: ['{一切|yí qiè}{很|hěn}{都|dōu}{好|hǎo}。', '{都|dōu}{一切|yí qiè}{很|hěn}{好|hǎo}。', '{一|yí}{个|ge}{切|qiè}{都|dōu}{很|hěn}{好|hǎo}。'], why: '{一切|yíqiè} + {都|dōu} + ….', point: 4 },
+    { q: 'Melyik mondat helyes?', a: '{所有|suǒ yǒu}{的|de}{学生|xué·sheng}{都|dōu}{来|lái}{了|le}。', wrong: ['{一切|yí qiè}{学生|xué·sheng}{都|dōu}{来|lái}{了|le}。', '{一切|yí qiè}{的|de}{学生|xué·sheng}{来|lái}{都|dōu}{了|le}。', '{学生|xué·sheng}{一切|yí qiè}{个|ge}{都|dōu}{来|lái}{了|le}。'], why: 'Konkrét csoport előtt {所有|suǒyǒu}, nem {一切|yíqiè}.', point: 4 },
+    { q: 'Mit jelent: {祝你一切顺利|zhù nǐ yíqiè shùnlì}！', a: 'Minden jót, sok sikert!', wrong: ['Jó étvágyat!', 'Jó éjszakát!', 'Boldog születésnapot!'], why: 'Általános jókívánság.', point: 4 },
+    { q: '„Ma majd én rendelek."', a: '{今天|jīn·tiān}{我|wǒ}{来|lái}{点|diǎn}{菜|cài}{吧|ba}。', wrong: ['{今天|jīn·tiān}{我|wǒ}{点|diǎn}{菜|cài}{来|lái}{吧|ba}。', '{今天|jīn·tiān}{来|lái}{我|wǒ}{菜|cài}{点|diǎn}{吧|ba}。', '{我|wǒ}{今天|jīn·tiān}{点|diǎn}{来|lái}{菜|cài}{吧|ba}。'], why: '{我来|wǒ lái} + ige.', point: 5 },
+    { q: 'Mit jelent: {你们是客人，我来|nǐmen shì kèrén, wǒ lái}！', a: 'Ti vagytok a vendégek, majd én!', wrong: ['Ti vagytok a vendégek, én is jövök!', 'Ti vagytok a vendégek, gyertek ide!', 'Ti vagytok a vendégek, én már megyek!'], why: '{我来|wǒ lái} „majd én (megcsinálom)".', point: 5 },
+    { q: 'Mit jelent a {咸|xián}?', a: 'sós', wrong: ['édes', 'savanyú', 'keserű'], why: '{有的甜，有的咸|yǒude tián, yǒude xián}.' },
+    { q: 'Mit jelent a {地道|dìdao}?', a: 'eredeti, igazi', wrong: ['olcsó', 'gyors', 'egészséges'], why: '{地道的上海菜|dìdao de Shànghǎi cài} „igazi sanghaji étel".' },
+    { q: 'Mit jelent: {服务员，买单|fúwùyuán, mǎi dān}！', a: 'Pincér, fizetünk!', wrong: ['Pincér, kérem az étlapot!', 'Pincér, még egy sört!', 'Pincér, ez nem ezt rendeltem!'], why: '{买单|mǎi dān} „fizet".' },
+    { q: 'Mit jelent: {很合你的口味|hěn hé nǐ de kǒuwèi}。', a: 'Nagyon ízlik neked.', wrong: ['Nagyon éhes vagy.', 'Nagyon jól főzöl.', 'Nagyon sokat eszel.'], why: '{合口味|hé kǒuwèi} „ízlik".' },
+    { q: 'Mit jelent a {尝|cháng}?', a: 'megkóstol', wrong: ['megfőz', 'megrendel', 'kifizet'], why: '{尝一尝|cháng yi cháng} „megkóstol".' }
+  ]
 }
 
 ];

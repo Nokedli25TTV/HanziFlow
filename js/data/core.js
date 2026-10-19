@@ -847,7 +847,29 @@ const HANZIFLOW_PATH = [
     module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l64&round=listen' },
   { id: 'l64-read', glyph: '读', title: 'Olvasás: Anna első maratonja',
     desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
-    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l64&round=read' }
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l64&round=read' },
+
+  // ── HSK 4 · 15. lecke ──
+  { id: 'l65-lesson', glyph: '估', title: 'Magyarázat: 看来 · 看样子, 估计, 大约 · 左右, 以上 · 以下 · 以内, 差不多',
+    desc: 'Mobilfizetés: úgy látszik, becslés, körülbelül, felett / alatt / belül, majdnem.',
+    module: 'lesson', href: 'pages/lesson.html?id=l65' },
+  { id: 'l65-listen', glyph: '听', title: 'Hallás: az esti piacon',
+    desc: 'A lecke mondatai hang után: mit jelent, amit hallasz?',
+    module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l65&round=listen' },
+  { id: 'l65-read', glyph: '读', title: 'Olvasás: Élet készpénz nélkül',
+    desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l65&round=read' },
+
+  // ── HSK 4 · 16. lecke ──
+  { id: 'l66-lesson', glyph: '各', title: 'Magyarázat: 有的…有的, 各, 整个 · 全部, 一切, 我来 + ige',
+    desc: 'A szülők látogatása: némelyik…, mindenféle, egész és összes, minden, majd én….',
+    module: 'lesson', href: 'pages/lesson.html?id=l66' },
+  { id: 'l66-listen', glyph: '听', title: 'Hallás: vacsora a szülőkkel',
+    desc: 'A lecke mondatai hang után: mit jelent, amit hallasz?',
+    module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l66&round=listen' },
+  { id: 'l66-read', glyph: '读', title: 'Olvasás: Anna szülei Sanghajban',
+    desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l66&round=read' }
 ];
 
 const HANZIFLOW_PATH_UNITS = [
@@ -1006,5 +1028,9 @@ const HANZIFLOW_PATH_UNITS = [
   { id: 'u-l63', kicker: 'HSK 4 · 13. lecke', title: 'Holdünnep', sub: 'ige + 下来 · 过来 · 过去, melléknév-kettőzés, 忍不住, 了不起',
     steps: ['l63-lesson', 'l63-listen', 'l63-read'] },
   { id: 'u-l64', kicker: 'HSK 4 · 14. lecke', title: 'Az első maraton', sub: 'ige + 上 · 开 · 住 · 掉, 好 + melléknév',
-    steps: ['l64-lesson', 'l64-listen', 'l64-read'] }
+    steps: ['l64-lesson', 'l64-listen', 'l64-read'] },
+  { id: 'u-l65', kicker: 'HSK 4 · 15. lecke', title: 'Mobilfizetés', sub: '看来 · 看样子, 估计, 大约 · 左右, 以上 · 以下 · 以内, 差不多',
+    steps: ['l65-lesson', 'l65-listen', 'l65-read'] },
+  { id: 'u-l66', kicker: 'HSK 4 · 16. lecke', title: 'A szülők látogatása', sub: '有的…有的, 各, 整个 · 全部, 一切, 我来 + ige',
+    steps: ['l66-lesson', 'l66-listen', 'l66-read'] }
 ];
