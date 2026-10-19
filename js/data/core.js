@@ -990,7 +990,29 @@ const HANZIFLOW_PATH = [
     module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l74&round=listen' },
   { id: 'l74-read', glyph: '读', title: 'Olvasás: A báty meglepetése',
     desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
-    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l74&round=read' }
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l74&round=read' },
+
+  // ── HSK 5 · 5. lecke ──
+  { id: 'l75-lesson', glyph: '变', title: 'Magyarázat: 逐渐, 不断, 始终, 一律, 从而',
+    desc: 'Egy város változik: fokozatosan, szüntelenül, mindvégig, kivétel nélkül, ezáltal.',
+    module: 'lesson', href: 'pages/lesson.html?id=l75' },
+  { id: 'l75-listen', glyph: '听', title: 'Hallás: beszélgetés a taxiban',
+    desc: 'A lecke mondatai hang után: mit jelent, amit hallasz?',
+    module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l75&round=listen' },
+  { id: 'l75-read', glyph: '读', title: 'Olvasás: A város változásai',
+    desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l75&round=read' },
+
+  // ── HSK 5 · 6. lecke ──
+  { id: 'l76-lesson', glyph: '寿', title: 'Magyarázat: 一向 · 向来, 照样, 至今, 从此, 万一',
+    desc: 'Nagymama nyolcvanéves: mindig is, ugyanúgy, a mai napig, azóta, ha esetleg.',
+    module: 'lesson', href: 'pages/lesson.html?id=l76' },
+  { id: 'l76-listen', glyph: '听', title: 'Hallás: nyolcvanadik születésnap',
+    desc: 'A lecke mondatai hang után: mit jelent, amit hallasz?',
+    module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l76&round=listen' },
+  { id: 'l76-read', glyph: '读', title: 'Olvasás: Nagymama nyolcvanadik születésnapja',
+    desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l76&round=read' }
 ];
 
 const HANZIFLOW_PATH_UNITS = [
@@ -1179,5 +1201,9 @@ const HANZIFLOW_PATH_UNITS = [
   { id: 'u-l73', kicker: 'HSK 5 · 3. lecke', title: 'A kínai orvosnál', sub: '似乎, 仿佛, 难免, 以免 · 免得, 尽量',
     steps: ['l73-lesson', 'l73-listen', 'l73-read'] },
   { id: 'u-l74', kicker: 'HSK 5 · 4. lecke', title: 'Váratlan vendég', sub: '果然, 居然, 偏偏, 恰好, 总算',
-    steps: ['l74-lesson', 'l74-listen', 'l74-read'] }
+    steps: ['l74-lesson', 'l74-listen', 'l74-read'] },
+  { id: 'u-l75', kicker: 'HSK 5 · 5. lecke', title: 'Egy város változik', sub: '逐渐, 不断, 始终, 一律, 从而',
+    steps: ['l75-lesson', 'l75-listen', 'l75-read'] },
+  { id: 'u-l76', kicker: 'HSK 5 · 6. lecke', title: 'Nagymama nyolcvanéves', sub: '一向 · 向来, 照样, 至今, 从此, 万一',
+    steps: ['l76-lesson', 'l76-listen', 'l76-read'] }
 ];

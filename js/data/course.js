@@ -13828,6 +13828,325 @@ const HANZIFLOW_COURSE = [
     { q: 'Mit jelent: {一路辛苦了|yílù xīnkǔ le}！', a: 'Fárasztó utad lehetett!', wrong: ['Jó utat!', 'Siess haza!', 'Nem volt nehéz az út.'], why: 'Az érkező vendég üdvözlése.' },
     { q: 'Mit jelent: {真是太巧了|zhēn shì tài qiǎo le}！', a: 'Micsoda véletlen!', wrong: ['Milyen ügyes vagy!', 'Milyen nagy kár!', 'Ez túl nehéz!'], why: 'A {巧|qiǎo} itt „szerencsés egybeesés".' }
   ]
+},
+/* ════════════════════════════════════════════════════
+   HSK 5 · 5. LECKE — 逐渐, 不断, 始终, 一律, 从而
+   ════════════════════════════════════════════════════ */
+{
+  id: 'l75', no: 75, badge: '5', kicker: 'HSK 5 · 5. lecke', label: 'HSK 5 · 5. lecke',
+  title: 'Egy város változik — harminc év a volán mögött',
+  lead: 'Változásokról beszélsz: lépésről lépésre zajló folyamatról (逐渐), szüntelen alakulásról (不断), arról, ami mindvégig ugyanaz maradt (始终), a kivétel nélküli szabályról (一律), és arról, mi lett az eredmény (从而).',
+  cando: [
+    'Fokozatos, lépésenkénti változást írsz le: 逐渐 + ige.',
+    'Szüntelen, folyamatos alakulásról beszélsz: 不断….',
+    'Kifejezed, hogy valami mindvégig változatlan: 始终….',
+    'Kivétel nélküli szabályt mondasz (一律), és megnevezed az eredményt (从而).'
+  ],
+  intro: [
+    'Anna taxival megy egy ügyfélhez. A sofőr, egy idősebb sanghaji „mester", harminc éve vezet taxit, és útközben elmeséli, mennyit változott a város.',
+    'Ebben a leckében a változás és a folyamatok írott nyelvét tanulod: ezek a szavak hírekben, beszámolókban, statisztikák leírásában is gyakoriak.'
+  ],
+  dialogue: {
+    title: 'Beszélgetés a taxiban',
+    scene: 'Hétfő délelőtt egy sanghaji taxiban. A taxisofőr és Anna.',
+    lines: [
+      { who: 'Sofőr', zh: '{我|wǒ}{在|zài}{上海|Shàng·hǎi}{开|kāi}{了|le}{三十|sān shí}{年|nián}{出租车|chū·zū·chē}，{这|zhè}{个|ge}{城市|chéng·shì}{一直|yì zhí}{在|zài}{不断|bú duàn}{地|de}{变化|biàn·huà}。', hu: 'Harminc éve taxizom Sanghajban, ez a város szüntelenül változik.' },
+      { who: 'Anna', zh: '{师傅|shī·fu}，{您|nín}{觉得|jué·de}{最|zuì}{大|dà}{的|de}{变化|biàn·huà}{是|shì}{什么|shén·me}？', hu: 'Mester, ön szerint mi a legnagyobb változás?' },
+      { who: 'Sofőr', zh: '{地铁|dì·tiě}！{以前|yǐ·qián}{只|zhǐ}{有|yǒu}{一|yì}{条|tiáo}{线|xiàn}，{后来|hòu·lái}{逐渐|zhú jiàn}{增加|zēng jiā}{到|dào}{二十|èr shí}{多|duō}{条|tiáo}。{很|hěn}{多|duō}{人|rén}{不|bú}{再|zài}{开|kāi}{车|chē}，{从而|cóng ér}{路|lù}{上|shang}{也|yě}{没|méi}{那么|nà·me}{堵|dǔ}{了|le}。', hu: 'A metró! Régen csak egy vonal volt, aztán fokozatosan húsznál is több lett. Sokan már nem autóval járnak, így az utakon sincs akkora dugó.' },
+      { who: 'Anna', zh: '{现在|xiàn·zài}{共享|gòng xiǎng}{单车|dān chē}{也|yě}{很|hěn}{方便|fāng·biàn}。', hu: 'Most a közösségi bicikli is nagyon kényelmes.' },
+      { who: 'Sofőr', zh: '{对|duì}。{还|hái}{有|yǒu}，{现在|xiàn·zài}{出租车|chū·zū·chē}{里|li}{一律|yí lǜ}{不|bù}{准|zhǔn}{抽|chōu}{烟|yān}，{我|wǒ}{干脆|gān cuì}{把|bǎ}{烟|yān}{戒|jiè}{了|le}。', hu: 'Úgy van. És most a taxikban kivétel nélkül tilos a dohányzás, úgyhogy inkább leszoktam.' },
+      { who: 'Anna', zh: '{那|nà}{对|duì}{身体|shēn·tǐ}{是|shì}{好|hǎo}{事|shì}{啊|a}！', hu: 'Az aztán jót tesz az egészségnek!' },
+      { who: 'Sofőr', zh: '{是|shì}{啊|a}。{城市|chéng·shì}{变|biàn}{了|le}{这么|zhè·me}{多|duō}，{可|kě}{我|wǒ}{始终|shǐ zhōng}{觉得|jué·de}，{上海|Shàng·hǎi}{人|rén}{的|de}{热情|rè qíng}{没|méi}{变|biàn}。', hu: 'Bizony. A város rengeteget változott, de én mindvégig úgy érzem, a sanghajiak szívélyessége nem változott.' }
+    ],
+    notes: [
+      'A {师傅|shīfu} „mester": így szólítják tisztelettel a sofőröket, szakmunkásokat, szakácsokat.',
+      'A {共享单车|gòngxiǎng dānchē} „közösségi bicikli": telefonos alkalmazással bárhol felvehető és letehető.',
+      'A {干脆|gāncuì} „inkább egyszerűen, minden teketória nélkül": {我干脆把烟戒了|wǒ gāncuì bǎ yān jiè le} „hát leszoktam".'
+    ]
+  },
+  points: [
+    {
+      title: '{逐渐|zhújiàn}', sub: 'fokozatosan, lépésről lépésre',
+      pattern: 'A + {逐渐|zhú jiàn} + ige (+ {了|le})',
+      body: 'A {逐渐|zhújiàn} egyenletes, <b>lépésenkénti</b> változást ír le, írott stílusban: {后来逐渐增加到二十多条|hòulái zhújiàn zēngjiā dào èrshí duō tiáo} „aztán fokozatosan húsznál is több lett". Gyakran áll {增加|zēngjiā} „nő", {减少|jiǎnshǎo} „csökken", {提高|tígāo} „emelkedik" előtt. A HSK 4-ben tanult {渐渐|jiànjiàn} közelebbi, természetesebb hangulatú, és melléknév elé is kerülhet ({天渐渐黑了|tiān jiànjiàn hēi le}).',
+      tables: [
+        { caption: 'Lassanként',
+          head: ['', 'Jelleg', 'Példa'],
+          rows: [
+            ['{渐渐|jiàn·jiàn}', 'természetes, észrevétlen', '{天|tiān}{渐渐|jiàn·jiàn}{黑|hēi}{了|le}'],
+            ['{逐渐|zhú jiàn}', 'lépésről lépésre, írott', '{逐渐|zhú jiàn}{增加|zēng jiā}']
+          ] }
+      ],
+      examples: [
+        { zh: '{地铁|dì·tiě}{线|xiàn}{逐渐|zhú jiàn}{增加|zēng jiā}{到|dào}{二十|èr shí}{多|duō}{条|tiáo}。', hu: 'A metróvonalak száma fokozatosan húsznál is többre nőtt.' },
+        { zh: '{来|lái}{上海|Shàng·hǎi}{以后|yǐ·hòu}，{她|tā}{逐渐|zhú jiàn}{适应|shì·yìng}{了|le}{这里|zhè·lǐ}{的|de}{生活|shēng·huó}。', hu: 'Sanghajba érkezése után fokozatosan alkalmazkodott az itteni élethez.' }
+      ]
+    },
+    {
+      title: '{不断|búduàn}', sub: 'szüntelenül, folyamatosan',
+      pattern: 'A + {不断|bú duàn} (+ {地|de}) + ige',
+      body: 'A {不断|búduàn} szó szerint „nem szakad meg": a cselekvés <b>újra és újra, megállás nélkül</b> zajlik: {这个城市一直在不断地变化|zhège chéngshì yìzhí zài búduàn de biànhuà} „ez a város szüntelenül változik", {不断努力|búduàn nǔlì} „folyamatosan igyekszik", {不断提高|búduàn tígāo} „folyamatosan javul".',
+      examples: [
+        { zh: '{这|zhè}{个|ge}{城市|chéng·shì}{一直|yì zhí}{在|zài}{不断|bú duàn}{地|de}{变化|biàn·huà}。', hu: 'Ez a város szüntelenül változik.' },
+        { zh: '{只要|zhǐ yào}{不断|bú duàn}{练习|liàn·xí}，{你|nǐ}{的|de}{汉语|Hàn·yǔ}{一定|yí dìng}{会|huì}{提高|tí gāo}。', hu: 'Ha folyamatosan gyakorolsz, a kínaid biztosan javulni fog.' }
+      ]
+    },
+    {
+      title: '{始终|shǐzhōng}', sub: 'mindvégig, végig ugyanúgy',
+      pattern: 'A + {始终|shǐ zhōng} + ige / ({没|méi} / {不|bù}) + ige',
+      body: 'A {始终|shǐzhōng} szó szerint „kezdettől végig": egy egész időszakon át <b>változatlanul</b> így volt: {我始终觉得，上海人的热情没变|wǒ shǐzhōng juéde, Shànghǎi rén de rèqíng méi biàn} „mindvégig úgy éreztem…", {他始终没有放弃|tā shǐzhōng méiyǒu fàngqì} „egyszer sem adta fel". A {一直|yìzhí} „folyamatosan" a jövőre is vonatkozhat ({一直往前走|yìzhí wǎng qián zǒu}), a {始终|shǐzhōng} nem.',
+      examples: [
+        { zh: '{城市|chéng·shì}{变|biàn}{了|le}{很|hěn}{多|duō}，{可|kě}{我|wǒ}{始终|shǐ zhōng}{觉得|jué·de}{人|rén}{没|méi}{变|biàn}。', hu: 'A város sokat változott, de én mindvégig úgy érzem, az emberek nem változtak.' },
+        { zh: '{遇到|yù·dào}{了|le}{很|hěn}{多|duō}{困难|kùn·nan}，{他|tā}{始终|shǐ zhōng}{没有|méi·yǒu}{放弃|fàng qì}。', hu: 'Sok nehézségbe ütközött, de egyszer sem adta fel.' }
+      ],
+      mistakes: [
+        { bad: '{你|nǐ}{始终|shǐ zhōng}{往|wǎng}{前|qián}{走|zǒu}，{就|jiù}{到|dào}{了|le}。', good: '{你|nǐ}{一直|yì zhí}{往|wǎng}{前|qián}{走|zǒu}，{就|jiù}{到|dào}{了|le}。', why: 'Útbaigazításnál, a jövőre {一直|yìzhí} áll; a {始终|shǐzhōng} egy lezajlott időszakra vonatkozik.' }
+      ]
+    },
+    {
+      title: '{一律|yílǜ}', sub: 'kivétel nélkül (szabályban)',
+      pattern: '(szabály) + {一律|yí lǜ} + ige / állítmány',
+      body: 'Az {一律|yílǜ} hivatalos, szabályszerű „kivétel nélkül, egytől egyig": {出租车里一律不准抽烟|chūzūchē li yílǜ bù zhǔn chōu yān} „a taxikban kivétel nélkül tilos dohányozni", {全部商品一律八折|quánbù shāngpǐn yílǜ bā zhé} „minden árura egységesen 20% kedvezmény". Táblákon, közleményekben gyakori.',
+      examples: [
+        { zh: '{出租车|chū·zū·chē}{里|li}{一律|yí lǜ}{不|bù}{准|zhǔn}{抽|chōu}{烟|yān}。', hu: 'A taxikban kivétel nélkül tilos dohányozni.' },
+        { zh: '{这|zhè}{家|jiā}{店|diàn}{的|de}{衣服|yī·fu}{今天|jīn·tiān}{一律|yí lǜ}{打|dǎ}{八|bā}{折|zhé}。', hu: 'Ebben a boltban ma minden ruha egységesen 20%-kal olcsóbb.' }
+      ]
+    },
+    {
+      title: '{从而|cóng\'ér}', sub: 'ezáltal, így (az eredmény)',
+      pattern: 'ok / módszer，{从而|cóng ér} + eredmény',
+      body: 'Az {从而|cóng\'ér} a második tagmondat elején azt az <b>eredményt</b> vezeti be, amelyet az első rész (ok, módszer) előidézett: {很多人不再开车，从而路上也没那么堵了|hěn duō rén bú zài kāi chē, cóng\'ér lù shang yě méi nàme dǔ le} „sokan nem autóznak, így kisebb a dugó". Írott stílusú; a beszédben inkább {所以|suǒyǐ}.',
+      examples: [
+        { zh: '{很|hěn}{多|duō}{人|rén}{改|gǎi}{坐|zuò}{地铁|dì·tiě}，{从而|cóng ér}{减少|jiǎn shǎo}{了|le}{空气|kōng qì}{污染|wū·rǎn}。', hu: 'Sokan átálltak a metróra, ezáltal csökkent a légszennyezés.' },
+        { zh: '{他|tā}{每天|měi tiān}{坚持|jiān·chí}{练习|liàn·xí}，{从而|cóng ér}{很|hěn}{快|kuài}{提高|tí gāo}{了|le}{水平|shuǐ píng}。', hu: 'Minden nap kitartóan gyakorolt, és így gyorsan fejlődött.' }
+      ]
+    }
+  ],
+  phrases: [
+    { zh: '{师傅|shī·fu}，{去|qù}{南京路|Nán·jīng Lù}。', hu: 'Mester, a Nanjing útra legyen szíves.' },
+    { zh: '{前面|qián·miàn}{停|tíng}{一下|yí xià}{就|jiù}{行|xíng}。', hu: 'Elöl megállhat.' },
+    { zh: '{现在|xiàn·zài}{是|shì}{高峰|gāo fēng}{时间|shí·jiān}。', hu: 'Most csúcsforgalom van.' },
+    { zh: '{变化|biàn·huà}{真|zhēn}{大|dà}{啊|a}！', hu: 'Mekkora változás!' }
+  ],
+  words: [
+    { title: 'Szavak',
+      items: [
+        { zh: '{逐渐|zhú jiàn}', pinyin: 'zhújiàn', hu: 'fokozatosan' },
+        { zh: '{不断|bú duàn}', pinyin: 'búduàn', hu: 'szüntelenül' },
+        { zh: '{始终|shǐ zhōng}', pinyin: 'shǐzhōng', hu: 'mindvégig' },
+        { zh: '{一律|yí lǜ}', pinyin: 'yílǜ', hu: 'kivétel nélkül' },
+        { zh: '{从而|cóng ér}', pinyin: 'cóng\'ér', hu: 'ezáltal, így' },
+        { zh: '{增加|zēng jiā}', pinyin: 'zēngjiā', hu: 'növekszik; növel' },
+        { zh: '{减少|jiǎn shǎo}', pinyin: 'jiǎnshǎo', hu: 'csökken; csökkent' },
+        { zh: '{司机|sī jī}', pinyin: 'sījī', hu: 'sofőr' },
+        { zh: '{戒|jiè}', pinyin: 'jiè', hu: 'leszokik (valamiről)' },
+        { zh: '{准|zhǔn}', pinyin: 'zhǔn', hu: 'megenged (bù zhǔn: tilos)' },
+        { zh: '{停车|tíng chē}', pinyin: 'tíng chē', hu: 'parkol, megáll' },
+        { zh: '{线|xiàn}', pinyin: 'xiàn', hu: 'vonal' }
+      ] },
+    { title: 'Ráadás',
+      items: [
+        { zh: '{共享单车|gòng xiǎng dān chē}', pinyin: 'gòngxiǎng dānchē', hu: 'közösségi bicikli' },
+        { zh: '{师傅|shī·fu}', pinyin: 'shīfu', hu: 'mester (megszólítás)' },
+        { zh: '{市中心|shì zhōng xīn}', pinyin: 'shìzhōngxīn', hu: 'belváros' },
+        { zh: '{高峰|gāo fēng}', pinyin: 'gāofēng', hu: 'csúcs (forgalomban)' }
+      ] }
+  ],
+  culture: [
+    { title: 'A metró városa', text: 'Sanghajban az 1990-es évek elején nyílt meg az első metróvonal; azóta a hálózat a világ egyik leghosszabbja lett. Reggel és este csúcsidőben ({高峰|gāofēng}) a kocsik zsúfoltak, de a metró gyors, olcsó és pontos.' },
+    { title: 'Mester, hova vigyem?', text: 'A {师傅|shīfu} „mester" szóval a szakmájukat gyakorló embereket szólítják meg: taxisofőrt, szerelőt, szakácsot. Udvarias és barátságos — sokkal természetesebb, mint a „sofőr úr".' }
+  ],
+  reading: {
+    title: '{城市|chéng·shì}{的|de}{变化|biàn·huà}', titleHu: 'A város változásai',
+    text: [
+      { zh: '{王|Wáng}{师傅|shī·fu}{在|zài}{上海|Shàng·hǎi}{开|kāi}{了|le}{三十|sān shí}{年|nián}{出租车|chū·zū·chē}，{亲|qīn}{眼|yǎn}{看|kàn}{到|dào}{了|le}{城市|chéng·shì}{的|de}{不断|bú duàn}{发展|fā·zhǎn}。', hu: 'Wang mester harminc éve taxizik Sanghajban, és saját szemével látta a város szüntelen fejlődését.' },
+      { zh: '{随着|suí·zhe}{地铁|dì·tiě}{逐渐|zhú jiàn}{发展|fā·zhǎn}，{坐|zuò}{出租车|chū·zū·chē}{的|de}{人|rén}{比|bǐ}{以前|yǐ·qián}{少|shǎo}{了|le}。', hu: 'Ahogy a metró fokozatosan fejlődött, kevesebben taxiznak, mint korábban.' },
+      { zh: '{可是|kě·shì}{他|tā}{始终|shǐ zhōng}{没有|méi·yǒu}{换|huàn}{工作|gōng·zuò}，{因为|yīn·wèi}{他|tā}{喜欢|xǐ·huan}{跟|gēn}{乘客|chéng kè}{聊天儿|liáo tiānr}。', hu: 'Ő mégsem váltott soha munkát, mert szeret az utasokkal beszélgetni.', par: true },
+      { zh: '{几|jǐ}{年|nián}{前|qián}，{出租车|chū·zū·chē}{里|li}{开始|kāi·shǐ}{一律|yí lǜ}{不|bù}{准|zhǔn}{抽|chōu}{烟|yān}，{他|tā}{就|jiù}{把|bǎ}{烟|yān}{戒|jiè}{了|le}，{从而|cóng ér}{身体|shēn·tǐ}{也|yě}{好|hǎo}{了|le}{很|hěn}{多|duō}。', hu: 'Néhány éve a taxikban kivétel nélkül megtiltották a dohányzást; ő leszokott, és így az egészsége is sokat javult.' },
+      { zh: '{王|Wáng}{师傅|shī·fu}{说|shuō}：“{城市|chéng·shì}{在|zài}{变|biàn}，{我|wǒ}{也|yě}{在|zài}{变|biàn}，{可|kě}{我|wǒ}{对|duì}{这|zhè}{个|ge}{城市|chéng·shì}{的|de}{爱|ài}{没|méi}{变|biàn}。”', hu: 'Wang mester azt mondja: „A város változik, én is változom, de a szeretetem e város iránt nem változott."', par: true }
+    ],
+    words: [ { zh: '{乘客|chéng kè}', hu: 'utas' } ],
+    questions: [
+      { q: 'Mióta taxizik Wang mester?', a: 'harminc éve', wrong: ['tíz éve', 'két éve', 'ötven éve'], why: '{开了三十年出租车|kāi le sānshí nián chūzūchē}.' },
+      { q: 'Miért taxiznak kevesebben, mint régen?', a: 'fejlődött a metró', wrong: ['drágább lett a taxi', 'kevesebb a turista', 'betiltották a taxikat'], why: '{随着地铁逐渐发展|suízhe dìtiě zhújiàn fāzhǎn}.' },
+      { q: 'Miért nem váltott munkát?', a: 'szeret az utasokkal beszélgetni', wrong: ['nem talált mást', 'jól keres', 'a családja kérte'], why: '{他喜欢跟乘客聊天儿|tā xǐhuan gēn chéngkè liáo tiānr}.' },
+      { q: 'Mi lett a dohányzási tilalom eredménye?', a: 'leszokott, és javult az egészsége', wrong: ['kevesebb utasa lett', 'más városba költözött', 'abbahagyta a taxizást'], why: '{从而身体也好了很多|cóng\'ér shēntǐ yě hǎo le hěn duō}.' }
+    ]
+  },
+  quiz: [
+    { q: '„A metróvonalak száma fokozatosan nőtt." (írott)', a: '{地铁|dì·tiě}{线|xiàn}{逐渐|zhú jiàn}{增加|zēng jiā}{了|le}。', wrong: ['{地铁|dì·tiě}{线|xiàn}{增加|zēng jiā}{逐渐|zhú jiàn}{了|le}。', '{逐渐|zhú jiàn}{地铁|dì·tiě}{了|le}{增加|zēng jiā}{线|xiàn}。', '{地铁|dì·tiě}{逐渐|zhú jiàn}{线|xiàn}{了|le}{增加|zēng jiā}。'], why: 'A + {逐渐|zhújiàn} + ige.', point: 1 },
+    { q: 'Melyik illik? {天|tiān}___{黑|hēi}{了|le}。 („Lassan besötétedett.")', a: '{渐渐|jiàn·jiàn}', wrong: ['{一律|yí lǜ}', '{从而|cóng ér}', '{始终|shǐ zhōng}'], why: 'Melléknév előtt, természetes változás: {渐渐|jiànjiàn}.', point: 1 },
+    { q: '„Ez a város szüntelenül változik."', a: '{这|zhè}{个|ge}{城市|chéng·shì}{在|zài}{不断|bú duàn}{地|de}{变化|biàn·huà}。', wrong: ['{这|zhè}{个|ge}{城市|chéng·shì}{在|zài}{变化|biàn·huà}{不断|bú duàn}{地|de}。', '{不断|bú duàn}{这|zhè}{个|ge}{城市|chéng·shì}{地|de}{在|zài}{变化|biàn·huà}。', '{这|zhè}{个|ge}{城市|chéng·shì}{变化|biàn·huà}{地|de}{在|zài}{不断|bú duàn}。'], why: '{不断|búduàn} ({地|de}) + ige.', point: 2 },
+    { q: 'Mit jelent: {不断提高|búduàn tígāo}?', a: 'folyamatosan javul', wrong: ['hirtelen javul', 'nem javul', 'egyszer javult'], why: '{不断|búduàn} „szüntelenül".', point: 2 },
+    { q: '„Sok nehézség volt, de egyszer sem adta fel."', a: '{困难|kùn·nan}{很|hěn}{多|duō}，{他|tā}{始终|shǐ zhōng}{没有|méi·yǒu}{放弃|fàng qì}。', wrong: ['{困难|kùn·nan}{很|hěn}{多|duō}，{他|tā}{没有|méi·yǒu}{始终|shǐ zhōng}{放弃|fàng qì}。', '{始终|shǐ zhōng}{困难|kùn·nan}{很|hěn}{多|duō}，{他|tā}{放弃|fàng qì}{没有|méi·yǒu}。', '{困难|kùn·nan}{很|hěn}{多|duō}，{他|tā}{放弃|fàng qì}{始终|shǐ zhōng}{了|le}。'], why: '{始终|shǐzhōng} + {没有|méiyǒu} + ige.', point: 3 },
+    { q: 'Melyik illik? {你|nǐ}___{往|wǎng}{前|qián}{走|zǒu}，{就|jiù}{到|dào}{了|le}。', a: '{一直|yì zhí}', wrong: ['{始终|shǐ zhōng}', '{一律|yí lǜ}', '{逐渐|zhú jiàn}'], why: 'Útbaigazítás, jövő: {一直|yìzhí}.', point: 3 },
+    { q: '„A taxikban kivétel nélkül tilos dohányozni."', a: '{出租车|chū·zū·chē}{里|li}{一律|yí lǜ}{不|bù}{准|zhǔn}{抽|chōu}{烟|yān}。', wrong: ['{出租车|chū·zū·chē}{里|li}{不|bù}{准|zhǔn}{一律|yí lǜ}{抽|chōu}{烟|yān}。', '{一律|yí lǜ}{出租车|chū·zū·chē}{里|li}{抽|chōu}{烟|yān}{不|bù}{准|zhǔn}。', '{出租车|chū·zū·chē}{里|li}{抽|chōu}{烟|yān}{一律|yí lǜ}{准|zhǔn}{不|bù}。'], why: '{一律|yílǜ} + {不准|bù zhǔn} + ige.', point: 4 },
+    { q: 'Hol gyakori az {一律|yílǜ}?', a: 'szabályokban, közleményekben', wrong: ['szerelmes levelekben', 'gyerekmesékben', 'kérdő mondatokban'], why: '„Kivétel nélkül" — hivatalos stílus.', point: 4 },
+    { q: '„Sokan metróra váltottak, ezáltal csökkent a szennyezés."', a: '{很|hěn}{多|duō}{人|rén}{改|gǎi}{坐|zuò}{地铁|dì·tiě}，{从而|cóng ér}{减少|jiǎn shǎo}{了|le}{污染|wū·rǎn}。', wrong: ['{从而|cóng ér}{很|hěn}{多|duō}{人|rén}{改|gǎi}{坐|zuò}{地铁|dì·tiě}，{减少|jiǎn shǎo}{了|le}{污染|wū·rǎn}。', '{很|hěn}{多|duō}{人|rén}{从而|cóng ér}{改|gǎi}{坐|zuò}{地铁|dì·tiě}，{污染|wū·rǎn}{减少|jiǎn shǎo}{从而|cóng ér}。', '{很|hěn}{多|duō}{人|rén}{改|gǎi}{坐|zuò}{地铁|dì·tiě}，{减少|jiǎn shǎo}{从而|cóng ér}{了|le}{污染|wū·rǎn}。'], why: 'ok, {从而|cóng\'ér} + eredmény.', point: 5 },
+    { q: 'Mit vezet be az {从而|cóng\'ér}?', a: 'az eredményt', wrong: ['az okot', 'a feltételt', 'az ellentétet'], why: '„Ezáltal, így".', point: 5 },
+    { q: 'Mit jelent a {增加|zēngjiā}?', a: 'növekszik', wrong: ['csökken', 'megszűnik', 'változatlan'], why: 'Ellentéte: {减少|jiǎnshǎo}.' },
+    { q: 'Mit jelent: {他把烟戒了|tā bǎ yān jiè le}。', a: 'Leszokott a dohányzásról.', wrong: ['Rágyújtott egy cigarettára.', 'Vett egy doboz cigarettát.', 'Füstös lett a kocsi.'], why: '{戒|jiè} „leszokik".' },
+    { q: 'Mit jelent: {师傅|shīfu}?', a: 'mester', wrong: ['tanítvány', 'főnök', 'szomszéd'], why: 'Sofőrök, szakmunkások megszólítása.' },
+    { q: 'Mit jelent: {现在是高峰时间|xiànzài shì gāofēng shíjiān}。', a: 'Most csúcsforgalom van.', wrong: ['Most éjszaka van.', 'Most ünnepnap van.', 'Most zárva vagyunk.'], why: '{高峰|gāofēng} „csúcs".' },
+    { q: 'Mit jelent a {司机|sījī}?', a: 'sofőr', wrong: ['utas', 'rendőr', 'kalauz'], why: 'Taxi vagy busz vezetője.' },
+    { q: 'Mit jelent: {不准停车|bù zhǔn tíng chē}。', a: 'Tilos parkolni.', wrong: ['Itt lehet parkolni.', 'Lassíts!', 'Kötelező megállni.'], why: '{不准|bù zhǔn} „tilos".' }
+  ]
+},
+
+/* ════════════════════════════════════════════════════
+   HSK 5 · 6. LECKE — 一向 · 向来, 照样, 至今, 从此, 万一
+   ════════════════════════════════════════════════════ */
+{
+  id: 'l76', no: 76, badge: '6', kicker: 'HSK 5 · 6. lecke', label: 'HSK 5 · 6. lecke',
+  title: 'Nagymama nyolcvanéves — ha esetleg esne…',
+  lead: 'Születésnapra készülsz: elmondod, mi volt mindig is így (一向 · 向来), mi folytatódik változatlanul (照样), mi tart a mai napig (至今), mitől kezdve változott meg valami (从此), és mi lesz, ha esetleg rosszul alakul (万一).',
+  cando: [
+    'Régóta fennálló szokásról, állapotról beszélsz: 一向 · 向来….',
+    'Kifejezed, hogy valami a változás ellenére ugyanúgy folytatódik: 照样….',
+    'Elmondod, mi tart a mai napig (至今), és mitől kezdve lett más valami (从此).',
+    'Számolsz egy kellemetlen eshetőséggel: 万一…，就….'
+  ],
+  intro: [
+    'Zhou Jie nagymamája — akit Anna a Holdünnepen ismert meg — nyolcvanéves lesz. A család nagy születésnapi ünnepséget rendez, és Anna is meghívást kap.',
+    'Ebben a leckében az idő és az állandóság határozószóit tanulod: mi volt mindig, mi tart ma is, mi mióta van így.'
+  ],
+  dialogue: {
+    title: 'Nyolcvanadik születésnap',
+    scene: 'Csütörtök délután az iroda konyhájában. Zhou Jie és Anna.',
+    lines: [
+      { who: 'Zhou Jie', zh: '{下|xià}{周|zhōu}{六|liù}{是|shì}{我|wǒ}{奶奶|nǎi·nai}{八十|bā shí}{大|dà}{寿|shòu}，{你|nǐ}{一定|yí dìng}{要|yào}{来|lái}！', hu: 'Jövő szombaton lesz a nagymamám nyolcvanadik születésnapja, mindenképp gyere el!' },
+      { who: 'Anna', zh: '{当然|dāng·rán}！{奶奶|nǎi·nai}{身体|shēn·tǐ}{还|hái}{那么|nà·me}{好|hǎo}{吗|ma}？', hu: 'Persze! Még mindig olyan jó egészségben van a nagymamád?' },
+      { who: 'Zhou Jie', zh: '{她|tā}{身体|shēn·tǐ}{一向|yí xiàng}{很|hěn}{好|hǎo}，{现在|xiàn·zài}{照样|zhào yàng}{每天|měi tiān}{早上|zǎo·shang}{去|qù}{公园|gōng·yuán}{打|dǎ}{太极拳|tài·jí·quán}。', hu: 'Mindig is jó egészségnek örvendett, most is ugyanúgy minden reggel elmegy a parkba tajcsizni.' },
+      { who: 'Anna', zh: '{真|zhēn}{了不起|liǎo·bu·qǐ}！{她|tā}{年轻|nián·qīng}{的|de}{时候|shí·hou}{做|zuò}{什么|shén·me}{工作|gōng·zuò}？', hu: 'Ez igazán nagyszerű! Mivel foglalkozott fiatalon?' },
+      { who: 'Zhou Jie', zh: '{她|tā}{当|dāng}{了|le}{四十|sì shí}{年|nián}{老师|lǎo·shī}，{至今|zhì jīn}{还|hái}{有|yǒu}{学生|xué·sheng}{来|lái}{看|kàn}{她|tā}。{退休|tuì xiū}{那|nà}{年|nián}{她|tā}{开始|kāi·shǐ}{学|xué}{画|huà}{画儿|huàr}，{从此|cóng cǐ}{每天|měi tiān}{都|dōu}{画|huà}。', hu: 'Negyven évig tanított, a mai napig látogatják a régi diákjai. Abban az évben, amikor nyugdíjba ment, elkezdett festeni tanulni, és azóta minden nap fest.' },
+      { who: 'Anna', zh: '{那|nà}{我|wǒ}{送|sòng}{她|tā}{一|yí}{套|tào}{画笔|huà bǐ}{吧|ba}。{生日会|shēng·rì huì}{在|zài}{哪儿|nǎr}{办|bàn}？', hu: 'Akkor egy ecsetkészletet adok neki ajándékba. Hol lesz az ünnepség?' },
+      { who: 'Zhou Jie', zh: '{在|zài}{饭店|fàn diàn}{的|de}{院子|yuàn·zi}{里|li}。{不过|bú·guò}{万一|wàn yī}{下|xià}{雨|yǔ}，{就|jiù}{改|gǎi}{到|dào}{里面|lǐ·miàn}。', hu: 'Egy étterem udvarán. De ha esetleg esne, bevonulunk.' }
+    ],
+    notes: [
+      'A {大寿|dàshòu} az idősek kerek születésnapja (60, 70, 80…); az ünnepelt neve ilyenkor {寿星|shòuxing}.',
+      'Az {一套画笔|yí tào huàbǐ} „egy ecsetkészlet": a {套|tào} készletek, garnitúrák mérőszava.',
+      'Az {办|bàn} itt „rendez, megtart": {生日会在哪儿办|shēngrì huì zài nǎr bàn} „hol lesz az ünnepség?".'
+    ]
+  },
+  points: [
+    {
+      title: '{一向|yíxiàng} · {向来|xiànglái}', sub: 'mindig is (régóta így van)',
+      pattern: 'A + {一向|yí xiàng} / {向来|xiàng lái} + állítmány',
+      body: 'Azt mondja, hogy valami <b>régóta, mindig is</b> így van — szokás, tulajdonság, állapot: {她身体一向很好|tā shēntǐ yíxiàng hěn hǎo} „mindig is jó egészségnek örvendett", {他向来不喝酒|tā xiànglái bù hē jiǔ} „sosem ivott". A {向来|xiànglái} kissé írottabb, és gyakran tagadással áll. Egyszeri eseményre nem használjuk.',
+      examples: [
+        { zh: '{我|wǒ}{奶奶|nǎi·nai}{身体|shēn·tǐ}{一向|yí xiàng}{很|hěn}{好|hǎo}。', hu: 'A nagymamám mindig is jó egészségnek örvendett.' },
+        { zh: '{他|tā}{向来|xiàng lái}{不|bù}{喜欢|xǐ·huan}{热闹|rè·nao}{的|de}{地方|dì·fang}。', hu: 'Sosem szerette a zajos, nyüzsgő helyeket.' }
+      ]
+    },
+    {
+      title: '{照样|zhàoyàng}', sub: 'ugyanúgy, továbbra is (a változás ellenére)',
+      pattern: '(megváltozott körülmény)，A + {照样|zhào yàng} + ige',
+      body: 'A {照样|zhàoyàng} szó szerint „a régi minta szerint": valami a körülmények változása ellenére <b>ugyanúgy folytatódik</b>: {她现在照样每天早上打太极拳|tā xiànzài zhàoyàng měitiān zǎoshang dǎ tàijíquán} „most is ugyanúgy minden reggel tajcsizik", {下雨了，他照样去跑步|xià yǔ le, tā zhàoyàng qù pǎobù} „esik, de ő ugyanúgy elmegy futni".',
+      examples: [
+        { zh: '{八十|bā shí}{岁|suì}{了|le}，{她|tā}{照样|zhào yàng}{每天|měi tiān}{去|qù}{公园|gōng·yuán}{打|dǎ}{太极拳|tài·jí·quán}。', hu: 'Nyolcvanéves, de ugyanúgy minden nap elmegy a parkba tajcsizni.' },
+        { zh: '{下|xià}{雨|yǔ}{了|le}，{他|tā}{照样|zhào yàng}{去|qù}{跑|pǎo}{步|bù}。', hu: 'Esik, de ő ugyanúgy elmegy futni.' }
+      ]
+    },
+    {
+      title: '{至今|zhìjīn}', sub: 'a mai napig',
+      pattern: 'A + {至今|zhì jīn} + ({还|hái} / {仍然|réng·rán}) + ige',
+      body: 'A {至今|zhìjīn} „mostanáig, a mai napig" azt jelzi, hogy egy régen kezdődött állapot <b>ma is tart</b>: {至今还有学生来看她|zhìjīn hái yǒu xuésheng lái kàn tā} „a mai napig látogatják a diákjai", {这件事我至今还记得|zhè jiàn shì wǒ zhìjīn hái jìde} „erre a mai napig emlékszem". Mellette gyakran {还|hái} vagy {仍然|réngrán}.',
+      examples: [
+        { zh: '{她|tā}{当|dāng}{了|le}{四十|sì shí}{年|nián}{老师|lǎo·shī}，{至今|zhì jīn}{还|hái}{有|yǒu}{学生|xué·sheng}{来|lái}{看|kàn}{她|tā}。', hu: 'Negyven évig tanított, a mai napig látogatják a diákjai.' },
+        { zh: '{第一|dì yī}{次|cì}{来|lái}{中国|Zhōng·guó}{的|de}{那|nà}{天|tiān}，{我|wǒ}{至今|zhì jīn}{还|hái}{记得|jì·de}。', hu: 'Arra a napra, amikor először jöttem Kínába, a mai napig emlékszem.' }
+      ]
+    },
+    {
+      title: '{从此|cóngcǐ}', sub: 'attól kezdve, azóta',
+      pattern: 'esemény，{从此|cóng cǐ} + (új) állapot',
+      body: 'A {从此|cóngcǐ} egy fordulópontra mutat vissza, <b>amelytől kezdve</b> valami másképp van: {退休那年她开始学画画儿，从此每天都画|tuìxiū nà nián tā kāishǐ xué huà huàr, cóngcǐ měitiān dōu huà} „…azóta minden nap fest", {他们从此成了好朋友|tāmen cóngcǐ chéng le hǎo péngyou} „attól kezdve jó barátok lettek". Elbeszélésben gyakori.',
+      examples: [
+        { zh: '{退休|tuì xiū}{以后|yǐ·hòu}{她|tā}{开始|kāi·shǐ}{学|xué}{画|huà}{画儿|huàr}，{从此|cóng cǐ}{每天|měi tiān}{都|dōu}{画|huà}。', hu: 'Nyugdíjba vonulása után elkezdett festeni, és azóta minden nap fest.' },
+        { zh: '{那|nà}{次|cì}{旅行|lǚ·xíng}{以后|yǐ·hòu}，{他们|tā·men}{从此|cóng cǐ}{成|chéng}{了|le}{好|hǎo}{朋友|péng·you}。', hu: 'Attól az utazástól kezdve jó barátok lettek.' }
+      ]
+    },
+    {
+      title: '{万一|wànyī}', sub: 'ha esetleg (rossz eset)',
+      pattern: '{万一|wàn yī} + kellemetlen eshetőség，({就|jiù}) + teendő · {以防万一|yǐ fáng wàn yī}',
+      body: 'A {万一|wànyī} szó szerint „tízezerből egy": egy <b>nem valószínű, de kellemetlen</b> eshetőség: {万一下雨，就改到里面|wànyī xià yǔ, jiù gǎi dào lǐmiàn} „ha esetleg esne, bevonulunk". Kérdésben aggodalom: {万一迟到了怎么办|wànyī chídào le zěnme bàn} „és ha elkésünk?". Főnévként: {以防万一|yǐ fáng wànyī} „biztos, ami biztos".',
+      examples: [
+        { zh: '{万一|wàn yī}{下|xià}{雨|yǔ}，{生日会|shēng·rì huì}{就|jiù}{改|gǎi}{到|dào}{里面|lǐ·miàn}。', hu: 'Ha esetleg esne, az ünnepséget bent tartjuk.' },
+        { zh: '{带|dài}{把|bǎ}{伞|sǎn}{吧|ba}，{以|yǐ}{防|fáng}{万一|wàn yī}。', hu: 'Vigyél esernyőt, biztos, ami biztos.' }
+      ],
+      mistakes: [
+        { bad: '{万一|wàn yī}{明天|míng·tiān}{天气|tiān·qì}{好|hǎo}，{我们|wǒ·men}{就|jiù}{去|qù}{爬|pá}{山|shān}。', good: '{如果|rú·guǒ}{明天|míng·tiān}{天气|tiān·qì}{好|hǎo}，{我们|wǒ·men}{就|jiù}{去|qù}{爬|pá}{山|shān}。', why: 'A {万一|wànyī} kellemetlen eshetőségre vonatkozik; kívánatos feltételre {如果|rúguǒ} kell.' }
+      ]
+    }
+  ],
+  phrases: [
+    { zh: '{祝|zhù}{您|nín}{福|fú}{如|rú}{东|dōng}{海|hǎi}，{寿|shòu}{比|bǐ}{南|nán}{山|shān}！', hu: 'Boldogságot, hosszú életet kívánok!' },
+    { zh: '{生日|shēng·rì}{快乐|kuài·lè}！', hu: 'Boldog születésnapot!' },
+    { zh: '{您|nín}{一点儿|yì diǎnr}{也|yě}{不|bú}{像|xiàng}{八十|bā shí}{岁|suì}！', hu: 'Egyáltalán nem néz ki nyolcvannak!' },
+    { zh: '{以|yǐ}{防|fáng}{万一|wàn yī}。', hu: 'Biztos, ami biztos.' }
+  ],
+  words: [
+    { title: 'Szavak',
+      items: [
+        { zh: '{一向|yí xiàng}', pinyin: 'yíxiàng', hu: 'mindig is' },
+        { zh: '{向来|xiàng lái}', pinyin: 'xiànglái', hu: 'mindig is (írott)' },
+        { zh: '{照样|zhào yàng}', pinyin: 'zhàoyàng', hu: 'ugyanúgy, továbbra is' },
+        { zh: '{至今|zhì jīn}', pinyin: 'zhìjīn', hu: 'a mai napig' },
+        { zh: '{从此|cóng cǐ}', pinyin: 'cóngcǐ', hu: 'attól kezdve, azóta' },
+        { zh: '{万一|wàn yī}', pinyin: 'wànyī', hu: 'ha esetleg' },
+        { zh: '{大寿|dà shòu}', pinyin: 'dàshòu', hu: 'kerek születésnap (idősé)' },
+        { zh: '{退休|tuì xiū}', pinyin: 'tuìxiū', hu: 'nyugdíjba megy' },
+        { zh: '{太极拳|tài·jí·quán}', pinyin: 'tàijíquán', hu: 'tajcsi' },
+        { zh: '{画笔|huà bǐ}', pinyin: 'huàbǐ', hu: 'ecset' },
+        { zh: '{记得|jì·de}', pinyin: 'jìde', hu: 'emlékszik' },
+        { zh: '{孙子|sūn·zi}', pinyin: 'sūnzi', hu: 'unoka (fiú)' }
+      ] },
+    { title: 'Ráadás',
+      items: [
+        { zh: '{长寿面|cháng shòu miàn}', pinyin: 'chángshòumiàn', hu: 'hosszú élet tésztája' },
+        { zh: '{祝寿|zhù shòu}', pinyin: 'zhù shòu', hu: 'születésnapot köszönt (idősnek)' },
+        { zh: '{寿星|shòu·xing}', pinyin: 'shòuxing', hu: 'az ünnepelt' },
+        { zh: '{寿桃|shòu táo}', pinyin: 'shòutáo', hu: 'barack alakú süti' }
+      ] }
+  ],
+  culture: [
+    { title: 'Hosszú élet tésztája', text: 'Születésnapon, főleg az idősek kerek születésnapján, {长寿面|chángshòumiàn} „hosszú élet tésztája" kerül az asztalra: a tésztaszálat nem szabad elvágni, mert a hosszú életet jelképezi. Mellé barack alakú gőzölt süteményt ({寿桃|shòutáo}) is szolgálnak fel.' },
+    { title: 'Nagyszülők a családban', text: 'Kínában a nagyszülők gyakran részt vesznek az unokák nevelésében, sokszor egy háztartásban élnek a fiatalokkal. Az idősek tisztelete ({尊老|zūn lǎo}) mélyen gyökerező érték: az ünnepeken az unokák köszöntik elsőként a nagyszülőket.' }
+  ],
+  reading: {
+    title: '{奶奶|nǎi·nai}{的|de}{八十|bā shí}{大|dà}{寿|shòu}', titleHu: 'Nagymama nyolcvanadik születésnapja',
+    text: [
+      { zh: '{周杰|Zhōu Jié}{的|de}{奶奶|nǎi·nai}{一向|yí xiàng}{喜欢|xǐ·huan}{热闹|rè·nao}，{所以|suǒ·yǐ}{全|quán}{家|jiā}{人|rén}{给|gěi}{她|tā}{办|bàn}{了|le}{一|yí}{个|ge}{大|dà}{生日会|shēng·rì huì}。', hu: 'Zhou Jie nagymamája mindig is szerette a vidám nyüzsgést, ezért a család nagy születésnapi ünnepséget rendezett neki.' },
+      { zh: '{那|nà}{天|tiān}{来|lái}{了|le}{五十|wǔ shí}{多|duō}{个|ge}{客人|kè·rén}，{其中|qí zhōng}{有|yǒu}{十|shí}{几|jǐ}{个|ge}{是|shì}{她|tā}{以前|yǐ·qián}{的|de}{学生|xué·sheng}。', hu: 'Aznap több mint ötven vendég jött el, közülük több mint tíz a régi tanítványa volt.' },
+      { zh: '{一|yí}{个|ge}{学生|xué·sheng}{说|shuō}，{奶奶|nǎi·nai}{当年|dāng nián}{的|de}{一|yí}{句|jù}{话|huà}{他|tā}{至今|zhì jīn}{还|hái}{记得|jì·de}，{从此|cóng cǐ}{他|tā}{爱|ài}{上|shang}{了|le}{读|dú}{书|shū}。', hu: 'Az egyik diák elmondta, hogy a nagymama egyik akkori mondatára a mai napig emlékszik — attól kezdve szerette meg az olvasást.', par: true },
+      { zh: '{奶奶|nǎi·nai}{听|tīng}{了|le}{很|hěn}{感动|gǎn·dòng}。{虽然|suī·rán}{八十|bā shí}{岁|suì}{了|le}，{她|tā}{照样|zhào yàng}{和|hé}{大家|dà·jiā}{一起|yì·qǐ}{唱|chàng}{歌|gē}{跳|tiào}{舞|wǔ}。', hu: 'A nagymamát ez nagyon meghatotta. Bár nyolcvanéves, ugyanúgy együtt énekelt és táncolt mindenkivel.' },
+      { zh: '{那|nà}{天|tiān}{天气|tiān·qì}{很|hěn}{好|hǎo}，{大家|dà·jiā}{准备|zhǔn·bèi}{的|de}{伞|sǎn}{一|yì}{把|bǎ}{也|yě}{没|méi}{用|yòng}{上|shang}。', hu: 'Aznap szép idő volt, a „biztos, ami biztos" esernyőkre egyáltalán nem volt szükség.', par: true }
+    ],
+    words: [ { zh: '{当年|dāng nián}', hu: 'abban az időben, akkoriban' } ],
+    questions: [
+      { q: 'Miért rendeztek nagy ünnepséget?', a: 'a nagymama mindig szerette a nyüzsgést', wrong: ['a nagymama kérte', 'a cég fizette', 'Anna javasolta'], why: '{奶奶一向喜欢热闹|nǎinai yíxiàng xǐhuan rènao}.' },
+      { q: 'Hány régi diák jött el?', a: 'több mint tíz', wrong: ['egy sem', 'pontosan öt', 'mind az ötven vendég'], why: '{其中有十几个是她以前的学生|qízhōng yǒu shí jǐ ge shì tā yǐqián de xuésheng}.' },
+      { q: 'Mit mesélt az egyik diák?', a: 'a nagymama egy mondata miatt szerette meg az olvasást', wrong: ['a nagymama sokszor megszidta', 'ő is tanár lett', 'elveszített egy könyvet'], why: '{从此他爱上了读书|cóngcǐ tā ài shang le dú shū}.' },
+      { q: 'Kellett esernyő?', a: 'nem, szép idő volt', wrong: ['igen, egész nap esett', 'csak este', 'csak a nagymamának'], why: '{伞一把也没用上|sǎn yì bǎ yě méi yòng shang}.' }
+    ]
+  },
+  quiz: [
+    { q: '„A nagymamám mindig is jó egészségnek örvendett."', a: '{我|wǒ}{奶奶|nǎi·nai}{身体|shēn·tǐ}{一向|yí xiàng}{很|hěn}{好|hǎo}。', wrong: ['{我|wǒ}{奶奶|nǎi·nai}{身体|shēn·tǐ}{很|hěn}{好|hǎo}{一向|yí xiàng}。', '{一向|yí xiàng}{我|wǒ}{奶奶|nǎi·nai}{很|hěn}{身体|shēn·tǐ}{好|hǎo}。', '{我|wǒ}{奶奶|nǎi·nai}{一向|yí xiàng}{身体|shēn·tǐ}{好|hǎo}{很|hěn}。'], why: 'A + {一向|yíxiàng} + állítmány.', point: 1 },
+    { q: 'Mire NEM használjuk az {一向|yíxiàng}-t?', a: 'egyszeri eseményre', wrong: ['régi szokásra', 'tartós tulajdonságra', 'állandó állapotra'], why: '„Mindig is" — tartós dolgokra.', point: 1 },
+    { q: '„Esik, de ő ugyanúgy elmegy futni."', a: '{下|xià}{雨|yǔ}{了|le}，{他|tā}{照样|zhào yàng}{去|qù}{跑|pǎo}{步|bù}。', wrong: ['{下|xià}{雨|yǔ}{了|le}，{他|tā}{去|qù}{跑|pǎo}{步|bù}{照样|zhào yàng}。', '{照样|zhào yàng}{下|xià}{雨|yǔ}{了|le}，{他|tā}{不|bú}{去|qù}{跑|pǎo}{步|bù}。', '{下|xià}{雨|yǔ}{照样|zhào yàng}{了|le}，{跑|pǎo}{步|bù}{他|tā}{去|qù}。'], why: '(változás), A + {照样|zhàoyàng} + ige.', point: 2 },
+    { q: 'Mit fejez ki a {照样|zhàoyàng}?', a: 'változatlan folytatást', wrong: ['hirtelen változást', 'egy feltételt', 'egy tiltást'], why: '„A régi minta szerint".', point: 2 },
+    { q: '„Erre a mai napig emlékszem."', a: '{这|zhè}{件|jiàn}{事|shì}{我|wǒ}{至今|zhì jīn}{还|hái}{记得|jì·de}。', wrong: ['{这|zhè}{件|jiàn}{事|shì}{我|wǒ}{还|hái}{记得|jì·de}{至今|zhì jīn}。', '{至今|zhì jīn}{这|zhè}{件|jiàn}{事|shì}{记得|jì·de}{还|hái}{我|wǒ}。', '{这|zhè}{件|jiàn}{事|shì}{从此|cóng cǐ}{我|wǒ}{还|hái}{记得|jì·de}。'], why: 'A + {至今|zhìjīn} + {还|hái} + ige.', point: 3 },
+    { q: 'Mit jelent: {至今还有学生来看她|zhìjīn hái yǒu xuésheng lái kàn tā}。', a: 'A mai napig látogatják a diákjai.', wrong: ['Ma látogatták meg először a diákjai.', 'A diákjai már nem látogatják.', 'Holnap jönnek a diákjai.'], why: '{至今|zhìjīn} „a mai napig".', point: 3 },
+    { q: '„Attól kezdve jó barátok lettek."', a: '{他们|tā·men}{从此|cóng cǐ}{成|chéng}{了|le}{好|hǎo}{朋友|péng·you}。', wrong: ['{他们|tā·men}{成|chéng}{了|le}{从此|cóng cǐ}{好|hǎo}{朋友|péng·you}。', '{从此|cóng cǐ}{好|hǎo}{朋友|péng·you}{他们|tā·men}{了|le}{成|chéng}。', '{他们|tā·men}{好|hǎo}{朋友|péng·you}{从此|cóng cǐ}{成|chéng}{了|le}。'], why: '{从此|cóngcǐ} + új állapot.', point: 4 },
+    { q: 'Mire mutat vissza a {从此|cóngcǐ}?', a: 'egy fordulópontra', wrong: ['a jövő egy napjára', 'egy helyre', 'egy személyre'], why: '„Attól kezdve".', point: 4 },
+    { q: '„Ha esetleg esne, bent tartjuk az ünnepséget."', a: '{万一|wàn yī}{下|xià}{雨|yǔ}，{生日会|shēng·rì huì}{就|jiù}{在|zài}{里面|lǐ·miàn}{办|bàn}。', wrong: ['{万一|wàn yī}{下|xià}{雨|yǔ}，{生日会|shēng·rì huì}{就|jiù}{在|zài}{外面|wài·miàn}{办|bàn}{吧|ba}，{太|tài}{好|hǎo}{了|le}。', '{下|xià}{雨|yǔ}{万一|wàn yī}{就|jiù}，{生日会|shēng·rì huì}{在|zài}{里面|lǐ·miàn}{办|bàn}。', '{生日会|shēng·rì huì}{万一|wàn yī}{就|jiù}{下|xià}{雨|yǔ}{在|zài}{里面|lǐ·miàn}{办|bàn}。'], why: '{万一|wànyī} + eshetőség, {就|jiù} + teendő.', point: 5 },
+    { q: 'Melyik mondat helyes?', a: '{如果|rú·guǒ}{明天|míng·tiān}{天气|tiān·qì}{好|hǎo}，{我们|wǒ·men}{就|jiù}{去|qù}{爬|pá}{山|shān}。', wrong: ['{万一|wàn yī}{明天|míng·tiān}{天气|tiān·qì}{好|hǎo}，{我们|wǒ·men}{就|jiù}{去|qù}{爬|pá}{山|shān}。', '{万一|wàn yī}{明天|míng·tiān}{天气|tiān·qì}{好|hǎo}{极|jí}{了|le}，{太|tài}{棒|bàng}{了|le}。', '{明天|míng·tiān}{万一|wàn yī}{好|hǎo}{天气|tiān·qì}，{爬|pá}{山|shān}{就|jiù}{去|qù}。'], why: 'Kívánatos feltétel: {如果|rúguǒ}; a {万一|wànyī} rossz eshetőségre.', point: 5 },
+    { q: 'Mit jelent: {以防万一|yǐ fáng wànyī}。', a: 'Biztos, ami biztos.', wrong: ['Ezerből egy.', 'Soha többé.', 'Mindenki egyért.'], why: 'Óvatossági fordulat.' },
+    { q: 'Mit jelent a {退休|tuìxiū}?', a: 'nyugdíjba megy', wrong: ['felmond', 'előléptetik', 'szabadságra megy'], why: '{退休那年|tuìxiū nà nián} „a nyugdíjba vonulás évében".' },
+    { q: 'Mit jelent a {大寿|dàshòu}?', a: 'kerek születésnap', wrong: ['esküvő', 'temetés', 'diplomaosztó'], why: '{八十大寿|bāshí dàshòu} „nyolcvanadik születésnap".' },
+    { q: 'Mit jelent: {您一点儿也不像八十岁|nín yìdiǎnr yě bú xiàng bāshí suì}！', a: 'Egyáltalán nem néz ki nyolcvannak!', wrong: ['Ön nem nyolcvanéves.', 'Ön nyolcvanévesnek látszik.', 'Nem tudom, hány éves.'], why: 'Udvarias bók.' },
+    { q: 'Mit jelent a {记得|jìde}?', a: 'emlékszik', wrong: ['elfelejt', 'feljegyez', 'megtanul'], why: '{我至今还记得|wǒ zhìjīn hái jìde}.' },
+    { q: 'Mit jelent: {长寿面|chángshòumiàn}?', a: 'hosszú élet tésztája', wrong: ['születésnapi torta', 'rizsgombóc', 'holdsütemény'], why: 'A szálat nem szabad elvágni.' }
+  ]
 }
 
 ];
