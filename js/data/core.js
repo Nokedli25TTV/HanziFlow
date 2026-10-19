@@ -1,7 +1,7 @@
 /* ====================================================
    HANZIFLOW — core.js: a tanulási út
    ----------------------------------------------------
-   Az út a HSK 1 szint témáit és nyelvtani sorrendjét követi
+   Az út a HSK 1–4 szint témáit és nyelvtani sorrendjét követi
    (saját leckékkel, saját magyarázattal és példamondatokkal).
    Előtte egy előkészítő fejezet: a pinyin és a négy tónus.
 
@@ -632,6 +632,21 @@ const HANZIFLOW_PATH = [
   { id: 'exam-hsk3', glyph: '考', title: 'Próbavizsga: HSK 3',
     desc: 'A HSK 3 vizsga mintájára: hallás, olvasás és írás, időre, a végén pontszámmal.',
     module: 'exam', href: 'pages/exam.html', optional: true, preset: { set: { level: 'hsk3' } } },
+  { id: 'test-h4a', glyph: '测', title: 'Dolgozat: HSK 4, 1–5. lecke',
+    desc: 'Témazáró jegyre. Új város és munka, lakásbérlés, értekezlet, vacsora, orvosnál.',
+    module: 'tests', href: 'pages/tests.html?test=h4a', optional: true, preset: { set: { level: 4 } } },
+  { id: 'test-h4b', glyph: '测', title: 'Dolgozat: HSK 4, 6–10. lecke',
+    desc: 'Témazáró jegyre. Kirándulás, netes rendelés, időbeosztás, vita, régi barát.',
+    module: 'tests', href: 'pages/tests.html?test=h4b', optional: true, preset: { set: { level: 4 } } },
+  { id: 'test-h4c', glyph: '测', title: 'Dolgozat: HSK 4, 11–15. lecke',
+    desc: 'Témazáró jegyre. Szelektív gyűjtés, állásinterjú, Holdünnep, maraton, mobilfizetés.',
+    module: 'tests', href: 'pages/tests.html?test=h4c', optional: true, preset: { set: { level: 4 } } },
+  { id: 'test-h4d', glyph: '测', title: 'Dolgozat: HSK 4, 16–20. lecke',
+    desc: 'Témazáró jegyre. Szülők látogatása, esküvő, előléptetés, vita egy cikkről, egy év mérlege.',
+    module: 'tests', href: 'pages/tests.html?test=h4d', optional: true, preset: { set: { level: 4 } } },
+  { id: 'test-h4z', glyph: '测', title: 'Szintzáró: HSK 4',
+    desc: 'Nagyobb dolgozat a HSK 4 összes leckéjéből: szavak, mondatok, nyelvtan, olvasmány.',
+    module: 'tests', href: 'pages/tests.html?test=h4z', optional: true, preset: { set: { level: 4 } } },
 
   // ── Gyakorló modulok a leckék fejezeteiben: nem kötelező lépések ──
   { id: 'py-dictate', glyph: '拼', title: 'Diktálás: írd le, amit hallasz',
@@ -694,6 +709,9 @@ const HANZIFLOW_PATH = [
   { id: 'py-write-h3', glyph: '拼', title: 'Pinyin-beírás: HSK 3',
     desc: 'A HSK 3 szavai: írd be a pinyint tónussal.',
     module: 'pinyin', href: 'pages/pinyin.html', optional: true, preset: { set: { mode: 'write', level: 'hsk3', tones: true } } },
+  { id: 'py-write-h4', glyph: '拼', title: 'Pinyin-beírás: HSK 4',
+    desc: 'A HSK 4 szavai: írd be a pinyint tónussal.',
+    module: 'pinyin', href: 'pages/pinyin.html', optional: true, preset: { set: { mode: 'write', level: 'hsk4', tones: true } } },
 
   // ── HSK 4 · 1. lecke ──
   { id: 'l51-lesson', glyph: '新', title: 'Magyarázat: 不仅…而且, 既…又, 尤其, 挺…的, 之一',
@@ -1055,6 +1073,8 @@ const HANZIFLOW_PATH_UNITS = [
     steps: ['l54-lesson', 'l54-listen', 'l54-read'] },
   { id: 'u-l55', kicker: 'HSK 4 · 5. lecke', title: 'Megfáztam', sub: '恐怕, 千万 (别), 必须 · 不必, 不得不, 否则',
     steps: ['l55-lesson', 'l55-listen', 'l55-read'] },
+  { id: 'u-t-h4a', kicker: 'HSK 4 · Dolgozat', title: '1. témazáró', sub: 'Az 1–5. lecke anyaga, jegyre — nem kötelező',
+    steps: ['test-h4a'] },
   { id: 'u-l56', kicker: 'HSK 4 · 6. lecke', title: 'Kirándulás a vízi városba', sub: '既然…就, 于是, 竟然, 结果, 当…的时候',
     steps: ['l56-lesson', 'l56-listen', 'l56-read'] },
   { id: 'u-l57', kicker: 'HSK 4 · 7. lecke', title: 'Rendelés a neten', sub: '由于…因此, 是否, 往往 · 常常, 偶尔, 什么的 · 等',
@@ -1065,6 +1085,8 @@ const HANZIFLOW_PATH_UNITS = [
     steps: ['l59-lesson', 'l59-listen', 'l59-read'] },
   { id: 'u-l60', kicker: 'HSK 4 · 10. lecke', title: 'Régi barát érkezik', sub: '随着, 渐渐, 仍然, 从来不 · 从来没…过, 曾经',
     steps: ['l60-lesson', 'l60-listen', 'l60-read'] },
+  { id: 'u-t-h4b', kicker: 'HSK 4 · Dolgozat', title: '2. témazáró', sub: 'A 6–10. lecke anyaga, jegyre — nem kötelező',
+    steps: ['test-h4b'] },
   { id: 'u-l61', kicker: 'HSK 4 · 11. lecke', title: 'Szelektív gyűjtés', sub: '对于, 使, 对…有好处 · 坏处, 在…方面, 值得',
     steps: ['l61-lesson', 'l61-listen', 'l61-read'] },
   { id: 'u-l62', kicker: 'HSK 4 · 12. lecke', title: 'Állásinterjú', sub: '即使…也, 不是…就是, 甚至, 的确 · 确实, 再…也',
@@ -1075,6 +1097,8 @@ const HANZIFLOW_PATH_UNITS = [
     steps: ['l64-lesson', 'l64-listen', 'l64-read'] },
   { id: 'u-l65', kicker: 'HSK 4 · 15. lecke', title: 'Mobilfizetés', sub: '看来 · 看样子, 估计, 大约 · 左右, 以上 · 以下 · 以内, 差不多',
     steps: ['l65-lesson', 'l65-listen', 'l65-read'] },
+  { id: 'u-t-h4c', kicker: 'HSK 4 · Dolgozat', title: '3. témazáró', sub: 'A 11–15. lecke anyaga, jegyre — nem kötelező',
+    steps: ['test-h4c'] },
   { id: 'u-l66', kicker: 'HSK 4 · 16. lecke', title: 'A szülők látogatása', sub: '有的…有的, 各, 整个 · 全部, 一切, 我来 + ige',
     steps: ['l66-lesson', 'l66-listen', 'l66-read'] },
   { id: 'u-l67', kicker: 'HSK 4 · 17. lecke', title: 'Esküvő', sub: '让人 + érzelem, 好不容易, 幸亏, 可惜, 正好',
@@ -1084,5 +1108,9 @@ const HANZIFLOW_PATH_UNITS = [
   { id: 'u-l69', kicker: 'HSK 4 · 19. lecke', title: 'Vita egy cikkről', sub: '比如 · 例如 · 拿…来说, 再说, 与, 之间, 真正',
     steps: ['l69-lesson', 'l69-listen', 'l69-read'] },
   { id: 'u-l70', kicker: 'HSK 4 · 20. lecke', title: 'Egy év Sanghajban', sub: '为…感到, 无论如何, 一下子, 不光…还, 总的来说',
-    steps: ['l70-lesson', 'l70-listen', 'l70-read'] }
+    steps: ['l70-lesson', 'l70-listen', 'l70-read'] },
+  { id: 'u-t-h4d', kicker: 'HSK 4 · Dolgozat', title: '4. témazáró', sub: 'A 16–20. lecke anyaga, jegyre — nem kötelező',
+    steps: ['test-h4d'] },
+  { id: 'u-z-h4', kicker: 'HSK 4 · Szintzáró', title: 'A HSK 4 vége', sub: 'Szintzáró dolgozat és pinyin-beírás — nem kötelező',
+    steps: ['test-h4z', 'py-write-h4'] }
 ];

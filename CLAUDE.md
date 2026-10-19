@@ -1,12 +1,12 @@
 # HanziFlow — Claude projekt-kontextus
 
 > Rövid, aktuális leírás: mi a projekt, hol mi van, milyen szabályok szerint dolgozunk.
-> Utoljára rendbe téve: 2026-10-18.
+> Utoljára rendbe téve: 2026-10-19.
 
 ## 1. Mi a projekt
 
 **HanziFlow** — magyar nyelvű kínai (mandarin) nyelvtanuló webapp kezdőknek. A kezdőlapon vezetett
-**tanulási út** áll (előkészítő fejezet: pinyin és tónusok, utána a HSK 1–3 szint témái leckénként),
+**tanulási út** áll (előkészítő fejezet: pinyin és tónusok, utána a HSK 1–4 szint témái leckénként),
 mellette **gyakorló modulok**, **időzített ismétlés** és **statisztika**.
 
 - **Alap:** a NihonCore (japán testvér-app) váza — kör-keret, lobbi, tanulási út, lecke-oldal, ismétlés-ütemező,
@@ -16,7 +16,7 @@ mellette **gyakorló modulok**, **időzített ismétlés** és **statisztika**.
 - **Fiók:** ugyanaz a Firebase-projekt, mint a NihonCore-é (egy belépés mindkettőhöz). A HanziFlow a
   `users/{uid}/apps/hanziflow` dokumentumba ír — a Firestore-szabályokban ezt a helyet engedélyezni kell.
 - **A user nyelve magyar: válaszolj magyarul**, a felület magyar.
-- **Írás:** egyszerűsített (简体). **Cél:** HSK 1–3 kész (51 lecke); a következő lehet a HSK 4 vagy a modulok.
+- **Írás:** egyszerűsített (简体). **Cél:** HSK 1–4 kész (71 lecke, l0–l70); a következő lehet a HSK 4 próbavizsga, a modulok HSK 4-es anyaga vagy a HSK 5.
 
 ## 2. Munkaszabályok (user-döntések)
 
@@ -39,14 +39,14 @@ mellette **gyakorló modulok**, **időzített ismétlés** és **statisztika**.
 
 ```
 index.html            kezdőlap: szintválasztó / „Folytatás", napi cél, ismétlés, a tanulási út térképe
-pages/lesson.html     lecke (?id=l0…l50 · l1–l15 HSK 1, l16–l30 HSK 2, l31–l50 HSK 3 · &round=listen | read · ?review=1 = napi ismétlés)
+pages/lesson.html     lecke (?id=l0…l70 · l1–l15 HSK 1, l16–l30 HSK 2, l31–l50 HSK 3, l51–l70 HSK 4 · &round=listen | read · ?review=1 = napi ismétlés)
 pages/tones.html      Tónus-tréner (hallás után · jelölés · szópárok)
 pages/pinyin.html     Pinyin-tábla (a tábla a négy tónussal · beírás és diktálás élő ellenőrzéssel)
 pages/measure.html    Mérőszavak (tábla csoportonként · párosítás · mondatban · számolás)
 pages/sentence.html   Mondat-Mester (szórend-szabályok szintenként · sorba rakás · szócskák)
 pages/numbers.html    Dátum, idő, pénz (tudnivalók + „Próbáld ki" · olvasás · kimondás · hallás után)
 pages/exam.html       HSK 1–3 próbavizsga (hallás · olvasás · HSK 3-ban írás; időre, a végén pontszám és átnézés)
-pages/tests.html      Dolgozatok: 10 témazáró (öt-öt lecke) + 3 szintzáró, jegy 1–5, átnézés
+pages/tests.html      Dolgozatok: 14 témazáró (öt-öt lecke) + 4 szintzáró (HSK 1–4), jegy 1–5, átnézés
 pages/modules.html    a modulok kártyái („Szabad gyakorlás")
 pages/stats.html      statisztika · login.html · register.html
 css/style.css         a teljes stíluslap (tokenek → váz → kezdőlap → kör-keret → statisztika → lecke → tónusok)
@@ -98,6 +98,10 @@ Színt csak tokenből; 12 px alatt nincs szöveg; érintési célpont ≥ 44 px;
 - [x] HSK 1: előkészítő + mind a 15 lecke (párbeszéd, 5 nyelvtani pont, olvasmány, 16–19 kérdés leckénként).
 - [x] HSK 2: mind a 15 lecke (l16–l30; kicker és jelvény a HSK 2-n belüli sorszámot mutatja, a kereszthivatkozások „HSK 2 N. lecke" alakúak).
 - [x] HSK 3: mind a 20 lecke (l31–l50; kicker és jelvény „HSK 3 · N. lecke", kereszthivatkozás „HSK 3 N. lecke").
+- [x] HSK 4: mind a 20 lecke (l51–l70; Anna Sanghajban dolgozik, kollégák: Zhou Jie, Chen igazgató, Xiao Li; barátok: Wang Li,
+  Lin Jing, Wang Ming). Kicker „HSK 4 · N. lecke". A dolgozatoknál h4a–h4d + h4z, a pinyin-táblán `hsk4` szint, az úton
+  témazáró-fejezetek és szintzáró (próbavizsga még nincs). A szavak `hu` mezőjében ne legyen `{汉字|pinyin}` jelölés
+  (a lecke szólistája, a pinyin-tábla és a dolgozat nyers szövegként írja ki) — írásjegy helyett pinyin.
 - [x] Pinyin-tábla modul (pages/pinyin.html): a szavak a leckék szólistáiból, a hangpélda az írásjegy leggyakoribb olvasata.
 - [x] Mérőszavak modul (pages/measure.html): a rossz válaszok közé nem kerül olyan mérőszó, amely az adott főnévvel
   szintén helyes lehet (a főnév saját listája, a közös főnevek, a `free` / `any` jelű mérőszavak — lásd a measure.js fejét).
@@ -118,6 +122,7 @@ Színt csak tokenből; 12 px alatt nincs szöveg; érintési célpont ≥ 44 px;
   fejezeteiben, előre beállított körrel (`preset.set`); a lépést csak a beállított mód teljesíti (onSession).
   A lecke-oldal „Gyakorlás" listája ezeket is mutatja.
 - Élő oldal: https://nokedli25ttv.github.io/HanziFlow/ (GitHub Pages, main ág, 2026-10-18 óta).
+- [ ] HSK 4 próbavizsga (exam.js feladatbank és a `hsk4` szint az exam oldalon); a Mérőszavak és a Mondat-Mester HSK 4-es anyaga.
 - [ ] A NihonCore `sw.js`-ében a cache-törlést a saját előtagra kell szűkíteni (különben a HanziFlow offline-tárát is törli).
 - [ ] Firestore-szabály a `users/{uid}/apps/{app}` helyre (a user Firebase-konzolján).
 - [ ] A kínai mondatokat és a pinyint anyanyelvi lektor nem látta; a hangot valódi telefonon kell kipróbálni.

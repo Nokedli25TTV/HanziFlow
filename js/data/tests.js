@@ -38,7 +38,18 @@ const HANZIFLOW_TESTS = [
   { id: 'h3d', level: 3, title: '4. témazáró', lessons: [46, 47, 48, 49, 50],
     topics: 'Az első munkahét, szempontok és viszonyok, gombócsütés, hírek és meglepetések, búcsú két év után.' },
   { id: 'h3z', level: 3, title: 'Szintzáró: HSK 3', lessons: [31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50], final: true,
-    topics: 'A HSK 3 mind a húsz leckéje egy nagyobb dolgozatban.' }
+    topics: 'A HSK 3 mind a húsz leckéje egy nagyobb dolgozatban.' },
+
+  { id: 'h4a', level: 4, title: '1. témazáró', lessons: [51, 52, 53, 54, 55],
+    topics: 'Új város és munka, lakásbérlés, értekezlet, vacsora a kollégákkal, orvosnál.' },
+  { id: 'h4b', level: 4, title: '2. témazáró', lessons: [56, 57, 58, 59, 60],
+    topics: 'Kirándulás, rendelés a neten, időbeosztás, vita a lakótárssal, régi barát.' },
+  { id: 'h4c', level: 4, title: '3. témazáró', lessons: [61, 62, 63, 64, 65],
+    topics: 'Szelektív gyűjtés, állásinterjú, Holdünnep, maraton, mobilfizetés.' },
+  { id: 'h4d', level: 4, title: '4. témazáró', lessons: [66, 67, 68, 69, 70],
+    topics: 'A szülők látogatása, esküvő, előléptetés, vita egy cikkről, egy év Sanghajban.' },
+  { id: 'h4z', level: 4, title: 'Szintzáró: HSK 4', lessons: [51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70], final: true,
+    topics: 'A HSK 4 mind a húsz leckéje egy nagyobb dolgozatban.' }
 ];
 
 const HANZIFLOW_TEST_PARTS = [

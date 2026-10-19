@@ -2789,7 +2789,7 @@ function initStatsPage() {
   const MODE_LABELS = {
     hear: 'Hallás után', see: 'Jelölés', pairs: 'Szópárok', match: 'Párosító',
     write: 'Beírás', dictate: 'Diktálás', pick: 'Párosítás', sentence: 'Mondatban', count: 'Számolás',
-    build: 'Sorba rakás', fill: 'Szócskák', say: 'Kimondás', hsk1: 'HSK 1', hsk2: 'HSK 2', hsk3: 'HSK 3',
+    build: 'Sorba rakás', fill: 'Szócskák', say: 'Kimondás', hsk1: 'HSK 1', hsk2: 'HSK 2', hsk3: 'HSK 3', hsk4: 'HSK 4',
     check: 'Ellenőrzés', listen: 'Hallás utáni kör', read: 'Olvasás', review: 'Ismétlés', retry: 'Hibák újra', quick: 'Gyors kérdések',
   };
   // Az Áttekintés műszerfal: benne az aktivitás (heatmap, sorozat) és a „mit gyakorolj" is.
@@ -4314,6 +4314,7 @@ function initPinyinPage() {
     { id: 'hsk1', name: 'HSK 1', sub: 'előkészítő + 1–15. lecke', from: 0, to: 15 },
     { id: 'hsk2', name: 'HSK 2', sub: '16–30. lecke', from: 16, to: 30 },
     { id: 'hsk3', name: 'HSK 3', sub: '31–50. lecke', from: 31, to: 50 },
+    { id: 'hsk4', name: 'HSK 4', sub: '51–70. lecke', from: 51, to: 70 },
     { id: 'all',  name: 'Mind',  sub: 'minden lecke szavai', from: 0, to: 9999 }
   ];
   const saved = loadJson(SETTINGS_KEY) || {};
@@ -7322,9 +7323,9 @@ function initTestsPage() {
   }
   const saved = loadJson(SETTINGS_KEY) || {};
   const settings = {
-    level: [1, 2, 3].indexOf(saved.level) >= 0 ? saved.level : 1,
+    level: [1, 2, 3, 4].indexOf(saved.level) >= 0 ? saved.level : 1,
     timer: saved.timer !== false,
-    pinyin: Object.assign({ 1: true, 2: true, 3: false }, saved.pinyin || {})
+    pinyin: Object.assign({ 1: true, 2: true, 3: false, 4: false }, saved.pinyin || {})
   };
   if (window.HanziFlowPath) HanziFlowPath.apply('tests', settings);
   // a tanulási út lépéséről nyitva: a lépés dolgozata kiemelve, és csak az teljesíti a lépést
@@ -7443,7 +7444,7 @@ function initTestsPage() {
     const el = document.getElementById('tsLobby');
     const p = loadProfile();
     const lv = settings.level;
-    const tabs = [1, 2, 3].map(l => `<button class="py-tab${l === lv ? ' active' : ''}" type="button" data-level="${l}" aria-pressed="${l === lv}">HSK ${l}</button>`).join('');
+    const tabs = [1, 2, 3, 4].map(l => `<button class="py-tab${l === lv ? ' active' : ''}" type="button" data-level="${l}" aria-pressed="${l === lv}">HSK ${l}</button>`).join('');
     const toggle = (key, on, labels) => [true, false].map(v => `
       <button class="cj-mode-btn ${on === v ? 'active' : ''}" data-${key}="${v ? 1 : 0}" type="button"><span class="cj-m-name">${labels[v ? 0 : 1]}</span></button>`).join('');
     const cards = TESTS.filter(t => t.level === lv).map(t => {
