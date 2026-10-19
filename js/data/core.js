@@ -1221,7 +1221,29 @@ const HANZIFLOW_PATH = [
     module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l92&round=listen' },
   { id: 'l92-read', glyph: '读', title: 'Olvasás: Zhou Jie naplója',
     desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
-    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l92&round=read' }
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l92&round=read' },
+
+  // ── HSK 6 · 3. lecke ──
+  { id: 'l93-lesson', glyph: '谈', title: 'Magyarázat: 固然…但, 即便…也, 倘若, 势必, 一味',
+    desc: 'Tárgyalás: kétségtelenül …, de; még ha … is; amennyiben; elkerülhetetlenül; vakon.',
+    module: 'lesson', href: 'pages/lesson.html?id=l93' },
+  { id: 'l93-listen', glyph: '听', title: 'Hallás: az ár és a minőség',
+    desc: 'A lecke mondatai hang után: mit jelent, amit hallasz?',
+    module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l93&round=listen' },
+  { id: 'l93-read', glyph: '读', title: 'Olvasás: Egy sikeres tárgyalás',
+    desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l93&round=read' },
+
+  // ── HSK 6 · 4. lecke ──
+  { id: 'l94-lesson', glyph: '言', title: 'Magyarázat: 与其说…不如说, 换言之, 反之, 何尝, 岂不是',
+    desc: 'Egy félreértett e-mail: nem annyira …, mint inkább; más szóval; fordítva; szónoki kérdések.',
+    module: 'lesson', href: 'pages/lesson.html?id=l94' },
+  { id: 'l94-listen', glyph: '听', title: 'Hallás: „kérem, válaszoljon mielőbb"',
+    desc: 'A lecke mondatai hang után: mit jelent, amit hallasz?',
+    module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l94&round=listen' },
+  { id: 'l94-read', glyph: '读', title: 'Olvasás: Egy e-mail okozta félreértés',
+    desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l94&round=read' }
 ];
 
 const HANZIFLOW_PATH_UNITS = [
@@ -1456,5 +1478,9 @@ const HANZIFLOW_PATH_UNITS = [
   { id: 'u-l91', kicker: 'HSK 6 · 1. lecke', title: 'Az európai iroda', sub: '鉴于, 本着, 凭 · 凭借, 一经…就, 务必',
     steps: ['l91-lesson', 'l91-listen', 'l91-read'] },
   { id: 'u-l92', kicker: 'HSK 6 · 2. lecke', title: 'Zhou Jie Budapesten', sub: '不料, 不由得, 不禁, 从未, 一时',
-    steps: ['l92-lesson', 'l92-listen', 'l92-read'] }
+    steps: ['l92-lesson', 'l92-listen', 'l92-read'] },
+  { id: 'u-l93', kicker: 'HSK 6 · 3. lecke', title: 'Tárgyalás', sub: '固然…但, 即便…也, 倘若, 势必, 一味',
+    steps: ['l93-lesson', 'l93-listen', 'l93-read'] },
+  { id: 'u-l94', kicker: 'HSK 6 · 4. lecke', title: 'Egy félreértett e-mail', sub: '与其说…不如说, 换言之, 反之, 何尝, 岂不是',
+    steps: ['l94-lesson', 'l94-listen', 'l94-read'] }
 ];

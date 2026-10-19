@@ -16686,6 +16686,317 @@ const HANZIFLOW_COURSE = [
     { q: 'Mit jelent a {阴|yīn} az időjárásban?', a: 'borús', wrong: ['napos', 'szeles', 'havas'], why: '{阴天|yīntiān} „borús idő".' },
     { q: 'Hol lehet Budapesten télen a szabadban fürdeni?', a: 'a termálfürdőben', wrong: ['a Dunában', 'a Balatonban', 'egy jeges tóban'], why: '{在室外泡温泉|zài shìwài pào wēnquán}.' }
   ]
+},
+/* ════════════════════════════════════════════════════
+   HSK 6 · 3. LECKE — 固然…但, 即便…也, 倘若, 势必, 一味
+   ════════════════════════════════════════════════════ */
+{
+  id: 'l93', no: 93, badge: '3', kicker: 'HSK 6 · 3. lecke', label: 'HSK 6 · 3. lecke',
+  title: 'Tárgyalás — kétségtelenül jó, de drága',
+  lead: 'Tárgyaláson elismersz egy érvet, majd ellenérvet hozol (固然…但), kitartasz valami mellett (即便…也), feltételt szabsz (倘若), figyelmeztetsz a következményre (势必), és bírálod az egyoldalú megoldást (一味).',
+  cando: [
+    'Elismered a másik fél érvét, aztán a magadét mondod: 固然…，但….',
+    'Írott nyelven mondod: még ha … is: 即便…也….',
+    'Udvariasan feltételt szabsz: 倘若…，就….',
+    'Szükségszerű következményre figyelmeztetsz (势必), és bírálod az egyoldalúságot (一味).'
+  ],
+  intro: [
+    'Egy nagy kínai cég, Zhao úr vállalata, hosszabb szerződést kötne a budapesti irodával — de alacsonyabb árat szeretne. A tárgyaláson Anna és Zhou Jie ül vele szemben.',
+    'A tárgyalás nyelve udvarias, de határozott: elismerjük a másik fél érveit, feltételeket szabunk, és kompromisszumot keresünk. Ebben a leckében ennek az írottabb kötőszavait tanulod.'
+  ],
+  dialogue: {
+    title: 'Az ár és a minőség',
+    scene: 'A budapesti iroda tárgyalójában. Zhao úr, Anna és Zhou Jie.',
+    lines: [
+      { who: 'Zhao úr', zh: '{你们|nǐ·men}{的|de}{产品|chǎn pǐn}{质量|zhì·liàng}{固然|gù rán}{不错|bú cuò}，{但|dàn}{价格|jià gé}{比|bǐ}{别|bié}{家|jiā}{高|gāo}{了|le}{百分之十五|bǎi fēn zhī shí wǔ}。', hu: 'A termékeik minősége kétségtelenül jó, de az áruk tizenöt százalékkal magasabb, mint máshol.' },
+      { who: 'Anna', zh: '{赵|Zhào}{总|zǒng}，{我们|wǒ·men}{的|de}{价格|jià gé}{的确|dí què}{不|bú}{是|shì}{最|zuì}{低|dī}{的|de}。{不过|bú·guò}{即便|jí biàn}{贵|guì}{一点儿|yì diǎnr}，{我们|wǒ·men}{的|de}{售后|shòu hòu}{服务|fú wù}{也|yě}{是|shì}{最|zuì}{好|hǎo}{的|de}。', hu: 'Zhao úr, az áraink valóban nem a legalacsonyabbak. De még ha kicsit drágábbak vagyunk is, a vevőszolgálatunk a legjobb.' },
+      { who: 'Zhao úr', zh: '{倘若|tǎng ruò}{你们|nǐ·men}{能|néng}{降价|jiàng jià}{百分之十|bǎi fēn zhī shí}，{我们|wǒ·men}{就|jiù}{签|qiān}{三|sān}{年|nián}{的|de}{合同|hé·tong}。', hu: 'Amennyiben tíz százalékkal csökkentik az árat, hároméves szerződést kötünk.' },
+      { who: 'Zhou Jie', zh: '{赵|Zhào}{总|zǒng}，{如果|rú·guǒ}{一味|yí wèi}{降价|jiàng jià}，{势必|shì bì}{会|huì}{影响|yǐng xiǎng}{质量|zhì·liàng}，{这|zhè}{对|duì}{双方|shuāng fāng}{都|dōu}{没|méi}{有|yǒu}{好处|hǎo·chu}。', hu: 'Zhao úr, ha csak az árat csökkentjük, az elkerülhetetlenül a minőség rovására megy, és ez egyik félnek sem jó.' },
+      { who: 'Anna', zh: '{这样|zhè yàng}{吧|ba}：{倘若|tǎng ruò}{贵|guì}{公司|gōng·sī}{的|de}{订货量|dìng huò liàng}{超过|chāo guò}{一万|yí wàn}{件|jiàn}，{我们|wǒ·men}{可以|kě·yǐ}{降价|jiàng jià}{百分之五|bǎi fēn zhī wǔ}，{另外|lìng wài}{免费|miǎn fèi}{提供|tí gōng}{培训|péi xùn}。', hu: 'Mit szólna ehhez: amennyiben az Önök rendelése meghaladja a tízezer darabot, öt százalékot engedünk, és ingyenes képzést is biztosítunk.' },
+      { who: 'Zhao úr', zh: '{好|hǎo}{吧|ba}，{这|zhè}{个|ge}{条件|tiáo jiàn}{可以|kě·yǐ}{考虑|kǎo lǜ}。{我|wǒ}{回去|huí qù}{跟|gēn}{董事会|dǒng shì huì}{商量|shāng·liang}{一下|yí xià}。', hu: 'Nos, ez a feltétel megfontolható. Hazamegyek, és egyeztetek az igazgatótanáccsal.' },
+      { who: 'Anna', zh: '{好|hǎo}{的|de}，{我们|wǒ·men}{等|děng}{您|nín}{的|de}{好|hǎo}{消息|xiāo·xi}。', hu: 'Rendben, várjuk a jó hírt.' }
+    ],
+    notes: [
+      'A {贵公司|guì gōngsī} „az Önök (tisztelt) cége" — a {贵|guì} udvarias előtag a másik fél dolgaira: {贵姓|guìxìng}, {贵国|guìguó}.',
+      'A {百分之十五|bǎi fēn zhī shíwǔ} „15%": előbb a nevező ({百分|bǎifēn} „száz rész"), aztán a {之|zhī}, végül a számláló.',
+      'A {售后服务|shòuhòu fúwù} „vevőszolgálat, szerviz" — szó szerint „eladás utáni szolgáltatás".'
+    ]
+  },
+  points: [
+    {
+      title: '{固然|gùrán} … {但|dàn}', sub: 'kétségtelenül …, de …',
+      pattern: 'A + {固然|gù rán} + …，{但|dàn} / {可是|kě·shì} / {却|què} + …',
+      body: 'A {固然|gùrán} <b>elismer egy tényt</b>, hogy aztán a második tagmondat ({但|dàn}, {可是|kěshì}, {却|què}) mást hangsúlyozzon: „igaz ugyan, hogy …, de …". Az alany után áll. Közel áll a {虽然|suīrán}-hoz, de a {固然|gùrán} erősebben elismeri az első részt: „ez kétségtelenül így van".',
+      examples: [
+        { zh: '{这|zhè}{个|ge}{办法|bàn·fǎ}{固然|gù rán}{好|hǎo}，{但|dàn}{成本|chéng běn}{太|tài}{高|gāo}{了|le}。', hu: 'Ez a módszer kétségtelenül jó, de túl sokba kerül.' },
+        { zh: '{钱|qián}{固然|gù rán}{重要|zhòng yào}，{可是|kě·shì}{健康|jiàn kāng}{更|gèng}{重要|zhòng yào}。', hu: 'A pénz persze fontos, de az egészség még fontosabb.' }
+      ],
+      mistakes: [
+        { bad: '{固然|gù rán}{这|zhè}{个|ge}{办法|bàn·fǎ}{好|hǎo}，{但|dàn}{太|tài}{贵|guì}。', good: '{这|zhè}{个|ge}{办法|bàn·fǎ}{固然|gù rán}{好|hǎo}，{但|dàn}{太|tài}{贵|guì}。', why: 'A {固然|gùrán} határozószó: az alany után áll, nem a mondat elején.' }
+      ]
+    },
+    {
+      title: '{即便|jíbiàn} … {也|yě}', sub: 'még ha … is',
+      pattern: '{即便|jí biàn} + feltételezett helyzet，(alany) + {也|yě} + …',
+      body: 'A {即便|jíbiàn} a {即使|jíshǐ} (HSK 4 12. lecke) írottabb párja: <b>„még ha … is"</b> — a második tagmondat feltételezett, kedvezőtlen helyzetben is érvényes. A második tagban {也|yě} áll: {即便价格高一点儿|jíbiàn jiàgé gāo yìdiǎnr}，{也值得买|yě zhíde mǎi}.',
+      examples: [
+        { zh: '{即便|jí biàn}{是|shì}{专家|zhuān jiā}，{也|yě}{会|huì}{有|yǒu}{犯|fàn}{错|cuò}{的|de}{时候|shí·hou}。', hu: 'Még a szakértők is tévednek néha.' },
+        { zh: '{即便|jí biàn}{工作|gōng·zuò}{再|zài}{忙|máng}，{他|tā}{每天|měi tiān}{也|yě}{给|gěi}{家|jiā}{人|rén}{打|dǎ}{电话|diàn·huà}。', hu: 'Akármilyen sok is a munkája, minden nap felhívja a családját.' }
+      ]
+    },
+    {
+      title: '{倘若|tǎngruò}', sub: 'ha, amennyiben',
+      pattern: '{倘若|tǎng ruò} + feltétel，(alany) + {就|jiù} / {便|biàn} + …',
+      body: 'A {倘若|tǎngruò} a {如果|rúguǒ} (HSK 3 12. lecke) írott, választékos párja: <b>„ha, amennyiben"</b>. A második tagban {就|jiù} vagy {便|biàn} áll. Tárgyaláson, hivatalos levélben udvarias, kissé távolságtartó.',
+      examples: [
+        { zh: '{倘若|tǎng ruò}{明天|míng·tiān}{天气|tiān·qì}{好|hǎo}，{我们|wǒ·men}{就|jiù}{去|qù}{郊外|jiāo wài}{走|zǒu}{走|zou}。', hu: 'Ha holnap jó idő lesz, kirándulunk a város szélére.' },
+        { zh: '{倘若|tǎng ruò}{有|yǒu}{任何|rèn hé}{问题|wèn·tí}，{请|qǐng}{随时|suí shí}{与|yǔ}{我们|wǒ·men}{联系|lián·xì}。', hu: 'Amennyiben bármi kérdése van, kérjük, keressen minket bármikor.' }
+      ]
+    },
+    {
+      title: '{势必|shìbì}', sub: 'elkerülhetetlenül, szükségszerűen',
+      pattern: '(ok) + {势必|shì bì} + ({会|huì}) + ige',
+      body: 'A {势必|shìbì} azt mondja, hogy a helyzetből <b>szükségszerűen</b> következik valami: „elkerülhetetlenül". Többnyire {会|huì} vagy egy ige követi: {一味降价势必会影响质量|yíwèi jiàngjià shìbì huì yǐngxiǎng zhìliàng}. Jövőbeli, kikövetkeztetett eredményre használjuk.',
+      examples: [
+        { zh: '{如果|rú·guǒ}{不|bù}{改变|gǎi biàn}{生活|shēng·huó}{习惯|xí·guàn}，{势必|shì bì}{会|huì}{影响|yǐng xiǎng}{健康|jiàn kāng}。', hu: 'Ha nem változtatsz az életmódodon, az elkerülhetetlenül az egészséged rovására megy.' },
+        { zh: '{人口|rén kǒu}{越来越|yuè lái yuè}{多|duō}，{势必|shì bì}{带来|dài lái}{交通|jiāo·tōng}{问题|wèn·tí}。', hu: 'A népesség növekedése szükségszerűen közlekedési gondokkal jár.' }
+      ]
+    },
+    {
+      title: '{一味|yíwèi}', sub: 'vakon, egyoldalúan, csak …',
+      pattern: 'A + {一味|yí wèi} + ({地|de}) + ige',
+      body: 'Az {一味|yíwèi} határozószó, <b>bíráló</b> hangvételű: valaki „vakon, csak egy irányba" csinál valamit, és nem veszi figyelembe a többit. {一味降价|yíwèi jiàngjià} „folyton csak árat csökkent", {一味地追求速度|yíwèi de zhuīqiú sùdù} „csak a gyorsaságot hajszolja". Leginkább tagadásban vagy figyelmeztetésben áll.',
+      examples: [
+        { zh: '{学|xué}{语言|yǔ yán}{不|bù}{能|néng}{一味|yí wèi}{地|de}{背|bèi}{单词|dān cí}，{还|hái}{要|yào}{多|duō}{练|liàn}{口语|kǒu yǔ}。', hu: 'A nyelvtanulás nem állhat csak szómagolásból, sokat kell beszélni is.' },
+        { zh: '{父母|fù mǔ}{不|bù}{应该|yīng·gāi}{一味|yí wèi}{满足|mǎn zú}{孩子|hái·zi}{的|de}{要求|yāo qiú}。', hu: 'A szülőknek nem kellene vakon teljesíteniük a gyerek minden kívánságát.' }
+      ]
+    }
+  ],
+  phrases: [
+    { zh: '{我们|wǒ·men}{再|zài}{商量|shāng·liang}{商量|shāng·liang}。', hu: 'Egyeztessünk még.' },
+    { zh: '{这|zhè}{是|shì}{我们|wǒ·men}{的|de}{底线|dǐ xiàn}。', hu: 'Ennél tovább nem mehetünk.' },
+    { zh: '{这|zhè}{是|shì}{双赢|shuāng yíng}{的|de}{合作|hé zuò}。', hu: 'Ez mindkét félnek előnyös együttműködés.' },
+    { zh: '{一言为定|yì yán wéi dìng}！', hu: 'Áll az alku!' }
+  ],
+  words: [
+    { title: 'Szavak',
+      items: [
+        { zh: '{固然|gù rán}', pinyin: 'gùrán', hu: 'kétségtelenül, igaz ugyan' },
+        { zh: '{即便|jí biàn}', pinyin: 'jíbiàn', hu: 'még ha … is' },
+        { zh: '{倘若|tǎng ruò}', pinyin: 'tǎngruò', hu: 'ha, amennyiben' },
+        { zh: '{势必|shì bì}', pinyin: 'shìbì', hu: 'elkerülhetetlenül' },
+        { zh: '{一味|yí wèi}', pinyin: 'yíwèi', hu: 'vakon, egyoldalúan' },
+        { zh: '{降价|jiàng jià}', pinyin: 'jiàngjià', hu: 'árat csökkent' },
+        { zh: '{售后|shòu hòu}', pinyin: 'shòuhòu', hu: 'eladás utáni (szerviz)' },
+        { zh: '{订货|dìng huò}', pinyin: 'dìnghuò', hu: 'árut rendel' },
+        { zh: '{培训|péi xùn}', pinyin: 'péixùn', hu: 'képzés; kiképez' },
+        { zh: '{董事会|dǒng shì huì}', pinyin: 'dǒngshìhuì', hu: 'igazgatótanács' },
+        { zh: '{双方|shuāng fāng}', pinyin: 'shuāngfāng', hu: 'mindkét fél' },
+        { zh: '{条件|tiáo jiàn}', pinyin: 'tiáojiàn', hu: 'feltétel' }
+      ] },
+    { title: 'Ráadás',
+      items: [
+        { zh: '{双赢|shuāng yíng}', pinyin: 'shuāngyíng', hu: 'mindkét félnek előnyös' },
+        { zh: '{底线|dǐ xiàn}', pinyin: 'dǐxiàn', hu: 'végső határ' },
+        { zh: '{成本|chéng běn}', pinyin: 'chéngběn', hu: 'önköltség' },
+        { zh: '{谈判|tán pàn}', pinyin: 'tánpàn', hu: 'tárgyalás; tárgyal' }
+      ] }
+  ],
+  culture: [
+    { title: 'Tárgyalás kínai módra', text: 'Kínai partnerrel a tárgyalás gyakran a kapcsolat ({关系|guānxi}) építésével kezdődik: vacsorával, beszélgetéssel. A nemet ritkán mondják ki egyenesen — a {我们考虑考虑|wǒmen kǎolǜ kǎolǜ} „majd megfontoljuk" sokszor udvarias elutasítás. A végső döntés rendszerint nem a tárgyalóasztalnál születik, hanem a vezetőség egyeztetése után.' },
+    { title: 'Kompromisszum és „arc"', text: 'Jó kompromisszum az, amelyben egyik fél sem veszíti el az „arcát" ({面子|miànzi}). Ezért gyakori, hogy az árat csak kicsit engedik, viszont mást adnak cserébe — képzést, gyorsabb szállítást —, így mindkét fél elmondhatja: {双赢|shuāngyíng} „mindketten nyertünk".' }
+  ],
+  reading: {
+    title: '{一|yí}{次|cì}{成功|chéng gōng}{的|de}{谈判|tán pàn}', titleHu: 'Egy sikeres tárgyalás',
+    text: [
+      { zh: '{和|hé}{中国|Zhōng·guó}{客户|kè hù}{谈判|tán pàn}，{价格|jià gé}{固然|gù rán}{重要|zhòng yào}，{但|dàn}{关系|guān·xi}{和|hé}{面子|miàn·zi}{同样|tóng yàng}{重要|zhòng yào}。', hu: 'Kínai ügyfelekkel tárgyalva az ár persze fontos, de a kapcsolat és az „arc" ugyanilyen fontos.' },
+      { zh: '{赵|Zhào}{总|zǒng}{一|yì}{开始|kāi shǐ}{要求|yāo qiú}{降价|jiàng jià}{百分之十|bǎi fēn zhī shí}，{安娜|Ān·nà}{知道|zhī·dào}{一味|yí wèi}{让步|ràng bù}{势必|shì bì}{会|huì}{影响|yǐng xiǎng}{公司|gōng·sī}{的|de}{利益|lì yì}。', hu: 'Zhao úr eleinte tíz százalék engedményt kért; Anna tudta, hogy ha folyton enged, az elkerülhetetlenül a cég érdekeit sérti.' },
+      { zh: '{于是|yú shì}{她|tā}{提出|tí chū}：{倘若|tǎng ruò}{订货量|dìng huò liàng}{足够|zú gòu}{大|dà}，{就|jiù}{降价|jiàng jià}{百分之五|bǎi fēn zhī wǔ}，{再|zài}{加|jiā}{上|shàng}{免费|miǎn fèi}{培训|péi xùn}。', hu: 'Ezért azt javasolta: ha a rendelés elég nagy, öt százalékot engednek, és ingyenes képzést is adnak.', par: true },
+      { zh: '{这样|zhè yàng}，{即便|jí biàn}{价格|jià gé}{没|méi}{降|jiàng}{那么|nà·me}{多|duō}，{赵|Zhào}{总|zǒng}{也|yě}{觉得|jué·de}{很|hěn}{有|yǒu}{面子|miàn·zi}。', hu: 'Így Zhao úr, még ha az ár nem is csökkent annyival, úgy érezte, megőrizte az arcát.' },
+      { zh: '{一|yí}{个|ge}{星期|xīng·qī}{后|hòu}，{双方|shuāng fāng}{顺利|shùn lì}{签|qiān}{了|le}{合同|hé·tong}。', hu: 'Egy héttel később a két fél sikeresen aláírta a szerződést.', par: true }
+    ],
+    words: [ { zh: '{让步|ràng bù}', hu: 'enged, engedményt tesz' } ],
+    questions: [
+      { q: 'Mi ugyanolyan fontos Kínában, mint az ár?', a: 'a kapcsolat és az „arc"', wrong: ['a szép csomagolás', 'a gyors szállítás', 'a sok reklám'], why: '{关系和面子同样重要|guānxi hé miànzi tóngyàng zhòngyào}.' },
+      { q: 'Mit kért eleinte Zhao úr?', a: 'tíz százalék engedményt', wrong: ['gyorsabb szállítást', 'jobb minőséget', 'ingyenes mintát'], why: '{要求降价百分之十|yāoqiú jiàngjià bǎi fēn zhī shí}.' },
+      { q: 'Mit ajánlott Anna?', a: 'kisebb engedményt és képzést', wrong: ['nagyobb engedményt', 'ingyen termékeket', 'rövidebb szerződést'], why: '{降价百分之五，再加上免费培训|jiàngjià bǎi fēn zhī wǔ, zài jiāshang miǎnfèi péixùn}.' },
+      { q: 'Hogyan végződött a tárgyalás?', a: 'aláírták a szerződést', wrong: ['megszakadt', 'elhalasztották', 'Zhao úr elutasította'], why: '{双方顺利签了合同|shuāngfāng shùnlì qiān le hétong}.' }
+    ]
+  },
+  quiz: [
+    { q: '„Ez a módszer kétségtelenül jó, de túl drága."', a: '{这|zhè}{个|ge}{办法|bàn·fǎ}{固然|gù rán}{好|hǎo}，{但|dàn}{太|tài}{贵|guì}{了|le}。', wrong: ['{固然|gù rán}{这|zhè}{个|ge}{办法|bàn·fǎ}{好|hǎo}，{但|dàn}{太|tài}{贵|guì}{了|le}。', '{这|zhè}{个|ge}{办法|bàn·fǎ}{好|hǎo}{固然|gù rán}，{太|tài}{贵|guì}{但|dàn}{了|le}。', '{这|zhè}{个|ge}{办法|bàn·fǎ}{固然|gù rán}{好|hǎo}，{所以|suǒ·yǐ}{太|tài}{贵|guì}{了|le}。'], why: 'Alany + {固然|gùrán} + …, {但|dàn} + ….', point: 1 },
+    { q: 'Mit tesz a {固然|gùrán}?', a: 'elismer egy tényt', wrong: ['tagad egy tényt', 'kérdést tesz fel', 'feltételt szab'], why: '„Igaz ugyan, hogy …, de …".', point: 1 },
+    { q: '„Még a szakértők is tévednek néha."', a: '{即便|jí biàn}{是|shì}{专家|zhuān jiā}，{也|yě}{会|huì}{犯|fàn}{错|cuò}。', wrong: ['{即便|jí biàn}{是|shì}{专家|zhuān jiā}，{就|jiù}{会|huì}{犯|fàn}{错|cuò}。', '{是|shì}{专家|zhuān jiā}{即便|jí biàn}，{也|yě}{会|huì}{犯|fàn}{错|cuò}。', '{即便|jí biàn}{是|shì}{专家|zhuān jiā}，{所以|suǒ·yǐ}{会|huì}{犯|fàn}{错|cuò}。'], why: '{即便|jíbiàn} …, {也|yě} ….', point: 2 },
+    { q: 'Melyik szónak az írottabb párja a {即便|jíbiàn}?', a: '{即使|jíshǐ}', wrong: ['{既然|jìrán}', '{于是|yúshì}', '{因此|yīncǐ}'], why: 'Mindkettő „még ha … is".', point: 2 },
+    { q: '„Amennyiben kérdése van, keressen minket."', a: '{倘若|tǎng ruò}{有|yǒu}{问题|wèn·tí}，{请|qǐng}{与|yǔ}{我们|wǒ·men}{联系|lián·xì}。', wrong: ['{有|yǒu}{问题|wèn·tí}{倘若|tǎng ruò}，{请|qǐng}{与|yǔ}{我们|wǒ·men}{联系|lián·xì}。', '{请|qǐng}{倘若|tǎng ruò}{与|yǔ}{我们|wǒ·men}{有|yǒu}{问题|wèn·tí}{联系|lián·xì}。', '{倘若|tǎng ruò}{请|qǐng}{有|yǒu}{问题|wèn·tí}{与|yǔ}{我们|wǒ·men}{联系|lián·xì}。'], why: '{倘若|tǎngruò} + feltétel, + következmény.', point: 3 },
+    { q: 'Melyik szó írott párja a {倘若|tǎngruò}?', a: '{如果|rúguǒ}', wrong: ['{但是|dànshì}', '{所以|suǒyǐ}', '{虽然|suīrán}'], why: '„Ha, amennyiben".', point: 3 },
+    { q: '„Ez elkerülhetetlenül rontja a minőséget."', a: '{这|zhè}{势必|shì bì}{会|huì}{影响|yǐng xiǎng}{质量|zhì·liàng}。', wrong: ['{这|zhè}{会|huì}{影响|yǐng xiǎng}{势必|shì bì}{质量|zhì·liàng}。', '{势必|shì bì}{这|zhè}{质量|zhì·liàng}{影响|yǐng xiǎng}{会|huì}。', '{这|zhè}{会|huì}{势必|shì bì}{质量|zhì·liàng}{影响|yǐng xiǎng}。'], why: '(ok) + {势必|shìbì} + {会|huì} + ige.', point: 4 },
+    { q: 'Mit fejez ki a {势必|shìbì}?', a: 'szükségszerű következményt', wrong: ['udvarias kérést', 'múltbeli emléket', 'bizonytalanságot'], why: '„Elkerülhetetlenül".', point: 4 },
+    { q: '„Nem szabad csak az árat csökkenteni."', a: '{不|bù}{能|néng}{一味|yí wèi}{地|de}{降价|jiàng jià}。', wrong: ['{不|bù}{能|néng}{降价|jiàng jià}{一味|yí wèi}{地|de}。', '{一味|yí wèi}{不|bù}{能|néng}{地|de}{降价|jiàng jià}。', '{不|bù}{一味|yí wèi}{能|néng}{降价|jiàng jià}{地|de}。'], why: '{不能|bù néng} + {一味|yíwèi} + ({地|de}) + ige.', point: 5 },
+    { q: 'Milyen hangvételű az {一味|yíwèi}?', a: 'bíráló', wrong: ['dicsérő', 'semleges', 'tréfás'], why: '„Vakon, egyoldalúan".', point: 5 },
+    { q: 'Mit jelent a {降价|jiàngjià}?', a: 'árat csökkent', wrong: ['árat emel', 'fizet', 'számlát kér'], why: '{降|jiàng} „csökken", {价|jià} „ár".' },
+    { q: 'Mit jelent a {售后服务|shòuhòu fúwù}?', a: 'vevőszolgálat', wrong: ['reklám', 'raktározás', 'könyvelés'], why: '„Eladás utáni szolgáltatás".' },
+    { q: 'Mit jelent: {一言为定|yì yán wéi dìng}！', a: 'Áll az alku!', wrong: ['Hallgass!', 'Majd meglátjuk!', 'Nem értek egyet!'], why: 'Megegyezéskor mondjuk.' },
+    { q: 'Mit jelent a {双方|shuāngfāng}?', a: 'mindkét fél', wrong: ['az egyik fél', 'egy harmadik fél', 'senki'], why: '{双|shuāng} „kettő, pár".' },
+    { q: 'Hogyan mondod udvariasan: „az Önök cége"?', a: '{贵公司|guì gōngsī}', wrong: ['{你公司|nǐ gōngsī}', '{大公司|dà gōngsī}', '{那公司|nà gōngsī}'], why: 'A {贵|guì} udvarias előtag.' },
+    { q: 'Mit jelent: {百分之五|bǎi fēn zhī wǔ}', a: 'öt százalék', wrong: ['ötszáz', 'egyötöd', 'ötven'], why: '„Száz részből öt".' }
+  ]
+},
+
+/* ════════════════════════════════════════════════════
+   HSK 6 · 4. LECKE — 与其说…不如说, 换言之, 反之, 何尝, 岂不是
+   ════════════════════════════════════════════════════ */
+{
+  id: 'l94', no: 94, badge: '4', kicker: 'HSK 6 · 4. lecke', label: 'HSK 6 · 4. lecke',
+  title: 'Egy félreértett e-mail — nem annyira sértődés, mint inkább…',
+  lead: 'Pontosítasz egy jellemzést (与其说…不如说), más szavakkal is elmondod (换言之), a fordítottját is megnézed (反之), és szónoki kérdéssel érvelsz (何尝, 岂不是).',
+  cando: [
+    'Pontosabb jellemzést adsz: 与其说 A，不如说 B.',
+    'Átfogalmazol és megfordítasz: 换言之…, 反之….',
+    'Szónoki kérdéssel állítasz: 何尝不…？',
+    'Kikövetkeztetett, nyilvánvaló eredményre mutatsz rá: 岂不是…？'
+  ],
+  intro: [
+    'Péter egy rövid e-mailt küldött egy kínai ügyfélnek — és napokig nem jött válasz. Zhou Jie és Anna elmagyarázza neki, mi történhetett.',
+    'Ebben a leckében az érvelés írottabb eszközeit tanulod: pontosítást, átfogalmazást, megfordítást és szónoki kérdést.'
+  ],
+  dialogue: {
+    title: '„Kérem, válaszoljon mielőbb"',
+    scene: 'Az irodában, kávészünetben. Péter, Zhou Jie és Anna.',
+    lines: [
+      { who: 'Péter', zh: '{我|wǒ}{只|zhǐ}{是|shì}{写|xiě}{了|le}{一|yí}{句|jù}“{请|qǐng}{尽快|jǐn kuài}{回复|huí fù}”，{对方|duì fāng}{怎么|zěn·me}{就|jiù}{不|bù}{高兴|gāo·xìng}{了|le}？', hu: 'Csak annyit írtam, hogy „kérem, válaszoljon mielőbb" — erre a másik fél megsértődött?' },
+      { who: 'Zhou Jie', zh: '{与其|yǔ qí}{说|shuō}{他们|tā·men}{不|bù}{高兴|gāo·xìng}，{不如|bù rú}{说|shuō}{他们|tā·men}{觉得|jué·de}{你|nǐ}{太|tài}{直接|zhí jiē}{了|le}。', hu: 'Nem annyira megsértődtek, mint inkább túl nyersnek érezték.' },
+      { who: 'Anna', zh: '{换言之|huàn yán zhī}，{同样|tóng yàng}{一|yí}{句|jù}{话|huà}，{在|zài}{匈牙利|Xiōng·yá·lì}{很|hěn}{正常|zhèng cháng}，{在|zài}{中国|Zhōng·guó}{却|què}{可能|kě·néng}{显得|xiǎn·de}{不|bú}{太|tài}{客气|kè·qi}。', hu: 'Más szóval: ugyanaz a mondat Magyarországon teljesen szokványos, Kínában viszont udvariatlannak hathat.' },
+      { who: 'Péter', zh: '{那|nà}{我|wǒ}{以后|yǐ·hòu}{每|měi}{封|fēng}{邮件|yóu·jiàn}{都|dōu}{要|yào}{写|xiě}{得|de}{很|hěn}{客气|kè·qi}，{岂不是|qǐ bú shì}{要|yào}{写|xiě}{得|de}{很|hěn}{长|cháng}？', hu: 'Akkor ezentúl minden e-mailt nagyon udvariasan kell írnom — hát nem lesznek így nagyon hosszúak?' },
+      { who: 'Zhou Jie', zh: '{长|cháng}{一点儿|yì diǎnr}{何尝|hé cháng}{不|bù}{好|hǎo}？{多|duō}{写|xiě}{一|yí}{句|jù}“{麻烦|má·fan}{您|nín}{了|le}”，{对方|duì fāng}{心|xīn}{里|li}{就|jiù}{舒服|shū·fu}{多|duō}{了|le}。', hu: 'Mi baj lenne azzal, ha kicsit hosszabb? Ha odaírsz még egy „köszönöm a fáradságát" mondatot, a másik fél mindjárt jobban érzi magát.' },
+      { who: 'Anna', zh: '{反之|fǎn zhī}，{中国|Zhōng·guó}{同事|tóng shì}{给|gěi}{我们|wǒ·men}{写|xiě}{信|xìn}，{常常|cháng·cháng}{写|xiě}{得|de}{很|hěn}{含蓄|hán xù}，{我们|wǒ·men}{也|yě}{得|děi}{学|xué}{会|huì}{读|dú}{懂|dǒng}{言外之意|yán wài zhī yì}。', hu: 'Fordítva pedig: a kínai kollégák sokszor nagyon visszafogottan írnak nekünk, nekünk is meg kell tanulnunk a sorok között olvasni.' },
+      { who: 'Péter', zh: '{看来|kàn lái}，{写|xiě}{邮件|yóu·jiàn}{也|yě}{是|shì}{一|yì}{门|mén}{学问|xué·wen}{啊|a}。', hu: 'Úgy látszik, az e-mail-írás is külön tudomány.' }
+    ],
+    notes: [
+      'A {麻烦您了|máfan nín le} „köszönöm a fáradságát" — kérések után, levelek végén udvarias fordulat.',
+      'A {言外之意|yán wài zhī yì} „ami a szavakon túl van": a kimondatlan, sejtetett mondanivaló.',
+      'Az {一门学问|yì mén xuéwen} „egy külön tudomány" — a {门|mén} mérőszó tantárgyakhoz és tudományágakhoz illik.'
+    ]
+  },
+  points: [
+    {
+      title: '{与其说|yǔqí shuō} … {不如说|bùrú shuō}', sub: 'nem annyira …, mint inkább …',
+      pattern: '{与其|yǔ qí}{说|shuō} A，{不如|bù rú}{说|shuō} B',
+      body: 'Az {与其说|yǔqí shuō} A {不如说|bùrú shuō} B jelentése: <b>„nem annyira A, mint inkább B"</b> — egy jellemzést pontosítunk, és a B a találóbb. Ne keverd a HSK 5 2. leckéjében tanult {与其|yǔqí} … {不如|bùrú} …-val, amely két <i>lehetőség</i> közül választ!',
+      examples: [
+        { zh: '{与其|yǔ qí}{说|shuō}{他|tā}{聪明|cōng·míng}，{不如|bù rú}{说|shuō}{他|tā}{努力|nǔ lì}。', hu: 'Nem annyira okos, mint inkább szorgalmas.' },
+        { zh: '{这|zhè}{与其|yǔ qí}{说|shuō}{是|shì}{一|yí}{次|cì}{旅行|lǚ xíng}，{不如|bù rú}{说|shuō}{是|shì}{一|yí}{次|cì}{学习|xué xí}。', hu: 'Ez nem is annyira utazás volt, mint inkább tanulás.' }
+      ],
+      mistakes: [
+        { bad: '{与其|yǔ qí}{说|shuō}{他|tā}{聪明|cōng·míng}，{不如|bù rú}{他|tā}{努力|nǔ lì}。', good: '{与其|yǔ qí}{说|shuō}{他|tā}{聪明|cōng·míng}，{不如|bù rú}{说|shuō}{他|tā}{努力|nǔ lì}。', why: 'Mindkét tagban ott a {说|shuō}: {与其说|yǔqí shuō} … {不如说|bùrú shuō} ….' }
+      ]
+    },
+    {
+      title: '{换言之|huàn yán zhī}', sub: 'más szóval, vagyis',
+      pattern: 'állítás，{换言之|huàn yán zhī}，+ átfogalmazás',
+      body: 'A {换言之|huàn yán zhī} szó szerint „szavakat cserélve": <b>„más szóval, vagyis"</b> — az előzőt egyszerűbben vagy pontosabban mondjuk el. Írott; beszédben a {换句话说|huàn jù huà shuō} vagy az {也就是说|yě jiù shì shuō} felel meg neki.',
+      examples: [
+        { zh: '{他|tā}{下|xià}{个|ge}{月|yuè}{退休|tuì xiū}，{换言之|huàn yán zhī}，{我们|wǒ·men}{得|děi}{找|zhǎo}{新|xīn}{的|de}{负责人|fù zé rén}。', hu: 'Jövő hónapban nyugdíjba megy, vagyis új vezetőt kell keresnünk.' },
+        { zh: '{这|zhè}{个|ge}{计划|jì·huà}{需要|xū yào}{三|sān}{年|nián}，{换言之|huàn yán zhī}，{明年|míng nián}{还|hái}{看|kàn}{不|bu}{到|dào}{结果|jié guǒ}。', hu: 'A terv három évet igényel, más szóval jövőre még nem látunk eredményt.' }
+      ]
+    },
+    {
+      title: '{反之|fǎnzhī}', sub: 'fordítva, ellenkező esetben',
+      pattern: 'A，{就|jiù} B；{反之|fǎn zhī}，(nem A) {就|jiù} (nem B)',
+      body: 'A {反之|fǎnzhī} az előző állítás <b>fordítottját</b> vezeti be: „ellenkező esetben, fordítva". Gyakori fordulat: {反之亦然|fǎnzhī yì rán} „és fordítva is igaz". Írott nyelvi.',
+      examples: [
+        { zh: '{努力|nǔ lì}{就|jiù}{会|huì}{进步|jìn bù}；{反之|fǎn zhī}，{就|jiù}{会|huì}{落后|luò hòu}。', hu: 'Ha igyekszel, fejlődsz; ha nem, lemaradsz.' },
+        { zh: '{价格|jià gé}{高|gāo}，{买|mǎi}{的|de}{人|rén}{就|jiù}{少|shǎo}；{反之|fǎn zhī}，{买|mǎi}{的|de}{人|rén}{就|jiù}{多|duō}。', hu: 'Ha az ár magas, kevesen vásárolnak; fordítva, sokan.' }
+      ]
+    },
+    {
+      title: '{何尝|hécháng}', sub: 'hát (nem) …? — szónoki kérdés',
+      pattern: 'A + {何尝|hé cháng} + ({不|bù}) + ige',
+      body: 'A {何尝|hécháng} szónoki kérdés: a jelentése az ellenkezője annak, amit kimond. <b>{何尝不|hécháng bù}</b> + ige = „dehogynem, nagyon is": {我何尝不想去|wǒ hécháng bù xiǎng qù}？ „Hát én ne akarnék menni?" Tagadás nélkül = „sosem": {我何尝说过这话|wǒ hécháng shuō guo zhè huà}？ „Mikor mondtam én ilyet?"',
+      examples: [
+        { zh: '{长|cháng}{一点儿|yì diǎnr}{何尝|hé cháng}{不|bù}{好|hǎo}？', hu: 'Mi baj lenne azzal, ha kicsit hosszabb?' },
+        { zh: '{我|wǒ}{何尝|hé cháng}{不|bù}{想|xiǎng}{休息|xiū·xi}，{可是|kě·shì}{工作|gōng·zuò}{太|tài}{多|duō}{了|le}。', hu: 'Dehogynem akarnék pihenni, de túl sok a munka.' }
+      ]
+    },
+    {
+      title: '{岂不是|qǐ bú shì}', sub: 'hát nem azt jelentené, hogy …?',
+      pattern: '(feltétel)，A + {岂不是|qǐ bú shì} + következtetés？',
+      body: 'A {岂不是|qǐ bú shì} szónoki kérdés: <b>„hát nem azt jelentené, hogy…?"</b> — olyan következtetésre mutat rá, amely a beszélő szerint nyilvánvaló (és gyakran kellemetlen). Írottabb, mint a {不是|bú shì}…{吗|ma} (HSK 4 9. lecke).',
+      examples: [
+        { zh: '{要是|yào·shi}{每|měi}{封|fēng}{邮件|yóu·jiàn}{都|dōu}{写|xiě}{这么|zhè·me}{长|cháng}，{岂不是|qǐ bú shì}{太|tài}{浪费|làng fèi}{时间|shí·jiān}{了|le}？', hu: 'Ha minden e-mailt ilyen hosszúra írunk, hát nem túl nagy időpocsékolás?' },
+        { zh: '{你|nǐ}{现在|xiàn·zài}{走|zǒu}，{岂不是|qǐ bú shì}{白|bái}{来|lái}{了|le}？', hu: 'Ha most elmész, akkor hát hiába jöttél?' }
+      ]
+    }
+  ],
+  phrases: [
+    { zh: '{麻烦|má·fan}{您|nín}{了|le}。', hu: 'Köszönöm a fáradságát.' },
+    { zh: '{请|qǐng}{您|nín}{在|zài}{方便|fāng·biàn}{的|de}{时候|shí·hou}{回复|huí fù}。', hu: 'Kérem, válaszoljon, amikor alkalmas.' },
+    { zh: '{给|gěi}{您|nín}{添|tiān}{麻烦|má·fan}{了|le}。', hu: 'Elnézést, hogy fáradságot okoztam.' },
+    { zh: '{期待|qī dài}{您|nín}{的|de}{回复|huí fù}。', hu: 'Várom válaszát.' }
+  ],
+  words: [
+    { title: 'Szavak',
+      items: [
+        { zh: '{换言之|huàn yán zhī}', pinyin: 'huàn yán zhī', hu: 'más szóval' },
+        { zh: '{反之|fǎn zhī}', pinyin: 'fǎnzhī', hu: 'fordítva, ellenkező esetben' },
+        { zh: '{何尝|hé cháng}', pinyin: 'hécháng', hu: 'hát (nem)? (szónoki)' },
+        { zh: '{岂|qǐ}', pinyin: 'qǐ', hu: 'hát? (szónoki kérdés)' },
+        { zh: '{直接|zhí jiē}', pinyin: 'zhíjiē', hu: 'közvetlen, egyenes' },
+        { zh: '{含蓄|hán xù}', pinyin: 'hánxù', hu: 'visszafogott, sejtető' },
+        { zh: '{尽快|jǐn kuài}', pinyin: 'jǐnkuài', hu: 'mielőbb' },
+        { zh: '{对方|duì fāng}', pinyin: 'duìfāng', hu: 'a másik fél' },
+        { zh: '{学问|xué·wen}', pinyin: 'xuéwen', hu: 'tudomány, tudás' },
+        { zh: '{语气|yǔ qì}', pinyin: 'yǔqì', hu: 'hangnem' },
+        { zh: '{内容|nèi róng}', pinyin: 'nèiróng', hu: 'tartalom' },
+        { zh: '{礼貌|lǐ mào}', pinyin: 'lǐmào', hu: 'udvariasság; udvarias' }
+      ] },
+    { title: 'Ráadás',
+      items: [
+        { zh: '{换句话说|huàn jù huà shuō}', pinyin: 'huàn jù huà shuō', hu: 'más szóval (beszélt)' },
+        { zh: '{言外之意|yán wài zhī yì}', pinyin: 'yán wài zhī yì', hu: 'kimondatlan mondanivaló' },
+        { zh: '{措辞|cuò cí}', pinyin: 'cuòcí', hu: 'megfogalmazás, szóhasználat' },
+        { zh: '{结尾|jié wěi}', pinyin: 'jiéwěi', hu: 'befejezés, zárás' }
+      ] }
+  ],
+  culture: [
+    { title: 'Közvetett beszéd', text: 'A kínai kommunikáció gyakran közvetett és visszafogott ({含蓄|hánxù}): a nemet sokszor így mondják: {这个有点儿难|zhège yǒudiǎnr nán} „ez egy kicsit nehéz" vagy {我们研究研究|wǒmen yánjiū yánjiū} „majd megvizsgáljuk". Aki ezt nem ismeri, könnyen igennek hallja, ami valójában udvarias elutasítás.' },
+    { title: 'Udvarias e-mail', text: 'Egy kínai üzleti e-mail rendszerint megszólítással kezdődik ({尊敬的王经理|zūnjìng de Wáng jīnglǐ} „Tisztelt Wang igazgató úr"), utána {您好|nín hǎo} jön, a végén pedig jókívánság: {祝工作顺利|zhù gōngzuò shùnlì} „sikeres munkát kívánok". A kérés előtt és után illik megköszönni a fáradságot.' }
+  ],
+  reading: {
+    title: '{一|yì}{封|fēng}{邮件|yóu·jiàn}{引起|yǐn qǐ}{的|de}{误会|wù huì}', titleHu: 'Egy e-mail okozta félreértés',
+    text: [
+      { zh: '{彼得|Bǐ·dé}{给|gěi}{中国|Zhōng·guó}{客户|kè hù}{发|fā}{了|le}{一|yì}{封|fēng}{很|hěn}{短|duǎn}{的|de}{邮件|yóu·jiàn}，{不料|bú liào}{对方|duì fāng}{好|hǎo}{几|jǐ}{天|tiān}{都|dōu}{没|méi}{回复|huí fù}。', hu: 'Péter rövid e-mailt küldött egy kínai ügyfélnek, és az ügyfél váratlanul napokig nem válaszolt.' },
+      { zh: '{周杰|Zhōu Jié}{看|kàn}{了|le}{以后|yǐ·hòu}{说|shuō}，{问题|wèn·tí}{与其|yǔ qí}{说|shuō}{出|chū}{在|zài}{内容|nèi róng}{上|shang}，{不如|bù rú}{说|shuō}{出|chū}{在|zài}{语气|yǔ qì}{上|shang}。', hu: 'Zhou Jie elolvasta, és azt mondta: a gond nem annyira a tartalommal van, mint inkább a hangnemmel.' },
+      { zh: '{中国|Zhōng·guó}{人|rén}{写|xiě}{信|xìn}{讲究|jiǎng·jiu}{客气|kè·qi}，{换言之|huàn yán zhī}，{礼貌|lǐ mào}{有时|yǒu shí}{比|bǐ}{效率|xiào lǜ}{更|gèng}{重要|zhòng yào}。', hu: 'A kínaiak levélírásnál sokat adnak az udvariasságra, vagyis az illem néha fontosabb a hatékonyságnál.', par: true },
+      { zh: '{彼得|Bǐ·dé}{重新|chóng xīn}{写|xiě}{了|le}{一|yì}{封|fēng}{信|xìn}，{开头|kāi tóu}{问|wèn}{好|hǎo}，{结尾|jié wěi}{致|zhì}{谢|xiè}，{第二|dì èr}{天|tiān}{就|jiù}{收|shōu}{到|dào}{了|le}{热情|rè qíng}{的|de}{回复|huí fù}。', hu: 'Péter újraírta a levelet: az elején üdvözölt, a végén köszönetet mondott — és másnap szívélyes választ kapott.' },
+      { zh: '{他|tā}{笑|xiào}{着|zhe}{说|shuō}：“{早|zǎo}{知道|zhī·dào}{这样|zhè yàng}，{我|wǒ}{何尝|hé cháng}{不|bú}{愿意|yuàn·yì}{多|duō}{写|xiě}{几|jǐ}{句|jù}？”', hu: 'Nevetve mondta: „Ha ezt tudom, hát nem írtam volna szívesen még néhány mondatot?"', par: true }
+    ],
+    words: [ { zh: '{开头|kāi tóu}', hu: 'eleje (szövegé), kezdet' } ],
+    questions: [
+      { q: 'Mi történt Péter első e-mailje után?', a: 'napokig nem jött válasz', wrong: ['azonnal válaszoltak', 'panaszt tettek', 'rendeltek valamit'], why: '{好几天都没回复|hǎo jǐ tiān dōu méi huífù}.' },
+      { q: 'Zhou Jie szerint mivel volt a gond?', a: 'a hangnemmel', wrong: ['a tartalommal', 'a helyesírással', 'a címzettel'], why: '{与其说出在内容上，不如说出在语气上|yǔqí shuō chū zài nèiróng shang, bùrú shuō chū zài yǔqì shang}.' },
+      { q: 'Mi fontosabb néha a hatékonyságnál?', a: 'az udvariasság', wrong: ['a rövidség', 'a gyorsaság', 'a humor'], why: '{礼貌有时比效率更重要|lǐmào yǒushí bǐ xiàolǜ gèng zhòngyào}.' },
+      { q: 'Mit változtatott Péter az új levélben?', a: 'üdvözölt és köszönetet mondott', wrong: ['rövidebbre írta', 'angolul írta meg', 'Anna írta helyette'], why: '{开头问好，结尾致谢|kāitóu wèn hǎo, jiéwěi zhì xiè}.' }
+    ]
+  },
+  quiz: [
+    { q: '„Nem annyira okos, mint inkább szorgalmas."', a: '{与其|yǔ qí}{说|shuō}{他|tā}{聪明|cōng·míng}，{不如|bù rú}{说|shuō}{他|tā}{努力|nǔ lì}。', wrong: ['{与其|yǔ qí}{他|tā}{聪明|cōng·míng}，{不如|bù rú}{他|tā}{努力|nǔ lì}{说|shuō}。', '{不如|bù rú}{说|shuō}{他|tā}{聪明|cōng·míng}，{与其|yǔ qí}{说|shuō}{他|tā}{努力|nǔ lì}。', '{与其|yǔ qí}{说|shuō}{他|tā}{聪明|cōng·míng}，{所以|suǒ·yǐ}{说|shuō}{他|tā}{努力|nǔ lì}。'], why: '{与其说|yǔqí shuō} A, {不如说|bùrú shuō} B.', point: 1 },
+    { q: 'Mit fejez ki az {与其说|yǔqí shuō} A, {不如说|bùrú shuō} B?', a: 'a B a találóbb', wrong: ['A és B egyformán igaz', 'az A a jobb választás', 'egyik sem igaz'], why: 'Pontosítás: „nem annyira A, mint inkább B".', point: 1 },
+    { q: '„Nyugdíjba megy, vagyis új vezető kell."', a: '{他|tā}{要|yào}{退休|tuì xiū}{了|le}，{换言之|huàn yán zhī}，{需要|xū yào}{新|xīn}{的|de}{负责人|fù zé rén}。', wrong: ['{他|tā}{要|yào}{换言之|huàn yán zhī}{退休|tuì xiū}{了|le}，{需要|xū yào}{新|xīn}{的|de}{负责人|fù zé rén}。', '{换言之|huàn yán zhī}{他|tā}{要|yào}，{退休|tuì xiū}{了|le}{需要|xū yào}{新|xīn}{的|de}{负责人|fù zé rén}。', '{他|tā}{要|yào}{退休|tuì xiū}{了|le}，{需要|xū yào}{换言之|huàn yán zhī}{新|xīn}{的|de}{负责人|fù zé rén}。'], why: 'Állítás, + {换言之|huàn yán zhī}, + átfogalmazás.', point: 2 },
+    { q: 'Melyik a {换言之|huàn yán zhī} beszélt nyelvi párja?', a: '{换句话说|huàn jù huà shuō}', wrong: ['{总而言之|zǒng ér yán zhī}', '{比如说|bǐrú shuō}', '{听说|tīngshuō}'], why: 'Mindkettő „más szóval".', point: 2 },
+    { q: '„Ha igyekszel, fejlődsz; ellenkező esetben lemaradsz."', a: '{努力|nǔ lì}{就|jiù}{会|huì}{进步|jìn bù}；{反之|fǎn zhī}，{就|jiù}{会|huì}{落后|luò hòu}。', wrong: ['{反之|fǎn zhī}{努力|nǔ lì}{就|jiù}{会|huì}{进步|jìn bù}；{就|jiù}{会|huì}{落后|luò hòu}。', '{努力|nǔ lì}{反之|fǎn zhī}{就|jiù}{会|huì}{进步|jìn bù}；{就|jiù}{会|huì}{落后|luò hòu}。', '{努力|nǔ lì}{就|jiù}{会|huì}{进步|jìn bù}；{就|jiù}{会|huì}{落后|luò hòu}{反之|fǎn zhī}。'], why: 'A {反之|fǎnzhī} a fordított eset elején áll.', point: 3 },
+    { q: 'Mit jelent: {反之亦然|fǎnzhī yì rán}', a: 'és fordítva is', wrong: ['és ez így marad', 'de fordítva nem', 'és mindenki tudja'], why: '{亦|yì} „is", {然|rán} „így".', point: 3 },
+    { q: '„Dehogynem akarnék pihenni!"', a: '{我|wǒ}{何尝|hé cháng}{不|bù}{想|xiǎng}{休息|xiū·xi}？', wrong: ['{我|wǒ}{何尝|hé cháng}{想|xiǎng}{休息|xiū·xi}？', '{何尝|hé cháng}{我|wǒ}{想|xiǎng}{不|bù}{休息|xiū·xi}？', '{我|wǒ}{不|bù}{想|xiǎng}{何尝|hé cháng}{休息|xiū·xi}？'], why: '{何尝不|hécháng bù} + ige = „nagyon is".', point: 4 },
+    { q: 'Mit jelent: {我何尝说过这话|wǒ hécháng shuō guo zhè huà}？', a: 'Mikor mondtam én ilyet?', wrong: ['Ezt mondtam tegnap.', 'Mondd el újra!', 'Ki mondta ezt?'], why: 'Tagadás nélkül a {何尝|hécháng} „sosem".', point: 4 },
+    { q: '„Akkor hát hiába jöttél?"', a: '{那|nà}{你|nǐ}{岂不是|qǐ bú shì}{白|bái}{来|lái}{了|le}？', wrong: ['{那|nà}{你|nǐ}{白|bái}{来|lái}{了|le}{岂不是|qǐ bú shì}？', '{岂不是|qǐ bú shì}{那|nà}{白|bái}{你|nǐ}{来|lái}{了|le}？', '{那|nà}{你|nǐ}{白|bái}{岂不是|qǐ bú shì}{来|lái}{了|le}？'], why: 'A + {岂不是|qǐ bú shì} + következtetés?', point: 5 },
+    { q: 'Melyik szerkezet beszéltebb párja a {岂不是|qǐ bú shì}?', a: '{不是|bú shì}…{吗|ma}', wrong: ['{是不是|shì bu shì}', '{要不然|yào bùrán}', '{不但|búdàn}…{而且|érqiě}'], why: 'Mindkettő szónoki kérdés.', point: 5 },
+    { q: 'Mit jelent a {含蓄|hánxù}?', a: 'visszafogott, sejtető', wrong: ['nyers, kíméletlen', 'hangos, harsány', 'vicces, tréfás'], why: 'A kínai levélírás gyakran {含蓄|hánxù}.' },
+    { q: 'Mit jelent a {言外之意|yán wài zhī yì}?', a: 'kimondatlan mondanivaló', wrong: ['szó szerinti jelentés', 'idegen eredetű szó', 'hosszú szónoklat'], why: '„Ami a szavakon túl van".' },
+    { q: 'Mit írunk udvariasan egy kérés végére?', a: '{麻烦您了|máfan nín le}', wrong: ['{快点儿|kuài diǎnr}', '{随便|suíbiàn}', '{没事儿|méi shìr}'], why: '„Köszönöm a fáradságát".' },
+    { q: 'Mit jelent a {尽快|jǐnkuài}?', a: 'mielőbb', wrong: ['később', 'soha', 'lassan'], why: '{请尽快回复|qǐng jǐnkuài huífù}.' },
+    { q: 'Mit jelent a {直接|zhíjiē}?', a: 'egyenes', wrong: ['kerülő', 'titkos', 'bonyolult'], why: '{太直接了|tài zhíjiē le} „túl egyenes, nyers".' },
+    { q: 'Mit jelent: {期待您的回复|qīdài nín de huífù}。', a: 'Várom válaszát.', wrong: ['Köszönöm a levelét.', 'Sajnálom a késést.', 'Ne válaszoljon!'], why: '{期待|qīdài} „várakozással vár".' }
+  ]
 }
 
 ];
