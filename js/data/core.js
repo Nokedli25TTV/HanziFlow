@@ -781,7 +781,29 @@ const HANZIFLOW_PATH = [
     module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l58&round=listen' },
   { id: 'l58-read', glyph: '读', title: 'Olvasás: Anna időbeosztása',
     desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
-    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l58&round=read' }
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l58&round=read' },
+
+  // ── HSK 4 · 9. lecke ──
+  { id: 'l59-lesson', glyph: '碗', title: 'Magyarázat: 难道, 到底 · 究竟, 怪不得 · 难怪, 不是…吗, 可',
+    desc: 'Vita a lakótárssal: szónoki kérdés, türelmetlen rákérdezés, nem csoda, hogy…, emlékeztetés, nyomaték.',
+    module: 'lesson', href: 'pages/lesson.html?id=l59' },
+  { id: 'l59-listen', glyph: '听', title: 'Hallás: piszkos edények',
+    desc: 'A lecke mondatai hang után: mit jelent, amit hallasz?',
+    module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l59&round=listen' },
+  { id: 'l59-read', glyph: '读', title: 'Olvasás: Anna és Lin Jing',
+    desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l59&round=read' },
+
+  // ── HSK 4 · 10. lecke ──
+  { id: 'l60-lesson', glyph: '变', title: 'Magyarázat: 随着, 渐渐, 仍然, 从来不 · 从来没…过, 曾经',
+    desc: 'Régi barát érkezik: ahogy változik a város, lassanként, még mindig, soha, egykor.',
+    module: 'lesson', href: 'pages/lesson.html?id=l60' },
+  { id: 'l60-listen', glyph: '听', title: 'Hallás: két év után',
+    desc: 'A lecke mondatai hang után: mit jelent, amit hallasz?',
+    module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l60&round=listen' },
+  { id: 'l60-read', glyph: '读', title: 'Olvasás: Régi barát',
+    desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l60&round=read' }
 ];
 
 const HANZIFLOW_PATH_UNITS = [
@@ -928,5 +950,9 @@ const HANZIFLOW_PATH_UNITS = [
   { id: 'u-l57', kicker: 'HSK 4 · 7. lecke', title: 'Rendelés a neten', sub: '由于…因此, 是否, 往往 · 常常, 偶尔, 什么的 · 等',
     steps: ['l57-lesson', 'l57-listen', 'l57-read'] },
   { id: 'u-l58', kicker: 'HSK 4 · 8. lecke', title: 'Időbeosztás', sub: '首先…其次, 一方面…另一方面, 按时 · 准时, 从…起, 提前 · 推迟',
-    steps: ['l58-lesson', 'l58-listen', 'l58-read'] }
+    steps: ['l58-lesson', 'l58-listen', 'l58-read'] },
+  { id: 'u-l59', kicker: 'HSK 4 · 9. lecke', title: 'Vita a lakótárssal', sub: '难道, 到底 · 究竟, 怪不得 · 难怪, 不是…吗, 可',
+    steps: ['l59-lesson', 'l59-listen', 'l59-read'] },
+  { id: 'u-l60', kicker: 'HSK 4 · 10. lecke', title: 'Régi barát érkezik', sub: '随着, 渐渐, 仍然, 从来不 · 从来没…过, 曾经',
+    steps: ['l60-lesson', 'l60-listen', 'l60-read'] }
 ];
