@@ -15737,6 +15737,327 @@ const HANZIFLOW_COURSE = [
     { q: 'Mit jelent a {反应|fǎnyìng}?', a: 'reakció', wrong: ['jelszó', 'akkumulátor', 'hálózat'], why: '{怎么没反应|zěnme méi fǎnyìng}？' },
     { q: 'Mit jelent az {老人|lǎorén}?', a: 'idős ember', wrong: ['régi barát', 'tanár', 'főnök'], why: '{很多老人|hěn duō lǎorén}.' }
   ]
+},
+/* ════════════════════════════════════════════════════
+   HSK 5 · 17. LECKE — 依然, 早晚 · 迟早, 不免, 好在, 再也不 · 再也没
+   ════════════════════════════════════════════════════ */
+{
+  id: 'l87', no: 87, badge: '17', kicker: 'HSK 5 · 17. lecke', label: 'HSK 5 · 17. lecke',
+  title: 'Egy írónő estje — előbb-utóbb észreveszik',
+  lead: 'Író-olvasó találkozón vagy: elmondod, mi maradt változatlan (依然), mi következik be előbb-utóbb (早晚 · 迟早), mit vált ki óhatatlanul valami (不免), mi volt a szerencse egy nehéz helyzetben (好在), és mi nem történik soha többé (再也不 · 再也没).',
+  cando: [
+    'Változatlanságot fejezel ki írott stílusban: 依然….',
+    'Elmondod, hogy valami előbb-utóbb bekövetkezik: 早晚 · 迟早….',
+    'Óhatatlan érzelmi reakciót írsz le (不免), és megnevezed a szerencsés körülményt (好在).',
+    'Megkülönbözteted a 再也不 („soha többé nem fogok") és a 再也没 („azóta soha nem") jelentését.'
+  ],
+  intro: [
+    'Wang Li elviszi Annát egy könyvesboltba, ahol Su Wen, a hetvenéves írónő beszél a pályájáról. Anna olvasta egyik regényét, és kérdezni is mer tőle.',
+    'Ebben a leckében az emlékezés és a kitartás nyelvét tanulod: ami nem változik, ami előbb-utóbb eljön, ami szerencsére sikerült, és ami soha többé nem történik meg.'
+  ],
+  dialogue: {
+    title: 'Író-olvasó találkozó',
+    scene: 'Vasárnap délután egy sanghaji könyvesboltban. Wang Li, Anna és Su Wen írónő.',
+    lines: [
+      { who: 'Wang Li', zh: '{今天|jīn·tiān}{来|lái}{的|de}{人|rén}{真|zhēn}{多|duō}！{苏文|Sū Wén}{老师|lǎo·shī}{虽然|suī·rán}{七十|qī shí}{岁|suì}{了|le}，{依然|yī rán}{每天|měi tiān}{写作|xiě zuò}。', hu: 'Milyen sokan eljöttek! Su Wen tanárnő bár hetvenéves, még mindig minden nap ír.' },
+      { who: 'Anna', zh: '{我|wǒ}{读|dú}{过|guo}{她|tā}{的|de}{小说|xiǎo·shuō}，{读|dú}{到|dào}{最后|zuì·hòu}{不免|bù miǎn}{流|liú}{泪|lèi}。', hu: 'Olvastam a regényét, a végén óhatatlanul elsírtam magam.' },
+      { who: 'Anna', zh: '{苏|Sū}{老师|lǎo·shī}，{您|nín}{写|xiě}{小说|xiǎo·shuō}{的|de}{时候|shí·hou}{遇到|yù·dào}{过|guo}{困难|kùn·nan}{吗|ma}？', hu: 'Su tanárnő, ütközött nehézségekbe, amikor regényt írt?' },
+      { who: 'Su Wen', zh: '{当然|dāng·rán}。{我|wǒ}{的|de}{第一|dì yī}{本|běn}{小说|xiǎo·shuō}{被|bèi}{出版社|chū bǎn shè}{拒绝|jù jué}{了|le}{十|shí}{几|jǐ}{次|cì}。{好在|hǎo zài}{我|wǒ}{没有|méi·yǒu}{放弃|fàng qì}。', hu: 'Hogyne. Az első regényemet tucatnyi kiadó utasította el. Szerencsére nem adtam fel.' },
+      { who: 'Anna', zh: '{后来|hòu·lái}{呢|ne}？', hu: 'És aztán?' },
+      { who: 'Su Wen', zh: '{后来|hòu·lái}{那|nà}{本|běn}{书|shū}{出版|chū bǎn}{了|le}，{从|cóng}{那|nà}{以后|yǐ·hòu}，{我|wǒ}{再|zài}{也|yě}{没|méi}{怀疑|huái yí}{过|guo}{自己|zì·jǐ}。{我|wǒ}{相信|xiāng·xìn}，{好|hǎo}{作品|zuò pǐn}{早晚|zǎo wǎn}{会|huì}{被|bèi}{人|rén}{看|kàn}{到|dào}。', hu: 'Aztán az a könyv megjelent, és attól kezdve soha többé nem kételkedtem magamban. Hiszem, hogy egy jó művet előbb-utóbb észrevesznek.' },
+      { who: 'Wang Li', zh: '{安娜|Ān·nà}，{迟早|chí zǎo}{有|yǒu}{一|yì}{天|tiān}，{你|nǐ}{也|yě}{会|huì}{用|yòng}{中文|Zhōng·wén}{写|xiě}{一|yì}{本|běn}{书|shū}！', hu: 'Anna, előbb-utóbb te is írni fogsz egy könyvet kínaiul!' }
+    ],
+    notes: [
+      'A {出版社|chūbǎnshè} „kiadó", az {出版|chūbǎn} „kiad, megjelentet".',
+      'A {流泪|liú lèi} „könnyezik, sír" (írottabb, mint a {哭|kū}).',
+      'Az {写作|xiězuò} „írás (mint alkotó munka)".'
+    ]
+  },
+  points: [
+    {
+      title: '{依然|yīrán}', sub: 'még mindig, továbbra is (írott)',
+      pattern: 'A + {依然|yī rán} + állítmány',
+      body: 'Az {依然|yīrán} a HSK 4-ben tanult {仍然|réngrán} közeli rokona: valami az idő vagy egy akadály ellenére <b>változatlan</b>. {她虽然七十岁了，依然每天写作|tā suīrán qīshí suì le, yīrán měitiān xiězuò} „bár hetvenéves, még mindig minden nap ír", {十年过去了，这里依然那么安静|shí nián guòqu le, zhèlǐ yīrán nàme ānjìng} „tíz év telt el, itt még mindig ugyanolyan csend van". Irodalmibb, ünnepélyesebb, mint a {还是|háishi}.',
+      examples: [
+        { zh: '{她|tā}{虽然|suī·rán}{七十|qī shí}{岁|suì}{了|le}，{依然|yī rán}{每天|měi tiān}{写作|xiě zuò}。', hu: 'Bár hetvenéves, még mindig minden nap ír.' },
+        { zh: '{十|shí}{年|nián}{过去|guò·qù}{了|le}，{这|zhè}{条|tiáo}{小|xiǎo}{街|jiē}{依然|yī rán}{那么|nà·me}{安静|ān·jìng}。', hu: 'Tíz év telt el, ez a kis utca még mindig ugyanolyan csendes.' }
+      ]
+    },
+    {
+      title: '{早晚|zǎowǎn} · {迟早|chízǎo}', sub: 'előbb-utóbb',
+      pattern: 'A + {早晚|zǎo wǎn} / {迟早|chí zǎo} + ({会|huì}) + ige',
+      body: 'Mindkettő azt jelenti: valami <b>biztosan bekövetkezik</b>, csak az időpontja kérdéses. {好作品早晚会被人看到|hǎo zuòpǐn zǎowǎn huì bèi rén kàndào} „egy jó művet előbb-utóbb észrevesznek", {迟早有一天你也会写一本书|chízǎo yǒu yì tiān nǐ yě huì xiě yì běn shū} „előbb-utóbb te is írsz egy könyvet". Utánuk gyakran {会|huì} áll.',
+      examples: [
+        { zh: '{我|wǒ}{相信|xiāng·xìn}，{好|hǎo}{作品|zuò pǐn}{早晚|zǎo wǎn}{会|huì}{被|bèi}{人|rén}{看|kàn}{到|dào}。', hu: 'Hiszem, hogy egy jó művet előbb-utóbb észrevesznek.' },
+        { zh: '{这|zhè}{件|jiàn}{事|shì}{他|tā}{迟早|chí zǎo}{会|huì}{知道|zhī·dào}{的|de}。', hu: 'Ezt előbb-utóbb úgyis megtudja.' }
+      ]
+    },
+    {
+      title: '{不免|bùmiǎn}', sub: 'óhatatlanul (érzelmi reakció)',
+      pattern: '(körülmény)，A + {不免|bù miǎn} + ige / melléknév',
+      body: 'A {不免|bùmiǎn} azt mondja, hogy egy helyzet <b>óhatatlanul kivált</b> valamilyen reakciót, legtöbbször érzelmet: {读到最后不免流泪|dú dào zuìhòu bùmiǎn liú lèi} „a végén óhatatlanul elsírtam magam", {第一次上台，不免有点儿紧张|dì yī cì shàng tái, bùmiǎn yǒudiǎnr jǐnzhāng} „először a színpadon óhatatlanul izgul az ember". A HSK 5 3. leckéjében tanult {难免|nánmiǎn} állítmány is lehet ({是难免的|shì nánmiǎn de}), a {不免|bùmiǎn} csak határozó.',
+      tables: [
+        { caption: 'Óhatatlanul',
+          head: ['', 'Használat', 'Példa'],
+          rows: [
+            ['{难免|nán miǎn}', 'határozó és állítmány', '{出|chū}{错|cuò}{是|shì}{难免|nán miǎn}{的|de}'],
+            ['{不免|bù miǎn}', 'csak határozó (ige előtt)', '{不免|bù miǎn}{有|yǒu}{点儿|diǎnr}{紧张|jǐn·zhāng}']
+          ] }
+      ],
+      examples: [
+        { zh: '{读|dú}{到|dào}{最后|zuì·hòu}，{我|wǒ}{不免|bù miǎn}{流|liú}{了|le}{泪|lèi}。', hu: 'A végére érve óhatatlanul elsírtam magam.' },
+        { zh: '{第一|dì yī}{次|cì}{上|shàng}{台|tái}{讲|jiǎng}{话|huà}，{不免|bù miǎn}{有|yǒu}{点儿|diǎnr}{紧张|jǐn·zhāng}。', hu: 'Amikor először beszél színpadon, óhatatlanul izgul az ember.' }
+      ]
+    },
+    {
+      title: '{好在|hǎozài}', sub: 'szerencsére (még jó, hogy)',
+      pattern: '(nehéz helyzet)，{好在|hǎo zài} + szerencsés körülmény',
+      body: 'A {好在|hǎozài} egy nehéz helyzetben <b>a kedvező körülményre</b> mutat rá: {我的第一本小说被拒绝了十几次，好在我没有放弃|wǒ de dì yī běn xiǎoshuō bèi jùjué le shí jǐ cì, hǎozài wǒ méiyǒu fàngqì} „…, szerencsére nem adtam fel", {下大雨了，好在我带了伞|xià dà yǔ le, hǎozài wǒ dài le sǎn} „zuhog, szerencsére hoztam esernyőt". Közel áll a {幸亏|xìngkuī}-hoz, de visszafogottabb, és nem kell utána {不然|bùrán}.',
+      examples: [
+        { zh: '{第一|dì yī}{本|běn}{书|shū}{被|bèi}{拒绝|jù jué}{了|le}{十|shí}{几|jǐ}{次|cì}，{好在|hǎo zài}{我|wǒ}{没有|méi·yǒu}{放弃|fàng qì}。', hu: 'Az első könyvemet tucatszor utasították el, szerencsére nem adtam fel.' },
+        { zh: '{突然|tū·rán}{下|xià}{起|qǐ}{了|le}{大|dà}{雨|yǔ}，{好在|hǎo zài}{我|wǒ}{带|dài}{了|le}{伞|sǎn}。', hu: 'Hirtelen leszakadt az ég, még jó, hogy hoztam esernyőt.' }
+      ]
+    },
+    {
+      title: '{再也不|zài yě bù} · {再也没|zài yě méi}', sub: 'soha többé (nem)',
+      pattern: 'A + {再也不|zài yě bù} + ige（+ {了|le}） · A + {再也没|zài yě méi}（{有|yǒu}）+ ige（+ {过|guo}）',
+      body: 'Mindkettő „soha többé", de az időre figyelj. {再也不|zài yě bù}: <b>döntés, ígéret</b> a jövőre: {我再也不敢偷懒了|wǒ zài yě bù gǎn tōu lǎn le} „soha többé nem lustálkodom". {再也没|zài yě méi}: <b>egy pont óta</b> nem történt meg: {从那以后，我再也没怀疑过自己|cóng nà yǐhòu, wǒ zài yě méi huáiyí guo zìjǐ} „attól kezdve soha többé nem kételkedtem magamban".',
+      tables: [
+        { caption: 'Soha többé',
+          head: ['', 'Idő', 'Példa'],
+          rows: [
+            ['{再也不|zài yě bù}', 'jövő (döntés, ígéret)', '{我|wǒ}{再也不|zài yě bù}{迟到|chí dào}{了|le}'],
+            ['{再也没|zài yě méi}', 'múlt (azóta nem)', '{他|tā}{再也没|zài yě méi}{来|lái}{过|guo}']
+          ] }
+      ],
+      examples: [
+        { zh: '{从|cóng}{那|nà}{以后|yǐ·hòu}，{我|wǒ}{再|zài}{也|yě}{没|méi}{怀疑|huái yí}{过|guo}{自己|zì·jǐ}。', hu: 'Attól kezdve soha többé nem kételkedtem magamban.' },
+        { zh: '{我|wǒ}{再|zài}{也|yě}{不|bù}{敢|gǎn}{偷|tōu}{懒|lǎn}{了|le}！', hu: 'Soha többé nem merek lustálkodni!' }
+      ]
+    }
+  ],
+  phrases: [
+    { zh: '{能|néng}{请|qǐng}{您|nín}{签|qiān}{个|ge}{名|míng}{吗|ma}？', hu: 'Aláírná nekem?' },
+    { zh: '{您|nín}{的|de}{书|shū}{给|gěi}{了|le}{我|wǒ}{很|hěn}{大|dà}{的|de}{鼓励|gǔ lì}。', hu: 'A könyve nagyon sok erőt adott nekem.' },
+    { zh: '{功夫|gōng·fu}{不|bú}{负|fù}{有心人|yǒu xīn rén}。', hu: 'Aki keres, talál; a kitartás meghozza gyümölcsét.' },
+    { zh: '{我|wǒ}{是|shì}{您|nín}{的|de}{读者|dú zhě}。', hu: 'Az olvasója vagyok.' }
+  ],
+  words: [
+    { title: 'Szavak',
+      items: [
+        { zh: '{依然|yī rán}', pinyin: 'yīrán', hu: 'még mindig (írott)' },
+        { zh: '{早晚|zǎo wǎn}', pinyin: 'zǎowǎn', hu: 'előbb-utóbb' },
+        { zh: '{迟早|chí zǎo}', pinyin: 'chízǎo', hu: 'előbb-utóbb' },
+        { zh: '{不免|bù miǎn}', pinyin: 'bùmiǎn', hu: 'óhatatlanul' },
+        { zh: '{好在|hǎo zài}', pinyin: 'hǎozài', hu: 'szerencsére' },
+        { zh: '{作家|zuò jiā}', pinyin: 'zuòjiā', hu: 'író' },
+        { zh: '{出版|chū bǎn}', pinyin: 'chūbǎn', hu: 'kiad, megjelentet' },
+        { zh: '{拒绝|jù jué}', pinyin: 'jùjué', hu: 'elutasít' },
+        { zh: '{怀疑|huái yí}', pinyin: 'huáiyí', hu: 'kételkedik; gyanít' },
+        { zh: '{作品|zuò pǐn}', pinyin: 'zuòpǐn', hu: 'mű, alkotás' },
+        { zh: '{流泪|liú lèi}', pinyin: 'liú lèi', hu: 'könnyezik' },
+        { zh: '{偷懒|tōu lǎn}', pinyin: 'tōu lǎn', hu: 'lustálkodik, lazsál' }
+      ] },
+    { title: 'Ráadás',
+      items: [
+        { zh: '{出版社|chū bǎn shè}', pinyin: 'chūbǎnshè', hu: 'kiadó' },
+        { zh: '{读者|dú zhě}', pinyin: 'dúzhě', hu: 'olvasó' },
+        { zh: '{写作|xiě zuò}', pinyin: 'xiězuò', hu: 'írás, alkotó munka' },
+        { zh: '{鼓励|gǔ lì}', pinyin: 'gǔlì', hu: 'bátorítás; bátorít' }
+      ] }
+  ],
+  culture: [
+    { title: 'A modern kínai irodalom', text: 'A modern kínai irodalom egyik alapítója {鲁迅|Lǔ Xùn}, aki a 20. század elején a beszélt nyelven írt elbeszéléseivel újította meg a prózát. 2012-ben {莫言|Mò Yán} kapta meg az irodalmi Nobel-díjat — az első Kínában élő kínai íróként.' },
+    { title: 'Regények a képernyőn', text: 'Kínában hatalmas népszerűségnek örvendenek az internetes regények ({网络文学|wǎngluò wénxué}): a szerzők naponta töltenek fel új fejezeteket, az olvasók pedig telefonon követik a történeteket. A legsikeresebbekből tévésorozat és film is készül.' }
+  ],
+  reading: {
+    title: '{苏文|Sū Wén}{的|de}{故事|gù·shi}', titleHu: 'Su Wen története',
+    text: [
+      { zh: '{苏文|Sū Wén}{二十|èr shí}{岁|suì}{的|de}{时候|shí·hou}{写|xiě}{完|wán}{了|le}{第一|dì yī}{本|běn}{小说|xiǎo·shuō}，{可是|kě·shì}{出版社|chū bǎn shè}{一|yì}{家|jiā}{接|jiē}{一|yì}{家|jiā}{地|de}{拒绝|jù jué}{了|le}{她|tā}。', hu: 'Su Wen húszévesen fejezte be első regényét, de a kiadók egymás után utasították el.' },
+      { zh: '{那|nà}{时候|shí·hou}{她|tā}{不免|bù miǎn}{怀疑|huái yí}{自己|zì·jǐ}{是否|shì·fǒu}{适合|shì hé}{当|dāng}{作家|zuò jiā}。', hu: 'Akkoriban óhatatlanul kételkedni kezdett, hogy alkalmas-e írónak.' },
+      { zh: '{好在|hǎo zài}{她|tā}{的|de}{老师|lǎo·shī}{一直|yì zhí}{鼓励|gǔ lì}{她|tā}：“{好|hǎo}{作品|zuò pǐn}{迟早|chí zǎo}{会|huì}{被|bèi}{人|rén}{发现|fā·xiàn}。”', hu: 'Szerencsére a tanára mindvégig bátorította: „Egy jó művet előbb-utóbb felfedeznek."', par: true },
+      { zh: '{第|dì}{十|shí}{三|sān}{家|jiā}{出版社|chū bǎn shè}{终于|zhōng·yú}{出版|chū bǎn}{了|le}{她|tā}{的|de}{书|shū}，{从此|cóng cǐ}{她|tā}{再|zài}{也|yě}{没|méi}{停|tíng}{过|guo}{笔|bǐ}。', hu: 'A tizenharmadik kiadó végül megjelentette a könyvét, és attól kezdve soha többé nem tette le a tollat.' },
+      { zh: '{五十|wǔ shí}{年|nián}{过去|guò·qù}{了|le}，{她|tā}{依然|yī rán}{每天|měi tiān}{早上|zǎo·shang}{写|xiě}{三|sān}{个|ge}{小时|xiǎo·shí}。', hu: 'Ötven év telt el, és még mindig minden reggel három órát ír.', par: true }
+    ],
+    words: [ { zh: '{停笔|tíng bǐ}', hu: 'abbahagyja az írást' } ],
+    questions: [
+      { q: 'Mi történt Su Wen első regényével?', a: 'a kiadók sorra elutasították', wrong: ['azonnal bestseller lett', 'elveszett a kézirat', 'nem fejezte be'], why: '{出版社一家接一家地拒绝了她|chūbǎnshè yì jiā jiē yì jiā de jùjué le tā}.' },
+      { q: 'Ki bátorította?', a: 'a tanára', wrong: ['a kiadó', 'az olvasók', 'a szülei'], why: '{她的老师一直鼓励她|tā de lǎoshī yìzhí gǔlì tā}.' },
+      { q: 'Hányadik kiadó jelentette meg a könyvét?', a: 'a tizenharmadik', wrong: ['az első', 'a harmadik', 'a huszadik'], why: '{第十三家出版社|dì shísān jiā chūbǎnshè}.' },
+      { q: 'Mit csinál ma is minden reggel?', a: 'három órát ír', wrong: ['sétál a parkban', 'tanít az egyetemen', 'olvasókkal találkozik'], why: '{依然每天早上写三个小时|yīrán měitiān zǎoshang xiě sān ge xiǎoshí}.' }
+    ]
+  },
+  quiz: [
+    { q: '„Bár hetvenéves, még mindig minden nap ír." (írott)', a: '{她|tā}{虽然|suī·rán}{七十|qī shí}{岁|suì}{了|le}，{依然|yī rán}{每天|měi tiān}{写作|xiě zuò}。', wrong: ['{她|tā}{虽然|suī·rán}{七十|qī shí}{岁|suì}{了|le}，{每天|měi tiān}{写作|xiě zuò}{依然|yī rán}。', '{依然|yī rán}{她|tā}{七十|qī shí}{岁|suì}{虽然|suī·rán}，{写作|xiě zuò}{每天|měi tiān}。', '{她|tā}{依然|yī rán}{虽然|suī·rán}{七十|qī shí}{岁|suì}，{了|le}{每天|měi tiān}{写作|xiě zuò}。'], why: 'A + {依然|yīrán} + állítmány.', point: 1 },
+    { q: 'Melyik HSK 4-es szó közeli rokona az {依然|yīrán}?', a: '{仍然|réngrán}', wrong: ['{曾经|céngjīng}', '{渐渐|jiànjiàn}', '{随着|suízhe}'], why: 'Mindkettő „még mindig".', point: 1 },
+    { q: '„Ezt előbb-utóbb úgyis megtudja."', a: '{这|zhè}{件|jiàn}{事|shì}{他|tā}{迟早|chí zǎo}{会|huì}{知道|zhī·dào}{的|de}。', wrong: ['{这|zhè}{件|jiàn}{事|shì}{他|tā}{会|huì}{知道|zhī·dào}{迟早|chí zǎo}{的|de}。', '{迟早|chí zǎo}{这|zhè}{件|jiàn}{他|tā}{事|shì}{会|huì}{知道|zhī·dào}。', '{这|zhè}{件|jiàn}{事|shì}{他|tā}{知道|zhī·dào}{迟早|chí zǎo}{了|le}{会|huì}。'], why: 'A + {迟早|chízǎo} + {会|huì} + ige.', point: 2 },
+    { q: 'Mit jelent az {早晚|zǎowǎn} ebben: {好作品早晚会被人看到|hǎo zuòpǐn zǎowǎn huì bèi rén kàndào}?', a: 'előbb-utóbb', wrong: ['reggel és este', 'túl korán', 'túl későn'], why: 'Határozóként „előbb-utóbb".', point: 2 },
+    { q: '„A végén óhatatlanul elsírtam magam."', a: '{读|dú}{到|dào}{最后|zuì·hòu}，{我|wǒ}{不免|bù miǎn}{流|liú}{了|le}{泪|lèi}。', wrong: ['{读|dú}{到|dào}{最后|zuì·hòu}，{我|wǒ}{流|liú}{了|le}{泪|lèi}{不免|bù miǎn}。', '{不免|bù miǎn}{读|dú}{到|dào}{我|wǒ}{最后|zuì·hòu}{流|liú}{泪|lèi}。', '{读|dú}{到|dào}{最后|zuì·hòu}，{流|liú}{泪|lèi}{是|shì}{不免|bù miǎn}{的|de}。'], why: 'A + {不免|bùmiǎn} + ige; állítmányként nem áll.', point: 3 },
+    { q: 'Miben más a {不免|bùmiǎn}, mint a {难免|nánmiǎn}?', a: 'nem lehet állítmány', wrong: ['csak a jövőről szól', 'tagadó a jelentése', 'csak kérdésben áll'], why: '{是难免的|shì nánmiǎn de} — {不免|bùmiǎn}-nel nem megy.', point: 3 },
+    { q: '„Zuhog, még jó, hogy hoztam esernyőt."', a: '{下|xià}{大|dà}{雨|yǔ}{了|le}，{好在|hǎo zài}{我|wǒ}{带|dài}{了|le}{伞|sǎn}。', wrong: ['{下|xià}{大|dà}{雨|yǔ}{了|le}，{可惜|kě·xī}{我|wǒ}{带|dài}{了|le}{伞|sǎn}。', '{好在|hǎo zài}{下|xià}{大|dà}{雨|yǔ}{了|le}，{我|wǒ}{伞|sǎn}{带|dài}{了|le}{吗|ma}。', '{下|xià}{大|dà}{雨|yǔ}{好在|hǎo zài}，{我|wǒ}{带|dài}{伞|sǎn}{了|le}{不|bù}。'], why: 'Nehéz helyzet, {好在|hǎozài} + szerencsés körülmény.', point: 4 },
+    { q: 'Melyik szóhoz áll közel a {好在|hǎozài}?', a: '{幸亏|xìngkuī}', wrong: ['{可惜|kěxī}', '{偏偏|piānpiān}', '{居然|jūrán}'], why: 'Mindkettő „szerencsére".', point: 4 },
+    { q: '„Attól kezdve soha többé nem kételkedtem magamban."', a: '{从|cóng}{那|nà}{以后|yǐ·hòu}，{我|wǒ}{再|zài}{也|yě}{没|méi}{怀疑|huái yí}{过|guo}{自己|zì·jǐ}。', wrong: ['{从|cóng}{那|nà}{以后|yǐ·hòu}，{我|wǒ}{再|zài}{也|yě}{不|bù}{怀疑|huái yí}{过|guo}{自己|zì·jǐ}。', '{从|cóng}{那|nà}{以后|yǐ·hòu}，{我|wǒ}{没|méi}{再|zài}{也|yě}{自己|zì·jǐ}{怀疑|huái yí}{过|guo}。', '{再|zài}{也|yě}{从|cóng}{那|nà}{以后|yǐ·hòu}，{我|wǒ}{自己|zì·jǐ}{没|méi}{怀疑|huái yí}。'], why: 'Múlt, „azóta": {再也没|zài yě méi} + ige + {过|guo}.', point: 5 },
+    { q: '„Soha többé nem késem el!" (ígéret)', a: '{我|wǒ}{再|zài}{也|yě}{不|bù}{迟到|chí dào}{了|le}！', wrong: ['{我|wǒ}{再|zài}{也|yě}{没|méi}{迟到|chí dào}{过|guo}{了|le}！', '{我|wǒ}{不|bù}{再|zài}{也|yě}{迟到|chí dào}{了|le}！', '{再|zài}{也|yě}{我|wǒ}{迟到|chí dào}{不|bù}{了|le}！'], why: 'Jövő, ígéret: {再也不|zài yě bù}.', point: 5 },
+    { q: 'Mit jelent a {作家|zuòjiā}?', a: 'író', wrong: ['kiadó', 'olvasó', 'szerkesztő'], why: '{苏文是作家|Sū Wén shì zuòjiā}.' },
+    { q: 'Mit jelent a {拒绝|jùjué}?', a: 'elutasít', wrong: ['elfogad', 'kiad', 'kijavít'], why: '{被出版社拒绝了|bèi chūbǎnshè jùjué le}.' },
+    { q: 'Mit jelent a {偷懒|tōu lǎn}?', a: 'lustálkodik', wrong: ['lop', 'siet', 'túlórázik'], why: '{我再也不敢偷懒了|wǒ zài yě bù gǎn tōu lǎn le}.' },
+    { q: 'Mit jelent az {作品|zuòpǐn}?', a: 'mű, alkotás', wrong: ['munkahely', 'házi feladat', 'termék'], why: '{好作品|hǎo zuòpǐn} „jó mű".' },
+    { q: 'Mit jelent: {能请您签个名吗|néng qǐng nín qiān ge míng ma}？', a: 'Aláírná nekem?', wrong: ['Megmondaná a nevét?', 'Írna nekem egy levelet?', 'Elolvasná a könyvem?'], why: '{签名|qiānmíng} „aláír, dedikál".' },
+    { q: 'Mit jelent a {怀疑|huáiyí}?', a: 'kételkedik', wrong: ['bízik', 'emlékszik', 'remél'], why: '{怀疑自己|huáiyí zìjǐ} „kételkedik magában".' }
+  ]
+},
+
+/* ════════════════════════════════════════════════════
+   HSK 5 · 18. LECKE — 越是…越, 与…相比, 不仅仅, 有利于, 在于
+   ════════════════════════════════════════════════════ */
+{
+  id: 'l88', no: 88, badge: '18', kicker: 'HSK 5 · 18. lecke', label: 'HSK 5 · 18. lecke',
+  title: 'Mesterséges intelligencia — minél egyszerűbb, annál pontosabb',
+  lead: 'Technológiáról vitatkozol: fokozatos összefüggést hangsúlyozol (越是…越…), írott stílusban hasonlítasz (与…相比), bővíted az állítást (不仅仅), elmondod, mi mire előnyös (有利于), és megnevezed, min múlik a dolog (在于).',
+  cando: [
+    'Nyomatékos „minél…, annál…" összefüggést mondasz: 越是…，越….',
+    'Írott stílusban hasonlítasz össze: 与…相比，….',
+    'Bővíted az állítást (不仅仅…), és elmondod, mi mire előnyös (有利于…).',
+    'Megnevezed, min múlik valami: 关键在于… · 不在于…，而在于….'
+  ],
+  intro: [
+    'A cég új, mesterséges intelligencián alapuló fordítóprogramot próbál ki. A csapatmegbeszélésen Xiao Li, Anna és Chen igazgató arról vitatkoznak, mit tud a gép, és mire van még szükség az emberre.',
+    'Ebben a leckében az érvelő, elemző nyelv szerkezeteit tanulod: összefüggés, összehasonlítás, előny és a kérdés lényege.'
+  ],
+  dialogue: {
+    title: 'Ember vagy gép?',
+    scene: 'Kedd délelőtt a tárgyalóban. Xiao Li, Anna és Chen igazgató.',
+    lines: [
+      { who: 'Xiao Li', zh: '{现在|xiàn·zài}{的|de}{翻译|fān yì}{软件|ruǎn jiàn}{越|yuè}{来|lái}{越|yuè}{厉害|lì·hai}{了|le}，{越|yuè}{是|shì}{简单|jiǎn·dān}{的|de}{句子|jù·zi}，{翻|fān}{得|de}{越|yuè}{准确|zhǔn què}。', hu: 'A mai fordítóprogramok egyre ügyesebbek: minél egyszerűbb a mondat, annál pontosabb a fordítás.' },
+      { who: 'Anna', zh: '{不过|bú·guò}{越|yuè}{是|shì}{有|yǒu}{文化|wén·huà}{背景|bèi jǐng}{的|de}{句子|jù·zi}，{越|yuè}{容易|róng·yì}{翻|fān}{错|cuò}，{比如|bǐ·rú}{成语|chéng yǔ}。', hu: 'Csakhogy minél inkább kulturális háttere van egy mondatnak, annál könnyebb félrefordítani — például a szólásokat.' },
+      { who: 'Chen', zh: '{与|yǔ}{人工|rén gōng}{翻译|fān yì}{相比|xiāng bǐ}，{机器|jī qì}{翻译|fān yì}{的|de}{速度|sù·dù}{快|kuài}{得|de}{多|duō}，{可是|kě·shì}{质量|zhì·liàng}{还|hái}{不|bú}{够|gòu}{稳定|wěn dìng}。', hu: 'Az emberi fordításhoz képest a gépi sokkal gyorsabb, de a minősége még nem elég megbízható.' },
+      { who: 'Xiao Li', zh: '{那|nà}{以后|yǐ·hòu}{我们|wǒ·men}{还|hái}{需要|xū·yào}{翻译|fān yì}{吗|ma}？', hu: 'Akkor lesz még szükségünk fordítókra?' },
+      { who: 'Chen', zh: '{当然|dāng·rán}{需要|xū·yào}。{人工|rén gōng}{智能|zhì néng}{不|bù}{仅|jǐn}{仅|jǐn}{是|shì}{工具|gōng jù}，{也|yě}{有利于|yǒu lì yú}{我们|wǒ·men}{提高|tí gāo}{效率|xiào·lǜ}。{关键|guān jiàn}{在于|zài yú}{我们|wǒ·men}{怎么|zěn·me}{用|yòng}{它|tā}。', hu: 'Persze. A mesterséges intelligencia nem csupán eszköz, segít a hatékonyságunk növelésében is. A lényeg azon múlik, hogyan használjuk.' },
+      { who: 'Anna', zh: '{我|wǒ}{同意|tóng yì}。{问题|wèn·tí}{不|bú}{在于|zài yú}{机器|jī qì}{能|néng}{不|bu}{能|néng}{代替|dài tì}{人|rén}，{而|ér}{在于|zài yú}{人|rén}{能|néng}{不|bu}{能|néng}{学|xué}{会|huì}{和|hé}{机器|jī qì}{合作|hé zuò}。', hu: 'Egyetértek. A kérdés nem az, hogy a gép helyettesítheti-e az embert, hanem az, hogy az ember megtanul-e együttműködni a géppel.' },
+      { who: 'Chen', zh: '{说|shuō}{得|de}{好|hǎo}！{下|xià}{个|ge}{月|yuè}{我们|wǒ·men}{就|jiù}{开始|kāi·shǐ}{试用|shì yòng}{这|zhè}{个|ge}{软件|ruǎn jiàn}。', hu: 'Jól mondod! Jövő hónaptól kipróbáljuk ezt a programot.' }
+    ],
+    notes: [
+      'Az {人工智能|réngōng zhìnéng} „mesterséges intelligencia" (rövidítve AI); az {人工|réngōng} itt „emberi, kézi".',
+      'A {翻错|fān cuò} „félrefordít": ige + {错|cuò} eredményhatározó.',
+      'A {试用|shìyòng} „kipróbál, próbaidőre használ".'
+    ]
+  },
+  points: [
+    {
+      title: '{越是|yuè shì} … {越|yuè} …', sub: 'minél inkább …, annál …',
+      pattern: '{越|yuè}{是|shì} + A，(B) + {越|yuè} + C',
+      body: 'A HSK 3-ban tanult {越|yuè}…{越|yuè}… nyomatékos, kissé írottabb változata: a {是|shì} kiemeli az első feltételt. {越是简单的句子，翻得越准确|yuè shì jiǎndān de jùzi, fān de yuè zhǔnquè} „minél egyszerűbb a mondat, annál pontosabb a fordítás", {越是着急，越容易出错|yuè shì zháojí, yuè róngyì chū cuò} „minél jobban siet az ember, annál könnyebben hibázik".',
+      examples: [
+        { zh: '{越|yuè}{是|shì}{简单|jiǎn·dān}{的|de}{句子|jù·zi}，{机器|jī qì}{翻|fān}{得|de}{越|yuè}{准确|zhǔn què}。', hu: 'Minél egyszerűbb a mondat, annál pontosabban fordít a gép.' },
+        { zh: '{越|yuè}{是|shì}{着急|zháo jí}，{越|yuè}{容易|róng·yì}{出|chū}{错|cuò}。', hu: 'Minél jobban siet az ember, annál könnyebben hibázik.' }
+      ]
+    },
+    {
+      title: '{与|yǔ} … {相比|xiāngbǐ}', sub: '… -hoz képest (írott)',
+      pattern: '{与|yǔ} / {跟|gēn} + B + {相比|xiāng bǐ}，A + …',
+      body: 'Az {与|yǔ}…{相比|xiāngbǐ} a HSK 4-ben tanult {跟|gēn}…{比起来|bǐ qǐlai} írott, hivatalos párja: {与人工翻译相比，机器翻译速度快得多|yǔ réngōng fānyì xiāngbǐ, jīqì fānyì sùdù kuài de duō} „az emberi fordításhoz képest a gépi sokkal gyorsabb". Cikkekben, beszámolókban, statisztikák leírásában gyakori.',
+      examples: [
+        { zh: '{与|yǔ}{人工|rén gōng}{翻译|fān yì}{相比|xiāng bǐ}，{机器|jī qì}{翻译|fān yì}{快|kuài}{得|de}{多|duō}。', hu: 'Az emberi fordításhoz képest a gépi sokkal gyorsabb.' },
+        { zh: '{与|yǔ}{去年|qù·nián}{相比|xiāng bǐ}，{今年|jīn·nián}{的|de}{游客|yóu·kè}{增加|zēng jiā}{了|le}{一|yí}{倍|bèi}。', hu: 'Tavalyhoz képest idén kétszer annyi turista jött.' }
+      ]
+    },
+    {
+      title: '{不仅仅|bùjǐnjǐn}', sub: 'nem csupán, nemcsak',
+      pattern: 'A + {不仅仅|bù jǐn jǐn} + {是|shì} + B，({也|yě} / {还|hái}) + …',
+      body: 'A HSK 4-ben tanult {不仅|bùjǐn} nyomatékosabb alakja: „<b>nem csupán</b>". {人工智能不仅仅是工具，也有利于我们提高效率|réngōng zhìnéng bùjǐnjǐn shì gōngjù, yě yǒulìyú wǒmen tígāo xiàolǜ} „nem csupán eszköz, hanem…", {学汉语不仅仅是为了工作|xué Hànyǔ bùjǐnjǐn shì wèile gōngzuò} „nem csupán a munka miatt tanulok kínaiul".',
+      examples: [
+        { zh: '{人工|rén gōng}{智能|zhì néng}{不|bù}{仅|jǐn}{仅|jǐn}{是|shì}{一|yí}{个|ge}{工具|gōng jù}。', hu: 'A mesterséges intelligencia nem csupán egy eszköz.' },
+        { zh: '{我|wǒ}{学|xué}{汉语|Hàn·yǔ}{不|bù}{仅|jǐn}{仅|jǐn}{是|shì}{为了|wèi·le}{工作|gōng·zuò}，{也|yě}{是|shì}{因为|yīn·wèi}{喜欢|xǐ·huan}{中国|Zhōng·guó}{文化|wén·huà}。', hu: 'Nem csupán a munka miatt tanulok kínaiul, hanem mert szeretem a kínai kultúrát.' }
+      ]
+    },
+    {
+      title: '{有利于|yǒulìyú}', sub: 'kedvez, előnyös valaminek',
+      pattern: 'A + {有利于|yǒu lì yú} + B · A + {不利于|bú lì yú} + B',
+      body: 'Az {有利于|yǒulìyú} azt mondja, hogy valami <b>kedvez, hasznára válik</b> valaminek, írott stílusban: {有利于提高效率|yǒulìyú tígāo xiàolǜ} „elősegíti a hatékonyság növelését", {多运动有利于健康|duō yùndòng yǒulìyú jiànkāng} „a sok mozgás jót tesz az egészségnek". Ellentéte: {不利于|búlìyú}. A HSK 4-ben tanult {对|duì}…{有好处|yǒu hǎochù} beszéltebb párja.',
+      examples: [
+        { zh: '{人工|rén gōng}{智能|zhì néng}{有利于|yǒu lì yú}{我们|wǒ·men}{提高|tí gāo}{效率|xiào·lǜ}。', hu: 'A mesterséges intelligencia elősegíti, hogy hatékonyabban dolgozzunk.' },
+        { zh: '{睡|shuì}{得|de}{太|tài}{晚|wǎn}{不|bú}{利|lì}{于|yú}{健康|jiàn kāng}。', hu: 'A túl késői lefekvés nem tesz jót az egészségnek.' }
+      ]
+    },
+    {
+      title: '{在于|zàiyú}', sub: 'abban rejlik, azon múlik',
+      pattern: 'A + {在于|zài yú} + B · {不在于|bú zài yú} A，{而在于|ér zài yú} B',
+      body: 'Az {在于|zàiyú} megnevezi, <b>min múlik, miben rejlik</b> valami: {关键在于我们怎么用它|guānjiàn zàiyú wǒmen zěnme yòng tā} „a lényeg azon múlik, hogyan használjuk". Szembeállításban különösen gyakori: {问题不在于|wèntí bú zàiyú}…，{而在于|ér zàiyú}… „a kérdés nem az, hogy…, hanem az, hogy…".',
+      examples: [
+        { zh: '{关键|guān jiàn}{在于|zài yú}{我们|wǒ·men}{怎么|zěn·me}{用|yòng}{它|tā}。', hu: 'A lényeg azon múlik, hogyan használjuk.' },
+        { zh: '{学|xué}{好|hǎo}{外语|wài yǔ}{不|bú}{在于|zài yú}{聪明|cōng·míng}，{而|ér}{在于|zài yú}{坚持|jiān·chí}。', hu: 'A nyelvtanulás sikere nem az okosságon, hanem a kitartáson múlik.' }
+      ]
+    }
+  ],
+  phrases: [
+    { zh: '{说|shuō}{得|de}{好|hǎo}！', hu: 'Jól mondod!' },
+    { zh: '{机器|jī qì}{代替|dài tì}{不|bù}{了|liǎo}{人|rén}。', hu: 'A gép nem tudja helyettesíteni az embert.' },
+    { zh: '{这|zhè}{个|ge}{软件|ruǎn jiàn}{好|hǎo}{用|yòng}{吗|ma}？', hu: 'Jól használható ez a program?' },
+    { zh: '{关键|guān jiàn}{是|shì}{怎么|zěn·me}{用|yòng}。', hu: 'Az a lényeg, hogyan használjuk.' }
+  ],
+  words: [
+    { title: 'Szavak',
+      items: [
+        { zh: '{人工智能|rén gōng zhì néng}', pinyin: 'réngōng zhìnéng', hu: 'mesterséges intelligencia' },
+        { zh: '{软件|ruǎn jiàn}', pinyin: 'ruǎnjiàn', hu: 'szoftver, program' },
+        { zh: '{准确|zhǔn què}', pinyin: 'zhǔnquè', hu: 'pontos' },
+        { zh: '{背景|bèi jǐng}', pinyin: 'bèijǐng', hu: 'háttér' },
+        { zh: '{人工|rén gōng}', pinyin: 'réngōng', hu: 'emberi (munka), kézi' },
+        { zh: '{机器|jī qì}', pinyin: 'jīqì', hu: 'gép' },
+        { zh: '{相比|xiāng bǐ}', pinyin: 'xiāngbǐ', hu: 'összehasonlít; (yǔ … xiāngbǐ) …-hoz képest' },
+        { zh: '{不仅仅|bù jǐn jǐn}', pinyin: 'bùjǐnjǐn', hu: 'nem csupán' },
+        { zh: '{有利于|yǒu lì yú}', pinyin: 'yǒulìyú', hu: 'kedvez, előnyös' },
+        { zh: '{在于|zài yú}', pinyin: 'zàiyú', hu: 'abban rejlik, azon múlik' },
+        { zh: '{关键|guān jiàn}', pinyin: 'guānjiàn', hu: 'kulcs(kérdés), lényeg' },
+        { zh: '{代替|dài tì}', pinyin: 'dàitì', hu: 'helyettesít' }
+      ] },
+    { title: 'Ráadás',
+      items: [
+        { zh: '{程序|chéng xù}', pinyin: 'chéngxù', hu: 'program; eljárás' },
+        { zh: '{机器人|jī qì rén}', pinyin: 'jīqìrén', hu: 'robot' },
+        { zh: '{试用|shì yòng}', pinyin: 'shìyòng', hu: 'kipróbál' },
+        { zh: '{算法|suàn fǎ}', pinyin: 'suànfǎ', hu: 'algoritmus' }
+      ] }
+  ],
+  culture: [
+    { title: 'Hűség, érthetőség, elegancia', text: 'A 19–20. század fordulóján élt fordító, {严复|Yán Fù} három követelményt fogalmazott meg a jó fordítással szemben: {信、达、雅|xìn, dá, yǎ} — hűség az eredetihez, érthetőség és elegancia. A három írásjegyet ma is idézik, amikor a fordítás minőségéről esik szó, akár emberi, akár gépi fordításról.' },
+    { title: 'Okos mindennapok', text: 'Kínában a mesterséges intelligencia a hétköznapok része: arcfelismeréssel lehet belépni egyes irodaházakba, hangvezérelt hangszórók olvassák fel a híreket, a nagyvárosokban pedig kísérleti jelleggel önvezető taxik is közlekednek.' }
+  ],
+  reading: {
+    title: '{人|rén}{和|hé}{机器|jī qì}', titleHu: 'Ember és gép',
+    text: [
+      { zh: '{安娜|Ān·nà}{的|de}{公司|gōng·sī}{开始|kāi·shǐ}{试用|shì yòng}{一|yí}{个|ge}{人工|rén gōng}{智能|zhì néng}{翻译|fān yì}{软件|ruǎn jiàn}。', hu: 'Anna cége kipróbál egy mesterséges intelligencián alapuló fordítóprogramot.' },
+      { zh: '{与|yǔ}{以前|yǐ·qián}{相比|xiāng bǐ}，{翻译|fān yì}{一|yí}{份|fèn}{合同|hé·tong}{的|de}{时间|shí·jiān}{减少|jiǎn shǎo}{了|le}{一|yí}{半|bàn}。', hu: 'Korábbihoz képest egy szerződés lefordítása feleannyi időt vesz igénybe.' },
+      { zh: '{不过|bú·guò}{安娜|Ān·nà}{发现|fā·xiàn}，{越|yuè}{是|shì}{重要|zhòng·yào}{的|de}{文件|wén jiàn}，{越|yuè}{需要|xū·yào}{人|rén}{仔细|zǐ xì}{检查|jiǎn chá}。', hu: 'Anna azonban rájött: minél fontosabb egy dokumentum, annál inkább szükség van rá, hogy ember is alaposan átnézze.', par: true },
+      { zh: '{她|tā}{认为|rèn·wéi}，{机器|jī qì}{不|bù}{仅|jǐn}{仅|jǐn}{能|néng}{节省|jié shěng}{时间|shí·jiān}，{还|hái}{有利于|yǒu lì yú}{大家|dà·jiā}{把|bǎ}{精力|jīng lì}{放|fàng}{在|zài}{更|gèng}{重要|zhòng·yào}{的|de}{工作|gōng·zuò}{上|shang}。', hu: 'Szerinte a gép nemcsak időt takarít meg, hanem segít abban is, hogy mindenki a fontosabb munkára összpontosítson.' },
+      { zh: '“{技术|jì shù}{本身|běn shēn}{没有|méi·yǒu}{好|hǎo}{坏|huài}，{关键|guān jiàn}{在于|zài yú}{人|rén}{怎么|zěn·me}{用|yòng}。”{安娜|Ān·nà}{说|shuō}。', hu: '„A technika önmagában se nem jó, se nem rossz — azon múlik, hogyan használja az ember" — mondja Anna.', par: true }
+    ],
+    words: [ { zh: '{精力|jīng lì}', hu: 'energia, erő (figyelem)' } ],
+    questions: [
+      { q: 'Mit próbál ki Anna cége?', a: 'egy MI-alapú fordítóprogramot', wrong: ['egy új telefont', 'egy robotot', 'egy új irodát'], why: '{人工智能翻译软件|réngōng zhìnéng fānyì ruǎnjiàn}.' },
+      { q: 'Mennyivel gyorsabb a szerződésfordítás?', a: 'feleannyi idő alatt kész', wrong: ['tízszer gyorsabb', 'ugyanannyi ideig tart', 'lassabb lett'], why: '{时间减少了一半|shíjiān jiǎnshǎo le yí bàn}.' },
+      { q: 'Mire jött rá Anna?', a: 'a fontos iratokat embernek is át kell néznie', wrong: ['a gép mindig hibázik', 'nincs szükség fordítókra', 'a program túl drága'], why: '{越是重要的文件，越需要人仔细检查|yuè shì zhòngyào de wénjiàn, yuè xūyào rén zǐxì jiǎnchá}.' },
+      { q: 'Min múlik Anna szerint a technika értéke?', a: 'azon, hogyan használjuk', wrong: ['az árán', 'a sebességén', 'a gyártón'], why: '{关键在于人怎么用|guānjiàn zàiyú rén zěnme yòng}.' }
+    ]
+  },
+  quiz: [
+    { q: '„Minél egyszerűbb a mondat, annál pontosabb a fordítás."', a: '{越|yuè}{是|shì}{简单|jiǎn·dān}{的|de}{句子|jù·zi}，{翻|fān}{得|de}{越|yuè}{准确|zhǔn què}。', wrong: ['{越|yuè}{是|shì}{简单|jiǎn·dān}{的|de}{句子|jù·zi}，{翻|fān}{得|de}{很|hěn}{准确|zhǔn què}{越|yuè}。', '{简单|jiǎn·dān}{越|yuè}{是|shì}{的|de}{句子|jù·zi}，{越|yuè}{翻|fān}{得|de}{准确|zhǔn què}{是|shì}。', '{是|shì}{越|yuè}{简单|jiǎn·dān}{句子|jù·zi}{的|de}，{准确|zhǔn què}{越|yuè}{翻|fān}{得|de}。'], why: '{越是|yuè shì} A, … {越|yuè} B.', point: 1 },
+    { q: 'Mit tesz hozzá a {是|shì} a {越是|yuè shì}…{越|yuè} szerkezetben?', a: 'nyomatékot', wrong: ['tagadást', 'múlt időt', 'kérdő jelleget'], why: 'A {越|yuè}…{越|yuè} nyomatékos alakja.', point: 1 },
+    { q: '„Tavalyhoz képest idén kétszer annyi turista jött." (írott)', a: '{与|yǔ}{去年|qù·nián}{相比|xiāng bǐ}，{今年|jīn·nián}{的|de}{游客|yóu·kè}{增加|zēng jiā}{了|le}{一|yí}{倍|bèi}。', wrong: ['{与|yǔ}{去年|qù·nián}{比|bǐ}{相|xiāng}，{今年|jīn·nián}{的|de}{游客|yóu·kè}{增加|zēng jiā}{了|le}{一|yí}{倍|bèi}。', '{相比|xiāng bǐ}{去年|qù·nián}{与|yǔ}，{游客|yóu·kè}{今年|jīn·nián}{一|yí}{倍|bèi}{增加|zēng jiā}。', '{今年|jīn·nián}{与|yǔ}{相比|xiāng bǐ}{去年|qù·nián}{的|de}{游客|yóu·kè}{增加|zēng jiā}{一|yí}{倍|bèi}。'], why: '{与|yǔ} B {相比|xiāngbǐ}, A ….', point: 2 },
+    { q: 'Melyik a {与|yǔ}…{相比|xiāngbǐ} beszéltebb párja?', a: '{跟|gēn}…{比起来|bǐ qǐlai}', wrong: ['{一|yī}…{就|jiù}', '{越|yuè}…{越|yuè}', '{连|lián}…{都|dōu}'], why: 'Mindkettő „…-hoz képest".', point: 2 },
+    { q: '„Nem csupán a munka miatt tanulok kínaiul."', a: '{我|wǒ}{学|xué}{汉语|Hàn·yǔ}{不|bù}{仅|jǐn}{仅|jǐn}{是|shì}{为了|wèi·le}{工作|gōng·zuò}。', wrong: ['{我|wǒ}{学|xué}{汉语|Hàn·yǔ}{是|shì}{为了|wèi·le}{不|bù}{仅|jǐn}{仅|jǐn}{工作|gōng·zuò}。', '{不|bù}{仅|jǐn}{仅|jǐn}{我|wǒ}{为了|wèi·le}{学|xué}{汉语|Hàn·yǔ}{是|shì}{工作|gōng·zuò}。', '{我|wǒ}{不|bù}{学|xué}{汉语|Hàn·yǔ}{仅|jǐn}{仅|jǐn}{为了|wèi·le}{是|shì}{工作|gōng·zuò}。'], why: 'A + {不仅仅是|bùjǐnjǐn shì} + B.', point: 3 },
+    { q: '„A sok mozgás jót tesz az egészségnek." (írott)', a: '{多|duō}{运动|yùn·dòng}{有利于|yǒu lì yú}{健康|jiàn kāng}。', wrong: ['{多|duō}{运动|yùn·dòng}{健康|jiàn kāng}{有利于|yǒu lì yú}。', '{有利于|yǒu lì yú}{多|duō}{健康|jiàn kāng}{运动|yùn·dòng}。', '{多|duō}{运动|yùn·dòng}{不|bú}{利|lì}{于|yú}{健康|jiàn kāng}。'], why: 'A + {有利于|yǒulìyú} + B.', point: 4 },
+    { q: 'Mi az {有利于|yǒulìyú} ellentéte?', a: '{不利于|búlìyú}', wrong: ['{没利于|méi lìyú}', '{有害于|yǒu hàiyú}', '{无利|wúlì}'], why: 'Tagadva: {不利于|búlìyú}.', point: 4 },
+    { q: '„A lényeg azon múlik, hogyan használjuk."', a: '{关键|guān jiàn}{在于|zài yú}{我们|wǒ·men}{怎么|zěn·me}{用|yòng}。', wrong: ['{关键|guān jiàn}{我们|wǒ·men}{在于|zài yú}{怎么|zěn·me}{用|yòng}。', '{在于|zài yú}{关键|guān jiàn}{怎么|zěn·me}{我们|wǒ·men}{用|yòng}。', '{我们|wǒ·men}{怎么|zěn·me}{用|yòng}{关键|guān jiàn}{于|yú}{在|zài}。'], why: 'A + {在于|zàiyú} + B.', point: 5 },
+    { q: 'Mit jelent: {学好外语不在于聪明，而在于坚持|xué hǎo wàiyǔ bú zàiyú cōngming, ér zàiyú jiānchí}。', a: 'A nyelvtanulás a kitartáson múlik, nem az okosságon.', wrong: ['Csak okos emberek tanulhatnak nyelvet.', 'Az okosság és a kitartás egyformán fontos.', 'A kitartás nem segít a nyelvtanulásban.'], why: '{不在于|bú zàiyú}…，{而在于|ér zàiyú}….', point: 5 },
+    { q: 'Mit jelent az {人工智能|réngōng zhìnéng}?', a: 'mesterséges intelligencia', wrong: ['emberi munkaerő és tudás', 'okostelefonos alkalmazás', 'automata robotgyár'], why: 'Rövidítve: AI.' },
+    { q: 'Mit jelent a {准确|zhǔnquè}?', a: 'pontos', wrong: ['gyors', 'olcsó', 'egyszerű'], why: '{翻得越准确|fān de yuè zhǔnquè}.' },
+    { q: 'Mit jelent a {代替|dàitì}?', a: 'helyettesít', wrong: ['segít', 'lefordít', 'irányít'], why: '{机器代替不了人|jīqì dàitì bu liǎo rén}.' },
+    { q: 'Mit jelent a {关键|guānjiàn}?', a: 'lényeg', wrong: ['kulcscsomó', 'zár', 'jelszó'], why: '{关键在于|guānjiàn zàiyú}…' },
+    { q: 'Mit jelent a {背景|bèijǐng}?', a: 'háttér', wrong: ['előtér', 'hátizsák', 'felület'], why: '{文化背景|wénhuà bèijǐng} „kulturális háttér".' },
+    { q: 'Mit jelent a {软件|ruǎnjiàn}?', a: 'szoftver', wrong: ['hardver', 'kábel', 'képernyő'], why: '{翻译软件|fānyì ruǎnjiàn} „fordítóprogram".' },
+    { q: 'Mit jelent: {说得好|shuō de hǎo}！', a: 'Jól mondod!', wrong: ['Beszélj hangosabban!', 'Ezt nem kellett volna!', 'Mondd még egyszer!'], why: 'Egyetértés, dicséret.' }
+  ]
 }
 
 ];

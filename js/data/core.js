@@ -1122,7 +1122,29 @@ const HANZIFLOW_PATH = [
     module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l86&round=listen' },
   { id: 'l86-read', glyph: '读', title: 'Olvasás: Hétvégi önkéntes',
     desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
-    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l86&round=read' }
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l86&round=read' },
+
+  // ── HSK 5 · 17. lecke ──
+  { id: 'l87-lesson', glyph: '作', title: 'Magyarázat: 依然, 早晚 · 迟早, 不免, 好在, 再也不 · 再也没',
+    desc: 'Egy írónő estje: még mindig, előbb-utóbb, óhatatlanul, szerencsére, soha többé.',
+    module: 'lesson', href: 'pages/lesson.html?id=l87' },
+  { id: 'l87-listen', glyph: '听', title: 'Hallás: író-olvasó találkozó',
+    desc: 'A lecke mondatai hang után: mit jelent, amit hallasz?',
+    module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l87&round=listen' },
+  { id: 'l87-read', glyph: '读', title: 'Olvasás: Su Wen története',
+    desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l87&round=read' },
+
+  // ── HSK 5 · 18. lecke ──
+  { id: 'l88-lesson', glyph: '机', title: 'Magyarázat: 越是…越, 与…相比, 不仅仅, 有利于, 在于',
+    desc: 'Mesterséges intelligencia: minél…, annál, …-hoz képest, nem csupán, kedvez, azon múlik.',
+    module: 'lesson', href: 'pages/lesson.html?id=l88' },
+  { id: 'l88-listen', glyph: '听', title: 'Hallás: ember vagy gép?',
+    desc: 'A lecke mondatai hang után: mit jelent, amit hallasz?',
+    module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l88&round=listen' },
+  { id: 'l88-read', glyph: '读', title: 'Olvasás: Ember és gép',
+    desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l88&round=read' }
 ];
 
 const HANZIFLOW_PATH_UNITS = [
@@ -1335,5 +1357,9 @@ const HANZIFLOW_PATH_UNITS = [
   { id: 'u-l85', kicker: 'HSK 5 · 15. lecke', title: 'Kínai szólások', sub: '一举两得, 入乡随俗, 半途而废, 千方百计, 名副其实',
     steps: ['l85-lesson', 'l85-listen', 'l85-read'] },
   { id: 'u-l86', kicker: 'HSK 5 · 16. lecke', title: 'Önkéntes hétvége', sub: '根本, 明明, 亲自, 顺便, 赶紧 · 赶快',
-    steps: ['l86-lesson', 'l86-listen', 'l86-read'] }
+    steps: ['l86-lesson', 'l86-listen', 'l86-read'] },
+  { id: 'u-l87', kicker: 'HSK 5 · 17. lecke', title: 'Egy írónő estje', sub: '依然, 早晚 · 迟早, 不免, 好在, 再也不 · 再也没',
+    steps: ['l87-lesson', 'l87-listen', 'l87-read'] },
+  { id: 'u-l88', kicker: 'HSK 5 · 18. lecke', title: 'Mesterséges intelligencia', sub: '越是…越, 与…相比, 不仅仅, 有利于, 在于',
+    steps: ['l88-lesson', 'l88-listen', 'l88-read'] }
 ];
