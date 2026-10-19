@@ -1243,7 +1243,29 @@ const HANZIFLOW_PATH = [
     module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l94&round=listen' },
   { id: 'l94-read', glyph: '读', title: 'Olvasás: Egy e-mail okozta félreértés',
     desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
-    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l94&round=read' }
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l94&round=read' },
+
+  // ── HSK 6 · 5. lecke ──
+  { id: 'l95-lesson', glyph: '毫', title: 'Magyarázat: 毫不, 毫无, 丝毫, 再三, 一度',
+    desc: 'Újévi est Budapesten: egyáltalán nem, semmi, a legcsekélyebb mértékben sem, újra meg újra, egy időben.',
+    module: 'lesson', href: 'pages/lesson.html?id=l95' },
+  { id: 'l95-listen', glyph: '听', title: 'Hallás: elveszett helyszín',
+    desc: 'A lecke mondatai hang után: mit jelent, amit hallasz?',
+    module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l95&round=listen' },
+  { id: 'l95-read', glyph: '读', title: 'Olvasás: Újévi est Budapesten',
+    desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l95&round=read' },
+
+  // ── HSK 6 · 6. lecke ──
+  { id: 'l96-lesson', glyph: '例', title: 'Magyarázat: 以…为例, 乃至, 亦, 相对而言, 归根到底',
+    desc: 'Előadás az egyetemen: példaként véve, sőt, is, viszonylag, végső soron.',
+    module: 'lesson', href: 'pages/lesson.html?id=l96' },
+  { id: 'l96-listen', glyph: '听', title: 'Hallás: kérdések az előadás után',
+    desc: 'A lecke mondatai hang után: mit jelent, amit hallasz?',
+    module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l96&round=listen' },
+  { id: 'l96-read', glyph: '读', title: 'Olvasás: Anna előadása',
+    desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l96&round=read' }
 ];
 
 const HANZIFLOW_PATH_UNITS = [
@@ -1482,5 +1504,9 @@ const HANZIFLOW_PATH_UNITS = [
   { id: 'u-l93', kicker: 'HSK 6 · 3. lecke', title: 'Tárgyalás', sub: '固然…但, 即便…也, 倘若, 势必, 一味',
     steps: ['l93-lesson', 'l93-listen', 'l93-read'] },
   { id: 'u-l94', kicker: 'HSK 6 · 4. lecke', title: 'Egy félreértett e-mail', sub: '与其说…不如说, 换言之, 反之, 何尝, 岂不是',
-    steps: ['l94-lesson', 'l94-listen', 'l94-read'] }
+    steps: ['l94-lesson', 'l94-listen', 'l94-read'] },
+  { id: 'u-l95', kicker: 'HSK 6 · 5. lecke', title: 'Újévi est Budapesten', sub: '毫不, 毫无, 丝毫, 再三, 一度',
+    steps: ['l95-lesson', 'l95-listen', 'l95-read'] },
+  { id: 'u-l96', kicker: 'HSK 6 · 6. lecke', title: 'Előadás az egyetemen', sub: '以…为例, 乃至, 亦, 相对而言, 归根到底',
+    steps: ['l96-lesson', 'l96-listen', 'l96-read'] }
 ];
