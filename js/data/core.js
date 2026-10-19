@@ -737,7 +737,29 @@ const HANZIFLOW_PATH = [
     module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l54&round=listen' },
   { id: 'l54-read', glyph: '读', title: 'Olvasás: A pénteki vacsora',
     desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
-    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l54&round=read' }
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l54&round=read' },
+
+  // ── HSK 4 · 5. lecke ──
+  { id: 'l55-lesson', glyph: '药', title: 'Magyarázat: 恐怕, 千万, 必须 · 不必, 不得不, 否则',
+    desc: 'Orvosnál: óvatos feltevés, nyomatékos kérés, muszáj és nem kell, kényszer, különben.',
+    module: 'lesson', href: 'pages/lesson.html?id=l55' },
+  { id: 'l55-listen', glyph: '听', title: 'Hallás: az orvosnál',
+    desc: 'A lecke mondatai hang után: mit jelent, amit hallasz?',
+    module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l55&round=listen' },
+  { id: 'l55-read', glyph: '读', title: 'Olvasás: Anna megfázott',
+    desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l55&round=read' },
+
+  // ── HSK 4 · 6. lecke ──
+  { id: 'l56-lesson', glyph: '船', title: 'Magyarázat: 既然…就, 于是, 竟然, 结果, 当…的时候',
+    desc: 'Kirándulás a vízi városba: ha már…, erre…, képzeld…, és a vége az lett…, amikor….',
+    module: 'lesson', href: 'pages/lesson.html?id=l56' },
+  { id: 'l56-listen', glyph: '听', title: 'Hallás: milyen volt a hétvége',
+    desc: 'A lecke mondatai hang után: mit jelent, amit hallasz?',
+    module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l56&round=listen' },
+  { id: 'l56-read', glyph: '读', title: 'Olvasás: Kirándulás a vízi városba',
+    desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l56&round=read' }
 ];
 
 const HANZIFLOW_PATH_UNITS = [
@@ -876,5 +898,9 @@ const HANZIFLOW_PATH_UNITS = [
   { id: 'u-l53', kicker: 'HSK 4 · 3. lecke', title: 'Az első értekezlet', sub: '按照, 根据, 通过, 进行, 由 + valaki + ige',
     steps: ['l53-lesson', 'l53-listen', 'l53-read'] },
   { id: 'u-l54', kicker: 'HSK 4 · 4. lecke', title: 'Vacsora a kollégákkal', sub: '尽管…还是 / 可是, 却, 而, 并不 · 并没有, 实在',
-    steps: ['l54-lesson', 'l54-listen', 'l54-read'] }
+    steps: ['l54-lesson', 'l54-listen', 'l54-read'] },
+  { id: 'u-l55', kicker: 'HSK 4 · 5. lecke', title: 'Megfáztam', sub: '恐怕, 千万 (别), 必须 · 不必, 不得不, 否则',
+    steps: ['l55-lesson', 'l55-listen', 'l55-read'] },
+  { id: 'u-l56', kicker: 'HSK 4 · 6. lecke', title: 'Kirándulás a vízi városba', sub: '既然…就, 于是, 竟然, 结果, 当…的时候',
+    steps: ['l56-lesson', 'l56-listen', 'l56-read'] }
 ];

@@ -10515,6 +10515,340 @@ const HANZIFLOW_COURSE = [
     { q: 'Mit jelent a {厉害|lìhai} dicséretként?', a: 'ügyes, nagyszerű', wrong: ['udvariatlan', 'szégyenlős', 'lusta'], why: '{真厉害|zhēn lìhai}！ „De ügyes!"' },
     { q: 'Mit jelent: {干杯|gān bēi}！', a: 'Egészségedre! (koccintás)', wrong: ['Jó étvágyat!', 'Én fizetek!', 'Kérek még egy pohárral!'], why: 'Szó szerint „szárazra a poharat".' }
   ]
+},
+/* ════════════════════════════════════════════════════
+   HSK 4 · 5. LECKE — 恐怕, 千万, 必须 · 不必, 不得不, 否则
+   ════════════════════════════════════════════════════ */
+{
+  id: 'l55', no: 55, badge: '5', kicker: 'HSK 4 · 5. lecke', label: 'HSK 4 · 5. lecke',
+  title: 'Megfáztam — különben rosszabb lesz',
+  lead: 'Orvosnál vagy: óvatosan feltételezel (恐怕是感冒了), nyomatékosan kérsz vagy tiltasz (千万别…), megmondod, mi kell és mi nem (必须 · 不必), kényszerről beszélsz (不得不), és figyelmeztetsz a következményre (否则…).',
+  cando: [
+    'Óvatos, aggódó feltevést mondasz: 恐怕….',
+    'Nyomatékosan kérsz vagy tiltasz: 千万 (别)….',
+    'Megkülönbözteted a 必须 („muszáj") és a 不必 („nem kell") jelentését.',
+    'Kényszert fejezel ki (不得不), és figyelmeztetsz: …，否则….'
+  ],
+  intro: [
+    'A nagy esőben Anna nem vitt esernyőt, és másnapra megfázott. Elmegy a kórházba, ahol az orvos megvizsgálja.',
+    'Ebben a leckében kötelezettségről, tanácsról és figyelmeztetésről beszélsz: „muszáj" ({必须|bìxū}), „nem kell" ({不必|búbì}), „kénytelen" ({不得不|bùdébù}), „semmiképp ne" ({千万别|qiānwàn bié}), „különben" ({否则|fǒuzé}).'
+  ],
+  dialogue: {
+    title: 'Az orvosnál',
+    scene: 'Kedd reggel egy sanghaji kórházban. Anna és az orvos.',
+    lines: [
+      { who: 'Orvos', zh: '{你|nǐ}{哪儿|nǎr}{不|bù}{舒服|shū·fu}？', hu: 'Mi a panasza?' },
+      { who: 'Anna', zh: '{我|wǒ}{头|tóu}{疼|téng}，{嗓子|sǎng·zi}{也|yě}{疼|téng}，{恐怕|kǒng·pà}{是|shì}{感冒|gǎn·mào}{了|le}。', hu: 'Fáj a fejem, és a torkom is, attól tartok, megfáztam.' },
+      { who: 'Orvos', zh: '{我|wǒ}{看|kàn}{一下|yí xià}……{有点儿|yǒu diǎnr}{发烧|fā shāo}。{你|nǐ}{必须|bì·xū}{多|duō}{喝|hē}{水|shuǐ}，{多|duō}{休息|xiū·xi}。', hu: 'Megnézem… kicsit lázas. Sokat kell innia és pihennie.' },
+      { who: 'Anna', zh: '{要|yào}{打|dǎ}{针|zhēn}{吗|ma}？{我|wǒ}{最|zuì}{怕|pà}{打|dǎ}{针|zhēn}{了|le}。', hu: 'Kell injekció? Attól félek a legjobban.' },
+      { who: 'Orvos', zh: '{不必|bú bì}{打|dǎ}{针|zhēn}，{吃|chī}{药|yào}{就|jiù}{行|xíng}。{不过|bú·guò}{这|zhè}{几|jǐ}{天|tiān}{你|nǐ}{千万|qiān·wàn}{别|bié}{去|qù}{上班|shàng bān}，{否则|fǒu·zé}{会|huì}{更|gèng}{严重|yán·zhòng}。', hu: 'Nem kell injekció, elég a gyógyszer. De ezekben a napokban semmiképp ne menjen dolgozni, különben rosszabb lesz.' },
+      { who: 'Anna', zh: '{可是|kě·shì}{下|xià}{周|zhōu}{有|yǒu}{一|yí}{个|ge}{很|hěn}{重要|zhòng·yào}{的|de}{会|huì}……', hu: 'De jövő héten van egy nagyon fontos értekezlet…' },
+      { who: 'Orvos', zh: '{身体|shēn·tǐ}{更|gèng}{重要|zhòng·yào}。{你|nǐ}{不得不|bù dé bù}{先|xiān}{休息|xiū·xi}{几|jǐ}{天|tiān}。', hu: 'Az egészség fontosabb. Nincs más választása: előbb pihennie kell néhány napot.' }
+    ],
+    notes: [
+      'A {嗓子|sǎngzi} „torok", a {发烧|fā shāo} „lázas", az {打针|dǎ zhēn} „injekciót ad, kap".',
+      'A {严重|yánzhòng} „súlyos, komoly": {病得很严重|bìng de hěn yánzhòng} „súlyos beteg".',
+      'Az orvos fiatalabb betegnek gyakran {你|nǐ}-t mond; a beteg az orvost inkább {您|nín}-nek szólítja.'
+    ]
+  },
+  points: [
+    {
+      title: '{恐怕|kǒngpà}', sub: 'attól tartok, (hogy); valószínűleg',
+      pattern: '({我|wǒ}) {恐怕|kǒng·pà} + feltevés',
+      body: 'A {恐怕|kǒngpà} óvatos, kissé aggódó feltevést vezet be: {恐怕是感冒了|kǒngpà shì gǎnmào le} „attól tartok, megfáztam", {恐怕他今天来不了|kǒngpà tā jīntiān lái bu liǎo} „félek, ma nem tud eljönni". Nem a félelem igéje (az a {怕|pà}), hanem udvarias „sajnos valószínűleg".',
+      examples: [
+        { zh: '{我|wǒ}{头|tóu}{疼|téng}，{恐怕|kǒng·pà}{是|shì}{感冒|gǎn·mào}{了|le}。', hu: 'Fáj a fejem, attól tartok, megfáztam.' },
+        { zh: '{雨|yǔ}{这么|zhè·me}{大|dà}，{恐怕|kǒng·pà}{他|tā}{来|lái}{不|bu}{了|liǎo}{了|le}。', hu: 'Ilyen nagy esőben attól tartok, nem tud eljönni.' }
+      ]
+    },
+    {
+      title: '{千万|qiānwàn}', sub: 'semmiképp; mindenképp (kérés, figyelmeztetés)',
+      pattern: '{千万|qiān·wàn} + {别|bié} / {不要|bú yào} + ige · {千万|qiān·wàn} + {要|yào} + ige',
+      body: 'A {千万|qiānwàn} nyomatékos kérés vagy figyelmeztetés, többnyire tiltással: {千万别去上班|qiānwàn bié qù shàngbān} „semmiképp ne menj dolgozni", {千万不要忘了|qiānwàn bú yào wàng le} „el ne felejtsd!". Állítva {要|yào}-val: {你千万要小心|nǐ qiānwàn yào xiǎoxīn} „nagyon vigyázz!". Csak kérésben, tanácsban használjuk, kijelentésben nem.',
+      examples: [
+        { zh: '{这|zhè}{几|jǐ}{天|tiān}{你|nǐ}{千万|qiān·wàn}{别|bié}{去|qù}{上班|shàng bān}。', hu: 'Ezekben a napokban semmiképp ne menj dolgozni.' },
+        { zh: '{路|lù}{上|shang}{千万|qiān·wàn}{要|yào}{小心|xiǎo·xīn}！', hu: 'Az úton nagyon vigyázz!' }
+      ],
+      mistakes: [
+        { bad: '{我|wǒ}{千万|qiān·wàn}{喜欢|xǐ·huan}{这|zhè}{本|běn}{书|shū}。', good: '{我|wǒ}{非常|fēi·cháng}{喜欢|xǐ·huan}{这|zhè}{本|běn}{书|shū}。', why: 'A {千万|qiānwàn} nem „nagyon", hanem nyomatékos kérés vagy tiltás.' }
+      ]
+    },
+    {
+      title: '{必须|bìxū} · {不必|búbì}', sub: 'muszáj · nem kell',
+      pattern: '{必须|bì·xū} + ige · {不必|bú bì} / {不用|bú yòng} + ige',
+      body: 'A {必须|bìxū} „muszáj, kell" erős kötelezettség: {你必须多休息|nǐ bìxū duō xiūxi} „sokat kell pihenned". Tagadása nem *{不必须|bù bìxū}, hanem {不必|búbì} vagy {不用|búyòng} „nem kell, nem szükséges": {不必打针|búbì dǎ zhēn} „nem kell injekció". A {不必|búbì} választékosabb, a {不用|búyòng} hétköznapi.',
+      tables: [
+        { caption: 'Kell vagy nem kell?',
+          head: ['', 'Jelentés', 'Példa'],
+          rows: [
+            ['{必须|bì·xū}', 'muszáj', '{必须|bì·xū}{吃|chī}{药|yào}'],
+            ['{不必|bú bì} · {不用|bú yòng}', 'nem kell', '{不必|bú bì}{打|dǎ}{针|zhēn}'],
+            ['{不能|bù néng}', 'nem szabad', '{不能|bù néng}{喝|hē}{酒|jiǔ}']
+          ] }
+      ],
+      examples: [
+        { zh: '{你|nǐ}{必须|bì·xū}{多|duō}{喝|hē}{水|shuǐ}，{多|duō}{休息|xiū·xi}。', hu: 'Sokat kell innod és pihenned.' },
+        { zh: '{不必|bú bì}{打|dǎ}{针|zhēn}，{吃|chī}{药|yào}{就|jiù}{行|xíng}。', hu: 'Nem kell injekció, elég a gyógyszer.' }
+      ],
+      mistakes: [
+        { bad: '{你|nǐ}{不|bù}{必须|bì·xū}{打|dǎ}{针|zhēn}。', good: '{你|nǐ}{不必|bú bì}{打|dǎ}{针|zhēn}。', why: 'A {必须|bìxū} tagadása {不必|búbì} vagy {不用|búyòng}.' }
+      ]
+    },
+    {
+      title: '{不得不|bùdébù}', sub: 'kénytelen, nincs más választás',
+      pattern: 'A + {不得不|bù dé bù} + ige',
+      body: 'A {不得不|bùdébù} szó szerint „nem teheti, hogy ne": a körülmények kényszerítenek. {你不得不先休息几天|nǐ bùdébù xiān xiūxi jǐ tiān} „nincs más választásod, pihenned kell néhány napot", {雨太大了，我们不得不回家|yǔ tài dà le, wǒmen bùdébù huí jiā} „túl nagy volt az eső, kénytelenek voltunk hazamenni". Hasonlít a HSK 3-ban tanult {只好|zhǐhǎo}-hoz; a {不得不|bùdébù} erősebben hangsúlyozza a kényszert.',
+      examples: [
+        { zh: '{你|nǐ}{不得不|bù dé bù}{先|xiān}{休息|xiū·xi}{几|jǐ}{天|tiān}。', hu: 'Nincs más választásod: előbb pihenned kell néhány napot.' },
+        { zh: '{雨|yǔ}{太|tài}{大|dà}{了|le}，{我们|wǒ·men}{不得不|bù dé bù}{回|huí}{家|jiā}。', hu: 'Túl nagy volt az eső, kénytelenek voltunk hazamenni.' }
+      ]
+    },
+    {
+      title: '{否则|fǒuzé}', sub: 'különben',
+      pattern: 'kérés / feltétel，{否则|fǒu·zé} + következmény',
+      body: 'A {否则|fǒuzé} „különben" azt mondja meg, mi történik, ha az első részben mondottak nem teljesülnek: {千万别去上班，否则会更严重|qiānwàn bié qù shàngbān, fǒuzé huì gèng yánzhòng} „semmiképp ne menj dolgozni, különben rosszabb lesz", {快走吧，否则要迟到了|kuài zǒu ba, fǒuzé yào chídào le} „siessünk, különben elkésünk". A második tagmondat elején áll.',
+      examples: [
+        { zh: '{千万|qiān·wàn}{别|bié}{去|qù}{上班|shàng bān}，{否则|fǒu·zé}{会|huì}{更|gèng}{严重|yán·zhòng}。', hu: 'Semmiképp ne menj dolgozni, különben rosszabb lesz.' },
+        { zh: '{我们|wǒ·men}{快|kuài}{走|zǒu}{吧|ba}，{否则|fǒu·zé}{要|yào}{迟到|chí dào}{了|le}。', hu: 'Siessünk, különben elkésünk.' }
+      ]
+    }
+  ],
+  phrases: [
+    { zh: '{你|nǐ}{哪儿|nǎr}{不|bù}{舒服|shū·fu}？', hu: 'Mi a panaszod?' },
+    { zh: '{我|wǒ}{好像|hǎo·xiàng}{感冒|gǎn·mào}{了|le}。', hu: 'Úgy tűnik, megfáztam.' },
+    { zh: '{多|duō}{喝|hē}{水|shuǐ}，{多|duō}{休息|xiū·xi}。', hu: 'Igyál sokat, pihenj sokat.' },
+    { zh: '{祝|zhù}{你|nǐ}{早|zǎo}{日|rì}{康复|kāng·fù}！', hu: 'Jobbulást!' }
+  ],
+  words: [
+    { title: 'Szavak',
+      items: [
+        { zh: '{恐怕|kǒng·pà}', pinyin: 'kǒngpà', hu: 'attól tartok; valószínűleg' },
+        { zh: '{千万|qiān·wàn}', pinyin: 'qiānwàn', hu: 'semmiképp, mindenképp (kérésben)' },
+        { zh: '{必须|bì·xū}', pinyin: 'bìxū', hu: 'muszáj, kell' },
+        { zh: '{不必|bú bì}', pinyin: 'búbì', hu: 'nem kell, nem szükséges' },
+        { zh: '{不得不|bù dé bù}', pinyin: 'bùdébù', hu: 'kénytelen' },
+        { zh: '{否则|fǒu·zé}', pinyin: 'fǒuzé', hu: 'különben' },
+        { zh: '{感冒|gǎn·mào}', pinyin: 'gǎnmào', hu: 'megfázás; megfázik' },
+        { zh: '{发烧|fā shāo}', pinyin: 'fā shāo', hu: 'lázas' },
+        { zh: '{嗓子|sǎng·zi}', pinyin: 'sǎngzi', hu: 'torok' },
+        { zh: '{打针|dǎ zhēn}', pinyin: 'dǎ zhēn', hu: 'injekciót ad, kap' },
+        { zh: '{药|yào}', pinyin: 'yào', hu: 'gyógyszer' },
+        { zh: '{严重|yán·zhòng}', pinyin: 'yánzhòng', hu: 'súlyos, komoly' }
+      ] },
+    { title: 'Ráadás',
+      items: [
+        { zh: '{咳嗽|ké·sou}', pinyin: 'késou', hu: 'köhög' },
+        { zh: '{小心|xiǎo·xīn}', pinyin: 'xiǎoxīn', hu: 'vigyáz; óvatos' },
+        { zh: '{迟到|chí dào}', pinyin: 'chídào', hu: 'elkésik' },
+        { zh: '{短信|duǎn·xìn}', pinyin: 'duǎnxìn', hu: 'rövid üzenet, SMS' }
+      ] }
+  ],
+  culture: [
+    { title: 'Kórház és nem rendelő', text: 'Kínában a kisebb panaszokkal is gyakran kórházba ({医院|yīyuàn}) mennek: ott előbb a {挂号|guàhào} (regisztráció, sorszám) jön, aztán a megfelelő osztály orvosa. A háziorvosi rendszer csak az utóbbi években kezdett kiépülni.' },
+    { title: 'Forró víz minden bajra', text: 'A kínai otthoni tanácsok kedvence a {多喝热水|duō hē rè shuǐ} „igyál sok forró vizet" — annyira gyakori, hogy már tréfásan is mondják. Megfázásra sokan gyömbéres teát ({姜茶|jiāngchá}) vagy hagyományos kínai gyógyszert ({中药|zhōngyào}) is használnak.' }
+  ],
+  reading: {
+    title: '{安娜|Ān·nà}{感冒|gǎn·mào}{了|le}', titleHu: 'Anna megfázott',
+    text: [
+      { zh: '{上|shàng}{星期|xīng·qī}{下|xià}{大|dà}{雨|yǔ}，{安娜|Ān·nà}{没|méi}{带|dài}{伞|sǎn}，{第二|dì èr}{天|tiān}{就|jiù}{感冒|gǎn·mào}{了|le}。', hu: 'Múlt héten nagy eső volt, Anna nem vitt esernyőt, és másnap megfázott.' },
+      { zh: '{她|tā}{头|tóu}{疼|téng}，{嗓子|sǎng·zi}{疼|téng}，{还|hái}{有点儿|yǒu diǎnr}{发烧|fā shāo}，{不得不|bù dé bù}{去|qù}{医院|yī·yuàn}。', hu: 'Fájt a feje és a torka, kicsit lázas is volt, ezért kénytelen volt kórházba menni.' },
+      { zh: '{医生|yī·shēng}{说|shuō}{不必|bú bì}{打|dǎ}{针|zhēn}，{但是|dàn·shì}{她|tā}{必须|bì·xū}{按时|àn shí}{吃|chī}{药|yào}，{多|duō}{休息|xiū·xi}。', hu: 'Az orvos szerint nem kell injekció, de rendszeresen be kell vennie a gyógyszert, és sokat kell pihennie.', par: true },
+      { zh: '{周杰|Zhōu Jié}{给|gěi}{她|tā}{发|fā}{短信|duǎn·xìn}：“{你|nǐ}{千万|qiān·wàn}{别|bié}{来|lái}{上班|shàng bān}，{否则|fǒu·zé}{大家|dà·jiā}{都|dōu}{会|huì}{感冒|gǎn·mào}{的|de}！”', hu: 'Zhou Jie üzent neki: „Semmiképp ne gyere be dolgozni, különben mindenki megfázik!"' },
+      { zh: '{安娜|Ān·nà}{笑|xiào}{了|le}，{在|zài}{家|jiā}{休息|xiū·xi}{了|le}{三|sān}{天|tiān}。', hu: 'Anna nevetett, és három napig otthon pihent.', par: true }
+    ],
+    words: [ { zh: '{按时|àn shí}', hu: 'pontosan, időben (az előírás szerint)' } ],
+    questions: [
+      { q: 'Miért fázott meg Anna?', a: 'nem vitt esernyőt a nagy esőben', wrong: ['túl sokáig úszott', 'hideg vizet ivott', 'nyitott ablaknál aludt'], why: '{下大雨，安娜没带伞|xià dà yǔ, Ānnà méi dài sǎn}.' },
+      { q: 'Mit mondott az orvos?', a: 'nem kell injekció, de gyógyszert kell szednie', wrong: ['injekciót kell kapnia', 'nem kell gyógyszer, elég a tea', 'be kell feküdnie a kórházba'], why: '{不必打针，但是她必须按时吃药|búbì dǎ zhēn, dànshì tā bìxū ànshí chī yào}.' },
+      { q: 'Mit üzent Zhou Jie?', a: 'semmiképp ne menjen be dolgozni', wrong: ['mielőbb menjen be dolgozni', 'hozzon neki is gyógyszert', 'hívja fel az orvost'], why: '{你千万别来上班|nǐ qiānwàn bié lái shàngbān}.' },
+      { q: 'Mennyit pihent Anna otthon?', a: 'három napot', wrong: ['egy napot', 'egy hetet', 'két napot'], why: '{在家休息了三天|zài jiā xiūxi le sān tiān}.' }
+    ]
+  },
+  quiz: [
+    { q: '„Fáj a fejem, attól tartok, megfáztam."', a: '{我|wǒ}{头|tóu}{疼|téng}，{恐怕|kǒng·pà}{是|shì}{感冒|gǎn·mào}{了|le}。', wrong: ['{我|wǒ}{头|tóu}{疼|téng}，{怕|pà}{恐|kǒng}{感冒|gǎn·mào}{是|shì}{了|le}。', '{恐怕|kǒng·pà}{我|wǒ}{感冒|gǎn·mào}{头|tóu}{疼|téng}{了|le}{是|shì}。', '{我|wǒ}{头|tóu}{疼|téng}，{感冒|gǎn·mào}{恐怕|kǒng·pà}{了|le}{是|shì}。'], why: '{恐怕|kǒngpà} + feltevés.', point: 1 },
+    { q: 'Mit fejez ki a {恐怕|kǒngpà}?', a: 'óvatos, aggódó feltevést', wrong: ['erős félelmet egy dologtól', 'biztos tudást', 'örömteli meglepetést'], why: '{恐怕是感冒了|kǒngpà shì gǎnmào le}.', point: 1 },
+    { q: 'Mit jelent: {恐怕他来不了了|kǒngpà tā lái bu liǎo le}。', a: 'Attól tartok, nem tud eljönni.', wrong: ['Fél eljönni.', 'Biztosan eljön.', 'Nem akar eljönni, mert fél.'], why: '{恐怕|kǒngpà} „attól tartok".', point: 1 },
+    { q: '„Semmiképp ne menj dolgozni!"', a: '{你|nǐ}{千万|qiān·wàn}{别|bié}{去|qù}{上班|shàng bān}！', wrong: ['{你|nǐ}{别|bié}{千万|qiān·wàn}{去|qù}{上班|shàng bān}！', '{千万|qiān·wàn}{你|nǐ}{去|qù}{别|bié}{上班|shàng bān}！', '{你|nǐ}{去|qù}{上班|shàng bān}{千万|qiān·wàn}{别|bié}！'], why: '{千万|qiānwàn} + {别|bié} + ige.', point: 2 },
+    { q: 'Melyik mondat helyes?', a: '{路|lù}{上|shang}{千万|qiān·wàn}{要|yào}{小心|xiǎo·xīn}！', wrong: ['{我|wǒ}{千万|qiān·wàn}{喜欢|xǐ·huan}{这|zhè}{本|běn}{书|shū}。', '{他|tā}{千万|qiān·wàn}{来|lái}{了|le}。', '{今天|jīn·tiān}{千万|qiān·wàn}{很|hěn}{热|rè}。'], why: 'A {千万|qiānwàn} csak kérésben, figyelmeztetésben áll.', point: 2 },
+    { q: '„Nem kell injekció."', a: '{不必|bú bì}{打|dǎ}{针|zhēn}。', wrong: ['{不|bù}{必须|bì·xū}{打|dǎ}{针|zhēn}。', '{必须|bì·xū}{不|bù}{打|dǎ}{针|zhēn}。', '{不得不|bù dé bù}{打|dǎ}{针|zhēn}。'], why: '{不必|búbì} „nem kell".', point: 3 },
+    { q: 'Mi a {必须|bìxū} („muszáj") tagadása?', a: '{不必|búbì} vagy {不用|búyòng}', wrong: ['{不必须|bù bìxū}', '{没必须|méi bìxū}', '{必须不|bìxū bù}'], why: '{不必打针|búbì dǎ zhēn}.', point: 3 },
+    { q: 'Mit jelent: {你必须多喝水|nǐ bìxū duō hē shuǐ}。', a: 'Sokat kell innod.', wrong: ['Nem kell sokat innod.', 'Ne igyál sokat!', 'Ihatsz, ha akarsz.'], why: '{必须|bìxū} „muszáj".', point: 3 },
+    { q: '„Túl nagy volt az eső, kénytelenek voltunk hazamenni."', a: '{雨|yǔ}{太|tài}{大|dà}{了|le}，{我们|wǒ·men}{不得不|bù dé bù}{回|huí}{家|jiā}。', wrong: ['{雨|yǔ}{太|tài}{大|dà}{了|le}，{我们|wǒ·men}{不|bù}{回|huí}{家|jiā}{不得|bù dé}。', '{雨|yǔ}{太|tài}{大|dà}{了|le}，{不得不|bù dé bù}{我们|wǒ·men}{家|jiā}{回|huí}。', '{我们|wǒ·men}{雨|yǔ}{不得不|bù dé bù}{太|tài}{大|dà}{回|huí}{家|jiā}{了|le}。'], why: 'A + {不得不|bùdébù} + ige.', point: 4 },
+    { q: 'Mit jelent a {不得不|bùdébù}?', a: 'kénytelen', wrong: ['nem szabad', 'nem szükséges', 'nem akar'], why: '{不得不回家|bùdébù huí jiā} „kénytelen hazamenni".', point: 4 },
+    { q: '„Siessünk, különben elkésünk."', a: '{我们|wǒ·men}{快|kuài}{走|zǒu}{吧|ba}，{否则|fǒu·zé}{要|yào}{迟到|chí dào}{了|le}。', wrong: ['{否则|fǒu·zé}{我们|wǒ·men}{快|kuài}{走|zǒu}{吧|ba}，{要|yào}{迟到|chí dào}{了|le}。', '{我们|wǒ·men}{快|kuài}{走|zǒu}{否则|fǒu·zé}{吧|ba}，{迟到|chí dào}{了|le}{要|yào}。', '{我们|wǒ·men}{否则|fǒu·zé}{快|kuài}{走|zǒu}，{迟到|chí dào}{要|yào}{吧|ba}。'], why: '…，{否则|fǒuzé} + következmény.', point: 5 },
+    { q: 'Mit jelent: {千万别去上班，否则会更严重|qiānwàn bié qù shàngbān, fǒuzé huì gèng yánzhòng}。', a: 'Semmiképp ne menj dolgozni, különben rosszabb lesz.', wrong: ['Menj dolgozni, mert ott jobb lesz.', 'Ha nem mész dolgozni, nem lesz baj.', 'Akkor is menj dolgozni, ha rosszabb.'], why: '{否则|fǒuzé} „különben".', point: 5 },
+    { q: 'Mit jelent a {发烧|fā shāo}?', a: 'lázas', wrong: ['köhög', 'fázik', 'szédül'], why: '{有点儿发烧|yǒudiǎnr fā shāo} „kicsit lázas".' },
+    { q: 'Mit jelent a {嗓子|sǎngzi}?', a: 'torok', wrong: ['fej', 'gyomor', 'fül'], why: '{嗓子疼|sǎngzi téng} „fáj a torka".' },
+    { q: 'Mit jelent: {要打针吗|yào dǎ zhēn ma}？', a: 'Kell injekció?', wrong: ['Kell gyógyszer?', 'Mikor jöjjek vissza?', 'Fáj valahol?'], why: '{打针|dǎ zhēn} „injekció".' },
+    { q: 'Mit jelent a {严重|yánzhòng}?', a: 'súlyos, komoly', wrong: ['enyhe', 'gyors', 'ritka'], why: '{会更严重|huì gèng yánzhòng} „súlyosabb lesz".' }
+  ]
+},
+
+/* ════════════════════════════════════════════════════
+   HSK 4 · 6. LECKE — 既然…就…, 于是, 竟然, 结果, 当…的时候
+   ════════════════════════════════════════════════════ */
+{
+  id: 'l56', no: 56, badge: '6', kicker: 'HSK 4 · 6. lecke', label: 'HSK 4 · 6. lecke',
+  title: 'Kirándulás a vízi városba — ha már…, akkor…',
+  lead: 'Elmeséled egy kirándulás történetét: ismert tényből következtetsz (既然你已经好了，我们就…), egymás után fűzöd az eseményeket (于是), meglepetést fejezel ki (竟然), elmondod, mi lett a vége (结果), és megadod az időpontot (当…的时候).',
+  cando: [
+    'Ismert tényből indulsz ki: 既然…，就….',
+    'Elbeszélésben kötöd össze az eseményeket: …，于是….',
+    'Meglepetést fejezel ki (竟然), és elmondod a kimenetelt (结果).',
+    'Választékosan adod meg az időt: 当…的时候….'
+  ],
+  intro: [
+    'Anna meggyógyult, és Wang Livel elmegy Zhujiajiaóba, egy régi vízi városba Sanghaj mellett. Hétfőn Zhou Jie kérdezi, milyen volt — és kiderül, hogy a nap tartogatott meglepetéseket.',
+    'Ebben a leckében történetet mesélsz: „ha már" ({既然|jìrán}), „erre" ({于是|yúshì}), „képzeld" ({竟然|jìngrán}), „és a vége az lett" ({结果|jiéguǒ}), „amikor" ({当…的时候|dāng … de shíhou}).'
+  ],
+  dialogue: {
+    title: 'Milyen volt a hétvége?',
+    scene: 'Hétfő reggel az irodában. Zhou Jie a hétvégéről kérdezi Annát.',
+    lines: [
+      { who: 'Zhou Jie', zh: '{周末|zhōu·mò}{你们|nǐ·men}{去|qù}{朱家角|Zhū·jiā·jiǎo}{了|le}{吗|ma}？{好|hǎo}{玩儿|wánr}{吗|ma}？', hu: 'Elmentetek hétvégén Zhujiajiaóba? Jó volt?' },
+      { who: 'Anna', zh: '{好|hǎo}{玩儿|wánr}{极|jí}{了|le}！{当|dāng}{我们|wǒ·men}{坐|zuò}{在|zài}{船|chuán}{上|shang}{的|de}{时候|shí·hou}，{感觉|gǎn·jué}{像|xiàng}{在|zài}{画|huà}{里|li}{一样|yí yàng}。', hu: 'Fantasztikus volt! Amikor a csónakban ültünk, olyan volt, mintha egy festményben lennénk.' },
+      { who: 'Zhou Jie', zh: '{我|wǒ}{听说|tīng·shuō}{星期六|xīng·qī·liù}{下|xià}{雨|yǔ}{了|le}？', hu: 'Úgy hallom, szombaton esett.' },
+      { who: 'Anna', zh: '{对|duì}，{下午|xià·wǔ}{突然|tū·rán}{下|xià}{起|qǐ}{雨|yǔ}{来|lái}，{于是|yú·shì}{我们|wǒ·men}{进|jìn}{了|le}{一|yì}{家|jiā}{茶馆|chá·guǎn}。{在|zài}{那儿|nàr}{我|wǒ}{竟然|jìng·rán}{遇到|yù·dào}{了|le}{一|yí}{个|ge}{匈牙利|Xiōng·yá·lì}{人|rén}！', hu: 'Igen, délután hirtelen eleredt az eső, erre beültünk egy teaházba. És ott — képzeld — egy magyarral találkoztam!' },
+      { who: 'Zhou Jie', zh: '{真|zhēn}{巧|qiǎo}！{你们|nǐ·men}{聊|liáo}{了|le}{很|hěn}{久|jiǔ}{吧|ba}？', hu: 'Micsoda véletlen! Biztos sokáig beszélgettetek.' },
+      { who: 'Anna', zh: '{聊|liáo}{了|le}{两|liǎng}{个|ge}{小时|xiǎo·shí}，{结果|jié·guǒ}{错过|cuò·guò}{了|le}{最后|zuì·hòu}{一|yì}{班|bān}{车|chē}。', hu: 'Két órát beszélgettünk, és a vége az lett, hogy lekéstük az utolsó buszt.' },
+      { who: 'Zhou Jie', zh: '{既然|jì·rán}{那么|nà·me}{喜欢|xǐ·huan}，{下|xià}{次|cì}{就|jiù}{在|zài}{那儿|nàr}{住|zhù}{一|yí}{个|ge}{晚上|wǎn·shang}{吧|ba}！', hu: 'Ha ennyire tetszett, legközelebb maradjatok ott egy éjszakát!' }
+    ],
+    notes: [
+      'A {水乡|shuǐxiāng} „vízi város": csatornákkal átszőtt régi település a Jangce torkolatvidékén.',
+      'A {下起雨来|xià qǐ yǔ lái} „eleredt az eső": a {起来|qǐlai} kezdetet jelöl, a tárgy közéjük kerül (HSK 3 14. lecke).',
+      'A {错过|cuòguò} „lekésik, elszalaszt", a {班|bān} a menetrend szerinti járatok mérőszava: {最后一班车|zuìhòu yì bān chē} „az utolsó járat".'
+    ]
+  },
+  points: [
+    {
+      title: '{既然|jìrán} … {就|jiù} …', sub: 'ha már …, akkor …',
+      pattern: '{既然|jì·rán} + ismert tény，(A) + {就|jiù} + következtetés',
+      body: 'A {既然|jìrán} egy <b>már ismert, igaz</b> tényből indul ki, és abból következtet: {既然你已经好了，我们就去玩儿吧|jìrán nǐ yǐjīng hǎo le, wǒmen jiù qù wánr ba} „ha már meggyógyultál, menjünk kirándulni". Különbözik a {如果|rúguǒ}-tól: az feltételez („ha esetleg"), a {既然|jìrán} tényre épít („mivel így van").',
+      tables: [
+        { caption: 'Feltevés vagy tény?',
+          head: ['', 'Mire épít?', 'Példa'],
+          rows: [
+            ['{如果|rú·guǒ}', 'feltevés', '{如果|rú·guǒ}{你|nǐ}{有|yǒu}{时间|shí·jiān}，{就|jiù}{来|lái}{吧|ba}。'],
+            ['{既然|jì·rán}', 'ismert tény', '{既然|jì·rán}{你|nǐ}{有|yǒu}{时间|shí·jiān}，{就|jiù}{来|lái}{吧|ba}。']
+          ] }
+      ],
+      examples: [
+        { zh: '{既然|jì·rán}{你|nǐ}{已经|yǐ·jīng}{好|hǎo}{了|le}，{周末|zhōu·mò}{我们|wǒ·men}{就|jiù}{去|qù}{玩儿|wánr}{吧|ba}。', hu: 'Ha már meggyógyultál, hétvégén menjünk kirándulni.' },
+        { zh: '{既然|jì·rán}{那么|nà·me}{喜欢|xǐ·huan}，{下|xià}{次|cì}{就|jiù}{住|zhù}{一|yí}{个|ge}{晚上|wǎn·shang}{吧|ba}。', hu: 'Ha ennyire tetszett, legközelebb maradj ott egy éjszakát.' }
+      ]
+    },
+    {
+      title: '{于是|yúshì}', sub: 'erre, ezért aztán',
+      pattern: 'előzmény，{于是|yú·shì} + (A) + következő esemény',
+      body: 'A {于是|yúshì} elbeszélésben köti össze a történéseket: az első miatt következett be a második. {突然下起雨来，于是我们进了一家茶馆|tūrán xià qǐ yǔ lái, yúshì wǒmen jìn le yì jiā cháguǎn} „hirtelen eleredt az eső, erre beültünk egy teaházba". Megtörtént eseményekről szól — kérésben, jövőről nem használjuk.',
+      examples: [
+        { zh: '{下午|xià·wǔ}{下|xià}{起|qǐ}{雨|yǔ}{来|lái}，{于是|yú·shì}{我们|wǒ·men}{进|jìn}{了|le}{一|yì}{家|jiā}{茶馆|chá·guǎn}。', hu: 'Délután eleredt az eső, erre beültünk egy teaházba.' },
+        { zh: '{他|tā}{很|hěn}{喜欢|xǐ·huan}{中国|Zhōng·guó}，{于是|yú·shì}{开始|kāi·shǐ}{学|xué}{汉语|Hàn·yǔ}。', hu: 'Nagyon megszerette Kínát, ezért aztán elkezdett kínaiul tanulni.' }
+      ],
+      mistakes: [
+        { bad: '{明天|míng·tiān}{下|xià}{雨|yǔ}，{于是|yú·shì}{我们|wǒ·men}{别|bié}{去|qù}{了|le}。', good: '{明天|míng·tiān}{下|xià}{雨|yǔ}，{那|nà}{我们|wǒ·men}{就|jiù}{别|bié}{去|qù}{了|le}。', why: 'A {于是|yúshì} megtörtént eseményeket köt össze; javaslatban {那|nà} … {就|jiù} … kell.' }
+      ]
+    },
+    {
+      title: '{竟然|jìngrán}', sub: 'meglepő módon; képzeld',
+      pattern: 'A + {竟然|jìng·rán} + váratlan esemény',
+      body: 'A {竟然|jìngrán} azt fejezi ki, hogy valami <b>meglepő, váratlan</b>: {我竟然遇到了一个匈牙利人|wǒ jìngrán yùdào le yí ge Xiōngyálì rén} „képzeld, egy magyarral találkoztam!", {这么简单的题，他竟然不会|zhème jiǎndān de tí, tā jìngrán bú huì} „ilyen egyszerű feladat — és nem tudja megoldani!". Az alany után, az ige előtt áll.',
+      examples: [
+        { zh: '{在|zài}{茶馆|chá·guǎn}{里|li}，{我|wǒ}{竟然|jìng·rán}{遇到|yù·dào}{了|le}{一|yí}{个|ge}{匈牙利|Xiōng·yá·lì}{人|rén}。', hu: 'A teaházban — képzeld — egy magyarral találkoztam.' },
+        { zh: '{他|tā}{学|xué}{了|le}{半|bàn}{年|nián}，{竟然|jìng·rán}{能|néng}{看|kàn}{中文|Zhōng·wén}{报纸|bào·zhǐ}{了|le}。', hu: 'Fél évig tanult, és meglepő módon már kínai újságot is tud olvasni.' }
+      ]
+    },
+    {
+      title: '{结果|jiéguǒ}', sub: 'végül, az lett a vége, hogy …; eredmény',
+      pattern: 'előzmény，{结果|jié·guǒ} + (váratlan) kimenetel',
+      body: 'Kötőszóként a {结果|jiéguǒ} azt mondja meg, mi lett a dolog <b>vége</b> — gyakran nem kívánt kimenetel: {聊了两个小时，结果错过了最后一班车|liáo le liǎng ge xiǎoshí, jiéguǒ cuòguò le zuìhòu yì bān chē} „két órát beszélgettünk, és lekéstük az utolsó buszt". Főnévként „eredmény": {考试的结果|kǎoshì de jiéguǒ} „a vizsga eredménye".',
+      examples: [
+        { zh: '{我们|wǒ·men}{聊|liáo}{了|le}{两|liǎng}{个|ge}{小时|xiǎo·shí}，{结果|jié·guǒ}{错过|cuò·guò}{了|le}{最后|zuì·hòu}{一|yì}{班|bān}{车|chē}。', hu: 'Két órát beszélgettünk, és lekéstük az utolsó buszt.' },
+        { zh: '{他|tā}{没|méi}{复习|fù·xí}，{结果|jié·guǒ}{考试|kǎo shì}{没|méi}{通过|tōng·guò}。', hu: 'Nem ismételt, így nem ment át a vizsgán.' }
+      ]
+    },
+    {
+      title: '{当|dāng} … {的时候|de shíhou}', sub: 'amikor …',
+      pattern: '{当|dāng} + esemény + {的|de}{时候|shí·hou}，…',
+      body: 'A HSK 2-ből ismert {…的时候|… de shíhou} „amikor" elé választékosabb stílusban {当|dāng} kerülhet: {当我们坐在船上的时候，感觉像在画里一样|dāng wǒmen zuò zài chuán shang de shíhou, gǎnjué xiàng zài huà li yíyàng} „amikor a csónakban ültünk, olyan volt, mint egy festményben". A {当|dāng} a mondat elején áll, az alany elé.',
+      examples: [
+        { zh: '{当|dāng}{我们|wǒ·men}{坐|zuò}{在|zài}{船|chuán}{上|shang}{的|de}{时候|shí·hou}，{感觉|gǎn·jué}{像|xiàng}{在|zài}{画|huà}{里|li}{一样|yí yàng}。', hu: 'Amikor a csónakban ültünk, olyan volt, mintha egy festményben lennénk.' },
+        { zh: '{当|dāng}{我|wǒ}{到|dào}{车站|chē·zhàn}{的|de}{时候|shí·hou}，{车|chē}{已经|yǐ·jīng}{走|zǒu}{了|le}。', hu: 'Mire a megállóba értem, a busz már elment.' }
+      ],
+      mistakes: [
+        { bad: '{我|wǒ}{当|dāng}{到|dào}{车站|chē·zhàn}，{车|chē}{已经|yǐ·jīng}{走|zǒu}{了|le}。', good: '{当|dāng}{我|wǒ}{到|dào}{车站|chē·zhàn}{的|de}{时候|shí·hou}，{车|chē}{已经|yǐ·jīng}{走|zǒu}{了|le}。', why: 'A {当|dāng} az alany elé kerül, a végén pedig ott a {的时候|de shíhou}.' }
+      ]
+    }
+  ],
+  phrases: [
+    { zh: '{好|hǎo}{玩儿|wánr}{极|jí}{了|le}！', hu: 'Fantasztikus volt!' },
+    { zh: '{真|zhēn}{巧|qiǎo}！', hu: 'Micsoda véletlen!' },
+    { zh: '{下|xià}{次|cì}{一起|yì·qǐ}{去|qù}{吧|ba}。', hu: 'Legközelebb menjünk együtt.' },
+    { zh: '{我|wǒ}{错过|cuò·guò}{了|le}{末班车|mò bān chē}。', hu: 'Lekéstem az utolsó járatot.' }
+  ],
+  words: [
+    { title: 'Szavak',
+      items: [
+        { zh: '{既然|jì·rán}', pinyin: 'jìrán', hu: 'ha már, mivel' },
+        { zh: '{于是|yú·shì}', pinyin: 'yúshì', hu: 'erre, ezért aztán' },
+        { zh: '{竟然|jìng·rán}', pinyin: 'jìngrán', hu: 'meglepő módon' },
+        { zh: '{结果|jié·guǒ}', pinyin: 'jiéguǒ', hu: 'végül; eredmény' },
+        { zh: '{当|dāng}', pinyin: 'dāng', hu: '({当|dāng}…{的时候|de shí·hou}) amikor' },
+        { zh: '{船|chuán}', pinyin: 'chuán', hu: 'hajó, csónak' },
+        { zh: '{桥|qiáo}', pinyin: 'qiáo', hu: 'híd' },
+        { zh: '{河|hé}', pinyin: 'hé', hu: 'folyó, csatorna' },
+        { zh: '{遇到|yù·dào}', pinyin: 'yùdào', hu: 'véletlenül találkozik' },
+        { zh: '{感觉|gǎn·jué}', pinyin: 'gǎnjué', hu: 'érzés; érez' },
+        { zh: '{突然|tū·rán}', pinyin: 'tūrán', hu: 'hirtelen' },
+        { zh: '{聊天儿|liáo tiānr}', pinyin: 'liáo tiānr', hu: 'beszélget' }
+      ] },
+    { title: 'Ráadás',
+      items: [
+        { zh: '{水乡|shuǐ·xiāng}', pinyin: 'shuǐxiāng', hu: 'vízi város' },
+        { zh: '{茶馆|chá·guǎn}', pinyin: 'cháguǎn', hu: 'teaház' },
+        { zh: '{错过|cuò·guò}', pinyin: 'cuòguò', hu: 'lekésik, elszalaszt' },
+        { zh: '{游客|yóu·kè}', pinyin: 'yóukè', hu: 'turista' }
+      ] }
+  ],
+  culture: [
+    { title: 'A Jangce-delta vízi városai', text: 'Sanghaj, Suzhou és Hangzhou környékén sok régi {水乡|shuǐxiāng} „vízi város" áll: a házak csatornák partján sorakoznak, kőhidak ívelnek át rajtuk, a közlekedés régen csónakkal folyt. A legismertebbek a {周庄|Zhōuzhuāng}, a {乌镇|Wūzhèn} és Sanghajhoz legközelebb a {朱家角|Zhūjiājiǎo}.' },
+    { title: 'Teaház', text: 'A {茶馆|cháguǎn} „teaház" régi találkozóhely: itt beszélgetnek, kártyáznak, üzletet kötnek. Sok teaházban hagyományos szórakozás is van, például történetmondás vagy zene; a vendég órákig ülhet egyetlen kanna tea mellett.' }
+  ],
+  reading: {
+    title: '{去|qù}{水乡|shuǐ·xiāng}', titleHu: 'Kirándulás a vízi városba',
+    text: [
+      { zh: '{安娜|Ān·nà}{的|de}{感冒|gǎn·mào}{好|hǎo}{了|le}。{既然|jì·rán}{身体|shēn·tǐ}{没|méi}{问题|wèn·tí}{了|le}，{她|tā}{就|jiù}{和|hé}{王丽|Wáng Lì}{去|qù}{了|le}{朱家角|Zhū·jiā·jiǎo}。', hu: 'Anna meggyógyult. Mivel már semmi baja nem volt, elment Wang Livel Zhujiajiaóba.' },
+      { zh: '{当|dāng}{她们|tā·men}{坐|zuò}{在|zài}{船|chuán}{上|shang}{的|de}{时候|shí·hou}，{安娜|Ān·nà}{觉得|jué·de}{河|hé}{边|biān}{的|de}{房子|fáng·zi}{美|měi}{极|jí}{了|le}。', hu: 'Amikor csónakban ültek, Anna gyönyörűnek találta a parti házakat.' },
+      { zh: '{下午|xià·wǔ}{突然|tū·rán}{下|xià}{起|qǐ}{雨|yǔ}{来|lái}，{于是|yú·shì}{她们|tā·men}{进|jìn}{了|le}{一|yì}{家|jiā}{茶馆|chá·guǎn}。', hu: 'Délután hirtelen eleredt az eső, erre beültek egy teaházba.', par: true },
+      { zh: '{安娜|Ān·nà}{在|zài}{茶馆|chá·guǎn}{里|li}{竟然|jìng·rán}{遇到|yù·dào}{了|le}{一|yí}{个|ge}{从|cóng}{布达佩斯|Bù·dá·pèi·sī}{来|lái}{的|de}{游客|yóu·kè}。', hu: 'A teaházban Anna — meglepetésére — egy budapesti turistával találkozott.' },
+      { zh: '{她们|tā·men}{聊|liáo}{得|de}{很|hěn}{开心|kāi·xīn}，{结果|jié·guǒ}{错过|cuò·guò}{了|le}{最后|zuì·hòu}{一|yì}{班|bān}{车|chē}，{只好|zhǐ·hǎo}{坐|zuò}{出租车|chū·zū·chē}{回|huí}{上海|Shàng·hǎi}。', hu: 'Olyan jól elbeszélgettek, hogy lekésték az utolsó buszt, így taxival mentek vissza Sanghajba.', par: true }
+    ],
+    words: [ { zh: '{游客|yóu·kè}', hu: 'turista' } ],
+    questions: [
+      { q: 'Miért mehetett el Anna kirándulni?', a: 'mert már meggyógyult', wrong: ['mert szabadságot kapott', 'mert Wang Li meghívta vacsorára', 'mert a cég fizette az utat'], why: '{既然身体没问题了|jìrán shēntǐ méi wèntí le}.' },
+      { q: 'Mit csináltak, amikor eleredt az eső?', a: 'beültek egy teaházba', wrong: ['hazamentek', 'csónakba szálltak', 'vettek egy esernyőt'], why: '{于是她们进了一家茶馆|yúshì tāmen jìn le yì jiā cháguǎn}.' },
+      { q: 'Kivel találkozott Anna a teaházban?', a: 'egy budapesti turistával', wrong: ['egy régi pekingi barátjával', 'Zhou Jie-vel', 'a főnökével'], why: '{遇到了一个从布达佩斯来的游客|yùdào le yí ge cóng Bùdápèisī lái de yóukè}.' },
+      { q: 'Hogyan mentek vissza Sanghajba?', a: 'taxival', wrong: ['az utolsó busszal', 'csónakkal', 'metróval'], why: '{只好坐出租车回上海|zhǐhǎo zuò chūzūchē huí Shànghǎi}.' }
+    ]
+  },
+  quiz: [
+    { q: '„Ha már meggyógyultál, menjünk kirándulni!"', a: '{既然|jì·rán}{你|nǐ}{已经|yǐ·jīng}{好|hǎo}{了|le}，{我们|wǒ·men}{就|jiù}{去|qù}{玩儿|wánr}{吧|ba}！', wrong: ['{既然|jì·rán}{你|nǐ}{已经|yǐ·jīng}{好|hǎo}{了|le}，{就|jiù}{我们|wǒ·men}{去|qù}{玩儿|wánr}{吧|ba}！', '{你|nǐ}{已经|yǐ·jīng}{好|hǎo}{了|le}{既然|jì·rán}，{我们|wǒ·men}{去|qù}{玩儿|wánr}{就|jiù}{吧|ba}！', '{我们|wǒ·men}{就|jiù}{既然|jì·rán}{去|qù}{玩儿|wánr}，{你|nǐ}{已经|yǐ·jīng}{好|hǎo}{了|le}{吧|ba}！'], why: '{既然|jìrán} + tény, A + {就|jiù} + ….', point: 1 },
+    { q: 'Miben más a {既然|jìrán}, mint a {如果|rúguǒ}?', a: 'ismert tényből indul ki, nem feltevésből', wrong: ['csak a jövőről szólhat', 'csak kérdésben állhat', 'ugyanazt jelenti, csak régies'], why: '{既然|jìrán} „mivel így van".', point: 1 },
+    { q: 'Melyik illik? („Tudom, hogy van időd.") ___{你|nǐ}{有|yǒu}{时间|shí·jiān}，{就|jiù}{帮|bāng}{我|wǒ}{一下|yí xià}{吧|ba}。', a: '{既然|jì·rán}', wrong: ['{于是|yú·shì}', '{结果|jié·guǒ}', '{竟然|jìng·rán}'], why: 'Ismert tény: {既然|jìrán}.', point: 1 },
+    { q: '„Eleredt az eső, erre beültünk egy teaházba."', a: '{下|xià}{起|qǐ}{雨|yǔ}{来|lái}{了|le}，{于是|yú·shì}{我们|wǒ·men}{进|jìn}{了|le}{一|yì}{家|jiā}{茶馆|chá·guǎn}。', wrong: ['{于是|yú·shì}{下|xià}{起|qǐ}{雨|yǔ}{来|lái}{了|le}，{我们|wǒ·men}{进|jìn}{了|le}{一|yì}{家|jiā}{茶馆|chá·guǎn}。', '{下|xià}{起|qǐ}{雨|yǔ}{来|lái}{了|le}，{我们|wǒ·men}{进|jìn}{了|le}{于是|yú·shì}{一|yì}{家|jiā}{茶馆|chá·guǎn}。', '{我们|wǒ·men}{进|jìn}{了|le}{一|yì}{家|jiā}{茶馆|chá·guǎn}{于是|yú·shì}，{下|xià}{起|qǐ}{雨|yǔ}{来|lái}。'], why: 'Előzmény, {于是|yúshì} + következő esemény.', point: 2 },
+    { q: 'Mikor NEM használjuk a {于是|yúshì}-t?', a: 'javaslatban, a jövőről', wrong: ['elbeszélésben', 'megtörtént eseménynél', 'két múltbeli esemény között'], why: 'A {于是|yúshì} megtörtént eseményeket köt össze.', point: 2 },
+    { q: 'Mit jelent: {我竟然遇到了一个匈牙利人|wǒ jìngrán yùdào le yí ge Xiōngyálì rén}！', a: 'Képzeld, egy magyarral találkoztam!', wrong: ['Egy magyarral akartam találkozni.', 'Nem találkoztam egy magyarral sem.', 'Minden nap magyarokkal találkozom.'], why: '{竟然|jìngrán} „meglepő módon".', point: 3 },
+    { q: 'Mit fejez ki a {竟然|jìngrán}?', a: 'meglepetést', wrong: ['kötelezettséget', 'feltételt', 'okot'], why: '{竟然|jìngrán} = váratlan.', point: 3 },
+    { q: '„Fél évig tanult, és meglepő módon már újságot olvas."', a: '{他|tā}{学|xué}{了|le}{半|bàn}{年|nián}，{竟然|jìng·rán}{能|néng}{看|kàn}{报纸|bào·zhǐ}{了|le}。', wrong: ['{他|tā}{学|xué}{了|le}{半|bàn}{年|nián}，{能|néng}{竟然|jìng·rán}{看|kàn}{报纸|bào·zhǐ}{了|le}。', '{竟然|jìng·rán}{他|tā}{半|bàn}{年|nián}{学|xué}{了|le}，{看|kàn}{报纸|bào·zhǐ}{能|néng}。', '{他|tā}{学|xué}{竟然|jìng·rán}{了|le}{半|bàn}{年|nián}，{报纸|bào·zhǐ}{能|néng}{看|kàn}{了|le}。'], why: 'A {竟然|jìngrán} a segédige elé kerül.', point: 3 },
+    { q: '„Két órát beszélgettünk, és lekéstük a buszt."', a: '{我们|wǒ·men}{聊|liáo}{了|le}{两|liǎng}{个|ge}{小时|xiǎo·shí}，{结果|jié·guǒ}{错过|cuò·guò}{了|le}{车|chē}。', wrong: ['{结果|jié·guǒ}{我们|wǒ·men}{聊|liáo}{了|le}{两|liǎng}{个|ge}{小时|xiǎo·shí}，{错过|cuò·guò}{了|le}{车|chē}{吗|ma}。', '{我们|wǒ·men}{错过|cuò·guò}{了|le}{车|chē}，{结果|jié·guǒ}{聊|liáo}{了|le}{两|liǎng}{个|ge}{小时|xiǎo·shí}。', '{我们|wǒ·men}{聊|liáo}{结果|jié·guǒ}{两|liǎng}{个|ge}{小时|xiǎo·shí}，{车|chē}{错过|cuò·guò}{了|le}。'], why: 'Előzmény, {结果|jiéguǒ} + kimenetel.', point: 4 },
+    { q: 'Mit jelent: {他没复习，结果考试没通过|tā méi fùxí, jiéguǒ kǎoshì méi tōngguò}。', a: 'Nem ismételt, így nem ment át a vizsgán.', wrong: ['Nem ismételt, mégis átment a vizsgán.', 'Ismételt, de nem ment át a vizsgán.', 'Ha nem ismétel, nem megy át a vizsgán.'], why: '{结果|jiéguǒ} „és a vége az lett".', point: 4 },
+    { q: '„Amikor a csónakban ültünk, olyan volt, mint egy festmény."', a: '{当|dāng}{我们|wǒ·men}{坐|zuò}{在|zài}{船|chuán}{上|shang}{的|de}{时候|shí·hou}，{感觉|gǎn·jué}{像|xiàng}{在|zài}{画|huà}{里|li}。', wrong: ['{我们|wǒ·men}{当|dāng}{坐|zuò}{在|zài}{船|chuán}{上|shang}，{感觉|gǎn·jué}{像|xiàng}{在|zài}{画|huà}{里|li}{的|de}{时候|shí·hou}。', '{当|dāng}{的|de}{时候|shí·hou}{我们|wǒ·men}{坐|zuò}{在|zài}{船|chuán}{上|shang}，{感觉|gǎn·jué}{画|huà}{里|li}。', '{坐|zuò}{在|zài}{船|chuán}{上|shang}{当|dāng}{我们|wǒ·men}，{像|xiàng}{感觉|gǎn·jué}{在|zài}{画|huà}{里|li}。'], why: '{当|dāng} + esemény + {的时候|de shíhou}.', point: 5 },
+    { q: 'Hová kerül a {当|dāng}?', a: 'az alany elé', wrong: ['az alany után', 'a mondat végére', 'a {的时候|de shíhou} után'], why: '{当我到车站的时候|dāng wǒ dào chēzhàn de shíhou}.', point: 5 },
+    { q: 'Mit jelent a {船|chuán}?', a: 'hajó, csónak', wrong: ['híd', 'folyó', 'autóbusz'], why: '{坐在船上|zuò zài chuán shang}.' },
+    { q: 'Mit jelent a {遇到|yùdào}?', a: 'véletlenül találkozik', wrong: ['elkerül valakit', 'meghív valakit', 'elbúcsúzik'], why: '{遇到了一个匈牙利人|yùdào le yí ge Xiōngyálì rén}.' },
+    { q: 'Mit jelent a {突然|tūrán}?', a: 'hirtelen', wrong: ['lassan', 'mindig', 'végre'], why: '{突然下起雨来|tūrán xià qǐ yǔ lái}.' },
+    { q: 'Mit jelent: {真巧|zhēn qiǎo}！', a: 'Micsoda véletlen!', wrong: ['Milyen kár!', 'Nagyon fáradt vagyok!', 'Nagyon olcsó!'], why: 'A {巧|qiǎo} itt „szerencsés egybeesés".' }
+  ]
 }
 
 ];
