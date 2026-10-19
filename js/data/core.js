@@ -1078,7 +1078,29 @@ const HANZIFLOW_PATH = [
     module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l82&round=listen' },
   { id: 'l82-read', glyph: '读', title: 'Olvasás: Visszatért a kék ég',
     desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
-    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l82&round=read' }
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l82&round=read' },
+
+  // ── HSK 5 · 13. lecke ──
+  { id: 'l83-lesson', glyph: '山', title: 'Magyarázat: 陆续, 连续, 接着, 临时, 随时',
+    desc: 'Utazás Jünnanba: egymás után, egyfolytában, aztán, hirtelen, bármikor.',
+    module: 'lesson', href: 'pages/lesson.html?id=l83' },
+  { id: 'l83-listen', glyph: '听', title: 'Hallás: a vendégház udvarán',
+    desc: 'A lecke mondatai hang után: mit jelent, amit hallasz?',
+    module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l83&round=listen' },
+  { id: 'l83-read', glyph: '读', title: 'Olvasás: Utazás Lijiangba',
+    desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l83&round=read' },
+
+  // ── HSK 5 · 14. lecke ──
+  { id: 'l84-lesson', glyph: '房', title: 'Magyarázat: 要么…要么, 一来…二来, 至于, 不但不…反而, 反正',
+    desc: 'Saját lakás? Vagy-vagy, egyrészt-másrészt, ami … illeti, épp ellenkezőleg, úgyis.',
+    module: 'lesson', href: 'pages/lesson.html?id=l84' },
+  { id: 'l84-listen', glyph: '听', title: 'Hallás: videóhívás Pekinggel',
+    desc: 'A lecke mondatai hang után: mit jelent, amit hallasz?',
+    module: 'lesson', mode: 'listen', href: 'pages/lesson.html?id=l84&round=listen' },
+  { id: 'l84-read', glyph: '读', title: 'Olvasás: Wang Ming lakást vesz',
+    desc: 'Rövid szöveg a lecke nyelvtanával, utána négy kérdés.',
+    module: 'lesson', mode: 'read', href: 'pages/lesson.html?id=l84&round=read' }
 ];
 
 const HANZIFLOW_PATH_UNITS = [
@@ -1283,5 +1305,9 @@ const HANZIFLOW_PATH_UNITS = [
   { id: 'u-l81', kicker: 'HSK 5 · 11. lecke', title: 'Vásárlási láz', sub: '相当, 极其, 格外, …得很 · …得不得了, 简直',
     steps: ['l81-lesson', 'l81-listen', 'l81-read'] },
   { id: 'u-l82', kicker: 'HSK 5 · 12. lecke', title: 'Kék ég Sanghaj felett', sub: '就…而言, 可见, 以至于, 被 / 为…所, 除非…否则',
-    steps: ['l82-lesson', 'l82-listen', 'l82-read'] }
+    steps: ['l82-lesson', 'l82-listen', 'l82-read'] },
+  { id: 'u-l83', kicker: 'HSK 5 · 13. lecke', title: 'Utazás Jünnanba', sub: '陆续, 连续, 接着, 临时, 随时',
+    steps: ['l83-lesson', 'l83-listen', 'l83-read'] },
+  { id: 'u-l84', kicker: 'HSK 5 · 14. lecke', title: 'Saját lakás?', sub: '要么…要么, 一来…二来, 至于, 不但不…反而, 反正',
+    steps: ['l84-lesson', 'l84-listen', 'l84-read'] }
 ];

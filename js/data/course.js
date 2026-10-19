@@ -15111,6 +15111,327 @@ const HANZIFLOW_COURSE = [
     { q: 'Mit jelent a {改善|gǎishàn}?', a: 'javul', wrong: ['romlik', 'eltűnik', 'változatlan'], why: '{空气逐渐改善了|kōngqì zhújiàn gǎishàn le}.' },
     { q: 'Mit jelent a {口罩|kǒuzhào}?', a: 'maszk', wrong: ['sál', 'kesztyű', 'szemüveg'], why: '{戴口罩|dài kǒuzhào} „maszkot visel".' }
   ]
+},
+/* ════════════════════════════════════════════════════
+   HSK 5 · 13. LECKE — 陆续, 连续, 接着, 临时, 随时
+   ════════════════════════════════════════════════════ */
+{
+  id: 'l83', no: 83, badge: '13', kicker: 'HSK 5 · 13. lecke', label: 'HSK 5 · 13. lecke',
+  title: 'Utazás Jünnanba — terv B a hegy lábánál',
+  lead: 'Utazáson vagy: elmondod, kik érkeznek egymás után (陆续), mi tart megszakítás nélkül (连续), mi jön ezután (接着), mi változott meg hirtelen (临时), és hogy bármikor szólhatsz (随时).',
+  cando: [
+    'Egymás utáni érkezést, történést írsz le: 陆续….',
+    'Megszakítás nélküli ismétlést, folytonosságot fejezel ki: 连续 + ige + idő.',
+    'Elmondod, mi jön ezután, vagy hogy valaki folytatja: 接着….',
+    'Hirtelen változásról (临时) és arról beszélsz, hogy bármikor lehet valamit (随时).'
+  ],
+  intro: [
+    'Anna és Wang Li egy hosszú hétvégére Jünnanba utaznak, Lijiangba, a hegyek közti régi városba. Három napig esett, de végre kisüt a nap — a hegyi kirándulás viszont nem úgy alakul, ahogy tervezték.',
+    'Ebben a leckében az idő múlásának és a változó terveknek a nyelvét tanulod: egymás után, folyamatosan, aztán, hirtelen, bármikor.'
+  ],
+  dialogue: {
+    title: 'A vendégház udvarán',
+    scene: 'Reggel egy lijiangi vendégház udvarán. Wang Li és Anna.',
+    lines: [
+      { who: 'Wang Li', zh: '{连续|lián xù}{下|xià}{了|le}{三|sān}{天|tiān}{雨|yǔ}，{今天|jīn·tiān}{总算|zǒng suàn}{晴|qíng}{了|le}！', hu: 'Három napig egyfolytában esett, ma végre kisütött a nap!' },
+      { who: 'Anna', zh: '{是|shì}{啊|a}，{你|nǐ}{看|kàn}，{游客|yóu·kè}{们|men}{陆续|lù xù}{从|cóng}{客栈|kè zhàn}{里|li}{出|chū}{来|lái}{了|le}。', hu: 'Igen, nézd, a vendégek sorban kijönnek a vendégházakból.' },
+      { who: 'Wang Li', zh: '{我们|wǒ·men}{先|xiān}{去|qù}{古城|gǔ chéng}{转|zhuàn}{转|zhuan}，{接着|jiē zhe}{坐|zuò}{车|chē}{去|qù}{雪山|xuě shān}。', hu: 'Előbb körbejárjuk az óvárost, utána busszal megyünk a havas hegyre.' },
+      { who: 'Anna', zh: '{不过|bú·guò}{我|wǒ}{有|yǒu}{点儿|diǎnr}{担心|dān xīn}{高原|gāo yuán}{反应|fǎn yìng}。', hu: 'Kicsit aggódom a magaslati betegség miatt.' },
+      { who: 'Wang Li', zh: '{别|bié}{担心|dān xīn}，{导游|dǎo yóu}{说|shuō}{有|yǒu}{什么|shén·me}{不|bù}{舒服|shū·fu}，{随时|suí shí}{告诉|gào·su}{他|tā}。', hu: 'Ne aggódj, az idegenvezető azt mondta, ha bármi rosszullét van, bármikor szóljunk neki.' },
+      { who: 'Anna', zh: '（{中午|zhōng·wǔ}）{糟糕|zāo gāo}，{导游|dǎo yóu}{刚才|gāng cái}{临时|lín shí}{通知|tōng zhī}，{上|shàng}{山|shān}{的|de}{路|lù}{封|fēng}{了|le}，{下午|xià·wǔ}{不能|bù néng}{上|shàng}{去|qu}{了|le}。', hu: '(Délben) A fenébe, az idegenvezető az imént váratlanul szólt, hogy lezárták a hegyre vezető utat, délután nem mehetünk fel.' },
+      { who: 'Wang Li', zh: '{没|méi}{关系|guān·xi}，{那|nà}{我们|wǒ·men}{改|gǎi}{去|qù}{拉市海|Lā·shì Hǎi}{骑|qí}{马|mǎ}{吧|ba}！{旅行|lǚ·xíng}{嘛|ma}，{计划|jì·huà}{随时|suí shí}{会|huì}{变|biàn}。', hu: 'Semmi baj, akkor menjünk inkább a Lashi-tóhoz lovagolni! Utazáskor a terv bármikor változhat.' }
+    ],
+    notes: [
+      'A {客栈|kèzhàn} „vendégház, fogadó" — régi szó, ma a hangulatos kis szállásokat hívják így.',
+      'A {高原反应|gāoyuán fǎnyìng} „magaslati betegség" (fejfájás, szédülés nagy magasságban).',
+      'A {糟糕|zāogāo} „a fenébe, de kár" — kellemetlen meglepetésre mondjuk; a {封路|fēng lù} „lezárja az utat".'
+    ]
+  },
+  points: [
+    {
+      title: '{陆续|lùxù}', sub: 'egymás után, sorban (idővel)',
+      pattern: '(többes alany) + {陆续|lù xù} + ige',
+      body: 'A {陆续|lùxù} azt írja le, hogy többen vagy több dolog <b>egymás után, időben elnyújtva</b> történik: {游客们陆续从客栈里出来了|yóukèmen lùxù cóng kèzhàn li chūlai le} „a vendégek sorban kijönnek", {客人陆续到了|kèrén lùxù dào le} „sorra megérkeztek a vendégek". A HSK 5 7. leckéjében tanult {纷纷|fēnfēn} inkább a sokaságot, a nagyjából egyszerre történést hangsúlyozza, a {陆续|lùxù} az egymásutániságot.',
+      tables: [
+        { caption: 'Sokan, egymás után',
+          head: ['', 'Mit hangsúlyoz?', 'Példa'],
+          rows: [
+            ['{纷纷|fēn fēn}', 'sokan, sokfelől, nagyjából egyszerre', '{大家|dà·jiā}{纷纷|fēn fēn}{鼓掌|gǔ zhǎng}'],
+            ['{陆续|lù xù}', 'egymás után, időben elnyújtva', '{客人|kè·rén}{陆续|lù xù}{到|dào}{了|le}']
+          ] }
+      ],
+      examples: [
+        { zh: '{雨|yǔ}{停|tíng}{了|le}，{游客|yóu·kè}{们|men}{陆续|lù xù}{从|cóng}{客栈|kè zhàn}{里|li}{出|chū}{来|lái}{了|le}。', hu: 'Elállt az eső, a vendégek sorban kijönnek a vendégházakból.' },
+        { zh: '{七|qī}{点|diǎn}{以后|yǐ·hòu}，{客人|kè·rén}{陆续|lù xù}{到|dào}{了|le}。', hu: 'Hét óra után sorra megérkeztek a vendégek.' }
+      ]
+    },
+    {
+      title: '{连续|liánxù}', sub: 'egyfolytában, egymás után (megszakítás nélkül)',
+      pattern: '{连续|lián xù} + ige + időtartam / szám',
+      body: 'A {连续|liánxù} azt jelenti, hogy valami <b>megszakítás nélkül</b> ismétlődik vagy tart: {连续下了三天雨|liánxù xià le sān tiān yǔ} „három napig egyfolytában esett", {他连续工作了十个小时|tā liánxù gōngzuò le shí ge xiǎoshí} „tíz órát dolgozott megállás nélkül", {连续三年得第一|liánxù sān nián dé dì yī} „három egymást követő évben lett első".',
+      examples: [
+        { zh: '{连续|lián xù}{下|xià}{了|le}{三|sān}{天|tiān}{雨|yǔ}，{今天|jīn·tiān}{总算|zǒng suàn}{晴|qíng}{了|le}。', hu: 'Három napig egyfolytában esett, ma végre kisütött a nap.' },
+        { zh: '{他|tā}{连续|lián xù}{三|sān}{年|nián}{得|dé}{了|le}{第一|dì yī}{名|míng}。', hu: 'Három egymást követő évben lett első.' }
+      ]
+    },
+    {
+      title: '{接着|jiēzhe}', sub: 'aztán, utána; folytatja',
+      pattern: '{先|xiān} A，{接着|jiē zhe} B · A + {接着|jiē zhe} + ige',
+      body: 'Két jelentése van. <b>1. Ezután, utána</b> — eseménysorban: {先去古城转转，接着坐车去雪山|xiān qù gǔchéng zhuànzhuan, jiēzhe zuò chē qù xuěshān} „előbb az óváros, utána a hegy". <b>2. Folytatja</b> (ahol abbahagyta): {你接着说|nǐ jiēzhe shuō} „folytasd csak", {吃完饭我们接着讨论|chī wán fàn wǒmen jiēzhe tǎolùn} „evés után folytatjuk a megbeszélést".',
+      examples: [
+        { zh: '{我们|wǒ·men}{先|xiān}{去|qù}{古城|gǔ chéng}，{接着|jiē zhe}{坐|zuò}{车|chē}{去|qù}{雪山|xuě shān}。', hu: 'Előbb az óvárosba megyünk, utána busszal a havas hegyre.' },
+        { zh: '{对|duì}{不|bu}{起|qǐ}，{打|dǎ}{断|duàn}{你|nǐ}{了|le}，{你|nǐ}{接着|jiē zhe}{说|shuō}。', hu: 'Bocs, hogy félbeszakítottalak, folytasd csak.' }
+      ]
+    },
+    {
+      title: '{临时|línshí}', sub: 'hirtelen, az utolsó pillanatban; ideiglenes',
+      pattern: '{临时|lín shí} + ige · {临时|lín shí}{的|de} + főnév',
+      body: 'A {临时|línshí} határozóként azt jelzi, hogy valami <b>hirtelen, az utolsó pillanatban</b> történik: {导游临时通知|dǎoyóu línshí tōngzhī} „az idegenvezető váratlanul szólt", {临时改变计划|línshí gǎibiàn jìhuà} „az utolsó pillanatban megváltoztatja a tervet". Jelzőként „ideiglenes": {临时工作|línshí gōngzuò} „alkalmi munka".',
+      examples: [
+        { zh: '{导游|dǎo yóu}{临时|lín shí}{通知|tōng zhī}，{上|shàng}{山|shān}{的|de}{路|lù}{封|fēng}{了|le}。', hu: 'Az idegenvezető váratlanul szólt, hogy lezárták a hegyi utat.' },
+        { zh: '{会议|huì·yì}{临时|lín shí}{改|gǎi}{到|dào}{了|le}{明天|míng·tiān}{下午|xià·wǔ}。', hu: 'Az értekezletet az utolsó pillanatban holnap délutánra tették át.' }
+      ]
+    },
+    {
+      title: '{随时|suíshí}', sub: 'bármikor',
+      pattern: 'A + {随时|suí shí} + ige',
+      body: 'A {随时|suíshí} „bármikor, amikor csak szükséges": {有什么不舒服，随时告诉他|yǒu shénme bù shūfu, suíshí gàosu tā} „ha bármi rosszullét van, bármikor szóljunk neki", {欢迎随时来玩儿|huānyíng suíshí lái wánr} „bármikor szívesen látunk". Azt is jelentheti, hogy valami bármelyik pillanatban bekövetkezhet: {计划随时会变|jìhuà suíshí huì biàn} „a terv bármikor változhat".',
+      examples: [
+        { zh: '{有|yǒu}{什么|shén·me}{不|bù}{舒服|shū·fu}，{随时|suí shí}{告诉|gào·su}{我|wǒ}。', hu: 'Ha bármi rosszullét van, bármikor szólj nekem.' },
+        { zh: '{旅行|lǚ·xíng}{的|de}{时候|shí·hou}，{计划|jì·huà}{随时|suí shí}{会|huì}{变|biàn}。', hu: 'Utazás közben a terv bármikor megváltozhat.' }
+      ]
+    }
+  ],
+  phrases: [
+    { zh: '{糟糕|zāo gāo}！', hu: 'A fenébe!' },
+    { zh: '{计划|jì·huà}{赶|gǎn}{不|bu}{上|shàng}{变化|biàn·huà}。', hu: 'A terv sosem tart lépést a változással.' },
+    { zh: '{一路|yí lù}{平安|píng ān}！', hu: 'Jó utat!' },
+    { zh: '{这儿|zhèr}{的|de}{风景|fēng jǐng}{美|měi}{极|jí}{了|le}！', hu: 'Csodálatos itt a táj!' }
+  ],
+  words: [
+    { title: 'Szavak',
+      items: [
+        { zh: '{陆续|lù xù}', pinyin: 'lùxù', hu: 'egymás után, sorban' },
+        { zh: '{连续|lián xù}', pinyin: 'liánxù', hu: 'egyfolytában' },
+        { zh: '{接着|jiē zhe}', pinyin: 'jiēzhe', hu: 'aztán; folytatja' },
+        { zh: '{临时|lín shí}', pinyin: 'línshí', hu: 'hirtelen; ideiglenes' },
+        { zh: '{随时|suí shí}', pinyin: 'suíshí', hu: 'bármikor' },
+        { zh: '{客栈|kè zhàn}', pinyin: 'kèzhàn', hu: 'vendégház, fogadó' },
+        { zh: '{古城|gǔ chéng}', pinyin: 'gǔchéng', hu: 'óváros' },
+        { zh: '{雪山|xuě shān}', pinyin: 'xuěshān', hu: 'havas hegy' },
+        { zh: '{高原|gāo yuán}', pinyin: 'gāoyuán', hu: 'fennsík' },
+        { zh: '{导游|dǎo yóu}', pinyin: 'dǎoyóu', hu: 'idegenvezető' },
+        { zh: '{通知|tōng zhī}', pinyin: 'tōngzhī', hu: 'értesít; értesítés' },
+        { zh: '{晴|qíng}', pinyin: 'qíng', hu: 'derült, napos' }
+      ] },
+    { title: 'Ráadás',
+      items: [
+        { zh: '{高原反应|gāo yuán fǎn yìng}', pinyin: 'gāoyuán fǎnyìng', hu: 'magaslati betegség' },
+        { zh: '{少数民族|shǎo shù mín zú}', pinyin: 'shǎoshù mínzú', hu: 'nemzetiségi kisebbség' },
+        { zh: '{骑马|qí mǎ}', pinyin: 'qí mǎ', hu: 'lovagol' },
+        { zh: '{糟糕|zāo gāo}', pinyin: 'zāogāo', hu: 'a fenébe; rossz' }
+      ] }
+  ],
+  culture: [
+    { title: 'Népek és nyelvek Jünnanban', text: 'Jünnan Kína egyik legváltozatosabb tartománya: itt él az ország nemzetiségi kisebbségeinek ({少数民族|shǎoshù mínzú}) nagy része. Lijiangban a naxi nép ({纳西族|Nàxīzú}) otthona van, akiknek saját képírása, a {东巴文|Dōngbāwén}, a világ kevés ma is ismert képírásainak egyike.' },
+    { title: 'Magasan a felhők felett', text: 'A Lijiang melletti {玉龙雪山|Yùlóng Xuěshān} „Jáde Sárkány Havas-hegy" csúcsai jóval 4000 méter fölé emelkednek. A turisták libegővel jutnak fel a magasba, és sokan vesznek magukkal oxigénpalackot a magaslati betegség ellen.' }
+  ],
+  reading: {
+    title: '{丽江|Lì·jiāng}{之|zhī}{旅|lǚ}', titleHu: 'Utazás Lijiangba',
+    text: [
+      { zh: '{五一|Wǔ Yī}{假期|jià qī}，{安娜|Ān·nà}{和|hé}{王丽|Wáng Lì}{去|qù}{了|le}{云南|Yún·nán}{丽江|Lì·jiāng}。', hu: 'A május elsejei szünetben Anna és Wang Li a jünnani Lijiangba utaztak.' },
+      { zh: '{她们|tā·men}{到|dào}{的|de}{时候|shí·hou}{连续|lián xù}{下|xià}{了|le}{几|jǐ}{天|tiān}{雨|yǔ}，{只好|zhǐ·hǎo}{在|zài}{客栈|kè zhàn}{里|li}{喝|hē}{茶|chá}{聊|liáo}{天儿|tiānr}。', hu: 'Amikor megérkeztek, napokig egyfolytában esett, így a vendégházban teáztak és beszélgettek.' },
+      { zh: '{天|tiān}{晴|qíng}{以后|yǐ·hòu}，{她们|tā·men}{先|xiān}{逛|guàng}{了|le}{古城|gǔ chéng}，{接着|jiē zhe}{准备|zhǔn·bèi}{去|qù}{雪山|xuě shān}。', hu: 'Amikor kitisztult, előbb bejárták az óvárost, aztán a havas hegyre készültek.', par: true },
+      { zh: '{可是|kě·shì}{山|shān}{上|shang}{临时|lín shí}{封|fēng}{了|le}{路|lù}，{她们|tā·men}{只好|zhǐ·hǎo}{改|gǎi}{去|qù}{湖|hú}{边|biān}{骑|qí}{马|mǎ}。', hu: 'A hegyen azonban váratlanul lezárták az utat, így inkább a tóparton lovagoltak.' },
+      { zh: '{晚上|wǎn·shang}，{游客|yóu·kè}{们|men}{陆续|lù xù}{回|huí}{到|dào}{古城|gǔ chéng}，{安娜|Ān·nà}{说|shuō}：“{虽然|suī·rán}{没|méi}{上|shàng}{雪山|xuě shān}，{可是|kě·shì}{这|zhè}{次|cì}{旅行|lǚ·xíng}{一点儿|yì diǎnr}{也|yě}{不|bù}{遗憾|yí hàn}。”', hu: 'Este a turisták sorra visszatértek az óvárosba, Anna pedig azt mondta: „Bár nem jutottunk fel a hegyre, egyáltalán nem bánom ezt az utat."', par: true }
+    ],
+    words: [ { zh: '{遗憾|yí hàn}', hu: 'sajnálat; kár' } ],
+    questions: [
+      { q: 'Mikor utaztak Jünnanba?', a: 'a május elsejei szünetben', wrong: ['a tavaszi ünnepen', 'nyári szabadságon', 'a Holdünnepen'], why: '{五一假期|Wǔ Yī jiàqī}.' },
+      { q: 'Mit csináltak, amíg esett?', a: 'teáztak és beszélgettek', wrong: ['hegyet másztak', 'hazautaztak', 'vásárolni mentek'], why: '{只好在客栈里喝茶聊天儿|zhǐhǎo zài kèzhàn li hē chá liáo tiānr}.' },
+      { q: 'Miért nem mentek fel a hegyre?', a: 'váratlanul lezárták az utat', wrong: ['Anna rosszul lett', 'elfogyott a pénzük', 'elkéstek a buszról'], why: '{山上临时封了路|shān shang línshí fēng le lù}.' },
+      { q: 'Hogyan érezte magát Anna az út végén?', a: 'egyáltalán nem bánta', wrong: ['nagyon csalódott volt', 'beteg lett', 'soha többé nem akar utazni'], why: '{这次旅行一点儿也不遗憾|zhè cì lǚxíng yìdiǎnr yě bù yíhàn}.' }
+    ]
+  },
+  quiz: [
+    { q: '„A vendégek sorban kijönnek a vendégházakból."', a: '{游客|yóu·kè}{们|men}{陆续|lù xù}{从|cóng}{客栈|kè zhàn}{里|li}{出|chū}{来|lái}{了|le}。', wrong: ['{游客|yóu·kè}{们|men}{从|cóng}{客栈|kè zhàn}{里|li}{出|chū}{来|lái}{陆续|lù xù}{了|le}。', '{陆续|lù xù}{游客|yóu·kè}{们|men}{客栈|kè zhàn}{从|cóng}{出|chū}{来|lái}。', '{游客|yóu·kè}{们|men}{从|cóng}{陆续|lù xù}{客栈|kè zhàn}{里|li}{来|lái}{出|chū}。'], why: 'Többes alany + {陆续|lùxù} + ige.', point: 1 },
+    { q: 'Mit hangsúlyoz a {陆续|lùxù}?', a: 'az egymásutániságot', wrong: ['a hirtelenséget', 'az okot', 'a feltételt'], why: '„Egymás után, időben elnyújtva".', point: 1 },
+    { q: '„Három napig egyfolytában esett."', a: '{连续|lián xù}{下|xià}{了|le}{三|sān}{天|tiān}{雨|yǔ}。', wrong: ['{下|xià}{了|le}{连续|lián xù}{雨|yǔ}{三|sān}{天|tiān}。', '{三|sān}{天|tiān}{连续|lián xù}{雨|yǔ}{下|xià}{了|le}{吗|ma}。', '{连续|lián xù}{三|sān}{天|tiān}{了|le}{下|xià}{雨|yǔ}{吗|ma}。'], why: '{连续|liánxù} + ige + időtartam.', point: 2 },
+    { q: 'Mit jelent: {他连续三年得了第一名|tā liánxù sān nián dé le dì yī míng}。', a: 'Három egymást követő évben lett első.', wrong: ['Három év után lett először első.', 'Harmadik lett az első évben.', 'Három évig nem nyert.'], why: '{连续|liánxù} „egymás után".', point: 2 },
+    { q: '„Előbb az óvárosba megyünk, utána a hegyre."', a: '{我们|wǒ·men}{先|xiān}{去|qù}{古城|gǔ chéng}，{接着|jiē zhe}{去|qù}{雪山|xuě shān}。', wrong: ['{我们|wǒ·men}{接着|jiē zhe}{去|qù}{古城|gǔ chéng}，{先|xiān}{去|qù}{雪山|xuě shān}。', '{接着|jiē zhe}{我们|wǒ·men}{去|qù}{古城|gǔ chéng}{先|xiān}，{雪山|xuě shān}{去|qù}。', '{我们|wǒ·men}{先|xiān}{去|qù}{接着|jiē zhe}{古城|gǔ chéng}，{去|qù}{雪山|xuě shān}。'], why: '{先|xiān} A, {接着|jiēzhe} B.', point: 3 },
+    { q: 'Mit jelent: {你接着说|nǐ jiēzhe shuō}。', a: 'Folytasd csak.', wrong: ['Hallgass!', 'Mondd el újra az elejétől!', 'Később mondd el!'], why: 'A {接着|jiēzhe} itt „folytat".', point: 3 },
+    { q: '„Az idegenvezető váratlanul szólt, hogy lezárták az utat."', a: '{导游|dǎo yóu}{临时|lín shí}{通知|tōng zhī}，{路|lù}{封|fēng}{了|le}。', wrong: ['{导游|dǎo yóu}{通知|tōng zhī}{临时|lín shí}，{路|lù}{封|fēng}{了|le}{吗|ma}。', '{临时|lín shí}{导游|dǎo yóu}{封|fēng}{了|le}{通知|tōng zhī}{路|lù}。', '{导游|dǎo yóu}{随时|suí shí}{通知|tōng zhī}{路|lù}{封|fēng}{过|guo}。'], why: '{临时|línshí} + ige.', point: 4 },
+    { q: 'Mit jelent: {临时工作|línshí gōngzuò}?', a: 'alkalmi munka', wrong: ['állandó állás', 'éjszakai műszak', 'otthoni munka'], why: 'Jelzőként „ideiglenes".', point: 4 },
+    { q: '„Ha bármi rosszullét van, bármikor szólj."', a: '{有|yǒu}{什么|shén·me}{不|bù}{舒服|shū·fu}，{随时|suí shí}{告诉|gào·su}{我|wǒ}。', wrong: ['{有|yǒu}{什么|shén·me}{不|bù}{舒服|shū·fu}，{随便|suí biàn}{告诉|gào·su}{我|wǒ}{吧|ba}。', '{随时|suí shí}{有|yǒu}{什么|shén·me}，{不|bù}{舒服|shū·fu}{告诉|gào·su}{我|wǒ}。', '{有|yǒu}{什么|shén·me}{随时|suí shí}{不|bù}{舒服|shū·fu}，{我|wǒ}{告诉|gào·su}。'], why: '{随时|suíshí} + ige.', point: 5 },
+    { q: 'Mit jelent: {计划随时会变|jìhuà suíshí huì biàn}。', a: 'A terv bármikor változhat.', wrong: ['A terv sosem változik.', 'A tervet mindig követjük.', 'A terv már megváltozott.'], why: '{随时|suíshí} „bármikor".', point: 5 },
+    { q: 'Mit jelent a {导游|dǎoyóu}?', a: 'idegenvezető', wrong: ['sofőr', 'szállásadó', 'turista'], why: '{导游临时通知|dǎoyóu línshí tōngzhī}.' },
+    { q: 'Mit jelent a {古城|gǔchéng}?', a: 'óváros', wrong: ['várrom', 'fővárosi negyed', 'falu'], why: '{逛古城|guàng gǔchéng} „bejárja az óvárost".' },
+    { q: 'Mit jelent a {晴|qíng}?', a: 'derült', wrong: ['felhős', 'esős', 'havas'], why: '{今天总算晴了|jīntiān zǒngsuàn qíng le}.' },
+    { q: 'Mit jelent: {糟糕|zāogāo}！', a: 'A fenébe!', wrong: ['Nagyszerű!', 'Gyerünk!', 'Pihenjünk!'], why: 'Kellemetlen meglepetésre.' },
+    { q: 'Mit jelent: {计划赶不上变化|jìhuà gǎn bu shàng biànhuà}。', a: 'A terv sosem tart lépést a változással.', wrong: ['Mindig mindent előre tervezz.', 'A változás jó terv.', 'Nincs időnk tervezni.'], why: 'Népszerű mondás.' },
+    { q: 'Mit jelent a {客栈|kèzhàn}?', a: 'vendégház', wrong: ['vendéglő', 'buszmegálló', 'turistairoda'], why: 'Kis, hangulatos szállás.' }
+  ]
+},
+
+/* ════════════════════════════════════════════════════
+   HSK 5 · 14. LECKE — 要么…要么, 一来…二来, 至于, 不但不…反而, 反正
+   ════════════════════════════════════════════════════ */
+{
+  id: 'l84', no: 84, badge: '14', kicker: 'HSK 5 · 14. lecke', label: 'HSK 5 · 14. lecke',
+  title: 'Saját lakás? — vagy kicsi, vagy messze',
+  lead: 'Egy nagy döntésről beszélsz: két lehetőség közül választasz (要么…要么…), okokat sorolsz (一来…二来…), új szempontra térsz (至于), elmondod, hogy épp az ellenkezője történt (不但不…反而…), és megnyugtatsz: úgyis… (反正).',
+  cando: [
+    'Két lehetőség közül választást írsz le: 要么…，要么….',
+    'Okokat sorolsz beszélt stílusban: 一来…，二来….',
+    'Új, kapcsolódó témára térsz: 至于….',
+    'Ellenkező eredményt fejezel ki (不但不…反而…), és megnyugtatsz (反正…).'
+  ],
+  intro: [
+    'Wang Ming videóhívásban meséli Annának, hogy lakást akar venni Pekingben — de a lakásárak hatalmasak, és a döntés nemcsak az övé.',
+    'Ebben a leckében a mérlegelés beszélt nyelvi eszközeit tanulod: választás, okok felsorolása, témaváltás, váratlan ellenkező eredmény és megnyugtatás.'
+  ],
+  dialogue: {
+    title: 'Videóhívás Pekinggel',
+    scene: 'Vasárnap este, videóhívás. Wang Ming Pekingben, Anna Sanghajban.',
+    lines: [
+      { who: 'Wang Ming', zh: '{安娜|Ān·nà}，{我|wǒ}{在|zài}{考虑|kǎo lǜ}{买|mǎi}{房子|fáng·zi}。{北京|Běi·jīng}{的|de}{房价|fáng jià}{太|tài}{高|gāo}{了|le}，{要么|yào·me}{买|mǎi}{个|ge}{小|xiǎo}{的|de}，{要么|yào·me}{去|qù}{郊区|jiāo qū}{买|mǎi}{个|ge}{大|dà}{的|de}。', hu: 'Anna, azon gondolkodom, hogy lakást veszek. Pekingben nagyon magasak az árak: vagy egy kicsit veszek, vagy egy nagyot az elővárosban.' },
+      { who: 'Anna', zh: '{你|nǐ}{为什么|wèi shén·me}{非|fēi}{要|yào}{买|mǎi}{呢|ne}？{租|zū}{房子|fáng·zi}{不|bù}{行|xíng}{吗|ma}？', hu: 'Miért ragaszkodsz a vásárláshoz? Bérelni nem jó?' },
+      { who: 'Wang Ming', zh: '{一来|yī lái}{租|zū}{房子|fáng·zi}{不|bù}{稳定|wěn dìng}，{二来|èr lái}{我|wǒ}{女朋友|nǚ péng·you}{家|jiā}{希望|xī·wàng}{我们|wǒ·men}{结婚|jié hūn}{前|qián}{有|yǒu}{自己|zì·jǐ}{的|de}{房子|fáng·zi}。', hu: 'Egyrészt a bérlés nem biztos, másrészt a barátnőm családja azt szeretné, ha az esküvő előtt lenne saját lakásunk.' },
+      { who: 'Anna', zh: '{原来|yuán·lái}{是|shì}{这样|zhè·yàng}。{至于|zhì yú}{在|zài}{哪儿|nǎr}{买|mǎi}，{你们|nǐ·men}{最好|zuì hǎo}{一起|yì·qǐ}{商量|shāng·liang}。', hu: 'Szóval így áll a helyzet. Ami azt illeti, hol vegyetek, azt jobb, ha együtt beszélitek meg.' },
+      { who: 'Wang Ming', zh: '{我|wǒ}{父母|fù·mǔ}{说|shuō}{可以|kě·yǐ}{帮|bāng}{我|wǒ}{付|fù}{首付|shǒu fù}，{可是|kě·shì}{这样|zhè·yàng}{我|wǒ}{不但|bú dàn}{不|bù}{轻松|qīng sōng}，{反而|fǎn ér}{压力|yā·lì}{更|gèng}{大|dà}{了|le}。', hu: 'A szüleim azt mondják, segítenek kifizetni az önrészt, de így nemhogy megkönnyebbülnék, hanem még nagyobb a nyomás rajtam.' },
+      { who: 'Anna', zh: '{我|wǒ}{明白|míng·bai}。{别|bié}{想|xiǎng}{太|tài}{多|duō}，{反正|fǎn zhèng}{这|zhè}{是|shì}{一|yí}{件|jiàn}{大|dà}{事|shì}，{慢慢|màn màn}{来|lái}。', hu: 'Értem. Ne gondolkodj túl sokat — úgyis nagy dolog ez, ráérsz.' },
+      { who: 'Wang Ming', zh: '{你|nǐ}{说|shuō}{得|de}{对|duì}。{反正|fǎn zhèng}{我们|wǒ·men}{明年|míng·nián}{才|cái}{结婚|jié hūn}，{还|hái}{有|yǒu}{时间|shí·jiān}。', hu: 'Igazad van. Úgyis csak jövőre házasodunk, van még időnk.' }
+    ],
+    notes: [
+      'A {首付|shǒufù} „önrész (az első részlet lakásvásárláskor)", a {房价|fángjià} „lakásár", a {郊区|jiāoqū} „külváros, elővárosi rész".',
+      'A {非要|fēi yào} „mindenáron, ragaszkodik hozzá" a HSK 5 10. leckéjében tanult {非|fēi}…{不可|bùkě} rövid, beszélt alakja.',
+      'A {慢慢来|màn màn lái} „csak lassan, ráérünk" — megnyugtató fordulat.'
+    ]
+  },
+  points: [
+    {
+      title: '{要么|yàome} … {要么|yàome} …', sub: 'vagy …, vagy … (választani kell)',
+      pattern: '{要么|yào·me} + A，{要么|yào·me} + B',
+      body: 'Két lehetőséget állít egymás mellé, amelyek közül <b>választani kell</b>: {要么买个小的，要么去郊区买个大的|yàome mǎi ge xiǎo de, yàome qù jiāoqū mǎi ge dà de} „vagy kicsit veszek, vagy nagyot az elővárosban". A HSK 4-ben tanult {不是|bú shì}…{就是|jiù shì}… ezzel szemben tényt állapít meg (a kettő közül valamelyik igaz), nem döntést.',
+      tables: [
+        { caption: 'Vagy-vagy',
+          head: ['', 'Jelentés', 'Példa'],
+          rows: [
+            ['{要么|yào·me}…{要么|yào·me}', 'választás, döntés', '{要么|yào·me}{今天|jīn·tiān}{去|qù}，{要么|yào·me}{明天|míng·tiān}{去|qù}'],
+            ['{不是|bú shì}…{就是|jiù shì}', 'tény: a kettő egyike igaz', '{他|tā}{不是|bú shì}{在|zài}{家|jiā}，{就是|jiù shì}{在|zài}{公司|gōng·sī}']
+          ] }
+      ],
+      examples: [
+        { zh: '{要么|yào·me}{买|mǎi}{个|ge}{小|xiǎo}{的|de}，{要么|yào·me}{去|qù}{郊区|jiāo qū}{买|mǎi}{个|ge}{大|dà}{的|de}。', hu: 'Vagy egy kicsit veszek, vagy egy nagyot az elővárosban.' },
+        { zh: '{要么|yào·me}{你|nǐ}{来|lái}{上海|Shàng·hǎi}，{要么|yào·me}{我|wǒ}{去|qù}{北京|Běi·jīng}，{我们|wǒ·men}{见|jiàn}{个|ge}{面|miàn}{吧|ba}。', hu: 'Vagy te jössz Sanghajba, vagy én megyek Pekingbe — de találkozzunk.' }
+      ]
+    },
+    {
+      title: '{一来|yīlái} … {二来|èrlái} …', sub: 'egyrészt …, másrészt …',
+      pattern: '{一来|yī lái} + 1. ok，{二来|èr lái} + 2. ok',
+      body: 'Beszélt nyelvi felsorolás, többnyire <b>okokat</b> vezet be: {一来租房子不稳定，二来女朋友家希望有自己的房子|yīlái zū fángzi bù wěndìng, èrlái nǚpéngyou jiā xīwàng yǒu zìjǐ de fángzi} „egyrészt a bérlés nem biztos, másrészt…". Folytatható {三来|sānlái}-val is. Írottabb párja a HSK 4-ben tanult {一方面|yì fāngmiàn}…{另一方面|lìng yì fāngmiàn}….',
+      examples: [
+        { zh: '{一来|yī lái}{租|zū}{房子|fáng·zi}{不|bù}{稳定|wěn dìng}，{二来|èr lái}{我|wǒ}{们|men}{想|xiǎng}{有|yǒu}{自己|zì·jǐ}{的|de}{家|jiā}。', hu: 'Egyrészt a bérlés nem biztos, másrészt saját otthont szeretnénk.' },
+        { zh: '{我|wǒ}{喜欢|xǐ·huan}{骑|qí}{车|chē}{上|shàng}{班|bān}，{一来|yī lái}{锻炼|duàn·liàn}{身体|shēn·tǐ}，{二来|èr lái}{不|bú}{用|yòng}{挤|jǐ}{地铁|dì·tiě}。', hu: 'Szeretek biciklivel járni dolgozni: egyrészt mozgok, másrészt nem kell tolongani a metrón.' }
+      ]
+    },
+    {
+      title: '{至于|zhìyú}', sub: 'ami … illeti (témaváltás)',
+      pattern: '…。{至于|zhì yú} + új (kapcsolódó) téma，…',
+      body: 'A {至于|zhìyú} egy <b>kapcsolódó, új témára</b> vezet át: „ami pedig … illeti". {至于在哪儿买，你们最好一起商量|zhìyú zài nǎr mǎi, nǐmen zuìhǎo yìqǐ shāngliang} „ami azt illeti, hol vegyetek, beszéljétek meg együtt". Gyakran jelzi, hogy erről a beszélő nem dönt, vagy kevésbé fontos.',
+      examples: [
+        { zh: '{房子|fáng·zi}{一定|yí dìng}{要|yào}{买|mǎi}，{至于|zhì yú}{在|zài}{哪儿|nǎr}{买|mǎi}，{以后|yǐ·hòu}{再|zài}{说|shuō}。', hu: 'Lakást mindenképp veszünk; hogy hol, azt majd később megbeszéljük.' },
+        { zh: '{我|wǒ}{同意|tóng yì}{去|qù}{旅行|lǚ·xíng}，{至于|zhì yú}{去|qù}{哪儿|nǎr}，{你|nǐ}{来|lái}{决定|jué·dìng}。', hu: 'Benne vagyok az utazásban; hogy hová, azt te döntsd el.' }
+      ]
+    },
+    {
+      title: '{不但不|búdàn bù} … {反而|fǎn\'ér} …', sub: 'nemhogy …, hanem épp ellenkezőleg …',
+      pattern: 'A + {不但|bú dàn}{不|bù} / {没|méi} + várt eredmény，{反而|fǎn ér} + ellenkezője',
+      body: 'Azt fejezi ki, hogy a várt eredmény <b>nemcsak elmaradt, hanem az ellenkezője</b> következett be: {我不但不轻松，反而压力更大了|wǒ búdàn bù qīngsōng, fǎn\'ér yālì gèng dà le} „nemhogy megkönnyebbülnék, hanem még nagyobb a nyomás", {吃了药，病不但没好，反而更重了|chī le yào, bìng búdàn méi hǎo, fǎn\'ér gèng zhòng le} „bevette a gyógyszert, de nemhogy jobban lett volna, még rosszabb lett". A {反而|fǎn\'ér} egyedül is állhat: „épp ellenkezőleg".',
+      examples: [
+        { zh: '{父母|fù·mǔ}{帮|bāng}{我|wǒ}，{我|wǒ}{不但|bú dàn}{不|bù}{轻松|qīng sōng}，{反而|fǎn ér}{压力|yā·lì}{更|gèng}{大|dà}{了|le}。', hu: 'A szüleim segítenek, de nemhogy megkönnyebbülnék, még nagyobb a nyomás rajtam.' },
+        { zh: '{雨|yǔ}{不但|bú dàn}{没|méi}{停|tíng}，{反而|fǎn ér}{越|yuè}{下|xià}{越|yuè}{大|dà}{了|le}。', hu: 'Az eső nemhogy elállt volna, egyre jobban esett.' }
+      ]
+    },
+    {
+      title: '{反正|fǎnzhèng}', sub: 'úgyis, akárhogy is',
+      pattern: '{反正|fǎn zhèng} + (változatlan) tény / ok，…',
+      body: 'A {反正|fǎnzhèng} egy olyan tényre utal, amely <b>minden körülmények között igaz</b>, ezért nem kell aggódni vagy sokat mérlegelni: {反正这是一件大事，慢慢来|fǎnzhèng zhè shì yí jiàn dà shì, màn màn lái} „úgyis nagy dolog ez, ráérsz", {你去不去都行，反正我去|nǐ qù bu qù dōu xíng, fǎnzhèng wǒ qù} „akár jössz, akár nem, én úgyis megyek". Beszélt nyelvi.',
+      examples: [
+        { zh: '{别|bié}{着急|zháo jí}，{反正|fǎn zhèng}{我们|wǒ·men}{明年|míng·nián}{才|cái}{结婚|jié hūn}。', hu: 'Ne siess, úgyis csak jövőre házasodunk.' },
+        { zh: '{你|nǐ}{去|qù}{不|bu}{去|qù}{都|dōu}{行|xíng}，{反正|fǎn zhèng}{我|wǒ}{要|yào}{去|qù}。', hu: 'Akár jössz, akár nem, én úgyis megyek.' }
+      ]
+    }
+  ],
+  phrases: [
+    { zh: '{慢慢|màn màn}{来|lái}。', hu: 'Csak lassan, ráérünk.' },
+    { zh: '{原来|yuán·lái}{是|shì}{这样|zhè·yàng}。', hu: 'Szóval így áll a dolog.' },
+    { zh: '{压力|yā·lì}{山|shān}{大|dà}！', hu: 'Hatalmas rajtam a nyomás! (tréfás)' },
+    { zh: '{这|zhè}{事|shì}{你们|nǐ·men}{商量|shāng·liang}{着|zhe}{办|bàn}。', hu: 'Ezt beszéljétek meg egymás közt.' }
+  ],
+  words: [
+    { title: 'Szavak',
+      items: [
+        { zh: '{要么|yào·me}', pinyin: 'yàome', hu: 'vagy (… vagy)' },
+        { zh: '{一来|yī lái}', pinyin: 'yīlái', hu: 'egyrészt (először is)' },
+        { zh: '{二来|èr lái}', pinyin: 'èrlái', hu: 'másrészt (másodszor)' },
+        { zh: '{至于|zhì yú}', pinyin: 'zhìyú', hu: 'ami … illeti' },
+        { zh: '{反而|fǎn ér}', pinyin: 'fǎn\'ér', hu: 'épp ellenkezőleg' },
+        { zh: '{反正|fǎn zhèng}', pinyin: 'fǎnzhèng', hu: 'úgyis, akárhogy is' },
+        { zh: '{郊区|jiāo qū}', pinyin: 'jiāoqū', hu: 'külváros, előváros' },
+        { zh: '{首付|shǒu fù}', pinyin: 'shǒufù', hu: 'önrész (első részlet)' },
+        { zh: '{欠|qiàn}', pinyin: 'qiàn', hu: 'tartozik' },
+        { zh: '{房价|fáng jià}', pinyin: 'fángjià', hu: 'lakásár' },
+        { zh: '{贷款|dài kuǎn}', pinyin: 'dàikuǎn', hu: 'hitel; hitelt vesz fel' },
+        { zh: '{装修|zhuāng xiū}', pinyin: 'zhuāngxiū', hu: 'felújít, berendez' }
+      ] },
+    { title: 'Ráadás',
+      items: [
+        { zh: '{丈母娘|zhàng·mu niáng}', pinyin: 'zhàngmuniáng', hu: 'anyós (a feleség anyja)' },
+        { zh: '{学区房|xué qū fáng}', pinyin: 'xuéqūfáng', hu: 'jó iskola körzetébe tartozó lakás' },
+        { zh: '{轻松|qīng sōng}', pinyin: 'qīngsōng', hu: 'könnyű, felszabadult' },
+        { zh: '{买房|mǎi fáng}', pinyin: 'mǎi fáng', hu: 'lakást vesz' }
+      ] }
+  ],
+  culture: [
+    { title: 'Lakás nélkül nincs esküvő?', text: 'Kínában sok családban elvárás, hogy a vőlegénynek legyen saját lakása az esküvő előtt — ezt tréfásan {丈母娘经济|zhàngmuniáng jīngjì} „anyós-gazdaságnak" is nevezik. A fiatalok gyakran a szüleik megtakarításából fizetik az önrészt, a többit pedig hosszú lejáratú hitelből.' },
+    { title: 'Az iskola miatt', text: 'A gyerekek sokszor a lakóhelyük szerinti körzeti iskolába járhatnak, ezért a jó iskolák körzetébe eső lakások ({学区房|xuéqūfáng}) sokkal drágábbak — néha egy régi, kicsi lakás is többe kerül, mint egy új, nagy máshol.' }
+  ],
+  reading: {
+    title: '{王明|Wáng Míng}{买|mǎi}{房|fáng}', titleHu: 'Wang Ming lakást vesz',
+    text: [
+      { zh: '{王明|Wáng Míng}{和|hé}{女朋友|nǚ péng·you}{打算|dǎ·suàn}{明年|míng·nián}{结婚|jié hūn}，{最近|zuì·jìn}{一直|yì zhí}{在|zài}{看|kàn}{房子|fáng·zi}。', hu: 'Wang Ming és a barátnője jövőre tervezik az esküvőt, és mostanában folyton lakást néznek.' },
+      { zh: '{市|shì}{中心|zhōng xīn}{的|de}{房子|fáng·zi}{太|tài}{贵|guì}，{他们|tā·men}{要么|yào·me}{买|mǎi}{一|yí}{套|tào}{小|xiǎo}{的|de}，{要么|yào·me}{去|qù}{郊区|jiāo qū}。', hu: 'A belvárosi lakások túl drágák: vagy egy kicsit vesznek, vagy kiköltöznek az elővárosba.' },
+      { zh: '{最后|zuì·hòu}{他们|tā·men}{选|xuǎn}{了|le}{郊区|jiāo qū}，{一来|yī lái}{房子|fáng·zi}{大|dà}，{二来|èr lái}{离|lí}{地铁|dì·tiě}{站|zhàn}{不|bù}{远|yuǎn}。', hu: 'Végül az elővárost választották: egyrészt nagyobb a lakás, másrészt nincs messze a metrómegálló.', par: true },
+      { zh: '{王明|Wáng Míng}{本来|běn·lái}{很|hěn}{担心|dān xīn}{贷款|dài kuǎn}，{可是|kě·shì}{买|mǎi}{了|le}{房子|fáng·zi}{以后|yǐ·hòu}，{他|tā}{不但|bú dàn}{没有|méi·yǒu}{后悔|hòu huǐ}，{反而|fǎn ér}{觉得|jué·de}{生活|shēng·huó}{更|gèng}{有|yǒu}{目标|mù biāo}{了|le}。', hu: 'Wang Ming eredetileg nagyon aggódott a hitel miatt, de a vásárlás után nemhogy megbánta volna, hanem úgy érzi, céltudatosabb lett az élete.' },
+      { zh: '{至于|zhì yú}{装修|zhuāng xiū}，{他|tā}{说|shuō}{反正|fǎn zhèng}{不|bù}{着急|zháo jí}，{可以|kě·yǐ}{慢慢|màn màn}{来|lái}。', hu: 'Ami a felújítást illeti, azt mondja: úgysem sürgős, ráérnek.', par: true }
+    ],
+    words: [ { zh: '{套|tào}', hu: '(mérőszó lakásra, készletre)' } ],
+    questions: [
+      { q: 'Miért néznek lakást?', a: 'jövőre házasodnak', wrong: ['eladják a régit', 'Sanghajba költöznek', 'a szüleik kérték'], why: '{打算明年结婚|dǎsuàn míngnián jié hūn}.' },
+      { q: 'Milyen lehetőségeik voltak?', a: 'kicsi lakás vagy előváros', wrong: ['belváros vagy Sanghaj', 'bérlés vagy hotel', 'régi vagy új autó'], why: '{要么买一套小的，要么去郊区|yàome mǎi yí tào xiǎo de, yàome qù jiāoqū}.' },
+      { q: 'Miért választották az elővárost?', a: 'nagyobb, és közel a metró', wrong: ['olcsóbb a belváros', 'ott laknak a szüleik', 'ott van a munkahelyük'], why: '{一来房子大，二来离地铁站不远|yīlái fángzi dà, èrlái lí dìtiě zhàn bù yuǎn}.' },
+      { q: 'Hogyan érzi magát Wang Ming a vásárlás után?', a: 'céltudatosabbnak', wrong: ['nagyon megbánta', 'el akarja adni a lakást', 'nem érdekli'], why: '{反而觉得生活更有目标了|fǎn\'ér juéde shēnghuó gèng yǒu mùbiāo le}.' }
+    ]
+  },
+  quiz: [
+    { q: '„Vagy egy kicsit veszünk, vagy egy nagyot az elővárosban."', a: '{要么|yào·me}{买|mǎi}{小|xiǎo}{的|de}，{要么|yào·me}{去|qù}{郊区|jiāo qū}{买|mǎi}{大|dà}{的|de}。', wrong: ['{要么|yào·me}{买|mǎi}{小|xiǎo}{的|de}，{就是|jiù shì}{去|qù}{郊区|jiāo qū}{买|mǎi}{大|dà}{的|de}。', '{买|mǎi}{要么|yào·me}{小|xiǎo}{的|de}，{郊区|jiāo qū}{要么|yào·me}{大|dà}{的|de}{买|mǎi}。', '{要么|yào·me}{要么|yào·me}{买|mǎi}{小|xiǎo}{的|de}，{去|qù}{郊区|jiāo qū}{大|dà}{的|de}。'], why: '{要么|yàome} A, {要么|yàome} B.', point: 1 },
+    { q: 'Miben más a {要么|yàome}…{要么|yàome}, mint a {不是|bú shì}…{就是|jiù shì}?', a: 'választást, döntést fejez ki', wrong: ['csak a múltról szól', 'okot fejez ki', 'tagadást fejez ki'], why: 'A {不是|bú shì}…{就是|jiù shì} tényt állapít meg.', point: 1 },
+    { q: '„Egyrészt mozgok, másrészt nem kell tolongani a metrón."', a: '{一来|yī lái}{锻炼|duàn·liàn}{身体|shēn·tǐ}，{二来|èr lái}{不|bú}{用|yòng}{挤|jǐ}{地铁|dì·tiě}。', wrong: ['{二来|èr lái}{锻炼|duàn·liàn}{身体|shēn·tǐ}，{一来|yī lái}{不|bú}{用|yòng}{挤|jǐ}{地铁|dì·tiě}。', '{一来|yī lái}{二来|èr lái}{锻炼|duàn·liàn}{身体|shēn·tǐ}，{不|bú}{用|yòng}{挤|jǐ}{地铁|dì·tiě}。', '{锻炼|duàn·liàn}{一来|yī lái}{身体|shēn·tǐ}，{挤|jǐ}{二来|èr lái}{地铁|dì·tiě}{不|bú}{用|yòng}。'], why: '{一来|yīlái} …, {二来|èrlái} ….', point: 2 },
+    { q: 'Melyik HSK 4-es szerkezet írottabb párja az {一来|yīlái}…{二来|èrlái}?', a: '{一方面|yì fāngmiàn}…{另一方面|lìng yì fāngmiàn}', wrong: ['{一|yī}…{就|jiù}', '{越|yuè}…{越|yuè}', '{又|yòu}…{又|yòu}'], why: 'Mindkettő „egyrészt…, másrészt…".', point: 2 },
+    { q: '„Benne vagyok az utazásban; hogy hová, azt te döntsd el."', a: '{我|wǒ}{同意|tóng yì}{去|qù}{旅行|lǚ·xíng}，{至于|zhì yú}{去|qù}{哪儿|nǎr}，{你|nǐ}{来|lái}{决定|jué·dìng}。', wrong: ['{我|wǒ}{同意|tóng yì}{去|qù}{旅行|lǚ·xíng}，{去|qù}{哪儿|nǎr}{至于|zhì yú}，{决定|jué·dìng}{你|nǐ}{来|lái}。', '{至于|zhì yú}{我|wǒ}{同意|tóng yì}{去|qù}{旅行|lǚ·xíng}，{你|nǐ}{决定|jué·dìng}{哪儿|nǎr}。', '{我|wǒ}{至于|zhì yú}{同意|tóng yì}，{去|qù}{旅行|lǚ·xíng}{哪儿|nǎr}{你|nǐ}{决定|jué·dìng}{来|lái}。'], why: '…, {至于|zhìyú} + új téma, ….', point: 3 },
+    { q: 'Mit csinál a {至于|zhìyú}?', a: 'új témára tér át', wrong: ['tagadja az előzőt', 'megadja az okot', 'időpontot ad meg'], why: '„Ami … illeti".', point: 3 },
+    { q: '„Az eső nemhogy elállt volna, egyre jobban esett."', a: '{雨|yǔ}{不但|bú dàn}{没|méi}{停|tíng}，{反而|fǎn ér}{越|yuè}{下|xià}{越|yuè}{大|dà}{了|le}。', wrong: ['{雨|yǔ}{不但|bú dàn}{停|tíng}{了|le}，{而且|ér·qiě}{越|yuè}{下|xià}{越|yuè}{大|dà}。', '{反而|fǎn ér}{雨|yǔ}{没|méi}{停|tíng}，{不但|bú dàn}{越|yuè}{下|xià}{越|yuè}{大|dà}。', '{雨|yǔ}{没|méi}{反而|fǎn ér}{停|tíng}，{越|yuè}{下|xià}{不但|bú dàn}{越|yuè}{大|dà}。'], why: '{不但没|búdàn méi} …, {反而|fǎn\'ér} ….', point: 4 },
+    { q: 'Mit fejez ki a {反而|fǎn\'ér}?', a: 'a vártnak az ellenkezőjét', wrong: ['a várt eredményt', 'egy feltételt', 'egy időpontot'], why: '„Épp ellenkezőleg".', point: 4 },
+    { q: '„Akár jössz, akár nem, én úgyis megyek."', a: '{你|nǐ}{去|qù}{不|bu}{去|qù}{都|dōu}{行|xíng}，{反正|fǎn zhèng}{我|wǒ}{去|qù}。', wrong: ['{你|nǐ}{去|qù}{不|bu}{去|qù}{都|dōu}{行|xíng}，{反而|fǎn ér}{我|wǒ}{去|qù}。', '{反正|fǎn zhèng}{你|nǐ}{去|qù}{都|dōu}{行|xíng}，{我|wǒ}{不|bu}{去|qù}{去|qù}。', '{你|nǐ}{反正|fǎn zhèng}{去|qù}{不|bu}{行|xíng}，{都|dōu}{我|wǒ}{去|qù}。'], why: '{反正|fǎnzhèng} + változatlan tény.', point: 5 },
+    { q: 'Mit jelent: {反正不着急|fǎnzhèng bù zháojí}。', a: 'Úgysem sürgős.', wrong: ['Nagyon sürgős.', 'Már elkéstünk.', 'Siess, kérlek!'], why: '{反正|fǎnzhèng} „úgyis".', point: 5 },
+    { q: 'Mit jelent a {房价|fángjià}?', a: 'lakásár', wrong: ['lakbér', 'lakcím', 'lakótárs'], why: '{北京的房价太高了|Běijīng de fángjià tài gāo le}.' },
+    { q: 'Mit jelent a {郊区|jiāoqū}?', a: 'előváros', wrong: ['belváros', 'falu', 'ipari park'], why: '{去郊区买个大的|qù jiāoqū mǎi ge dà de}.' },
+    { q: 'Mit jelent a {贷款|dàikuǎn}?', a: 'hitel', wrong: ['megtakarítás', 'fizetés', 'adó'], why: '{担心贷款|dānxīn dàikuǎn} „aggódik a hitel miatt".' },
+    { q: 'Mit jelent az {装修|zhuāngxiū}?', a: 'felújítás', wrong: ['költözés', 'takarítás', 'bérbeadás'], why: '{至于装修|zhìyú zhuāngxiū}…' },
+    { q: 'Mit jelent: {原来是这样|yuánlái shì zhèyàng}。', a: 'Szóval így áll a dolog.', wrong: ['Ez nem igaz.', 'Ez mindig így volt.', 'Ezt nem tudom.'], why: 'Megértés kifejezése.' },
+    { q: 'Mit jelent a {欠|qiàn}?', a: 'tartozik', wrong: ['kölcsönad', 'ajándékoz', 'megtakarít'], why: '{觉得欠父母的|juéde qiàn fùmǔ de} „úgy érzi, tartozik a szüleinek".' }
+  ]
 }
 
 ];
